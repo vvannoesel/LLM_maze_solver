@@ -13,4 +13,4 @@
 # Temporary test folders or local cache
 Test*/
 genai_val/
-_pycache_/
+__pycache__/

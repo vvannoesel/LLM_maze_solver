@@ -124,7 +124,27 @@ def call_llm(prompt: str, file_path: Path):
         return f"Error: Could not get a response from the LLM. Details: {e}"
 
 
-def extract_final_answer_steps(text: str) -> list:
+def prepare_llm_answer_steps(text: str) -> list: # This function has been tested. It processes the entire text input, assuming it contains only the steps and returns the string normalized and split into a list.
+    """
+    Takes the LLM's answer string, normalizes it, and splits it into a list of steps.
+
+    Args:
+        text (str): The answer string from the LLM, containing only the steps.
+
+    Returns:
+        list: A list of lowercase steps (e.g., ['down', 'right']).
+    """
+    if not text: # If the input text is empty or None, return an empty list 
+        return []
+    # Convert to lowercase, remove leading/trailing whitespace
+    processed_text = text.strip().lower()
+    # Split by any combination of commas or whitespace (spaces, newlines, etc.)
+    steps = re.split(r'[\s,]+', processed_text)
+    # Filter out any empty strings that may result from the split
+    return [step for step in steps if step]
+
+
+def extract_final_answer_steps(text: str) -> list: # this function works but it extracts the final answer from a larger text block (unnecessary). It uses markers to find the solution steps.
     """
     Extracts the sequence of moves from the LLM's response between the
     "Final answer:" and "End of final sequence" markers.
@@ -213,18 +233,17 @@ def main():
                 solution_steps = [s.strip().lower() for s in correct_solution_str.split(',') if s.strip()] # Read and process the solution steps into lowercase list
             else:
                 print(f"Warning: Could not find solution file matching '{solution_pattern}'")        
-           
-           # Call LLM with current file
-           response = call_llm(PROMPT, file)
-
-           # Process the LLM response
-           llm_steps = prepare_llm_answer_steps(response)
-
-           # Score the answer against the dynamically found solution
-           score = score_llm_output_strict(llm_steps, solution_steps)
-
-           # Store the results
-           results.append({
+            # Call LLM with current file
+            response = call_llm(PROMPT, file)
+            
+            # Process the LLM response
+            llm_steps = prepare_llm_answer_steps(response)
+            
+            # Score the answer against the dynamically found solution
+            score = score_llm_output_strict(llm_steps, solution_steps)
+            
+            # Store the results
+            results.append({
                "file": file.name,
                "response": response,
                "extracted_answer": ", ".join(llm_steps),
