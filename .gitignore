@@ -10,6 +10,7 @@
 *.userosscache
 *.sln.docstates
 
-# Temporary test folders
+# Temporary test folders or local cache
 Test*/
 genai_val/
+__pycache__/
