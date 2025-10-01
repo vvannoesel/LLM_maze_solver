@@ -13,7 +13,6 @@ import re
 import base64
 from pathlib import Path
 import google.generativeai as genai
-from google.generativeai.types import Tool
 from dotenv import load_dotenv
 from PIL import Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
