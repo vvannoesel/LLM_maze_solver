@@ -1,0 +1,52 @@
+{
+    "size": {
+        "columns": 2,
+        "rows": 2
+    },
+    "start": [
+        0,
+        0
+    ],
+    "end": [
+        1,
+        1
+    ],
+    "grid": [
+        [
+            {
+                "walls": {
+                    "N": true,
+                    "E": false,
+                    "S": true,
+                    "W": true
+                }
+            },
+            {
+                "walls": {
+                    "N": true,
+                    "E": true,
+                    "S": false,
+                    "W": false
+                }
+            }
+        ],
+        [
+            {
+                "walls": {
+                    "N": true,
+                    "E": false,
+                    "S": true,
+                    "W": true
+                }
+            },
+            {
+                "walls": {
+                    "N": false,
+                    "E": true,
+                    "S": true,
+                    "W": false
+                }
+            }
+        ]
+    ]
+}

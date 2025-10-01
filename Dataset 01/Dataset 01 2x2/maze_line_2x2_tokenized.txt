@@ -1,0 +1,1 @@
+<|0-0|> <|updownleft_wall|> <|origin|> <|0-1|> <|upright_wall|> <|1-0|> <|updownleft_wall|> <|1-1|> <|downright_wall|> <|target|>
