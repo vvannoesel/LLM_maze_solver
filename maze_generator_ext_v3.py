@@ -2,17 +2,7 @@
 """
 Created on Wed Jul 30 10:08:42 2025
 
-@author: valer
-
-Made by Gemini 2.5 pro, prompt:
-"please write me a python script that takes as input a grid size as number of columns x number of rows.
-the output should be a unique, solvable maze with one solution.
-The maze should be outputted as jpeg, as ASCII representation, as coordinates and in JSON format."
-follow up:
-"If i want to create multiple mazes at once, such as easy_maze = Maze(10,10) and hard_maze = Maze(50,50)
-how do i do this? and how do i make sure they get stored under these names?
-i want the number of rows and columns to be variable using easy_rows, easy_cols, hard_rows and hard_cols.
-I want to also use these variables in the printed statements and names of the files. Can you help me?"
+@author: valer and Gemini 2.5 Pro
 """
 import random
 import json

@@ -1,5 +1,5 @@
 """
-author: "valer" 29 september 2025
+@author: valer 29 september 11:52:06 2025
 Script to automatically generate mazes of specified sizes and save their various representations
 """
 
@@ -71,7 +71,7 @@ def main():
     Main function to run the full maze generation and saving in "current directory"\Dataset 01 .
     """
     i = 2 # Starting size for rows and columns. Minimum maze is 2x2
-    while i<=30:
+    while i<=30: # Maximum size for rows and columns. Change if needed
         ROWS = i
         COLS = i
         try:

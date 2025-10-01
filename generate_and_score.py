@@ -1,12 +1,11 @@
 
 """
+@author: valer 3 september 16:28:15 2025
 This script generates a maze, creates and saves it in a directory, then prompts a large language model (LLM) to solve it
-using various maze representations, compares the LLM's solutions to the correct solution, 
-and saves the results in a markdown file. 
+using various maze representations, compares the LLM's solutions to the correct solution, and saves the results in a markdown file. 
 Will probably not be used for testing, but is useful to run small, single tests. 
 
-CHECK: does the internal reasoning save correctly? 
-ADD: old code for call_llm (and main) so it can be used for non-reasoning llm's too.
+Does not save internal reasoning. 
 """
 
 import os
@@ -24,7 +23,7 @@ MAZE_COLS = 5
 MAZE_ROWS = 5
 MODEL_NAME = "gemini-2.5-pro"
 PROMPT = (
-    "You are a maze-solving expert.Your goal is to find the path from start to end. "
+"You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. "
     "Instructions: " \
     "1. You can only move up, down, left, or right. " \
     "2. You cannot move diagonally or through walls. " \
@@ -97,47 +96,18 @@ def generate_and_save_mazes(directory: Path, cols: int, rows: int):
     print(f"All maze representations saved to '{directory}'.")
 
 
-# def call_llm(prompt: str, file_path: Path):
-#     """
-#     Sends a prompt and a file (text or image) to the generative model.
-
-#     Args:
-#         prompt (str): The prompt to send to the model.
-#         file_path (Path): The path to the file to be included in the prompt.
-
-#     Returns:
-#         str: The text response from the model.
-#     """
-#     print(f"  Querying LLM with: {file_path.name}...")
-#     try:
-#         model = genai.GenerativeModel(MODEL_NAME)
-#         content = [prompt]
-#         if file_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
-#             content.append(Image.open(file_path))
-#         else:
-#             with open(file_path, 'r', encoding='utf-8') as f:
-#                 file_content = f.read()
-#             content.append(file_content)
-
-#         response = model.generate_content(content)
-#         return response.text
-#     except Exception as e:
-#         print(f"  An error occurred while calling the API: {e}")
-#         return f"Error: Could not get a response from the LLM. Details: {e}"
-
 def call_llm(prompt: str, file_path: Path):
     """
-    Sends a prompt and a file to the model and captures its internal thinking.
+    Sends a prompt and a file (text or image) to the generative model.
 
     Args:
         prompt (str): The prompt to send to the model.
         file_path (Path): The path to the file to be included in the prompt.
 
     Returns:
-        tuple[str, str]: A tuple containing the final text response and the
-                         model's internal thinking process.
+        str: The text response from the model.
     """
-    print(f"Querying LLM with: {file_path.name}...")
+    print(f"  Querying LLM with: {file_path.name}...")
     try:
         model = genai.GenerativeModel(MODEL_NAME)
         content = [prompt]
@@ -148,57 +118,12 @@ def call_llm(prompt: str, file_path: Path):
                 file_content = f.read()
             content.append(file_content)
 
-        # 1. Define the tool to capture the model's thoughts
-        # This tool acts as a "scratchpad" for the model.
-        save_thoughts_tool = Tool(
-            function_declarations=[
-                genai.protos.FunctionDeclaration( # Define the tool schema
-                    name="save_internal_thoughts",
-                    description=(
-                        "An internal tool for the model to save its step-by-step "
-                        "reasoning or thought process before providing the final answer. "
-                        "Use this to structure your thoughts."
-                    ),
-                    parameters=genai.protos.Schema( # Define the parameters the tool accepts
-                        type=genai.protos.Type.OBJECT, # The tool takes an object
-                        properties={
-                            "thoughts": genai.protos.Schema( 
-                                type=genai.protos.Type.STRING,  # The 'thoughts' parameter is a string
-                                description="Your detailed, step-by-step thinking process."
-                            )
-                        }
-                    )
-                )
-            ]
-        )
-
-
-        # 2. Call the model with the tool
-        response = model.generate_content(content, tools=[save_thoughts_tool])
-
-        # 3. Process the multi-part response
-        internal_thoughts = ""      # This will hold the model's internal reasoning
-        final_answer = ""           # This will hold the final text answer
-
-        # The response may contain a function call (the thoughts) and text (the answer)
-        for part in response.parts:
-            if part.function_call:
-                if part.function_call.name == "save_internal_thoughts": 
-                    # Extract the thinking process from the tool's arguments
-                    internal_thoughts = part.function_call.args.get("thoughts", "")
-            elif part.text:
-                final_answer = part.text
-
-        # If the model only returned a tool call without a final text part
-        if not final_answer and internal_thoughts:
-            final_answer = "The model provided a thought process but no final answer."
-            
-        return final_answer, internal_thoughts
-
+        response = model.generate_content(content)
+        return response.text
     except Exception as e:
-        print(f"An error occurred while calling the API: {e}")
-        error_message = f"Error: Could not get a response from the LLM. Details: {e}"
-        return error_message, ""
+        print(f"  An error occurred while calling the API: {e}")
+        return f"Error: Could not get a response from the LLM. Details: {e}"
+
 
 def extract_final_answer_steps(text: str) -> list:
     """
@@ -247,6 +172,8 @@ def main():
     """
     try:
         setup_api_key()
+        
+        # Create test directory and generate mazes to use in tests
         test_dir = create_test_directory()
         generate_and_save_mazes(test_dir, MAZE_COLS, MAZE_ROWS)
 
@@ -265,30 +192,48 @@ def main():
 
         results = []
         print("\n--- Starting LLM Maze Solving ---")
-        # for file in files_to_test: # DEZE FOR-LOOP IS DE OUDE CODE, DIE NIET DE INTERNAL THOUGHTS OPSLAAT. DEZE SLAAT ALLEEN DE RESPONSE OP.
-        #     llm_response = call_llm(PROMPT, file)
-        #     llm_steps = extract_final_answer_steps(llm_response)
-        #     score = score_llm_output_strict(llm_steps, solution_steps)
 
-        #     results.append({
-        #         "file": file.name,
-        #         "response": llm_response,
         for file in files_to_test:
-            # 1. Unpack the two return values from the updated call_llm function
-            final_answer, internal_thoughts = call_llm(PROMPT, file)
-            
-            # 2. Use the 'final_answer' for processing
-            llm_steps = extract_final_answer_steps(final_answer)
-            score = score_llm_output_strict(llm_steps, solution_steps)
+            # Dynamically find the solution file for the current maze type
+            solution_pattern = "" # Initialize an empty placeholder string
+            if file.name.startswith("maze_line"):
+                solution_pattern = f"maze_line{MAZE_ROWS}x{MAZE_COLS}_solution_steps.txt"
+            elif file.name.startswith("maze_occupancy"):
+                solution_pattern = f"maze_occupancy{MAZE_ROWS}x{MAZE_COLS}_solution_steps.txt"
+            else:
+                print(f"Warning: Skipping file with unhandled type:{file.name}")
+                continue  # Skip this file if no matching solution file is found
 
-            # 3. Store both the final answer and the thoughts in the results
-            results.append({
-                "file": file.name,
-                "final_answer": final_answer,
-                "internal_thoughts": internal_thoughts, #tot en met hier is mn test stukje
-                "extracted_answer": ", ".join(llm_steps),
-                "score": score * 100  # Store as percentage
-            })
+            solution_file_path = test_dir / solution_pattern # Construct the full path to the solution file ( solution_pattern is a dynamic fileaname)
+            solution_steps = []
+            correct_solution_str = "Solution file not found" # Default message if file is not found. replaced with actual solution if file is found.
+
+            if solution_file_path.exists():
+                with open(solution_file_path, 'r', encoding='utf-8') as f:
+                    correct_solution_str = f.read().strip()
+                solution_steps = [s.strip().lower() for s in correct_solution_str.split(',') if s.strip()] # Read and process the solution steps into lowercase list
+            else:
+                print(f"Warning: Could not find solution file matching '{solution_pattern}'")        
+           
+           # Call LLM with current file
+           response = call_llm(PROMPT, file)
+
+           # Process the LLM response
+           llm_steps = prepare_llm_answer_steps(response)
+
+           # Score the answer against the dynamically found solution
+           score = score_llm_output_strict(llm_steps, solution_steps)
+
+           # Store the results
+           results.append({
+               "file": file.name,
+               "response": response,
+               "extracted_answer": ", ".join(llm_steps),
+               "score": score * 100,  # Store as percentage
+               "ground_truth": correct_solution_str
+           })
+           
+        
         print("--- LLM Maze Solving Complete ---")
 
         # Generate markdown report
@@ -311,18 +256,15 @@ def main():
             for res in sorted(results, key=lambda x: x['file']):
                 f.write(f"### `{res['file']}`\n\n")
                 f.write(f"**Score:** {res['score']:.2f}%\n\n")
+
+                f.write("**Ground Truth Solution:**\n")
+                f.write(f"```\n{res['ground_truth']}\n```\n\n")
+
                 f.write("**Extracted Answer:**\n")
                 f.write(f"```\n{res['extracted_answer']}\n```\n\n")
-                # f.write("**Full Response:**\n")
-                # f.write(f"```text\n{res['response']}\n```\n\n")
-                # 4. Add the internal thoughts to the report
-                # Only write the section if there are thoughts to show
-                if res['internal_thoughts']: #alles in deze if is deel van mn test stukje
-                    f.write("**Internal Thinking:**\n")
-                    f.write(f"```text\n{res['internal_thoughts']}\n```\n\n")
-                
-                f.write("**Final Answer:**\n") #deel van mn test stukje
-                f.write(f"```text\n{res['final_answer']}\n```\n\n") #deel van mn test stukje
+
+                f.write("**Full Response:**\n") # Keep this section to show the entire response in case LLM disobeys format
+                f.write(f"```text\n{res['response']}\n```\n\n")
 
         print(f"\nComparison report saved to: {report_path}")
 

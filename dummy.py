@@ -1,3 +1,6 @@
+"""
+A throwaway script to test Gemini API calls and maze generation.
+"""
 import os
 from dotenv import load_dotenv
 import maze_generator_ext_v3 as maze_gen

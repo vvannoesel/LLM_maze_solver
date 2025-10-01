@@ -1,4 +1,5 @@
 """
+@author: valer and Gemini 2.5 Pro, 3 september 16:28:15 2025
 This script generates a maze, prompts a large language model (LLM) to solve it
 using various maze representations, compares the LLM's solutions to the
 correct solution, and saves the results in a markdown file.
