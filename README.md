@@ -44,22 +44,7 @@ Windows: (myfirstproject) C:\Users\Your_Name\Codes> pip install google-generativ
 API_KEY = "YOUR_SECRET_API_KEY_HERE"
 ```
 4. Add the .env file to your .gitignore file. 
-5. When a script needs access to your API key, add the following code in the script - DEZE MOET AANGEPAST ZODAT ER 2 KEYS WORDEN GEIMPORTEERD, EN DE NAMEN MOETEN OMSCHRIJVEND ZIJN. ZORG OOK DAT DEZE NAMEN KLOPPEN MET DE NAMEN IN HET VLGENDE HOOFDSTUK WAAR DE .ENV WORDT UITGELEGD.
-```
-import os
-from dotenv import load_dotenv
 
-# Load environment variables from the .env file
-load_dotenv()
-
-# Access your API key
-my_api_key = os.getenv("API_KEY")
-
-if not my_api_key:
-    raise ValueError("API key not found. make sure it's in yout .env file.")
-
-# ... rest of script
-```
 
 
 ## Structure of this folder
@@ -69,7 +54,9 @@ if not my_api_key:
     |   .env
     |   maze_generator_ext_v3.py
     |   create_dataset.py
-    |   autoscore/mazellmcompare/IDK
+    |   generate_and_score.py
+    |   tesT.py
+    |   tesT_2.py
     |───Dataset 01
     |   |   Dataset 01 2x2
     |   |   Dataset 01 3x3
@@ -82,18 +69,25 @@ if not my_api_key:
     GEMINI_FL_API_KEY= "YUOR_SECRET_KEY2"
     ```
 * maze_generator__ext_v3.py 
-    * A python script that randomly generates perfect mazes of a specified gridsize. It contains three classes; Cell(), Maze() and OccupancyGridMaze(Maze). The Maze() class uses the Cell() object to generate mazes with lines for walls. The OccupancyGridMaze(Maze) class takes the previous Maze object and  transforms it into an occupancy grid maze. For both maze styles, the classes output a JPG, JSON, ASCII, tokenized, textual adjacency list and JSON adjacency list representation. 
+    * A python script that randomly generates perfect mazes of a specified gridsize. It contains three classes; Cell(), Maze() and OccupancyGridMaze(Maze). The Maze() class uses the Cell() object to generate mazes with lines for walls. The OccupancyGridMaze(Maze) class takes the previous Maze object and  transforms it into an occupancy grid maze. For both maze styles, the classes output a JPG, JSON, ASCII, tokenized, textual adjacency list and JSON adjacency list representation. \n
+    The Maze() class uses Randomized Depth-First Search (DFS) is used to generate the mazes, and Breadth-First Search (BFS) is used to solve the mazes. The solution to the maze is saved and output as a text file, optionally also as a red line in the image output. 
 
 * create_dataset.py
-    * A python script that calls maze_generator_ext_v3.py to create datasets of mazes with various sizes and saves them in the predetermined 'Dataset 01' folder. 
+    * A python script that calls maze_generator_ext_v3.py to create datasets of mazes with various sizes and saves them in the predetermined 'Dataset 01' folder. The maximum complexity of the mazes can be modified in the main() function. 
     
 
-* maze_llm_compare.py
-    * a python file .......
+* generate_and_score.py
+    * A python file that is not used in my research, but can be used for singular generation and test cases. This file calls the maze_generator_ext_v3.py file to generate a single maze (expressed in 12 representations) and save this maze in the root folder. Then, it iteratively prompts an LLM with each file to solve the maze. All LLM responses are auto-scored against the ground-truth solutions and saved in a single .md file inside the maze folder. 
 
+* tesT.py
+    * A python file that is used to import an existing maze from a child directory called 'Dataset 01/Dataset 01 {Maze rows}x{Maze cols}'. This maze is iteratively used to prompt a non-reasoning LLM to solve the maze. The LLM's response is saved and automatically scored against the ground-truth solution and saved in a single .md file inside the maze's folder. 
+
+* tesT_2.py
+    * A python file that is used to import an existing maze from a child directory called 'Dataset 01/Dataset 01 {Maze rows}x{Maze cols}'. This maze is iteratively used to prompt a reasoning LLM to solve the maze. The LLM's response is saved as a tuple of [final answer (str), thought summary (str)] and automatically scored against the ground-truth solution and saved in a single .md file inside the maze's folder. 
 
 
 # Notes voor Val
 Wanneer je je hele code gaat testen, let dan vooral op het volgende:
 - wordt de juiste folderstructuur gecreeerd en zijn alle paths relatief? ZORG DAT ALLE PADEN RELATIEF ZIJN !!!
 - alle dependencies correct gelist worden in de instructies. Mis ik er geen??
+- pas .gitignore aan zodat anderen niet last hebben van alle files die ik alleen locaal heb. 

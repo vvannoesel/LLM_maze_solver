@@ -14,3 +14,14 @@
 Test*/
 genai_val/
 __pycache__/
+
+# Files used for testing code
+autoscore.py
+dummy.py
+example_llm_compare.py
+llm_compare_test.py
+maze_generator.py
+maze_generator_adjacency_grid.py
+maze_generator_extended_v2.py
+maze_generator_extended.py
+maze_llm_compare.py

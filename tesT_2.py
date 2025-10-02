@@ -35,11 +35,12 @@ def setup_api_key():
     Loads the Google API key from a .env file and configures the genai library.
     """
     load_dotenv()
-    my_api_key = os.getenv("TEST_API_KEY")
+    my_api_key = os.getenv("GEMINI_API_KEY")
     if not my_api_key:
         raise ValueError("API_KEY not found in .env file.")
-    genai.configure(api_key=my_api_key)
+    # genai.configure(api_key=my_api_key) # Old method of configuration. New method below in call_llm
     print("API key configured successfully.")
+    return my_api_key
 
 def import_maze_file() -> Path:
     """
@@ -119,7 +120,7 @@ def generate_and_save_mazes(directory: Path, cols: int, rows: int): #this functi
     print(f"All maze representations saved to '{directory}'.")
 
 
-def call_llm(prompt: str, file_path: Path):
+def call_llm(prompt: str, file_path: Path, api_key: str) -> tuple[str, str]:
     """
     Sends a prompt and a file to the model and returns the response and thoughts.
 
@@ -128,30 +129,45 @@ def call_llm(prompt: str, file_path: Path):
         file_path (Path): The path to the file to be included in the prompt.
 
     Returns:
-        tuple: A tuple containing the final text response (str) and internal thoughts (str).
+        tuple: A tuple containing the final text response (str) and internal thoughts (str). 
     """
     print(f"Querying LLM with: {file_path.name}...")
     try:
-        model = genai.GenerativeModel(MODEL_NAME)
+        # model = genai.GenerativeModel(MODEL_NAME)
+        
         if file_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
             maze_input = Image.open(file_path)
         else:
             with open(file_path, 'r', encoding='utf-8') as f:
                 maze_input = f.read()
 
-        # Enable internal thoughts in the generation config
-        generation_config = genai.types.GenerationConfig(include_internal_texts=True)
+        # Initialize variables with a default value so they exist in the error case
+        thought_summary = ""
+        final_answer = ""
 
-        response = model.generate_content(
-            f"{prompt}\n\n{maze_input}",
-            generation_config=generation_config
+        # Enable internal thoughts in the generation config
+        # generation_config = genai.types.GenerationConfig(include_internal_texts=True)
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
+            model=MODEL_NAME,
+            contents=f'{maze_input}\n\n{prompt}',
+            config=types.GenerateContentConfig(
+                thinking_config=types.ThinkingConfig(
+                    include_thoughts=True
+                )
+            )
         )
 
-        final_answer = response.text
-        # Extract internal thoughts from the response metadata
-        internal_thoughts = response.prompt_feedback.internal_texts[0] if response.prompt_feedback.internal_texts else "No internal thoughts found."
+        # Extract internal thoughts if available
+        for part in response.candidates[0].content.parts: # the response object is a container for candidates, each candidate has content, which has parts
+            if not part.text:   # skip any empty or non-text parts
+                continue
+            if part.thought:    # check if the part has a thought associated with it. If so, it's an internal thought
+                thought_summary = part.text
+            else:               # if there's no thought, it's the final answer
+                final_answer = part.text
 
-        return final_answer, internal_thoughts
+        return final_answer, thought_summary # return both final answer and internal thoughts as a tuple
 
     except Exception as e:
         print(f"An error occurred while calling the API: {e}")
@@ -225,7 +241,7 @@ def main():
     Main function to run the full maze generation, solving, and comparison process.
     """
     try:
-        setup_api_key()
+        my_api_key = setup_api_key()
         
         # Import the specific maze file and directory path
         maze_file = import_maze_file() 
@@ -263,8 +279,8 @@ def main():
                 print(f"Warning: Could not find solution file matching '{solution_pattern}'")
             
             # Unpack the tuple returned by call_llm
-            final_answer, internal_thoughts = call_llm(PROMPT, file)
-           
+            final_answer, thought_summary = call_llm(PROMPT, file, my_api_key)
+
             # Prepare the LLM's answer using the new function
             llm_steps = prepare_llm_answer_steps(final_answer)
             
@@ -275,7 +291,7 @@ def main():
             results.append({
                 "file": file.name,
                 "response": final_answer, # Renamed from 'response' to 'final_answer' for clarity
-                "internal_thoughts": internal_thoughts,
+                "internal_thoughts": thought_summary,
                 "extracted_answer": ", ".join(llm_steps),
                 "score": score * 100,
                 "ground_truth": correct_solution_str
@@ -304,12 +320,13 @@ def main():
                 f.write("**Ground Truth Solution:**\n")
                 f.write(f"```\n{res['ground_truth']}\n```\n\n")
                 
+                f.write("**Full User-Facing Response (Final Answer):**\n")
+                f.write(f"```\n{res['response']}\n```\n\n")
+
                 # Add Internal Thoughts section to the report
                 f.write("**Internal Thoughts:**\n")
-                f.write(f"```text\n{res['internal_thoughts']}\n```\n\n")
+                f.write(f"```\n{res['internal_thoughts']}\n```\n\n")
 
-                f.write("**Full Response (Final Answer):**\n")
-                f.write(f"```text\n{res['response']}\n```\n\n")
                 
         print(f"\nComparison report saved to: {report_path}")
 
