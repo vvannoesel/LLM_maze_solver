@@ -5,14 +5,15 @@ This script generates a maze, creates and saves it in a directory, then prompts 
 using various maze representations, compares the LLM's solutions to the correct solution, and saves the results in a markdown file. 
 Will probably not be used for testing, but is useful to run small, single tests. 
 
-Does not save internal reasoning. 
+Does not save internal reasoning. Updated to new SDK call structure of call_llm
 """
 
 import os
 import re
 import base64
 from pathlib import Path
-import google.generativeai as genai
+# import google.generativeai as genai
+from google import genai
 from dotenv import load_dotenv
 from PIL import Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
@@ -37,8 +38,9 @@ def setup_api_key():
     my_api_key = os.getenv("TEST_API_KEY")
     if not my_api_key:
         raise ValueError("API_KEY not found in .env file.")
-    genai.configure(api_key=my_api_key)
+    # genai.configure(api_key=my_api_key) # Old method of configuration. New method of callning client in call_llm
     print("API key configured successfully.")
+    return my_api_key
 
 
 def create_test_directory():
@@ -95,7 +97,7 @@ def generate_and_save_mazes(directory: Path, cols: int, rows: int):
     print(f"All maze representations saved to '{directory}'.")
 
 
-def call_llm(prompt: str, file_path: Path):
+def call_llm(prompt: str, file_path: Path, api_key: str):
     """
     Sends a prompt and a file (text or image) to the generative model.
 
@@ -108,16 +110,22 @@ def call_llm(prompt: str, file_path: Path):
     """
     print(f"  Querying LLM with: {file_path.name}...")
     try:
-        model = genai.GenerativeModel(MODEL_NAME)
-        content = [prompt]
+        # model = genai.GenerativeModel(MODEL_NAME)
+        # content = [prompt]
         if file_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
-            content.append(Image.open(file_path))
+            # content.append(Image.open(file_path))
+            maze_input = Image.open(file_path)
         else:
             with open(file_path, 'r', encoding='utf-8') as f:
-                file_content = f.read()
-            content.append(file_content)
-
-        response = model.generate_content(content)
+                maze_input = f.read()
+            # content.append(file_content)
+        print("Content for LLM is: ", maze_input)
+        # response = model.generate_content(f"{prompt}\n\n{maze_input}") # old method, replaced with new one below
+        client = genai.Client(api_key=api_key)
+        response = client.models.generate_content(
+            model = MODEL_NAME,
+            contents=f'{PROMPT}\n\n{maze_input}')
+        # print("response shape:", type(response))
         return response.text
     except Exception as e:
         print(f"  An error occurred while calling the API: {e}")
@@ -190,7 +198,7 @@ def main():
     Main function to run the full maze generation, solving, and comparison process.
     """
     try:
-        setup_api_key()
+        my_api_key = setup_api_key()
         
         # Create test directory and generate mazes to use in tests
         test_dir = create_test_directory()
@@ -234,7 +242,7 @@ def main():
             else:
                 print(f"Warning: Could not find solution file matching '{solution_pattern}'")        
             # Call LLM with current file
-            response = call_llm(PROMPT, file)
+            response = call_llm(PROMPT, file, my_api_key)
             
             # Process the LLM response
             llm_steps = prepare_llm_answer_steps(response)
