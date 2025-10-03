@@ -326,7 +326,7 @@ class Maze:
 
     def to_adjacency_list(self, filename="maze_adj.json"):
         """Saves the maze as an adjacency list."""
-        adj_list = []
+        nodes = []
         for r in range(self.rows):
             for c in range(self.cols):
                 node, neighbors, cell = [r, c], [], self.grid[r][c]
@@ -334,7 +334,10 @@ class Maze:
                 if not cell.walls['E']: neighbors.append([r, c + 1])
                 if not cell.walls['S']: neighbors.append([r + 1, c])
                 if not cell.walls['W']: neighbors.append([r, c - 1])
-                adj_list.append({"node": node, "neighbors": neighbors})
+                nodes.append({"node": node, "neighbors": neighbors})
+        adj_list = {
+            "size": {"columns": self.cols, "rows": self.rows},
+            "start": self.start, "end": self.end , "grid": nodes}
         with open(filename, 'w') as f:
             json.dump(adj_list, f, indent=2)
 
@@ -537,7 +540,7 @@ class OccupancyGridMaze(Maze):
 
     def to_adjacency_list(self, filename="maze_occupancy_adj.json"):
         """Saves the occupancy grid maze as an adjacency list."""
-        adj_list = []
+        nodes = []
         for r in range(len(self.grid)):
             for c in range(len(self.grid[0])):
                 if self.grid[r][c] == 0:
@@ -546,7 +549,9 @@ class OccupancyGridMaze(Maze):
                         n_r, n_c = r + dr, c + dc
                         if (0 <= n_r < len(self.grid) and 0 <= n_c < len(self.grid[0]) and self.grid[n_r][n_c] == 0):
                             neighbors.append([n_r, n_c])
-                    adj_list.append({"node": node, "neighbors": neighbors})
+                    nodes.append({"node": node, "neighbors": neighbors})
+        adj_list = [{"size": {"columns": len(self.grid[0]), "rows": len(self.grid)},
+            "start": self.start, "end": self.end, "grid": nodes}]
         with open(filename, 'w') as f:
             json.dump(adj_list, f, indent=2)
 
@@ -591,7 +596,7 @@ class OccupancyGridMaze(Maze):
 if __name__ == "__main__":
     try:
         # --- Configuration for Maze Dimensions ---
-        easy_rows, easy_cols = 5, 6
+        easy_rows, easy_cols = 3 , 3
         # hard_cols, hard_rows = 6 , 6
 
         # Set a fixed, high-quality image size for all JPEGs

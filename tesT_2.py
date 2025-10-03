@@ -225,6 +225,10 @@ def score_llm_output_strict(llm_steps: list, solution_steps: list) -> float:
     Scores LLM output, stopping at the first mismatch.
     The score is the percentage of consecutive matching steps.
     """
+    #Check if the number of LLM steps exceeds the solution steps. If so, return NaN because the solution exceeds constraints
+    if len(llm_steps) > len(solution_steps):
+        return float('NaN') # returns NaN and ends function. If not, continues to score normally .
+    
     consecutive_matches = 0
     # Use zip to iterate through both lists in parallel
     for llm_step, sol_step in zip(llm_steps, solution_steps):

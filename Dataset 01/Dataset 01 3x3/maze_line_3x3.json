@@ -25,7 +25,7 @@
                 "walls": {
                     "N": true,
                     "E": false,
-                    "S": true,
+                    "S": false,
                     "W": true
                 }
             },
@@ -42,17 +42,9 @@
             {
                 "walls": {
                     "N": false,
-                    "E": false,
-                    "S": true,
+                    "E": true,
+                    "S": false,
                     "W": true
-                }
-            },
-            {
-                "walls": {
-                    "N": true,
-                    "E": false,
-                    "S": true,
-                    "W": false
                 }
             },
             {
@@ -60,14 +52,22 @@
                     "N": false,
                     "E": true,
                     "S": false,
-                    "W": false
+                    "W": true
+                }
+            },
+            {
+                "walls": {
+                    "N": false,
+                    "E": true,
+                    "S": false,
+                    "W": true
                 }
             }
         ],
         [
             {
                 "walls": {
-                    "N": true,
+                    "N": false,
                     "E": false,
                     "S": true,
                     "W": true
@@ -75,8 +75,8 @@
             },
             {
                 "walls": {
-                    "N": true,
-                    "E": false,
+                    "N": false,
+                    "E": true,
                     "S": true,
                     "W": false
                 }
@@ -86,7 +86,7 @@
                     "N": false,
                     "E": true,
                     "S": true,
-                    "W": false
+                    "W": true
                 }
             }
         ]

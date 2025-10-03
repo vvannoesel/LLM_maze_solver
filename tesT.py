@@ -18,9 +18,9 @@ from PIL import Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
 
 # --- Configuration ---
-MAZE_ROWS = 3
-MAZE_COLS = 3
-MODEL_NAME = "gemini-2.5-pro"
+MAZE_ROWS = 2
+MAZE_COLS = 2
+MODEL_NAME = "gemini-2.5-flash-lite"
 PROMPT = (
     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. "
     "Instructions: " \
@@ -34,7 +34,7 @@ def setup_api_key():
     Loads the Google API key from a .env file and configures the genai library.
     """
     load_dotenv()
-    my_api_key = os.getenv("TEST_API_KEY")
+    my_api_key = os.getenv("GEMINI_API_KEY")
     if not my_api_key:
         raise ValueError("API_KEY not found in .env file.")
     # genai.configure(api_key=my_api_key) # Old method of configuration. New method below in call_llm
@@ -207,6 +207,10 @@ def score_llm_output_strict(llm_steps: list, solution_steps: list) -> float:
     Scores LLM output, stopping at the first mismatch.
     The score is the percentage of consecutive matching steps.
     """
+    #Check if the number of LLM steps exceeds the solution steps. If so, return NaN because the solution exceeds constraints
+    if len(llm_steps) > len(solution_steps):
+        return float('NaN') # returns NaN and ends function. If not, continues to score normally .
+    
     consecutive_matches = 0
     # Use zip to iterate through both lists in parallel
     for llm_step, sol_step in zip(llm_steps, solution_steps):
