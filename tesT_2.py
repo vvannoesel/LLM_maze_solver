@@ -138,7 +138,7 @@ def call_llm(prompt: str, file_path: Path, api_key: str) -> tuple[str, str]:
         if file_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
             maze_input = Image.open(file_path)
         else:
-            with open(file_path, 'r', encoding='utf-8') as f:
+            with open(file_path, 'r', encoding='cp1252') as f:  #previously utf-8
                 maze_input = f.read()
 
         # Initialize variables with a default value so they exist in the error case

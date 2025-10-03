@@ -13,13 +13,14 @@ import base64 # converts binary data to ASCII string format and back
 from pathlib import Path
 # import google.generativeai as genai   # old library, replaced with the new one below  
 from google import genai
+from google.genai import types
 from dotenv import load_dotenv
 from PIL import Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
 
 # --- Configuration ---
-MAZE_ROWS = 2
-MAZE_COLS = 2
+MAZE_ROWS = 4
+MAZE_COLS = 4
 MODEL_NAME = "gemini-2.5-flash-lite"
 PROMPT = (
     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. "
@@ -139,7 +140,7 @@ def call_llm(prompt: str, file_path: Path, api_key: str):
             # content.append(Image.open(file_path))
             maze_input = Image.open(file_path)
         else:
-            with open(file_path, 'r', encoding='utf-8') as f:
+            with open(file_path, 'r', encoding='cp1252') as f:
                 maze_input = f.read()
             # content.append(file_content)
         print("Content for LLM is: ", maze_input)
@@ -147,7 +148,8 @@ def call_llm(prompt: str, file_path: Path, api_key: str):
         client = genai.Client(api_key=api_key)
         response = client.models.generate_content(  # FOR 2.5 FL THE DEFAULT THINKING BUDGET IS 0
             model = MODEL_NAME,
-            contents=f'{PROMPT}\n\n{maze_input}')
+            contents=f'{PROMPT}\n\n{maze_input}',
+            config=types.GenerateContentConfig(maxOutputTokens = 100))
         # print("response shape:", type(response))
 
         return response.text 
