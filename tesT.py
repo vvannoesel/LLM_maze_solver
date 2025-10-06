@@ -7,6 +7,7 @@ DOES NOT INCLUDE INTERNAL THOUGHTS. USE ONLY FOR NON-REASONING LLMS.
 Updated to new SDK call structure of call_llm. 
 """
 
+import time
 import os
 import re
 import base64 # converts binary data to ASCII string format and back
@@ -22,13 +23,29 @@ from maze_generator_ext_v3 import Maze, OccupancyGridMaze
 MAZE_ROWS = 4
 MAZE_COLS = 4
 MODEL_NAME = "gemini-2.5-flash-lite"
+# PROMPT = (
+#     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. "
+#     "Instructions: " \
+#     "1. You can only move up, down, left, or right. " \
+#     "2. You cannot move diagonally or through walls. " \
+#     "3. Your output must be a single, comma-separated sequence of steps. For example: up, down, right, right, down. " \
+#     "4. Provide only the final list of moves in your response.")
+
 PROMPT = (
-    "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. "
+    "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. " \
+    "The maze is represented as a grid. The top-left corner is (0,0)."
     "Instructions: " \
-    "1. You can only move up, down, left, or right. " \
-    "2. You cannot move diagonally or through walls. " \
-    "3. Your output must be a single, comma-separated sequence of steps. For example: up, down, right, right, down. " \
-    "4. Provide only the final list of moves in your response.")
+    # "1. You can only move up, down, left, or right. " \
+    "1. You cannot move diagonally or through walls, only from one coordinate to an adjacent coordinate. " \
+    "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1). " \
+    "3. Convert your coordinate sequence into a sequence of steps using the conversions listed below. Write as a comma-separated sequence. For example: down, right, down, down. " \
+    "4. Provide both the final list of coordinates and steps from start to end in your response." \
+    "Conversion: " \
+    "If the difference between two consecutive coordinates is; " \
+    "1. one added to the rows: state 'down'. " \
+    "2. one subtracted from the rows: state 'up'. " \
+    "3. one added to the columns: state 'right'. " \
+    "4. one subtracted from the columns: state 'left'. ")
 
 def setup_api_key():
     """
@@ -56,7 +73,8 @@ def import_maze_file() -> Path:
     try:
         # Construct the path relative to the script's directory
         script_dir = Path(__file__).parent
-        file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
+        # file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
+        file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
 
         if not file_path.exists():
             raise FileNotFoundError(f"The specified maze file was not found at: {file_path}")
@@ -172,7 +190,7 @@ def extract_final_answer_steps(text: str) -> list: # this function works but it 
               Returns an empty list if the pattern isn't matched.
     """
     match = re.search( # Find the block of text between the markers 'Final answer:' and 'End of final sequence'
-        r"Final answer: (.*?)End of final sequence",
+        r"**steps:** (.*?)",
         text,
         re.DOTALL | re.IGNORECASE # Make the search case-insensitive and allow newlines
     )
@@ -183,6 +201,7 @@ def extract_final_answer_steps(text: str) -> list: # this function works but it 
         # Filter out any empty strings that might result from multiple spaces
         return [step for step in steps if step]
     return []
+
 
 def prepare_llm_answer_steps(text: str) -> list: # This function has been tested. It processes the entire text input, assuming it contains only the steps and returns the string normalized and split into a list.
     """
@@ -209,8 +228,8 @@ def score_llm_output_strict(llm_steps: list, solution_steps: list) -> float:
     Scores LLM output, stopping at the first mismatch.
     The score is the percentage of consecutive matching steps.
     """
-    #Check if the number of LLM steps exceeds the solution steps. If so, return NaN because the solution exceeds constraints
-    if len(llm_steps) > len(solution_steps):
+    #Check if the steps are given in the answer. If not, return 'NaN'
+    if len(llm_steps) == 0:
         return float('NaN') # returns NaN and ends function. If not, continues to score normally .
     
     consecutive_matches = 0
@@ -234,7 +253,9 @@ def main():
         # Import the specific maze file and directory path
         maze_file = import_maze_file() 
         script_dir = Path(__file__).parent
-        test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
+        # test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
+        test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+
 
         # Get list of files to test, excluding solutions
         files_to_test = [
@@ -268,9 +289,12 @@ def main():
             
             # Call the LLM with the current maze file
             response = call_llm(PROMPT, file, my_api_key)
+            time.sleep(10) # wait 10 sec after calling LLM 
+            print("waiting 10 secs for llm")
            
             # Prepare the LLM's answer using the new function
-            llm_steps = prepare_llm_answer_steps(response)
+            # llm_steps = prepare_llm_answer_steps(response)
+            llm_steps = extract_final_answer_steps(response)
             
             # Score the answer against the dynamically found solution
             score = score_llm_output_strict(llm_steps, solution_steps)
@@ -287,7 +311,7 @@ def main():
         print("--- LLM Maze Solving Complete ---")
 
         # Generate markdown report
-        report_path = test_dir / "comparison_results.md"
+        report_path = test_dir / "comparison_results_v2.md"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(f"# LLM Maze Solving Comparison Report\n\n")
             f.write(f"**Maze Dimensions:** {MAZE_ROWS}x{MAZE_COLS}\n")
