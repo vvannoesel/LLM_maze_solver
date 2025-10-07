@@ -312,6 +312,20 @@ class Maze:
             elif c2 < c1:
                 steps.append("left")
         return steps
+    
+    def get_occ_solution_coordinates(self):
+        """
+        Converts the maze to an occupancy grid and returns its solution path.
+
+        This method provides the solution coordinates corresponding to the
+        occupancy grid representation of the maze.
+
+        Returns:
+            list: A list of (row, col) coordinate tuples for the solution path
+                in the occupancy grid maze.
+        """
+        occupancy_maze = OccupancyGridMaze(self)
+        return occupancy_maze.solution
 
     def to_json(self, filename="maze.json"):
         """Saves the maze data to a JSON file."""
@@ -617,45 +631,65 @@ if __name__ == "__main__":
             maze_obj.to_tokenized_representation(f"maze_easy_{maze_type}_{easy_rows}x{easy_cols}_tokenized.txt")
             with open(f"maze_easy_{maze_type}_{easy_rows}x{easy_cols}.txt", "w") as f:
                 f.write(maze_obj.to_ascii())
+        
+            # Save the solution as a string of coordinates
+        #     def get_solution_coordinates(self):
+        # """Returns the solution path as a list of coordinates."""
+        # return self.solution
+            # print("before coords")
+            # with open(f"maze_easy_line_{easy_rows}x{easy_cols}_solution.txt", "w") as f:
+            # f.write(str(hard_maze.get_solution_coordinates()))
+
+            # with open(f"maze_easy_{maze_type}_{easy_rows}x{easy_cols}_solution_coordinates.txt", "w") as f:
+            #     f.write(", ".join(solution_coords))
+            # print("after coords")
 
             # Save the solution as a sequence of steps
+
             solution_steps = maze_obj.get_solution_steps()
             with open(f"maze_easy_{maze_type}_{easy_rows}x{easy_cols}_solution_steps.txt", "w") as f:
                 f.write(", ".join(solution_steps))
             
             # Save the ASCII representation
-            # with open(f"maze_easy_{maze_type}_{easy_cols}x{easy_rows}.txt", "w") as f:
+            # with open(f"maze_easy_{maze_type}_{easy_rows}x{easy_cols}.txt", "w") as f:
             #     f.write(maze_obj.to_ascii())
         
-        # Save solution and restored file for line-based maze
+        # Save solution for line-based maze
         with open(f"maze_easy_line_{easy_rows}x{easy_cols}_solution_coords.txt", "w") as f:
             f.write(str(easy_maze.get_solution_coordinates()))
-        # restored_easy_maze = easy_occupancy_maze.to_line_maze()   #THis is only useful when validating conversions
-        # with open(f"maze_easy_line_{easy_cols}x{easy_rows}_restored.txt", "w") as f:
+
+        # Save solution for occupancy grid maze, which is created inside the Maze() class. 
+        with open(f"maze_easy_occupancy_{easy_rows}x{easy_cols}_solution_coords.txt", "w") as f:
+            f.write(str(easy_maze.get_occ_solution_coordinates()))
+
+
+        # Save restored file for line-maze
+        # restored_easy_maze = easy_occupancy_maze.to_line_maze()   #This is only useful when validating conversions
+        # with open(f"maze_easy_line_{easy_rows}x{easy_cols}_restored.txt", "w") as f:
         #     f.write(restored_easy_maze.to_ascii())
         print("\nAll easy maze files saved successfully.")
 
         # print("\n" + "="*40 + "\n") # Separator
 
         # # --- Process Hard Maze ---
-        # print(f"--- Generating Hard Maze ({hard_cols}x{hard_rows}) ---")
+        # print(f"--- Generating Hard Maze ({hard_rows}x{hard_cols}) ---")
         # hard_maze = Maze(hard_cols, hard_rows)
         # hard_occupancy_maze = OccupancyGridMaze(hard_maze)
 
         # for maze_obj, maze_type in [(hard_maze, "line"), (hard_occupancy_maze, "occupancy")]:
         #     print(f"\nSaving hard maze files ({maze_type})...")
-        #     maze_obj.to_jpeg(f"maze_hard_{maze_type}_{hard_cols}x{hard_rows}.jpg", total_width=jpeg_width, total_height=jpeg_height)
-        #     maze_obj.to_json(f"maze_hard_{maze_type}_{hard_cols}x{hard_rows}.json")
-        #     maze_obj.to_adjacency_list(f"maze_hard_{maze_type}_{hard_cols}x{hard_rows}_adj.json")
-        #     maze_obj.to_custom_adjacency_list(f"maze_hard_{maze_type}_{hard_cols}x{hard_rows}_adj.txt")
-        #     maze_obj.to_tokenized_representation(f"maze_hard_{maze_type}_{hard_cols}x{hard_rows}_tokenized.txt")
-        #     with open(f"maze_hard_{maze_type}_{hard_cols}x{hard_rows}.txt", "w") as f:
+        #     maze_obj.to_jpeg(f"maze_hard_{maze_type}_{hard_rows}x{hard_cols}.jpg", total_width=jpeg_width, total_height=jpeg_height)
+        #     maze_obj.to_json(f"maze_hard_{maze_type}_{hard_rows}x{hard_cols}.json")
+        #     maze_obj.to_adjacency_list(f"maze_hard_{maze_type}_{hard_rows}x{hard_cols}_adj.json")
+        #     maze_obj.to_custom_adjacency_list(f"maze_hard_{maze_type}_{hard_rows}x{hard_cols}_adj.txt")
+        #     maze_obj.to_tokenized_representation(f"maze_hard_{maze_type}_{hard_rows}x{hard_cols}_tokenized.txt")
+        #     with open(f"maze_hard_{maze_type}_{hard_rows}x{hard_cols}.txt", "w") as f:
         #         f.write(maze_obj.to_ascii())
 
-        # with open(f"maze_hard_line_{hard_cols}x{hard_rows}_solution.txt", "w") as f:
+        # with open(f"maze_hard_line_{hard_rows}x{hard_cols}_solution.txt", "w") as f:
         #     f.write(str(hard_maze.get_solution_coordinates()))
         # restored_hard_maze = hard_occupancy_maze.to_line_maze()
-        # with open(f"maze_hard_line_{hard_cols}x{hard_rows}_restored.txt", "w") as f:
+        # with open(f"maze_hard_line_{hard_rows}x{hard_cols}_restored.txt", "w") as f:
         #     f.write(restored_hard_maze.to_ascii())
         # print("\nAll hard maze files saved successfully.")
 

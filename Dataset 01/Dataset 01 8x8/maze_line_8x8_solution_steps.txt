@@ -1,1 +1,1 @@
-right, right, right, right, down, left, left, down, down, right, up, right, down, right, up, right, right, down, down, left, down, right, down, left, down, right
+right, right, right, down, left, down, right, right, right, right, down, right, down, left, down, down, left, down, right, right

@@ -38,7 +38,7 @@ def generate_and_save_mazes(directory: Path, cols: int, rows: int):
         cols (int): The number of columns for the maze.
         rows (int): The number of rows for the maze.
     """
-    print(f"--- Generating {cols}x{rows} Maze ---")
+    print(f"--- Generating {rows}x{cols} Maze ---")
     line_maze = Maze(cols, rows) # Not a mistake. Maze takes (cols, rows)
     occupancy_maze = OccupancyGridMaze(line_maze)
     print("Maze generation complete.")
@@ -61,6 +61,14 @@ def generate_and_save_mazes(directory: Path, cols: int, rows: int):
         solution_steps = maze_obj.get_solution_steps()
         with open(f"{prefix}_solution_steps.txt", "w", encoding="utf-8") as f:
             f.write(", ".join(solution_steps))
+
+    # Save solution for line-based maze
+    with open(directory / f"maze_line_{rows}x{cols}_solution_coords.txt", "w") as f:
+        f.write(str(line_maze.get_solution_coordinates()))
+
+    # Save solution for occupancy grid maze, which is created inside the Maze() class. Therefore, its name is maze_line_row_col_maze_occ_solution_coords.txt . 
+    with open(directory / f"maze_occupancy_{rows}x{cols}_solution_coords.txt", "w") as f:
+        f.write(str(line_maze.get_occ_solution_coordinates()))
 
     print(f"All maze representations saved to '{directory}'.")
 

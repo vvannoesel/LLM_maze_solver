@@ -26,3 +26,4 @@ maze_generator_adjacency_grid.py
 maze_generator_extended_v2.py
 maze_generator_extended.py
 maze_llm_compare.py
+*.xlsx
