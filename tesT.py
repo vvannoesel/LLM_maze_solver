@@ -20,8 +20,8 @@ from PIL import Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
 
 # --- Configuration ---
-MAZE_ROWS = 2
-MAZE_COLS = 2
+MAZE_ROWS = 15
+MAZE_COLS = 15
 MODEL_NAME = "gemini-2.5-flash-lite"
 # PROMPT = (
 #     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. "
@@ -66,8 +66,8 @@ def import_maze_file() -> Path:
     try:
         # Construct the path relative to the script's directory
         script_dir = Path(__file__).parent
-        # file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
-        file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+        file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
+        # file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
 
         if not file_path.exists():
             raise FileNotFoundError(f"The specified maze file was not found at: {file_path}")
@@ -154,13 +154,13 @@ def call_llm(prompt: str, file_path: Path, api_key: str):
             with open(file_path, 'r', encoding='cp1252') as f:
                 maze_input = f.read()
             # content.append(file_content)
-        print("Content for LLM is: ", maze_input)
+        # print("Content for LLM is: ", maze_input)
         # response = model.generate_content(f"{prompt}\n\n{maze_input}") # old method, replaced with new one below
         client = genai.Client(api_key=api_key)
         response = client.models.generate_content(  # FOR 2.5 FL THE DEFAULT THINKING BUDGET IS 0
             model = MODEL_NAME,
             contents=f'{PROMPT}\n\n{maze_input}',
-            config=types.GenerateContentConfig(maxOutputTokens = 600))
+            config=types.GenerateContentConfig(maxOutputTokens = 4000))
         # print("response shape:", type(response))
 
         return response.text 
@@ -350,13 +350,13 @@ def main():
         # Import the specific maze file and directory path
         maze_file = import_maze_file() 
         script_dir = Path(__file__).parent
-        # test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
-        test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+        test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
+        # test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
 
 
         # Get list of files to test, excluding solutions
         files_to_test = [
-            f for f in test_dir.iterdir() if "_solution_" not in f.name 
+            f for f in test_dir.iterdir() if "_solution_" not in f.name  # Do not offer solution files to LLM
         ]
 
         results = []
