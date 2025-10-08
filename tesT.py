@@ -18,10 +18,11 @@ from google.genai import types
 from dotenv import load_dotenv
 from PIL import Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
+from score_saver import save_score
 
 # --- Configuration ---
-MAZE_ROWS = 15
-MAZE_COLS = 15
+MAZE_ROWS = 2
+MAZE_COLS = 2
 MODEL_NAME = "gemini-2.5-flash-lite"
 # PROMPT = (
 #     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. "
@@ -33,9 +34,8 @@ MODEL_NAME = "gemini-2.5-flash-lite"
 
 PROMPT = (
     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. " \
-    "The maze is represented as a grid. The top-left corner is (0,0)."
+    "The maze is represented as a grid. The top-left corner is (0,0)." \
     "Instructions: " \
-    # "1. You can only move up, down, left, or right. " \
     "1. You cannot move diagonally or through walls, only from one coordinate to an adjacent coordinate. " \
     "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1). " \
     "3. Provide only the final list of coordinates from start to end in your response." )
@@ -439,6 +439,7 @@ def main():
             
             # Score the answer against the dynamically found solution. Takes in two lists of tuples
             score = score_coordinate_solution(llm_coords, solution_steps)
+            
 
             # Convert llm_steps from a list of tuples to a string so it can be added to dictionary
             llm_steps = str(llm_coords).strip('[]')
@@ -452,10 +453,10 @@ def main():
                 "ground_truth": correct_solution_str
             })
         # -------------------------------------------------------------------------------
-
-
-
             
+            
+            # Save the scores to a numpy array in a separate file to create charts after testing. 
+            save_score(filename= file, score = score)
 
         print("--- LLM Maze Solving Complete ---")
 
@@ -487,9 +488,12 @@ def main():
                 f.write(f"```\n{res['response']}\n```\n\n")
                 
         print(f"\nComparison report saved to: {report_path}")
+    
 
     except Exception as e:
         print(f"\nAn unexpected error occurred: {e}")
+
+
 
 if __name__ == "__main__":
     main()

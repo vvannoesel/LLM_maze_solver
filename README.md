@@ -26,12 +26,19 @@ macOS/Linux: $ source myfirstproject/bin/activate
 Windows: (myfirstproject) C:\Users\Your_Name\Codes> pip install pillow
 Linux: $ sudo apt install python3-pil
 ```
-5. To deactivate the environment, run the following command
+5. Install NumPy and Matplotlib to create charts.
+```
+Windows: (myfirstproject) C:\Users\Your_Name\Codes> pip install numpy
+         (myfirstproject) C:\Users\Your_Name\Codes> pip install matplotlib
+Linux: $ sudo apt install numpy -> CHECK OF DIT KLOPT
+       $ sudo apt install matplotlib -> CHECK OF DIT KLOPT
+```
+6. To deactivate the environment, run the following command
 ```
 Windows: (myfirstproject) C:\Users\Your_Name\Codes> deactivate
 macOS/Linux: (myfirstproject) ... $ deactivate
 ```
-6. Create all your scripts within this folder. They will run within the same clean environment and can securely access the API key. 
+7. Create all your scripts within this folder. They will run within the same clean environment and can securely access the API key. 
 
 ### How to add an API key - Hier moet nog mac/linux instructies bij!
 1. Inside your virtual environment, install the following libraries by running the following command in the Anaconda prompt while the environment is active
@@ -84,6 +91,8 @@ API_KEY = "YOUR_SECRET_API_KEY_HERE"
 
 * tesT_2.py
     * A python file that is used to import an existing maze from a child directory called 'Dataset 01/Dataset 01 {Maze rows}x{Maze cols}'. This maze is iteratively used to prompt a reasoning LLM to solve the maze. The LLM's response is saved as a tuple of [final answer (str), thought summary (str)] and automatically scored against the ground-truth solution and saved in a single .md file inside the maze's folder. 
+* score_saver.py
+    * A python script that stores the scores from tesT.py and tesT_2.py in a numpy array in a file called 'scores_nonreasoning_Dataset01.py. These arrays can be used to create charts. The score is saved to an array with a name similar to the tested file's name.  The score is saved to the [row-2]'nd index of the array, so a 2x2 maze score is saved on the 0th index, 3x3 score on the 1st index, etc. This file is called within the tesT.py and tesT_2.py files. 
 
 
 # Notes voor Val
