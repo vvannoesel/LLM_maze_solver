@@ -233,7 +233,7 @@ def score_llm_output_strict(llm_steps: list, solution_steps: list) -> float:
     Scores LLM output, stopping at the first mismatch.
     The score is the percentage of consecutive matching steps.
     """
-    #Check if the steps are given in the answer. If not, return 'NaN'
+    #Check if any steps are given in the answer. If not, return 'NaN'
     if len(llm_steps) == 0:
         return float('NaN') # returns NaN and ends function. If not, continues to score normally .
     
@@ -244,6 +244,10 @@ def score_llm_output_strict(llm_steps: list, solution_steps: list) -> float:
             consecutive_matches += 1
         else:
             break  # Stop counting on the first mismatch
+
+    # If LLM steps keep moving after reaching goal (number of consecutive_matches is as long as the solution), LLM exceeds the task and function returns 110%. 
+    if consecutive_matches == len(solution_steps) and len(llm_steps) > len(solution_steps): 
+        return float(1.1)
 
     # Calculate score based on the total steps in the ground truth. Use max to avoid division by zero.
     return consecutive_matches / max(len(solution_steps), 1)
@@ -325,7 +329,7 @@ def score_coordinate_solution( # This function works the same as score_llm_outpu
     Returns:
         float: The score from 0.0 to 1.0. Returns 'NaN' if the LLM path is empty.
     """
-    #Check if the steps are given in the answer. If not, return 'NaN'
+    #Check if any coordinates are given in the answer. If not, return 'NaN'
     if len(llm_path) == 0:
         return float('NaN') # returns NaN and ends function. If not, continues to score normally .
 
@@ -413,6 +417,7 @@ def main():
                 "extracted_answer": ", ".join(llm_steps),
                 "score": score * 100,  # Store as percentage
                 "ground_truth": correct_solution_str,
+                "unfiltered_response" : response,
                 "total_tokens": total_tokens,
                 "metadata" : response.usage_metadata
             })
@@ -463,6 +468,7 @@ def main():
         #         "extracted_answer": llm_steps,
         #         "score": score * 100,  # Store as percentage
         #         "ground_truth": correct_solution_str,
+        #         "unfiltered_response" : response,
         #         "total_tokens": total_tokens,
         #         "metadata" : response.usage_metadata
 
@@ -501,6 +507,9 @@ def main():
 
                 f.write("**Full Response:**\n") # Keep this section to show the entire response in case LLM disobeys format
                 f.write(f"```\n{res['response']}\n```\n")
+
+                f.write("**Unfiltered Response:**\n")
+                f.write(f"```\n{res['unfiltered_response']}\n```\n")
 
                 f.write("**total_tokens:**\n") 
                 f.write(f"```\n{res['total_tokens']}\n```\n")

@@ -22,25 +22,25 @@ from score_saver import save_score
 
 
 # --- Configuration ---
-MAZE_ROWS = 2
-MAZE_COLS = 2
+MAZE_ROWS = 20
+MAZE_COLS = 20
 MODEL_NAME = "gemini-2.5-pro"
-# PROMPT = (
-#     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. " \
-#     "The maze is represented as a grid. The top-left corner is (0,0)." \
-#     "Instructions: " \
-#     "1. You can only move up, down, left, or right. " \
-#     "2. You cannot move diagonally or through walls, only from one coordinate to an adjacent coordinate. " \
-#     "3. Your output must be a single, comma-separated sequence of steps. For example: up, down, right, right, down. " \
-#     "4. Provide only the final list of moves in your response.")
-
 PROMPT = (
     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. " \
     "The maze is represented as a grid. The top-left corner is (0,0)." \
     "Instructions: " \
-    "1. You cannot move diagonally or through walls, only from one coordinate to an adjacent coordinate. " \
-    "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1). " \
-    "3. Provide only the final list of coordinates from start to end in your response." )
+    "1. You can only move up, down, left, or right. " \
+    "2. You cannot move diagonally or through walls, only from one coordinate to an adjacent coordinate. " \
+    "3. Your output must be a single, comma-separated sequence of steps. For example: up, down, right, right, down. " \
+    "4. Provide only the final list of moves in your response.")
+
+# PROMPT = (
+#     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. " \
+#     "The maze is represented as a grid. The top-left corner is (0,0)." \
+#     "Instructions: " \
+#     "1. You cannot move diagonally or through walls, only from one coordinate to an adjacent coordinate. " \
+#     "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1). " \
+#     "3. Provide only the final list of coordinates from start to end in your response." )
 
 def setup_api_key():
     """
@@ -67,8 +67,8 @@ def import_maze_file() -> Path:
     try:
         # Construct the path relative to the script's directory
         script_dir = Path(__file__).parent
-        # file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
-        file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+        file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
+        # file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
 
         if not file_path.exists():
             raise FileNotFoundError(f"The specified maze file was not found at: {file_path}")
@@ -244,9 +244,9 @@ def score_llm_output_strict(llm_steps: list, solution_steps: list) -> float:
     Scores LLM output, stopping at the first mismatch.
     The score is the percentage of consecutive matching steps.
     """
-    #Check if the number of LLM steps exceeds the solution steps. If so, return NaN because the solution exceeds constraints
-    if len(llm_steps) > len(solution_steps):
-        return float('NaN') # returns NaN and ends function. If not, continues to score normally .
+    #Check if any steps are given in the answer. If not, return 'NaN'
+    if len(llm_steps) == 0:
+        return float('NaN') # returns NaN and ends function. If not, continues to score normally 
     
     consecutive_matches = 0
     # Use zip to iterate through both lists in parallel
@@ -256,13 +256,15 @@ def score_llm_output_strict(llm_steps: list, solution_steps: list) -> float:
         else:
             break  # Stop counting on the first mismatch
 
+    # If LLM steps keep moving after reaching goal (number of consecutive_matches is as long as the solution), LLM exceeds the task and function returns 110%. 
+    if consecutive_matches == len(solution_steps) and len(llm_steps) > len(solution_steps): 
+        return float(1.1)
+
     # Calculate score based on the total steps in the ground truth. Use max to avoid division by zero.
     return consecutive_matches / max(len(solution_steps), 1)
 
 
 # -------------- All functions below are specifically for parsing and scoring solution COORDINATES outputted by an LLM. --------------
-
-
 def parse_coordinate_string(text: str) -> list[tuple[int, int]]: # This function is necessary only when collecting coordinates as an answer from the LLM
     """
     Parses a string of coordinates into a list of integer tuples.
@@ -370,8 +372,8 @@ def main():
         # Import the specific maze file and directory path
         maze_file = import_maze_file() 
         script_dir = Path(__file__).parent
-        # test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
-        test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+        test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
+        # test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
 
         # Get list of files to test, excluding solutions
         files_to_test = [
@@ -382,60 +384,13 @@ def main():
         print("\n--- Starting LLM Maze Solving ---")
         
         # -------------- Use this for-loop when scoring solution in STEPS --------------------
-        # for file in files_to_test:
-        #     # Dynamically find the correct solution file for the current maze type 
-        #     solution_pattern = ""
-        #     if file.name.startswith("maze_line_"):
-        #         solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_steps.txt"
-        #     elif file.name.startswith("maze_occupancy_"):
-        #         solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_steps.txt"
-        #     else:
-        #         print(f"Warning: Skipping file with unhandled type: {file.name}")
-        #         continue
-
-        #     solution_file_path = test_dir / solution_pattern 
-        #     solution_steps = []
-        #     correct_solution_str = "Solution file not found"
-            
-        #     if solution_file_path.exists():
-        #         with open(solution_file_path, 'r', encoding='utf-8') as f:
-        #             correct_solution_str = f.read().strip()
-        #         solution_steps = [s.strip().lower() for s in correct_solution_str.split(',') if s.strip()] # Process the solution steps into a lowercase list
-        #     else:
-        #         print(f"Warning: Could not find solution file matching '{solution_pattern}'")
-            
-        #     # Unpack the tuple returned by call_llm
-        #     response, total_tokens, final_answer, thought_summary = call_llm(PROMPT, file, my_api_key)
-
-        #     # Prepare the LLM's answer using the new function
-        #     llm_steps = prepare_llm_answer_steps(final_answer)
-            
-        #     # Score the answer against the dynamically found solution
-        #     score = score_llm_output_strict(llm_steps, solution_steps)
-
-        #     # Store all relevant information, including internal thoughts
-        #     results.append({
-        #         "file": file.name,
-        #         "response": final_answer, # Renamed from 'response' to 'final_answer' for clarity
-        #         "internal_thoughts": thought_summary,
-        #         "extracted_answer": ", ".join(llm_steps),
-        #         "score": score * 100,
-        #         "ground_truth": correct_solution_str, 
-        #         "total_tokens": total_tokens,
-        #         "metadata" : response.usage_metadata, 
-        #         "candidates" : response.candidates
-        #     })
-        # ------------------------------------------------------------------------------------
-        
-        # -------------- Use this for-loop when scoring solution in COORDINATES --------------
-
         for file in files_to_test:
             # Dynamically find the correct solution file for the current maze type 
             solution_pattern = ""
             if file.name.startswith("maze_line_"):
-                solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_coords.txt"
+                solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_steps.txt"
             elif file.name.startswith("maze_occupancy_"):
-                solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_coords.txt"
+                solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_steps.txt"
             else:
                 print(f"Warning: Skipping file with unhandled type: {file.name}")
                 continue
@@ -446,38 +401,87 @@ def main():
             
             if solution_file_path.exists():
                 with open(solution_file_path, 'r', encoding='utf-8') as f:
-                    solution_steps = parse_coordinate_string(f.read())  # Read coordinate solution file and convert to list of tuples
-                    correct_solution_str = str(solution_steps).strip('[]')  # Create a string from the tuple, so it can be used in the dictionary to write in .md file
+                    correct_solution_str = f.read().strip()
+                solution_steps = [s.strip().lower() for s in correct_solution_str.split(',') if s.strip()] # Process the solution steps into a lowercase list
             else:
                 print(f"Warning: Could not find solution file matching '{solution_pattern}'")
             
-            # Call the llm with the current maze file and unpack the tuple returned by call_llm
+            # Unpack the tuple returned by call_llm
             response, total_tokens, final_answer, thought_summary = call_llm(PROMPT, file, my_api_key)
-            time.sleep(5) # wait 5 sec after calling LLM 
-            print("waiting 5 secs for llm")
 
             # Prepare the LLM's answer using the new function
-            print("does this work still")
-            llm_steps = parse_coordinate_string(final_answer)
-            print("still working")
-        
+            llm_steps = prepare_llm_answer_steps(final_answer)
+            
             # Score the answer against the dynamically found solution
-            print("problems yet?")
-            score = score_coordinate_solution(llm_steps, solution_steps)
-            print("nope")
+            score = score_llm_output_strict(llm_steps, solution_steps)
 
             # Store all relevant information, including internal thoughts
             results.append({
                 "file": file.name,
                 "response": final_answer, # Renamed from 'response' to 'final_answer' for clarity
                 "internal_thoughts": thought_summary,
-                "extracted_answer": llm_steps,
+                "extracted_answer": ", ".join(llm_steps),
                 "score": score * 100,
                 "ground_truth": correct_solution_str, 
+                "unfiltered_response" : response,
                 "total_tokens": total_tokens,
-                "metadata" : response.usage_metadata,
+                "metadata" : response.usage_metadata, 
                 "candidates" : response.candidates
             })
+        # ------------------------------------------------------------------------------------
+        
+        # -------------- Use this for-loop when scoring solution in COORDINATES --------------
+
+        # for file in files_to_test:
+        #     # Dynamically find the correct solution file for the current maze type 
+        #     solution_pattern = ""
+        #     if file.name.startswith("maze_line_"):
+        #         solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_coords.txt"
+        #     elif file.name.startswith("maze_occupancy_"):
+        #         solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_coords.txt"
+        #     else:
+        #         print(f"Warning: Skipping file with unhandled type: {file.name}")
+        #         continue
+
+        #     solution_file_path = test_dir / solution_pattern 
+        #     solution_steps = []
+        #     correct_solution_str = "Solution file not found"
+            
+        #     if solution_file_path.exists():
+        #         with open(solution_file_path, 'r', encoding='utf-8') as f:
+        #             solution_steps = parse_coordinate_string(f.read())  # Read coordinate solution file and convert to list of tuples
+        #             correct_solution_str = str(solution_steps).strip('[]')  # Create a string from the tuple, so it can be used in the dictionary to write in .md file
+        #     else:
+        #         print(f"Warning: Could not find solution file matching '{solution_pattern}'")
+            
+        #     # Call the llm with the current maze file and unpack the tuple returned by call_llm
+        #     response, total_tokens, final_answer, thought_summary = call_llm(PROMPT, file, my_api_key)
+        #     time.sleep(5) # wait 5 sec after calling LLM 
+        #     print("waiting 5 secs for llm")
+
+        #     # Prepare the LLM's answer using the new function
+        #     print("does this work still")
+        #     llm_steps = parse_coordinate_string(final_answer)
+        #     print("still working")
+        
+        #     # Score the answer against the dynamically found solution
+        #     print("problems yet?")
+        #     score = score_coordinate_solution(llm_steps, solution_steps)
+        #     print("nope")
+
+        #     # Store all relevant information, including internal thoughts
+        #     results.append({
+        #         "file": file.name,
+        #         "response": final_answer, # Renamed from 'response' to 'final_answer' for clarity
+        #         "internal_thoughts": thought_summary,
+        #         "extracted_answer": llm_steps,
+        #         "score": score * 100,
+        #         "ground_truth": correct_solution_str, 
+        #         "unfiltered_response" : response,
+        #         "total_tokens": total_tokens,
+        #         "metadata" : response.usage_metadata,
+        #         "candidates" : response.candidates
+        #     })
         # ------------------------------------------------------------------------------------
 
             # Save the scores to a numpy array in a separate file to create charts after testing. 
@@ -486,7 +490,7 @@ def main():
         print("--- LLM Maze Solving Complete ---")
 
         # Generate markdown report
-        report_path = test_dir / "comparison_results.md"
+        report_path = test_dir / "comparison_results_reasoning_steps.md"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(f"# LLM Maze Solving Comparison Report\n\n")
             f.write(f"**Maze Dimensions:** {MAZE_ROWS}x{MAZE_COLS}\n")
@@ -512,6 +516,9 @@ def main():
                 # Add Internal Thoughts section to the report
                 f.write("**Internal Thoughts:**\n")
                 f.write(f"```\n{res['internal_thoughts']}\n```\n")
+
+                f.write("**Unfiltered Response:**\n")
+                f.write(f"```\n{res['unfiltered_response']}\n```\n")
 
                 f.write("**total_tokens:**\n") 
                 f.write(f"```\n{res['total_tokens']}\n```\n")
