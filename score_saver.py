@@ -1,6 +1,6 @@
 """
 @author: Gemini 2.5 Pro, 8 October 16:20:04 2025
-This script stores the scores from tesT.py and tesT_2.py in a numpy array in a file called 'scores_nonreasoning_Dataset01.py.
+This script stores the scores from tesT.py and tesT_2.py in a numpy array in a file called 'scores_Dataset01.py.
 These arrays can be used to create charts.
 The score is saved to an array with a name similar to the tested file's name. 
 The score is saved to the [row-2]'nd index of the array, so a 2x2 maze score is saved on the 0th index, 3x3 score on the 1st index, etc.
@@ -12,7 +12,7 @@ import re
 import os
 
 
-def save_score(filename: str, score: float, output_file: str = 'scores_nonreasoning_Dataset01.py'):
+def save_score(filename: str, score: float, output_file: str = 'scores_Dataset01.py'):
     """
     Parses a maze filename to update a specific NumPy array with a new score.
 
@@ -92,7 +92,7 @@ def save_score(filename: str, score: float, output_file: str = 'scores_nonreason
         current_array.extend([np.nan] * padding_size)
     
     # Place the new score at the correct index
-    current_array[index] = score
+    current_array[index] = score * 100
     scores_data[array_name] = current_array
 
     # --- 4. Write all updated data back to the file ---
