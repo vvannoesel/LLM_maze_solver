@@ -67,8 +67,10 @@ def import_maze_file() -> Path:
     try:
         # Construct the path relative to the script's directory
         script_dir = Path(__file__).parent
-        file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
+        # file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
         # file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+        file_path = script_dir / "Dataset 01" / "extra 20x20"
+        
 
         if not file_path.exists():
             raise FileNotFoundError(f"The specified maze file was not found at: {file_path}")
@@ -372,8 +374,9 @@ def main():
         # Import the specific maze file and directory path
         maze_file = import_maze_file() 
         script_dir = Path(__file__).parent
-        test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
+        # test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
         # test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+        test_dir = script_dir / "Dataset 01" / "extra 20x20"
 
         # Get list of files to test, excluding solutions
         files_to_test = [
@@ -472,7 +475,7 @@ def main():
         #     # Store all relevant information, including internal thoughts
         #     results.append({
         #         "file": file.name,
-        #         "response": final_answer, # Renamed from 'response' to 'final_answer' for clarity
+        #         "response": final_answer, 
         #         "internal_thoughts": thought_summary,
         #         "extracted_answer": llm_steps,
         #         "score": score * 100,
@@ -486,9 +489,14 @@ def main():
 
             # Save the scores to a numpy array in a separate file to create charts after testing. 
             save_score(filename= file, score = score)
+    
+    # The except needs to be here to save progress in .md file even when api errors occur
+    except Exception as e: 
+        print(f"\nAn unexpected error occurred: {e}")
         
-        print("--- LLM Maze Solving Complete ---")
+    print("--- LLM Maze Solving Complete ---")
 
+    try:
         # Generate markdown report
         report_path = test_dir / "comparison_results_reasoning_steps.md"
         with open(report_path, 'w', encoding='utf-8') as f:
@@ -533,6 +541,6 @@ def main():
         print(f"\nComparison report saved to: {report_path}")
 
     except Exception as e:
-        print(f"\nAn unexpected error occurred: {e}")
+        print(f"\nAn unexpected error occurred during markdown creation: {e}")
 if __name__ == "__main__":
     main()

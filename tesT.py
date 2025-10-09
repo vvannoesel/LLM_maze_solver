@@ -21,8 +21,8 @@ from maze_generator_ext_v3 import Maze, OccupancyGridMaze
 from score_saver import save_score
 
 # --- Configuration ---
-MAZE_ROWS = 2
-MAZE_COLS = 2
+MAZE_ROWS = 12
+MAZE_COLS = 12
 MODEL_NAME = "gemini-2.5-flash-lite"
 PROMPT = (
     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. " \
@@ -67,8 +67,8 @@ def import_maze_file() -> Path:
     try:
         # Construct the path relative to the script's directory
         script_dir = Path(__file__).parent
-        # file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
-        file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+        file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
+        # file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
 
         if not file_path.exists():
             raise FileNotFoundError(f"The specified maze file was not found at: {file_path}")
@@ -361,8 +361,8 @@ def main():
         # Import the specific maze file and directory path
         maze_file = import_maze_file() 
         script_dir = Path(__file__).parent
-        # test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
-        test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+        test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
+        # test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
 
 
         # Get list of files to test, excluding solutions
@@ -404,7 +404,6 @@ def main():
             
             # Prepare the LLM's answer using the new function. Returns list of tuples
             response_str = response.text # Select only the textual response data
-            print(f"textual response: {response_str}")
             llm_steps = prepare_llm_answer_steps(response_str)
             
             # Score the answer against the dynamically found solution
@@ -479,10 +478,15 @@ def main():
             # Save the scores to a numpy array in a separate file to create charts after testing. 
             save_score(filename= file, score = score)
 
-        print("--- LLM Maze Solving Complete ---")
+    # The except needs to be here to save progress in .md file even when api errors occur
+    except Exception as e:
+        print(f"\nAn unexpected error occurred: {e}")
 
+    print("--- LLM Maze Solving Complete ---")
+
+    try:
         # Generate markdown report
-        report_path = test_dir / "comparison_results.md"
+        report_path = test_dir / "comparison_results_nonreasoning_steps.md"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(f"# LLM Maze Solving Comparison Report\n\n")
             f.write(f"**Maze Dimensions:** {MAZE_ROWS}x{MAZE_COLS}\n")
@@ -521,7 +525,7 @@ def main():
     
 
     except Exception as e:
-        print(f"\nAn unexpected error occurred: {e}")
+        print(f"\nAn unexpected error occurred during markdown creation: {e}")
 
 
 
