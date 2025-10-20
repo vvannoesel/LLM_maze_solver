@@ -21,23 +21,41 @@ from maze_generator_ext_v3 import Maze, OccupancyGridMaze
 from score_saver import save_score
 
 # --- Configuration ---
-MAZE_ROWS = 12
-MAZE_COLS = 12
+MAZE_ROWS = 5
+MAZE_COLS = 5
 MODEL_NAME = "gemini-2.5-flash-lite"
+
+# PROMPT 1: BEV
 PROMPT = (
-    "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. " \
-    "The maze is represented as a grid. The top-left corner is (0,0)." \
+    "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
+    "The maze is represented as a 5x5 grid. The top-left corner is (0,0)." \
     "Instructions: " \
     "1. You can only move up, down, left, or right. " \
-    "2. You cannot move diagonally or through walls, only from one coordinate to an adjacent coordinate. " \
+    "2. You cannot move diagonally or through walls, only from one cell to an adjacent cell. " \
     "3. Your output must be a single, comma-separated sequence of steps. For example: up, down, right, right, down. " \
     "4. Provide only the final list of moves in your response.")
 
+# PROMPT 2: EGO
 # PROMPT = (
-#     "You are a maze-solving expert.Your goal is to find the path from start to end. Do not use external tools. " \
-#     "The maze is represented as a grid. The top-left corner is (0,0)." \
+#     "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
+#     "The maze is represented as a 5x5 grid. The top-left corner is (0,0). The agent in the maze has a starting orientation facing southward." \
 #     "Instructions: " \
-#     "1. You cannot move diagonally or through walls, only from one coordinate to an adjacent coordinate. " \
+#     "1. Give instructions to an agent in the maze. You can only use the following four actions: " \
+#     "Forward: this moves the agent 1 step in the direction it is facing. " \
+#     "Left: turn 90° to the left and take one step forward. " \
+#     "Right: turn 90° to the right and take one step forward. " \
+#     "Backward: turn 180° and take one step forward. " \
+#     "2. You cannot move diagonally or through walls, only from one cell to an adjacent cell. " \
+#     "3. Your output must be a single, comma-separated sequence of steps. For example: forward, left, right, forward, right. " \
+#     "4. Provide only the final list of instructions in your response.")
+
+
+# PROMPT 3: COORDINATES
+# PROMPT = (
+#     "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
+#     "The maze is represented as a 5x5 grid. The top-left corner is (0,0)." \
+#     "Instructions: " \
+#     "1. You cannot move diagonally or through walls, only from one cell to an adjacent cell. " \
 #     "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1). " \
 #     "3. Provide only the final list of coordinates from start to end in your response." )
 

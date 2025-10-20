@@ -14,19 +14,19 @@ import numpy as np
 
 
 # -------------------- Reasoning, steps output, dataset 01 ----------------
-x_axis = ['2x2', '5x5', '10x10', '15x15', '20x20']
-line_adj_json = np.array([100.0, 100.0,  100.0,  69.2982456140351,  22.63157894736842])
-line_adj_txt = np.array([0.0,  100.0,  78.57142857142857,  53.50877192982456,  3.1578947368421053])
-line_ascii_txt = np.array([100.0,  28.57142857142857,  4.761904761904762,  0.0,  0.0])
-line_jpg = np.array([0.0,  28.57142857142857,  2.380952380952381,  0.0,  0.0])
-line_json = np.array([100.0,  100.0,  11.904761904761903,  21.052631578947366,  17.36842105263158])
-line_tokenized_txt = np.array([100.0,  100.0,  100.0,  32.45614035087719,  16.842105263157894])
-occupancy_adj_json = np.array([100.0,  100.0,  100.0,  35.96491228070175,  35.78947368421053])
-occupancy_adj_txt = np.array([100.0,  100.0,  100.0,  64.03508771929825,  12.631578947368421])
-occupancy_ascii_txt = np.array([110.0,  14.285714285714285,  7.142857142857142,  3.9473684210526314,  3.1578947368421053])
-occupancy_jpg = np.array([25.0,  0.0,  0.0,  0.8771929824561403, 0.2631578947368421])
-occupancy_json = np.array([0.0,  100.0,  19.047619047619047,  5.263157894736842,  3.684210526315789])
-occupancy_tokenized_txt = np.array([100.0,  100.0,  100.0,  31.57894736842105,  5.7894736842105265])
+# x_axis = ['2x2', '5x5', '10x10', '15x15', '20x20']
+# line_adj_json = np.array([100.0, 100.0,  100.0,  69.2982456140351,  22.63157894736842])
+# line_adj_txt = np.array([0.0,  100.0,  78.57142857142857,  53.50877192982456,  3.1578947368421053])
+# line_ascii_txt = np.array([100.0,  28.57142857142857,  4.761904761904762,  0.0,  0.0])
+# line_jpg = np.array([0.0,  28.57142857142857,  2.380952380952381,  0.0,  0.0])
+# line_json = np.array([100.0,  100.0,  11.904761904761903,  21.052631578947366,  17.36842105263158])
+# line_tokenized_txt = np.array([100.0,  100.0,  100.0,  32.45614035087719,  16.842105263157894])
+# occupancy_adj_json = np.array([100.0,  100.0,  100.0,  35.96491228070175,  35.78947368421053])
+# occupancy_adj_txt = np.array([100.0,  100.0,  100.0,  64.03508771929825,  12.631578947368421])
+# occupancy_ascii_txt = np.array([110.0,  14.285714285714285,  7.142857142857142,  3.9473684210526314,  3.1578947368421053])
+# occupancy_jpg = np.array([25.0,  0.0,  0.0,  0.8771929824561403, 0.2631578947368421])
+# occupancy_json = np.array([0.0,  100.0,  19.047619047619047,  5.263157894736842,  3.684210526315789])
+# occupancy_tokenized_txt = np.array([100.0,  100.0,  100.0,  31.57894736842105,  5.7894736842105265])
 
 # # Change every value that is not 100 to 0 to get final answer accuracy
 # line_jpg[line_jpg != 100.0] = 0
@@ -44,31 +44,31 @@ occupancy_tokenized_txt = np.array([100.0,  100.0,  100.0,  31.57894736842105,  
 
 # Create a plot
 # Comment out when you want only final accuracy plot 
-plt.plot(x_axis, line_jpg, 'g:', label = 'line jpg')
-plt.plot(x_axis, line_json, 'b:o', label = 'line json')
-plt.plot(x_axis, line_adj_json, 'c:o', label = 'line adjacency json')
-plt.plot(x_axis, line_adj_txt, 'm:o', label = 'line adjacency txt')
-plt.plot(x_axis, line_ascii_txt, 'y:o', label = 'line ASCII')
-plt.plot(x_axis, line_tokenized_txt, 'k:o', label = 'line tokenized')
-plt.plot(x_axis, occupancy_jpg, 'g-->', label = 'occupancy jpg')
-plt.plot(x_axis, occupancy_json, 'b-->', label = 'occupancy json')
-plt.plot(x_axis, occupancy_adj_json, 'c-->', label = 'occupancy adjacency json')
-plt.plot(x_axis, occupancy_adj_txt, 'm-->', label = 'occupancy adjacency txt')
-plt.plot(x_axis, occupancy_ascii_txt, 'y-->', label = 'occupancy ASCII')
-plt.plot(x_axis, occupancy_tokenized_txt, 'k-->', label = 'occupancy tokenized')
+# plt.plot(x_axis, line_jpg, 'g:', label = 'line jpg')
+# plt.plot(x_axis, line_json, 'b:o', label = 'line json')
+# plt.plot(x_axis, line_adj_json, 'c:o', label = 'line adjacency json')
+# plt.plot(x_axis, line_adj_txt, 'm:o', label = 'line adjacency txt')
+# plt.plot(x_axis, line_ascii_txt, 'y:o', label = 'line ASCII')
+# plt.plot(x_axis, line_tokenized_txt, 'k:o', label = 'line tokenized')
+# plt.plot(x_axis, occupancy_jpg, 'g-->', label = 'occupancy jpg')
+# plt.plot(x_axis, occupancy_json, 'b-->', label = 'occupancy json')
+# plt.plot(x_axis, occupancy_adj_json, 'c-->', label = 'occupancy adjacency json')
+# plt.plot(x_axis, occupancy_adj_txt, 'm-->', label = 'occupancy adjacency txt')
+# plt.plot(x_axis, occupancy_ascii_txt, 'y-->', label = 'occupancy ASCII')
+# plt.plot(x_axis, occupancy_tokenized_txt, 'k-->', label = 'occupancy tokenized')
 
-plt.title('Single Answer Accuracy of Gemini 2.5 Pro, Steps Output')
-plt.xlabel('Maze Complexity')
-plt.ylabel('Single Answer Accuracy (%)')
-
-# plt.title('Final Answer Accuracy of Gemini 2.5 Pro, Steps Output')
+# plt.title('Single Answer Accuracy of Gemini 2.5 Pro, Steps Output')
 # plt.xlabel('Maze Complexity')
-# plt.ylabel('Final Answer Accuracy (%)')
+# plt.ylabel('Single Answer Accuracy (%)')
 
-plt.legend(loc=(1.04, 0)) # Place legend to top right of plot, next to plot. 
-plt.grid(linestyle = ':', linewidth = '0.5')
-plt.show()
-# -------------------------------------------------------------------------------------------------------------
+# # plt.title('Final Answer Accuracy of Gemini 2.5 Pro, Steps Output')
+# # plt.xlabel('Maze Complexity')
+# # plt.ylabel('Final Answer Accuracy (%)')
+
+# plt.legend(loc=(1.04, 0)) # Place legend to top right of plot, next to plot. 
+# plt.grid(linestyle = ':', linewidth = '0.5')
+# plt.show()
+# # -------------------------------------------------------------------------------------------------------------
 
 
 
@@ -119,9 +119,9 @@ plt.show()
 # plt.plot(x_axis, occupancy_ascii_txt, 'y-->', label = 'occupancy ASCII')
 # plt.plot(x_axis, occupancy_tokenized_txt, 'k-->', label = 'occupancy tokenized')
 
-# # plt.title('Single Answer Accuracy of Gemini 2.5 Flash Lite, Steps Output')
-# # plt.xlabel('Maze Complexity')
-# # plt.ylabel('Single Answer Accuracy (%)')
+# plt.title('Single Answer Accuracy of Gemini 2.5 Flash Lite, Steps Output')
+# plt.xlabel('Maze Complexity')
+# plt.ylabel('Single Answer Accuracy (%)')
 
 # plt.title('Final Answer Accuracy of Gemini 2.5 Flash Lite, Steps Output')
 # plt.xlabel('Maze Complexity')

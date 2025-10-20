@@ -1,0 +1,1 @@
+forward, left, left, right, right, left, left, right, right, forward, forward, forward
