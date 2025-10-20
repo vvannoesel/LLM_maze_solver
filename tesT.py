@@ -18,13 +18,14 @@ from google.genai import types
 from dotenv import load_dotenv
 from PIL import Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
-from score_saver import save_score
+from score_saver import save_score, collect_and_save_scores
+from token_count_extracter import extract_prompt_token_count, extract_output_token_count
 
 # --- Configuration ---
 MAZE_ROWS = 5
 MAZE_COLS = 5
 MODEL_NAME = "gemini-2.5-flash-lite"
-
+i = 30
 # PROMPT 1: BEV
 PROMPT = (
     "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
@@ -85,8 +86,9 @@ def import_maze_file() -> Path:
     try:
         # Construct the path relative to the script's directory
         script_dir = Path(__file__).parent
-        file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
+        # file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
         # file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
+        file_path = script_dir / "Dataset 02 - Statistical analysis" / f"Dataset 02 {MAZE_ROWS}x{MAZE_COLS} {i}"
 
         if not file_path.exists():
             raise FileNotFoundError(f"The specified maze file was not found at: {file_path}")
@@ -214,7 +216,7 @@ def extract_final_answer_steps(text: str) -> list: # this function works but it 
               Returns an empty list if the pattern isn't matched.
     """
     match = re.search( # Find the block of text between the markers 'Final answer:' and 'End of final sequence'
-        r"steps: (.*?)",
+        # r"steps: (.*?)",
         text,
         re.DOTALL | re.IGNORECASE # Make the search case-insensitive and allow newlines
     )
@@ -379,9 +381,9 @@ def main():
         # Import the specific maze file and directory path
         maze_file = import_maze_file() 
         script_dir = Path(__file__).parent
-        test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
+        # test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
         # test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
-
+        test_dir = script_dir / "Dataset 02 - Statistical analysis" / f"Dataset 02 {MAZE_ROWS}x{MAZE_COLS} {i}" 
 
         # Get list of files to test, excluding solutions
         files_to_test = [
@@ -392,14 +394,14 @@ def main():
         print("\n--- Starting LLM Maze Solving ---")
 
 
-        # -------------- Use this for-loop when scoring solution in STEPS --------------------
+        # -------------- Use this for-loop when scoring solution in BEV STEPS --------------------
         for file in files_to_test: 
             # Dynamically find the correct solution file for the current maze type 
             solution_pattern = ""
             if file.name.startswith("maze_line_"):
-                solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_steps.txt"
-            elif file.name.startswith("maze_occupancy_"):
-                solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_steps.txt"
+                solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_steps_{i}.txt"
+            # elif file.name.startswith("maze_occupancy_"):
+            #     solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_steps_7.txt"
             else:
                 print(f"Warning: Skipping file with unhandled type: {file.name}")
                 continue
@@ -427,6 +429,10 @@ def main():
             # Score the answer against the dynamically found solution
             score = score_llm_output_strict(llm_steps, solution_steps)
 
+            # Save the number of tokens to display in the report. Outputs a string and a tuple of strings
+            prompt_tokens = extract_prompt_token_count(str(response.usage_metadata))
+            total_token_count , output_tokens = extract_output_token_count(str(response.usage_metadata) , prompt_tokens)
+
         # Store all relevant information for the report as dictionary entries
             results.append({
                 "file": file.name,
@@ -436,7 +442,9 @@ def main():
                 "ground_truth": correct_solution_str,
                 "unfiltered_response" : response,
                 "total_tokens": total_tokens,
-                "metadata" : response.usage_metadata
+                "metadata" : response.usage_metadata, 
+                "prompt_tokens" : prompt_tokens,
+                "output_tokens" : output_tokens
             })
         # ------------------------------------------------------------------------------------
         
@@ -478,6 +486,11 @@ def main():
         #     # Convert llm_steps from a list of tuples to a string so it can be added to dictionary
         #     llm_steps = str(llm_coords).strip('[]')
 
+        #     # Save the number of tokens to display in the report. Outputs a string and a tuple of strings
+        #     prompt_tokens = extract_prompt_token_count(response.usage_metadata)
+        #     total_token_count , output_tokens = extract_output_token_count(response.usage_metadata , prompt_tokens)
+
+
         #     # Store all relevant information for the report as dictionary entries
         #     results.append({
         #         "file": file.name,
@@ -487,14 +500,17 @@ def main():
         #         "ground_truth": correct_solution_str,
         #         "unfiltered_response" : response,
         #         "total_tokens": total_tokens,
-        #         "metadata" : response.usage_metadata
+        #         "metadata" : response.usage_metadata, 
+        #         "prompt_tokens" : prompt_tokens,
+        #         "output_tokens" : output_tokens
 
         #     })
         # -------------------------------------------------------------------------------
             
             
             # Save the scores to a numpy array in a separate file to create charts after testing. 
-            save_score(filename= file, score = score)
+            # save_score(filename= file, score = score)
+            collect_and_save_scores(filename= str(file), score=score)
 
     # The except needs to be here to save progress in .md file even when api errors occur
     except Exception as e:
@@ -504,16 +520,17 @@ def main():
 
     try:
         # Generate markdown report
-        report_path = test_dir / "comparison_results_nonreasoning_steps.md"
+        report_path = test_dir / "comparison_results_nonreasoning_bev.md"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(f"# LLM Maze Solving Comparison Report\n\n")
             f.write(f"**Maze Dimensions:** {MAZE_ROWS}x{MAZE_COLS}\n")
             f.write(f"**Model Used:** `{MODEL_NAME}`\n\n")
+            f.write(f"**Prompt Used:** `{PROMPT}`\n\n")
             f.write("## Comparison Results\n\n")
-            f.write("| Representation File | Score (%) | Extracted LLM Answer |\n")
-            f.write("|---|---|---|\n")
+            f.write("| Representation File | Score (%) | Tokens |Extracted LLM Answer |\n")
+            f.write("|---|---|---|---|\n")
             for res in sorted(results, key=lambda x: x['file']):
-                f.write(f"| `{res['file']}` | **{res['score']:.2f}%** | `{res['extracted_answer']}` |\n")
+                f.write(f"| `{res['file']}` | **{res['score']:.2f}%** | `input: {res['prompt_tokens']} , ouput: {res['output_tokens']}` | `{res['extracted_answer']}` |\n")
 
             f.write("\n---\n\n")
             f.write("## Full LLM Responses\n\n")

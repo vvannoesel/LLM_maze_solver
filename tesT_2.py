@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 from PIL import Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
 from score_saver import save_score
+from token_count_extracter import extract_prompt_token_count, extract_output_token_count
 
 
 # --- Configuration ---
@@ -437,6 +438,10 @@ def main():
             # Score the answer against the dynamically found solution
             score = score_llm_output_strict(llm_steps, solution_steps)
 
+            # Save the number of tokens to display in the report. Outputs a string and a tuple of strings
+            prompt_tokens = extract_prompt_token_count(response.usage_metadata)
+            total_token_count , output_tokens = extract_output_token_count(response.usage_metadata , prompt_tokens)
+
             # Store all relevant information, including internal thoughts
             results.append({
                 "file": file.name,
@@ -448,7 +453,9 @@ def main():
                 "unfiltered_response" : response,
                 "total_tokens": total_tokens,
                 "metadata" : response.usage_metadata, 
-                "candidates" : response.candidates
+                "candidates" : response.candidates, 
+                "prompt_tokens" : prompt_tokens,
+                "output_tokens" : output_tokens
             })
         # ------------------------------------------------------------------------------------
         
@@ -487,9 +494,12 @@ def main():
         #     print("still working")
         
         #     # Score the answer against the dynamically found solution
-        #     print("problems yet?")
         #     score = score_coordinate_solution(llm_steps, solution_steps)
-        #     print("nope")
+
+        #   # Save the number of tokens to display in the report. Outputs a string and a tuple of strings
+            # prompt_tokens = extract_prompt_token_count(response.usage_metadata)
+            # total_token_count , output_tokens = extract_output_token_count(response.usage_metadata , prompt_tokens)
+
 
         #     # Store all relevant information, including internal thoughts
         #     results.append({
@@ -502,7 +512,9 @@ def main():
         #         "unfiltered_response" : response,
         #         "total_tokens": total_tokens,
         #         "metadata" : response.usage_metadata,
-        #         "candidates" : response.candidates
+        #         "candidates" : response.candidates, 
+                # "prompt_tokens" : prompt_tokens,
+                # "output_tokens" : output_tokens
         #     })
         # ------------------------------------------------------------------------------------
 
@@ -522,11 +534,12 @@ def main():
             f.write(f"# LLM Maze Solving Comparison Report\n\n")
             f.write(f"**Maze Dimensions:** {MAZE_ROWS}x{MAZE_COLS}\n")
             f.write(f"**Model Used:** `{MODEL_NAME}`\n\n")
+            f.write(f"**Prompt Used:** `{PROMPT}`\n\n")
             f.write("## Comparison Results\n\n")
-            f.write("| Representation File | Score (%) | Extracted LLM Answer |\n")
-            f.write("|---|---|---|\n")
+            f.write("| Representation File | Score (%) | Token count |Extracted LLM Answer |\n")
+            f.write("|---|---|---|---|\n")
             for res in sorted(results, key=lambda x: x['file']):
-                f.write(f"| `{res['file']}` | **{res['score']:.2f}%** | `{res['extracted_answer']}` |\n")
+                f.write(f"| `{res['file']}` | **{res['score']:.2f}%** | `input: {res['prompt_tokens']} , ouput: {res['output_tokens']}` | `{res['extracted_answer']}` |\n")
 
             f.write("\n---\n\n")
             f.write("## Full LLM Responses\n\n")

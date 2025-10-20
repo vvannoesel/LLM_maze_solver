@@ -108,3 +108,97 @@ def save_score(filename: str, score: float, output_file: str = 'scores_Dataset01
     except Exception as e:
         print(f"Error writing to {output_file}: {e}")
 
+
+#----------------------------------------------------------------------------------------------------------------------------------------------------
+
+"""
+@author: Gemini 2.5 Pro, 8 October 16:20:04 2025
+This script stores the scores from tesT.py and tesT_2.py in a numpy array in a file called 'scores_Dataset01.py.
+These arrays can be used to create charts.
+The score is saved to an array with a name similar to the tested file's name. 
+The score is saved to the [row-2]'nd index of the array, so a 2x2 maze score is saved on the 0th index, 3x3 score on the 1st index, etc.
+"""
+
+from pathlib import Path
+import os
+import re
+import runpy
+import numpy as np
+
+def collect_and_save_scores(filename: str, score: float, output_file: str = 'scores_Dataset02.py'):
+    """
+    Update (or create) a NumPy array of scores stored in a Python file.
+    Each call updates a single index (derived from the filename) while preserving
+    any previously stored values.
+
+    Args:
+        filename (str): e.g. 'maze_line_5x5_ascii_4.txt'
+        score (float): score to store at the index (maze_number - 1)
+        output_file (str): file to save the scores in (Python file). Default 'scores_Dataset02.py'
+
+    Returns:
+        np.ndarray: the updated scores array
+    """
+    # Extract maze number from filename
+    match = re.search(r"maze_line_5x5_ascii_(\d+)\.txt", filename)
+    if not match:
+        raise ValueError(f"Filename '{filename}' does not match the expected pattern.")
+    maze_number = int(match.group(1))
+    index = maze_number - 1  # 0-based index
+
+    # Path to save the score file (same directory as this script)
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    output_path = Path(script_dir) / output_file
+
+    # Default size (30) but we'll allow expansion if needed
+    min_size = 30
+
+    # Load existing scores by executing the Python file (avoids import caching)
+    scores = None
+    if output_path.exists():
+        try:
+            loaded = runpy.run_path(str(output_path))
+            existing = loaded.get("scores", None)
+            if existing is None:
+                # No 'scores' variable in file
+                scores = np.full(min_size, np.nan)
+            else:
+                # Convert existing to numpy array
+                scores = np.array(existing, dtype=float)
+        except Exception as e:
+            # If anything goes wrong, start with NaNs but warn user
+            print(f"Warning: could not load existing scores from {output_path}: {e}")
+            scores = np.full(min_size, np.nan)
+    else:
+        # File doesn't exist yet
+        scores = np.full(min_size, np.nan)
+
+    # Ensure array is big enough for the index
+    required_size = max(min_size, index + 1, scores.size)
+    if scores.size < required_size:
+        new_scores = np.full(required_size, np.nan)
+        new_scores[:scores.size] = scores
+        scores = new_scores
+
+    # Update the index
+    scores[index] = float(score*100) # make score into a percentage
+
+    # Write the Python file so it can be reloaded later
+    # Use np.nan for NaN values so the file is valid Python
+    entries = []
+    for v in scores:
+        if np.isnan(v):
+            entries.append("np.nan")
+        else:
+            # Use repr(float(v)) to ensure numeric literal (e.g. 8.25, 10.0)
+            entries.append(repr(float(v)))
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write("import numpy as np\n")
+        f.write("scores = np.array([" + ", ".join(entries) + "], dtype=float)\n")
+
+    print(f"Score for maze {maze_number} saved at index {index} in {output_path}")
+    return scores
+
+
+# collect_and_save_scores("maze_line_5x5_ascii_1.txt", 0.99)
