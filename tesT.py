@@ -38,13 +38,13 @@ MODEL_NAME = "gemini-2.5-flash-lite"
 # PROMPT 2: EGO
 # PROMPT = (
 #     "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
-#     "The maze is represented as a 5x5 grid. The top-left corner is (0,0). The agent in the maze has a starting orientation facing southward." \
+#     "The maze is represented as a 5x5 grid. The top-left corner is (0,0). The agent in the maze has a starting orientation facing southward. " \
 #     "Instructions: " \
 #     "1. Give instructions to an agent in the maze. You can only use the following four actions: " \
 #     "Forward: this moves the agent 1 step in the direction it is facing. " \
-#     "Left: turn 90° to the left and take one step forward. " \
-#     "Right: turn 90° to the right and take one step forward. " \
-#     "Backward: turn 180° and take one step forward. " \
+#     "Left: this turns the agent 90° to the left and then moves the agent 1 step in the new direction it is facing. " \
+#     "Right: this turns the agent 90° to the right and then moves the agent 1 step in the new direction it is facing. " \
+#     "Backward: this turns the agent 180° and then moves the agent 1 step in the new direction it is facing. " \
 #     "2. You cannot move diagonally or through walls, only from one cell to an adjacent cell. " \
 #     "3. Your output must be a single, comma-separated sequence of steps. For example: forward, left, right, forward, right. " \
 #     "4. Provide only the final list of instructions in your response.")
