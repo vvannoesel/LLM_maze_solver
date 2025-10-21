@@ -3,9 +3,24 @@ import matplotlib.pyplot as plt
 
 
 #------------- TEST 1 - NON REASONING, BEV ----------------------------------
-line_ascii = np.array([0.0, 5.0, 10.0, 37.5, 10.0, 12.5, 110.00000000000001, 0.0, 0.0, 13.636363636363635, 0.0, 0.0, 0.0, 10.0, 7.142857142857142, 4.545454545454546, 8.333333333333332, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 50.0, 0.0, 0.0, 8.333333333333332, 12.5, 0.0, 0.0, 0.0], dtype=float)
-line_ascii_bewerkt = np.array([0.0, 5.0, 10.0, 37.5, 10.0, 12.5, 0, 0.0, 0.0, 13.636363636363635, 0.0, 0.0, 0.0, 10.0, 7.142857142857142, 4.545454545454546, 8.333333333333332, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 50.0, 0.0, 0.0, 8.333333333333332, 12.5, 0.0, 0.0, 0.0], dtype=float)
+# line_ascii = np.array([0.0, 5.0, 10.0, 37.5, 10.0, 12.5, 110.00000000000001, 0.0, 0.0, 13.636363636363635, 0.0, 0.0, 0.0, 10.0, 7.142857142857142, 4.545454545454546, 8.333333333333332, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 50.0, 0.0, 0.0, 8.333333333333332, 12.5, 0.0, 0.0, 0.0], dtype=float)
+# line_ascii_bewerkt = np.array([0.0, 5.0, 10.0, 37.5, 10.0, 12.5, 0, 0.0, 0.0, 13.636363636363635, 0.0, 0.0, 0.0, 10.0, 7.142857142857142, 4.545454545454546, 8.333333333333332, 0.0, 0.0, 5.555555555555555, 0.0, 0.0, 50.0, 0.0, 0.0, 8.333333333333332, 12.5, 0.0, 0.0, 0.0], dtype=float)
+# ascii_standardized = np.zeros(30)
+
+
+#------------- TEST 2 - NON REASONING, EGO ----------------------------------
+# line_ascii = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.333333333333332, 110.00000000000001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], dtype=float)
+# line_ascii_bewerkt = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.333333333333332, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], dtype=float)
+# ascii_standardized = np.zeros(30)
+
+
+#------------- TEST 3 - NON REASONING, COORDINATES ----------------------------------
+line_ascii = np.array([20.0, 14.285714285714285, 18.181818181818183, 11.11111111111111, 9.090909090909092, 22.22222222222222, 13.333333333333334, 7.6923076923076925, 7.6923076923076925, 17.391304347826086, 4.3478260869565215, 5.263157894736842, 20.0, 36.36363636363637, 13.333333333333334, 8.695652173913043, 7.6923076923076925, 11.76470588235294, 17.647058823529413, 5.263157894736842, 10.526315789473683, 61.53846153846154, 84.61538461538461, 21.052631578947366, 27.27272727272727, 7.6923076923076925, 17.647058823529413, 6.666666666666667, 9.090909090909092, 14.285714285714285], dtype=float)
+line_ascii_bewerkt = line_ascii
 ascii_standardized = np.zeros(30)
+
+
+
 
 # Calculate std dev
 mean = np.mean(line_ascii_bewerkt)
@@ -30,12 +45,12 @@ print('standardized mean:', np.mean(ascii_standardized))
 
 # Create histogram
 plt.figure(figsize=(8, 5))
-plt.hist(ascii_standardized, bins=30, edgecolor='black')  # 10 bins — adjust as you like
+plt.hist(ascii_standardized, bins=40, edgecolor='black')  # adjust number of bins as you like
 
 # Labels and title
 plt.xlabel("Score Value (%)")
 plt.ylabel("Frequency")
-plt.title("Normalized Frequency Distribution of Scores (line_ascii)")
+plt.title("Normalized Frequency Distribution of Scores (5x5 maze, 30 runs, line_ascii, nonreasoning, COORDS)")
 
 # Optional: grid and layout
 plt.grid(axis='y', linestyle='--', alpha=0.7)
@@ -51,7 +66,7 @@ plt.hist(line_ascii_bewerkt, bins=30, edgecolor='black')  # 10 bins — adjust a
 # Labels and title
 plt.xlabel("Score Value (%)")
 plt.ylabel("Frequency")
-plt.title("Frequency Distribution of Scores (line_ascii)")
+plt.title("Frequency Distribution of Scores (5x5 maze, 30 runs, line_ascii, nonreasoning, COORDS)")
 
 # Optional: grid and layout
 plt.grid(axis='y', linestyle='--', alpha=0.7)
