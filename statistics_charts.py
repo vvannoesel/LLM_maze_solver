@@ -104,12 +104,12 @@ print(f'test6: ({mean_tc6}, {mean_6}), deviations: ({sigma_tc6},{sigma_6})')
 
 # Combine for easy looping
 tests = [
-    (mean_tc1, mean_1, sigma_tc1, sigma_1, 'g', 'Test 1'),
-    (mean_tc2, mean_2, sigma_tc2, sigma_2, 'b', 'Test 2'),
-    (mean_tc3, mean_3, sigma_tc3, sigma_3, 'c', 'Test 3'),
-    (mean_tc4, mean_4, sigma_tc4, sigma_4, 'm', 'Test 4'),
-    (mean_tc5, mean_5, sigma_tc5, sigma_5, 'y', 'Test 5'),
-    (mean_tc6, mean_6, sigma_tc6, sigma_6, 'k', 'Test 6'),
+    (mean_tc1, mean_1, sigma_tc1, sigma_1, 'g', 'Test 1: Gemini 2.5 Flash Lite'),
+    (mean_tc2, mean_2, sigma_tc2, sigma_2, 'b', 'Test 2: Gemini 2.5 Flash Lite'),
+    (mean_tc3, mean_3, sigma_tc3, sigma_3, 'c', 'Test 3: Gemini 2.5 Flash Lite'),
+    (mean_tc4, mean_4, sigma_tc4, sigma_4, 'm', 'Test 4: Gemini 2.5 Pro'),
+    (mean_tc5, mean_5, sigma_tc5, sigma_5, 'y', 'Test 5: Gemini 2.5 Pro'),
+    (mean_tc6, mean_6, sigma_tc6, sigma_6, 'k', 'Test 6: Gemini 2.5 Pro'),
 ]
 
 # === Plot setup ===
@@ -132,7 +132,7 @@ for mean_tc, mean_acc, sigma_tc, sigma_acc, color, label in tests:
         bar.set_alpha(0.5)
 
 # === Labels, title, grid, legend ===
-plt.title('Mean Accuracy vs Mean Output Token Count', fontsize=13)
+plt.title('Mean Accuracy vs Mean Output Token Count (30 Runs Per Test)', fontsize=13)
 plt.xlabel('Mean Output Token Count', fontsize=11)
 plt.ylabel('Mean Accuracy (%)', fontsize=11)
 
