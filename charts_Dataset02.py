@@ -12,11 +12,11 @@ ascii_standardized = np.zeros(30)
 
 
 #------------- TEST 2 - NON REASONING, EGO ----------------------------------
-type = 'EGO'
-LLM = 'nonreasoning'
-line_ascii = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.333333333333332, 110.00000000000001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], dtype=float)
-line_ascii_bewerkt = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.333333333333332, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], dtype=float)
-ascii_standardized = np.zeros(30)
+# type = 'EGO'
+# LLM = 'nonreasoning'
+# line_ascii = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.333333333333332, 110.00000000000001, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], dtype=float)
+# line_ascii_bewerkt = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 8.333333333333332, 0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0], dtype=float)
+# ascii_standardized = np.zeros(30)
 
 
 
@@ -43,64 +43,71 @@ ascii_standardized = np.zeros(30)
 
 
 #------------- TEST 6 - REASONING, COORDINATES ----------------------------------
-type = 'COORDS'
-LLM = 'reasoning'
-line_ascii = np.array([33.33333333333333, 4.761904761904762, 9.090909090909092, 44.44444444444444, 18.181818181818183, 22.22222222222222, 20.0, 7.6923076923076925, 7.6923076923076925, 4.3478260869565215, 43.47826086956522, 36.84210526315789, 33.33333333333333, 18.181818181818183, 6.666666666666667, 4.3478260869565215, 23.076923076923077, 100.0, 17.647058823529413, 5.263157894736842, 10.526315789473683, 38.46153846153847, 76.92307692307693, 5.263157894736842, 9.090909090909092, 7.6923076923076925, 11.76470588235294, 26.666666666666668, 18.181818181818183, 9.523809523809524], dtype=float)
-line_ascii_bewerkt = line_ascii
-ascii_standardized = np.zeros(30)
+# type = 'COORDS'
+# LLM = 'reasoning'
+# line_ascii = np.array([33.33333333333333, 4.761904761904762, 9.090909090909092, 44.44444444444444, 18.181818181818183, 22.22222222222222, 20.0, 7.6923076923076925, 7.6923076923076925, 4.3478260869565215, 43.47826086956522, 36.84210526315789, 33.33333333333333, 18.181818181818183, 6.666666666666667, 4.3478260869565215, 23.076923076923077, 100.0, 17.647058823529413, 5.263157894736842, 10.526315789473683, 38.46153846153847, 76.92307692307693, 5.263157894736842, 9.090909090909092, 7.6923076923076925, 11.76470588235294, 26.666666666666668, 18.181818181818183, 9.523809523809524], dtype=float)
+# line_ascii_bewerkt = line_ascii
+# ascii_standardized = np.zeros(30)
 
-# Calculate std dev
+# Calculate std dev and necessary runs using formula for margin of error
 mean = np.mean(line_ascii_bewerkt)
 sigma = np.std(line_ascii_bewerkt)
 z = 1.96
 E = 5
 n = (z*sigma/E)**2
-print("mean:", mean)
-print("std dev:", sigma)
-print("necessary runs:",n)
-
-def normalization(vector):
-    for i in range(1,30):
-        value = vector[i-1]
-        z = (value-mean)/sigma
-        ascii_standardized[i-1]=z
-    return ascii_standardized
-
-print('standardized:', normalization(line_ascii_bewerkt))
-print('standardized mean:', np.mean(ascii_standardized))
+# print("mean:", mean)
+# print("std dev:", sigma)
+# print("necessary runs:",n)
 
 
-# Create histogram
-plt.figure(figsize=(8, 5))
-plt.hist(ascii_standardized, bins=40, edgecolor='black')  # adjust number of bins as you like
+# calculate margin of error to determine confidence interval
+t = 2.045
+n = 30
+E = t * (sigma/np.sqrt(n))
+print("margin of error:", E)
 
-# Labels and title
-plt.xlabel("Score Value (%)")
-plt.ylabel("Frequency")
-plt.title(f"Normalized Frequency Distribution of Scores (5x5 maze, 30 runs, line_ascii, {LLM}, {type})")
+# def normalization(vector):
+#     for i in range(1,30):
+#         value = vector[i-1]
+#         z = (value-mean)/sigma
+#         ascii_standardized[i-1]=z
+#     return ascii_standardized
 
-# Optional: grid and layout
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-plt.tight_layout()
+# print('standardized:', normalization(line_ascii_bewerkt))
+# print('standardized mean:', np.mean(ascii_standardized))
 
-# Show chart
-plt.show()
 
 # Create histogram
-plt.figure(figsize=(8, 5))
-plt.hist(line_ascii_bewerkt, bins=30, edgecolor='black')  # 10 bins — adjust as you like
+# plt.figure(figsize=(8, 5))
+# plt.hist(ascii_standardized, bins=40, edgecolor='black')  # adjust number of bins as you like
 
-# Labels and title
-plt.xlabel("Score Value (%)")
-plt.ylabel("Frequency")
-plt.title(f"Frequency Distribution of Scores (5x5 maze, 30 runs, line_ascii, {LLM}, {type})")
+# # Labels and title
+# plt.xlabel("Score Value (%)")
+# plt.ylabel("Frequency")
+# plt.title(f"Normalized Frequency Distribution of Scores (5x5 maze, 30 runs, line_ascii, {LLM}, {type})")
 
-# Optional: grid and layout
-plt.grid(axis='y', linestyle='--', alpha=0.7)
-plt.tight_layout()
+# # Optional: grid and layout
+# plt.grid(axis='y', linestyle='--', alpha=0.7)
+# plt.tight_layout()
 
-# Show chart
-plt.show()
+# # Show chart
+# plt.show()
+
+# # Create histogram
+# plt.figure(figsize=(8, 5))
+# plt.hist(line_ascii_bewerkt, bins=30, edgecolor='black')  # 10 bins — adjust as you like
+
+# # Labels and title
+# plt.xlabel("Score Value (%)")
+# plt.ylabel("Frequency")
+# plt.title(f"Frequency Distribution of Scores (5x5 maze, 30 runs, line_ascii, {LLM}, {type})")
+
+# # Optional: grid and layout
+# plt.grid(axis='y', linestyle='--', alpha=0.7)
+# plt.tight_layout()
+
+# # Show chart
+# plt.show()
 
 
 # def score_probabilities(array: np.ndarray) -> tuple[np.ndarray, np.ndarray]:

@@ -28,7 +28,7 @@ MODEL_NAME = "gemini-2.5-flash-lite"
 # # PROMPT 1: BEV
 # PROMPT = (
 #     "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
-#     "The maze is represented as a 5x5 grid. The top-left corner is (0,0)." \
+#     f"The maze is represented as a {MAZE_ROWS}x{MAZE_COLS} grid. The top-left corner is (0,0)." \
 #     "Instructions: " \
 #     "1. You can only move up, down, left, or right. " \
 #     "2. You cannot move diagonally or through walls, only from one cell to an adjacent cell. " \
@@ -38,7 +38,7 @@ MODEL_NAME = "gemini-2.5-flash-lite"
 # PROMPT 2: EGO
 # PROMPT = (
 #     "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
-#     "The maze is represented as a 5x5 grid. The top-left corner is (0,0). The agent in the maze has a starting orientation facing southward. " \
+#     f"The maze is represented as a {MAZE_ROWS}x{MAZE_COLS} grid. The top-left corner is (0,0). The agent in the maze has a starting orientation facing southward. " \
 #     "Instructions: " \
 #     "1. Give instructions to an agent in the maze. You can only use the following four actions: " \
 #     "Forward: this moves the agent 1 step in the direction it is facing. " \
@@ -53,11 +53,12 @@ MODEL_NAME = "gemini-2.5-flash-lite"
 # PROMPT 3: COORDINATES
 PROMPT = (
     "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
-    "The maze is represented as a 5x5 grid. The top-left corner is (0,0)." \
+    f"The maze is represented as a {MAZE_ROWS}x{MAZE_COLS} grid. The top-left corner is (0,0)." \
     "Instructions: " \
-    "1. You cannot move diagonally or through walls, only from one cell to an adjacent cell. " \
+    "1. You cannot move diagonally or through walls ('---' and '|'), only from one cell to an adjacent cell. " \
     "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1). " \
     "3. Provide only the final list of coordinates from start to end in your response." )
+
 
 def setup_api_key():
     """
@@ -87,7 +88,7 @@ def import_maze_file() -> Path:
         script_dir = Path(__file__).parent
         # file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
         # file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
-        file_path = script_dir / "Dataset 02 - Statistical analysis" / f"Dataset 02 {MAZE_ROWS}x{MAZE_COLS} {i}"
+        file_path = script_dir / "Dataset 02.1 - ASCII analysis" / f"Dataset 02.1 {MAZE_ROWS}x{MAZE_COLS} {i}"
 
         if not file_path.exists():
             raise FileNotFoundError(f"The specified maze file was not found at: {file_path}")
@@ -382,7 +383,7 @@ def main():
         script_dir = Path(__file__).parent
         # test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
         # test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
-        test_dir = script_dir / "Dataset 02 - Statistical analysis" / f"Dataset 02 {MAZE_ROWS}x{MAZE_COLS} {i}" 
+        test_dir = script_dir / "Dataset 02.1 - ASCII analysis" / f"Dataset 02.1 {MAZE_ROWS}x{MAZE_COLS} {i}" 
 
         # Get list of files to test, excluding solutions
         files_to_test = [
@@ -577,9 +578,10 @@ def main():
 
     try:
         # Generate markdown report
-        report_path = test_dir / f"comparison_results_nonreasoning_coords_{i}.md"
+        report_path = test_dir / f"new_prompt_old_ascii_nonreasoning_coords_{i}.md"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(f"# LLM Maze Solving Comparison Report\n\n")
+            f.write(f" NEW ASCII\n\n")
             f.write(f"**Maze Dimensions:** {MAZE_ROWS}x{MAZE_COLS}\n")
             f.write(f"**Model Used:** `{MODEL_NAME}`\n\n")
             f.write(f"**Prompt Used:** `{PROMPT}`\n\n")
@@ -622,6 +624,6 @@ def main():
 
 
 if __name__ == "__main__":
-    for i in range(1,31):
+    for i in range(1,4):
         main()
         i+=1

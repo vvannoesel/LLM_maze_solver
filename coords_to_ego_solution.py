@@ -61,10 +61,10 @@ def coordinates_to_navigation(coords):
 
         # Save navigation directions to file inside preferred folder
         script_dir = Path(__file__).parent.resolve()
-        dataset_root = script_dir / "Dataset 02 - Statistical analysis"    
-        base_name = "Dataset 02 5x5 30"
+        dataset_root = script_dir / "Dataset 02.1 - ASCII analysis"    
+        base_name = "Dataset 02.1 5x5 3"
         directory = dataset_root / base_name
-        with open(directory/f"maze_line_solution_nav_30.txt", "w", encoding="utf-8") as f:
+        with open(directory/f"maze_line_solution_nav_3.txt", "w", encoding="utf-8") as f:
             f.write(", ".join(steps))
 
     return ", ".join(steps)
@@ -72,8 +72,9 @@ def coordinates_to_navigation(coords):
 
 
 
-# path=[(0, 0), (1, 0), (1, 1), (1, 2), (0, 2), (0, 3), (0, 4), (1, 4), (2, 4), (3, 4), (3, 3), (3, 2), (2, 2), (2, 1), (2, 0), (3, 0), (4, 0), (4, 1), (4, 2), (4, 3), (4, 4)]
+path=[(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 1), (3, 1), (3, 2), (3, 3), (2, 3), (2, 4), (3, 4), (4, 4)]
 
 
 
-# print (coordinates_to_navigation(path))
+
+print (coordinates_to_navigation(path))

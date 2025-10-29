@@ -17,12 +17,12 @@ def create_test_directory(rows, cols, k):
 
     # Define paths so Data folders are saved relative to this script
     script_dir = Path(__file__).parent.resolve()    # Get the directory of the current script
-    dataset_root = script_dir / "Dataset 02 - Statistical analysis"        # Define the root dataset directory
+    dataset_root = script_dir / "Dataset 02.1 - ASCII analysis"        # Define the root dataset directory
     dataset_root.mkdir(exist_ok=True)               # Create the root directory if it doesn't exist
 
 
     postfix = f"{k}"
-    base_name = "Dataset 02"
+    base_name = "Dataset 02.1"
     dir_name = f"{base_name} {rows}x{cols} {k}"  #Add 'k' to name so every folder has a different name. Otherwise it throws an error. 
     dir_path = dataset_root / dir_name
     if not dir_path.exists():
@@ -88,8 +88,8 @@ def main():
     ROWS = 5
     COLS = 5
 
-    for i in range(1, 31):  # Repeat 30 times
-        print(f"\n=== Run {i} of 30 ===")
+    for i in range(1, 4):  # Repeat 3 times
+        print(f"\n=== Run {i} of 3 ===")
         try:
             test_dir = create_test_directory(ROWS, COLS, i)
             generate_and_save_mazes(test_dir, ROWS, COLS, i)

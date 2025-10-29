@@ -169,17 +169,17 @@ class Maze:
             show_markers (bool): If True, shows 'O' for origin and 'T' for target.
                                  If False, shows the classic walls-only maze.
         """
-        output = "+" + "---+" * self.cols + "\n"
+        output = "+" + "-+" * self.cols + "\n"
         for r, row in enumerate(self.grid):
             line1 = "|"
             line2 = "+"
             for c, cell in enumerate(row):
-                content = "   "
+                content = " "
                 if show_markers:
                     if (r, c) == self.start:
-                        content = " O "
+                        content = "O"
                     elif (r, c) == self.end:
-                        content = " T "
+                        content = "T"
                 line1 += content
                 
                 if cell.walls['E']:
@@ -187,9 +187,9 @@ class Maze:
                 else:
                     line1 += " "
                 if cell.walls['S']:
-                    line2 += "---"
+                    line2 += "-"
                 else:
-                    line2 += "   "
+                    line2 += " "
                 line2 += "+"
             output += line1 + "\n" + line2 + "\n"
         return output
@@ -610,7 +610,7 @@ class OccupancyGridMaze(Maze):
 if __name__ == "__main__":
     try:
         # --- Configuration for Maze Dimensions ---
-        easy_rows, easy_cols = 3 , 3
+        easy_rows, easy_cols = 5 , 5
         # hard_cols, hard_rows = 6 , 6
 
         # Set a fixed, high-quality image size for all JPEGs
