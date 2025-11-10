@@ -53,13 +53,32 @@ MODEL_NAME = "gemini-2.5-pro"
 
 
 # PROMPT 3: COORDINATES
+# PROMPT = (
+#     "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
+#     f"The maze is represented as a {MAZE_ROWS}x{MAZE_COLS} grid. The top-left corner is (0,0). " \
+#     "Instructions: " \
+#     "1. You cannot move diagonally or through walls ('---' and '|'), only from one cell to an adjacent cell. " \
+#     "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1). " \
+#     "3. Provide only the final list of coordinates from start to end in your response." )
+
 PROMPT = (
-    "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
-    f"The maze is represented as a {MAZE_ROWS}x{MAZE_COLS} grid. The top-left corner is (0,0). " \
-    "Instructions: " \
-    "1. You cannot move diagonally or through walls ('---' and '|'), only from one cell to an adjacent cell. " \
-    "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1). " \
-    "3. Provide only the final list of coordinates from start to end in your response." )
+    "The following is an ASCII representation of a maze: "\
+    " - '#' represents walls that can not be passed through. "\
+    " - ' ' (space) represents empty spaces that can be passed through. "\
+    " - 'O' is the starting point. "\
+    " - 'T' is the end point (target). "\
+    "Please solve the maze by providing a path from the starting point to the end point. The path should be provided as a list of coordinates of each step, where the coordinate is a (row, col) tuple, and row, col are zero-based indices. Consider the origin (0, 0) to be the top-left corner. "\
+    "Overall, the path should be provided in the format of [(row1, col1), (row2, col2), ...]. "\
+    "A valid path must:"\
+    " - Start at starting point 'O'. "\
+    " - End at end point 'T'. "\
+    " - Avoid the walls '#'."\
+    " - Pass only through empty space ' '. "\
+    " - Move one square at a time. "\
+    " - Only move up, down, left, and right, not diagonally. "\
+    "Correct your answer if you spot any errors. Do not use any external tools or scripts."\
+    "Here is the maze in ASCII format: "\
+)
 
 
 def setup_api_key():
@@ -525,8 +544,8 @@ def main():
             solution_pattern = ""
             if file.name.startswith("maze_line_"):
                 solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_coords_{i}.txt"
-            # elif file.name.startswith("maze_occupancy_"):
-            #     solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_coords.txt"
+            elif file.name.startswith("maze_occupancy_"):
+                solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_coords_{i}.txt"
             else:
                 print(f"Warning: Skipping file with unhandled type: {file.name}")
                 continue
@@ -587,7 +606,7 @@ def main():
 
     try:
         # Generate markdown report
-        report_path = test_dir / f"new_prompt_old_ascii_reasoning_coords_{i}.md"
+        report_path = test_dir / f"newnew_prompt_occ_ascii_reasoning_coords_{i}.md"
         with open(report_path, 'w', encoding='utf-8') as f:
             f.write(f"# LLM Maze Solving Comparison Report\n\n")
             f.write(f"MEW ASCII\n\n")
@@ -634,6 +653,6 @@ def main():
     except Exception as e:
         print(f"\nAn unexpected error occurred during markdown creation: {e}")
 if __name__ == "__main__":
-    for i in range (1,4):
+    for i in range (1,2):
         main()
         i+=1

@@ -1,0 +1,14 @@
+ _________ 
+|_  |_   _|
+| |_  |_  |
+| |  _|   |
+| |_____| |
+|_________|
+
+
+ik denk dat ik een verklaring heb voor deze observaties: het is een combinatie van patternmatching, training bias en attention. 
+
+sommige kenmerken komen consistent en veelvoudig voor in trainingdata, zoals grid structures, coordinaten, start- en eindpunten. Dit zijn onderdelen van het doolhof die worden begrepen. Bijvoorbeeld de start- en eindpunten worden in ons geval aangegeven met een 'o' en een 't', die staan voor 'origin' en 'target'. Deze letters kunnen bijna niks anders betekenen dan 'origin' en 'target', in de context van een doolhof. 
+de obstakels en openingen kunnen op veel manieren worden weergegeven (zoals we hebben gemerkt haha), en worden in training data op veel manieren weergegeven. Het is dus mogelijk dat het concept wel begrepen wordt, maar de uitdrukking ervan te ambigu is, en niet achterhaald kan worden zonder extra informatie. Dit leidt ertoe dat de LLM een arbitraire associatie moet maken tussen de symbolen en hun betekenis, gebaseerd op de training data. Het alternatief is dat de LLM meer focus legt op de symbolen die wel duidelijk zijn, om zoveel mogelijk van de taak te begrijpen.
+In regio's waar de karakteristieken/de opdracht onduidelijk zijn, valt de LLM terug op patronen die uit de trainingdata zijn gekomen. Dit lijken op hallucinaties waar muren lijken te verdwijnen of open paden worden genegeerd. Mogelijk omdat de patronen in training data aangeven dat in sommige regio's het 'statistisch waarschijnlijk' is dat er een muur is, of een bocht moet worden gemaakt. Er wordt dus ge-patternmatched ipv dat de LLM specifiek onze puzzel oplost.
+De reden dat er verschil bestaat tussen de reasoning en non-reasoning modellen: Een non-reasoning model moet pattern matchen om het antwoord te maken, dus wordt er altijd een patroon toegepast ipv dat het echte doolhof wordt opgelost. Een reasoning model kan itereren over de stapjes die hij maakt (aanname). Wanneer 
