@@ -17,6 +17,7 @@ from google.genai import types
 # from google.generativeai.types import Tool # old version of API SDK
 from dotenv import load_dotenv
 from PIL import Image
+import PIL.Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
 from score_saver import save_score, collect_and_save_scores
 from token_count_extracter import extract_prompt_token_count, extract_output_token_count
@@ -191,33 +192,60 @@ def call_llm(prompt: str, file_path: Path, api_key: str) -> tuple[str, str , str
         # model = genai.GenerativeModel(MODEL_NAME)
         
         if file_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
-            maze_input = Image.open(file_path)
+            # maze_input = Image.open(file_path)
+
+            # Enable internal thoughts in the generation config
+            # generation_config = genai.types.GenerationConfig(include_internal_texts=True)
+            client = genai.Client(api_key=api_key)
+
+            # Open the image file
+            your_image_file = PIL.Image.open(file_path)
+
+            # Count prompt tokens
+            total_tokens = client.models.count_tokens(  # This only gives the prompt tokens, and calls it 'total_tokens' 
+                model=MODEL_NAME, contents=[PROMPT, your_image_file])
+            # print('count:', total_tokens )
+
+
+
+            # Generate content and enable thinking
+            response = client.models.generate_content(
+                model=MODEL_NAME,
+                contents=[prompt, your_image_file],
+                config=types.GenerateContentConfig(
+                    thinking_config=types.ThinkingConfig(
+                        include_thoughts=True
+                    )
+                )
+            )
+            # print('response metadata:', response.usage_metadata)  # the metadata shows token count of each input modality, and output. 
+
         else:
             with open(file_path, 'r', encoding='cp1252') as f:  #previously utf-8
                 maze_input = f.read()
 
+            
+
+            # Enable internal thoughts in the generation config
+            # generation_config = genai.types.GenerationConfig(include_internal_texts=True)
+            client = genai.Client(api_key=api_key)
+
+            # Count tokens using the new client method.
+            total_tokens = client.models.count_tokens(
+                model=MODEL_NAME, contents=prompt)
+            
+            response = client.models.generate_content(
+                model=MODEL_NAME,
+                contents=f'{maze_input}\n\n{prompt}',
+                config=types.GenerateContentConfig(
+                    thinking_config=types.ThinkingConfig(
+                        include_thoughts=True
+                    )
+                )
+            )
         # Initialize variables with a default value so they exist in the error case
         thought_summary = ""
         final_answer = ""
-
-        # Enable internal thoughts in the generation config
-        # generation_config = genai.types.GenerationConfig(include_internal_texts=True)
-        client = genai.Client(api_key=api_key)
-
-        # Count tokens using the new client method.
-        total_tokens = client.models.count_tokens(
-            model=MODEL_NAME, contents=prompt)
-        
-        response = client.models.generate_content(
-            model=MODEL_NAME,
-            contents=f'{maze_input}\n\n{prompt}',
-            config=types.GenerateContentConfig(
-                thinking_config=types.ThinkingConfig(
-                    include_thoughts=True
-                )
-            )
-        )
-
         # Extract internal thoughts if available
         for part in response.candidates[0].content.parts: # the response object is a container for candidates, each candidate has content, which has parts
             if not part.text:   # skip any empty or non-text parts
