@@ -17,6 +17,7 @@ from google import genai
 from google.genai import types
 from dotenv import load_dotenv
 from PIL import Image
+import PIL.Image
 from maze_generator_ext_v3 import Maze, OccupancyGridMaze
 from score_saver import save_score, collect_and_save_scores
 from token_count_extracter import extract_prompt_token_count, extract_output_token_count
@@ -25,6 +26,10 @@ from token_count_extracter import extract_prompt_token_count, extract_output_tok
 MAZE_ROWS = 5
 MAZE_COLS = 5
 MODEL_NAME = "gemini-2.5-flash-lite"
+PROMPT=(
+    "What do you see in this image? If the image is not provided properly, respond with 'No image provided'."
+)
+
 # # PROMPT 1: BEV
 # PROMPT = (
 #     "You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools. " \
@@ -59,25 +64,25 @@ MODEL_NAME = "gemini-2.5-flash-lite"
 #     "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1). " \
 #     "3. Provide only the final list of coordinates from start to end in your response." )
 
-PROMPT = (
-    "The following is an ASCII representation of a maze: "\
-    " - '|' represents a vertical wall, '-' represents a horizontal wall, that both can not be passed through. "\
-    " - ' ' (space) represents an open path that can be passed through. "\
-    " - '+' represents a corner of the cells of the maze. "\
-    " - 'O' is the starting point. "\
-    " - 'T' is the end point (target). "\
-    "Please solve the maze by providing a path from the starting point to the end point. The path should be provided as a list of coordinates of each step, where the coordinate is a (row, col) tuple, and row, col are zero-based indices. Consider the origin (0, 0) to be the top-left corner. "\
-    "Overall, the path should be provided in the format of [(row1, col1), (row2, col2), ...]. "\
-    "A valid path must:"\
-    " - Start at starting point 'O'. "\
-    " - End at end point 'T'. "\
-    " - Avoid the walls '|' and '-'. "\
-    " - Pass only through empty space ' '. "\
-    " - Move one square at a time. "\
-    " - Only move up, down, left, and right, not diagonally. "\
-    "Correct your answer if you spot any errors. "\
-    "Here is the maze in ASCII format: "\
-)
+# PROMPT = (
+#     "The following is an ASCII representation of a maze: "\
+#     " - '|' represents a vertical wall, '-' represents a horizontal wall, that both can not be passed through. "\
+#     " - ' ' (space) represents an open path that can be passed through. "\
+#     " - '+' represents a corner of the cells of the maze. "\
+#     " - 'O' is the starting point. "\
+#     " - 'T' is the end point (target). "\
+#     "Please solve the maze by providing a path from the starting point to the end point. The path should be provided as a list of coordinates of each step, where the coordinate is a (row, col) tuple, and row, col are zero-based indices. Consider the origin (0, 0) to be the top-left corner. "\
+#     "Overall, the path should be provided in the format of [(row1, col1), (row2, col2), ...]. "\
+#     "A valid path must:"\
+#     " - Start at starting point 'O'. "\
+#     " - End at end point 'T'. "\
+#     " - Avoid the walls '|' and '-'. "\
+#     " - Pass only through empty space ' '. "\
+#     " - Move one square at a time. "\
+#     " - Only move up, down, left, and right, not diagonally. "\
+#     "Correct your answer if you spot any errors. "\
+#     "Here is the maze in ASCII format: "\
+# )
 
 def setup_api_key():
     """
@@ -105,9 +110,10 @@ def import_maze_file() -> Path:
     try:
         # Construct the path relative to the script's directory
         script_dir = Path(__file__).parent
-        # file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
+        file_path = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" #/ "maze_line_3x3_ascii.txt"
         # file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
-        file_path = script_dir / "Dataset 02.1 - ASCII analysis" / f"Dataset 02.1 {MAZE_ROWS}x{MAZE_COLS} {i}"
+        # file_path = script_dir / "Dataset 02.1 - ASCII analysis" / f"Dataset 02.1 {MAZE_ROWS}x{MAZE_COLS} {i}"
+        # file_path = script_dir / "boom.jpg"
 
         if not file_path.exists():
             raise FileNotFoundError(f"The specified maze file was not found at: {file_path}")
@@ -147,23 +153,23 @@ def generate_and_save_mazes(directory: Path, cols: int, rows: int): #this functi
     """
     print(f"--- Generating {cols}x{rows} Maze ---")
     line_maze = Maze(cols, rows)
-    # occupancy_maze = OccupancyGridMaze(line_maze)
+    occupancy_maze = OccupancyGridMaze(line_maze)
     print("Maze generation complete.")
 
     mazes_to_save = {
         "line": line_maze,
-        # "occupancy": occupancy_maze
+        "occupancy": occupancy_maze
     }
 
     for name, maze_obj in mazes_to_save.items():
         prefix = directory / f"maze_{name}_{cols}x{rows}"
-        # maze_obj.to_jpeg(f"{prefix}.jpg")
-        # maze_obj.to_json(f"{prefix}.json")
-        # maze_obj.to_adjacency_list(f"{prefix}_adj.json")
-        # maze_obj.to_custom_adjacency_list(f"{prefix}_adj.txt")
+        maze_obj.to_jpeg(f"{prefix}.jpg")
+        maze_obj.to_json(f"{prefix}.json")
+        maze_obj.to_adjacency_list(f"{prefix}_adj.json")
+        maze_obj.to_custom_adjacency_list(f"{prefix}_adj.txt")
         maze_obj.to_tokenized_representation(f"{prefix}_tokenized.txt")
-        # with open(f"{prefix}_ascii.txt", "w", encoding="utf-8") as f:
-        #     f.write(maze_obj.to_ascii())
+        with open(f"{prefix}_ascii.txt", "w", encoding="utf-8") as f:
+            f.write(maze_obj.to_ascii())
 
         solution_steps = maze_obj.get_solution_steps()
         with open(f"{prefix}_solution_steps.txt", "w", encoding="utf-8") as f:
@@ -181,35 +187,65 @@ def call_llm(prompt: str, file_path: Path, api_key: str):
         file_path (Path): The path to the file to be included in the prompt.
 
     Returns:
-        string: A string containing the final text response
+        string: A tuple containing the model's response (as GenerateContent, but changed to str in main) and the total token count.
     """
     print(f"Querying LLM with: {file_path.name}...")
+    
     try:
-        # model = genai.GenerativeModel(MODEL_NAME)
-        # content = [prompt]
         if file_path.suffix.lower() in ['.jpg', '.jpeg', '.png']:
-            # content.append(Image.open(file_path))
-            maze_input = Image.open(file_path)
+            client = genai.Client(api_key=api_key)
+            your_image_file = PIL.Image.open(file_path)
+            total_tokens = client.models.count_tokens(  # This only gives the prompt tokens, and calls it 'total_tokens' 
+                model=MODEL_NAME, contents=[PROMPT, your_image_file])
+            print('count:', total_tokens )
+
+            response = client.models.generate_content(
+                model=MODEL_NAME, contents=[PROMPT, your_image_file], config = types.GenerateContentConfig(maxOutputTokens = 4000))
+            print('response metadata:', response.usage_metadata)  # the metadata shows token count of each input modality, and output. 
+
+
+            # This method works, but i dont know how to count the tokens used in image
+            # with open(file_path, 'rb') as f:
+            #     image_bytes = f.read()
+            # client = genai.Client(api_key=api_key)
+
+            # # Count tokens using the new client method.
+            # total_tokens = client.models.count_tokens(
+            #     model=MODEL_NAME, contents=[  # weet niet zeker of dit zo input tokens telt voor images
+            #          types.Part.from_bytes(
+            #              data=image_bytes,
+            #              mime_type='image/jpeg',
+            #              ), 
+            #              PROMPT])            
+            
+            # response = client.models.generate_content(  # FOR 2.5 FL THE DEFAULT THINKING BUDGET IS 0
+            #     model = MODEL_NAME,
+            #     contents=[
+            #          types.Part.from_bytes(
+            #              data=image_bytes,
+            #              mime_type='image/jpeg',
+            #              ), 
+            #              PROMPT],
+            #     config = types.GenerateContentConfig(maxOutputTokens = 4000))
+          
         else:
             with open(file_path, 'r', encoding='cp1252') as f:
                 maze_input = f.read()
-            # content.append(file_content)
-        # print("Content for LLM is: ", maze_input)
-        # response = model.generate_content(f"{prompt}\n\n{maze_input}") # old method, replaced with new one below
-        client = genai.Client(api_key=api_key)
-
-        # Count tokens using the new client method.
-        total_tokens = client.models.count_tokens(
-            model=MODEL_NAME, contents=prompt)
         
-        response = client.models.generate_content(  # FOR 2.5 FL THE DEFAULT THINKING BUDGET IS 0
-            model = MODEL_NAME,
-            contents=f'{PROMPT}\n\n{maze_input}',
-            config=types.GenerateContentConfig(maxOutputTokens = 4000))
+                client = genai.Client(api_key=api_key)
+
+                # Count tokens using the new client method.
+                total_tokens = client.models.count_tokens(
+                    model=MODEL_NAME, contents=prompt)
+                
+                response = client.models.generate_content(  # FOR 2.5 FL THE DEFAULT THINKING BUDGET IS 0
+                    model = MODEL_NAME,
+                    contents = f'{PROMPT}\n\n{maze_input}',
+                    config = types.GenerateContentConfig(maxOutputTokens = 4000))
         # print("response shape:", type(response))
 
         # return response.text
-        return response, total_tokens 
+        return response, total_tokens
 
     except Exception as e:
         print(f"An error occurred while calling the API: {e}")
@@ -402,7 +438,8 @@ def main():
         script_dir = Path(__file__).parent
         # test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
         # test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
-        test_dir = script_dir / "Dataset 02.1 - ASCII analysis" / f"Dataset 02.1 {MAZE_ROWS}x{MAZE_COLS} {i}" 
+        # test_dir = script_dir / "Dataset 02.1 - ASCII analysis" / f"Dataset 02.1 {MAZE_ROWS}x{MAZE_COLS} {i}" 
+        test_dir = script_dir / "boom.jpg"
 
         # Get list of files to test, excluding solutions
         files_to_test = [
