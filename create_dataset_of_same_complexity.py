@@ -85,10 +85,10 @@ def main():
     Main function to run the full maze generation and saving in "current directory"\Dataset 02 - Statistical analysis .
     """
 
-    ROWS = 3
-    COLS = 3
+    ROWS = 15
+    COLS = 15
 
-    for i in range(7, 13):  # Repeat 3 times
+    for i in range(13, 19):  # Repeat 3 times
         print(f"\n=== Run {i} of 3 ===")
         try:
             test_dir = create_test_directory(ROWS, COLS, i)
