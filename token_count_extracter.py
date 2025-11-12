@@ -47,7 +47,7 @@ extract_outputs.py
 Searches files:
   ./Dataset02 - Statistical analysis/Dataset02 5x5 {i}/comparison_results_reasoning_ego_{i}.md
 for i in 1..30 and extracts the first occurrence of the pattern:
-  ", output: {number}`"
+  ", ouput: {number}`"
 The extracted {number} is saved into a numpy array at index i-1.
 
 Output:
