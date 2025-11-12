@@ -177,9 +177,9 @@ class Maze:
                 content = " "
                 if show_markers:
                     if (r, c) == self.start:
-                        content = "O"
+                        content = "S"
                     elif (r, c) == self.end:
-                        content = "T"
+                        content = "E"
                 line1 += content
                 
                 if cell.walls['E']:
@@ -467,10 +467,10 @@ class OccupancyGridMaze(Maze):
             for c, cell in enumerate(row):
                 # 1. Check if the current coordinate is the start position
                 if (r, c) == self.start:
-                    line_chars.append('O')
+                    line_chars.append('S')
                 # 2. Else, check if it's the end position
                 elif (r, c) == self.end:
-                    line_chars.append('T')
+                    line_chars.append('E')
                 # 3. Else, check if the cell is a wall (value of 1)
                 elif cell == 1:
                     line_chars.append('#')

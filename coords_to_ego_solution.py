@@ -18,7 +18,7 @@ def coordinates_to_navigation(coords):
     Returns:
         str: comma-separated list of navigation steps
     """
-    if not coords or coords[0] != (0, 0):
+    if not coords or coords[0] != (1, 1):
         raise ValueError("Coordinates must start at (0, 0).")
     
     # Define direction order: N=0, E=1, S=2, W=3 (clockwise)
@@ -58,13 +58,15 @@ def coordinates_to_navigation(coords):
         # Update facing direction
         current_dir = target_dir
 
+        j = 7
 
         # Save navigation directions to file inside preferred folder
         script_dir = Path(__file__).parent.resolve()
-        dataset_root = script_dir / "Dataset 02.1 - ASCII analysis"    
-        base_name = "Dataset 02.1 5x5 3"
+        dataset_root = script_dir / "Dataset 03"    
+        base_name = f"Dataset 03 3x3 {j}"
         directory = dataset_root / base_name
-        with open(directory/f"maze_line_solution_nav_3.txt", "w", encoding="utf-8") as f:
+        # with open(directory/f"maze_line_3x3_solution_ego_{j}.txt", "w", encoding="utf-8") as f:
+        with open(directory/f"maze_occupancy_3x3_solution_ego_{j}.txt", "w", encoding="utf-8") as f:
             f.write(", ".join(steps))
 
     return ", ".join(steps)
@@ -72,8 +74,7 @@ def coordinates_to_navigation(coords):
 
 
 
-path=[(0, 0), (0, 1), (1, 1), (1, 2), (2, 2), (2, 1), (3, 1), (3, 2), (3, 3), (2, 3), (2, 4), (3, 4), (4, 4)]
-
+path=[(1, 1), (1, 2), (1, 3), (2, 3), (3, 3), (3, 4), (3, 5), (4, 5), (5, 5)]
 
 
 
