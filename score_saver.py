@@ -12,7 +12,7 @@ import re
 import os
 
 
-def export_score(filename: str, score: float, output_file: str = 'scores_Dataset03_3x3.py'):
+def export_score(filename: str, score: float, output_file: str = 'scores_Dataset03_15x15.py'):
     """
     Parses a maze filename to update a specific NumPy array with a new score.
     The index of the score in the score tensor is based on the trailing 
