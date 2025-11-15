@@ -19,7 +19,7 @@ representations = ['line jpg', 'line json', 'line adjacency json', 'line adjacen
 # occupancy_json = np.array([100.0, 110.00000000000001, 100.0])
 # occupancy_tokenized_txt = np.array([11.11111111111111, 110.00000000000001, 100.0])
 
-# # Set up complexities for table
+# # Set up runs for table
 # x_axis = [1, 2, 3]
 # complexities = [f"Run {x_axis[i]}" for i in range(3)]
 
