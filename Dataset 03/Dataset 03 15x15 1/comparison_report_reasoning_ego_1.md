@@ -14,6 +14,10 @@
 | `maze_line_15x15_tokenized_1.txt` | **1.54%** | `input: 3392 , ouput: 26034` | `forward, forward, right, forward, right, left, forward, left, left, right, right, left, right, right, forward, left, left, forward, right, right, left, right, forward, forward, backward, forward, forward, left, left, backward, forward, left, right, right, forward, left, forward, right, forward, left, left, right, right, forward, right, forward, left, left, backward, left, right, forward, right, forward, left, forward, left, right, right, right, forward, left, forward, right, right, forward, right, right, forward, left, right, forward, left, forward, forward, right, forward, left, forward, forward, left, left, right, forward, left, right, left, left, forward, left, right, right, forward` |
 | `maze_occupancy_15x15_1.jpg` | **1.54%** | `input: 551 , ouput: 18405` | `forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, left, forward, forward, forward, left, forward, forward, forward, forward, left, forward, right, forward, right, forward, forward, forward, left, right, forward, forward, forward, right, right, left, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, left, right, forward, right, forward, forward, forward, forward, right, forward, forward, forward, left, right, forward, right, forward, forward, left, forward, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, left, right, forward, forward, forward, right, forward, forward, right, forward, forward, forward, forward, forward, forward, forward, forward, forward, left, forward, forward, forward, left, forward, right, forward, left, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, left, forward, left, forward, forward, forward, forward, forward, right, forward, right, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, left` |
 | `maze_occupancy_15x15_1.json` | **3.85%** | `input: 4356 , ouput: 10282` | `forward, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, left, forward, right, forward, forward, forward, forward, forward, forward, forward, forward, forward, left, forward, forward, left, backward, backward, backward, backward, backward, backward, backward, left, forward, right, forward, forward, left, forward, forward, forward, right, forward, forward, right, backward, backward, backward, left, forward, forward, forward, forward, right, backward, backward, right, forward, right, backward, left, forward, forward, right, left, left, right, forward, forward, left, right, forward, left, backward, backward, right, left, right, left, left, forward, right, backward, backward, backward, backward, forward, right, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, right, backward, backward, backward, backward, backward, backward, right, forward, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, right, forward, forward, forward, forward, forward, forward, forward, right, forward, right, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward` |
+| `maze_occupancy_15x15_adj_1.json` | **34.23%** | `input: 27745 , ouput: 18870` | `forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, right, forward, right, forward, left, forward, left, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, left, forward, left, forward, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, left, forward, right, forward, left, forward, right, forward, left, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, left, forward, forward, left, forward, right, forward, right, forward, right, forward, left, forward, left, forward, left, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, right, forward, forward, right, forward, right, forward, left, forward, left, forward, left, forward, right, forward, right, forward, forward, left, forward, left, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, right, forward, right, forward, right, forward, left, forward, forward, right, forward, left, forward, forward, forward, left, forward, forward, left, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, left, forward, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward` |
+| `maze_occupancy_15x15_adj_1.txt` | **1.54%** | `input: 7841 , ouput: 38830` | `forward, forward, forward, forward, right, forward, forward, forward, forward, down, forward, left, forward, forward, forward, left, forward, right, forward, forward, up, forward, up, forward, right, forward, forward, down, forward, down, forward, down, forward, down, forward, right, forward, right, forward, down, forward, down, forward, down, forward, right, forward, forward, up, forward, up, forward, up, forward, right, forward, forward, forward, forward, down, forward, left, forward, left, forward, down, forward, down, forward, right, forward, forward, down, forward, right, forward, forward, up, forward, right, forward, right, forward, down, forward, down, forward, down, forward, down, forward, right, forward, right, forward, up, forward, up, forward, left, forward, left, forward, up, forward, down, forward, right, forward, forward, forward, forward, down, forward, left, forward, left, forward, up, forward, left, forward, right, forward, down, forward, forward, right, forward, right, forward, up, forward, left, forward, left, forward, right, forward, down, forward, down, forward, down, forward, right, forward, forward, forward, forward, forward, forward, left, forward, left, forward, up, forward, up, forward, right, forward, forward, down, forward, left, forward, left, forward, right, forward, forward, down, forward, down, forward, down, forward, down, forward, right, forward, right, forward, up, forward, up, forward, right, forward, right, forward, right, forward, left, forward, left, forward, up, forward, right, forward, forward, forward, forward, up, forward, right, forward, left, forward, left, forward, down, forward, down, forward, right, forward, forward, forward, forward, down, forward, down, forward, left, forward, left, forward, forward, forward, left, forward, right, forward, right, forward, right, forward, forward, down, forward, forward, forward, down, forward, right, forward, right, forward, up, forward, right, forward, right, forward, down, forward, down, forward, down, forward, down, forward, down, forward, right, forward, right, forward, forward, forward, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, forward, forward, forward, right, forward, right, forward, down, forward, down, forward` |
+| `maze_occupancy_15x15_ascii_1.txt` | **0.77%** | `input: 657 , ouput: 18233` | `forward, forward, left, forward, forward, forward, left, right, forward, forward, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, forward, right, forward, forward, forward, right, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, forward, forward, forward, forward, right, forward, forward, forward, forward, forward, forward, right, forward, left, right, left, forward, forward, forward, forward, forward, forward, left, forward, forward, forward, right` |
+| `maze_occupancy_15x15_tokenized_1.txt` | **27.31%** | `input: 12245 , ouput: 31644` | `forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, right, left, forward, left, forward, forward, forward, forward, right, forward, forward, right, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, left, forward, left, forward, forward, right, forward, right, forward, forward, right, forward, right, forward, forward, forward, left, forward, right, forward, forward, right, forward, forward, left, forward, left, forward, forward, forward, right, forward, left, forward, left, forward, right, forward, left, forward, left, forward, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, left, forward, left, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, left, forward, right, forward, right, forward, forward, left, forward, left, forward, left, forward, forward, forward, left, forward, forward, right, forward, right, forward, right, forward, right, forward, right, forward, forward` |
 
 ---
 
@@ -1045,6 +1049,436 @@ Finally, I checked my logic manually for the first few steps to verify my unders
       ),
       Part(
         text='forward, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, left, forward, right, forward, forward, forward, forward, forward, forward, forward, forward, forward, left, forward, forward, left, backward, backward, backward, backward, backward, backward, backward, left, forward, right, forward, forward, left, forward, forward, forward, right, forward, forward, right, backward, backward, backward, left, forward, forward, forward, forward, right, backward, backward, right, forward, right, backward, left, forward, forward, right, left, left, right, forward, forward, left, right, forward, left, backward, backward, right, left, right, left, left, forward, right, backward, backward, backward, backward, forward, right, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, right, backward, backward, backward, backward, backward, backward, right, forward, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, backward, right, forward, forward, forward, forward, forward, forward, forward, right, forward, right, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)]
+```
+
+
+### `maze_occupancy_15x15_adj_1.json`
+
+**Score:** 34.23%
+
+**Ground Truth Solution:**
+```
+forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, left, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, left, forward, right, forward, forward, forward, left, forward, right, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, forward, forward, left, forward, right, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, left, forward, right, forward, left, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, left, forward, forward, forward, forward, forward, right, forward, forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward
+```
+
+**Full User-Facing Response (Final Answer):**
+```
+forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, right, forward, right, forward, left, forward, left, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, left, forward, left, forward, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, left, forward, right, forward, left, forward, right, forward, left, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, left, forward, forward, left, forward, right, forward, right, forward, right, forward, left, forward, left, forward, left, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, right, forward, forward, right, forward, right, forward, left, forward, left, forward, left, forward, right, forward, right, forward, forward, left, forward, left, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, right, forward, right, forward, right, forward, left, forward, forward, right, forward, left, forward, forward, forward, left, forward, forward, left, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, left, forward, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward
+```
+
+**Internal Thoughts:**
+```
+**My Pathfinding Process**
+
+Okay, so the task is to get this agent through a maze. It's a 31x31 grid, start at (1,1), end at (29,29), and the maze structure is defined in this JSON format. First, I need to translate that JSON into something I can work with, specifically an adjacency list to represent which grid cells are connected to each other. I'll read in the grid data, start and end points from the given JSON and set up a dictionary/hashmap where each key is a coordinate (row, col) and the value is a list of its valid neighbors.
+
+The next step is to actually solve the maze. A Breadth-First Search (BFS) is perfect for this as it guarantees the shortest path in terms of steps. I'll need a queue to keep track of cells to explore, a set to mark visited cells to avoid loops, and a "parent" dictionary to reconstruct the final path from the end back to the start. The BFS algorithm will systematically explore the maze level by level, starting from the start node, until it reaches the end node, keeping track of how it got there. I'll run the BFS, using the adjacency list, to find the shortest path and record it. I'll use a `collections.deque` and a `set` to manage the BFS, which should give me the correct shortest path.
+
+Then comes the fun part: translating that path into instructions for the agent. The agent starts facing South. I'll iterate through the path, two coordinates at a time. For each pair of consecutive coordinates, I need to figure out which direction the agent *should* be facing (North, East, South, or West). Then, I'll compare that target direction with the agent's current direction. The difference between those two directions determines the necessary action: forward, left, right, or backward. I'll apply the following turn logic: if the target is to the right, turn right; to the left, turn left; behind, turn backward. If the agent is facing the correct direction already, it's just a forward step.
+
+After writing and testing all the supporting code, the program should produce the path. Now I'll need to run my code on the given maze data. Finally, the program will output the instructions needed for the agent to navigate the maze as a sequence of actions. I'll make sure the start and end coordinates are correct and account for the initial orientation of the agent. Let's start coding.
+
+```
+**Unfiltered Response:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) candidates=[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text="""**My Pathfinding Process**
+
+Okay, so the task is to get this agent through a maze. It's a 31x31 grid, start at (1,1), end at (29,29), and the maze structure is defined in this JSON format. First, I need to translate that JSON into something I can work with, specifically an adjacency list to represent which grid cells are connected to each other. I'll read in the grid data, start and end points from the given JSON and set up a dictionary/hashmap where each key is a coordinate (row, col) and the value is a list of its valid neighbors.
+
+The next step is to actually solve the maze. A Breadth-First Search (BFS) is perfect for this as it guarantees the shortest path in terms of steps. I'll need a queue to keep track of cells to explore, a set to mark visited cells to avoid loops, and a "parent" dictionary to reconstruct the final path from the end back to the start. The BFS algorithm will systematically explore the maze level by level, starting from the start node, until it reaches the end node, keeping track of how it got there. I'll run the BFS, using the adjacency list, to find the shortest path and record it. I'll use a `collections.deque` and a `set` to manage the BFS, which should give me the correct shortest path.
+
+Then comes the fun part: translating that path into instructions for the agent. The agent starts facing South. I'll iterate through the path, two coordinates at a time. For each pair of consecutive coordinates, I need to figure out which direction the agent *should* be facing (North, East, South, or West). Then, I'll compare that target direction with the agent's current direction. The difference between those two directions determines the necessary action: forward, left, right, or backward. I'll apply the following turn logic: if the target is to the right, turn right; to the left, turn left; behind, turn backward. If the agent is facing the correct direction already, it's just a forward step.
+
+After writing and testing all the supporting code, the program should produce the path. Now I'll need to run my code on the given maze data. Finally, the program will output the instructions needed for the agent to navigate the maze as a sequence of actions. I'll make sure the start and end coordinates are correct and account for the initial orientation of the agent. Let's start coding.
+""",
+        thought=True
+      ),
+      Part(
+        text='forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, right, forward, right, forward, left, forward, left, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, left, forward, left, forward, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, left, forward, right, forward, left, forward, right, forward, left, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, left, forward, forward, left, forward, right, forward, right, forward, right, forward, left, forward, left, forward, left, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, right, forward, forward, right, forward, right, forward, left, forward, left, forward, left, forward, right, forward, right, forward, forward, left, forward, left, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, right, forward, right, forward, right, forward, left, forward, forward, right, forward, left, forward, forward, forward, left, forward, forward, left, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, left, forward, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)] create_time=None model_version='gemini-2.5-pro' prompt_feedback=None response_id='M0QbacTQKdvhnsEPt7CigQs' usage_metadata=GenerateContentResponseUsageMetadata(
+  candidates_token_count=659,
+  prompt_token_count=27745,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=27745
+    ),
+  ],
+  thoughts_token_count=18211,
+  total_token_count=46615
+) automatic_function_calling_history=[] parsed=None
+```
+**total_tokens:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) total_tokens=275 cached_content_token_count=None
+```
+**Metadata:**
+```
+cache_tokens_details=None cached_content_token_count=None candidates_token_count=659 candidates_tokens_details=None prompt_token_count=27745 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=27745
+)] thoughts_token_count=18211 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=46615 traffic_type=None
+```
+**Candidates:**
+```
+[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text="""**My Pathfinding Process**
+
+Okay, so the task is to get this agent through a maze. It's a 31x31 grid, start at (1,1), end at (29,29), and the maze structure is defined in this JSON format. First, I need to translate that JSON into something I can work with, specifically an adjacency list to represent which grid cells are connected to each other. I'll read in the grid data, start and end points from the given JSON and set up a dictionary/hashmap where each key is a coordinate (row, col) and the value is a list of its valid neighbors.
+
+The next step is to actually solve the maze. A Breadth-First Search (BFS) is perfect for this as it guarantees the shortest path in terms of steps. I'll need a queue to keep track of cells to explore, a set to mark visited cells to avoid loops, and a "parent" dictionary to reconstruct the final path from the end back to the start. The BFS algorithm will systematically explore the maze level by level, starting from the start node, until it reaches the end node, keeping track of how it got there. I'll run the BFS, using the adjacency list, to find the shortest path and record it. I'll use a `collections.deque` and a `set` to manage the BFS, which should give me the correct shortest path.
+
+Then comes the fun part: translating that path into instructions for the agent. The agent starts facing South. I'll iterate through the path, two coordinates at a time. For each pair of consecutive coordinates, I need to figure out which direction the agent *should* be facing (North, East, South, or West). Then, I'll compare that target direction with the agent's current direction. The difference between those two directions determines the necessary action: forward, left, right, or backward. I'll apply the following turn logic: if the target is to the right, turn right; to the left, turn left; behind, turn backward. If the agent is facing the correct direction already, it's just a forward step.
+
+After writing and testing all the supporting code, the program should produce the path. Now I'll need to run my code on the given maze data. Finally, the program will output the instructions needed for the agent to navigate the maze as a sequence of actions. I'll make sure the start and end coordinates are correct and account for the initial orientation of the agent. Let's start coding.
+""",
+        thought=True
+      ),
+      Part(
+        text='forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, right, forward, right, forward, left, forward, left, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, left, forward, left, forward, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, left, forward, right, forward, left, forward, right, forward, left, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, left, forward, forward, left, forward, right, forward, right, forward, right, forward, left, forward, left, forward, left, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, right, forward, forward, right, forward, right, forward, left, forward, left, forward, left, forward, right, forward, right, forward, forward, left, forward, left, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, right, forward, right, forward, right, forward, left, forward, forward, right, forward, left, forward, forward, forward, left, forward, forward, left, forward, forward, forward, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, left, forward, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)]
+```
+
+### `maze_occupancy_15x15_adj_1.txt`
+
+**Score:** 1.54%
+
+**Ground Truth Solution:**
+```
+forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, left, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, left, forward, right, forward, forward, forward, left, forward, right, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, forward, forward, left, forward, right, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, left, forward, right, forward, left, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, left, forward, forward, forward, forward, forward, right, forward, forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward
+```
+
+**Full User-Facing Response (Final Answer):**
+```
+Forward, Forward, Forward, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Left, Forward, Forward, Forward, Left, Forward, Right, Forward, Forward, Up, Forward, Up, Forward, Right, Forward, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Up, Forward, Up, Forward, Up, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Left, Forward, Left, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Down, Forward, Right, Forward, Forward, Up, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Up, Forward, Up, Forward, Left, Forward, Left, Forward, Up, Forward, Down, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Left, Forward, Left, Forward, Up, Forward, Left, Forward, Right, Forward, Down, Forward, Forward, Right, Forward, Right, Forward, Up, Forward, Left, Forward, Left, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Forward, Forward, Forward, Forward, Left, Forward, Left, Forward, Up, Forward, Up, Forward, Right, Forward, Forward, Down, Forward, Left, Forward, Left, Forward, Right, Forward, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Up, Forward, Up, Forward, Right, Forward, Right, Forward, Right, Forward, Left, Forward, Left, Forward, Up, Forward, Right, Forward, Forward, Forward, Forward, Up, Forward, Right, Forward, Left, Forward, Left, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Down, Forward, Left, Forward, Left, Forward, Forward, Forward, Left, Forward, Right, Forward, Right, Forward, Right, Forward, Forward, Down, Forward, Forward, Forward, Down, Forward, Right, Forward, Right, Forward, Up, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Forward, Forward, Forward, Right, Forward, Left, Forward, Left, Forward, Forward, Forward, Right, Forward, Forward, Forward, Forward, Forward, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward
+```
+
+**Internal Thoughts:**
+```
+
+```
+**Unfiltered Response:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) candidates=[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text='Forward, Forward, Forward, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Left, Forward, Forward, Forward, Left, Forward, Right, Forward, Forward, Up, Forward, Up, Forward, Right, Forward, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Up, Forward, Up, Forward, Up, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Left, Forward, Left, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Down, Forward, Right, Forward, Forward, Up, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Up, Forward, Up, Forward, Left, Forward, Left, Forward, Up, Forward, Down, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Left, Forward, Left, Forward, Up, Forward, Left, Forward, Right, Forward, Down, Forward, Forward, Right, Forward, Right, Forward, Up, Forward, Left, Forward, Left, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Forward, Forward, Forward, Forward, Left, Forward, Left, Forward, Up, Forward, Up, Forward, Right, Forward, Forward, Down, Forward, Left, Forward, Left, Forward, Right, Forward, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Up, Forward, Up, Forward, Right, Forward, Right, Forward, Right, Forward, Left, Forward, Left, Forward, Up, Forward, Right, Forward, Forward, Forward, Forward, Up, Forward, Right, Forward, Left, Forward, Left, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Down, Forward, Left, Forward, Left, Forward, Forward, Forward, Left, Forward, Right, Forward, Right, Forward, Right, Forward, Forward, Down, Forward, Forward, Forward, Down, Forward, Right, Forward, Right, Forward, Up, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Forward, Forward, Forward, Right, Forward, Left, Forward, Left, Forward, Forward, Forward, Right, Forward, Forward, Forward, Forward, Forward, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)] create_time=None model_version='gemini-2.5-pro' prompt_feedback=None response_id='rEUbaeGCCqK-vdIPxePrqQM' usage_metadata=GenerateContentResponseUsageMetadata(
+  candidates_token_count=593,
+  prompt_token_count=7841,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=7841
+    ),
+  ],
+  thoughts_token_count=38237,
+  total_token_count=46671
+) automatic_function_calling_history=[] parsed=None
+```
+**total_tokens:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) total_tokens=308 cached_content_token_count=None
+```
+**Metadata:**
+```
+cache_tokens_details=None cached_content_token_count=None candidates_token_count=593 candidates_tokens_details=None prompt_token_count=7841 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=7841
+)] thoughts_token_count=38237 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=46671 traffic_type=None
+```
+**Candidates:**
+```
+[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text='Forward, Forward, Forward, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Left, Forward, Forward, Forward, Left, Forward, Right, Forward, Forward, Up, Forward, Up, Forward, Right, Forward, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Up, Forward, Up, Forward, Up, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Left, Forward, Left, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Down, Forward, Right, Forward, Forward, Up, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Up, Forward, Up, Forward, Left, Forward, Left, Forward, Up, Forward, Down, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Left, Forward, Left, Forward, Up, Forward, Left, Forward, Right, Forward, Down, Forward, Forward, Right, Forward, Right, Forward, Up, Forward, Left, Forward, Left, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Forward, Forward, Forward, Forward, Left, Forward, Left, Forward, Up, Forward, Up, Forward, Right, Forward, Forward, Down, Forward, Left, Forward, Left, Forward, Right, Forward, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Up, Forward, Up, Forward, Right, Forward, Right, Forward, Right, Forward, Left, Forward, Left, Forward, Up, Forward, Right, Forward, Forward, Forward, Forward, Up, Forward, Right, Forward, Left, Forward, Left, Forward, Down, Forward, Down, Forward, Right, Forward, Forward, Forward, Forward, Down, Forward, Down, Forward, Left, Forward, Left, Forward, Forward, Forward, Left, Forward, Right, Forward, Right, Forward, Right, Forward, Forward, Down, Forward, Forward, Forward, Down, Forward, Right, Forward, Right, Forward, Up, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Down, Forward, Right, Forward, Right, Forward, Forward, Forward, Forward, Right, Forward, Left, Forward, Left, Forward, Forward, Forward, Right, Forward, Forward, Forward, Forward, Forward, Forward, Right, Forward, Right, Forward, Down, Forward, Down, Forward'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)]
+```
+
+### `maze_occupancy_15x15_ascii_1.txt`
+
+**Score:** 0.77%
+
+**Ground Truth Solution:**
+```
+forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, left, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, left, forward, right, forward, forward, forward, left, forward, right, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, forward, forward, left, forward, right, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, left, forward, right, forward, left, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, left, forward, forward, forward, forward, forward, right, forward, forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward
+```
+
+**Full User-Facing Response (Final Answer):**
+```
+forward,forward,left,forward,forward,forward,left,right,forward,forward,forward,right,forward,left,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,right,forward,left,forward,forward,right,forward,forward,forward,right,left,forward,right,forward,forward,forward,forward,forward,left,forward,left,forward,forward,forward,forward,forward,forward,forward,right,forward,forward,forward,forward,forward,forward,right,forward,left,right,left,forward,forward,forward,forward,forward,forward,left,forward,forward,forward,right
+```
+
+**Internal Thoughts:**
+```
+**Okay, here's the breakdown of my thought process for solving this maze and generating the instruction sequence:**
+
+I started by clearly understanding the problem. I need to guide an agent from a starting point 'S' to an end point 'E' within a maze, using a set of basic commands.
+
+My initial approach was to manually trace a path through the maze. I used coordinates (row, column) to track my movements, assuming the agent was facing South at the beginning. I quickly realized this would be inefficient, as I was getting tangled in loops and dead ends.
+
+To improve, I tried to make better choices at intersections, hoping to find a simpler, more direct path.
+
+Recognizing the maze’s complexity, I then explored using the “right-hand rule”, a common wall-following technique. But this fell short when islands or loops were in the maze.
+
+Finally, I got systematic. I went back to a manual tracing approach, step-by-step, but with a more organized way of handling turns. I developed an instruction set with the following structure: "Forward", "Left", and "Right". I meticulously recorded the agent's position and direction after each action. This ensured no mistakes in turns and actions.
+
+After tracing, I generated the full comma-separated list of the commands (forward, forward, forward, left, right, etc.) which are now ready to be used to guide the agent through the maze to reach the destination.
+
+```
+**Unfiltered Response:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) candidates=[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text="""**Okay, here's the breakdown of my thought process for solving this maze and generating the instruction sequence:**
+
+I started by clearly understanding the problem. I need to guide an agent from a starting point 'S' to an end point 'E' within a maze, using a set of basic commands.
+
+My initial approach was to manually trace a path through the maze. I used coordinates (row, column) to track my movements, assuming the agent was facing South at the beginning. I quickly realized this would be inefficient, as I was getting tangled in loops and dead ends.
+
+To improve, I tried to make better choices at intersections, hoping to find a simpler, more direct path.
+
+Recognizing the maze’s complexity, I then explored using the “right-hand rule”, a common wall-following technique. But this fell short when islands or loops were in the maze.
+
+Finally, I got systematic. I went back to a manual tracing approach, step-by-step, but with a more organized way of handling turns. I developed an instruction set with the following structure: "Forward", "Left", and "Right". I meticulously recorded the agent's position and direction after each action. This ensured no mistakes in turns and actions.
+
+After tracing, I generated the full comma-separated list of the commands (forward, forward, forward, left, right, etc.) which are now ready to be used to guide the agent through the maze to reach the destination.
+""",
+        thought=True
+      ),
+      Part(
+        text='forward,forward,left,forward,forward,forward,left,right,forward,forward,forward,right,forward,left,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,right,forward,left,forward,forward,right,forward,forward,forward,right,left,forward,right,forward,forward,forward,forward,forward,left,forward,left,forward,forward,forward,forward,forward,forward,forward,right,forward,forward,forward,forward,forward,forward,right,forward,left,right,left,forward,forward,forward,forward,forward,forward,left,forward,forward,forward,right'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)] create_time=None model_version='gemini-2.5-pro' prompt_feedback=None response_id='x0YbacjkGNfzxN8PwrHHoA0' usage_metadata=GenerateContentResponseUsageMetadata(
+  candidates_token_count=159,
+  prompt_token_count=657,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=657
+    ),
+  ],
+  thoughts_token_count=18074,
+  total_token_count=18890
+) automatic_function_calling_history=[] parsed=None
+```
+**total_tokens:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) total_tokens=283 cached_content_token_count=None
+```
+**Metadata:**
+```
+cache_tokens_details=None cached_content_token_count=None candidates_token_count=159 candidates_tokens_details=None prompt_token_count=657 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=657
+)] thoughts_token_count=18074 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=18890 traffic_type=None
+```
+**Candidates:**
+```
+[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text="""**Okay, here's the breakdown of my thought process for solving this maze and generating the instruction sequence:**
+
+I started by clearly understanding the problem. I need to guide an agent from a starting point 'S' to an end point 'E' within a maze, using a set of basic commands.
+
+My initial approach was to manually trace a path through the maze. I used coordinates (row, column) to track my movements, assuming the agent was facing South at the beginning. I quickly realized this would be inefficient, as I was getting tangled in loops and dead ends.
+
+To improve, I tried to make better choices at intersections, hoping to find a simpler, more direct path.
+
+Recognizing the maze’s complexity, I then explored using the “right-hand rule”, a common wall-following technique. But this fell short when islands or loops were in the maze.
+
+Finally, I got systematic. I went back to a manual tracing approach, step-by-step, but with a more organized way of handling turns. I developed an instruction set with the following structure: "Forward", "Left", and "Right". I meticulously recorded the agent's position and direction after each action. This ensured no mistakes in turns and actions.
+
+After tracing, I generated the full comma-separated list of the commands (forward, forward, forward, left, right, etc.) which are now ready to be used to guide the agent through the maze to reach the destination.
+""",
+        thought=True
+      ),
+      Part(
+        text='forward,forward,left,forward,forward,forward,left,right,forward,forward,forward,right,forward,left,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,forward,right,forward,left,forward,forward,right,forward,forward,forward,right,left,forward,right,forward,forward,forward,forward,forward,left,forward,left,forward,forward,forward,forward,forward,forward,forward,right,forward,forward,forward,forward,forward,forward,right,forward,left,right,left,forward,forward,forward,forward,forward,forward,left,forward,forward,forward,right'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)]
+```
+
+### `maze_occupancy_15x15_tokenized_1.txt`
+
+**Score:** 27.31%
+
+**Ground Truth Solution:**
+```
+forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, left, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, forward, forward, forward, forward, left, forward, left, forward, right, forward, forward, forward, left, forward, right, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, forward, forward, left, forward, right, forward, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, left, forward, right, forward, left, forward, right, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, forward, forward, left, forward, forward, forward, forward, forward, right, forward, forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, left, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward
+```
+
+**Full User-Facing Response (Final Answer):**
+```
+forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, right, left, forward, left, forward, forward, forward, forward, right, forward, forward, right, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, left, forward, left, forward, forward, right, forward, right, forward, forward, right, forward, right, forward, forward, forward, left, forward, right, forward, forward, right, forward, forward, left, forward, left, forward, forward, forward, right, forward, left, forward, left, forward, right, forward, left, forward, left, forward, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, left, forward, left, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, left, forward, right, forward, right, forward, forward, left, forward, left, forward, left, forward, forward, forward, left, forward, forward, right, forward, right, forward, right, forward, right, forward, right, forward, forward
+```
+
+**Internal Thoughts:**
+```
+**Okay, here's my breakdown of how I'm approaching this:**
+
+The user wants me to solve a 31x31 maze, starting at the origin `<|origin|>` (coordinate `(1, 1)`) and ending at the target `<|target|>` (coordinate `(29, 29)`) - the tokenized representation of this is: `<|1-1|> <|29-29|>` respectively. I've got to find a sequence of actions – `Forward`, `Left`, `Right`, or `Backward` – that gets an agent from start to finish, assuming it starts facing south.
+
+First, I need to understand the maze tokens: `<|occupied_wall|>`, `<|blank|>`, `<|origin|>`, and `<|target|>`.  I also need to remember the coordinate system is (row, col) with (0,0) at the top left.
+
+I realize I'm going to need to trace a path, and I'll represent the agent's state as `(row, col, direction)`. Initially, this is `(1, 1, South)`.  I can use a pathfinding algorithm like Breadth-First Search (BFS) or Depth-First Search (DFS) to find a coordinate sequence. Then, I can translate those coordinates to the actions, making sure to consider the agent's current direction.
+
+For easier processing, I'll represent the maze as a 2D array.  I've defined `W` for wall, `B` for blank, `S` for start, `E` for end. The maze is enclosed, so it's a closed system, and (0,...) (30,...) (...0) and (...30) are walls.
+
+My initial thought is to use BFS, as it finds the shortest path. I'll need a queue `q` to hold coordinates, a `visited` set `v` to prevent revisiting, and a `parent map` `p` to reconstruct the final path.
+
+However, manually tracing through a 31x31 maze is tedious and error-prone.  I tried visually tracing a path a few times, getting partway, but it became too difficult. I also made a lot of mistakes doing so. I've been trying different paths, but each time I get to a certain point I have to go back. I am missing some key connections and am looping. It's a very difficult maze. So I'll now rely on a computer algorithm to generate the solution. Let's start from scratch and find the path, and then I will try to translate the path to the moves.
+
+```
+**Unfiltered Response:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) candidates=[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text="""**Okay, here's my breakdown of how I'm approaching this:**
+
+The user wants me to solve a 31x31 maze, starting at the origin `<|origin|>` (coordinate `(1, 1)`) and ending at the target `<|target|>` (coordinate `(29, 29)`) - the tokenized representation of this is: `<|1-1|> <|29-29|>` respectively. I've got to find a sequence of actions – `Forward`, `Left`, `Right`, or `Backward` – that gets an agent from start to finish, assuming it starts facing south.
+
+First, I need to understand the maze tokens: `<|occupied_wall|>`, `<|blank|>`, `<|origin|>`, and `<|target|>`.  I also need to remember the coordinate system is (row, col) with (0,0) at the top left.
+
+I realize I'm going to need to trace a path, and I'll represent the agent's state as `(row, col, direction)`. Initially, this is `(1, 1, South)`.  I can use a pathfinding algorithm like Breadth-First Search (BFS) or Depth-First Search (DFS) to find a coordinate sequence. Then, I can translate those coordinates to the actions, making sure to consider the agent's current direction.
+
+For easier processing, I'll represent the maze as a 2D array.  I've defined `W` for wall, `B` for blank, `S` for start, `E` for end. The maze is enclosed, so it's a closed system, and (0,...) (30,...) (...0) and (...30) are walls.
+
+My initial thought is to use BFS, as it finds the shortest path. I'll need a queue `q` to hold coordinates, a `visited` set `v` to prevent revisiting, and a `parent map` `p` to reconstruct the final path.
+
+However, manually tracing through a 31x31 maze is tedious and error-prone.  I tried visually tracing a path a few times, getting partway, but it became too difficult. I also made a lot of mistakes doing so. I've been trying different paths, but each time I get to a certain point I have to go back. I am missing some key connections and am looping. It's a very difficult maze. So I'll now rely on a computer algorithm to generate the solution. Let's start from scratch and find the path, and then I will try to translate the path to the moves.
+""",
+        thought=True
+      ),
+      Part(
+        text='forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, right, left, forward, left, forward, forward, forward, forward, right, forward, forward, right, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, left, forward, left, forward, forward, right, forward, right, forward, forward, right, forward, right, forward, forward, forward, left, forward, right, forward, forward, right, forward, forward, left, forward, left, forward, forward, forward, right, forward, left, forward, left, forward, right, forward, left, forward, left, forward, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, left, forward, left, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, left, forward, right, forward, right, forward, forward, left, forward, left, forward, left, forward, forward, forward, left, forward, forward, right, forward, right, forward, right, forward, right, forward, right, forward, forward'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)] create_time=None model_version='gemini-2.5-pro' prompt_feedback=None response_id='skgbadbnFYGCxN8P58mgmAM' usage_metadata=GenerateContentResponseUsageMetadata(
+  candidates_token_count=401,
+  prompt_token_count=12245,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=12245
+    ),
+  ],
+  thoughts_token_count=31243,
+  total_token_count=43889
+) automatic_function_calling_history=[] parsed=None
+```
+**total_tokens:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) total_tokens=308 cached_content_token_count=None
+```
+**Metadata:**
+```
+cache_tokens_details=None cached_content_token_count=None candidates_token_count=401 candidates_tokens_details=None prompt_token_count=12245 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=12245
+)] thoughts_token_count=31243 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=43889 traffic_type=None
+```
+**Candidates:**
+```
+[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text="""**Okay, here's my breakdown of how I'm approaching this:**
+
+The user wants me to solve a 31x31 maze, starting at the origin `<|origin|>` (coordinate `(1, 1)`) and ending at the target `<|target|>` (coordinate `(29, 29)`) - the tokenized representation of this is: `<|1-1|> <|29-29|>` respectively. I've got to find a sequence of actions – `Forward`, `Left`, `Right`, or `Backward` – that gets an agent from start to finish, assuming it starts facing south.
+
+First, I need to understand the maze tokens: `<|occupied_wall|>`, `<|blank|>`, `<|origin|>`, and `<|target|>`.  I also need to remember the coordinate system is (row, col) with (0,0) at the top left.
+
+I realize I'm going to need to trace a path, and I'll represent the agent's state as `(row, col, direction)`. Initially, this is `(1, 1, South)`.  I can use a pathfinding algorithm like Breadth-First Search (BFS) or Depth-First Search (DFS) to find a coordinate sequence. Then, I can translate those coordinates to the actions, making sure to consider the agent's current direction.
+
+For easier processing, I'll represent the maze as a 2D array.  I've defined `W` for wall, `B` for blank, `S` for start, `E` for end. The maze is enclosed, so it's a closed system, and (0,...) (30,...) (...0) and (...30) are walls.
+
+My initial thought is to use BFS, as it finds the shortest path. I'll need a queue `q` to hold coordinates, a `visited` set `v` to prevent revisiting, and a `parent map` `p` to reconstruct the final path.
+
+However, manually tracing through a 31x31 maze is tedious and error-prone.  I tried visually tracing a path a few times, getting partway, but it became too difficult. I also made a lot of mistakes doing so. I've been trying different paths, but each time I get to a certain point I have to go back. I am missing some key connections and am looping. It's a very difficult maze. So I'll now rely on a computer algorithm to generate the solution. Let's start from scratch and find the path, and then I will try to translate the path to the moves.
+""",
+        thought=True
+      ),
+      Part(
+        text='forward, forward, forward, forward, left, forward, forward, forward, right, forward, left, forward, forward, forward, left, forward, left, forward, right, forward, right, forward, left, forward, right, forward, right, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, right, forward, left, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, forward, right, forward, forward, forward, right, forward, right, forward, left, forward, forward, forward, forward, forward, forward, forward, forward, right, forward, left, forward, right, forward, right, forward, right, left, forward, left, forward, forward, forward, forward, right, forward, forward, right, forward, right, forward, right, forward, forward, forward, right, forward, forward, forward, left, forward, left, forward, left, forward, forward, right, forward, right, forward, forward, right, forward, right, forward, forward, forward, left, forward, right, forward, forward, right, forward, forward, left, forward, left, forward, forward, forward, right, forward, left, forward, left, forward, right, forward, left, forward, left, forward, forward, right, forward, forward, forward, forward, forward, left, forward, left, forward, forward, left, forward, left, forward, forward, right, forward, right, forward, forward, forward, left, forward, forward, left, forward, right, forward, right, forward, forward, left, forward, left, forward, left, forward, forward, forward, left, forward, forward, right, forward, right, forward, right, forward, right, forward, right, forward, forward'
       ),
     ],
     role='model'
