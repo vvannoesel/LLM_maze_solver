@@ -284,14 +284,19 @@ def prepare_llm_answer_steps(text: str) -> list: # This function has been tested
     # Filter out any empty strings that may result from the split
     return [step for step in steps if step]
 
-def score_llm_output_strict(llm_steps: list, solution_steps: list) -> float:
+def score_llm_output_strict(llm_steps: list, solution_steps: list) -> tuple[float, int]:
     """
     Scores LLM output, stopping at the first mismatch.
     The score is the percentage of consecutive matching steps.
+
+    Returns:
+        tuple[float, int]: A tuple containing:
+        - float: the score from 0.0 to 1.0 (or 1.1 if llm path exceeds goal or nan if LLM path is empty).
+        - int: the raw number of consecutive matching steps.
     """
     #Check if any steps are given in the answer. If not, return 'NaN'
     if len(llm_steps) == 0:
-        return float('NaN') # returns NaN and ends function. If not, continues to score normally 
+        return float('NaN'),0 # returns NaN and ends function. If not, continues to score normally 
     
     consecutive_matches = 0
     # Use zip to iterate through both lists in parallel
@@ -303,7 +308,7 @@ def score_llm_output_strict(llm_steps: list, solution_steps: list) -> float:
 
     # If LLM steps keep moving after reaching goal (number of consecutive_matches is as long as the solution), LLM exceeds the task and function returns 110%. 
     if consecutive_matches == len(solution_steps) and len(llm_steps) > len(solution_steps): 
-        return float(1.1)
+        return float(1.1), consecutive_matches
 
     # Calculate score based on the total steps in the ground truth. Use max to avoid division by zero.
     return consecutive_matches / max(len(solution_steps), 1) , consecutive_matches
@@ -371,7 +376,7 @@ def extract_coordinates(text: str) -> list[tuple[int, int]]: # This function is 
 def score_coordinate_solution( # This function works the same as score_llm_output_strict but for coordinate tuples. Make sure to use a coordinate parsing function on the LLMs answer first
     llm_path: list[tuple[int, int]],
     solution_coords: list[tuple[int, int]]
-) -> float:
+) -> tuple[float, int]:
     """
     Scores the LLM's generated path against the solution path, stopping at the
     first mismatch. The score is the percentage of consecutively matching
@@ -382,11 +387,13 @@ def score_coordinate_solution( # This function works the same as score_llm_outpu
         solution_path (list[tuple[int, int]]): The ground truth solution path.
 
     Returns:
-        float: The score from 0.0 to 1.0. Returns 'NaN' if the LLM path is empty.
+        tuple[float, int]: A tuple containing:
+        - float: the score from 0.0 to 1.0 (or 1.1 if llm path exceeds goal or nan if LLM path is empty).
+        - int: the raw number of consecutive matching steps.
     """
     #Check if the steps are given in the answer. If not, return 'NaN'
     if len(llm_path) == 0:
-        return float('NaN') # returns NaN and ends function. If not, continues to score normally .
+        return float('NaN'),0 # returns NaN and ends function. If not, continues to score normally .
 
     consecutive_matches = 0
     # Use zip to iterate through both paths, comparing each coordinate tuple.
@@ -398,7 +405,7 @@ def score_coordinate_solution( # This function works the same as score_llm_outpu
             break
     # If LLM coordinates keep moving after reaching goal (number of consecutive_matches is as long as the solution), LLM exceeds the task and function returns 110%. 
     if consecutive_matches == len(solution_coords) and len(llm_path) > len(solution_coords): 
-        return float(1.1)
+        return float(1.1), consecutive_matches
 
     # Calculate the score as the fraction of the correct path that was matched.
     # The max() function prevents division by zero if the solution path is empty.
