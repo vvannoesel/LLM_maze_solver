@@ -12,6 +12,106 @@ import re
 import os
 
 
+def export_raw_score(filename: str, score: float, output_file: str = 'raw_scores_Dataset03_3x3.py'):
+    """
+    Parses a maze filename to update a specific NumPy array with a new raw score (absolute number of correct consecutive steps).
+    The index of the score in the score tensor is based on the trailing 
+    number in the filename (e.g., 'maze_..._adj_3.txt' -> index 2).
+
+    The function determines the correct array and the correct index within that
+    array based on the filename. It reads all existing arrays from the output
+    file, updates the data in memory, and writes the complete dataset back.
+
+    Args:
+        filename (str): The name of the maze file that was scored.
+                        e.g., 'maze_line_3x3_adj_1.txt' or 'maze_line_3x3_3.json'
+        score (float): The score to save.
+        output_file (str): The path to the .py file where score arrays are stored.
+    """
+    # --- 1. Parse the filename to get array name and index ---
+    
+    # This regex captures the key parts of the filename to create a unique variable name
+    # It captures: 1: type, 2: rows, 3: representation (optional), 4: index_num (i), 5: extension
+    pattern = r"maze_(line|occupancy)_(\d+)x\d+(?:_(none|tokenized|ascii|adj))?_(\d+)\.(jpg|json|txt)"
+    match = re.match(pattern, os.path.basename(filename))
+
+    if not match:
+        print(f"Warning: Filename '{filename}' did not match expected pattern (e.g., ..._adj_3.txt). Skipping.")
+        return
+
+    # Unpack all groups
+    type_str, rows_str, representation_str, i_str, extension_str = match.groups()
+    
+    # If the representation part is missing in the filename, default to 'none'.
+    # This handles cases like 'maze_line_3x3_3.jpg'.
+    if representation_str is None:
+        # representation_str = 'none'
+        array_name = f"{type_str}_{extension_str}"
+    else:
+        # Create a unique and valid Python variable name
+        # e.g., 'line_adj_txt', 'occupancy_tokenized_json'
+        array_name = f"{type_str}_{representation_str}_{extension_str}"
+    
+    # Determine the index based on the {i} part (e.g., _3 -> index 2)
+    try:
+        i_val = int(i_str)
+        if i_val < 1: # Assuming 'i' must be at least 1
+            print(f"Warning: Filename index part '{i_val}' must be 1 or greater. Skipping.")
+            return
+        index = i_val - 1  # New indexing logic
+    except ValueError:
+        print(f"Error: Could not parse index from '{i_str}'. Skipping.")
+        return
+
+    # --- 2. Load existing scores from the output file ---
+    scores_data = {}
+    if os.path.exists(output_file):
+        try:
+            with open(output_file, 'r') as f:
+                content = f.read()
+                # Find all array assignments in the file
+                # This regex is robust to whitespace variations
+                found_arrays = re.findall(r"(\w+)\s*=\s*np\.array\(\[([^\]]*)\]\)", content)
+                for name, values_str in found_arrays:
+                    if values_str:
+                        # Convert the string of values into a list of floats, handling 'nan'
+                        values = [float(v.strip()) for v in values_str.split(',') if v.strip()]
+                        scores_data[name] = values
+                    else:
+                        scores_data[name] = []
+        except Exception as e:
+            print(f"Error reading or parsing {output_file}: {e}")
+            return
+
+    # --- 3. Update the specific score array in memory ---
+    
+    # Get the current list of scores for our array, or an empty list if it's new
+    current_array = scores_data.get(array_name, [])
+    
+    # Ensure the array is long enough to place the score at the new index
+    # If the new index is beyond the current end, pad with np.nan
+    if len(current_array) <= index:
+        padding_size = index - len(current_array) + 1
+        current_array.extend([np.nan] * padding_size)
+    
+    # Place the new score at the correct index
+    current_array[index] = score 
+    scores_data[array_name] = current_array
+
+    # --- 4. Write all updated data back to the file ---
+    try:
+        with open(output_file, 'w') as f:
+            f.write("import numpy as np\n\n")
+            # Sort the keys to ensure the file order is consistent every time
+            for name in sorted(scores_data.keys()):
+                # The str() of a list containing np.nan will correctly produce 'nan'
+                f.write(f"{name} = np.array({scores_data[name]})\n")
+        
+        print(f"Saved score {score:.2f} for '{filename}' to '{array_name}' at index {index}.")
+    except Exception as e:
+        print(f"Error writing to {output_file}: {e}")
+
+
 def export_output_tokens(filename: str, output_tokens: int, output_file: str = 'output_tokens_Dataset03_3x3.py'):
     """
     Parses a maze filename to update a specific NumPy array with a new output token count.
