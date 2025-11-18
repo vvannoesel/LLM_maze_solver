@@ -24,8 +24,8 @@ from token_count_extracter import extract_prompt_token_count, extract_output_tok
 
 
 # --- Configuration ---
-MAZE_ROWS = 15
-MAZE_COLS = 15
+MAZE_ROWS = 3
+MAZE_COLS = 3
 OCC_ROWS = MAZE_ROWS * 2 + 1  # Occupancy grid rows
 OCC_COLS = MAZE_COLS * 2 + 1  # Occupancy grid columns
 MODEL_NAME = "gemini-2.5-pro"
@@ -441,102 +441,102 @@ def main():
         
         # -------------- Use this for-loop when scoring solution in ALLO STEPS --------------------
 
-        # for file in files_to_test:
-        #     # Dynamically find the correct solution file for the current maze type and add extra info to prompt for each representation
-        #     solution_pattern = ""
-        #     insert_line = ""
-        #     if file.name.startswith("maze_line_"):
-        #         solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_steps_{i}.txt"
-        #         if file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is shown as an image, where thick black lines are impassable walls, thin light gray lines are passable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
-        #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a JSON grid, which describes each cell as a set of four (N/E/S/W) walls with boolean 'True' (impassable) or 'False' (passable) values and includes start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
-        #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.json":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a JSON adjacency list, which lists all available neighbors for each cell and provides start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
-        #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.txt":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a graph via an adjacency list that lists which cells are connected (e.g., (0,0) <–> (0,1)) and marks the start and end with <ORIGIN> and <TARGET> tags; when converted to a grid, the top-left corner is (0,0) in (row, col).\n" )
-        #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_tokenized_{i}.txt":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a grid in a tokenized manner, where each cell is described by its walls (e.g., <|updownleft_wall|>) and the start and end cells are marked with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
-        #         else:
-        #             print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
-        #             continue
+        for file in files_to_test:
+            # Dynamically find the correct solution file for the current maze type and add extra info to prompt for each representation
+            solution_pattern = ""
+            insert_line = ""
+            if file.name.startswith("maze_line_"):
+                solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_steps_{i}.txt"
+                if file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is shown as an image, where thick black lines are impassable walls, thin light gray lines are passable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
+                elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a JSON grid, which describes each cell as a set of four (N/E/S/W) walls with boolean 'True' (impassable) or 'False' (passable) values and includes start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
+                elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.json":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a JSON adjacency list, which lists all available neighbors for each cell and provides start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
+                elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.txt":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a graph via an adjacency list that lists which cells are connected (e.g., (0,0) <–> (0,1)) and marks the start and end with <ORIGIN> and <TARGET> tags; when converted to a grid, the top-left corner is (0,0) in (row, col).\n" )
+                elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_tokenized_{i}.txt":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a grid in a tokenized manner, where each cell is described by its walls (e.g., <|updownleft_wall|>) and the start and end cells are marked with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
+                else:
+                    print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
+                    continue
 
-        #     elif file.name.startswith("maze_occupancy_"):
-        #         solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_steps_{i}.txt"
-        #         if file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is shown as an image, where white cells are passable, black cells are impassable walls, thin light gray lines are traversable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
-        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a JSON grid, where cells are '1' (inaccessible) or '0' (accessible), and start/end coordinates are provided; the top-left corner is (0,0) in (row, col).\n" )
-        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.json":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a JSON adjacency list, which lists all available neighbors for each cell and provides start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
-        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.txt":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a graph via an adjacency list that lists which cells are connected (e.g., (0,0) <–> (0,1)) and marks the start and end with <ORIGIN> and <TARGET> tags; when converted to a grid, the top-left corner is (0,0) in (row, col).\n" )
-        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_ascii_{i}.txt":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The maze is represented as a {OCC_ROWS}x{OCC_COLS} ASCII grid using '#' for walls, ' ' for corridors, 'S' for the start, and 'E' for the end; the top-left corner is (0,0) in (row, col).\n" )
-        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_tokenized_{i}.txt":
-        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a grid in a tokenized manner, where inaccessible cells are tagged as <|occupied_wall|>,  accessible cells are tagged as <|blank|>, and the start and end cells are tagged with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
-        #         else:
-        #             print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
-        #             continue
-        #     else:
-        #         print(f"Warning: Skipping file with unhandled type: {file.name}")
-        #         continue
+            elif file.name.startswith("maze_occupancy_"):
+                solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_steps_{i}.txt"
+                if file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {OCC_ROWS}x{OCC_COLS} maze is shown as an image, where white cells are passable, black cells are impassable walls, thin light gray lines are traversable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
+                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a JSON grid, where cells are '1' (inaccessible) or '0' (accessible), and start/end coordinates are provided; the top-left corner is (0,0) in (row, col).\n" )
+                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.json":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a JSON adjacency list, which lists all available neighbors for each cell and provides start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
+                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.txt":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a graph via an adjacency list that lists which cells are connected (e.g., (0,0) <–> (0,1)) and marks the start and end with <ORIGIN> and <TARGET> tags; when converted to a grid, the top-left corner is (0,0) in (row, col).\n" )
+                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_ascii_{i}.txt":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The maze is represented as a {OCC_ROWS}x{OCC_COLS} ASCII grid using '#' for walls, ' ' for corridors, 'S' for the start, and 'E' for the end; the top-left corner is (0,0) in (row, col).\n" )
+                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_tokenized_{i}.txt":
+                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+                                    f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a grid in a tokenized manner, where inaccessible cells are tagged as <|occupied_wall|>, accessible cells are tagged as <|blank|>, and the start and end cells are tagged with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
+                else:
+                    print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
+                    continue
+            else:
+                print(f"Warning: Skipping file with unhandled type: {file.name}")
+                continue
 
-        #     solution_file_path = test_dir / solution_pattern 
-        #     solution_steps = []
-        #     correct_solution_str = "Solution file not found"
+            solution_file_path = test_dir / solution_pattern 
+            solution_steps = []
+            correct_solution_str = "Solution file not found"
             
-        #     if solution_file_path.exists():
-        #         with open(solution_file_path, 'r', encoding='utf-8') as f:
-        #             correct_solution_str = f.read().strip()
-        #         solution_steps = [s.strip().lower() for s in correct_solution_str.split(',') if s.strip()] # Process the solution steps into a lowercase list
-        #     else:
-        #         print(f"Warning: Could not find solution file matching '{solution_pattern}'")
+            if solution_file_path.exists():
+                with open(solution_file_path, 'r', encoding='utf-8') as f:
+                    correct_solution_str = f.read().strip()
+                solution_steps = [s.strip().lower() for s in correct_solution_str.split(',') if s.strip()] # Process the solution steps into a lowercase list
+            else:
+                print(f"Warning: Could not find solution file matching '{solution_pattern}'")
 
-        #     # Put specialized prompt together
-        #     representation_prompt = (f'{insert_line}\n{instructions_allo}')
+            # Put specialized prompt together
+            representation_prompt = (f'{insert_line}\n{instructions_allo}')
             
-        #     # Call the llm with the current maze file and unpack the tuple returned by call_llm
-        #     response, total_tokens, final_answer, thought_summary = call_llm(representation_prompt, file, my_api_key)
+            # Call the llm with the current maze file and unpack the tuple returned by call_llm
+            response, total_tokens, final_answer, thought_summary = call_llm(representation_prompt, file, my_api_key)
 
-        #     # Prepare the LLM's answer using the new function
-        #     llm_steps = prepare_llm_answer_steps(final_answer)
+            # Prepare the LLM's answer using the new function
+            llm_steps = prepare_llm_answer_steps(final_answer)
             
-        #     # Score the answer against the dynamically found solution
-        #     score, raw_score = score_llm_output_strict(llm_steps, solution_steps)
+            # Score the answer against the dynamically found solution
+            score, raw_score = score_llm_output_strict(llm_steps, solution_steps)
 
-        #     # Save the number of tokens to display in the report. Outputs a string and a tuple of strings
-        #     prompt_tokens = extract_prompt_token_count(str(response.usage_metadata))
-        #     total_token_count , output_tokens = extract_output_token_count(str(response.usage_metadata) , prompt_tokens)
+            # Save the number of tokens to display in the report. Outputs a string and a tuple of strings
+            prompt_tokens = extract_prompt_token_count(str(response.usage_metadata))
+            total_token_count , output_tokens = extract_output_token_count(str(response.usage_metadata) , prompt_tokens)
         
-        #     type = 'allo'
+            type = 'allo'
 
-        #     # Store all relevant information, including internal thoughts
-        #     results.append({
-        #         "file": file.name,
-        #         "response": final_answer, # Renamed from 'response' to 'final_answer' for clarity
-        #         "internal_thoughts": thought_summary,
-        #         "extracted_answer": ", ".join(llm_steps),
-        #         "score": score * 100,
-        #         "ground_truth": correct_solution_str, 
-        #         "unfiltered_response" : response,
-        #         "total_tokens": total_tokens,
-        #         "metadata" : response.usage_metadata, 
-        #         "candidates" : response.candidates, 
-        #         "prompt_tokens" : prompt_tokens,
-        #         "output_tokens" : output_tokens
-        #     })
+            # Store all relevant information, including internal thoughts
+            results.append({
+                "file": file.name,
+                "response": final_answer, # Renamed from 'response' to 'final_answer' for clarity
+                "internal_thoughts": thought_summary,
+                "extracted_answer": ", ".join(llm_steps),
+                "score": score * 100,
+                "ground_truth": correct_solution_str, 
+                "unfiltered_response" : response,
+                "total_tokens": total_tokens,
+                "metadata" : response.usage_metadata, 
+                "candidates" : response.candidates, 
+                "prompt_tokens" : prompt_tokens,
+                "output_tokens" : output_tokens
+            })
         # ------------------------------------------------------------------------------------
 
 
@@ -586,7 +586,7 @@ def main():
         #                             f"The maze is represented as a {OCC_ROWS}x{OCC_COLS} ASCII grid using '#' for walls, ' ' for corridors, 'S' for the start, and 'E' for the end; the top-left corner is (0,0) in (row, col).\n" )
         #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_tokenized_{i}.txt":
         #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a grid in a tokenized manner, where inaccessible cells are tagged as <|occupied_wall|>,  accessible cells are tagged as <|blank|>, and the start and end cells are tagged with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
+        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a grid in a tokenized manner, where inaccessible cells are tagged as <|occupied_wall|>, accessible cells are tagged as <|blank|>, and the start and end cells are tagged with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
         #         else:
         #             print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
         #             continue
@@ -645,104 +645,104 @@ def main():
         
         # -------------- Use this for-loop when scoring solution in COORDINATES --------------
 
-        for file in files_to_test:
-            # Dynamically find the correct solution file for the current maze type and add extra info to prompt for each representation
-            solution_pattern = ""
-            insert_line = ""
-            if file.name.startswith("maze_line_"):
-                solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_coords_{i}.txt"
-                if file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is shown as an image, where thick black lines are impassable walls, thin light gray lines are passable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
-                elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a JSON grid, which describes each cell as a set of four (N/E/S/W) walls with boolean 'True' (impassable) or 'False' (passable) values and includes start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
-                elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.json":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a JSON adjacency list, which lists all available neighbors for each cell and provides start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
-                elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.txt":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a graph via an adjacency list that lists which cells are connected (e.g., (0,0) <–> (0,1)) and marks the start and end with <ORIGIN> and <TARGET> tags; when converted to a grid, the top-left corner is (0,0) in (row, col).\n" )
-                elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_tokenized_{i}.txt":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a grid in a tokenized manner, where each cell is described by its walls (e.g., <|updownleft_wall|>) and the start and end cells are marked with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
-                else:
-                    print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
-                    continue
+        # for file in files_to_test:
+        #     # Dynamically find the correct solution file for the current maze type and add extra info to prompt for each representation
+        #     solution_pattern = ""
+        #     insert_line = ""
+        #     if file.name.startswith("maze_line_"):
+        #         solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_coords_{i}.txt"
+        #         if file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is shown as an image, where thick black lines are impassable walls, thin light gray lines are passable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
+        #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a JSON grid, which describes each cell as a set of four (N/E/S/W) walls with boolean 'True' (impassable) or 'False' (passable) values and includes start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
+        #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.json":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a JSON adjacency list, which lists all available neighbors for each cell and provides start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
+        #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.txt":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a graph via an adjacency list that lists which cells are connected (e.g., (0,0) <–> (0,1)) and marks the start and end with <ORIGIN> and <TARGET> tags; when converted to a grid, the top-left corner is (0,0) in (row, col).\n" )
+        #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_tokenized_{i}.txt":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a grid in a tokenized manner, where each cell is described by its walls (e.g., <|updownleft_wall|>) and the start and end cells are marked with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
+        #         else:
+        #             print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
+        #             continue
 
-            elif file.name.startswith("maze_occupancy_"):
-                solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_coords_{i}.txt"
-                if file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {OCC_ROWS}x{OCC_COLS} maze is shown as an image, where white cells are passable, black cells are impassable walls, thin light gray lines are traversable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
-                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a JSON grid, where cells are '1' (inaccessible) or '0' (accessible), and start/end coordinates are provided; the top-left corner is (0,0) in (row, col).\n" )
-                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.json":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a JSON adjacency list, which lists all available neighbors for each cell and provides start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
-                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.txt":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a graph via an adjacency list that lists which cells are connected (e.g., (0,0) <–> (0,1)) and marks the start and end with <ORIGIN> and <TARGET> tags; when converted to a grid, the top-left corner is (0,0) in (row, col).\n" )
-                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_ascii_{i}.txt":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The maze is represented as a {OCC_ROWS}x{OCC_COLS} ASCII grid using '#' for walls, ' ' for corridors, 'S' for the start, and 'E' for the end; the top-left corner is (0,0) in (row, col).\n" )
-                elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_tokenized_{i}.txt":
-                    insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
-                                    f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a grid in a tokenized manner, where inaccessible cells are tagged as <|occupied_wall|>,  accessible cells are tagged as <|blank|>, and the start and end cells are tagged with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
-                else:
-                    print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
-                    continue
-            else:
-                print(f"Warning: Skipping file with unhandled type: {file.name}")
-                continue
+        #     elif file.name.startswith("maze_occupancy_"):
+        #         solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_coords_{i}.txt"
+        #         if file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is shown as an image, where white cells are passable, black cells are impassable walls, thin light gray lines are traversable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
+        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a JSON grid, where cells are '1' (inaccessible) or '0' (accessible), and start/end coordinates are provided; the top-left corner is (0,0) in (row, col).\n" )
+        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.json":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a JSON adjacency list, which lists all available neighbors for each cell and provides start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
+        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_adj_{i}.txt":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a graph via an adjacency list that lists which cells are connected (e.g., (0,0) <–> (0,1)) and marks the start and end with <ORIGIN> and <TARGET> tags; when converted to a grid, the top-left corner is (0,0) in (row, col).\n" )
+        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_ascii_{i}.txt":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The maze is represented as a {OCC_ROWS}x{OCC_COLS} ASCII grid using '#' for walls, ' ' for corridors, 'S' for the start, and 'E' for the end; the top-left corner is (0,0) in (row, col).\n" )
+        #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_tokenized_{i}.txt":
+        #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools."\
+        #                             f"The {OCC_ROWS}x{OCC_COLS} maze is represented as a grid in a tokenized manner, where inaccessible cells are tagged as <|occupied_wall|>, accessible cells are tagged as <|blank|>, and the start and end cells are tagged with <|origin|> and <|target|>, respectively; the top-left corner is (0,0) in (row, col).\n" )
+        #         else:
+        #             print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
+        #             continue
+        #     else:
+        #         print(f"Warning: Skipping file with unhandled type: {file.name}")
+        #         continue
 
-            solution_file_path = test_dir / solution_pattern 
-            solution_steps = []
-            correct_solution_str = "Solution file not found"
+        #     solution_file_path = test_dir / solution_pattern 
+        #     solution_steps = []
+        #     correct_solution_str = "Solution file not found"
             
-            if solution_file_path.exists():
-                with open(solution_file_path, 'r', encoding='utf-8') as f:
-                    solution_steps = parse_coordinate_string(f.read())  # Read coordinate solution file and convert to list of tuples
-                    correct_solution_str = str(solution_steps).strip('[]')  # Create a string from the tuple, so it can be used in the dictionary to write in .md file
-            else:
-                print(f"Warning: Could not find solution file matching '{solution_pattern}'")
+        #     if solution_file_path.exists():
+        #         with open(solution_file_path, 'r', encoding='utf-8') as f:
+        #             solution_steps = parse_coordinate_string(f.read())  # Read coordinate solution file and convert to list of tuples
+        #             correct_solution_str = str(solution_steps).strip('[]')  # Create a string from the tuple, so it can be used in the dictionary to write in .md file
+        #     else:
+        #         print(f"Warning: Could not find solution file matching '{solution_pattern}'")
 
-            # Put specialized prompt together
-            representation_prompt = (f'{insert_line}\n{instructions_coords}')
+        #     # Put specialized prompt together
+        #     representation_prompt = (f'{insert_line}\n{instructions_coords}')
             
-            # Call the llm with the current maze file and unpack the tuple returned by call_llm
-            response, total_tokens, final_answer, thought_summary = call_llm(representation_prompt, file, my_api_key)
+        #     # Call the llm with the current maze file and unpack the tuple returned by call_llm
+        #     response, total_tokens, final_answer, thought_summary = call_llm(representation_prompt, file, my_api_key)
 
-            # Prepare the LLM's answer using the new function
-            llm_steps = parse_coordinate_string(final_answer)
+        #     # Prepare the LLM's answer using the new function
+        #     llm_steps = parse_coordinate_string(final_answer)
         
-            # Score the answer against the dynamically found solution
-            score, raw_score = score_coordinate_solution(llm_steps, solution_steps)
+        #     # Score the answer against the dynamically found solution
+        #     score, raw_score = score_coordinate_solution(llm_steps, solution_steps)
 
-          # Save the number of tokens to display in the report. Outputs a string and a tuple of strings
-            prompt_tokens = extract_prompt_token_count(str(response.usage_metadata))
-            total_token_count , output_tokens = extract_output_token_count(str(response.usage_metadata) , prompt_tokens)
+        #   # Save the number of tokens to display in the report. Outputs a string and a tuple of strings
+        #     prompt_tokens = extract_prompt_token_count(str(response.usage_metadata))
+        #     total_token_count , output_tokens = extract_output_token_count(str(response.usage_metadata) , prompt_tokens)
 
-            type = 'coords'
+        #     type = 'coords'
 
 
-            # Store all relevant information, including internal thoughts
-            results.append({
-                "file": file.name,
-                "response": final_answer, 
-                "internal_thoughts": thought_summary,
-                "extracted_answer": llm_steps,
-                "score": score * 100,
-                "ground_truth": correct_solution_str, 
-                "unfiltered_response" : response,
-                "total_tokens": total_tokens,
-                "metadata" : response.usage_metadata,
-                "candidates" : response.candidates, 
-                "prompt_tokens" : prompt_tokens,
-                "output_tokens" : output_tokens,
-                # "prompt_as_used" : representation_prompt
-            })
+        #     # Store all relevant information, including internal thoughts
+        #     results.append({
+        #         "file": file.name,
+        #         "response": final_answer, 
+        #         "internal_thoughts": thought_summary,
+        #         "extracted_answer": llm_steps,
+        #         "score": score * 100,
+        #         "ground_truth": correct_solution_str, 
+        #         "unfiltered_response" : response,
+        #         "total_tokens": total_tokens,
+        #         "metadata" : response.usage_metadata,
+        #         "candidates" : response.candidates, 
+        #         "prompt_tokens" : prompt_tokens,
+        #         "output_tokens" : output_tokens,
+        #         # "prompt_as_used" : representation_prompt
+        #     })
         # ------------------------------------------------------------------------------------
            
            
@@ -813,6 +813,6 @@ def main():
     except Exception as e:
         print(f"\nAn unexpected error occurred during markdown creation: {e}")
 if __name__ == "__main__":
-    for i in range (1,2):
+    for i in range (8,11):
         main()
         i+=1
