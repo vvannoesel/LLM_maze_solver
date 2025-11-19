@@ -24,8 +24,8 @@ from token_count_extracter import extract_prompt_token_count, extract_output_tok
 
 
 # --- Configuration ---
-MAZE_ROWS = 3
-MAZE_COLS = 3
+MAZE_ROWS = 6
+MAZE_COLS = 6
 OCC_ROWS = MAZE_ROWS * 2 + 1  # Occupancy grid rows
 OCC_COLS = MAZE_COLS * 2 + 1  # Occupancy grid columns
 MODEL_NAME = "gemini-2.5-pro"
@@ -813,6 +813,6 @@ def main():
     except Exception as e:
         print(f"\nAn unexpected error occurred during markdown creation: {e}")
 if __name__ == "__main__":
-    for i in range (8,11):
+    for i in range (1,11):
         main()
         i+=1

@@ -17,7 +17,7 @@
 | `maze_occupancy_3x3_adj_1.json` | **100.00%** | `input: 1284 , ouput: 2912` | `forward, forward, left, forward, right, forward, left, forward` |
 | `maze_occupancy_3x3_adj_1.txt` | **100.00%** | `input: 566 , ouput: 5534` | `forward, forward, left, forward, right, forward, left, forward` |
 | `maze_occupancy_3x3_ascii_1.txt` | **100.00%** | `input: 302 , ouput: 7469` | `forward, forward, left, forward, right, forward, left, forward` |
-| `maze_occupancy_3x3_tokenized_1.txt` | **0.00%** | `input: 854 , ouput: 3530` | `right, forward, left, forward, right, forward, left, forward` |
+| `maze_occupancy_3x3_tokenized_1.txt` | **100.00%** | `input: 854 , ouput: 3530` | `right, forward, left, forward, right, forward, left, forward` |
 
 ---
 
@@ -1194,6 +1194,7 @@ I went through the cell-by-cell path to solve the maze. After checking the map, 
 ### `maze_occupancy_3x3_tokenized_1.txt`
 
 **Score:** 0.00%
+**Corrected Score:** 100.00%
 
 **Ground Truth Solution:**
 ```
