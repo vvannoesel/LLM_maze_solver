@@ -1,3 +1,13 @@
 import numpy as np
 
-
+line_adj_json = np.array([100.0, 100.0, 100.0, 100.0])
+line_adj_txt = np.array([100.0, 100.0, 100.0, 100.0])
+line_jpg = np.array([0.0, 0.0, 0.0, 0.0])
+line_json = np.array([100.0, 100.0, 100.0, 100.0])
+line_tokenized_txt = np.array([100.0, 100.0, 100.0, 100.0])
+occupancy_adj_json = np.array([100.0, 100.0, 100.0])
+occupancy_adj_txt = np.array([100.0, 100.0, 100.0])
+occupancy_ascii_txt = np.array([24.242424242424242, 32.432432432432435, 11.594202898550725])
+occupancy_jpg = np.array([0.0, 2.7027027027027026, 0.0, 0.0])
+occupancy_json = np.array([27.27272727272727, 48.64864864864865, 100.0, 100.0])
+occupancy_tokenized_txt = np.array([100.0, 100.0, 100.0])
