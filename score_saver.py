@@ -12,7 +12,7 @@ import re
 import os
 
 
-def export_raw_score(filename: str, score: float, output_file: str = 'raw_scores_Dataset03_6x6.py'):
+def export_raw_score(filename: str, score: float, output_file: str = 'raw_scores_Dataset03_15x15.py'):
     """
     Parses a maze filename to update a specific NumPy array with a new raw score (absolute number of correct consecutive steps).
     The index of the score in the score tensor is based on the trailing 
@@ -112,7 +112,7 @@ def export_raw_score(filename: str, score: float, output_file: str = 'raw_scores
         print(f"Error writing to {output_file}: {e}")
 
 
-def export_output_tokens(filename: str, output_tokens: int, output_file: str = 'output_tokens_Dataset03_6x6.py'):
+def export_output_tokens(filename: str, output_tokens: int, output_file: str = 'output_tokens_Dataset03_15x15.py'):
     """
     Parses a maze filename to update a specific NumPy array with a new output token count.
     The index of the score in the score tensor is based on the trailing 
@@ -212,7 +212,7 @@ def export_output_tokens(filename: str, output_tokens: int, output_file: str = '
         print(f"Error writing to {output_file}: {e}")
 
 
-def export_prompt_tokens(filename: str, prompt_tokens: int, output_file: str = 'prompt_tokens_Dataset03_6x6.py'):
+def export_prompt_tokens(filename: str, prompt_tokens: int, output_file: str = 'prompt_tokens_Dataset03_15x15.py'):
     """
     Parses a maze filename to update a specific NumPy array with a new prompt token count.
     The index of the score in the score tensor is based on the trailing 
@@ -315,7 +315,7 @@ def export_prompt_tokens(filename: str, prompt_tokens: int, output_file: str = '
 
 
 
-def export_score(filename: str, score: float, output_file: str = 'scores_Dataset03_6x6.py'):
+def export_score(filename: str, score: float, output_file: str = 'scores_Dataset03_15x15.py'):
     """
     Parses a maze filename to update a specific NumPy array with a new score.
     The index of the score in the score tensor is based on the trailing 

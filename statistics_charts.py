@@ -118,7 +118,7 @@ print('differences:', line_ascii_bewerkt_6 - line_ascii_bewerkt_5)
 #     (mean_tc6, mean_6, sigma_tc6, sigma_6, 'k', 'Test 6: Gemini 2.5 Pro'),
 # ]
 
-# # === Plot setup ===
+# # Plot setup 
 # plt.figure(figsize=(7, 5))
 
 # # Plot each test with horizontal and vertical error bars
@@ -137,7 +137,7 @@ print('differences:', line_ascii_bewerkt_6 - line_ascii_bewerkt_5)
 #         bar.set_linestyle(':')
 #         bar.set_alpha(0.5)
 
-# # === Labels, title, grid, legend ===
+# # Labels, title, grid, legend
 # plt.title('Mean Accuracy vs Mean Output Token Count (30 Runs Per Test)', fontsize=13)
 # plt.xlabel('Mean Output Token Count', fontsize=11)
 # plt.ylabel('Mean Accuracy (%)', fontsize=11)
