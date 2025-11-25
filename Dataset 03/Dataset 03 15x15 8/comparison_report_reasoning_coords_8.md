@@ -10,6 +10,7 @@
 | `maze_line_15x15_8.jpg` | **0.00%** | `input: 444 , ouput: 7549` | `[(0, 1), (1, 1), (2, 1), (2, 2), (3, 2), (4, 2), (5, 2), (5, 3), (4, 3), (4, 4), (3, 4), (2, 4), (1, 4), (1, 5), (1, 6), (2, 6), (3, 6), (4, 6), (4, 7), (4, 8), (3, 8), (2, 8), (1, 8), (1, 9), (1, 10), (2, 10), (3, 10), (4, 10), (5, 10), (5, 9), (6, 9), (7, 9), (8, 9), (9, 9), (10, 9), (11, 9), (11, 10), (12, 10), (12, 11), (11, 11), (10, 11), (9, 11), (8, 11), (8, 12), (8, 13), (9, 13), (10, 13), (11, 13), (12, 13), (13, 13), (14, 13)]` |
 | `maze_line_15x15_8.json` | **50.63%** | `input: 9815 , ouput: 15855` | `[(0, 0), (0, 1), (1, 1), (1, 0), (2, 0), (3, 0), (3, 1), (2, 1), (2, 2), (3, 2), (4, 2), (4, 3), (5, 3), (6, 3), (6, 2), (7, 2), (7, 3), (8, 3), (8, 4), (7, 4), (6, 4), (6, 5), (7, 5), (7, 6), (6, 6), (6, 7), (6, 8), (7, 8), (8, 8), (9, 8), (9, 9), (10, 9), (10, 8), (11, 8), (12, 8), (13, 8), (14, 8), (14, 9), (13, 9), (13, 10), (14, 10), (14, 11), (14, 12), (14, 13), (14, 14)]` |
 | `maze_line_15x15_adj_8.json` | **100.00%** | `input: 13493 , ouput: 15115` | `[(0, 0), (0, 1), (1, 1), (1, 0), (2, 0), (3, 0), (3, 1), (2, 1), (2, 2), (3, 2), (4, 2), (4, 3), (5, 3), (6, 3), (6, 2), (7, 2), (7, 3), (8, 3), (8, 4), (7, 4), (6, 4), (6, 5), (7, 5), (7, 6), (6, 6), (6, 7), (6, 8), (7, 8), (8, 8), (9, 8), (9, 9), (10, 9), (10, 8), (11, 8), (12, 8), (13, 8), (14, 8), (14, 9), (13, 9), (13, 10), (12, 10), (12, 9), (11, 9), (11, 10), (10, 10), (10, 11), (10, 12), (11, 12), (11, 13), (10, 13), (9, 13), (9, 12), (8, 12), (8, 11), (8, 10), (7, 10), (7, 11), (6, 11), (5, 11), (5, 12), (5, 13), (5, 14), (6, 14), (6, 13), (7, 13), (8, 13), (8, 14), (9, 14), (10, 14), (11, 14), (12, 14), (12, 13), (12, 12), (12, 11), (13, 11), (13, 12), (13, 13), (14, 13), (14, 14)]` |
+| `maze_line_15x15_adj_8.txt` | **56.96%** | `input: 3685 , ouput: 23268` | `[(0, 0), (0, 1), (1, 1), (1, 0), (2, 0), (3, 0), (3, 1), (2, 1), (2, 2), (3, 2), (4, 2), (4, 3), (5, 3), (6, 3), (6, 2), (7, 2), (7, 3), (8, 3), (8, 4), (7, 4), (6, 4), (6, 5), (7, 5), (7, 6), (6, 6), (6, 7), (6, 8), (7, 8), (8, 8), (9, 8), (9, 9), (10, 9), (10, 8), (11, 8), (12, 8), (13, 8), (14, 8), (14, 9), (13, 9), (13, 10), (12, 10), (12, 9), (11, 9), (11, 10), (10, 10), (9, 10), (8, 10), (8, 11), (8, 12), (8, 13), (8, 14), (9, 14), (10, 14), (11, 14), (12, 14), (12, 13), (13, 13), (14, 13), (14, 14)]` |
 | `maze_line_15x15_tokenized_8.txt` | **62.03%** | `input: 3290 , ouput: 24814` | `[(0, 0), (0, 1), (1, 1), (1, 0), (2, 0), (3, 0), (3, 1), (2, 1), (2, 2), (3, 2), (4, 2), (4, 3), (5, 3), (6, 3), (6, 2), (7, 2), (7, 3), (8, 3), (8, 4), (7, 4), (6, 4), (6, 5), (7, 5), (7, 6), (6, 6), (6, 7), (6, 8), (7, 8), (8, 8), (9, 8), (9, 9), (10, 9), (10, 8), (11, 8), (12, 8), (13, 8), (14, 8), (14, 9), (13, 9), (13, 10), (12, 10), (12, 9), (11, 9), (11, 10), (10, 10), (10, 11), (10, 12), (11, 12), (11, 13), (12, 13), (12, 12), (12, 11), (13, 11), (13, 12), (13, 13), (14, 13), (14, 14)]` |
 | `maze_occupancy_15x15_8.jpg` | **0.00%** | `input: 449 , ouput: 16009` | `[(1, 2), (2, 2), (3, 2), (4, 2), (4, 3), (4, 4), (5, 4), (6, 4), (6, 5), (6, 6), (5, 6), (4, 6), (4, 7), (4, 8), (5, 8), (6, 8), (7, 8), (8, 8), (8, 7), (8, 6), (9, 6), (10, 6), (10, 7), (10, 8), (10, 9), (10, 10), (10, 11), (10, 12), (11, 12), (12, 12), (12, 11), (12, 10), (12, 9), (12, 8), (13, 8), (14, 8), (15, 8), (16, 8), (16, 7), (16, 6), (15, 6), (14, 6), (14, 5), (14, 4), (15, 4), (16, 4), (16, 3), (16, 2), (17, 2), (18, 2), (18, 3), (18, 4), (18, 5), (18, 6), (19, 6), (20, 6), (20, 5), (20, 4), (21, 4), (22, 4), (22, 3), (22, 2), (23, 2), (24, 2), (24, 3), (24, 4), (24, 5), (24, 6), (24, 7), (24, 8), (25, 8), (26, 8), (26, 9), (26, 10), (26, 11), (26, 12), (25, 12), (24, 12), (24, 11), (24, 10), (23, 10), (22, 10), (22, 11), (22, 12), (22, 13), (22, 14), (23, 14), (24, 14), (24, 15), (24, 16), (23, 16), (22, 16), (22, 17), (22, 18), (21, 18), (20, 18), (20, 19), (20, 20), (21, 20), (22, 20), (22, 21), (22, 22), (22, 23), (22, 24), (23, 24), (24, 24), (24, 25), (24, 26), (25, 26), (26, 26), (27, 26), (28, 26), (28, 27), (28, 28), (28, 29), (29, 29)]` |
 | `maze_occupancy_15x15_8.json` | **15.92%** | `input: 4254 , ouput: 15716` | `[(1, 1), (1, 2), (1, 3), (2, 3), (3, 3), (3, 2), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (7, 2), (7, 3), (6, 3), (5, 3), (5, 4), (5, 5), (6, 5), (7, 5), (8, 5), (9, 5), (9, 6), (9, 7), (10, 7), (11, 7), (11, 8), (11, 9), (10, 9), (9, 9), (9, 10), (9, 11), (10, 11), (11, 11), (11, 12), (11, 13), (10, 13), (9, 13), (9, 14), (9, 15), (10, 15), (11, 15), (12, 15), (13, 15), (13, 16), (13, 17), (12, 17), (11, 17), (10, 17), (9, 17), (9, 18), (9, 19), (10, 19), (11, 19), (12, 19), (13, 19), (13, 20), (13, 21), (14, 21), (15, 21), (15, 22), (15, 23), (16, 23), (17, 23), (17, 24), (17, 25), (16, 25), (15, 25), (15, 26), (15, 27), (16, 27), (17, 27), (18, 27), (19, 27), (19, 28), (19, 29), (20, 29), (21, 29), (21, 28), (21, 27), (22, 27), (23, 27), (23, 26), (23, 25), (24, 25), (25, 25), (25, 26), (25, 27), (25, 28), (25, 29), (26, 29), (27, 29), (28, 29), (29, 29)]` |
@@ -398,6 +399,125 @@ The final output is one long list of coordinates, showing the path through the m
       ),
       Part(
         text='(0,0),(0,1),(1,1),(1,0),(2,0),(3,0),(3,1),(2,1),(2,2),(3,2),(4,2),(4,3),(5,3),(6,3),(6,2),(7,2),(7,3),(8,3),(8,4),(7,4),(6,4),(6,5),(7,5),(7,6),(6,6),(6,7),(6,8),(7,8),(8,8),(9,8),(9,9),(10,9),(10,8),(11,8),(12,8),(13,8),(14,8),(14,9),(13,9),(13,10),(12,10),(12,9),(11,9),(11,10),(10,10),(10,11),(10,12),(11,12),(11,13),(10,13),(9,13),(9,12),(8,12),(8,11),(8,10),(7,10),(7,11),(6,11),(5,11),(5,12),(5,13),(5,14),(6,14),(6,13),(7,13),(8,13),(8,14),(9,14),(10,14),(11,14),(12,14),(12,13),(12,12),(12,11),(13,11),(13,12),(13,13),(14,13),(14,14)'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)]
+```
+
+### `maze_line_15x15_adj_8.txt`
+
+**Score:** 56.96%
+
+**Ground Truth Solution:**
+```
+(0, 0), (0, 1), (1, 1), (1, 0), (2, 0), (3, 0), (3, 1), (2, 1), (2, 2), (3, 2), (4, 2), (4, 3), (5, 3), (6, 3), (6, 2), (7, 2), (7, 3), (8, 3), (8, 4), (7, 4), (6, 4), (6, 5), (7, 5), (7, 6), (6, 6), (6, 7), (6, 8), (7, 8), (8, 8), (9, 8), (9, 9), (10, 9), (10, 8), (11, 8), (12, 8), (13, 8), (14, 8), (14, 9), (13, 9), (13, 10), (12, 10), (12, 9), (11, 9), (11, 10), (10, 10), (10, 11), (10, 12), (11, 12), (11, 13), (10, 13), (9, 13), (9, 12), (8, 12), (8, 11), (8, 10), (7, 10), (7, 11), (6, 11), (5, 11), (5, 12), (5, 13), (5, 14), (6, 14), (6, 13), (7, 13), (8, 13), (8, 14), (9, 14), (10, 14), (11, 14), (12, 14), (12, 13), (12, 12), (12, 11), (13, 11), (13, 12), (13, 13), (14, 13), (14, 14)
+```
+
+**Full User-Facing Response (Final Answer):**
+```
+(0,0),(0,1),(1,1),(1,0),(2,0),(3,0),(3,1),(2,1),(2,2),(3,2),(4,2),(4,3),(5,3),(6,3),(6,2),(7,2),(7,3),(8,3),(8,4),(7,4),(6,4),(6,5),(7,5),(7,6),(6,6),(6,7),(6,8),(7,8),(8,8),(9,8),(9,9),(10,9),(10,8),(11,8),(12,8),(13,8),(14,8),(14,9),(13,9),(13,10),(12,10),(12,9),(11,9),(11,10),(10,10),(9,10),(8,10),(8,11),(8,12),(8,13),(8,14),(9,14),(10,14),(11,14),(12,14),(12,13),(13,13),(14,13),(14,14)
+```
+
+**Internal Thoughts:**
+```
+**Navigating the Labyrinth of Thoughts**
+
+Okay, here's the deal: I've been tasked with mapping a path through a maze, represented as an adjacency list. My goal? Get from (0,0) to (14,14). Easy, right? Not quite. My mind immediately dives into pathfinding strategies. Initially, I'm thinking Breadth-First Search (BFS) or Depth-First Search (DFS), but since I'm doing this mentally, DFS seems more manageable.
+
+I start tracing, but hit a dead end, and quickly realize this is more than a simple linear path. It's a branching maze! The key, I realize, is to identify "decision points"—where the path splits. I start mapping them out, hoping to connect the origin with the destination. This is where things get tricky. I begin the laborious process of manually checking each connection, carefully building the path in my head.
+
+Suddenly, I realize that the path from (0,0) is a dead end. This is when a wave of suspicion washes over me. Is the problem flawed? Am I missing something? I triple-check the adjacency list, convinced there must be an oversight. I search for connections between the start and end coordinates, but to no avail. The start node (0,0) is truly isolated, leading to a dead-end branch.
+
+Now, I start to suspect that there is no solution, but the instructions require me to write out a path. I briefly consider assuming a typo, but quickly reject that idea. I am instructed to use the given data, and so I am.
+
+A new idea, a different strategy. I decide to see if I can trace a path backward from (14,14) toward (0,0). I carefully build the paths to see if they converge. I find a path from the end point.  This is a huge improvement. The end node has an isolated component connected to it, so at least that's something. Now, I have another path, this time connected to the origin.
+
+I combine these two paths - and finally! It works! I visualize a pathway from the origin to a shared point, and then from that point onward to the destination. It is lengthy, winding, and far from the most efficient route, but it's *a* path. And that, I realize, is the solution. My hard work has paid off. The thought process is exhausting. The result is a valid path that I can now report.
+```
+**Unfiltered Response:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) candidates=[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text="""**Navigating the Labyrinth of Thoughts**
+
+Okay, here's the deal: I've been tasked with mapping a path through a maze, represented as an adjacency list. My goal? Get from (0,0) to (14,14). Easy, right? Not quite. My mind immediately dives into pathfinding strategies. Initially, I'm thinking Breadth-First Search (BFS) or Depth-First Search (DFS), but since I'm doing this mentally, DFS seems more manageable.
+
+I start tracing, but hit a dead end, and quickly realize this is more than a simple linear path. It's a branching maze! The key, I realize, is to identify "decision points"—where the path splits. I start mapping them out, hoping to connect the origin with the destination. This is where things get tricky. I begin the laborious process of manually checking each connection, carefully building the path in my head.
+
+Suddenly, I realize that the path from (0,0) is a dead end. This is when a wave of suspicion washes over me. Is the problem flawed? Am I missing something? I triple-check the adjacency list, convinced there must be an oversight. I search for connections between the start and end coordinates, but to no avail. The start node (0,0) is truly isolated, leading to a dead-end branch.
+
+Now, I start to suspect that there is no solution, but the instructions require me to write out a path. I briefly consider assuming a typo, but quickly reject that idea. I am instructed to use the given data, and so I am.
+
+A new idea, a different strategy. I decide to see if I can trace a path backward from (14,14) toward (0,0). I carefully build the paths to see if they converge. I find a path from the end point.  This is a huge improvement. The end node has an isolated component connected to it, so at least that's something. Now, I have another path, this time connected to the origin.
+
+I combine these two paths - and finally! It works! I visualize a pathway from the origin to a shared point, and then from that point onward to the destination. It is lengthy, winding, and far from the most efficient route, but it's *a* path. And that, I realize, is the solution. My hard work has paid off. The thought process is exhausting. The result is a valid path that I can now report.""",
+        thought=True
+      ),
+      Part(
+        text='(0,0),(0,1),(1,1),(1,0),(2,0),(3,0),(3,1),(2,1),(2,2),(3,2),(4,2),(4,3),(5,3),(6,3),(6,2),(7,2),(7,3),(8,3),(8,4),(7,4),(6,4),(6,5),(7,5),(7,6),(6,6),(6,7),(6,8),(7,8),(8,8),(9,8),(9,9),(10,9),(10,8),(11,8),(12,8),(13,8),(14,8),(14,9),(13,9),(13,10),(12,10),(12,9),(11,9),(11,10),(10,10),(9,10),(8,10),(8,11),(8,12),(8,13),(8,14),(9,14),(10,14),(11,14),(12,14),(12,13),(13,13),(14,13),(14,14)'
+      ),
+    ],
+    role='model'
+  ),
+  finish_reason=<FinishReason.STOP: 'STOP'>,
+  index=0
+)] create_time=None model_version='gemini-2.5-pro' prompt_feedback=None response_id='BH4lafiWG_GDvdIPuseGkQk' usage_metadata=GenerateContentResponseUsageMetadata(
+  candidates_token_count=276,
+  prompt_token_count=3685,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=3685
+    ),
+  ],
+  thoughts_token_count=22992,
+  total_token_count=26953
+) automatic_function_calling_history=[] parsed=None
+```
+**total_tokens:**
+```
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) total_tokens=206 cached_content_token_count=None
+```
+**Metadata:**
+```
+cache_tokens_details=None cached_content_token_count=None candidates_token_count=276 candidates_tokens_details=None prompt_token_count=3685 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=3685
+)] thoughts_token_count=22992 tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=26953 traffic_type=None
+```
+**Candidates:**
+```
+[Candidate(
+  content=Content(
+    parts=[
+      Part(
+        text="""**Navigating the Labyrinth of Thoughts**
+
+Okay, here's the deal: I've been tasked with mapping a path through a maze, represented as an adjacency list. My goal? Get from (0,0) to (14,14). Easy, right? Not quite. My mind immediately dives into pathfinding strategies. Initially, I'm thinking Breadth-First Search (BFS) or Depth-First Search (DFS), but since I'm doing this mentally, DFS seems more manageable.
+
+I start tracing, but hit a dead end, and quickly realize this is more than a simple linear path. It's a branching maze! The key, I realize, is to identify "decision points"—where the path splits. I start mapping them out, hoping to connect the origin with the destination. This is where things get tricky. I begin the laborious process of manually checking each connection, carefully building the path in my head.
+
+Suddenly, I realize that the path from (0,0) is a dead end. This is when a wave of suspicion washes over me. Is the problem flawed? Am I missing something? I triple-check the adjacency list, convinced there must be an oversight. I search for connections between the start and end coordinates, but to no avail. The start node (0,0) is truly isolated, leading to a dead-end branch.
+
+Now, I start to suspect that there is no solution, but the instructions require me to write out a path. I briefly consider assuming a typo, but quickly reject that idea. I am instructed to use the given data, and so I am.
+
+A new idea, a different strategy. I decide to see if I can trace a path backward from (14,14) toward (0,0). I carefully build the paths to see if they converge. I find a path from the end point.  This is a huge improvement. The end node has an isolated component connected to it, so at least that's something. Now, I have another path, this time connected to the origin.
+
+I combine these two paths - and finally! It works! I visualize a pathway from the origin to a shared point, and then from that point onward to the destination. It is lengthy, winding, and far from the most efficient route, but it's *a* path. And that, I realize, is the solution. My hard work has paid off. The thought process is exhausting. The result is a valid path that I can now report.""",
+        thought=True
+      ),
+      Part(
+        text='(0,0),(0,1),(1,1),(1,0),(2,0),(3,0),(3,1),(2,1),(2,2),(3,2),(4,2),(4,3),(5,3),(6,3),(6,2),(7,2),(7,3),(8,3),(8,4),(7,4),(6,4),(6,5),(7,5),(7,6),(6,6),(6,7),(6,8),(7,8),(8,8),(9,8),(9,9),(10,9),(10,8),(11,8),(12,8),(13,8),(14,8),(14,9),(13,9),(13,10),(12,10),(12,9),(11,9),(11,10),(10,10),(9,10),(8,10),(8,11),(8,12),(8,13),(8,14),(9,14),(10,14),(11,14),(12,14),(12,13),(13,13),(14,13),(14,14)'
       ),
     ],
     role='model'
