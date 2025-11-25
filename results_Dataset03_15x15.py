@@ -305,46 +305,63 @@ occupancy_tokenized_txt_output_tokens = np.array([nan, 12698.0, 22502.0, 19036.0
 # dfi.export(table_img, "table_accuracy_Dataset03_15x15_R_allo.png")
 
 
-# R - EGO - only run 1 ----------------------------------------------------------------
+# R - EGO - 1-10 ----------------------------------------------------------------
 
 # Accuracy
-line_adj_json = np.array([3.076923076923077])
-line_adj_txt = np.array([2.307692307692308])
-line_jpg = np.array([0.7692307692307693])
-line_json = np.array([3.076923076923077])
-line_tokenized_txt = np.array([1.5384615384615385])
-occupancy_jpg = np.array([1.5384615384615385])
-occupancy_json = np.array([3.8461538461538463])
-occupancy_adj_json = np.array([34.23076923076923])
-occupancy_adj_txt = np.array([1.5384615384615385])
-occupancy_ascii_txt = np.array([0.7692307692307693])
-occupancy_tokenized_txt = np.array([27.307692307692307])
+line_adj_json = np.array([3.076923076923077, 100.0, 15.217391304347828, 100.0, 35.714285714285715, 100.0, 100.0, 100.0, 62.121212121212125, 100.0])
+line_adj_txt = np.array([2.307692307692308, 20.588235294117645, 0.7246376811594203, 100.0, 0.0, 11.0, 0.0, 0.0, 46.21212121212121, 0.0])
+line_jpg = np.array([0.7692307692307693, 1.4705882352941175, 1.4492753623188406, 0.0, 0.0, 0.0, 0.0, 0.0, 1.5151515151515151, 0.0])
+line_json = np.array([3.076923076923077, 36.76470588235294, 9.420289855072465, 0.0, 14.285714285714285, 26.0, 18.181818181818183, 7.6923076923076925, 7.575757575757576, 30.434782608695656])
+line_tokenized_txt = np.array([1.5384615384615385, 29.411764705882355, 1.4492753623188406, 100.0, 0.0, 0.0, 100.0, 100.0, 0.7575757575757576, 100.0])
+occupancy_adj_json = np.array([34.23076923076923, 38.23529411764706, 10.869565217391305, 100.0, 0.0, 36.0, 65.15151515151516, 50.0, 0.7575757575757576, 100.0])
+occupancy_adj_txt = np.array([1.5384615384615385, 41.17647058823529, 13.768115942028986, 0.0, 0.0, 0.0, 26.515151515151516, 100.0, 5.303030303030303, 14.130434782608695])
+occupancy_ascii_txt = np.array([0.7692307692307693, 6.61764705882353, 0.36231884057971014, 4.464285714285714, 3.1746031746031744, 5.5, 0.0, 0.0, 0.3787878787878788, 4.3478260869565215])
+occupancy_jpg = np.array([1.5384615384615385, 1.4705882352941175, 1.4492753623188406, 0.0, 0.0, 0.0, 0.0, 0.0, 0.7575757575757576, 0.0])
+occupancy_json = np.array([3.8461538461538463, 5.88235294117647, 2.1739130434782608, 10.714285714285714, 15.873015873015872, 0.0, 10.606060606060606, 6.41025641025641, 1.5151515151515151, 10.869565217391305])
+occupancy_tokenized_txt = np.array([27.307692307692307, 48.529411764705884, 5.797101449275362, 0.0, 2.380952380952381, 3.5000000000000004, 39.39393939393939, 23.076923076923077, 6.0606060606060606, 15.217391304347828])
+
 
 # Raw Scores
-line_adj_json_raw_score = np.array([4.0])
-line_adj_txt_raw_score = np.array([3.0])
-line_jpg_raw_score = np.array([1.0])
-line_json_raw_score = np.array([4.0])
-line_tokenized_txt_raw_score = np.array([2.0])
-occupancy_jpg_raw_score = np.array([4.0])
-occupancy_json_raw_score = np.array([10.0])
-occupancy_adj_json_raw_score = np.array([89.0])
-occupancy_adj_txt_raw_score = np.array([4.0])
-occupancy_ascii_txt_raw_score = np.array([2.0])
-occupancy_tokenized_txt_raw_score = np.array([71])
+line_adj_json_raw_score = np.array([4.0, 68.0, 21.0, 56.0, 45.0, 100.0, 66.0, 78.0, 82.0, 46.0])
+line_adj_txt_raw_score = np.array([3.0, 14.0, 1.0, 56.0, 0.0, 11.0, 0.0, 0.0, 61.0, 0.0])
+line_jpg_raw_score = np.array([1.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
+line_json_raw_score = np.array([4.0, 25.0, 13.0, 0.0, 18.0, 26.0, 12.0, 6.0, 10.0, 14.0])
+line_tokenized_txt_raw_score = np.array([2.0, 20.0, 2.0, 56.0, 0.0, 0.0, 66.0, 78.0, 1.0, 46.0])
+occupancy_adj_json_raw_score = np.array([89.0, 52.0, 30.0, 112.0, 0.0, 72.0, 86.0, 78.0, 2.0, 92.0])
+occupancy_adj_txt_raw_score = np.array([4.0, 56.0, 38.0, 0.0, 0.0, 0.0, 35.0, 156.0, 14.0, 13.0])
+occupancy_ascii_txt_raw_score = np.array([2.0, 9.0, 1.0, 5.0, 8.0, 11.0, 0.0, 0.0, 1.0, 4.0])
+occupancy_jpg_raw_score = np.array([4.0, 2.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
+occupancy_json_raw_score = np.array([10.0, 8.0, 6.0, 12.0, 40.0, 0.0, 14.0, 10.0, 4.0, 10.0])
+occupancy_tokenized_txt_raw_score = np.array([71.0, 66.0, 16.0, 0.0, 6.0, 7.0, 52.0, 36.0, 16.0, 14])
+
 
 
 # Prompt tokens
-occupancy_adj_json_input_tokens = np.array([27745])
-occupancy_adj_txt_input_tokens = np.array([7841.0])
-occupancy_ascii_txt_input_tokens = np.array([657])
-occupancy_tokenized_txt_input_tokens = np.array([12245])
+line_adj_json_input_tokens = np.array([nan, 13602.0, 13601.0, 13606.0, 13600.0, 13604.0, 13602.0, 13602.0, 13603.0, 13607.0])
+line_adj_txt_input_tokens = np.array([nan, 3794.0, 3793.0, 3798.0, 3792.0, 3796.0, 3794.0, 3794.0, 3795.0, 3799.0])
+line_jpg_input_tokens = np.array([nan, 553.0, 553.0, 553.0, 553.0, 553.0, 553.0, 553.0, 553.0, 553.0])
+line_json_input_tokens = np.array([nan, 9924.0, 9924.0, 9924.0, 9924.0, 9924.0, 9924.0, 9924.0, 9924.0, 9924.0])
+line_tokenized_txt_input_tokens = np.array([nan, 3399.0, 3399.0, 3399.0, 3399.0, 3399.0, 3399.0, 3399.0, 3399.0, 3399.0])
+occupancy_adj_json_input_tokens = np.array([27745.0, 27744.0, 27752.0, 27749.0, 27756.0, 27757.0, 27757.0, 27756.0, 27750.0, 27747.0])
+occupancy_adj_txt_input_tokens = np.array([7841.0, 7842.0, 7848.0, 7846.0, 7850.0, 7852.0, 7852.0, 7851.0, 7846.0, 7844.0])
+occupancy_ascii_txt_input_tokens = np.array([657.0, 656.0, 662.0, 649.0, 643.0, 644.0, 651.0, 664.0, 659.0, 655.0])
+occupancy_jpg_input_tokens = np.array([nan, 558.0, 558.0, 558.0, 558.0, 558.0, 558.0, 558.0, 558.0, 558.0])
+occupancy_json_input_tokens = np.array([nan, 4363.0, 4363.0, 4363.0, 4363.0, 4363.0, 4363.0, 4363.0, 4363.0, 4363.0])
+occupancy_tokenized_txt_input_tokens = np.array([12245.0, 12251.0, 12251.0, 12251.0, 12251.0, 12251.0, 12251.0, 12251.0, 12251.0, 12251])
 
 # Output tokens
-occupancy_adj_json_output_tokens = np.array([18870])
-occupancy_adj_txt_output_tokens = np.array([38830.0])
-occupancy_ascii_txt_output_tokens = np.array([18233])
-occupancy_tokenized_txt_output_tokens = np.array([31644])
+line_adj_json_output_tokens = np.array([nan, 12603.0, 22603.0, 10547.0, 23935.0, 17924.0, 18562.0, 17955.0, 29135.0, 7887.0])
+line_adj_txt_output_tokens = np.array([nan, 13936.0, 22702.0, 10531.0, 21926.0, 27592.0, 10754.0, 21051.0, 13892.0, 13337.0])
+line_jpg_output_tokens = np.array([nan, 10838.0, 8056.0, 7726.0, 8044.0, 4165.0, 6490.0, 7053.0, 6032.0, 5382.0])
+line_json_output_tokens = np.array([nan, 22400.0, 10695.0, 12779.0, 26711.0, 22117.0, 22326.0, 18744.0, 19329.0, 26979.0])
+line_tokenized_txt_output_tokens = np.array([nan, 23176.0, 30332.0, 14776.0, 26266.0, 19001.0, 9542.0, 12020.0, 17727.0, 6311.0])
+occupancy_adj_json_output_tokens = np.array([18870.0, 19262.0, 33481.0, 14313.0, 37418.0, 22595.0, 25233.0, 23782.0, 35780.0, 17694.0])
+occupancy_adj_txt_output_tokens = np.array([38830.0, 24530.0, 29628.0, 30868.0, 24143.0, 25473.0, 24312.0, 24105.0, 31731.0, 23472.0])
+occupancy_ascii_txt_output_tokens = np.array([18233.0, 21823.0, 12927.0, 20916.0, 9998.0, 12138.0, 12549.0, 13949.0, 17702.0, 17755.0])
+occupancy_jpg_output_tokens = np.array([nan, 15913.0, 23382.0, 8448.0, 12519.0, 12638.0, 12785.0, 10682.0, 10414.0, 12349.0])
+occupancy_json_output_tokens = np.array([nan, 17161.0, 29684.0, 21330.0, 13550.0, 26301.0, 15134.0, 8967.0, 18473.0, 8937.0])
+occupancy_tokenized_txt_output_tokens = np.array([31644.0, 23772.0, 23668.0, 29242.0, 27743.0, 21539.0, 9479.0, 29551.0, 26594.0, 18002])
+
 
 # # Set up runs for table
 # x_axis = [1]
