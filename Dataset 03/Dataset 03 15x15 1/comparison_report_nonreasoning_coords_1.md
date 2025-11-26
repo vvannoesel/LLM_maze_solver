@@ -1,7 +1,5 @@
 # LLM Maze Solving Comparison Report
 
- NEW ASCII
-
 **Maze Dimensions:** 15x15
 **Model Used:** `gemini-2.5-flash-lite`
 
