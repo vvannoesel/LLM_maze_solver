@@ -63,6 +63,28 @@ occupancy_jpg_output_tokens = np.array([583.0, 469.0, 472.0, 409.0, 457.0, 495.0
 occupancy_json_output_tokens = np.array([297.0, 298.0, 302.0, 587.0, 339.0, 650.0, 410.0, 295.0, 313.0, 650.0])
 occupancy_tokenized_txt_output_tokens = np.array([302.0, 297.0, 650.0, 650, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0])
 
+avg_nr_coords_line_jpg_input = np.mean(line_jpg_input_tokens)
+avg_nr_coords_line_json_input = np.mean(line_json_input_tokens)
+avg_nr_coords_occupancy_jpg_input = np.mean(occupancy_jpg_input_tokens)
+avg_nr_coords_occupancy_json_input = np.mean(occupancy_json_input_tokens)
+avg_nr_coords_line_adj_json_input = np.mean(line_adj_json_input_tokens)
+avg_nr_coords_line_adj_txt_input = np.mean(line_adj_txt_input_tokens)
+avg_nr_coords_line_tokenized_txt_input = np.mean(line_tokenized_txt_input_tokens)
+avg_nr_coords_occupancy_adj_json_input = np.mean(occupancy_adj_json_input_tokens)
+avg_nr_coords_occupancy_adj_txt_input = np.mean(occupancy_adj_txt_input_tokens)
+avg_nr_coords_occupancy_ascii_txt_input = np.mean(occupancy_ascii_txt_input_tokens)
+avg_nr_coords_occupancy_tokenized_txt_input = np.mean(occupancy_tokenized_txt_input_tokens)
+avg_nr_coords_line_jpg_output = np.mean(line_jpg_output_tokens)
+avg_nr_coords_line_json_output = np.mean(line_json_output_tokens)
+avg_nr_coords_occupancy_jpg_output = np.mean(occupancy_jpg_output_tokens)
+avg_nr_coords_occupancy_json_output = np.mean(occupancy_json_output_tokens)
+avg_nr_coords_line_adj_json_output = np.mean(line_adj_json_output_tokens)
+avg_nr_coords_line_adj_txt_output = np.mean(line_adj_txt_output_tokens)
+avg_nr_coords_line_tokenized_txt_output = np.mean(line_tokenized_txt_output_tokens)
+avg_nr_coords_occupancy_adj_json_output = np.mean(occupancy_adj_json_output_tokens)
+avg_nr_coords_occupancy_adj_txt_output = np.mean(occupancy_adj_txt_output_tokens)
+avg_nr_coords_occupancy_ascii_txt_output = np.mean(occupancy_ascii_txt_output_tokens)
+avg_nr_coords_occupancy_tokenized_txt_output = np.mean(occupancy_tokenized_txt_output_tokens)
 
 # # Set up runs for table
 # x_axis = [1]
@@ -144,6 +166,29 @@ occupancy_json_output_tokens = np.array([650.0, 57.0, 650.0, 650.0, 650.0, 119.0
 occupancy_tokenized_txt_output_tokens = np.array([650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0])
 
 
+avg_nr_allo_line_jpg_input = np.mean(line_jpg_input_tokens)
+avg_nr_allo_line_json_input = np.mean(line_json_input_tokens)
+avg_nr_allo_occupancy_jpg_input = np.mean(occupancy_jpg_input_tokens)
+avg_nr_allo_occupancy_json_input = np.mean(occupancy_json_input_tokens)
+avg_nr_allo_line_adj_json_input = np.mean(line_adj_json_input_tokens)
+avg_nr_allo_line_adj_txt_input = np.mean(line_adj_txt_input_tokens)
+avg_nr_allo_line_tokenized_txt_input = np.mean(line_tokenized_txt_input_tokens)
+avg_nr_allo_occupancy_adj_json_input = np.mean(occupancy_adj_json_input_tokens)
+avg_nr_allo_occupancy_adj_txt_input = np.mean(occupancy_adj_txt_input_tokens)
+avg_nr_allo_occupancy_ascii_txt_input = np.mean(occupancy_ascii_txt_input_tokens)
+avg_nr_allo_occupancy_tokenized_txt_input = np.mean(occupancy_tokenized_txt_input_tokens)
+avg_nr_allo_line_jpg_output = np.mean(line_jpg_output_tokens)
+avg_nr_allo_line_json_output = np.mean(line_json_output_tokens)
+avg_nr_allo_occupancy_jpg_output = np.mean(occupancy_jpg_output_tokens)
+avg_nr_allo_occupancy_json_output = np.mean(occupancy_json_output_tokens)
+avg_nr_allo_line_adj_json_output = np.mean(line_adj_json_output_tokens)
+avg_nr_allo_line_adj_txt_output = np.mean(line_adj_txt_output_tokens)
+avg_nr_allo_line_tokenized_txt_output = np.mean(line_tokenized_txt_output_tokens)
+avg_nr_allo_occupancy_adj_json_output = np.mean(occupancy_adj_json_output_tokens)
+avg_nr_allo_occupancy_adj_txt_output = np.mean(occupancy_adj_txt_output_tokens)
+avg_nr_allo_occupancy_ascii_txt_output = np.mean(occupancy_ascii_txt_output_tokens)
+avg_nr_allo_occupancy_tokenized_txt_output = np.mean(occupancy_tokenized_txt_output_tokens)
+
 # Set up runs for table
 # x_axis = [1]
 # complexities = [f"Run {x_axis[i]}" for i in range(1)]
@@ -222,6 +267,29 @@ occupancy_ascii_txt_output_tokens = np.array([650.0, 650.0, 650.0, 650.0, 650.0,
 occupancy_jpg_output_tokens = np.array([650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0])
 occupancy_json_output_tokens = np.array([650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0])
 occupancy_tokenized_txt_output_tokens = np.array([650.0, 650.0, 650.0, 650.0, 650.0, 650, 650.0, 650.0, 650.0, 650.0])
+
+avg_nr_ego_line_jpg_input = np.mean(line_jpg_input_tokens)
+avg_nr_ego_line_json_input = np.mean(line_json_input_tokens)
+avg_nr_ego_occupancy_jpg_input = np.mean(occupancy_jpg_input_tokens)
+avg_nr_ego_occupancy_json_input = np.mean(occupancy_json_input_tokens)
+avg_nr_ego_line_adj_json_input = np.mean(line_adj_json_input_tokens)
+avg_nr_ego_line_adj_txt_input = np.mean(line_adj_txt_input_tokens)
+avg_nr_ego_line_tokenized_txt_input = np.mean(line_tokenized_txt_input_tokens)
+avg_nr_ego_occupancy_adj_json_input = np.mean(occupancy_adj_json_input_tokens)
+avg_nr_ego_occupancy_adj_txt_input = np.mean(occupancy_adj_txt_input_tokens)
+avg_nr_ego_occupancy_ascii_txt_input = np.mean(occupancy_ascii_txt_input_tokens)
+avg_nr_ego_occupancy_tokenized_txt_input = np.mean(occupancy_tokenized_txt_input_tokens)
+avg_nr_ego_line_jpg_output = np.mean(line_jpg_output_tokens)
+avg_nr_ego_line_json_output = np.mean(line_json_output_tokens)
+avg_nr_ego_occupancy_jpg_output = np.mean(occupancy_jpg_output_tokens)
+avg_nr_ego_occupancy_json_output = np.mean(occupancy_json_output_tokens)
+avg_nr_ego_line_adj_json_output = np.mean(line_adj_json_output_tokens)
+avg_nr_ego_line_adj_txt_output = np.mean(line_adj_txt_output_tokens)
+avg_nr_ego_line_tokenized_txt_output = np.mean(line_tokenized_txt_output_tokens)
+avg_nr_ego_occupancy_adj_json_output = np.mean(occupancy_adj_json_output_tokens)
+avg_nr_ego_occupancy_adj_txt_output = np.mean(occupancy_adj_txt_output_tokens)
+avg_nr_ego_occupancy_ascii_txt_output = np.mean(occupancy_ascii_txt_output_tokens)
+avg_nr_ego_occupancy_tokenized_txt_output = np.mean(occupancy_tokenized_txt_output_tokens)
 
 
 # # Set up runs for table
@@ -304,7 +372,28 @@ occupancy_jpg_output_tokens = np.array([10193.0, 12494.0, 13728.0, 8963.0, 9955.
 occupancy_json_output_tokens = np.array([17287.0, 13432.0, 24426.0, 19069.0, 20997.0, 19289.0, 25754.0, 15716.0, 18421.0, 19336.0])
 occupancy_tokenized_txt_output_tokens = np.array([27461.0, 12623.0, 26548.0, 17015.0, 24129, 26580.0, 19448.0, 25165.0, 27684.0, 22137.0])
 
-
+avg_r_coords_line_jpg_input = np.mean(line_jpg_input_tokens)
+avg_r_coords_line_json_input = np.mean(line_json_input_tokens)
+avg_r_coords_occupancy_jpg_input = np.mean(occupancy_jpg_input_tokens)
+avg_r_coords_occupancy_json_input = np.mean(occupancy_json_input_tokens)
+avg_r_coords_line_adj_json_input = np.mean(line_adj_json_input_tokens)
+avg_r_coords_line_adj_txt_input = np.mean(line_adj_txt_input_tokens)
+avg_r_coords_line_tokenized_txt_input = np.mean(line_tokenized_txt_input_tokens)
+avg_r_coords_occupancy_adj_json_input = np.mean(occupancy_adj_json_input_tokens)
+avg_r_coords_occupancy_adj_txt_input = np.mean(occupancy_adj_txt_input_tokens)
+avg_r_coords_occupancy_ascii_txt_input = np.mean(occupancy_ascii_txt_input_tokens)
+avg_r_coords_occupancy_tokenized_txt_input = np.mean(occupancy_tokenized_txt_input_tokens)
+avg_r_coords_line_jpg_output = np.mean(line_jpg_output_tokens)
+avg_r_coords_line_json_output = np.mean(line_json_output_tokens)
+avg_r_coords_occupancy_jpg_output = np.mean(occupancy_jpg_output_tokens)
+avg_r_coords_occupancy_json_output = np.mean(occupancy_json_output_tokens)
+avg_r_coords_line_adj_json_output = np.mean(line_adj_json_output_tokens)
+avg_r_coords_line_adj_txt_output = np.mean(line_adj_txt_output_tokens)
+avg_r_coords_line_tokenized_txt_output = np.mean(line_tokenized_txt_output_tokens)
+avg_r_coords_occupancy_adj_json_output = np.mean(occupancy_adj_json_output_tokens)
+avg_r_coords_occupancy_adj_txt_output = np.mean(occupancy_adj_txt_output_tokens)
+avg_r_coords_occupancy_ascii_txt_output = np.mean(occupancy_ascii_txt_output_tokens)
+avg_r_coords_occupancy_tokenized_txt_output = np.mean(occupancy_tokenized_txt_output_tokens)
 
 # R - ALLO - 1-10 ----------------------------------------------------------------
 
@@ -362,6 +451,29 @@ occupancy_ascii_txt_output_tokens = np.array([6953.0, 5720.0, 3744.0, 11475.0, 7
 occupancy_jpg_output_tokens = np.array([14420.0, 16069.0, 7911.0, 10028.0, 9050.0, 6771.0, 8747.0, 11031.0, 17497.0, 14351.0])
 occupancy_json_output_tokens = np.array([18136.0, 20884.0, 15988.0, 24608.0, 18119.0, 7607.0, 12994.0, 18491.0, 22347.0, 20437.0])
 occupancy_tokenized_txt_output_tokens = np.array([25641.0, 12698.0, 22502.0, 19036.0, 24018.0, 23182.0, 25434.0, 23742.0, 20451.0, 10015])
+
+avg_r_allo_line_jpg_input = np.mean(line_jpg_input_tokens)
+avg_r_allo_line_json_input = np.mean(line_json_input_tokens)
+avg_r_allo_occupancy_jpg_input = np.mean(occupancy_jpg_input_tokens)
+avg_r_allo_occupancy_json_input = np.mean(occupancy_json_input_tokens)
+avg_r_allo_line_adj_json_input = np.mean(line_adj_json_input_tokens)
+avg_r_allo_line_adj_txt_input = np.mean(line_adj_txt_input_tokens)
+avg_r_allo_line_tokenized_txt_input = np.mean(line_tokenized_txt_input_tokens)
+avg_r_allo_occupancy_adj_json_input = np.mean(occupancy_adj_json_input_tokens)
+avg_r_allo_occupancy_adj_txt_input = np.mean(occupancy_adj_txt_input_tokens)
+avg_r_allo_occupancy_ascii_txt_input = np.mean(occupancy_ascii_txt_input_tokens)
+avg_r_allo_occupancy_tokenized_txt_input = np.mean(occupancy_tokenized_txt_input_tokens)
+avg_r_allo_line_jpg_output = np.mean(line_jpg_output_tokens)
+avg_r_allo_line_json_output = np.mean(line_json_output_tokens)
+avg_r_allo_occupancy_jpg_output = np.mean(occupancy_jpg_output_tokens)
+avg_r_allo_occupancy_json_output = np.mean(occupancy_json_output_tokens)
+avg_r_allo_line_adj_json_output = np.mean(line_adj_json_output_tokens)
+avg_r_allo_line_adj_txt_output = np.mean(line_adj_txt_output_tokens)
+avg_r_allo_line_tokenized_txt_output = np.mean(line_tokenized_txt_output_tokens)
+avg_r_allo_occupancy_adj_json_output = np.mean(occupancy_adj_json_output_tokens)
+avg_r_allo_occupancy_adj_txt_output = np.mean(occupancy_adj_txt_output_tokens)
+avg_r_allo_occupancy_ascii_txt_output = np.mean(occupancy_ascii_txt_output_tokens)
+avg_r_allo_occupancy_tokenized_txt_output = np.mean(occupancy_tokenized_txt_output_tokens)
 
 
 # # Set up runs for table
@@ -442,6 +554,31 @@ occupancy_json_output_tokens = np.array([10282.0, 17161.0, 29684.0, 21330.0, 135
 occupancy_tokenized_txt_output_tokens = np.array([31644.0, 23772.0, 23668.0, 29242.0, 27743.0, 21539.0, 9479.0, 29551.0, 26594.0, 18002])
 
 
+avg_r_ego_line_jpg_input = np.mean(line_jpg_input_tokens)
+avg_r_ego_line_json_input = np.mean(line_json_input_tokens)
+avg_r_ego_occupancy_jpg_input = np.mean(occupancy_jpg_input_tokens)
+avg_r_ego_occupancy_json_input = np.mean(occupancy_json_input_tokens)
+avg_r_ego_line_adj_json_input = np.mean(line_adj_json_input_tokens)
+avg_r_ego_line_adj_txt_input = np.mean(line_adj_txt_input_tokens)
+avg_r_ego_line_tokenized_txt_input = np.mean(line_tokenized_txt_input_tokens)
+avg_r_ego_occupancy_adj_json_input = np.mean(occupancy_adj_json_input_tokens)
+avg_r_ego_occupancy_adj_txt_input = np.mean(occupancy_adj_txt_input_tokens)
+avg_r_ego_occupancy_ascii_txt_input = np.mean(occupancy_ascii_txt_input_tokens)
+avg_r_ego_occupancy_tokenized_txt_input = np.mean(occupancy_tokenized_txt_input_tokens)
+avg_r_ego_line_jpg_output = np.mean(line_jpg_output_tokens)
+avg_r_ego_line_json_output = np.mean(line_json_output_tokens)
+avg_r_ego_occupancy_jpg_output = np.mean(occupancy_jpg_output_tokens)
+avg_r_ego_occupancy_json_output = np.mean(occupancy_json_output_tokens)
+avg_r_ego_line_adj_json_output = np.mean(line_adj_json_output_tokens)
+avg_r_ego_line_adj_txt_output = np.mean(line_adj_txt_output_tokens)
+avg_r_ego_line_tokenized_txt_output = np.mean(line_tokenized_txt_output_tokens)
+avg_r_ego_occupancy_adj_json_output = np.mean(occupancy_adj_json_output_tokens)
+avg_r_ego_occupancy_adj_txt_output = np.mean(occupancy_adj_txt_output_tokens)
+avg_r_ego_occupancy_ascii_txt_output = np.mean(occupancy_ascii_txt_output_tokens)
+avg_r_ego_occupancy_tokenized_txt_output = np.mean(occupancy_tokenized_txt_output_tokens)
+
+
+
 # # Set up runs for table
 # x_axis = [1]
 # complexities = [f"Run {x_axis[i]}" for i in range(1)]
@@ -460,3 +597,56 @@ occupancy_tokenized_txt_output_tokens = np.array([31644.0, 23772.0, 23668.0, 292
 # # Create and save table image
 # table_img = table.style.set_caption("Accuracy (%) of All Representations at 15x15 Gemini 2.5 Pro, Egocentric Outputn   ** nan = run not yet complete").format(precision=3)
 # dfi.export(table_img, "table_accuracy_Dataset03_15x15_R_ego.png")
+
+
+
+
+
+print("average input NR line jpg 15x15:", np.mean(np.array([avg_nr_coords_line_jpg_input, avg_nr_allo_line_jpg_input, avg_nr_ego_line_jpg_input])))
+print("average input NR line json 15x15:", np.mean(np.array([avg_nr_coords_line_json_input, avg_nr_allo_line_json_input, avg_nr_ego_line_json_input])))
+print("average input NR line adj json 15x15:", np.mean(np.array([avg_nr_coords_line_adj_json_input, avg_nr_allo_line_adj_json_input, avg_nr_ego_line_adj_json_input])))
+print("average input NR line adj txt 15x15:", np.mean(np.array([avg_nr_coords_line_adj_txt_input, avg_nr_allo_line_adj_txt_input, avg_nr_ego_line_adj_txt_input])))
+print("average input NR line tokeninzed 15x15:", np.mean(np.array([avg_nr_coords_line_tokenized_txt_input, avg_nr_allo_line_tokenized_txt_input, avg_nr_ego_line_tokenized_txt_input])))
+print("average input NR occ jpg 15x15:", np.mean(np.array([avg_nr_coords_occupancy_jpg_input, avg_nr_allo_occupancy_jpg_input, avg_nr_ego_occupancy_jpg_input])))
+print("average input NR occ json 15x15:", np.mean(np.array([avg_nr_coords_occupancy_json_input, avg_nr_allo_occupancy_json_input, avg_nr_ego_occupancy_json_input])))
+print("average input NR occ adj json 15x15:", np.mean(np.array([avg_nr_coords_occupancy_adj_json_input, avg_nr_allo_occupancy_adj_json_input, avg_nr_ego_occupancy_adj_json_input])))
+print("average input NR occ adj txt 15x15:", np.mean(np.array([avg_nr_coords_occupancy_adj_txt_input, avg_nr_allo_occupancy_adj_txt_input, avg_nr_ego_occupancy_adj_txt_input])))
+print("average input NR occ ascii txt 15x15:", np.mean(np.array([avg_nr_coords_occupancy_ascii_txt_input, avg_nr_allo_occupancy_ascii_txt_input, avg_nr_ego_occupancy_ascii_txt_input])))
+print("average input NR occ tokenized txt 15x15:", np.mean(np.array([avg_nr_coords_occupancy_tokenized_txt_input, avg_nr_allo_occupancy_tokenized_txt_input, avg_nr_ego_occupancy_tokenized_txt_input])))
+
+print("average input R line jpg 15x15:", np.mean(np.array([avg_r_coords_line_jpg_input, avg_r_allo_line_jpg_input, avg_r_ego_line_jpg_input])))
+print("average input R line json 15x15:", np.mean(np.array([avg_r_coords_line_json_input, avg_r_allo_line_json_input, avg_r_ego_line_json_input])))
+print("average input R line adj json 15x15:", np.mean(np.array([avg_r_coords_line_adj_json_input, avg_r_allo_line_adj_json_input, avg_r_ego_line_adj_json_input])))
+print("average input R line adj txt 15x15:", np.mean(np.array([avg_r_coords_line_adj_txt_input, avg_r_allo_line_adj_txt_input, avg_r_ego_line_adj_txt_input])))
+print("average input R line tokeninzed 15x15:", np.mean(np.array([avg_r_coords_line_tokenized_txt_input, avg_r_allo_line_tokenized_txt_input, avg_r_ego_line_tokenized_txt_input])))
+print("average input R occ jpg 15x15:", np.mean(np.array([avg_r_coords_occupancy_jpg_input, avg_r_allo_occupancy_jpg_input, avg_r_ego_occupancy_jpg_input])))
+print("average input R occ json 15x15:", np.mean(np.array([avg_r_coords_occupancy_json_input, avg_r_allo_occupancy_json_input, avg_r_ego_occupancy_json_input])))
+print("average input R occ adj json 15x15:", np.mean(np.array([avg_r_coords_occupancy_adj_json_input, avg_r_allo_occupancy_adj_json_input, avg_r_ego_occupancy_adj_json_input])))
+print("average input R occ adj txt 15x15:", np.mean(np.array([avg_r_coords_occupancy_adj_txt_input, avg_r_allo_occupancy_adj_txt_input, avg_r_ego_occupancy_adj_txt_input])))
+print("average input R occ ascii txt 15x15:", np.mean(np.array([avg_r_coords_occupancy_ascii_txt_input, avg_r_allo_occupancy_ascii_txt_input, avg_r_ego_occupancy_ascii_txt_input])))
+print("average input R occ tokenized txt 15x15:", np.mean(np.array([avg_r_coords_occupancy_tokenized_txt_input, avg_r_allo_occupancy_tokenized_txt_input, avg_r_ego_occupancy_tokenized_txt_input])))
+
+
+print("average output NR line jpg 15x15:", np.mean(np.array([avg_nr_coords_line_jpg_output, avg_nr_allo_line_jpg_output, avg_nr_ego_line_jpg_output])))
+print("average output NR line json 15x15:", np.mean(np.array([avg_nr_coords_line_json_output, avg_nr_allo_line_json_output, avg_nr_ego_line_json_output])))
+print("average output NR line adj json 15x15:", np.mean(np.array([avg_nr_coords_line_adj_json_output, avg_nr_allo_line_adj_json_output, avg_nr_ego_line_adj_json_output])))
+print("average output NR line adj txt 15x15:", np.mean(np.array([avg_nr_coords_line_adj_txt_output, avg_nr_allo_line_adj_txt_output, avg_nr_ego_line_adj_txt_output])))
+print("average output NR line tokeninzed 15x15:", np.mean(np.array([avg_nr_coords_line_tokenized_txt_output, avg_nr_allo_line_tokenized_txt_output, avg_nr_ego_line_tokenized_txt_output])))
+print("average output NR occ jpg 15x15:", np.mean(np.array([avg_nr_coords_occupancy_jpg_output, avg_nr_allo_occupancy_jpg_output, avg_nr_ego_occupancy_jpg_output])))
+print("average output NR occ json 15x15:", np.mean(np.array([avg_nr_coords_occupancy_json_output, avg_nr_allo_occupancy_json_output, avg_nr_ego_occupancy_json_output])))
+print("average output NR occ adj json 15x15:", np.mean(np.array([avg_nr_coords_occupancy_adj_json_output, avg_nr_allo_occupancy_adj_json_output, avg_nr_ego_occupancy_adj_json_output])))
+print("average output NR occ adj txt 15x15:", np.mean(np.array([avg_nr_coords_occupancy_adj_txt_output, avg_nr_allo_occupancy_adj_txt_output, avg_nr_ego_occupancy_adj_txt_output])))
+print("average output NR occ ascii txt 15x15:", np.mean(np.array([avg_nr_coords_occupancy_ascii_txt_output, avg_nr_allo_occupancy_ascii_txt_output, avg_nr_ego_occupancy_ascii_txt_output])))
+print("average output NR occ tokenized txt 15x15:", np.mean(np.array([avg_nr_coords_occupancy_tokenized_txt_output, avg_nr_allo_occupancy_tokenized_txt_output, avg_nr_ego_occupancy_tokenized_txt_output])))
+
+print("average output R line jpg 15x15:", np.mean(np.array([avg_r_coords_line_jpg_output, avg_r_allo_line_jpg_output, avg_r_ego_line_jpg_output])))
+print("average output R line json 15x15:", np.mean(np.array([avg_r_coords_line_json_output, avg_r_allo_line_json_output, avg_r_ego_line_json_output])))
+print("average output R line adj json 15x15:", np.mean(np.array([avg_r_coords_line_adj_json_output, avg_r_allo_line_adj_json_output, avg_r_ego_line_adj_json_output])))
+print("average output R line adj txt 15x15:", np.mean(np.array([avg_r_coords_line_adj_txt_output, avg_r_allo_line_adj_txt_output, avg_r_ego_line_adj_txt_output])))
+print("average output R line tokeninzed 15x15:", np.mean(np.array([avg_r_coords_line_tokenized_txt_output, avg_r_allo_line_tokenized_txt_output, avg_r_ego_line_tokenized_txt_output])))
+print("average output R occ jpg 15x15:", np.mean(np.array([avg_r_coords_occupancy_jpg_output, avg_r_allo_occupancy_jpg_output, avg_r_ego_occupancy_jpg_output])))
+print("average output R occ json 15x15:", np.mean(np.array([avg_r_coords_occupancy_json_output, avg_r_allo_occupancy_json_output, avg_r_ego_occupancy_json_output])))
+print("average output R occ adj json 15x15:", np.mean(np.array([avg_r_coords_occupancy_adj_json_output, avg_r_allo_occupancy_adj_json_output, avg_r_ego_occupancy_adj_json_output])))
+print("average output R occ adj txt 15x15:", np.mean(np.array([avg_r_coords_occupancy_adj_txt_output, avg_r_allo_occupancy_adj_txt_output, avg_r_ego_occupancy_adj_txt_output])))
+print("average output R occ ascii txt 15x15:", np.mean(np.array([avg_r_coords_occupancy_ascii_txt_output, avg_r_allo_occupancy_ascii_txt_output, avg_r_ego_occupancy_ascii_txt_output])))
+print("average output R occ tokenized txt 15x15:", np.mean(np.array([avg_r_coords_occupancy_tokenized_txt_output, avg_r_allo_occupancy_tokenized_txt_output, avg_r_ego_occupancy_tokenized_txt_output])))
