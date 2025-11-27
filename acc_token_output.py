@@ -974,324 +974,325 @@ avg_r_ego_occupancy_tokenized_txt_output_15 = np.mean(occupancy_tokenized_txt_ou
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Creating acc/token vs. output type charts for each representation
-# jpg
-line_jpg_NR_3 = np.array([avg_nr_coords_line_jpg_3/avg_nr_coords_line_jpg_output_3, avg_nr_allo_line_jpg_3/avg_nr_allo_line_jpg_output_3, avg_nr_ego_line_jpg_3/avg_nr_ego_line_jpg_output_3])
-line_jpg_R_3 = np.array([avg_r_coords_line_jpg_3/avg_r_coords_line_jpg_output_3, avg_r_allo_line_jpg_3/avg_r_allo_line_jpg_output_3, avg_r_ego_line_jpg_3/avg_r_ego_line_jpg_output_3])
+# # Creating acc/token vs. output type charts for each representation
+# # jpg
+# line_jpg_NR_3 = np.array([avg_nr_coords_line_jpg_3/avg_nr_coords_line_jpg_output_3, avg_nr_allo_line_jpg_3/avg_nr_allo_line_jpg_output_3, avg_nr_ego_line_jpg_3/avg_nr_ego_line_jpg_output_3])
+# line_jpg_R_3 = np.array([avg_r_coords_line_jpg_3/avg_r_coords_line_jpg_output_3, avg_r_allo_line_jpg_3/avg_r_allo_line_jpg_output_3, avg_r_ego_line_jpg_3/avg_r_ego_line_jpg_output_3])
 
-line_jpg_NR_6 = np.array([avg_nr_coords_line_jpg_6/avg_nr_coords_line_jpg_output_6, avg_nr_allo_line_jpg_6/avg_nr_allo_line_jpg_output_6, avg_nr_ego_line_jpg_6/avg_nr_ego_line_jpg_output_6])
-line_jpg_R_6 = np.array([avg_r_coords_line_jpg_6/avg_r_coords_line_jpg_output_6, avg_r_allo_line_jpg_6/avg_r_allo_line_jpg_output_6, avg_r_ego_line_jpg_6/avg_r_ego_line_jpg_output_6])
+# line_jpg_NR_6 = np.array([avg_nr_coords_line_jpg_6/avg_nr_coords_line_jpg_output_6, avg_nr_allo_line_jpg_6/avg_nr_allo_line_jpg_output_6, avg_nr_ego_line_jpg_6/avg_nr_ego_line_jpg_output_6])
+# line_jpg_R_6 = np.array([avg_r_coords_line_jpg_6/avg_r_coords_line_jpg_output_6, avg_r_allo_line_jpg_6/avg_r_allo_line_jpg_output_6, avg_r_ego_line_jpg_6/avg_r_ego_line_jpg_output_6])
 
-line_jpg_NR_15 = np.array([avg_nr_coords_line_jpg_15/avg_nr_coords_line_jpg_output_15, avg_nr_allo_line_jpg_15/avg_nr_allo_line_jpg_output_15, avg_nr_ego_line_jpg_15/avg_nr_ego_line_jpg_output_15])
-line_jpg_R_15 = np.array([avg_r_coords_line_jpg_15/avg_r_coords_line_jpg_output_15, avg_r_allo_line_jpg_15/avg_r_allo_line_jpg_output_15, avg_r_ego_line_jpg_15/avg_r_ego_line_jpg_output_15])
+# line_jpg_NR_15 = np.array([avg_nr_coords_line_jpg_15/avg_nr_coords_line_jpg_output_15, avg_nr_allo_line_jpg_15/avg_nr_allo_line_jpg_output_15, avg_nr_ego_line_jpg_15/avg_nr_ego_line_jpg_output_15])
+# line_jpg_R_15 = np.array([avg_r_coords_line_jpg_15/avg_r_coords_line_jpg_output_15, avg_r_allo_line_jpg_15/avg_r_allo_line_jpg_output_15, avg_r_ego_line_jpg_15/avg_r_ego_line_jpg_output_15])
 
-occupancy_jpg_NR_3 = np.array([avg_nr_coords_occupancy_jpg_3/avg_nr_coords_occupancy_jpg_output_3, avg_nr_allo_occupancy_jpg_3/avg_nr_allo_occupancy_jpg_output_3, avg_nr_ego_occupancy_jpg_3/avg_nr_ego_occupancy_jpg_output_3])
-occupancy_jpg_R_3 = np.array([avg_r_coords_occupancy_jpg_3/avg_r_coords_occupancy_jpg_output_3, avg_r_allo_occupancy_jpg_3/avg_r_allo_occupancy_jpg_output_3, avg_r_ego_occupancy_jpg_3/avg_r_ego_occupancy_jpg_output_3])
+# occupancy_jpg_NR_3 = np.array([avg_nr_coords_occupancy_jpg_3/avg_nr_coords_occupancy_jpg_output_3, avg_nr_allo_occupancy_jpg_3/avg_nr_allo_occupancy_jpg_output_3, avg_nr_ego_occupancy_jpg_3/avg_nr_ego_occupancy_jpg_output_3])
+# occupancy_jpg_R_3 = np.array([avg_r_coords_occupancy_jpg_3/avg_r_coords_occupancy_jpg_output_3, avg_r_allo_occupancy_jpg_3/avg_r_allo_occupancy_jpg_output_3, avg_r_ego_occupancy_jpg_3/avg_r_ego_occupancy_jpg_output_3])
 
-occupancy_jpg_NR_6 = np.array([avg_nr_coords_occupancy_jpg_6/avg_nr_coords_occupancy_jpg_output_6, avg_nr_allo_occupancy_jpg_6/avg_nr_allo_occupancy_jpg_output_6, avg_nr_ego_occupancy_jpg_6/avg_nr_ego_occupancy_jpg_output_6])
-occupancy_jpg_R_6 = np.array([avg_r_coords_occupancy_jpg_6/avg_r_coords_occupancy_jpg_output_6, avg_r_allo_occupancy_jpg_6/avg_r_allo_occupancy_jpg_output_6, avg_r_ego_occupancy_jpg_6/avg_r_ego_occupancy_jpg_output_6])
+# occupancy_jpg_NR_6 = np.array([avg_nr_coords_occupancy_jpg_6/avg_nr_coords_occupancy_jpg_output_6, avg_nr_allo_occupancy_jpg_6/avg_nr_allo_occupancy_jpg_output_6, avg_nr_ego_occupancy_jpg_6/avg_nr_ego_occupancy_jpg_output_6])
+# occupancy_jpg_R_6 = np.array([avg_r_coords_occupancy_jpg_6/avg_r_coords_occupancy_jpg_output_6, avg_r_allo_occupancy_jpg_6/avg_r_allo_occupancy_jpg_output_6, avg_r_ego_occupancy_jpg_6/avg_r_ego_occupancy_jpg_output_6])
 
-occupancy_jpg_NR_15 = np.array([avg_nr_coords_occupancy_jpg_15/avg_nr_coords_occupancy_jpg_output_15, avg_nr_allo_occupancy_jpg_15/avg_nr_allo_occupancy_jpg_output_15, avg_nr_ego_occupancy_jpg_15/avg_nr_ego_occupancy_jpg_output_15])
-occupancy_jpg_R_15 = np.array([avg_r_coords_occupancy_jpg_15/avg_r_coords_occupancy_jpg_output_15, avg_r_allo_occupancy_jpg_15/avg_r_allo_occupancy_jpg_output_15, avg_r_ego_occupancy_jpg_15/avg_r_ego_occupancy_jpg_output_15])
-
-
-# json
-line_json_NR_3 = np.array([avg_nr_coords_line_json_3/avg_nr_coords_line_json_output_3, avg_nr_allo_line_json_3/avg_nr_allo_line_json_output_3, avg_nr_ego_line_json_3/avg_nr_ego_line_json_output_3])
-line_json_R_3 = np.array([avg_r_coords_line_json_3/avg_r_coords_line_json_output_3, avg_r_allo_line_json_3/avg_r_allo_line_json_output_3, avg_r_ego_line_json_3/avg_r_ego_line_json_output_3])
-
-line_json_NR_6 = np.array([avg_nr_coords_line_json_6/avg_nr_coords_line_json_output_6, avg_nr_allo_line_json_6/avg_nr_allo_line_json_output_6, avg_nr_ego_line_json_6/avg_nr_ego_line_json_output_6])
-line_json_R_6 = np.array([avg_r_coords_line_json_6/avg_r_coords_line_json_output_6, avg_r_allo_line_json_6/avg_r_allo_line_json_output_6, avg_r_ego_line_json_6/avg_r_ego_line_json_output_6])
-
-line_json_NR_15 = np.array([avg_nr_coords_line_json_15/avg_nr_coords_line_json_output_15, avg_nr_allo_line_json_15/avg_nr_allo_line_json_output_15, avg_nr_ego_line_json_15/avg_nr_ego_line_json_output_15])
-line_json_R_15 = np.array([avg_r_coords_line_json_15/avg_r_coords_line_json_output_15, avg_r_allo_line_json_15/avg_r_allo_line_json_output_15, avg_r_ego_line_json_15/avg_r_ego_line_json_output_15])
-
-occupancy_json_NR_3 = np.array([avg_nr_coords_occupancy_json_3/avg_nr_coords_occupancy_json_output_3, avg_nr_allo_occupancy_json_3/avg_nr_allo_occupancy_json_output_3, avg_nr_ego_occupancy_json_3/avg_nr_ego_occupancy_json_output_3])
-occupancy_json_R_3 = np.array([avg_r_coords_occupancy_json_3/avg_r_coords_occupancy_json_output_3, avg_r_allo_occupancy_json_3/avg_r_allo_occupancy_json_output_3, avg_r_ego_occupancy_json_3/avg_r_ego_occupancy_json_output_3])
-
-occupancy_json_NR_6 = np.array([avg_nr_coords_occupancy_json_6/avg_nr_coords_occupancy_json_output_6, avg_nr_allo_occupancy_json_6/avg_nr_allo_occupancy_json_output_6, avg_nr_ego_occupancy_json_6/avg_nr_ego_occupancy_json_output_6])
-occupancy_json_R_6 = np.array([avg_r_coords_occupancy_json_6/avg_r_coords_occupancy_json_output_6, avg_r_allo_occupancy_json_6/avg_r_allo_occupancy_json_output_6, avg_r_ego_occupancy_json_6/avg_r_ego_occupancy_json_output_6])
-
-occupancy_json_NR_15 = np.array([avg_nr_coords_occupancy_json_15/avg_nr_coords_occupancy_json_output_15, avg_nr_allo_occupancy_json_15/avg_nr_allo_occupancy_json_output_15, avg_nr_ego_occupancy_json_15/avg_nr_ego_occupancy_json_output_15])
-occupancy_json_R_15 = np.array([avg_r_coords_occupancy_json_15/avg_r_coords_occupancy_json_output_15, avg_r_allo_occupancy_json_15/avg_r_allo_occupancy_json_output_15, avg_r_ego_occupancy_json_15/avg_r_ego_occupancy_json_output_15])
-
-# Tokenized
-line_tokenized_txt_NR_3 = np.array([avg_nr_coords_line_tokenized_txt_3/avg_nr_coords_line_tokenized_txt_output_3, avg_nr_allo_line_tokenized_txt_3/avg_nr_allo_line_tokenized_txt_output_3, avg_nr_ego_line_tokenized_txt_3/avg_nr_ego_line_tokenized_txt_output_3])
-line_tokenized_txt_R_3 = np.array([avg_r_coords_line_tokenized_txt_3/avg_r_coords_line_tokenized_txt_output_3, avg_r_allo_line_tokenized_txt_3/avg_r_allo_line_tokenized_txt_output_3, avg_r_ego_line_tokenized_txt_3/avg_r_ego_line_tokenized_txt_output_3])
-
-line_tokenized_txt_NR_6 = np.array([avg_nr_coords_line_tokenized_txt_6/avg_nr_coords_line_tokenized_txt_output_6, avg_nr_allo_line_tokenized_txt_6/avg_nr_allo_line_tokenized_txt_output_6, avg_nr_ego_line_tokenized_txt_6/avg_nr_ego_line_tokenized_txt_output_6])
-line_tokenized_txt_R_6 = np.array([avg_r_coords_line_tokenized_txt_6/avg_r_coords_line_tokenized_txt_output_6, avg_r_allo_line_tokenized_txt_6/avg_r_allo_line_tokenized_txt_output_6, avg_r_ego_line_tokenized_txt_6/avg_r_ego_line_tokenized_txt_output_6])
-
-line_tokenized_txt_NR_15 = np.array([avg_nr_coords_line_tokenized_txt_15/avg_nr_coords_line_tokenized_txt_output_15, avg_nr_allo_line_tokenized_txt_15/avg_nr_allo_line_tokenized_txt_output_15, avg_nr_ego_line_tokenized_txt_15/avg_nr_ego_line_tokenized_txt_output_15])
-line_tokenized_txt_R_15 = np.array([avg_r_coords_line_tokenized_txt_15/avg_r_coords_line_tokenized_txt_output_15, avg_r_allo_line_tokenized_txt_15/avg_r_allo_line_tokenized_txt_output_15, avg_r_ego_line_tokenized_txt_15/avg_r_ego_line_tokenized_txt_output_15])
-
-occupancy_tokenized_txt_NR_3 = np.array([avg_nr_coords_occupancy_tokenized_txt_3/avg_nr_coords_occupancy_tokenized_txt_output_3, avg_nr_allo_occupancy_tokenized_txt_3/avg_nr_allo_occupancy_tokenized_txt_output_3, avg_nr_ego_occupancy_tokenized_txt_3/avg_nr_ego_occupancy_tokenized_txt_output_3])
-occupancy_tokenized_txt_R_3 = np.array([avg_r_coords_occupancy_tokenized_txt_3/avg_r_coords_occupancy_tokenized_txt_output_3, avg_r_allo_occupancy_tokenized_txt_3/avg_r_allo_occupancy_tokenized_txt_output_3, avg_r_ego_occupancy_tokenized_txt_3/avg_r_ego_occupancy_tokenized_txt_output_3])
-
-occupancy_tokenized_txt_NR_6 = np.array([avg_nr_coords_occupancy_tokenized_txt_6/avg_nr_coords_occupancy_tokenized_txt_output_6, avg_nr_allo_occupancy_tokenized_txt_6/avg_nr_allo_occupancy_tokenized_txt_output_6, avg_nr_ego_occupancy_tokenized_txt_6/avg_nr_ego_occupancy_tokenized_txt_output_6])
-occupancy_tokenized_txt_R_6 = np.array([avg_r_coords_occupancy_tokenized_txt_6/avg_r_coords_occupancy_tokenized_txt_output_6, avg_r_allo_occupancy_tokenized_txt_6/avg_r_allo_occupancy_tokenized_txt_output_6, avg_r_ego_occupancy_tokenized_txt_6/avg_r_ego_occupancy_tokenized_txt_output_6])
-
-occupancy_tokenized_txt_NR_15 = np.array([avg_nr_coords_occupancy_tokenized_txt_15/avg_nr_coords_occupancy_tokenized_txt_output_15, avg_nr_allo_occupancy_tokenized_txt_15/avg_nr_allo_occupancy_tokenized_txt_output_15, avg_nr_ego_occupancy_tokenized_txt_15/avg_nr_ego_occupancy_tokenized_txt_output_15])
-occupancy_tokenized_txt_R_15 = np.array([avg_r_coords_occupancy_tokenized_txt_15/avg_r_coords_occupancy_tokenized_txt_output_15, avg_r_allo_occupancy_tokenized_txt_15/avg_r_allo_occupancy_tokenized_txt_output_15, avg_r_ego_occupancy_tokenized_txt_15/avg_r_ego_occupancy_tokenized_txt_output_15])
-
-# adj json
-line_adj_json_NR_3 = np.array([avg_nr_coords_line_adj_json_3/avg_nr_coords_line_adj_json_output_3, avg_nr_allo_line_adj_json_3/avg_nr_allo_line_adj_json_output_3, avg_nr_ego_line_adj_json_3/avg_nr_ego_line_adj_json_output_3])
-line_adj_json_R_3 = np.array([avg_r_coords_line_adj_json_3/avg_r_coords_line_adj_json_output_3, avg_r_allo_line_adj_json_3/avg_r_allo_line_adj_json_output_3, avg_r_ego_line_adj_json_3/avg_r_ego_line_adj_json_output_3])
-
-line_adj_json_NR_6 = np.array([avg_nr_coords_line_adj_json_6/avg_nr_coords_line_adj_json_output_6, avg_nr_allo_line_adj_json_6/avg_nr_allo_line_adj_json_output_6, avg_nr_ego_line_adj_json_6/avg_nr_ego_line_adj_json_output_6])
-line_adj_json_R_6 = np.array([avg_r_coords_line_adj_json_6/avg_r_coords_line_adj_json_output_6, avg_r_allo_line_adj_json_6/avg_r_allo_line_adj_json_output_6, avg_r_ego_line_adj_json_6/avg_r_ego_line_adj_json_output_6])
-
-line_adj_json_NR_15 = np.array([avg_nr_coords_line_adj_json_15/avg_nr_coords_line_adj_json_output_15, avg_nr_allo_line_adj_json_15/avg_nr_allo_line_adj_json_output_15, avg_nr_ego_line_adj_json_15/avg_nr_ego_line_adj_json_output_15])
-line_adj_json_R_15 = np.array([avg_r_coords_line_adj_json_15/avg_r_coords_line_adj_json_output_15, avg_r_allo_line_adj_json_15/avg_r_allo_line_adj_json_output_15, avg_r_ego_line_adj_json_15/avg_r_ego_line_adj_json_output_15])
-
-occupancy_adj_json_NR_3 = np.array([avg_nr_coords_occupancy_adj_json_3/avg_nr_coords_occupancy_adj_json_output_3, avg_nr_allo_occupancy_adj_json_3/avg_nr_allo_occupancy_adj_json_output_3, avg_nr_ego_occupancy_adj_json_3/avg_nr_ego_occupancy_adj_json_output_3])
-occupancy_adj_json_R_3 = np.array([avg_r_coords_occupancy_adj_json_3/avg_r_coords_occupancy_adj_json_output_3, avg_r_allo_occupancy_adj_json_3/avg_r_allo_occupancy_adj_json_output_3, avg_r_ego_occupancy_adj_json_3/avg_r_ego_occupancy_adj_json_output_3])
-
-occupancy_adj_json_NR_6 = np.array([avg_nr_coords_occupancy_adj_json_6/avg_nr_coords_occupancy_adj_json_output_6, avg_nr_allo_occupancy_adj_json_6/avg_nr_allo_occupancy_adj_json_output_6, avg_nr_ego_occupancy_adj_json_6/avg_nr_ego_occupancy_adj_json_output_6])
-occupancy_adj_json_R_6 = np.array([avg_r_coords_occupancy_adj_json_6/avg_r_coords_occupancy_adj_json_output_6, avg_r_allo_occupancy_adj_json_6/avg_r_allo_occupancy_adj_json_output_6, avg_r_ego_occupancy_adj_json_6/avg_r_ego_occupancy_adj_json_output_6])
-
-occupancy_adj_json_NR_15 = np.array([avg_nr_coords_occupancy_adj_json_15/avg_nr_coords_occupancy_adj_json_output_15, avg_nr_allo_occupancy_adj_json_15/avg_nr_allo_occupancy_adj_json_output_15, avg_nr_ego_occupancy_adj_json_15/avg_nr_ego_occupancy_adj_json_output_15])
-occupancy_adj_json_R_15 = np.array([avg_r_coords_occupancy_adj_json_15/avg_r_coords_occupancy_adj_json_output_15, avg_r_allo_occupancy_adj_json_15/avg_r_allo_occupancy_adj_json_output_15, avg_r_ego_occupancy_adj_json_15/avg_r_ego_occupancy_adj_json_output_15])
+# occupancy_jpg_NR_15 = np.array([avg_nr_coords_occupancy_jpg_15/avg_nr_coords_occupancy_jpg_output_15, avg_nr_allo_occupancy_jpg_15/avg_nr_allo_occupancy_jpg_output_15, avg_nr_ego_occupancy_jpg_15/avg_nr_ego_occupancy_jpg_output_15])
+# occupancy_jpg_R_15 = np.array([avg_r_coords_occupancy_jpg_15/avg_r_coords_occupancy_jpg_output_15, avg_r_allo_occupancy_jpg_15/avg_r_allo_occupancy_jpg_output_15, avg_r_ego_occupancy_jpg_15/avg_r_ego_occupancy_jpg_output_15])
 
 
-# ajd txt
-line_adj_txt_NR_3 = np.array([avg_nr_coords_line_adj_txt_3/avg_nr_coords_line_adj_txt_output_3, avg_nr_allo_line_adj_txt_3/avg_nr_allo_line_adj_txt_output_3, avg_nr_ego_line_adj_txt_3/avg_nr_ego_line_adj_txt_output_3])
-line_adj_txt_R_3 = np.array([avg_r_coords_line_adj_txt_3/avg_r_coords_line_adj_txt_output_3, avg_r_allo_line_adj_txt_3/avg_r_allo_line_adj_txt_output_3, avg_r_ego_line_adj_txt_3/avg_r_ego_line_adj_txt_output_3])
+# # json
+# line_json_NR_3 = np.array([avg_nr_coords_line_json_3/avg_nr_coords_line_json_output_3, avg_nr_allo_line_json_3/avg_nr_allo_line_json_output_3, avg_nr_ego_line_json_3/avg_nr_ego_line_json_output_3])
+# line_json_R_3 = np.array([avg_r_coords_line_json_3/avg_r_coords_line_json_output_3, avg_r_allo_line_json_3/avg_r_allo_line_json_output_3, avg_r_ego_line_json_3/avg_r_ego_line_json_output_3])
 
-line_adj_txt_NR_6 = np.array([avg_nr_coords_line_adj_txt_6/avg_nr_coords_line_adj_txt_output_6, avg_nr_allo_line_adj_txt_6/avg_nr_allo_line_adj_txt_output_6, avg_nr_ego_line_adj_txt_6/avg_nr_ego_line_adj_txt_output_6])
-line_adj_txt_R_6 = np.array([avg_r_coords_line_adj_txt_6/avg_r_coords_line_adj_txt_output_6, avg_r_allo_line_adj_txt_6/avg_r_allo_line_adj_txt_output_6, avg_r_ego_line_adj_txt_6/avg_r_ego_line_adj_txt_output_6])
+# line_json_NR_6 = np.array([avg_nr_coords_line_json_6/avg_nr_coords_line_json_output_6, avg_nr_allo_line_json_6/avg_nr_allo_line_json_output_6, avg_nr_ego_line_json_6/avg_nr_ego_line_json_output_6])
+# line_json_R_6 = np.array([avg_r_coords_line_json_6/avg_r_coords_line_json_output_6, avg_r_allo_line_json_6/avg_r_allo_line_json_output_6, avg_r_ego_line_json_6/avg_r_ego_line_json_output_6])
 
-line_adj_txt_NR_15 = np.array([avg_nr_coords_line_adj_txt_15/avg_nr_coords_line_adj_txt_output_15, avg_nr_allo_line_adj_txt_15/avg_nr_allo_line_adj_txt_output_15, avg_nr_ego_line_adj_txt_15/avg_nr_ego_line_adj_txt_output_15])
-line_adj_txt_R_15 = np.array([avg_r_coords_line_adj_txt_15/avg_r_coords_line_adj_txt_output_15, avg_r_allo_line_adj_txt_15/avg_r_allo_line_adj_txt_output_15, avg_r_ego_line_adj_txt_15/avg_r_ego_line_adj_txt_output_15])
+# line_json_NR_15 = np.array([avg_nr_coords_line_json_15/avg_nr_coords_line_json_output_15, avg_nr_allo_line_json_15/avg_nr_allo_line_json_output_15, avg_nr_ego_line_json_15/avg_nr_ego_line_json_output_15])
+# line_json_R_15 = np.array([avg_r_coords_line_json_15/avg_r_coords_line_json_output_15, avg_r_allo_line_json_15/avg_r_allo_line_json_output_15, avg_r_ego_line_json_15/avg_r_ego_line_json_output_15])
 
-occupancy_adj_txt_NR_3 = np.array([avg_nr_coords_occupancy_adj_txt_3/avg_nr_coords_occupancy_adj_txt_output_3, avg_nr_allo_occupancy_adj_txt_3/avg_nr_allo_occupancy_adj_txt_output_3, avg_nr_ego_occupancy_adj_txt_3/avg_nr_ego_occupancy_adj_txt_output_3])
-occupancy_adj_txt_R_3 = np.array([avg_r_coords_occupancy_adj_txt_3/avg_r_coords_occupancy_adj_txt_output_3, avg_r_allo_occupancy_adj_txt_3/avg_r_allo_occupancy_adj_txt_output_3, avg_r_ego_occupancy_adj_txt_3/avg_r_ego_occupancy_adj_txt_output_3])
+# occupancy_json_NR_3 = np.array([avg_nr_coords_occupancy_json_3/avg_nr_coords_occupancy_json_output_3, avg_nr_allo_occupancy_json_3/avg_nr_allo_occupancy_json_output_3, avg_nr_ego_occupancy_json_3/avg_nr_ego_occupancy_json_output_3])
+# occupancy_json_R_3 = np.array([avg_r_coords_occupancy_json_3/avg_r_coords_occupancy_json_output_3, avg_r_allo_occupancy_json_3/avg_r_allo_occupancy_json_output_3, avg_r_ego_occupancy_json_3/avg_r_ego_occupancy_json_output_3])
 
-occupancy_adj_txt_NR_6 = np.array([avg_nr_coords_occupancy_adj_txt_6/avg_nr_coords_occupancy_adj_txt_output_6, avg_nr_allo_occupancy_adj_txt_6/avg_nr_allo_occupancy_adj_txt_output_6, avg_nr_ego_occupancy_adj_txt_6/avg_nr_ego_occupancy_adj_txt_output_6])
-occupancy_adj_txt_R_6 = np.array([avg_r_coords_occupancy_adj_txt_6/avg_r_coords_occupancy_adj_txt_output_6, avg_r_allo_occupancy_adj_txt_6/avg_r_allo_occupancy_adj_txt_output_6, avg_r_ego_occupancy_adj_txt_6/avg_r_ego_occupancy_adj_txt_output_6])
+# occupancy_json_NR_6 = np.array([avg_nr_coords_occupancy_json_6/avg_nr_coords_occupancy_json_output_6, avg_nr_allo_occupancy_json_6/avg_nr_allo_occupancy_json_output_6, avg_nr_ego_occupancy_json_6/avg_nr_ego_occupancy_json_output_6])
+# occupancy_json_R_6 = np.array([avg_r_coords_occupancy_json_6/avg_r_coords_occupancy_json_output_6, avg_r_allo_occupancy_json_6/avg_r_allo_occupancy_json_output_6, avg_r_ego_occupancy_json_6/avg_r_ego_occupancy_json_output_6])
 
-occupancy_adj_txt_NR_15 = np.array([avg_nr_coords_occupancy_adj_txt_15/avg_nr_coords_occupancy_adj_txt_output_15, avg_nr_allo_occupancy_adj_txt_15/avg_nr_allo_occupancy_adj_txt_output_15, avg_nr_ego_occupancy_adj_txt_15/avg_nr_ego_occupancy_adj_txt_output_15])
-occupancy_adj_txt_R_15 = np.array([avg_r_coords_occupancy_adj_txt_15/avg_r_coords_occupancy_adj_txt_output_15, avg_r_allo_occupancy_adj_txt_15/avg_r_allo_occupancy_adj_txt_output_15, avg_r_ego_occupancy_adj_txt_15/avg_r_ego_occupancy_adj_txt_output_15])
+# occupancy_json_NR_15 = np.array([avg_nr_coords_occupancy_json_15/avg_nr_coords_occupancy_json_output_15, avg_nr_allo_occupancy_json_15/avg_nr_allo_occupancy_json_output_15, avg_nr_ego_occupancy_json_15/avg_nr_ego_occupancy_json_output_15])
+# occupancy_json_R_15 = np.array([avg_r_coords_occupancy_json_15/avg_r_coords_occupancy_json_output_15, avg_r_allo_occupancy_json_15/avg_r_allo_occupancy_json_output_15, avg_r_ego_occupancy_json_15/avg_r_ego_occupancy_json_output_15])
 
-# Ascii
-occupancy_ascii_txt_NR_3 = np.array([avg_nr_coords_occupancy_ascii_txt_3/avg_nr_coords_occupancy_ascii_txt_output_3, avg_nr_allo_occupancy_ascii_txt_3/avg_nr_allo_occupancy_ascii_txt_output_3, avg_nr_ego_occupancy_ascii_txt_3/avg_nr_ego_occupancy_ascii_txt_output_3])
-occupancy_ascii_txt_R_3 = np.array([avg_r_coords_occupancy_ascii_txt_3/avg_r_coords_occupancy_ascii_txt_output_3, avg_r_allo_occupancy_ascii_txt_3/avg_r_allo_occupancy_ascii_txt_output_3, avg_r_ego_occupancy_ascii_txt_3/avg_r_ego_occupancy_ascii_txt_output_3])
+# # Tokenized
+# line_tokenized_txt_NR_3 = np.array([avg_nr_coords_line_tokenized_txt_3/avg_nr_coords_line_tokenized_txt_output_3, avg_nr_allo_line_tokenized_txt_3/avg_nr_allo_line_tokenized_txt_output_3, avg_nr_ego_line_tokenized_txt_3/avg_nr_ego_line_tokenized_txt_output_3])
+# line_tokenized_txt_R_3 = np.array([avg_r_coords_line_tokenized_txt_3/avg_r_coords_line_tokenized_txt_output_3, avg_r_allo_line_tokenized_txt_3/avg_r_allo_line_tokenized_txt_output_3, avg_r_ego_line_tokenized_txt_3/avg_r_ego_line_tokenized_txt_output_3])
 
-occupancy_ascii_txt_NR_6 = np.array([avg_nr_coords_occupancy_ascii_txt_6/avg_nr_coords_occupancy_ascii_txt_output_6, avg_nr_allo_occupancy_ascii_txt_6/avg_nr_allo_occupancy_ascii_txt_output_6, avg_nr_ego_occupancy_ascii_txt_6/avg_nr_ego_occupancy_ascii_txt_output_6])
-occupancy_ascii_txt_R_6 = np.array([avg_r_coords_occupancy_ascii_txt_6/avg_r_coords_occupancy_ascii_txt_output_6, avg_r_allo_occupancy_ascii_txt_6/avg_r_allo_occupancy_ascii_txt_output_6, avg_r_ego_occupancy_ascii_txt_6/avg_r_ego_occupancy_ascii_txt_output_6])
+# line_tokenized_txt_NR_6 = np.array([avg_nr_coords_line_tokenized_txt_6/avg_nr_coords_line_tokenized_txt_output_6, avg_nr_allo_line_tokenized_txt_6/avg_nr_allo_line_tokenized_txt_output_6, avg_nr_ego_line_tokenized_txt_6/avg_nr_ego_line_tokenized_txt_output_6])
+# line_tokenized_txt_R_6 = np.array([avg_r_coords_line_tokenized_txt_6/avg_r_coords_line_tokenized_txt_output_6, avg_r_allo_line_tokenized_txt_6/avg_r_allo_line_tokenized_txt_output_6, avg_r_ego_line_tokenized_txt_6/avg_r_ego_line_tokenized_txt_output_6])
 
-occupancy_ascii_txt_NR_15 = np.array([avg_nr_coords_occupancy_ascii_txt_15/avg_nr_coords_occupancy_ascii_txt_output_15, avg_nr_allo_occupancy_ascii_txt_15/avg_nr_allo_occupancy_ascii_txt_output_15, avg_nr_ego_occupancy_ascii_txt_15/avg_nr_ego_occupancy_ascii_txt_output_15])
-occupancy_ascii_txt_R_15 = np.array([avg_r_coords_occupancy_ascii_txt_15/avg_r_coords_occupancy_ascii_txt_output_15, avg_r_allo_occupancy_ascii_txt_15/avg_r_allo_occupancy_ascii_txt_output_15, avg_r_ego_occupancy_ascii_txt_15/avg_r_ego_occupancy_ascii_txt_output_15])
+# line_tokenized_txt_NR_15 = np.array([avg_nr_coords_line_tokenized_txt_15/avg_nr_coords_line_tokenized_txt_output_15, avg_nr_allo_line_tokenized_txt_15/avg_nr_allo_line_tokenized_txt_output_15, avg_nr_ego_line_tokenized_txt_15/avg_nr_ego_line_tokenized_txt_output_15])
+# line_tokenized_txt_R_15 = np.array([avg_r_coords_line_tokenized_txt_15/avg_r_coords_line_tokenized_txt_output_15, avg_r_allo_line_tokenized_txt_15/avg_r_allo_line_tokenized_txt_output_15, avg_r_ego_line_tokenized_txt_15/avg_r_ego_line_tokenized_txt_output_15])
 
+# occupancy_tokenized_txt_NR_3 = np.array([avg_nr_coords_occupancy_tokenized_txt_3/avg_nr_coords_occupancy_tokenized_txt_output_3, avg_nr_allo_occupancy_tokenized_txt_3/avg_nr_allo_occupancy_tokenized_txt_output_3, avg_nr_ego_occupancy_tokenized_txt_3/avg_nr_ego_occupancy_tokenized_txt_output_3])
+# occupancy_tokenized_txt_R_3 = np.array([avg_r_coords_occupancy_tokenized_txt_3/avg_r_coords_occupancy_tokenized_txt_output_3, avg_r_allo_occupancy_tokenized_txt_3/avg_r_allo_occupancy_tokenized_txt_output_3, avg_r_ego_occupancy_tokenized_txt_3/avg_r_ego_occupancy_tokenized_txt_output_3])
 
+# occupancy_tokenized_txt_NR_6 = np.array([avg_nr_coords_occupancy_tokenized_txt_6/avg_nr_coords_occupancy_tokenized_txt_output_6, avg_nr_allo_occupancy_tokenized_txt_6/avg_nr_allo_occupancy_tokenized_txt_output_6, avg_nr_ego_occupancy_tokenized_txt_6/avg_nr_ego_occupancy_tokenized_txt_output_6])
+# occupancy_tokenized_txt_R_6 = np.array([avg_r_coords_occupancy_tokenized_txt_6/avg_r_coords_occupancy_tokenized_txt_output_6, avg_r_allo_occupancy_tokenized_txt_6/avg_r_allo_occupancy_tokenized_txt_output_6, avg_r_ego_occupancy_tokenized_txt_6/avg_r_ego_occupancy_tokenized_txt_output_6])
 
-jitter_strength = 0.1
-jitter = np.random.uniform(-jitter_strength, jitter_strength, size=10)
-# Create figure with 2 vertical subplots
-fig, (ax1, ax2) = plt.subplots(
-    nrows=2, ncols=1, figsize=(10, 10), sharex=True
-)
+# occupancy_tokenized_txt_NR_15 = np.array([avg_nr_coords_occupancy_tokenized_txt_15/avg_nr_coords_occupancy_tokenized_txt_output_15, avg_nr_allo_occupancy_tokenized_txt_15/avg_nr_allo_occupancy_tokenized_txt_output_15, avg_nr_ego_occupancy_tokenized_txt_15/avg_nr_ego_occupancy_tokenized_txt_output_15])
+# occupancy_tokenized_txt_R_15 = np.array([avg_r_coords_occupancy_tokenized_txt_15/avg_r_coords_occupancy_tokenized_txt_output_15, avg_r_allo_occupancy_tokenized_txt_15/avg_r_allo_occupancy_tokenized_txt_output_15, avg_r_ego_occupancy_tokenized_txt_15/avg_r_ego_occupancy_tokenized_txt_output_15])
 
+# # adj json
+# line_adj_json_NR_3 = np.array([avg_nr_coords_line_adj_json_3/avg_nr_coords_line_adj_json_output_3, avg_nr_allo_line_adj_json_3/avg_nr_allo_line_adj_json_output_3, avg_nr_ego_line_adj_json_3/avg_nr_ego_line_adj_json_output_3])
+# line_adj_json_R_3 = np.array([avg_r_coords_line_adj_json_3/avg_r_coords_line_adj_json_output_3, avg_r_allo_line_adj_json_3/avg_r_allo_line_adj_json_output_3, avg_r_ego_line_adj_json_3/avg_r_ego_line_adj_json_output_3])
 
-# Top Plot 
-ax1.plot(x_vals+jitter[0], line_jpg_NR_15,  marker='o', color = 'lightcoral', linestyle = 'none', label='JPG, Gemini 2.5 Flash-Lite')
-ax1.plot(x_vals+jitter[1], line_jpg_R_15,   marker='o', color = 'indianred', linestyle = 'none', label='JPG, Gemini 2.5 Pro')
-ax1.plot(x_vals+jitter[2], line_json_NR_15,  marker='o', color = 'deepskyblue',linestyle = 'none', label='JSON Gemini 2.5 Flash-Lite')
-ax1.plot(x_vals+jitter[3], line_json_R_15,   marker='o', color = 'steelblue', linestyle = 'none', label='JSON Gemini 2.5 Pro')
-ax1.plot(x_vals+jitter[4], line_adj_json_NR_15,  marker='o', color = 'orange', linestyle = 'none', label='Adjacency JSON, Gemini 2.5 Flash-Lite')
-ax1.plot(x_vals+jitter[5], line_adj_json_R_15,   marker='o', color = 'darkorange', linestyle = 'none', label='Adjacency JSON, Gemini 2.5 Pro')
-ax1.plot(x_vals+jitter[6], line_adj_txt_NR_15,  marker='o', color = 'limegreen',linestyle = 'none', label='Adjacency Text, Gemini 2.5 Flash-Lite')
-ax1.plot(x_vals+jitter[7], line_adj_txt_R_15,   marker='o', color = 'forestgreen', linestyle = 'none', label='Adjacency Text, Gemini 2.5 Pro')
-ax1.plot(x_vals+jitter[8], line_tokenized_txt_NR_15,  marker='o', color = 'violet', linestyle = 'none', label='Tokenized, Gemini 2.5 Flash-Lite')
-ax1.plot(x_vals+jitter[9], line_tokenized_txt_R_15,   marker='o', color = 'darkviolet', linestyle = 'none', label='Tokenized, Gemini 2.5 Pro')
+# line_adj_json_NR_6 = np.array([avg_nr_coords_line_adj_json_6/avg_nr_coords_line_adj_json_output_6, avg_nr_allo_line_adj_json_6/avg_nr_allo_line_adj_json_output_6, avg_nr_ego_line_adj_json_6/avg_nr_ego_line_adj_json_output_6])
+# line_adj_json_R_6 = np.array([avg_r_coords_line_adj_json_6/avg_r_coords_line_adj_json_output_6, avg_r_allo_line_adj_json_6/avg_r_allo_line_adj_json_output_6, avg_r_ego_line_adj_json_6/avg_r_ego_line_adj_json_output_6])
 
-ax1.set_ylabel("Average Accuracy /\n Average Output Tokens [%/tokens]")
-ax1.set_title("Contribution of Each Output Token To One Percent Point of Accuracy for Each Output Type\n 15x15 Line Maze")
-ax1.set_xticks(x_vals)
-ax1.set_xticklabels(x_labels)
-ax1.grid(axis='y', linestyle='--', alpha=0.9)
-# ax1.legend(loc='best')
+# line_adj_json_NR_15 = np.array([avg_nr_coords_line_adj_json_15/avg_nr_coords_line_adj_json_output_15, avg_nr_allo_line_adj_json_15/avg_nr_allo_line_adj_json_output_15, avg_nr_ego_line_adj_json_15/avg_nr_ego_line_adj_json_output_15])
+# line_adj_json_R_15 = np.array([avg_r_coords_line_adj_json_15/avg_r_coords_line_adj_json_output_15, avg_r_allo_line_adj_json_15/avg_r_allo_line_adj_json_output_15, avg_r_ego_line_adj_json_15/avg_r_ego_line_adj_json_output_15])
 
-bottom_lines = []
-bottom_labels = []
+# occupancy_adj_json_NR_3 = np.array([avg_nr_coords_occupancy_adj_json_3/avg_nr_coords_occupancy_adj_json_output_3, avg_nr_allo_occupancy_adj_json_3/avg_nr_allo_occupancy_adj_json_output_3, avg_nr_ego_occupancy_adj_json_3/avg_nr_ego_occupancy_adj_json_output_3])
+# occupancy_adj_json_R_3 = np.array([avg_r_coords_occupancy_adj_json_3/avg_r_coords_occupancy_adj_json_output_3, avg_r_allo_occupancy_adj_json_3/avg_r_allo_occupancy_adj_json_output_3, avg_r_ego_occupancy_adj_json_3/avg_r_ego_occupancy_adj_json_output_3])
 
-def add_line(axis, x, y, color, label):
-    h = axis.plot(x, y, marker='o', color=color, linestyle='none', label=label)[0]
-    bottom_lines.append(h)
-    bottom_labels.append(label)
+# occupancy_adj_json_NR_6 = np.array([avg_nr_coords_occupancy_adj_json_6/avg_nr_coords_occupancy_adj_json_output_6, avg_nr_allo_occupancy_adj_json_6/avg_nr_allo_occupancy_adj_json_output_6, avg_nr_ego_occupancy_adj_json_6/avg_nr_ego_occupancy_adj_json_output_6])
+# occupancy_adj_json_R_6 = np.array([avg_r_coords_occupancy_adj_json_6/avg_r_coords_occupancy_adj_json_output_6, avg_r_allo_occupancy_adj_json_6/avg_r_allo_occupancy_adj_json_output_6, avg_r_ego_occupancy_adj_json_6/avg_r_ego_occupancy_adj_json_output_6])
+
+# occupancy_adj_json_NR_15 = np.array([avg_nr_coords_occupancy_adj_json_15/avg_nr_coords_occupancy_adj_json_output_15, avg_nr_allo_occupancy_adj_json_15/avg_nr_allo_occupancy_adj_json_output_15, avg_nr_ego_occupancy_adj_json_15/avg_nr_ego_occupancy_adj_json_output_15])
+# occupancy_adj_json_R_15 = np.array([avg_r_coords_occupancy_adj_json_15/avg_r_coords_occupancy_adj_json_output_15, avg_r_allo_occupancy_adj_json_15/avg_r_allo_occupancy_adj_json_output_15, avg_r_ego_occupancy_adj_json_15/avg_r_ego_occupancy_adj_json_output_15])
 
 
-# Bottom Plot
-ax2.plot(x_vals+jitter[0], occupancy_jpg_NR_15,  marker='o', color = 'lightcoral', linestyle = 'none', label='JPG, Gemini 2.5 Flash-Lite')
-ax2.plot(x_vals+jitter[1], occupancy_jpg_R_15,   marker='o', color = 'indianred', linestyle = 'none', label='JPG, Gemini 2.5 Pro')
-ax2.plot(x_vals+jitter[2], occupancy_json_NR_15,  marker='o', color = 'deepskyblue',linestyle = 'none', label='JSON Gemini 2.5 Flash-Lite')
-ax2.plot(x_vals+jitter[3], occupancy_json_R_15,   marker='o', color = 'steelblue', linestyle = 'none', label='JSON Gemini 2.5 Pro')
-ax2.plot(x_vals+jitter[4], occupancy_adj_json_NR_15,  marker='o', color = 'orange', linestyle = 'none', label='Adjacency JSON, Gemini 2.5 Flash-Lite')
-ax2.plot(x_vals+jitter[5], occupancy_adj_json_R_15,   marker='o', color = 'darkorange', linestyle = 'none', label='Adjacency JSON, Gemini 2.5 Pro')
-ax2.plot(x_vals+jitter[6], occupancy_adj_txt_NR_15,  marker='o', color = 'limegreen',linestyle = 'none', label='Adjacency Text, Gemini 2.5 Flash-Lite')
-ax2.plot(x_vals+jitter[7], occupancy_adj_txt_R_15,   marker='o', color = 'forestgreen', linestyle = 'none', label='Adjacency Text, Gemini 2.5 Pro')
-ax2.plot(x_vals+jitter[8], occupancy_tokenized_txt_NR_15,  marker='o', color = 'violet', linestyle = 'none', label='Tokenized, Gemini 2.5 Flash-Lite')
-ax2.plot(x_vals+jitter[9], occupancy_tokenized_txt_R_15,   marker='o', color = 'darkviolet', linestyle = 'none', label='Tokenized, Gemini 2.5 Pro')
-ax2.plot(x_vals+jitter[8], occupancy_ascii_txt_NR_15,  marker='o', color = 'darkgrey', linestyle = 'none', label='ASCII, Gemini 2.5 Flash-Lite')
-ax2.plot(x_vals+jitter[9], occupancy_ascii_txt_R_15,   marker='o', color = 'dimgrey', linestyle = 'none', label='ASCII, Gemini 2.5 Pro')
+# # ajd txt
+# line_adj_txt_NR_3 = np.array([avg_nr_coords_line_adj_txt_3/avg_nr_coords_line_adj_txt_output_3, avg_nr_allo_line_adj_txt_3/avg_nr_allo_line_adj_txt_output_3, avg_nr_ego_line_adj_txt_3/avg_nr_ego_line_adj_txt_output_3])
+# line_adj_txt_R_3 = np.array([avg_r_coords_line_adj_txt_3/avg_r_coords_line_adj_txt_output_3, avg_r_allo_line_adj_txt_3/avg_r_allo_line_adj_txt_output_3, avg_r_ego_line_adj_txt_3/avg_r_ego_line_adj_txt_output_3])
 
-add_line(ax2, x_vals+jitter[0], occupancy_jpg_NR_15, 'lightcoral', 'JPG, Gemini 2.5 Flash-Lite')
-add_line(ax2, x_vals+jitter[1], occupancy_jpg_R_15, 'indianred', 'JPG, Gemini 2.5 Pro')
-add_line(ax2, x_vals+jitter[2], occupancy_json_NR_15, 'deepskyblue', 'JSON Gemini 2.5 Flash-Lite')
-add_line(ax2, x_vals+jitter[3], occupancy_json_R_15, 'steelblue', 'JSON Gemini 2.5 Pro')
-add_line(ax2, x_vals+jitter[4], occupancy_adj_json_NR_15, 'orange', 'Adjacency JSON, Gemini 2.5 Flash-Lite')
-add_line(ax2, x_vals+jitter[5], occupancy_adj_json_R_15, 'darkorange', 'Adjacency JSON, Gemini 2.5 Pro')
-add_line(ax2, x_vals+jitter[6], occupancy_adj_txt_NR_15, 'limegreen', 'Adjacency Text, Gemini 2.5 Flash-Lite')
-add_line(ax2, x_vals+jitter[7], occupancy_adj_txt_R_15, 'forestgreen', 'Adjacency Text, Gemini 2.5 Pro')
-add_line(ax2, x_vals+jitter[8], occupancy_tokenized_txt_NR_15, 'violet', 'Tokenized, Gemini 2.5 Flash-Lite')
-add_line(ax2, x_vals+jitter[9], occupancy_tokenized_txt_R_15, 'darkviolet', 'Tokenized, Gemini 2.5 Pro')
-add_line(ax2, x_vals+jitter[8], occupancy_ascii_txt_NR_15, 'darkgrey', 'ASCII, Gemini 2.5 Flash-Lite')
-add_line(ax2, x_vals+jitter[9], occupancy_ascii_txt_R_15, 'dimgrey', 'ASCII, Gemini 2.5 Pro')
+# line_adj_txt_NR_6 = np.array([avg_nr_coords_line_adj_txt_6/avg_nr_coords_line_adj_txt_output_6, avg_nr_allo_line_adj_txt_6/avg_nr_allo_line_adj_txt_output_6, avg_nr_ego_line_adj_txt_6/avg_nr_ego_line_adj_txt_output_6])
+# line_adj_txt_R_6 = np.array([avg_r_coords_line_adj_txt_6/avg_r_coords_line_adj_txt_output_6, avg_r_allo_line_adj_txt_6/avg_r_allo_line_adj_txt_output_6, avg_r_ego_line_adj_txt_6/avg_r_ego_line_adj_txt_output_6])
+
+# line_adj_txt_NR_15 = np.array([avg_nr_coords_line_adj_txt_15/avg_nr_coords_line_adj_txt_output_15, avg_nr_allo_line_adj_txt_15/avg_nr_allo_line_adj_txt_output_15, avg_nr_ego_line_adj_txt_15/avg_nr_ego_line_adj_txt_output_15])
+# line_adj_txt_R_15 = np.array([avg_r_coords_line_adj_txt_15/avg_r_coords_line_adj_txt_output_15, avg_r_allo_line_adj_txt_15/avg_r_allo_line_adj_txt_output_15, avg_r_ego_line_adj_txt_15/avg_r_ego_line_adj_txt_output_15])
+
+# occupancy_adj_txt_NR_3 = np.array([avg_nr_coords_occupancy_adj_txt_3/avg_nr_coords_occupancy_adj_txt_output_3, avg_nr_allo_occupancy_adj_txt_3/avg_nr_allo_occupancy_adj_txt_output_3, avg_nr_ego_occupancy_adj_txt_3/avg_nr_ego_occupancy_adj_txt_output_3])
+# occupancy_adj_txt_R_3 = np.array([avg_r_coords_occupancy_adj_txt_3/avg_r_coords_occupancy_adj_txt_output_3, avg_r_allo_occupancy_adj_txt_3/avg_r_allo_occupancy_adj_txt_output_3, avg_r_ego_occupancy_adj_txt_3/avg_r_ego_occupancy_adj_txt_output_3])
+
+# occupancy_adj_txt_NR_6 = np.array([avg_nr_coords_occupancy_adj_txt_6/avg_nr_coords_occupancy_adj_txt_output_6, avg_nr_allo_occupancy_adj_txt_6/avg_nr_allo_occupancy_adj_txt_output_6, avg_nr_ego_occupancy_adj_txt_6/avg_nr_ego_occupancy_adj_txt_output_6])
+# occupancy_adj_txt_R_6 = np.array([avg_r_coords_occupancy_adj_txt_6/avg_r_coords_occupancy_adj_txt_output_6, avg_r_allo_occupancy_adj_txt_6/avg_r_allo_occupancy_adj_txt_output_6, avg_r_ego_occupancy_adj_txt_6/avg_r_ego_occupancy_adj_txt_output_6])
+
+# occupancy_adj_txt_NR_15 = np.array([avg_nr_coords_occupancy_adj_txt_15/avg_nr_coords_occupancy_adj_txt_output_15, avg_nr_allo_occupancy_adj_txt_15/avg_nr_allo_occupancy_adj_txt_output_15, avg_nr_ego_occupancy_adj_txt_15/avg_nr_ego_occupancy_adj_txt_output_15])
+# occupancy_adj_txt_R_15 = np.array([avg_r_coords_occupancy_adj_txt_15/avg_r_coords_occupancy_adj_txt_output_15, avg_r_allo_occupancy_adj_txt_15/avg_r_allo_occupancy_adj_txt_output_15, avg_r_ego_occupancy_adj_txt_15/avg_r_ego_occupancy_adj_txt_output_15])
+
+# # Ascii
+# occupancy_ascii_txt_NR_3 = np.array([avg_nr_coords_occupancy_ascii_txt_3/avg_nr_coords_occupancy_ascii_txt_output_3, avg_nr_allo_occupancy_ascii_txt_3/avg_nr_allo_occupancy_ascii_txt_output_3, avg_nr_ego_occupancy_ascii_txt_3/avg_nr_ego_occupancy_ascii_txt_output_3])
+# occupancy_ascii_txt_R_3 = np.array([avg_r_coords_occupancy_ascii_txt_3/avg_r_coords_occupancy_ascii_txt_output_3, avg_r_allo_occupancy_ascii_txt_3/avg_r_allo_occupancy_ascii_txt_output_3, avg_r_ego_occupancy_ascii_txt_3/avg_r_ego_occupancy_ascii_txt_output_3])
+
+# occupancy_ascii_txt_NR_6 = np.array([avg_nr_coords_occupancy_ascii_txt_6/avg_nr_coords_occupancy_ascii_txt_output_6, avg_nr_allo_occupancy_ascii_txt_6/avg_nr_allo_occupancy_ascii_txt_output_6, avg_nr_ego_occupancy_ascii_txt_6/avg_nr_ego_occupancy_ascii_txt_output_6])
+# occupancy_ascii_txt_R_6 = np.array([avg_r_coords_occupancy_ascii_txt_6/avg_r_coords_occupancy_ascii_txt_output_6, avg_r_allo_occupancy_ascii_txt_6/avg_r_allo_occupancy_ascii_txt_output_6, avg_r_ego_occupancy_ascii_txt_6/avg_r_ego_occupancy_ascii_txt_output_6])
+
+# occupancy_ascii_txt_NR_15 = np.array([avg_nr_coords_occupancy_ascii_txt_15/avg_nr_coords_occupancy_ascii_txt_output_15, avg_nr_allo_occupancy_ascii_txt_15/avg_nr_allo_occupancy_ascii_txt_output_15, avg_nr_ego_occupancy_ascii_txt_15/avg_nr_ego_occupancy_ascii_txt_output_15])
+# occupancy_ascii_txt_R_15 = np.array([avg_r_coords_occupancy_ascii_txt_15/avg_r_coords_occupancy_ascii_txt_output_15, avg_r_allo_occupancy_ascii_txt_15/avg_r_allo_occupancy_ascii_txt_output_15, avg_r_ego_occupancy_ascii_txt_15/avg_r_ego_occupancy_ascii_txt_output_15])
 
 
 
-ax2.set_ylabel("Average Accuracy /\n Average Output Tokens [%/tokens]")
-ax2.set_title("Contribution of Each Output Token To One Percent Point of Accuracy for Each Output Type \n 31x31 Occupancy Maze")
-ax2.set_xticks(x_vals)
-ax2.set_xticklabels(x_labels)
-ax2.grid(axis='y', linestyle='--', alpha=0.9)
-# ax2.legend(loc='best')
+# jitter_strength = 0.1
+# jitter = np.random.uniform(-jitter_strength, jitter_strength, size=10)
+# # Create figure with 2 vertical subplots
+# fig, (ax1, ax2) = plt.subplots(
+#     nrows=2, ncols=1, figsize=(10, 10), sharex=True
+# )
 
-fig.legend(
-    handles=bottom_lines,
-    labels=bottom_labels,
-    loc='lower right',
-    bbox_to_anchor=(0.98, 0.02),   # adjust for nice spacing
-)
 
-plt.tight_layout()
-plt.show()
+# # Top Plot 
+# ax1.plot(x_vals+jitter[0], line_jpg_NR_6,  marker='o', color = 'lightcoral', linestyle = 'none', label='JPG, Gemini 2.5 Flash-Lite')
+# ax1.plot(x_vals+jitter[1], line_jpg_R_6,   marker='o', color = 'indianred', linestyle = 'none', label='JPG, Gemini 2.5 Pro')
+# ax1.plot(x_vals+jitter[2], line_json_NR_6,  marker='o', color = 'deepskyblue',linestyle = 'none', label='JSON Gemini 2.5 Flash-Lite')
+# ax1.plot(x_vals+jitter[3], line_json_R_6,   marker='o', color = 'steelblue', linestyle = 'none', label='JSON Gemini 2.5 Pro')
+# ax1.plot(x_vals+jitter[4], line_adj_json_NR_6,  marker='o', color = 'orange', linestyle = 'none', label='Adjacency JSON, Gemini 2.5 Flash-Lite')
+# ax1.plot(x_vals+jitter[5], line_adj_json_R_6,   marker='o', color = 'darkorange', linestyle = 'none', label='Adjacency JSON, Gemini 2.5 Pro')
+# ax1.plot(x_vals+jitter[6], line_adj_txt_NR_6,  marker='o', color = 'limegreen',linestyle = 'none', label='Adjacency Text, Gemini 2.5 Flash-Lite')
+# ax1.plot(x_vals+jitter[7], line_adj_txt_R_6,   marker='o', color = 'forestgreen', linestyle = 'none', label='Adjacency Text, Gemini 2.5 Pro')
+# ax1.plot(x_vals+jitter[8], line_tokenized_txt_NR_6,  marker='o', color = 'violet', linestyle = 'none', label='Tokenized, Gemini 2.5 Flash-Lite')
+# ax1.plot(x_vals+jitter[9], line_tokenized_txt_R_6,   marker='o', color = 'darkviolet', linestyle = 'none', label='Tokenized, Gemini 2.5 Pro')
+
+# ax1.set_ylabel("Average Accuracy /\n Average Output Tokens [%/tokens]")
+# ax1.set_title("Contribution of Each Output Token To One Percent Point of Accuracy for Each Output Type\n 6x6 Line Maze")
+# ax1.set_xticks(x_vals)
+# ax1.set_xticklabels(x_labels)
+# ax1.grid(axis='y', linestyle='--', alpha=0.9)
+# # ax1.legend(loc='best')
+
+# bottom_lines = []
+# bottom_labels = []
+
+# def add_line(axis, x, y, color, label):
+#     h = axis.plot(x, y, marker='o', color=color, linestyle='none', label=label)[0]
+#     bottom_lines.append(h)
+#     bottom_labels.append(label)
+
+
+# # Bottom Plot
+# ax2.plot(x_vals+jitter[0], occupancy_jpg_NR_6,  marker='o', color = 'lightcoral', linestyle = 'none', label='JPG, Gemini 2.5 Flash-Lite')
+# ax2.plot(x_vals+jitter[1], occupancy_jpg_R_6,   marker='o', color = 'indianred', linestyle = 'none', label='JPG, Gemini 2.5 Pro')
+# ax2.plot(x_vals+jitter[2], occupancy_json_NR_6,  marker='o', color = 'deepskyblue',linestyle = 'none', label='JSON Gemini 2.5 Flash-Lite')
+# ax2.plot(x_vals+jitter[3], occupancy_json_R_6,   marker='o', color = 'steelblue', linestyle = 'none', label='JSON Gemini 2.5 Pro')
+# ax2.plot(x_vals+jitter[4], occupancy_adj_json_NR_6,  marker='o', color = 'orange', linestyle = 'none', label='Adjacency JSON, Gemini 2.5 Flash-Lite')
+# ax2.plot(x_vals+jitter[5], occupancy_adj_json_R_6,   marker='o', color = 'darkorange', linestyle = 'none', label='Adjacency JSON, Gemini 2.5 Pro')
+# ax2.plot(x_vals+jitter[6], occupancy_adj_txt_NR_6,  marker='o', color = 'limegreen',linestyle = 'none', label='Adjacency Text, Gemini 2.5 Flash-Lite')
+# ax2.plot(x_vals+jitter[7], occupancy_adj_txt_R_6,   marker='o', color = 'forestgreen', linestyle = 'none', label='Adjacency Text, Gemini 2.5 Pro')
+# ax2.plot(x_vals+jitter[8], occupancy_tokenized_txt_NR_6,  marker='o', color = 'violet', linestyle = 'none', label='Tokenized, Gemini 2.5 Flash-Lite')
+# ax2.plot(x_vals+jitter[9], occupancy_tokenized_txt_R_6,   marker='o', color = 'darkviolet', linestyle = 'none', label='Tokenized, Gemini 2.5 Pro')
+# ax2.plot(x_vals+jitter[8], occupancy_ascii_txt_NR_6,  marker='o', color = 'darkgrey', linestyle = 'none', label='ASCII, Gemini 2.5 Flash-Lite')
+# ax2.plot(x_vals+jitter[9], occupancy_ascii_txt_R_6,   marker='o', color = 'dimgrey', linestyle = 'none', label='ASCII, Gemini 2.5 Pro')
+
+# add_line(ax2, x_vals+jitter[0], occupancy_jpg_NR_6, 'lightcoral', 'JPG, Gemini 2.5 Flash-Lite')
+# add_line(ax2, x_vals+jitter[1], occupancy_jpg_R_6, 'indianred', 'JPG, Gemini 2.5 Pro')
+# add_line(ax2, x_vals+jitter[2], occupancy_json_NR_6, 'deepskyblue', 'JSON Gemini 2.5 Flash-Lite')
+# add_line(ax2, x_vals+jitter[3], occupancy_json_R_6, 'steelblue', 'JSON Gemini 2.5 Pro')
+# add_line(ax2, x_vals+jitter[4], occupancy_adj_json_NR_6, 'orange', 'Adjacency JSON, Gemini 2.5 Flash-Lite')
+# add_line(ax2, x_vals+jitter[5], occupancy_adj_json_R_6, 'darkorange', 'Adjacency JSON, Gemini 2.5 Pro')
+# add_line(ax2, x_vals+jitter[6], occupancy_adj_txt_NR_6, 'limegreen', 'Adjacency Text, Gemini 2.5 Flash-Lite')
+# add_line(ax2, x_vals+jitter[7], occupancy_adj_txt_R_6, 'forestgreen', 'Adjacency Text, Gemini 2.5 Pro')
+# add_line(ax2, x_vals+jitter[8], occupancy_tokenized_txt_NR_6, 'violet', 'Tokenized, Gemini 2.5 Flash-Lite')
+# add_line(ax2, x_vals+jitter[9], occupancy_tokenized_txt_R_6, 'darkviolet', 'Tokenized, Gemini 2.5 Pro')
+# add_line(ax2, x_vals+jitter[8], occupancy_ascii_txt_NR_6, 'darkgrey', 'ASCII, Gemini 2.5 Flash-Lite')
+# add_line(ax2, x_vals+jitter[9], occupancy_ascii_txt_R_6, 'dimgrey', 'ASCII, Gemini 2.5 Pro')
+
+
+
+# ax2.set_ylabel("Average Accuracy /\n Average Output Tokens [%/tokens]")
+# ax2.set_xlabel("Output Type")
+# ax2.set_title("Contribution of Each Output Token To One Percent Point of Accuracy for Each Output Type \n 13x13 Occupancy Maze")
+# ax2.set_xticks(x_vals)
+# ax2.set_xticklabels(x_labels)
+# ax2.grid(axis='y', linestyle='--', alpha=0.9)
+# # ax2.legend(loc='best')
+
+# fig.legend(
+#     handles=bottom_lines,
+#     labels=bottom_labels,
+#     loc='lower right',
+#     bbox_to_anchor=(0.98, 0.02),   # adjust for nice spacing
+# )
+
+# plt.tight_layout()
+# plt.show()
 
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# Creating accvs. output type charts for each representation
+# Creating acc vs. output type charts for each representation
 
 
-# # Line maze accuracy (Pro & Flash-Lite)
-# #jpg
-# acc_line_jpg_nr_3 = np.array([avg_nr_coords_line_jpg_3, avg_nr_allo_line_jpg_3, avg_nr_ego_line_jpg_3])
-# acc_line_jpg_r_3 = np.array([avg_r_coords_line_jpg_3, avg_r_allo_line_jpg_3, avg_r_ego_line_jpg_3])
+# Line maze accuracy (Pro & Flash-Lite)
+#jpg
+acc_line_jpg_nr_3 = np.array([avg_nr_coords_line_jpg_3, avg_nr_allo_line_jpg_3, avg_nr_ego_line_jpg_3])
+acc_line_jpg_r_3 = np.array([avg_r_coords_line_jpg_3, avg_r_allo_line_jpg_3, avg_r_ego_line_jpg_3])
 
-# acc_line_jpg_nr_6 = np.array([avg_nr_coords_line_jpg_6, avg_nr_allo_line_jpg_6, avg_nr_ego_line_jpg_6])
-# acc_line_jpg_r_6 = np.array([avg_r_coords_line_jpg_6, avg_r_allo_line_jpg_6, avg_r_ego_line_jpg_6])
+acc_line_jpg_nr_6 = np.array([avg_nr_coords_line_jpg_6, avg_nr_allo_line_jpg_6, avg_nr_ego_line_jpg_6])
+acc_line_jpg_r_6 = np.array([avg_r_coords_line_jpg_6, avg_r_allo_line_jpg_6, avg_r_ego_line_jpg_6])
 
-# acc_line_jpg_nr_15 = np.array([avg_nr_coords_line_jpg_15, avg_nr_allo_line_jpg_15, avg_nr_ego_line_jpg_15])
-# acc_line_jpg_r_15 = np.array([avg_r_coords_line_jpg_15, avg_r_allo_line_jpg_15, avg_r_ego_line_jpg_15])
+acc_line_jpg_nr_15 = np.array([avg_nr_coords_line_jpg_15, avg_nr_allo_line_jpg_15, avg_nr_ego_line_jpg_15])
+acc_line_jpg_r_15 = np.array([avg_r_coords_line_jpg_15, avg_r_allo_line_jpg_15, avg_r_ego_line_jpg_15])
 
-# #json
-# acc_line_json_nr_3 = np.array([avg_nr_coords_line_json_3, avg_nr_allo_line_json_3, avg_nr_ego_line_json_3])
-# acc_line_json_r_3 = np.array([avg_r_coords_line_json_3, avg_r_allo_line_json_3, avg_r_ego_line_json_3])
+#json
+acc_line_json_nr_3 = np.array([avg_nr_coords_line_json_3, avg_nr_allo_line_json_3, avg_nr_ego_line_json_3])
+acc_line_json_r_3 = np.array([avg_r_coords_line_json_3, avg_r_allo_line_json_3, avg_r_ego_line_json_3])
 
-# acc_line_json_nr_6 = np.array([avg_nr_coords_line_json_6, avg_nr_allo_line_json_6, avg_nr_ego_line_json_6])
-# acc_line_json_r_6 = np.array([avg_r_coords_line_json_6, avg_r_allo_line_json_6, avg_r_ego_line_json_6])
+acc_line_json_nr_6 = np.array([avg_nr_coords_line_json_6, avg_nr_allo_line_json_6, avg_nr_ego_line_json_6])
+acc_line_json_r_6 = np.array([avg_r_coords_line_json_6, avg_r_allo_line_json_6, avg_r_ego_line_json_6])
 
-# acc_line_json_nr_15 = np.array([avg_nr_coords_line_json_15, avg_nr_allo_line_json_15, avg_nr_ego_line_json_15])
-# acc_line_json_r_15 = np.array([avg_r_coords_line_json_15, avg_r_allo_line_json_15, avg_r_ego_line_json_15])
+acc_line_json_nr_15 = np.array([avg_nr_coords_line_json_15, avg_nr_allo_line_json_15, avg_nr_ego_line_json_15])
+acc_line_json_r_15 = np.array([avg_r_coords_line_json_15, avg_r_allo_line_json_15, avg_r_ego_line_json_15])
 
-# #tokenized
-# acc_line_tokenized_txt_nr_3 = np.array([avg_nr_coords_line_tokenized_txt_3, avg_nr_allo_line_tokenized_txt_3, avg_nr_ego_line_tokenized_txt_3])
-# acc_line_tokenized_txt_r_3 = np.array([avg_r_coords_line_tokenized_txt_3, avg_r_allo_line_tokenized_txt_3, avg_r_ego_line_tokenized_txt_3])
+#tokenized
+acc_line_tokenized_txt_nr_3 = np.array([avg_nr_coords_line_tokenized_txt_3, avg_nr_allo_line_tokenized_txt_3, avg_nr_ego_line_tokenized_txt_3])
+acc_line_tokenized_txt_r_3 = np.array([avg_r_coords_line_tokenized_txt_3, avg_r_allo_line_tokenized_txt_3, avg_r_ego_line_tokenized_txt_3])
 
-# acc_line_tokenized_txt_nr_6 = np.array([avg_nr_coords_line_tokenized_txt_6, avg_nr_allo_line_tokenized_txt_6, avg_nr_ego_line_tokenized_txt_6])
-# acc_line_tokenized_txt_r_6 = np.array([avg_r_coords_line_tokenized_txt_6, avg_r_allo_line_tokenized_txt_6, avg_r_ego_line_tokenized_txt_6])
+acc_line_tokenized_txt_nr_6 = np.array([avg_nr_coords_line_tokenized_txt_6, avg_nr_allo_line_tokenized_txt_6, avg_nr_ego_line_tokenized_txt_6])
+acc_line_tokenized_txt_r_6 = np.array([avg_r_coords_line_tokenized_txt_6, avg_r_allo_line_tokenized_txt_6, avg_r_ego_line_tokenized_txt_6])
 
-# acc_line_tokenized_txt_nr_15 = np.array([avg_nr_coords_line_tokenized_txt_15, avg_nr_allo_line_tokenized_txt_15, avg_nr_ego_line_tokenized_txt_15])
-# acc_line_tokenized_txt_r_15 = np.array([avg_r_coords_line_tokenized_txt_15, avg_r_allo_line_tokenized_txt_15, avg_r_ego_line_tokenized_txt_15])
-
-
-# #adj json
-# acc_line_adj_json_nr_3 = np.array([avg_nr_coords_line_adj_json_3, avg_nr_allo_line_adj_json_3, avg_nr_ego_line_adj_json_3])
-# acc_line_adj_json_r_3 = np.array([avg_r_coords_line_adj_json_3, avg_r_allo_line_adj_json_3, avg_r_ego_line_adj_json_3])
-
-# acc_line_adj_json_nr_6 = np.array([avg_nr_coords_line_adj_json_6, avg_nr_allo_line_adj_json_6, avg_nr_ego_line_adj_json_6])
-# acc_line_adj_json_r_6 = np.array([avg_r_coords_line_adj_json_6, avg_r_allo_line_adj_json_6, avg_r_ego_line_adj_json_6])
-
-# acc_line_adj_json_nr_15 = np.array([avg_nr_coords_line_adj_json_15, avg_nr_allo_line_adj_json_15, avg_nr_ego_line_adj_json_15])
-# acc_line_adj_json_r_15 = np.array([avg_r_coords_line_adj_json_15, avg_r_allo_line_adj_json_15, avg_r_ego_line_adj_json_15])
-
-# #adj txt
-# acc_line_adj_txt_nr_3 = np.array([avg_nr_coords_line_adj_txt_3, avg_nr_allo_line_adj_txt_3, avg_nr_ego_line_adj_txt_3])
-# acc_line_adj_txt_r_3 = np.array([avg_r_coords_line_adj_txt_3, avg_r_allo_line_adj_txt_3, avg_r_ego_line_adj_txt_3])
-
-# acc_line_adj_txt_nr_6 = np.array([avg_nr_coords_line_adj_txt_6, avg_nr_allo_line_adj_txt_6, avg_nr_ego_line_adj_txt_6])
-# acc_line_adj_txt_r_6 = np.array([avg_r_coords_line_adj_txt_6, avg_r_allo_line_adj_txt_6, avg_r_ego_line_adj_txt_6])
-
-# acc_line_adj_txt_nr_15 = np.array([avg_nr_coords_line_adj_txt_15, avg_nr_allo_line_adj_txt_15, avg_nr_ego_line_adj_txt_15])
-# acc_line_adj_txt_r_15 = np.array([avg_r_coords_line_adj_txt_15, avg_r_allo_line_adj_txt_15, avg_r_ego_line_adj_txt_15])
+acc_line_tokenized_txt_nr_15 = np.array([avg_nr_coords_line_tokenized_txt_15, avg_nr_allo_line_tokenized_txt_15, avg_nr_ego_line_tokenized_txt_15])
+acc_line_tokenized_txt_r_15 = np.array([avg_r_coords_line_tokenized_txt_15, avg_r_allo_line_tokenized_txt_15, avg_r_ego_line_tokenized_txt_15])
 
 
-# # Occupancy maze accuracy (Pro & Flash-Lite)
-# #jpg
-# acc_occupancy_jpg_nr_3 = np.array([avg_nr_coords_occupancy_jpg_3, avg_nr_allo_occupancy_jpg_3, avg_nr_ego_occupancy_jpg_3])
-# acc_occupancy_jpg_r_3 = np.array([avg_r_coords_occupancy_jpg_3, avg_r_allo_occupancy_jpg_3, avg_r_ego_occupancy_jpg_3])
+#adj json
+acc_line_adj_json_nr_3 = np.array([avg_nr_coords_line_adj_json_3, avg_nr_allo_line_adj_json_3, avg_nr_ego_line_adj_json_3])
+acc_line_adj_json_r_3 = np.array([avg_r_coords_line_adj_json_3, avg_r_allo_line_adj_json_3, avg_r_ego_line_adj_json_3])
 
-# acc_occupancy_jpg_nr_6 = np.array([avg_nr_coords_occupancy_jpg_6, avg_nr_allo_occupancy_jpg_6, avg_nr_ego_occupancy_jpg_6])
-# acc_occupancy_jpg_r_6 = np.array([avg_r_coords_occupancy_jpg_6, avg_r_allo_occupancy_jpg_6, avg_r_ego_occupancy_jpg_6])
+acc_line_adj_json_nr_6 = np.array([avg_nr_coords_line_adj_json_6, avg_nr_allo_line_adj_json_6, avg_nr_ego_line_adj_json_6])
+acc_line_adj_json_r_6 = np.array([avg_r_coords_line_adj_json_6, avg_r_allo_line_adj_json_6, avg_r_ego_line_adj_json_6])
 
-# acc_occupancy_jpg_nr_15 = np.array([avg_nr_coords_occupancy_jpg_15, avg_nr_allo_occupancy_jpg_15, avg_nr_ego_occupancy_jpg_15])
-# acc_occupancy_jpg_r_15 = np.array([avg_r_coords_occupancy_jpg_15, avg_r_allo_occupancy_jpg_15, avg_r_ego_occupancy_jpg_15])
+acc_line_adj_json_nr_15 = np.array([avg_nr_coords_line_adj_json_15, avg_nr_allo_line_adj_json_15, avg_nr_ego_line_adj_json_15])
+acc_line_adj_json_r_15 = np.array([avg_r_coords_line_adj_json_15, avg_r_allo_line_adj_json_15, avg_r_ego_line_adj_json_15])
 
-# #json
-# acc_occupancy_json_nr_3 = np.array([avg_nr_coords_occupancy_json_3, avg_nr_allo_occupancy_json_3, avg_nr_ego_occupancy_json_3])
-# acc_occupancy_json_r_3 = np.array([avg_r_coords_occupancy_json_3, avg_r_allo_occupancy_json_3, avg_r_ego_occupancy_json_3])
+#adj txt
+acc_line_adj_txt_nr_3 = np.array([avg_nr_coords_line_adj_txt_3, avg_nr_allo_line_adj_txt_3, avg_nr_ego_line_adj_txt_3])
+acc_line_adj_txt_r_3 = np.array([avg_r_coords_line_adj_txt_3, avg_r_allo_line_adj_txt_3, avg_r_ego_line_adj_txt_3])
 
-# acc_occupancy_json_nr_6 = np.array([avg_nr_coords_occupancy_json_6, avg_nr_allo_occupancy_json_6, avg_nr_ego_occupancy_json_6])
-# acc_occupancy_json_r_6 = np.array([avg_r_coords_occupancy_json_6, avg_r_allo_occupancy_json_6, avg_r_ego_occupancy_json_6])
+acc_line_adj_txt_nr_6 = np.array([avg_nr_coords_line_adj_txt_6, avg_nr_allo_line_adj_txt_6, avg_nr_ego_line_adj_txt_6])
+acc_line_adj_txt_r_6 = np.array([avg_r_coords_line_adj_txt_6, avg_r_allo_line_adj_txt_6, avg_r_ego_line_adj_txt_6])
 
-# acc_occupancy_json_nr_15 = np.array([avg_nr_coords_occupancy_json_15, avg_nr_allo_occupancy_json_15, avg_nr_ego_occupancy_json_15])
-# acc_occupancy_json_r_15 = np.array([avg_r_coords_occupancy_json_15, avg_r_allo_occupancy_json_15, avg_r_ego_occupancy_json_15])
-
-# #tokenized
-# acc_occupancy_tokenized_txt_nr_3 = np.array([avg_nr_coords_occupancy_tokenized_txt_3, avg_nr_allo_occupancy_tokenized_txt_3, avg_nr_ego_occupancy_tokenized_txt_3])
-# acc_occupancy_tokenized_txt_r_3 = np.array([avg_r_coords_occupancy_tokenized_txt_3, avg_r_allo_occupancy_tokenized_txt_3, avg_r_ego_occupancy_tokenized_txt_3])
-
-# acc_occupancy_tokenized_txt_nr_6 = np.array([avg_nr_coords_occupancy_tokenized_txt_6, avg_nr_allo_occupancy_tokenized_txt_6, avg_nr_ego_occupancy_tokenized_txt_6])
-# acc_occupancy_tokenized_txt_r_6 = np.array([avg_r_coords_occupancy_tokenized_txt_6, avg_r_allo_occupancy_tokenized_txt_6, avg_r_ego_occupancy_tokenized_txt_6])
-
-# acc_occupancy_tokenized_txt_nr_15 = np.array([avg_nr_coords_occupancy_tokenized_txt_15, avg_nr_allo_occupancy_tokenized_txt_15, avg_nr_ego_occupancy_tokenized_txt_15])
-# acc_occupancy_tokenized_txt_r_15 = np.array([avg_r_coords_occupancy_tokenized_txt_15, avg_r_allo_occupancy_tokenized_txt_15, avg_r_ego_occupancy_tokenized_txt_15])
-
-# #adj json
-# acc_occupancy_adj_json_nr_3 = np.array([avg_nr_coords_occupancy_adj_json_3, avg_nr_allo_occupancy_adj_json_3, avg_nr_ego_occupancy_adj_json_3])
-# acc_occupancy_adj_json_r_3 = np.array([avg_r_coords_occupancy_adj_json_3, avg_r_allo_occupancy_adj_json_3, avg_r_ego_occupancy_adj_json_3])
-
-# acc_occupancy_adj_json_nr_6 = np.array([avg_nr_coords_occupancy_adj_json_6, avg_nr_allo_occupancy_adj_json_6, avg_nr_ego_occupancy_adj_json_6])
-# acc_occupancy_adj_json_r_6 = np.array([avg_r_coords_occupancy_adj_json_6, avg_r_allo_occupancy_adj_json_6, avg_r_ego_occupancy_adj_json_6])
-
-# acc_occupancy_adj_json_nr_15 = np.array([avg_nr_coords_occupancy_adj_json_15, avg_nr_allo_occupancy_adj_json_15, avg_nr_ego_occupancy_adj_json_15])
-# acc_occupancy_adj_json_r_15 = np.array([avg_r_coords_occupancy_adj_json_15, avg_r_allo_occupancy_adj_json_15, avg_r_ego_occupancy_adj_json_15])
-
-# #adj txt
-# acc_occupancy_adj_txt_nr_3 = np.array([avg_nr_coords_occupancy_adj_txt_3, avg_nr_allo_occupancy_adj_txt_3, avg_nr_ego_occupancy_adj_txt_3])
-# acc_occupancy_adj_txt_r_3 = np.array([avg_r_coords_occupancy_adj_txt_3, avg_r_allo_occupancy_adj_txt_3, avg_r_ego_occupancy_adj_txt_3])
-
-# acc_occupancy_adj_txt_nr_6 = np.array([avg_nr_coords_occupancy_adj_txt_6, avg_nr_allo_occupancy_adj_txt_6, avg_nr_ego_occupancy_adj_txt_6])
-# acc_occupancy_adj_txt_r_6 = np.array([avg_r_coords_occupancy_adj_txt_6, avg_r_allo_occupancy_adj_txt_6, avg_r_ego_occupancy_adj_txt_6])
-
-# acc_occupancy_adj_txt_nr_15 = np.array([avg_nr_coords_occupancy_adj_txt_15, avg_nr_allo_occupancy_adj_txt_15, avg_nr_ego_occupancy_adj_txt_15])
-# acc_occupancy_adj_txt_r_15 = np.array([avg_r_coords_occupancy_adj_txt_15, avg_r_allo_occupancy_adj_txt_15, avg_r_ego_occupancy_adj_txt_15])
-
-# #ascii
-# acc_occupancy_ascii_txt_nr_3 = np.array([avg_nr_coords_occupancy_ascii_txt_3, avg_nr_allo_occupancy_ascii_txt_3, avg_nr_ego_occupancy_ascii_txt_3])
-# acc_occupancy_ascii_txt_r_3 = np.array([avg_r_coords_occupancy_ascii_txt_3, avg_r_allo_occupancy_ascii_txt_3, avg_r_ego_occupancy_ascii_txt_3])
-
-# acc_occupancy_ascii_txt_nr_6 = np.array([avg_nr_coords_occupancy_ascii_txt_6, avg_nr_allo_occupancy_ascii_txt_6, avg_nr_ego_occupancy_ascii_txt_6])
-# acc_occupancy_ascii_txt_r_6 = np.array([avg_r_coords_occupancy_ascii_txt_6, avg_r_allo_occupancy_ascii_txt_6, avg_r_ego_occupancy_ascii_txt_6])
-
-# acc_occupancy_ascii_txt_nr_15 = np.array([avg_nr_coords_occupancy_ascii_txt_15, avg_nr_allo_occupancy_ascii_txt_15, avg_nr_ego_occupancy_ascii_txt_15])
-# acc_occupancy_ascii_txt_r_15 = np.array([avg_r_coords_occupancy_ascii_txt_15, avg_r_allo_occupancy_ascii_txt_15, avg_r_ego_occupancy_ascii_txt_15])
-
-# # --------------------------------------------------------
+acc_line_adj_txt_nr_15 = np.array([avg_nr_coords_line_adj_txt_15, avg_nr_allo_line_adj_txt_15, avg_nr_ego_line_adj_txt_15])
+acc_line_adj_txt_r_15 = np.array([avg_r_coords_line_adj_txt_15, avg_r_allo_line_adj_txt_15, avg_r_ego_line_adj_txt_15])
 
 
-# jitter_strength = 0.01
-# jitter = np.random.uniform(-jitter_strength, jitter_strength, size=6)
-# # Create figure with 2 vertical subplots
+# Occupancy maze accuracy (Pro & Flash-Lite)
+#jpg
+acc_occupancy_jpg_nr_3 = np.array([avg_nr_coords_occupancy_jpg_3, avg_nr_allo_occupancy_jpg_3, avg_nr_ego_occupancy_jpg_3])
+acc_occupancy_jpg_r_3 = np.array([avg_r_coords_occupancy_jpg_3, avg_r_allo_occupancy_jpg_3, avg_r_ego_occupancy_jpg_3])
+
+acc_occupancy_jpg_nr_6 = np.array([avg_nr_coords_occupancy_jpg_6, avg_nr_allo_occupancy_jpg_6, avg_nr_ego_occupancy_jpg_6])
+acc_occupancy_jpg_r_6 = np.array([avg_r_coords_occupancy_jpg_6, avg_r_allo_occupancy_jpg_6, avg_r_ego_occupancy_jpg_6])
+
+acc_occupancy_jpg_nr_15 = np.array([avg_nr_coords_occupancy_jpg_15, avg_nr_allo_occupancy_jpg_15, avg_nr_ego_occupancy_jpg_15])
+acc_occupancy_jpg_r_15 = np.array([avg_r_coords_occupancy_jpg_15, avg_r_allo_occupancy_jpg_15, avg_r_ego_occupancy_jpg_15])
+
+#json
+acc_occupancy_json_nr_3 = np.array([avg_nr_coords_occupancy_json_3, avg_nr_allo_occupancy_json_3, avg_nr_ego_occupancy_json_3])
+acc_occupancy_json_r_3 = np.array([avg_r_coords_occupancy_json_3, avg_r_allo_occupancy_json_3, avg_r_ego_occupancy_json_3])
+
+acc_occupancy_json_nr_6 = np.array([avg_nr_coords_occupancy_json_6, avg_nr_allo_occupancy_json_6, avg_nr_ego_occupancy_json_6])
+acc_occupancy_json_r_6 = np.array([avg_r_coords_occupancy_json_6, avg_r_allo_occupancy_json_6, avg_r_ego_occupancy_json_6])
+
+acc_occupancy_json_nr_15 = np.array([avg_nr_coords_occupancy_json_15, avg_nr_allo_occupancy_json_15, avg_nr_ego_occupancy_json_15])
+acc_occupancy_json_r_15 = np.array([avg_r_coords_occupancy_json_15, avg_r_allo_occupancy_json_15, avg_r_ego_occupancy_json_15])
+
+#tokenized
+acc_occupancy_tokenized_txt_nr_3 = np.array([avg_nr_coords_occupancy_tokenized_txt_3, avg_nr_allo_occupancy_tokenized_txt_3, avg_nr_ego_occupancy_tokenized_txt_3])
+acc_occupancy_tokenized_txt_r_3 = np.array([avg_r_coords_occupancy_tokenized_txt_3, avg_r_allo_occupancy_tokenized_txt_3, avg_r_ego_occupancy_tokenized_txt_3])
+
+acc_occupancy_tokenized_txt_nr_6 = np.array([avg_nr_coords_occupancy_tokenized_txt_6, avg_nr_allo_occupancy_tokenized_txt_6, avg_nr_ego_occupancy_tokenized_txt_6])
+acc_occupancy_tokenized_txt_r_6 = np.array([avg_r_coords_occupancy_tokenized_txt_6, avg_r_allo_occupancy_tokenized_txt_6, avg_r_ego_occupancy_tokenized_txt_6])
+
+acc_occupancy_tokenized_txt_nr_15 = np.array([avg_nr_coords_occupancy_tokenized_txt_15, avg_nr_allo_occupancy_tokenized_txt_15, avg_nr_ego_occupancy_tokenized_txt_15])
+acc_occupancy_tokenized_txt_r_15 = np.array([avg_r_coords_occupancy_tokenized_txt_15, avg_r_allo_occupancy_tokenized_txt_15, avg_r_ego_occupancy_tokenized_txt_15])
+
+#adj json
+acc_occupancy_adj_json_nr_3 = np.array([avg_nr_coords_occupancy_adj_json_3, avg_nr_allo_occupancy_adj_json_3, avg_nr_ego_occupancy_adj_json_3])
+acc_occupancy_adj_json_r_3 = np.array([avg_r_coords_occupancy_adj_json_3, avg_r_allo_occupancy_adj_json_3, avg_r_ego_occupancy_adj_json_3])
+
+acc_occupancy_adj_json_nr_6 = np.array([avg_nr_coords_occupancy_adj_json_6, avg_nr_allo_occupancy_adj_json_6, avg_nr_ego_occupancy_adj_json_6])
+acc_occupancy_adj_json_r_6 = np.array([avg_r_coords_occupancy_adj_json_6, avg_r_allo_occupancy_adj_json_6, avg_r_ego_occupancy_adj_json_6])
+
+acc_occupancy_adj_json_nr_15 = np.array([avg_nr_coords_occupancy_adj_json_15, avg_nr_allo_occupancy_adj_json_15, avg_nr_ego_occupancy_adj_json_15])
+acc_occupancy_adj_json_r_15 = np.array([avg_r_coords_occupancy_adj_json_15, avg_r_allo_occupancy_adj_json_15, avg_r_ego_occupancy_adj_json_15])
+
+#adj txt
+acc_occupancy_adj_txt_nr_3 = np.array([avg_nr_coords_occupancy_adj_txt_3, avg_nr_allo_occupancy_adj_txt_3, avg_nr_ego_occupancy_adj_txt_3])
+acc_occupancy_adj_txt_r_3 = np.array([avg_r_coords_occupancy_adj_txt_3, avg_r_allo_occupancy_adj_txt_3, avg_r_ego_occupancy_adj_txt_3])
+
+acc_occupancy_adj_txt_nr_6 = np.array([avg_nr_coords_occupancy_adj_txt_6, avg_nr_allo_occupancy_adj_txt_6, avg_nr_ego_occupancy_adj_txt_6])
+acc_occupancy_adj_txt_r_6 = np.array([avg_r_coords_occupancy_adj_txt_6, avg_r_allo_occupancy_adj_txt_6, avg_r_ego_occupancy_adj_txt_6])
+
+acc_occupancy_adj_txt_nr_15 = np.array([avg_nr_coords_occupancy_adj_txt_15, avg_nr_allo_occupancy_adj_txt_15, avg_nr_ego_occupancy_adj_txt_15])
+acc_occupancy_adj_txt_r_15 = np.array([avg_r_coords_occupancy_adj_txt_15, avg_r_allo_occupancy_adj_txt_15, avg_r_ego_occupancy_adj_txt_15])
+
+#ascii
+acc_occupancy_ascii_txt_nr_3 = np.array([avg_nr_coords_occupancy_ascii_txt_3, avg_nr_allo_occupancy_ascii_txt_3, avg_nr_ego_occupancy_ascii_txt_3])
+acc_occupancy_ascii_txt_r_3 = np.array([avg_r_coords_occupancy_ascii_txt_3, avg_r_allo_occupancy_ascii_txt_3, avg_r_ego_occupancy_ascii_txt_3])
+
+acc_occupancy_ascii_txt_nr_6 = np.array([avg_nr_coords_occupancy_ascii_txt_6, avg_nr_allo_occupancy_ascii_txt_6, avg_nr_ego_occupancy_ascii_txt_6])
+acc_occupancy_ascii_txt_r_6 = np.array([avg_r_coords_occupancy_ascii_txt_6, avg_r_allo_occupancy_ascii_txt_6, avg_r_ego_occupancy_ascii_txt_6])
+
+acc_occupancy_ascii_txt_nr_15 = np.array([avg_nr_coords_occupancy_ascii_txt_15, avg_nr_allo_occupancy_ascii_txt_15, avg_nr_ego_occupancy_ascii_txt_15])
+acc_occupancy_ascii_txt_r_15 = np.array([avg_r_coords_occupancy_ascii_txt_15, avg_r_allo_occupancy_ascii_txt_15, avg_r_ego_occupancy_ascii_txt_15])
+
+# --------------------------------------------------------
+
+
+jitter_strength = 0.01
+jitter = np.random.uniform(-jitter_strength, jitter_strength, size=6)
+# Create figure with 2 vertical subplots
 # fig, (ax1, ax2) = plt.subplots(
 #     nrows=2, ncols=1, figsize=(10, 10), sharex=True
 # )
@@ -1320,6 +1321,7 @@ plt.show()
 
 
 # ax2.set_ylabel("Average Accuracy [%]")
+# ax2.set_xlabel("Output Type")
 # ax2.set_title("Accuracy of JPG Occupancy Maze, All Complexities")
 # ax2.set_xticks(x_vals)
 # ax2.set_xticklabels(x_labels)
@@ -1341,6 +1343,7 @@ plt.show()
 # ax1.plot(x_vals+jitter[5], acc_line_json_r_15,  linestyle = 'dashed',marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 15x15")
 
 # ax1.set_ylabel("Average Accuracy [%]")
+# ax2.set_xlabel("Output Type")
 # ax1.set_title("Accuracy of JSON Line Maze, All Complexities")
 # ax1.set_xticks(x_vals)
 # ax1.set_xticklabels(x_labels)
@@ -1357,6 +1360,7 @@ plt.show()
 
 
 # ax2.set_ylabel("Average Accuracy [%]")
+# ax2.set_xlabel("Output Type")
 # ax2.set_title("Accuracy of JSON Occupancy Maze, All Complexities")
 # ax2.set_xticks(x_vals)
 # ax2.set_xticklabels(x_labels)
@@ -1395,90 +1399,98 @@ plt.show()
 
 
 # ax2.set_ylabel("Average Accuracy [%]")
+# ax2.set_xlabel("Output Type")
 # ax2.set_title("Accuracy of Tokenized Occupancy Maze, All Complexities")
 # ax2.set_xticks(x_vals)
 # ax2.set_xticklabels(x_labels)
 # ax2.grid(axis='y', linestyle='--', alpha=0.9)
 # ax2.legend(loc='best')
 
-# # ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-# # Create figure with 2 vertical subplots
-# fig, (ax1, ax2) = plt.subplots(
-#     nrows=2, ncols=1, figsize=(10, 10), sharex=True
-# )
+# Create figure with 2 vertical subplots
+fig, (ax1, ax2) = plt.subplots(
+    nrows=2, ncols=1, figsize=(10, 10), sharex=True
+)
 
-# # Top Plot
-# ax1.plot(x_vals+jitter[0], acc_line_adj_json_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 3x3")
-# ax1.plot(x_vals+jitter[1], acc_line_adj_json_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 3x3")
-# ax1.plot(x_vals+jitter[2], acc_line_adj_json_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 6x6")
-# ax1.plot(x_vals+jitter[3], acc_line_adj_json_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 6x6")
-# ax1.plot(x_vals+jitter[4], acc_line_adj_json_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 15x15")
-# ax1.plot(x_vals+jitter[5], acc_line_adj_json_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 15x15")
+# Top Plot
+ax1.plot(x_vals+jitter[0], acc_line_adj_json_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 3x3")
+ax1.plot(x_vals+jitter[1], acc_line_adj_json_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 3x3")
+ax1.plot(x_vals+jitter[2], acc_line_adj_json_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 6x6")
+ax1.plot(x_vals+jitter[3], acc_line_adj_json_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 6x6")
+ax1.plot(x_vals+jitter[4], acc_line_adj_json_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 15x15")
+ax1.plot(x_vals+jitter[5], acc_line_adj_json_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 15x15")
 
-# ax1.set_ylabel("Average Accuracy [%]")
-# ax1.set_title("Accuracy of Adjacency JSON Line Maze, All Complexities")
-# ax1.set_xticks(x_vals)
-# ax1.set_xticklabels(x_labels)
-# ax1.grid(axis='y', linestyle='--', alpha=0.9)
-# ax1.legend(loc='best')
+ax1.set_ylabel("Average Accuracy [%]")
+ax1.set_title("Accuracy of Adjacency JSON Line Maze, All Complexities")
+ax1.set_xticks(x_vals)
+ax1.set_xticklabels(x_labels)
+ax1.grid(axis='y', linestyle='--', alpha=0.9)
+ax1.legend(loc='best')
 
-# # Bottom Plot
-# ax2.plot(x_vals+jitter[0], acc_occupancy_adj_json_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 7x7")
-# ax2.plot(x_vals+jitter[1], acc_occupancy_adj_json_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 7x7")
-# ax2.plot(x_vals+jitter[2], acc_occupancy_adj_json_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 13x13")
-# ax2.plot(x_vals+jitter[3], acc_occupancy_adj_json_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 13x13")
-# ax2.plot(x_vals+jitter[4], acc_occupancy_adj_json_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 31x31")
-# ax2.plot(x_vals+jitter[5], acc_occupancy_adj_json_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 31x31")
-
-
-# ax2.set_ylabel("Average Accuracy [%]")
-# ax2.set_title("Accuracy of Adjacency JSON Occupancy Maze, All Complexities")
-# ax2.set_xticks(x_vals)
-# ax2.set_xticklabels(x_labels)
-# ax2.grid(axis='y', linestyle='--', alpha=0.9)
-# ax2.legend(loc='best')
-
-# # ---------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-# # Create figure with 2 vertical subplots
-# fig, (ax1, ax2) = plt.subplots(
-#     nrows=2, ncols=1, figsize=(10, 10), sharex=True
-# )
-
-# # Top Plot
-# ax1.plot(x_vals+jitter[0], acc_line_adj_txt_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 3x3")
-# ax1.plot(x_vals+jitter[1], acc_line_adj_txt_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 3x3")
-# ax1.plot(x_vals+jitter[2], acc_line_adj_txt_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 6x6")
-# ax1.plot(x_vals+jitter[3], acc_line_adj_txt_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 6x6")
-# ax1.plot(x_vals+jitter[4], acc_line_adj_txt_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 15x15")
-# ax1.plot(x_vals+jitter[5], acc_line_adj_txt_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 15x15")
-
-# ax1.set_ylabel("Average Accuracy [%]")
-# ax1.set_title("Accuracy of Adjacency Text Line Maze, All Complexities")
-# ax1.set_xticks(x_vals)
-# ax1.set_xticklabels(x_labels)
-# ax1.grid(axis='y', linestyle='--', alpha=0.9)
-# ax1.legend(loc='best')
-
-# # Bottom Plot
-# ax2.plot(x_vals+jitter[0], acc_occupancy_adj_txt_nr_3,    marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 7x7")
-# ax2.plot(x_vals+jitter[1], acc_occupancy_adj_txt_r_3,  linestyle = 'dashed',marker='o', color = 'indianred', label="Gemini 2.5 Pro, 7x7")
-# ax2.plot(x_vals+jitter[2], acc_occupancy_adj_txt_nr_6,  marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 13x13")
-# ax2.plot(x_vals+jitter[3], acc_occupancy_adj_txt_r_6,  linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 13x13")
-# ax2.plot(x_vals+jitter[4], acc_occupancy_adj_txt_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 31x31")
-# ax2.plot(x_vals+jitter[5], acc_occupancy_adj_txt_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 31x31")
+# Bottom Plot
+ax2.plot(x_vals+jitter[0], acc_occupancy_adj_json_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 7x7")
+ax2.plot(x_vals+jitter[1], acc_occupancy_adj_json_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 7x7")
+ax2.plot(x_vals+jitter[2], acc_occupancy_adj_json_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 13x13")
+ax2.plot(x_vals+jitter[3], acc_occupancy_adj_json_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 13x13")
+ax2.plot(x_vals+jitter[4], acc_occupancy_adj_json_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 31x31")
+ax2.plot(x_vals+jitter[5], acc_occupancy_adj_json_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 31x31")
 
 
-# ax2.set_ylabel("Average Accuracy [%]")
-# ax2.set_title("Average Accuracy of Adjacency Text Occupancy Maze, All Complexities")
-# ax2.set_xticks(x_vals)
-# ax2.set_xticklabels(x_labels)
-# ax2.grid(axis='y', linestyle='--', alpha=0.9)
-# ax2.legend(loc='best')
+ax2.set_ylabel("Average Accuracy [%]")
+ax2.set_xlabel("Output Type")
+ax2.set_title("Accuracy of Adjacency JSON Occupancy Maze, All Complexities")
+ax2.set_xticks(x_vals)
+ax2.set_xticklabels(x_labels)
+ax2.grid(axis='y', linestyle='--', alpha=0.9)
+ax2.legend(loc='best')
 
 
-# # ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Create figure with 2 vertical subplots
+fig, (ax1, ax2) = plt.subplots(
+    nrows=2, ncols=1, figsize=(10, 10), sharex=True
+)
+
+# Top Plot
+ax1.plot(x_vals+jitter[0], acc_line_adj_txt_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 3x3")
+ax1.plot(x_vals+jitter[1], acc_line_adj_txt_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 3x3")
+ax1.plot(x_vals+jitter[2], acc_line_adj_txt_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 6x6")
+ax1.plot(x_vals+jitter[3], acc_line_adj_txt_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 6x6")
+ax1.plot(x_vals+jitter[4], acc_line_adj_txt_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 15x15")
+ax1.plot(x_vals+jitter[5], acc_line_adj_txt_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 15x15")
+
+ax1.set_ylabel("Average Accuracy [%]")
+ax1.set_title("Accuracy of Adjacency Text Line Maze, All Complexities")
+ax1.set_xticks(x_vals)
+ax1.set_xticklabels(x_labels)
+ax1.grid(axis='y', linestyle='--', alpha=0.9)
+ax1.legend(loc='best')
+
+# Bottom Plot
+ax2.plot(x_vals+jitter[0], acc_occupancy_adj_txt_nr_3,    marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 7x7")
+ax2.plot(x_vals+jitter[1], acc_occupancy_adj_txt_r_3,  linestyle = 'dashed',marker='o', color = 'indianred', label="Gemini 2.5 Pro, 7x7")
+ax2.plot(x_vals+jitter[2], acc_occupancy_adj_txt_nr_6,  marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 13x13")
+ax2.plot(x_vals+jitter[3], acc_occupancy_adj_txt_r_6,  linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 13x13")
+ax2.plot(x_vals+jitter[4], acc_occupancy_adj_txt_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 31x31")
+ax2.plot(x_vals+jitter[5], acc_occupancy_adj_txt_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 31x31")
+
+
+ax2.set_ylabel("Average Accuracy [%]")
+ax2.set_xlabel("Output Type")
+ax2.set_title("Average Accuracy of Adjacency Text Occupancy Maze, All Complexities")
+ax2.set_xticks(x_vals)
+ax2.set_xticklabels(x_labels)
+ax2.grid(axis='y', linestyle='--', alpha=0.9)
+ax2.legend(loc='best')
+
+
+
+plt.tight_layout()  # leave space on the right
+plt.show()
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # plt.figure(figsize=(10, 6))
 
@@ -1492,10 +1504,11 @@ plt.show()
 
 # # --- Axes labels & ticks ---
 # plt.ylabel("Average Accuracy [%]")
+# plt.xlabel("Output Type")
 # plt.xticks(x_vals, x_labels)
 
 # # --- Title (combined) ---
-# plt.title("Accuracy of Ascii Occupancy Maze\nAll Complexities")
+# plt.title("Accuracy of Ascii Occupancy Maze,\nAll Complexities")
 
 # # --- Aesthetics ---
 # plt.grid(axis='y', linestyle='--', alpha=0.9)
