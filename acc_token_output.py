@@ -974,7 +974,7 @@ avg_r_ego_occupancy_tokenized_txt_output_15 = np.mean(occupancy_tokenized_txt_ou
 
 # ---------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-
+# Creating acc/token vs. output type charts for each representation
 
 line_jpg_NR_3 = np.array([avg_nr_coords_line_jpg_3/avg_nr_coords_line_jpg_output_3, avg_nr_allo_line_jpg_3/avg_nr_allo_line_jpg_output_3, avg_nr_ego_line_jpg_3/avg_nr_ego_line_jpg_output_3])
 line_jpg_R_3 = np.array([avg_r_coords_line_jpg_3/avg_r_coords_line_jpg_output_3, avg_r_allo_line_jpg_3/avg_r_allo_line_jpg_output_3, avg_r_ego_line_jpg_3/avg_r_ego_line_jpg_output_3])
@@ -994,23 +994,362 @@ line_json_R_3 = np.array([avg_r_coords_line_json_3/avg_r_coords_line_json_output
 
 
 # Create figure
+# plt.figure(figsize=(10, 6))
+
+# # Plot all 6 vectors
+# plt.plot(x_vals, line_jpg_NR_3,  marker='o', linestyle = 'none', label='Gemini 2.5 Flash-Lite, 3x3')
+# plt.plot(x_vals, line_jpg_R_3,   marker='o', linestyle = 'none', label='Gemini 2.5 Pro, 3x3')
+# plt.plot(x_vals, line_jpg_NR_6,  marker='o', linestyle = 'none', label='Gemini 2.5 Flash-Lite, 6x6')
+# plt.plot(x_vals, line_jpg_R_6,   marker='o', linestyle = 'none', label='Gemini 2.5 Pro, 6x6')
+# plt.plot(x_vals, line_jpg_NR_15,  marker='o', linestyle = 'none', label='Gemini 2.5 Flash-Lite, 15x15')
+# plt.plot(x_vals, line_jpg_R_15,   marker='o', linestyle = 'none', label='Gemini 2.5 Pro, 15x15')
+
+# # Axis settings
+# plt.xticks(x_vals, x_labels)
+# plt.ylabel("Average Accuracy / Average Output Tokens [%/tokens]")
+# plt.title("Contribution of Each Output Token To One Percent Point of Accuracy\nFor Each Output Type, json, Line Maze, each complexity")
+
+# plt.grid(axis='y', linestyle='--', alpha=0.8)
+# plt.legend(loc='best')
+
+# plt.tight_layout()
+# plt.show()
+
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Creating accvs. output type charts for each representation
+
+
+# Line maze accuracy (Pro & Flash-Lite)
+#jpg
+acc_line_jpg_nr_3 = np.array([avg_nr_coords_line_jpg_3, avg_nr_allo_line_jpg_3, avg_nr_ego_line_jpg_3])
+acc_line_jpg_r_3 = np.array([avg_r_coords_line_jpg_3, avg_r_allo_line_jpg_3, avg_r_ego_line_jpg_3])
+
+acc_line_jpg_nr_6 = np.array([avg_nr_coords_line_jpg_6, avg_nr_allo_line_jpg_6, avg_nr_ego_line_jpg_6])
+acc_line_jpg_r_6 = np.array([avg_r_coords_line_jpg_6, avg_r_allo_line_jpg_6, avg_r_ego_line_jpg_6])
+
+acc_line_jpg_nr_15 = np.array([avg_nr_coords_line_jpg_15, avg_nr_allo_line_jpg_15, avg_nr_ego_line_jpg_15])
+acc_line_jpg_r_15 = np.array([avg_r_coords_line_jpg_15, avg_r_allo_line_jpg_15, avg_r_ego_line_jpg_15])
+
+#json
+acc_line_json_nr_3 = np.array([avg_nr_coords_line_json_3, avg_nr_allo_line_json_3, avg_nr_ego_line_json_3])
+acc_line_json_r_3 = np.array([avg_r_coords_line_json_3, avg_r_allo_line_json_3, avg_r_ego_line_json_3])
+
+acc_line_json_nr_6 = np.array([avg_nr_coords_line_json_6, avg_nr_allo_line_json_6, avg_nr_ego_line_json_6])
+acc_line_json_r_6 = np.array([avg_r_coords_line_json_6, avg_r_allo_line_json_6, avg_r_ego_line_json_6])
+
+acc_line_json_nr_15 = np.array([avg_nr_coords_line_json_15, avg_nr_allo_line_json_15, avg_nr_ego_line_json_15])
+acc_line_json_r_15 = np.array([avg_r_coords_line_json_15, avg_r_allo_line_json_15, avg_r_ego_line_json_15])
+
+#tokenized
+acc_line_tokenized_txt_nr_3 = np.array([avg_nr_coords_line_tokenized_txt_3, avg_nr_allo_line_tokenized_txt_3, avg_nr_ego_line_tokenized_txt_3])
+acc_line_tokenized_txt_r_3 = np.array([avg_r_coords_line_tokenized_txt_3, avg_r_allo_line_tokenized_txt_3, avg_r_ego_line_tokenized_txt_3])
+
+acc_line_tokenized_txt_nr_6 = np.array([avg_nr_coords_line_tokenized_txt_6, avg_nr_allo_line_tokenized_txt_6, avg_nr_ego_line_tokenized_txt_6])
+acc_line_tokenized_txt_r_6 = np.array([avg_r_coords_line_tokenized_txt_6, avg_r_allo_line_tokenized_txt_6, avg_r_ego_line_tokenized_txt_6])
+
+acc_line_tokenized_txt_nr_15 = np.array([avg_nr_coords_line_tokenized_txt_15, avg_nr_allo_line_tokenized_txt_15, avg_nr_ego_line_tokenized_txt_15])
+acc_line_tokenized_txt_r_15 = np.array([avg_r_coords_line_tokenized_txt_15, avg_r_allo_line_tokenized_txt_15, avg_r_ego_line_tokenized_txt_15])
+
+
+#adj json
+acc_line_adj_json_nr_3 = np.array([avg_nr_coords_line_adj_json_3, avg_nr_allo_line_adj_json_3, avg_nr_ego_line_adj_json_3])
+acc_line_adj_json_r_3 = np.array([avg_r_coords_line_adj_json_3, avg_r_allo_line_adj_json_3, avg_r_ego_line_adj_json_3])
+
+acc_line_adj_json_nr_6 = np.array([avg_nr_coords_line_adj_json_6, avg_nr_allo_line_adj_json_6, avg_nr_ego_line_adj_json_6])
+acc_line_adj_json_r_6 = np.array([avg_r_coords_line_adj_json_6, avg_r_allo_line_adj_json_6, avg_r_ego_line_adj_json_6])
+
+acc_line_adj_json_nr_15 = np.array([avg_nr_coords_line_adj_json_15, avg_nr_allo_line_adj_json_15, avg_nr_ego_line_adj_json_15])
+acc_line_adj_json_r_15 = np.array([avg_r_coords_line_adj_json_15, avg_r_allo_line_adj_json_15, avg_r_ego_line_adj_json_15])
+
+#adj txt
+acc_line_adj_txt_nr_3 = np.array([avg_nr_coords_line_adj_txt_3, avg_nr_allo_line_adj_txt_3, avg_nr_ego_line_adj_txt_3])
+acc_line_adj_txt_r_3 = np.array([avg_r_coords_line_adj_txt_3, avg_r_allo_line_adj_txt_3, avg_r_ego_line_adj_txt_3])
+
+acc_line_adj_txt_nr_6 = np.array([avg_nr_coords_line_adj_txt_6, avg_nr_allo_line_adj_txt_6, avg_nr_ego_line_adj_txt_6])
+acc_line_adj_txt_r_6 = np.array([avg_r_coords_line_adj_txt_6, avg_r_allo_line_adj_txt_6, avg_r_ego_line_adj_txt_6])
+
+acc_line_adj_txt_nr_15 = np.array([avg_nr_coords_line_adj_txt_15, avg_nr_allo_line_adj_txt_15, avg_nr_ego_line_adj_txt_15])
+acc_line_adj_txt_r_15 = np.array([avg_r_coords_line_adj_txt_15, avg_r_allo_line_adj_txt_15, avg_r_ego_line_adj_txt_15])
+
+
+# Occupancy maze accuracy (Pro & Flash-Lite)
+#jpg
+acc_occupancy_jpg_nr_3 = np.array([avg_nr_coords_occupancy_jpg_3, avg_nr_allo_occupancy_jpg_3, avg_nr_ego_occupancy_jpg_3])
+acc_occupancy_jpg_r_3 = np.array([avg_r_coords_occupancy_jpg_3, avg_r_allo_occupancy_jpg_3, avg_r_ego_occupancy_jpg_3])
+
+acc_occupancy_jpg_nr_6 = np.array([avg_nr_coords_occupancy_jpg_6, avg_nr_allo_occupancy_jpg_6, avg_nr_ego_occupancy_jpg_6])
+acc_occupancy_jpg_r_6 = np.array([avg_r_coords_occupancy_jpg_6, avg_r_allo_occupancy_jpg_6, avg_r_ego_occupancy_jpg_6])
+
+acc_occupancy_jpg_nr_15 = np.array([avg_nr_coords_occupancy_jpg_15, avg_nr_allo_occupancy_jpg_15, avg_nr_ego_occupancy_jpg_15])
+acc_occupancy_jpg_r_15 = np.array([avg_r_coords_occupancy_jpg_15, avg_r_allo_occupancy_jpg_15, avg_r_ego_occupancy_jpg_15])
+
+#json
+acc_occupancy_json_nr_3 = np.array([avg_nr_coords_occupancy_json_3, avg_nr_allo_occupancy_json_3, avg_nr_ego_occupancy_json_3])
+acc_occupancy_json_r_3 = np.array([avg_r_coords_occupancy_json_3, avg_r_allo_occupancy_json_3, avg_r_ego_occupancy_json_3])
+
+acc_occupancy_json_nr_6 = np.array([avg_nr_coords_occupancy_json_6, avg_nr_allo_occupancy_json_6, avg_nr_ego_occupancy_json_6])
+acc_occupancy_json_r_6 = np.array([avg_r_coords_occupancy_json_6, avg_r_allo_occupancy_json_6, avg_r_ego_occupancy_json_6])
+
+acc_occupancy_json_nr_15 = np.array([avg_nr_coords_occupancy_json_15, avg_nr_allo_occupancy_json_15, avg_nr_ego_occupancy_json_15])
+acc_occupancy_json_r_15 = np.array([avg_r_coords_occupancy_json_15, avg_r_allo_occupancy_json_15, avg_r_ego_occupancy_json_15])
+
+#tokenized
+acc_occupancy_tokenized_txt_nr_3 = np.array([avg_nr_coords_occupancy_tokenized_txt_3, avg_nr_allo_occupancy_tokenized_txt_3, avg_nr_ego_occupancy_tokenized_txt_3])
+acc_occupancy_tokenized_txt_r_3 = np.array([avg_r_coords_occupancy_tokenized_txt_3, avg_r_allo_occupancy_tokenized_txt_3, avg_r_ego_occupancy_tokenized_txt_3])
+
+acc_occupancy_tokenized_txt_nr_6 = np.array([avg_nr_coords_occupancy_tokenized_txt_6, avg_nr_allo_occupancy_tokenized_txt_6, avg_nr_ego_occupancy_tokenized_txt_6])
+acc_occupancy_tokenized_txt_r_6 = np.array([avg_r_coords_occupancy_tokenized_txt_6, avg_r_allo_occupancy_tokenized_txt_6, avg_r_ego_occupancy_tokenized_txt_6])
+
+acc_occupancy_tokenized_txt_nr_15 = np.array([avg_nr_coords_occupancy_tokenized_txt_15, avg_nr_allo_occupancy_tokenized_txt_15, avg_nr_ego_occupancy_tokenized_txt_15])
+acc_occupancy_tokenized_txt_r_15 = np.array([avg_r_coords_occupancy_tokenized_txt_15, avg_r_allo_occupancy_tokenized_txt_15, avg_r_ego_occupancy_tokenized_txt_15])
+
+#adj json
+acc_occupancy_adj_json_nr_3 = np.array([avg_nr_coords_occupancy_adj_json_3, avg_nr_allo_occupancy_adj_json_3, avg_nr_ego_occupancy_adj_json_3])
+acc_occupancy_adj_json_r_3 = np.array([avg_r_coords_occupancy_adj_json_3, avg_r_allo_occupancy_adj_json_3, avg_r_ego_occupancy_adj_json_3])
+
+acc_occupancy_adj_json_nr_6 = np.array([avg_nr_coords_occupancy_adj_json_6, avg_nr_allo_occupancy_adj_json_6, avg_nr_ego_occupancy_adj_json_6])
+acc_occupancy_adj_json_r_6 = np.array([avg_r_coords_occupancy_adj_json_6, avg_r_allo_occupancy_adj_json_6, avg_r_ego_occupancy_adj_json_6])
+
+acc_occupancy_adj_json_nr_15 = np.array([avg_nr_coords_occupancy_adj_json_15, avg_nr_allo_occupancy_adj_json_15, avg_nr_ego_occupancy_adj_json_15])
+acc_occupancy_adj_json_r_15 = np.array([avg_r_coords_occupancy_adj_json_15, avg_r_allo_occupancy_adj_json_15, avg_r_ego_occupancy_adj_json_15])
+
+#adj txt
+acc_occupancy_adj_txt_nr_3 = np.array([avg_nr_coords_occupancy_adj_txt_3, avg_nr_allo_occupancy_adj_txt_3, avg_nr_ego_occupancy_adj_txt_3])
+acc_occupancy_adj_txt_r_3 = np.array([avg_r_coords_occupancy_adj_txt_3, avg_r_allo_occupancy_adj_txt_3, avg_r_ego_occupancy_adj_txt_3])
+
+acc_occupancy_adj_txt_nr_6 = np.array([avg_nr_coords_occupancy_adj_txt_6, avg_nr_allo_occupancy_adj_txt_6, avg_nr_ego_occupancy_adj_txt_6])
+acc_occupancy_adj_txt_r_6 = np.array([avg_r_coords_occupancy_adj_txt_6, avg_r_allo_occupancy_adj_txt_6, avg_r_ego_occupancy_adj_txt_6])
+
+acc_occupancy_adj_txt_nr_15 = np.array([avg_nr_coords_occupancy_adj_txt_15, avg_nr_allo_occupancy_adj_txt_15, avg_nr_ego_occupancy_adj_txt_15])
+acc_occupancy_adj_txt_r_15 = np.array([avg_r_coords_occupancy_adj_txt_15, avg_r_allo_occupancy_adj_txt_15, avg_r_ego_occupancy_adj_txt_15])
+
+#ascii
+acc_occupancy_ascii_txt_nr_3 = np.array([avg_nr_coords_occupancy_ascii_txt_3, avg_nr_allo_occupancy_ascii_txt_3, avg_nr_ego_occupancy_ascii_txt_3])
+acc_occupancy_ascii_txt_r_3 = np.array([avg_r_coords_occupancy_ascii_txt_3, avg_r_allo_occupancy_ascii_txt_3, avg_r_ego_occupancy_ascii_txt_3])
+
+acc_occupancy_ascii_txt_nr_6 = np.array([avg_nr_coords_occupancy_ascii_txt_6, avg_nr_allo_occupancy_ascii_txt_6, avg_nr_ego_occupancy_ascii_txt_6])
+acc_occupancy_ascii_txt_r_6 = np.array([avg_r_coords_occupancy_ascii_txt_6, avg_r_allo_occupancy_ascii_txt_6, avg_r_ego_occupancy_ascii_txt_6])
+
+acc_occupancy_ascii_txt_nr_15 = np.array([avg_nr_coords_occupancy_ascii_txt_15, avg_nr_allo_occupancy_ascii_txt_15, avg_nr_ego_occupancy_ascii_txt_15])
+acc_occupancy_ascii_txt_r_15 = np.array([avg_r_coords_occupancy_ascii_txt_15, avg_r_allo_occupancy_ascii_txt_15, avg_r_ego_occupancy_ascii_txt_15])
+
+# --------------------------------------------------------
+
+
+jitter_strength = 0.01
+jitter = np.random.uniform(-jitter_strength, jitter_strength, size=6)
+# Create figure with 2 vertical subplots
+fig, (ax1, ax2) = plt.subplots(
+    nrows=2, ncols=1, figsize=(10, 10), sharex=True
+)
+
+# Top Plot
+ax1.plot(x_vals+jitter[0], acc_line_jpg_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 3x3")
+ax1.plot(x_vals+jitter[1], acc_line_jpg_r_3,  linestyle = 'dashed',marker='o', color = 'indianred', label="Gemini 2.5 Pro, 3x3")
+ax1.plot(x_vals+jitter[2], acc_line_jpg_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 6x6")
+ax1.plot(x_vals+jitter[3], acc_line_jpg_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 6x6")
+ax1.plot(x_vals+jitter[4], acc_line_jpg_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 15x15")
+ax1.plot(x_vals+jitter[5], acc_line_jpg_r_15, linestyle = 'dashed', marker='o', color ='mediumorchid', label="Gemini 2.5 Pro, 15x15")
+ax1.set_ylabel("Average Accuracy [%]")
+ax1.set_title("Accuracy of JPG Line Maze, All Complexities")
+ax1.set_xticks(x_vals)
+ax1.set_xticklabels(x_labels)
+ax1.grid(axis='y', linestyle='--', alpha=0.9)
+ax1.legend(loc='best')
+
+# Bottom Plot
+ax2.plot(x_vals+jitter[0], acc_occupancy_jpg_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 7x7")
+ax2.plot(x_vals+jitter[1], acc_occupancy_jpg_r_3,  linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 7x7")
+ax2.plot(x_vals+jitter[2], acc_occupancy_jpg_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 13x13")
+ax2.plot(x_vals+jitter[3], acc_occupancy_jpg_r_6,  linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 13x13")
+ax2.plot(x_vals+jitter[4], acc_occupancy_jpg_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 31x31")
+ax2.plot(x_vals+jitter[5], acc_occupancy_jpg_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 31x31")
+
+
+ax2.set_ylabel("Average Accuracy [%]")
+ax2.set_title("Accuracy of JPG Occupancy Maze, All Complexities")
+ax2.set_xticks(x_vals)
+ax2.set_xticklabels(x_labels)
+ax2.grid(axis='y', linestyle='--', alpha=0.9)
+ax2.legend(loc='best')
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Create figure with 2 vertical subplots
+fig, (ax1, ax2) = plt.subplots(
+    nrows=2, ncols=1, figsize=(10, 10), sharex=True
+)
+
+# Top Plot
+ax1.plot(x_vals+jitter[0], acc_line_json_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 3x3")
+ax1.plot(x_vals+jitter[1], acc_line_json_r_3,  linestyle = 'dashed',marker='o', color = 'indianred', label="Gemini 2.5 Pro, 3x3")
+ax1.plot(x_vals+jitter[2], acc_line_json_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 6x6")
+ax1.plot(x_vals+jitter[3], acc_line_json_r_6,  linestyle = 'dashed',marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 6x6")
+ax1.plot(x_vals+jitter[4], acc_line_json_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 15x15")
+ax1.plot(x_vals+jitter[5], acc_line_json_r_15,  linestyle = 'dashed',marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 15x15")
+
+ax1.set_ylabel("Average Accuracy [%]")
+ax1.set_title("Accuracy of JSON Line Maze, All Complexities")
+ax1.set_xticks(x_vals)
+ax1.set_xticklabels(x_labels)
+ax1.grid(axis='y', linestyle='--', alpha=0.9)
+ax1.legend(loc='best')
+
+# Bottom Plot
+ax2.plot(x_vals+jitter[0], acc_occupancy_json_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 7x7")
+ax2.plot(x_vals+jitter[1], acc_occupancy_json_r_3,  linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 7x7")
+ax2.plot(x_vals+jitter[2], acc_occupancy_json_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 13x13")
+ax2.plot(x_vals+jitter[3], acc_occupancy_json_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 13x13")
+ax2.plot(x_vals+jitter[4], acc_occupancy_json_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 31x31")
+ax2.plot(x_vals+jitter[5], acc_occupancy_json_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 31x31")
+
+
+ax2.set_ylabel("Average Accuracy [%]")
+ax2.set_title("Accuracy of JSON Occupancy Maze, All Complexities")
+ax2.set_xticks(x_vals)
+ax2.set_xticklabels(x_labels)
+ax2.grid(axis='y', linestyle='--', alpha=0.9)
+ax2.legend(loc='best')
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Create figure with 2 vertical subplots
+fig, (ax1, ax2) = plt.subplots(
+    nrows=2, ncols=1, figsize=(10, 10), sharex=True
+)
+
+# Top Plot
+ax1.plot(x_vals+jitter[0], acc_line_tokenized_txt_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 3x3")
+ax1.plot(x_vals+jitter[1], acc_line_tokenized_txt_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 3x3")
+ax1.plot(x_vals+jitter[2], acc_line_tokenized_txt_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 6x6")
+ax1.plot(x_vals+jitter[3], acc_line_tokenized_txt_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 6x6")
+ax1.plot(x_vals+jitter[4], acc_line_tokenized_txt_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 15x15")
+ax1.plot(x_vals+jitter[5], acc_line_tokenized_txt_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 15x15")
+
+ax1.set_ylabel("Average Accuracy [%]")
+ax1.set_title("Accuracy of Tokenized Line Maze, All Complexities")
+ax1.set_xticks(x_vals)
+ax1.set_xticklabels(x_labels)
+ax1.grid(axis='y', linestyle='--', alpha=0.9)
+ax1.legend(loc='best')
+
+# Bottom Plot
+ax2.plot(x_vals+jitter[0], acc_occupancy_tokenized_txt_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 7x7")
+ax2.plot(x_vals+jitter[1], acc_occupancy_tokenized_txt_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 7x7")
+ax2.plot(x_vals+jitter[2], acc_occupancy_tokenized_txt_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 13x13")
+ax2.plot(x_vals+jitter[3], acc_occupancy_tokenized_txt_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 13x13")
+ax2.plot(x_vals+jitter[4], acc_occupancy_tokenized_txt_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 31x31")
+ax2.plot(x_vals+jitter[5], acc_occupancy_tokenized_txt_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 31x31")
+
+
+ax2.set_ylabel("Average Accuracy [%]")
+ax2.set_title("Accuracy of Tokenized Occupancy Maze, All Complexities")
+ax2.set_xticks(x_vals)
+ax2.set_xticklabels(x_labels)
+ax2.grid(axis='y', linestyle='--', alpha=0.9)
+ax2.legend(loc='best')
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Create figure with 2 vertical subplots
+fig, (ax1, ax2) = plt.subplots(
+    nrows=2, ncols=1, figsize=(10, 10), sharex=True
+)
+
+# Top Plot
+ax1.plot(x_vals+jitter[0], acc_line_adj_json_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 3x3")
+ax1.plot(x_vals+jitter[1], acc_line_adj_json_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 3x3")
+ax1.plot(x_vals+jitter[2], acc_line_adj_json_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 6x6")
+ax1.plot(x_vals+jitter[3], acc_line_adj_json_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 6x6")
+ax1.plot(x_vals+jitter[4], acc_line_adj_json_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 15x15")
+ax1.plot(x_vals+jitter[5], acc_line_adj_json_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 15x15")
+
+ax1.set_ylabel("Average Accuracy [%]")
+ax1.set_title("Accuracy of Adjacency JSON Line Maze, All Complexities")
+ax1.set_xticks(x_vals)
+ax1.set_xticklabels(x_labels)
+ax1.grid(axis='y', linestyle='--', alpha=0.9)
+ax1.legend(loc='best')
+
+# Bottom Plot
+ax2.plot(x_vals+jitter[0], acc_occupancy_adj_json_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 7x7")
+ax2.plot(x_vals+jitter[1], acc_occupancy_adj_json_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 7x7")
+ax2.plot(x_vals+jitter[2], acc_occupancy_adj_json_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 13x13")
+ax2.plot(x_vals+jitter[3], acc_occupancy_adj_json_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 13x13")
+ax2.plot(x_vals+jitter[4], acc_occupancy_adj_json_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 31x31")
+ax2.plot(x_vals+jitter[5], acc_occupancy_adj_json_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 31x31")
+
+
+ax2.set_ylabel("Average Accuracy [%]")
+ax2.set_title("Accuracy of Adjacency JSON Occupancy Maze, All Complexities")
+ax2.set_xticks(x_vals)
+ax2.set_xticklabels(x_labels)
+ax2.grid(axis='y', linestyle='--', alpha=0.9)
+ax2.legend(loc='best')
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+# Create figure with 2 vertical subplots
+fig, (ax1, ax2) = plt.subplots(
+    nrows=2, ncols=1, figsize=(10, 10), sharex=True
+)
+
+# Top Plot
+ax1.plot(x_vals+jitter[0], acc_line_adj_txt_nr_3,   marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 3x3")
+ax1.plot(x_vals+jitter[1], acc_line_adj_txt_r_3, linestyle = 'dashed', marker='o', color = 'indianred', label="Gemini 2.5 Pro, 3x3")
+ax1.plot(x_vals+jitter[2], acc_line_adj_txt_nr_6,   marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 6x6")
+ax1.plot(x_vals+jitter[3], acc_line_adj_txt_r_6, linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 6x6")
+ax1.plot(x_vals+jitter[4], acc_line_adj_txt_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 15x15")
+ax1.plot(x_vals+jitter[5], acc_line_adj_txt_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 15x15")
+
+ax1.set_ylabel("Average Accuracy [%]")
+ax1.set_title("Accuracy of Adjacency Text Line Maze, All Complexities")
+ax1.set_xticks(x_vals)
+ax1.set_xticklabels(x_labels)
+ax1.grid(axis='y', linestyle='--', alpha=0.9)
+ax1.legend(loc='best')
+
+# Bottom Plot
+ax2.plot(x_vals+jitter[0], acc_occupancy_adj_txt_nr_3,    marker='o', color = 'lightcoral', label="Gemini 2.5 Flash-Lite, 7x7")
+ax2.plot(x_vals+jitter[1], acc_occupancy_adj_txt_r_3,  linestyle = 'dashed',marker='o', color = 'indianred', label="Gemini 2.5 Pro, 7x7")
+ax2.plot(x_vals+jitter[2], acc_occupancy_adj_txt_nr_6,  marker='o', color = 'palegreen', label="Gemini 2.5 Flash-Lite, 13x13")
+ax2.plot(x_vals+jitter[3], acc_occupancy_adj_txt_r_6,  linestyle = 'dashed', marker='o', color = 'darkseagreen', label="Gemini 2.5 Pro, 13x13")
+ax2.plot(x_vals+jitter[4], acc_occupancy_adj_txt_nr_15,   marker='o', color = 'violet', label="Gemini 2.5 Flash-Lite, 31x31")
+ax2.plot(x_vals+jitter[5], acc_occupancy_adj_txt_r_15, linestyle = 'dashed', marker='o', color = 'mediumorchid', label="Gemini 2.5 Pro, 31x31")
+
+
+ax2.set_ylabel("Average Accuracy [%]")
+ax2.set_title("Average Accuracy of Adjacency Text Occupancy Maze, All Complexities")
+ax2.set_xticks(x_vals)
+ax2.set_xticklabels(x_labels)
+ax2.grid(axis='y', linestyle='--', alpha=0.9)
+ax2.legend(loc='best')
+
+
+# ---------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 plt.figure(figsize=(10, 6))
 
-# Plot all 6 vectors
-plt.plot(x_vals, line_jpg_NR_3,  marker='o', linestyle = 'none', label='Gemini 2.5 Flash-Lite, 3x3')
-plt.plot(x_vals, line_jpg_R_3,   marker='o', linestyle = 'none', label='Gemini 2.5 Pro, 3x3')
-plt.plot(x_vals, line_jpg_NR_6,  marker='o', linestyle = 'none', label='Gemini 2.5 Flash-Lite, 6x6')
-plt.plot(x_vals, line_jpg_R_6,   marker='o', linestyle = 'none', label='Gemini 2.5 Pro, 6x6')
-plt.plot(x_vals, line_jpg_NR_15,  marker='o', linestyle = 'none', label='Gemini 2.5 Flash-Lite, 15x15')
-plt.plot(x_vals, line_jpg_R_15,   marker='o', linestyle = 'none', label='Gemini 2.5 Pro, 15x15')
+# --- Occupancy Maze (asciii) ---
+plt.plot(x_vals+jitter[0], acc_occupancy_ascii_txt_nr_3,   marker='s', color = 'lightcoral', label="Occupancy, Flash-Lite, 7x7")
+plt.plot(x_vals+jitter[1], acc_occupancy_ascii_txt_r_3, linestyle = 'dashed',    marker='s', color = 'indianred', label="Occupancy, Pro, 7x7")
+plt.plot(x_vals+jitter[2], acc_occupancy_ascii_txt_nr_6,   marker='s', color = 'palegreen', label="Occupancy, Flash-Lite, 13x13")
+plt.plot(x_vals+jitter[3], acc_occupancy_ascii_txt_r_6,  linestyle = 'dashed',   marker='s', color = 'darkseagreen', label="Occupancy, Pro, 13x13")
+plt.plot(x_vals+jitter[4], acc_occupancy_ascii_txt_nr_15,  marker='s', color = 'violet', label="Occupancy, Flash-Lite, 31x31")
+plt.plot(x_vals+jitter[5], acc_occupancy_ascii_txt_r_15, linestyle = 'dashed',   marker='s', color = 'mediumorchid', label="Occupancy, Pro, 31x31")
 
-# Axis settings
+# --- Axes labels & ticks ---
+plt.ylabel("Average Accuracy [%]")
 plt.xticks(x_vals, x_labels)
-plt.ylabel("Average Accuracy / Average Output Tokens [%/tokens]")
-plt.title("Contribution of Each Output Token To One Percent Point of Accuracy\nFor Each Output Type, json, Line Maze, each complexity")
 
-plt.grid(axis='y', linestyle='--', alpha=0.8)
+# --- Title (combined) ---
+plt.title("Accuracy of Ascii Occupancy Maze\nAll Complexities")
+
+# --- Aesthetics ---
+plt.grid(axis='y', linestyle='--', alpha=0.9)
 plt.legend(loc='best')
 
 plt.tight_layout()
 plt.show()
+
