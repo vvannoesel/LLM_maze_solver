@@ -1273,255 +1273,565 @@ marker_edge = ['none', 'black'] #line, occupancy
 marker_size = [10,10,10]
 
 # Create multiple plots in the same figure
-fig, (ax1, ax2, ax3) = plt.subplots(nrows=3, ncols=1, figsize=(10, 6), sharex=True)
+# fig, (ax1, ax2, ax3) = plt.subplots(nrows=3, ncols=1, figsize=(10, 6), sharex=True, sharey=True)
 
-# # Create figure
+
 # fig, ax = plt.subplots(figsize=(8, 6))
+
+# Plot 3x3 data with corresponding labels
+# for i, point in enumerate(line_NR_coords_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i], color = red[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Coordinates, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(line_NR_allo_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i],  color = green[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Allocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(line_NR_ego_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Egocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(line_R_coords_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Coordinates, Gemini 2.5 Pro")
+
+# for i, point in enumerate(line_R_allo_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i],  color = green[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Allocentric, Gemini 2.5 Pro")
+
+# for i, point in enumerate(line_R_ego_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Egocentric, Gemini 2.5 Pro")
+
+
+# # Plot 7x7 data with corresponding labels
+# for i, point in enumerate(occupancy_NR_coords_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i], color = red[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Coordinates, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(occupancy_NR_allo_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Allocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(occupancy_NR_ego_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Egocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(occupancy_R_coords_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Coordinates, Gemini 2.5 Pro")
+
+# for i, point in enumerate(occupancy_R_allo_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Allocentric, Gemini 2.5 Pro")
+
+# for i, point in enumerate(occupancy_R_ego_3):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax1.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Egocentric, Gemini 2.5 Pro")
+
+# # Plot 6x6 data with corresponding labels
+# for i, point in enumerate(line_NR_coords_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Coordinates, Gemini 2.5 Flash Lite")
+# for i, point in enumerate(line_NR_allo_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Allocentric, Gemini 2.5 Flash Lite")
+# for i, point in enumerate(line_NR_ego_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Egocentric, Gemini 2.5 Flash Lite")
+# for i, point in enumerate(line_R_coords_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Coordinates, Gemini 2.5 Pro")
+# for i, point in enumerate(line_R_allo_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Allocentric, Gemini 2.5 Pro")
+# for i, point in enumerate(line_R_ego_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Egocentric, Gemini 2.5 Pro")
+
+# # Plot 13x13 data with corresponding labels
+# for i, point in enumerate(occupancy_NR_coords_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Coordinates, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(occupancy_NR_allo_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Allocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(occupancy_NR_ego_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Egocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(occupancy_R_coords_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Coordinates, Gemini 2.5 Pro")
+
+# for i, point in enumerate(occupancy_R_allo_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Allocentric, Gemini 2.5 Pro")
+
+# for i, point in enumerate(occupancy_R_ego_6):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax2.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Egocentric, Gemini 2.5 Pro")
+
+
+#     # Plot 15x15 data with corresponding labels
+# for i, point in enumerate(line_NR_coords_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Coordinates, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(line_NR_allo_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Allocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(line_NR_ego_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Egocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(line_R_coords_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Coordinates, Gemini 2.5 Pro")
+
+# for i, point in enumerate(line_R_allo_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Allocentric, Gemini 2.5 Pro")
+
+# for i, point in enumerate(line_R_ego_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Egocentric, Gemini 2.5 Pro")
+
+
+# # Plot 31x31 data with corresponding labels
+# for i, point in enumerate(occupancy_NR_coords_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Coordinates, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(occupancy_NR_allo_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Allocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(occupancy_NR_ego_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Egocentric, Gemini 2.5 Flash Lite")
+
+# for i, point in enumerate(occupancy_R_coords_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Coordinates, Gemini 2.5 Pro")
+
+# for i, point in enumerate(occupancy_R_allo_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Allocentric, Gemini 2.5 Pro")
+
+# for i, point in enumerate(occupancy_R_ego_15):
+#     x, y = point
+#     label = labels_base[i]  # get label corresponding to the row
+#     ax3.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Egocentric, Gemini 2.5 Pro")
+
+
+# # Axis labels
+# # ax1.set_xlabel("Average Cost Per Task (Tokens)")
+# # ax2.set_xlabel("Average Cost Per Task (Tokens)")
+# ax3.set_xlabel("Average Cost Per Task (Tokens)")
+# ax1.set_ylabel("Accuracy (%)")
+# ax2.set_ylabel("Accuracy (%)")
+# ax3.set_ylabel("Accuracy (%)")
+
+# ax1.set_xscale('log')  # Set x-axis to logarithmic scale
+# ax2.set_xscale('log')  # Set x-axis to logarithmic scale
+# ax3.set_xscale('log')  # Set x-axis to logarithmic scale
+# # Grid for readability
+# ax1.grid(True, linestyle='--', alpha=0.6)
+# ax2.grid(True, linestyle='--', alpha=0.6)
+# ax3.grid(True, linestyle='--', alpha=0.6)
+
+
+# # # 1. Define the Custom Legend Elements
+# # legend_elements = [
+
+
+# #     # --- Section: Output Type (Colors) ---
+# #     Line2D([0], [0], color='none', label=r'$\bf{Output\ Type}$'), # Bold Header
+# #     Line2D([0], [0], marker='o', color='w', markerfacecolor=red[1], label='Coordinates (Red)', markersize=10),
+# #     Line2D([0], [0], marker='o', color='w', markerfacecolor=green[1], label='Allocentric (Green)', markersize=10),
+# #     Line2D([0], [0], marker='o', color='w', markerfacecolor=blue[1], label='Egocentric (Blue)', markersize=10),
+    
+# #     # --- Spacer ---
+# #     Line2D([0], [0], color='none', label=''), 
+
+# #     # --- Section: Input Format (Shapes) ---
+# #     Line2D([0], [0], color='none', label=r'$\bf{Input\ Format}$'), # Bold Header
+# #     Line2D([0], [0], marker='s', color='lightgrey', label='JPG', linestyle='None'),
+# #     Line2D([0], [0], marker='*', color='lightgrey', label='JSON', linestyle='None'),
+# #     Line2D([0], [0], marker='o', color='lightgrey', label='Adjacency JSON', linestyle='None'),
+# #     Line2D([0], [0], marker='v', color='lightgrey', label='Adjacency Text', linestyle='None'),
+# #     Line2D([0], [0], marker='D', color='lightgrey', label='Tokenized', linestyle='None'),
+# #     Line2D([0], [0], marker='P', color='lightgrey', label='ASCII', linestyle='None'),
+
+# #     # --- Spacer ---
+# #     Line2D([0], [0], color='none', label=''), 
+
+# #     # --- Section: Model (Hues) ---
+# #     Line2D([0], [0], color='none', label=r'$\bf{Model\ (Marker\ Hue)}$'), # Bold Header
+# #     Line2D([0], [0], marker='o', color='w', markerfacecolor='gray', label='Gemini 2.5 Pro', markersize=10),
+# #     Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgray', label='Gemini 2.5 Flash Lite', markersize=10),
+
+# #     # --- Spacer ---
+# #     Line2D([0], [0], color='none', label=''), 
+
+# #     # --- Maze Style ---
+# #     Line2D([0], [0], color='none', label=r'$\bf{Maze\ Style}$' ), # Bold Header
+# #     Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgrey', mec='black', ms = marker_size[0], label = 'Occupancy Grid Maze, 7x7, 13x13, 31x31' ),
+# #     Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgrey', ms = marker_size[1], label = 'Line Walled Maze, 3x3, 6x6, 15x15' ),
+# # ]
+
+
+# # # 2. Add the custom legend to the axis
+# # ax2.legend(handles=legend_elements, loc='center left', bbox_to_anchor=(1, 0.5))
+
+# # --- Legend Group Definitions ---
+# spacer_handle = (
+#     Line2D([], [], marker='o', color='none', markerfacecolor='none', markersize=10)
+# )
+# coord_handle = (
+#     Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[0], markersize=10),
+#     Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[1], markersize=10)
+# )
+# allo_handle = (
+#     Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=green[0], markersize=10),
+#     Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=green[1], markersize=10)
+# )
+# ego_handle = (
+#     Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[0], markersize=10),
+#     Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[1], markersize=10)
+# )
+
+# pro_handle = (
+#     Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=red[1], markersize=10),
+#     Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=green[1], markersize=10),
+#     Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=blue[1], markersize=10)
+# )
+
+# flashlite_handle = (Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=red[0], markersize=10),
+#                     Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=green[0], markersize=10),
+#                     Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=blue[0], markersize=10)
+# )
+
+# handles = [
+#     spacer_handle,
+#     coord_handle,
+#     allo_handle,
+#     ego_handle,
+#     spacer_handle,
+
+#     Line2D([], [], marker='o', color='gray', linestyle='None', markersize = 10),  # Adjacency JSON
+#     Line2D([], [], marker='v', color='gray', linestyle='None', markersize = 10),  # Adjacency Text
+#     Line2D([], [], marker='s', color='gray', linestyle='None', markersize = 10),  # JPG
+#     Line2D([], [], marker='*', color='gray', linestyle='None', markersize = 10),  # JSON
+#     Line2D([], [], marker='D', color='gray', linestyle='None', markersize = 10),  # Tokenized
+#     Line2D([], [], marker='P', color='gray', linestyle='None', markersize = 10),  # ASCII
+    
+#     spacer_handle,
+#     pro_handle,
+#     flashlite_handle,
+#     # Line2D([], [], marker='o', color='none', markerfacecolor=red[1], markersize=10), # Gemini Pro
+#     # Line2D([], [], marker='o', color='none', markerfacecolor=red[0], markersize=10), # Gemini Flash Lite
+
+#     spacer_handle,  
+#     Line2D([], [], marker='o', color='none', markerfacecolor='lightgrey', mec=marker_edge[1], markersize = 10),   # Occupancy
+#     Line2D([], [], marker='o', color='none', markerfacecolor='lightgrey', mec=marker_edge[0], markersize = 10), # Line Wall
+# ]
+
+# labels = [
+#     r"$\bf{Output\ Types}$",
+#     "Coordinates", "Allocentric", "Egocentric",
+#     r"$\bf{Input\ Formats}$",
+#     "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII",
+#     r"$\bf{Models}$",
+#     "Gemini 2.5 Pro", "Gemini 2.5 Flash Lite",
+#     r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
+#     "Occupancy Grid, 7x7, 13x13, 31x31", "Line Wall, 3x3, 6x6, 15x15"
+# ]
+
+# ax2.legend(
+#     handles,
+#     labels,
+#     handler_map={tuple: HandlerTuple(ndivide=None)},
+#     loc='center left',
+#     bbox_to_anchor=(1.02, 0.5),
+#     title="Legend"
+# )
+
+# Place legend outside the plot on the right
+# ax.legend(loc='center left', bbox_to_anchor=(1, 0.5), title="Representation, Complexity, Output Type, Model")
+# plt.title("Performance vs. Cost Per Task")
+# ax1.set_title("Performance vs. Cost Per Task\n Low Complexity")
+# ax2.set_title("Medium Complexity")
+# ax3.set_title("High Complexity")
+# Adjust layout to make room for legend
+# plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
+
+# plt.show()
+
+
+
+
+# Poging 2 acc vs tokens: 6 figures ----------------------------------------------------------------------------
+
+
+
+
+
+# Labels for legend
+labels_base = ["Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"]
+markers = ['o', 'v', 's', '*', 'D', 'P']
+red = ['red', 'red'] #light, dark
+blue = ['blue', 'blue'] #light, dark
+green = ['lime', 'lime'] #light, dark
+marker_edge = ['none', 'black'] #line, occupancy
+marker_size = [10,10,10]
+testx = [1, 2, 3, 4, 5, 6]
+testy = [1, 2, 3, 4, 5, 6]
+# Create multiple plots in the same figure
+# fig, (ax1, ax2, ax3) = plt.subplots(nrows=3, ncols=1, figsize=(10, 6), sharex=True, sharey=True)
+fig, axes = plt.subplots(nrows=3, ncols=2, figsize=(10, 6), sharex=True, sharey=True)
+
+# axes[0,0].plot(testx[0], testy[0], marker='o', color=red[0], label='test 1')
+# axes[1,0].plot(testx[1], testy[1], marker='o', color=red[1], label='test 2')
+# axes[2,0].plot(testx[2], testy[2], marker='o', color=blue[0], label='test 3')
+# axes[0,1].plot(testx[3], testy[3], marker='o', color=blue[1], label='test 4')
+# axes[1,1].plot(testx[4], testy[4], marker='o', color=green[0], label='test 5')
+# axes[2,1].plot(testx[5], testy[5], marker='o', color=green[1], label=f'test 6')
+
 
 # Plot 3x3 data with corresponding labels
 for i, point in enumerate(line_NR_coords_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i], color = red[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Coordinates, Gemini 2.5 Flash Lite")
+    axes[0,0].plot(x, y, marker=markers[i], color = red[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Coordinates, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(line_NR_allo_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i],  color = green[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Allocentric, Gemini 2.5 Flash Lite")
+    axes[0,0].plot(x, y, marker=markers[i],  color = green[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Allocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(line_NR_ego_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Egocentric, Gemini 2.5 Flash Lite")
+    axes[0,0].plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Egocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(line_R_coords_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Coordinates, Gemini 2.5 Pro")
+    axes[0,1].plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Coordinates, Gemini 2.5 Pro")
 
 for i, point in enumerate(line_R_allo_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i],  color = green[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Allocentric, Gemini 2.5 Pro")
+    axes[0,1].plot(x, y, marker=markers[i],  color = green[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Allocentric, Gemini 2.5 Pro")
 
 for i, point in enumerate(line_R_ego_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Egocentric, Gemini 2.5 Pro")
+    axes[0,1].plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Egocentric, Gemini 2.5 Pro")
 
 
 # Plot 7x7 data with corresponding labels
 for i, point in enumerate(occupancy_NR_coords_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i], color = red[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Coordinates, Gemini 2.5 Flash Lite")
+    axes[0,0].plot(x, y, marker=markers[i], color = red[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Coordinates, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(occupancy_NR_allo_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Allocentric, Gemini 2.5 Flash Lite")
+    axes[0,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Allocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(occupancy_NR_ego_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Egocentric, Gemini 2.5 Flash Lite")
+    axes[0,0].plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Egocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(occupancy_R_coords_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Coordinates, Gemini 2.5 Pro")
+    axes[0,1].plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Coordinates, Gemini 2.5 Pro")
 
 for i, point in enumerate(occupancy_R_allo_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Allocentric, Gemini 2.5 Pro")
+    axes[0,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Allocentric, Gemini 2.5 Pro")
 
 for i, point in enumerate(occupancy_R_ego_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax1.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Egocentric, Gemini 2.5 Pro")
+    axes[0,1].plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Egocentric, Gemini 2.5 Pro")
 
 # Plot 6x6 data with corresponding labels
 for i, point in enumerate(line_NR_coords_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Coordinates, Gemini 2.5 Flash Lite")
+    axes[1,0].plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Coordinates, Gemini 2.5 Flash Lite")
 for i, point in enumerate(line_NR_allo_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Allocentric, Gemini 2.5 Flash Lite")
+    axes[1,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Allocentric, Gemini 2.5 Flash Lite")
 for i, point in enumerate(line_NR_ego_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Egocentric, Gemini 2.5 Flash Lite")
+    axes[1,0].plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Egocentric, Gemini 2.5 Flash Lite")
 for i, point in enumerate(line_R_coords_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Coordinates, Gemini 2.5 Pro")
+    axes[1,1].plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Coordinates, Gemini 2.5 Pro")
 for i, point in enumerate(line_R_allo_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Allocentric, Gemini 2.5 Pro")
+    axes[1,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Allocentric, Gemini 2.5 Pro")
 for i, point in enumerate(line_R_ego_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Egocentric, Gemini 2.5 Pro")
+    axes[1,1].plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Egocentric, Gemini 2.5 Pro")
 
 # Plot 13x13 data with corresponding labels
 for i, point in enumerate(occupancy_NR_coords_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Coordinates, Gemini 2.5 Flash Lite")
+    axes[1,0].plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Coordinates, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(occupancy_NR_allo_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Allocentric, Gemini 2.5 Flash Lite")
+    axes[1,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Allocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(occupancy_NR_ego_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Egocentric, Gemini 2.5 Flash Lite")
+    axes[1,0].plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Egocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(occupancy_R_coords_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Coordinates, Gemini 2.5 Pro")
+    axes[1,1].plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Coordinates, Gemini 2.5 Pro")
 
 for i, point in enumerate(occupancy_R_allo_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Allocentric, Gemini 2.5 Pro")
+    axes[1,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Allocentric, Gemini 2.5 Pro")
 
 for i, point in enumerate(occupancy_R_ego_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax2.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Egocentric, Gemini 2.5 Pro")
+    axes[1,1].plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Egocentric, Gemini 2.5 Pro")
 
 
     # Plot 15x15 data with corresponding labels
 for i, point in enumerate(line_NR_coords_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Coordinates, Gemini 2.5 Flash Lite")
+    axes[2,0].plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Coordinates, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(line_NR_allo_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Allocentric, Gemini 2.5 Flash Lite")
+    axes[2,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Allocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(line_NR_ego_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Egocentric, Gemini 2.5 Flash Lite")
+    axes[2,0].plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Egocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(line_R_coords_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Coordinates, Gemini 2.5 Pro")
+    axes[2,1].plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Coordinates, Gemini 2.5 Pro")
 
 for i, point in enumerate(line_R_allo_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Allocentric, Gemini 2.5 Pro")
+    axes[2,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Allocentric, Gemini 2.5 Pro")
 
 for i, point in enumerate(line_R_ego_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Egocentric, Gemini 2.5 Pro")
+    axes[2,1].plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Egocentric, Gemini 2.5 Pro")
 
 
 # Plot 31x31 data with corresponding labels
 for i, point in enumerate(occupancy_NR_coords_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Coordinates, Gemini 2.5 Flash Lite")
+    axes[2,0].plot(x, y, marker=markers[i],  color = red[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Coordinates, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(occupancy_NR_allo_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Allocentric, Gemini 2.5 Flash Lite")
+    axes[2,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Allocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(occupancy_NR_ego_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Egocentric, Gemini 2.5 Flash Lite")
+    axes[2,0].plot(x, y, marker=markers[i], color = blue[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Egocentric, Gemini 2.5 Flash Lite")
 
 for i, point in enumerate(occupancy_R_coords_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Coordinates, Gemini 2.5 Pro")
+    axes[2,1].plot(x, y, marker=markers[i],  color = red[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Coordinates, Gemini 2.5 Pro")
 
 for i, point in enumerate(occupancy_R_allo_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Allocentric, Gemini 2.5 Pro")
+    axes[2,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Allocentric, Gemini 2.5 Pro")
 
 for i, point in enumerate(occupancy_R_ego_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    ax3.plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Egocentric, Gemini 2.5 Pro")
+    axes[2,1].plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Egocentric, Gemini 2.5 Pro")
 
 
-# Axis labels
-# ax1.set_xlabel("Average Cost Per Task (Tokens)")
-# ax2.set_xlabel("Average Cost Per Task (Tokens)")
-ax3.set_xlabel("Average Cost Per Task (Tokens)")
-ax1.set_ylabel("Accuracy (%)")
-ax2.set_ylabel("Accuracy (%)")
-ax3.set_ylabel("Accuracy (%)")
-
-ax1.set_xscale('log')  # Set x-axis to logarithmic scale
-ax2.set_xscale('log')  # Set x-axis to logarithmic scale
-ax3.set_xscale('log')  # Set x-axis to logarithmic scale
-# Grid for readability
-ax1.grid(True, linestyle='--', alpha=0.6)
-ax2.grid(True, linestyle='--', alpha=0.6)
-ax3.grid(True, linestyle='--', alpha=0.6)
+# # Axis labels
+for i in range(0,3):
+    for j in range(0,2):
+        axes[i,j].set_xscale('log')  # Set x-axis to logarithmic scale
+        axes[i,j].grid(True, linestyle='--', alpha=0.6)
+        axes[i,j].set_ylabel("Accuracy (%)")
+        axes[i,j].set_xlabel("Average Cost Per Task (Tokens)")
 
 
-# # 1. Define the Custom Legend Elements
-# legend_elements = [
-
-
-#     # --- Section: Output Type (Colors) ---
-#     Line2D([0], [0], color='none', label=r'$\bf{Output\ Type}$'), # Bold Header
-#     Line2D([0], [0], marker='o', color='w', markerfacecolor=red[1], label='Coordinates (Red)', markersize=10),
-#     Line2D([0], [0], marker='o', color='w', markerfacecolor=green[1], label='Allocentric (Green)', markersize=10),
-#     Line2D([0], [0], marker='o', color='w', markerfacecolor=blue[1], label='Egocentric (Blue)', markersize=10),
-    
-#     # --- Spacer ---
-#     Line2D([0], [0], color='none', label=''), 
-
-#     # --- Section: Input Format (Shapes) ---
-#     Line2D([0], [0], color='none', label=r'$\bf{Input\ Format}$'), # Bold Header
-#     Line2D([0], [0], marker='s', color='lightgrey', label='JPG', linestyle='None'),
-#     Line2D([0], [0], marker='*', color='lightgrey', label='JSON', linestyle='None'),
-#     Line2D([0], [0], marker='o', color='lightgrey', label='Adjacency JSON', linestyle='None'),
-#     Line2D([0], [0], marker='v', color='lightgrey', label='Adjacency Text', linestyle='None'),
-#     Line2D([0], [0], marker='D', color='lightgrey', label='Tokenized', linestyle='None'),
-#     Line2D([0], [0], marker='P', color='lightgrey', label='ASCII', linestyle='None'),
-
-#     # --- Spacer ---
-#     Line2D([0], [0], color='none', label=''), 
-
-#     # --- Section: Model (Hues) ---
-#     Line2D([0], [0], color='none', label=r'$\bf{Model\ (Marker\ Hue)}$'), # Bold Header
-#     Line2D([0], [0], marker='o', color='w', markerfacecolor='gray', label='Gemini 2.5 Pro', markersize=10),
-#     Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgray', label='Gemini 2.5 Flash Lite', markersize=10),
-
-#     # --- Spacer ---
-#     Line2D([0], [0], color='none', label=''), 
-
-#     # --- Maze Style ---
-#     Line2D([0], [0], color='none', label=r'$\bf{Maze\ Style}$' ), # Bold Header
-#     Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgrey', mec='black', ms = marker_size[0], label = 'Occupancy Grid Maze, 7x7, 13x13, 31x31' ),
-#     Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgrey', ms = marker_size[1], label = 'Line Walled Maze, 3x3, 6x6, 15x15' ),
-# ]
-
-
-# # 2. Add the custom legend to the axis
-# ax2.legend(handles=legend_elements, loc='center left', bbox_to_anchor=(1, 0.5))
 
 # --- Legend Group Definitions ---
 spacer_handle = (
@@ -1529,15 +1839,15 @@ spacer_handle = (
 )
 coord_handle = (
     Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[0], markersize=10),
-    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[1], markersize=10)
+    # Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[1], markersize=10)
 )
 allo_handle = (
     Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=green[0], markersize=10),
-    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=green[1], markersize=10)
+    # Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=green[1], markersize=10)
 )
 ego_handle = (
     Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[0], markersize=10),
-    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[1], markersize=10)
+    # Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[1], markersize=10)
 )
 
 pro_handle = (
@@ -1565,9 +1875,9 @@ handles = [
     Line2D([], [], marker='D', color='gray', linestyle='None', markersize = 10),  # Tokenized
     Line2D([], [], marker='P', color='gray', linestyle='None', markersize = 10),  # ASCII
     
-    spacer_handle,
-    pro_handle,
-    flashlite_handle,
+    # spacer_handle,
+    # pro_handle,
+    # flashlite_handle,
     # Line2D([], [], marker='o', color='none', markerfacecolor=red[1], markersize=10), # Gemini Pro
     # Line2D([], [], marker='o', color='none', markerfacecolor=red[0], markersize=10), # Gemini Flash Lite
 
@@ -1581,13 +1891,13 @@ labels = [
     "Coordinates", "Allocentric", "Egocentric",
     r"$\bf{Input\ Formats}$",
     "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII",
-    r"$\bf{Models}$",
-    "Gemini 2.5 Pro", "Gemini 2.5 Flash Lite",
+    # r"$\bf{Models}$",
+    # "Gemini 2.5 Pro", "Gemini 2.5 Flash Lite",
     r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
     "Occupancy Grid, 7x7, 13x13, 31x31", "Line Wall, 3x3, 6x6, 15x15"
 ]
 
-ax2.legend(
+axes[1,1].legend(
     handles,
     labels,
     handler_map={tuple: HandlerTuple(ndivide=None)},
@@ -1597,16 +1907,30 @@ ax2.legend(
 )
 
 # Place legend outside the plot on the right
-# ax.legend(loc='center left', bbox_to_anchor=(1, 0.5), title="Representation, Complexity, Output Type, Model")
-# plt.title("Performance vs. Cost Per Task")
-ax1.set_title("Performance vs. Cost Per Task\n Low Complexity")
-ax2.set_title("Medium Complexity")
-ax3.set_title("High Complexity")
-# Adjust layout to make room for legend
+# axes[1,1].legend(loc='center left', bbox_to_anchor=(1, 0.5), title="Representation, Complexity, Output Type, Model")
+
+
+axes[0,0].set_title("Low Complexity, Gemini 2.5 Flash Lite")
+axes[0,1].set_title("Low Complexity, Gemini 2.5 Pro")
+axes[1,0].set_title("Medium Complexity, Gemini 2.5 Flash Lite")
+axes[1,1].set_title("Medium Complexity, Gemini 2.5 Pro")
+axes[2,0].set_title("High Complexity, Gemini 2.5 Flash Lite")
+axes[2,1].set_title("High Complexity, Gemini 2.5 Pro")
+
+plt.suptitle("Performance vs. Cost Per Task", fontweight= 'bold')
+
 plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
 
 
+
+
+
 plt.show()
+
+
+
+
+
 
 
 

@@ -1344,6 +1344,8 @@ labels_occ = [
 # plt.show()
 
 
+# --- I dont remember what this does- i think it plots all 6 acc plots in 1 fig but with lots of legends ---------------------
+
 # subplot_groups = [
 #     means_line_R_coords,  # top-left  (methods x 3)
 #     means_line_R_allo,    # top-middle
@@ -1463,247 +1465,255 @@ labels_occ = [
 # plt.tight_layout()
 # plt.show()
 
+# ----- Plottoing all 6 accuracy plots in one figure ------------------
 
+# # 1. Define the Legend Labels
+# single_legend = [
+#     'Adjacency Json - Gemini 2.5 Flash Lite', 
+#     'Adjacency Text - Gemini 2.5 Flash Lite', 
+#     'JPG - Gemini 2.5 Flash Lite', 
+#     'JSON - Gemini 2.5 Flash Lite', 
+#     'Tokenized - Gemini 2.5 Flash Lite', 
+#     'ASCII - Gemini 2.5 Flash Lite', 
+#     'Adjacency Json - Gemini 2.5 Pro', 
+#     'Adjacency Text - Gemini 2.5 Pro', 
+#     'JPG - Gemini 2.5 Pro', 
+#     'JSON - Gemini 2.5 Pro', 
+#     'Tokenized - Gemini 2.5 Pro', 
+#     'ASCII - Gemini 2.5 Pro'
+# ]
 
-# 1. Define the Legend Labels
-single_legend = [
-    'Adjacency Json - Gemini 2.5 Flash Lite', 
-    'Adjacency Text - Gemini 2.5 Flash Lite', 
-    'JPG - Gemini 2.5 Flash Lite', 
-    'JSON - Gemini 2.5 Flash Lite', 
-    'Tokenized - Gemini 2.5 Flash Lite', 
-    'ASCII - Gemini 2.5 Flash Lite', 
-    'Adjacency Json - Gemini 2.5 Pro', 
-    'Adjacency Text - Gemini 2.5 Pro', 
-    'JPG - Gemini 2.5 Pro', 
-    'JSON - Gemini 2.5 Pro', 
-    'Tokenized - Gemini 2.5 Pro', 
-    'ASCII - Gemini 2.5 Pro'
-]
+# # 2. Organize Data into Groups for the 6 Subplots
+# # Structure: (Means_NR, Means_R, Err_NR, Err_R, Title)
+# # NR = Non-Reasoning (Solid), R = Reasoning (Dotted)
+# plot_configs = [
+#     # Top-Left
+#     (means_line_NR_coords, means_line_R_coords, 
+#      error_line_NR_coords, error_line_R_coords, 
+#      "Accuracy Per Complexity, \n Line Maze, Coordinates Output"),
+    
+#     # Top-Middle
+#     (means_line_NR_allo, means_line_R_allo, 
+#      error_line_NR_allo, error_line_R_allo, 
+#      "Accuracy Per Complexity, \n Line Maze, Allocentric Output"),
+    
+#     # Top-Right
+#     (means_line_NR_ego, means_line_R_ego, 
+#      error_line_NR_ego, error_line_R_ego, 
+#      "Accuracy Per Complexity, \n Line Maze, Egocentric Output"),
+    
+#     # Bottom-Left
+#     (means_occ_NR_coords, means_occ_R_coords, 
+#      error_occupancy_NR_coords, error_occupancy_R_coords, 
+#      "Accuracy Per Complexity, \n Occupancy Maze, Coordinates Output"),
+    
+#     # Bottom-Middle
+#     (means_occ_NR_allo, means_occ_R_allo, 
+#      error_occupancy_NR_allo, error_occupancy_R_allo, 
+#      "Accuracy Per Complexity, \n Occupancy Maze, Allocentric Output"),
+    
+#     # Bottom-Right
+#     (means_occ_NR_ego, means_occ_R_ego, 
+#      error_occupancy_NR_ego, error_occupancy_R_ego, 
+#      "Accuracy Per Complexity, \n Occupancy Maze, Egocentric Output"),
+# ]
 
-# 2. Organize Data into Groups for the 6 Subplots
-# Structure: (Means_NR, Means_R, Err_NR, Err_R, Title)
-# NR = Non-Reasoning (Solid), R = Reasoning (Dotted)
-plot_configs = [
-    # Top-Left
-    (means_line_NR_coords, means_line_R_coords, 
-     error_line_NR_coords, error_line_R_coords, 
-     "Accuracy Per Complexity, \n Line Maze, Coordinates Output"),
-    
-    # Top-Middle
-    (means_line_NR_allo, means_line_R_allo, 
-     error_line_NR_allo, error_line_R_allo, 
-     "Accuracy Per Complexity, \n Line Maze, Allocentric Output"),
-    
-    # Top-Right
-    (means_line_NR_ego, means_line_R_ego, 
-     error_line_NR_ego, error_line_R_ego, 
-     "Accuracy Per Complexity, \n Line Maze, Egocentric Output"),
-    
-    # Bottom-Left
-    (means_occ_NR_coords, means_occ_R_coords, 
-     error_occupancy_NR_coords, error_occupancy_R_coords, 
-     "Accuracy Per Complexity, \n Occupancy Maze, Coordinates Output"),
-    
-    # Bottom-Middle
-    (means_occ_NR_allo, means_occ_R_allo, 
-     error_occupancy_NR_allo, error_occupancy_R_allo, 
-     "Accuracy Per Complexity, \n Occupancy Maze, Allocentric Output"),
-    
-    # Bottom-Right
-    (means_occ_NR_ego, means_occ_R_ego, 
-     error_occupancy_NR_ego, error_occupancy_R_ego, 
-     "Accuracy Per Complexity, \n Occupancy Maze, Egocentric Output"),
-]
+# # 3. Setup Plotting Parameters
+# x_vals = np.arange(3)
+# x_tick_lbls_line = ["3x3", "6x6", "15x15"] # Assuming complexity levels
+# x_tick_lbls_occupancy = ["7x7", "13x13", "31x31"] # Assuming complexity levels
+# # Define a color palette for the 6 distinct methods (ignoring model version)
+# # We have 6 base methods (Adj Json, Adj Text, JPG, JSON, Tok, ASCII)
+# colors = plt.cm.tab10(np.linspace(0, 1, 10))[:6] 
 
-# 3. Setup Plotting Parameters
-x_vals = np.arange(3)
-x_tick_lbls_line = ["3x3", "6x6", "15x15"] # Assuming complexity levels
-x_tick_lbls_occupancy = ["7x7", "13x13", "31x31"] # Assuming complexity levels
-# Define a color palette for the 6 distinct methods (ignoring model version)
-# We have 6 base methods (Adj Json, Adj Text, JPG, JSON, Tok, ASCII)
-colors = plt.cm.tab10(np.linspace(0, 1, 10))[:6] 
+# fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(9, 8), sharey=True, sharex=False)
 
-fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(9, 8), sharey=True, sharex=False)
+# # Container to grab handles/labels for the global legend later
+# handles_for_legend = []
+# labels_for_legend = []
 
-# Container to grab handles/labels for the global legend later
-handles_for_legend = []
-labels_for_legend = []
-
-# 4. Main Plotting Loop
-for idx, ax in enumerate(axes.flat):
-    means_nr, means_r, err_nr, err_r, title = plot_configs[idx]
+# # 4. Main Plotting Loop
+# for idx, ax in enumerate(axes.flat):
+#     means_nr, means_r, err_nr, err_r, title = plot_configs[idx]
     
-    # Convert to numpy arrays just in case
-    means_nr = np.array(means_nr)
-    means_r = np.array(means_r)
-    err_nr = np.array(err_nr)
-    err_r = np.array(err_r)
+#     # Convert to numpy arrays just in case
+#     means_nr = np.array(means_nr)
+#     means_r = np.array(means_r)
+#     err_nr = np.array(err_nr)
+#     err_r = np.array(err_r)
 
-    # Determine number of lines (5 for top row, 6 for bottom row)
-    n_rows = means_nr.shape[0] 
+#     # Determine number of lines (5 for top row, 6 for bottom row)
+#     n_rows = means_nr.shape[0] 
     
-    # Calculate jitter
-    # We have n_rows * 2 lines (NR + R). We spread them slightly around x.
-    total_lines = n_rows * 2
-    jitter_arr = np.linspace(-0.1, 0.1, total_lines)
+#     # Calculate jitter
+#     # We have n_rows * 2 lines (NR + R). We spread them slightly around x.
+#     total_lines = n_rows * 2
+#     jitter_arr = np.linspace(-0.1, 0.1, total_lines)
     
-    # --- Plot NR Lines (Solid) ---
-    # These correspond to the first 'n_rows' of the single_legend
-    for i in range(n_rows):
-        # Specific jitter for this line
-        x_shifted = x_vals + jitter_arr[i]
+#     # --- Plot NR Lines (Solid) ---
+#     # These correspond to the first 'n_rows' of the single_legend
+#     for i in range(n_rows):
+#         # Specific jitter for this line
+#         x_shifted = x_vals + jitter_arr[i]
         
-        ax.errorbar(
-            x_shifted,
-            means_nr[i],
-            yerr=err_nr[i],
-            fmt='o-',            # Solid line with markers
-            linewidth=2,
-            capsize=4,
-            label=single_legend[i],
-            color=colors[i],      # Assign color based on method type
-            alpha=0.9
-        )
+#         ax.errorbar(
+#             x_shifted,
+#             means_nr[i],
+#             yerr=err_nr[i],
+#             fmt='o-',            # Solid line with markers
+#             linewidth=2,
+#             capsize=4,
+#             label=single_legend[i],
+#             color=colors[i],      # Assign color based on method type
+#             alpha=0.9
+#         )
 
-    # --- Plot R Lines (Dotted) ---
-    # These correspond to the second half of the single_legend, adjusted by offset
-    # Legend structure is [6 items FL] + [6 items Pro]. 
-    # Index for R corresponds to i + 6.
-    for i in range(n_rows):
-        # Specific jitter for this line (offset from NR lines)
-        x_shifted = x_vals + jitter_arr[i + n_rows]
+#     # --- Plot R Lines (Dotted) ---
+#     # These correspond to the second half of the single_legend, adjusted by offset
+#     # Legend structure is [6 items FL] + [6 items Pro]. 
+#     # Index for R corresponds to i + 6.
+#     for i in range(n_rows):
+#         # Specific jitter for this line (offset from NR lines)
+#         x_shifted = x_vals + jitter_arr[i + n_rows]
         
-        # Calculate legend index (jump over the 6 FL items)
-        leg_idx = i + 6
+#         # Calculate legend index (jump over the 6 FL items)
+#         leg_idx = i + 6
         
-        ax.errorbar(
-            x_shifted,
-            means_r[i],
-            yerr=err_r[i],
-            fmt='o:',            # Dotted line (:) with markers
-            linewidth=2,
-            capsize=4,
-            label=single_legend[leg_idx],
-            color=colors[i],      # Same color as the NR counterpart
-            alpha=0.9
-        )
+#         ax.errorbar(
+#             x_shifted,
+#             means_r[i],
+#             yerr=err_r[i],
+#             fmt='o:',            # Dotted line (:) with markers
+#             linewidth=2,
+#             capsize=4,
+#             label=single_legend[leg_idx],
+#             color=colors[i],      # Same color as the NR counterpart
+#             alpha=0.9
+#         )
 
-    # Formatting
-    if idx < 3:
-        x_tick_lbls = x_tick_lbls_line
-    else:
-        x_tick_lbls = x_tick_lbls_occupancy
-        ax.set_xlabel("Maze Complexity")
-    ax.set_title(title, fontsize=11)
-    ax.set_xticks(x_vals)
-    ax.set_xticklabels(x_tick_lbls)
-    ax.grid(axis='y', linestyle='--', alpha=0.5)
+#     # Formatting
+#     if idx < 3:
+#         x_tick_lbls = x_tick_lbls_line
+#     else:
+#         x_tick_lbls = x_tick_lbls_occupancy
+#         ax.set_xlabel("Maze Complexity")
+#     ax.set_title(title, fontsize=11)
+#     ax.set_xticks(x_vals)
+#     ax.set_xticklabels(x_tick_lbls)
+#     ax.grid(axis='y', linestyle='--', alpha=0.5)
     
-    if idx % 3 == 0:
-        ax.set_ylabel("Accuracy (%)")
+#     if idx % 3 == 0:
+#         ax.set_ylabel("Accuracy (%)")
     
 
 
     
-    # Save handles from the last plot (Bottom-Right) because it contains all 12 lines
-    if idx == 5:
-        handles_for_legend, labels_for_legend = ax.get_legend_handles_labels()
+#     # Save handles from the last plot (Bottom-Right) because it contains all 12 lines
+#     if idx == 5:
+#         handles_for_legend, labels_for_legend = ax.get_legend_handles_labels()
 
-# 5. Create Single Global Legend to the Right
-# We take the handles from the bottom-right plot which covers all 12 cases.
-# We stop the plots at 70% of the width, leaving 30% white space on the right.
-plt.subplots_adjust(right=0.70)
-# Position the legend within that white space
-fig.legend(
-    handles_for_legend, 
-    labels_for_legend, 
-    loc='center left',           # Align the LEFT side of the legend...
-    bbox_to_anchor=(0.78, 0.5),  # ...to the point just after the plots (0.72)
-    title="Representations & Models",
-    borderaxespad=0.
-)
+# # 5. Create Single Global Legend to the Right
+# # We take the handles from the bottom-right plot which covers all 12 cases.
+# # We stop the plots at 70% of the width, leaving 30% white space on the right.
+# plt.subplots_adjust(right=0.70)
+# # Position the legend within that white space
+# fig.legend(
+#     handles_for_legend, 
+#     labels_for_legend, 
+#     loc='center left',           # Align the LEFT side of the legend...
+#     bbox_to_anchor=(0.78, 0.5),  # ...to the point just after the plots (0.72)
+#     title="Representations & Models",
+#     borderaxespad=0.
+# )
 
-plt.tight_layout()
-# Adjust right margin to make room for the legend
-plt.subplots_adjust(right=0.88) 
-plt.show()
+# plt.tight_layout()
+# # Adjust right margin to make room for the legend
+# plt.subplots_adjust(right=0.88) 
+# plt.show()
+
+
+
+
+
+
+
+
 #------------- Plotting raw scores for all types and sizes until run 10 ----------------------
 
 
-# # NR -- Coords -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
-# # Raw Scores NR Coords 3x3
-# line_adj_json_raw_score = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
-# line_adj_txt_raw_score = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 3.0, 7.0, 5.0])
-# line_jpg_raw_score = np.array([2.0, 1.0, 2.0, 3.0, 3.0, 5.0, 1.0, 1.0, 3.0, 1.0])
-# line_json_raw_score = np.array([5.0, 1.0, 3.0, 1.0, 3.0, 5.0, 1.0, 1.0, 3.0, 1.0])
-# line_tokenized_txt_raw_score = np.array([1.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0])
-# occupancy_adj_json_raw_score = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
-# occupancy_adj_txt_raw_score = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
-# occupancy_ascii_txt_raw_score = np.array([0.0, 9.0, 0.0, 9.0, 0.0, 0.0, 0.0, 0.0, 0.0, 9.0])  
-# occupancy_jpg_raw_score = np.array([0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_json_raw_score = np.array([9.0, 9.0, 9.0, 9.0, 1.0, 9.0, 9.0, 13.0, 13.0, 9.0])
-# occupancy_tokenized_txt_raw_score = np.array([1.0, 9.0, 9.0, 9.0, 1.0, 1.0, 9.0, 13.0, 1.0, 9])
-# # 3x3 s
-# avg_coords_line_adj_json_raw_score = np.mean(line_adj_json_raw_score)
-# avg_coords_line_adj_txt_raw_score = np.mean(line_adj_txt_raw_score)
-# avg_coords_line_jpg_raw_score = np.mean(line_jpg_raw_score)
-# avg_coords_line_json_raw_score = np.mean(line_json_raw_score)
-# avg_coords_line_tokenized_txt_raw_score = np.mean(line_tokenized_txt_raw_score)
-# avg_coords_occupancy_adj_json_raw_score = np.mean(occupancy_adj_json_raw_score)
-# avg_coords_occupancy_adj_txt_raw_score = np.mean(occupancy_adj_txt_raw_score)
-# avg_coords_occupancy_ascii_txt_raw_score = np.mean(occupancy_ascii_txt_raw_score)  
-# avg_coords_occupancy_jpg_raw_score = np.mean(occupancy_jpg_raw_score)
-# avg_coords_occupancy_json_raw_score = np.mean(occupancy_json_raw_score)
-# avg_coords_occupancy_tokenized_txt_raw_score = np.mean(occupancy_tokenized_txt_raw_score)
-# # Raw Scores NR Coords 6x6
-# line_adj_json_raw_score_6 = np.array([9.0, 19.0, 14.0, 13.0, 15.0, 16.0, 24.0, 9.0, 10.0, 16.0])
-# line_adj_txt_raw_score_6 = np.array([9.0, 8.0, 5.0, 7.0, 15.0, 21.0, 24.0, 11.0, 10.0, 10.0])
-# line_jpg_raw_score_6 = np.array([2.0, 2.0, 1.0, 1.0, 4.0, 1.0, 2.0, 1.0, 2.0, 1.0])
-# line_json_raw_score_6 = np.array([2.0, 2.0, 2.0, 4.0, 4.0, 3.0, 4.0, 4.0, 2.0, 1.0])
-# line_tokenized_txt_raw_score_6 = np.array([6.0, 1.0, 1.0, 1.0, 3.0, 1.0, 1.0, 1.0, 0.0, 1.0])
-# occupancy_adj_json_raw_score_6 = np.array([33.0, 29.0, 69.0, 49.0, 29.0, 41.0, 49.0, 21.0, 25.0, 19.0])
-# occupancy_adj_txt_raw_score_6 = np.array([17.0, 37.0, 17.0, 57.0, 29.0, 17.0, 21.0, 21.0, 19.0, 19.0])
-# occupancy_ascii_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_jpg_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_json_raw_score_6 = np.array([1.0, 1.0, 7.0, 17.0, 1.0, 9.0, 1.0, 17.0, 1.0, 5.0])
-# occupancy_tokenized_txt_raw_score_6 = np.array([1.0, 1.0, 7.0, 13.0, 1.0, 9.0, 1.0, 11.0, 5.0, 5])
-# # 6x6 averages
-# avg_coords_line_adj_json_raw_score_6 = np.mean(line_adj_json_raw_score_6)
-# avg_coords_line_adj_txt_raw_score_6 = np.mean(line_adj_txt_raw_score_6)
-# avg_coords_line_jpg_raw_score_6 = np.mean(line_jpg_raw_score_6)
-# avg_coords_line_json_raw_score_6 = np.mean(line_json_raw_score_6)
-# avg_coords_line_tokenized_txt_raw_score_6 = np.mean(line_tokenized_txt_raw_score_6)
-# avg_coords_occupancy_adj_json_raw_score_6 = np.mean(occupancy_adj_json_raw_score_6)
-# avg_coords_occupancy_adj_txt_raw_score_6 = np.mean(occupancy_adj_txt_raw_score_6)
-# avg_coords_occupancy_ascii_txt_raw_score_6 = np.mean(occupancy_ascii_txt_raw_score_6)  
-# avg_coords_occupancy_jpg_raw_score_6 = np.mean(occupancy_jpg_raw_score_6)
-# avg_coords_occupancy_json_raw_score_6 = np.mean(occupancy_json_raw_score_6)
-# avg_coords_occupancy_tokenized_txt_raw_score_6 = np.mean(occupancy_tokenized_txt_raw_score_6)
-# # Raw Scores NR Coords 15x15
-# line_adj_json_raw_score_15 = np.array([3.0, 20.0, 44.0, 23.0, 5.0, 19.0, 5.0, 29.0, 15.0, 13.0])
-# line_adj_txt_raw_score_15 = np.array([11.0, 19.0, 15.0, 9.0, 6.0, 24.0, 3.0, 3.0, 7.0, 16.0])
-# line_jpg_raw_score_15 = np.array([4.0, 1.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 1.0])
-# line_json_raw_score_15 = np.array([2.0, 4.0, 2.0, 1.0, 5.0, 1.0, 1.0, 2.0, 3.0, 1.0])
-# line_tokenized_txt_raw_score_15 = np.array([1.0, 0.0, 0.0, 4.0, 2.0, 1.0, 0.0, 0.0, 0.0, 1.0])
-# occupancy_adj_json_raw_score_15 = np.array([67.0, 11.0, 9.0, 62.0, 37.0, 85.0, 85.0, 23.0, 17.0, 13.0])
-# occupancy_adj_txt_raw_score_15 = np.array([15.0, 9.0, 9.0, 37.0, 25.0, 49.0, 35.0, 51.0, 69.0, 32.0])
-# occupancy_ascii_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_jpg_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_json_raw_score_15 = np.array([1.0, 1.0, 1.0, 7.0, 9.0, 17.0, 5.0, 5.0, 1.0, 9.0])
-# occupancy_tokenized_txt_raw_score_15 = np.array([1.0, 1.0, 1.0, 7, 11.0, 13.0, 11.0, 9.0, 1.0, 11.0])
-# # 15x15 averages
-# avg_coords_line_adj_json_raw_score_15 = np.mean(line_adj_json_raw_score_15)
-# avg_coords_line_adj_txt_raw_score_15 = np.mean(line_adj_txt_raw_score_15)
-# avg_coords_line_jpg_raw_score_15 = np.mean(line_jpg_raw_score_15)
-# avg_coords_line_json_raw_score_15 = np.mean(line_json_raw_score_15)
-# avg_coords_line_tokenized_txt_raw_score_15 = np.mean(line_tokenized_txt_raw_score_15)   
-# avg_coords_occupancy_adj_json_raw_score_15 = np.mean(occupancy_adj_json_raw_score_15)
-# avg_coords_occupancy_adj_txt_raw_score_15 = np.mean(occupancy_adj_txt_raw_score_15)
-# avg_coords_occupancy_ascii_txt_raw_score_15 = np.mean(occupancy_ascii_txt_raw_score_15)
-# avg_coords_occupancy_jpg_raw_score_15 = np.mean(occupancy_jpg_raw_score_15)
-# avg_coords_occupancy_json_raw_score_15 = np.mean(occupancy_json_raw_score_15)
-# avg_coords_occupancy_tokenized_txt_raw_score_15 = np.mean(occupancy_tokenized_txt_raw_score_15)
+# NR -- Coords -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
+# Raw Scores NR Coords 3x3
+line_NR_coords_adj_json_raw_score_3 = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
+line_NR_coords_adj_txt_raw_score_3 = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 3.0, 7.0, 5.0])
+line_NR_coords_jpg_raw_score_3 = np.array([2.0, 1.0, 2.0, 3.0, 3.0, 5.0, 1.0, 1.0, 3.0, 1.0])
+line_NR_coords_json_raw_score_3 = np.array([5.0, 1.0, 3.0, 1.0, 3.0, 5.0, 1.0, 1.0, 3.0, 1.0])
+line_NR_coords_tokenized_txt_raw_score_3 = np.array([1.0, 0.0, 0.0, 3.0, 0.0, 0.0, 0.0, 1.0, 0.0, 1.0])
+occupancy_NR_coords_adj_json_raw_score_3 = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
+occupancy_NR_coords_adj_txt_raw_score_3 = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
+occupancy_NR_coords_ascii_txt_raw_score_3 = np.array([0.0, 9.0, 0.0, 9.0, 0.0, 0.0, 0.0, 0.0, 0.0, 9.0])  
+occupancy_NR_coords_jpg_raw_score_3 = np.array([0.0, 0.0, 5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_coords_json_raw_score_3 = np.array([9.0, 9.0, 9.0, 9.0, 1.0, 9.0, 9.0, 13.0, 13.0, 9.0])
+occupancy_NR_coords_tokenized_txt_raw_score_3 = np.array([1.0, 9.0, 9.0, 9.0, 1.0, 1.0, 9.0, 13.0, 1.0, 9])
+# 3x3 averages
+avg_line_NR_coords_adj_json_raw_score_3 = np.mean(line_NR_coords_adj_json_raw_score_3)
+avg_line_NR_coords_adj_txt_raw_score_3 = np.mean(line_NR_coords_adj_txt_raw_score_3)
+avg_line_NR_coords_jpg_raw_score_3 = np.mean(line_NR_coords_jpg_raw_score_3)
+avg_line_NR_coords_json_raw_score_3 = np.mean(line_NR_coords_json_raw_score_3)
+avg_line_NR_coords_tokenized_txt_raw_score_3 = np.mean(line_NR_coords_tokenized_txt_raw_score_3)
+avg_occupancy_NR_coords_adj_json_raw_score_3 = np.mean(occupancy_NR_coords_adj_json_raw_score_3)
+avg_occupancy_NR_coords_adj_txt_raw_score_3 = np.mean(occupancy_NR_coords_adj_txt_raw_score_3)
+avg_occupancy_NR_coords_ascii_txt_raw_score_3 = np.mean(occupancy_NR_coords_ascii_txt_raw_score_3)  
+avg_occupancy_NR_coords_jpg_raw_score_3 = np.mean(occupancy_NR_coords_jpg_raw_score_3)
+avg_occupancy_NR_coords_json_raw_score_3 = np.mean(occupancy_NR_coords_json_raw_score_3)
+avg_occupancy_NR_coords_tokenized_txt_raw_score_3 = np.mean(occupancy_NR_coords_tokenized_txt_raw_score_3)
+# Raw Scores NR Coords 6x6
+line_NR_coords_adj_json_raw_score_6 = np.array([9.0, 19.0, 14.0, 13.0, 15.0, 16.0, 24.0, 9.0, 10.0, 16.0])
+line_NR_coords_adj_txt_raw_score_6 = np.array([9.0, 8.0, 5.0, 7.0, 15.0, 21.0, 24.0, 11.0, 10.0, 10.0])
+line_NR_coords_jpg_raw_score_6 = np.array([2.0, 2.0, 1.0, 1.0, 4.0, 1.0, 2.0, 1.0, 2.0, 1.0])
+line_NR_coords_json_raw_score_6 = np.array([2.0, 2.0, 2.0, 4.0, 4.0, 3.0, 4.0, 4.0, 2.0, 1.0])
+line_NR_coords_tokenized_txt_raw_score_6 = np.array([6.0, 1.0, 1.0, 1.0, 3.0, 1.0, 1.0, 1.0, 0.0, 1.0])
+occupancy_NR_coords_adj_json_raw_score_6 = np.array([33.0, 29.0, 69.0, 49.0, 29.0, 41.0, 49.0, 21.0, 25.0, 19.0])
+occupancy_NR_coords_adj_txt_raw_score_6 = np.array([17.0, 37.0, 17.0, 57.0, 29.0, 17.0, 21.0, 21.0, 19.0, 19.0])
+occupancy_NR_coords_ascii_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_coords_jpg_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_coords_json_raw_score_6 = np.array([1.0, 1.0, 7.0, 17.0, 1.0, 9.0, 1.0, 17.0, 1.0, 5.0])
+occupancy_NR_coords_tokenized_txt_raw_score_6 = np.array([1.0, 1.0, 7.0, 13.0, 1.0, 9.0, 1.0, 11.0, 5.0, 5])
+# 6x6 averages
+avg_line_NR_coords_adj_json_raw_score_6 = np.mean(line_NR_coords_adj_json_raw_score_6)
+avg_line_NR_coords_adj_txt_raw_score_6 = np.mean(line_NR_coords_adj_txt_raw_score_6)
+avg_line_NR_coords_jpg_raw_score_6 = np.mean(line_NR_coords_jpg_raw_score_6)
+avg_line_NR_coords_json_raw_score_6 = np.mean(line_NR_coords_json_raw_score_6)
+avg_line_NR_coords_tokenized_txt_raw_score_6 = np.mean(line_NR_coords_tokenized_txt_raw_score_6)
+avg_occupancy_NR_coords_adj_json_raw_score_6 = np.mean(occupancy_NR_coords_adj_json_raw_score_6)
+avg_occupancy_NR_coords_adj_txt_raw_score_6 = np.mean(occupancy_NR_coords_adj_txt_raw_score_6)
+avg_occupancy_NR_coords_ascii_txt_raw_score_6 = np.mean(occupancy_NR_coords_ascii_txt_raw_score_6)  
+avg_occupancy_NR_coords_jpg_raw_score_6 = np.mean(occupancy_NR_coords_jpg_raw_score_6)
+avg_occupancy_NR_coords_json_raw_score_6 = np.mean(occupancy_NR_coords_json_raw_score_6)
+avg_occupancy_NR_coords_tokenized_txt_raw_score_6 = np.mean(occupancy_NR_coords_tokenized_txt_raw_score_6)
+# Raw Scores NR Coords 15x15
+line_NR_coords_adj_json_raw_score_15 = np.array([3.0, 20.0, 44.0, 23.0, 5.0, 19.0, 5.0, 29.0, 15.0, 13.0])
+line_NR_coords_adj_txt_raw_score_15 = np.array([11.0, 19.0, 15.0, 9.0, 6.0, 24.0, 3.0, 3.0, 7.0, 16.0])
+line_NR_coords_jpg_raw_score_15 = np.array([4.0, 1.0, 3.0, 1.0, 1.0, 1.0, 1.0, 1.0, 3.0, 1.0])
+line_NR_coords_json_raw_score_15 = np.array([2.0, 4.0, 2.0, 1.0, 5.0, 1.0, 1.0, 2.0, 3.0, 1.0])
+line_NR_coords_tokenized_txt_raw_score_15 = np.array([1.0, 0.0, 0.0, 4.0, 2.0, 1.0, 0.0, 0.0, 0.0, 1.0])
+occupancy_NR_coords_adj_json_raw_score_15 = np.array([67.0, 11.0, 9.0, 62.0, 37.0, 85.0, 85.0, 23.0, 17.0, 13.0])
+occupancy_NR_coords_adj_txt_raw_score_15 = np.array([15.0, 9.0, 9.0, 37.0, 25.0, 49.0, 35.0, 51.0, 69.0, 32.0])
+occupancy_NR_coords_ascii_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_coords_jpg_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_coords_json_raw_score_15 = np.array([1.0, 1.0, 1.0, 7.0, 9.0, 17.0, 5.0, 5.0, 1.0, 9.0])
+occupancy_NR_coords_tokenized_txt_raw_score_15 = np.array([1.0, 1.0, 1.0, 7, 11.0, 13.0, 11.0, 9.0, 1.0, 11.0])
+# 15x15 averages
+avg_line_NR_coords_adj_json_raw_score_15 = np.mean(line_NR_coords_adj_json_raw_score_15)
+avg_line_NR_coords_adj_txt_raw_score_15 = np.mean(line_NR_coords_adj_txt_raw_score_15)
+avg_line_NR_coords_jpg_raw_score_15 = np.mean(line_NR_coords_jpg_raw_score_15)
+avg_line_NR_coords_json_raw_score_15 = np.mean(line_NR_coords_json_raw_score_15)
+avg_line_NR_coords_tokenized_txt_raw_score_15 = np.mean(line_NR_coords_tokenized_txt_raw_score_15)   
+avg_occupancy_NR_coords_adj_json_raw_score_15 = np.mean(occupancy_NR_coords_adj_json_raw_score_15)
+avg_occupancy_NR_coords_adj_txt_raw_score_15 = np.mean(occupancy_NR_coords_adj_txt_raw_score_15)
+avg_occupancy_NR_coords_ascii_txt_raw_score_15 = np.mean(occupancy_NR_coords_ascii_txt_raw_score_15)
+avg_occupancy_NR_coords_jpg_raw_score_15 = np.mean(occupancy_NR_coords_jpg_raw_score_15)
+avg_occupancy_NR_coords_json_raw_score_15 = np.mean(occupancy_NR_coords_json_raw_score_15)
+avg_occupancy_NR_coords_tokenized_txt_raw_score_15 = np.mean(occupancy_NR_coords_tokenized_txt_raw_score_15)
 
 # # Dataset for top chart
 # jpg_line = [avg_coords_line_jpg_raw_score , avg_coords_line_jpg_raw_score_6 , avg_coords_line_jpg_raw_score_15]
@@ -1786,79 +1796,79 @@ plt.show()
 
 
 
-# # NR -- Allo -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
-# # Raw Scores NR Allo 3x3
-# line_adj_json_raw_score = np.array([0.0, 0.0, 4.0, 4.0, 2.0, 4.0, 4.0, 2.0, 2.0, 4.0])
-# line_adj_txt_raw_score = np.array([0.0, 4.0, 0.0, 4.0, 0.0, 0.0, 4.0, 2.0, 2.0, 4.0])
-# line_jpg_raw_score = np.array([2.0, 0.0, 2.0, 4.0, 2.0, 2.0, 4.0, 0.0, 0.0, 0.0])
-# line_json_raw_score = np.array([4.0, 0.0, 4.0, 0.0, 2.0, 4.0, 0.0, 0.0, 2.0, 0.0])
-# line_tokenized_txt_raw_score = np.array([0.0, 4.0, 0.0, 1.0, 0.0, 0.0, 1.0, 2.0, 0.0, 1.0])
-# occupancy_adj_json_raw_score = np.array([4.0, 2.0, 6.0, 8.0, 0.0, 4.0, 8.0, 4.0, 0.0, 8.0])
-# occupancy_adj_txt_raw_score = np.array([5.0, 2.0, 0.0, 3.0, 4.0, 2.0, 3.0, 4.0, 0.0, 8.0])
-# occupancy_ascii_txt_raw_score = np.array([0.0, 8.0, 0.0, 0.0, 0.0, 0.0, 5.0, 4.0, 4.0, 0.0])
-# occupancy_jpg_raw_score = np.array([1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0])
-# occupancy_json_raw_score = np.array([5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 0.0, 7.0])
-# occupancy_tokenized_txt_raw_score = np.array([0.0, 0.0, 0.0, 4.0, 1.0, 1.0, 0.0, 1.0, 0.0, 8])
-# # 3x3 averages
-# avg_allo_line_adj_json_raw_score = np.mean(line_adj_json_raw_score)
-# avg_allo_line_adj_txt_raw_score = np.mean(line_adj_txt_raw_score)
-# avg_allo_line_jpg_raw_score = np.mean(line_jpg_raw_score)
-# avg_allo_line_json_raw_score = np.mean(line_json_raw_score)
-# avg_allo_line_tokenized_txt_raw_score = np.mean(line_tokenized_txt_raw_score)
-# avg_allo_occupancy_adj_json_raw_score = np.mean(occupancy_adj_json_raw_score)
-# avg_allo_occupancy_adj_txt_raw_score = np.mean(occupancy_adj_txt_raw_score)
-# avg_allo_occupancy_ascii_txt_raw_score = np.mean(occupancy_ascii_txt_raw_score)  
-# avg_allo_occupancy_jpg_raw_score = np.mean(occupancy_jpg_raw_score)
-# avg_allo_occupancy_json_raw_score = np.mean(occupancy_json_raw_score)
-# avg_allo_occupancy_tokenized_txt_raw_score = np.mean(occupancy_tokenized_txt_raw_score)
-# #Raw Scores NR Allo 6x6
-# line_adj_json_raw_score_6 = np.array([3.0, 1.0, 3.0, 5.0, 0.0, 4.0, 2.0, 10.0, 2.0, 3.0])
-# line_adj_txt_raw_score_6 = np.array([4.0, 0.0, 4.0, 5.0, 3.0, 1.0, 0.0, 6.0, 0.0, 1.0])
-# line_jpg_raw_score_6 = np.array([1.0, 0.0, 1.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 2.0])
-# line_json_raw_score_6 = np.array([2.0, 1.0, 0.0, 5.0, 3.0, 0.0, 3.0, 0.0, 3.0, 0.0])
-# line_tokenized_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 1.0, 3.0, 1.0, 0.0, 1.0, 0.0, 2.0])
-# occupancy_adj_json_raw_score_6 = np.array([6.0, 2.0, 5.0, 10.0, 4.0, 2.0, 4.0, 10.0, 2.0, 2.0])
-# occupancy_adj_txt_raw_score_6 = np.array([6.0, 2.0, 6.0, 10.0, 4.0, 7.0, 4.0, 18.0, 6.0, 0.0])
-# occupancy_ascii_txt_raw_score_6 = np.array([2.0, 4.0, 0.0, 12.0, 0.0, 0.0, 1.0, 11.0, 0.0, 3.0])
-# occupancy_jpg_raw_score_6 = np.array([0.0, 0.0, 1.0, 6.0, 1.0, 1.0, 2.0, 1.0, 1.0, 0.0])
-# occupancy_json_raw_score_6 = np.array([0.0, 0.0, 4.0, 8.0, 0.0, 4.0, 0.0, 16.0, 0.0, 4.0])
-# occupancy_tokenized_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 8.0, 0.0, 0.0, 0.0, 8.0, 0.0, 1])
-# #6x6 averages
-# avg_allo_line_adj_json_raw_score_6 = np.mean(line_adj_json_raw_score_6)
-# avg_allo_line_adj_txt_raw_score_6 = np.mean(line_adj_txt_raw_score_6)
-# avg_allo_line_jpg_raw_score_6 = np.mean(line_jpg_raw_score_6)
-# avg_allo_line_json_raw_score_6 = np.mean(line_json_raw_score_6)
-# avg_allo_line_tokenized_txt_raw_score_6 = np.mean(line_tokenized_txt_raw_score_6)
-# avg_allo_occupancy_adj_json_raw_score_6 = np.mean(occupancy_adj_json_raw_score_6)
-# avg_allo_occupancy_adj_txt_raw_score_6 = np.mean(occupancy_adj_txt_raw_score_6)
-# avg_allo_occupancy_ascii_txt_raw_score_6 = np.mean(occupancy_ascii_txt_raw_score_6)  
-# avg_allo_occupancy_jpg_raw_score_6 = np.mean(occupancy_jpg_raw_score_6)
-# avg_allo_occupancy_json_raw_score_6 = np.mean(occupancy_json_raw_score_6)
-# avg_allo_occupancy_tokenized_txt_raw_score_6 = np.mean(occupancy_tokenized_txt_raw_score_6)
-# # Raw Scores NR Allo 15x15
-# line_adj_json_raw_score_15 = np.array([0.0, 0.0, 0.0, 1.0, 4.0, 8.0, 1.0, 1.0, 0.0, 1.0])
-# line_adj_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 1.0, 5.0, 10.0, 1.0, 1.0, 0.0, 1.0])
-# line_jpg_raw_score_15 = np.array([0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 5.0])
-# line_json_raw_score_15 = np.array([2.0, 3.0, 1.0, 1.0, 2.0, 8.0, 0.0, 0.0, 1.0, 0.0])
-# line_tokenized_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0])
-# occupancy_adj_json_raw_score_15 = np.array([2.0, 2.0, 6.0, 0.0, 6.0, 14.0, 3.0, 4.0, 4.0, 8.0])
-# occupancy_adj_txt_raw_score_15 = np.array([0.0, 0.0, 2.0, 0.0, 0.0, 16.0, 4.0, 0.0, 2.0, 0.0])
-# occupancy_ascii_txt_raw_score_15 = np.array([0.0, 0.0, 2.0, 3.0, 0.0, 0.0, 3.0, 3.0, 0.0, 3.0])
-# occupancy_jpg_raw_score_15 = np.array([0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_json_raw_score_15 = np.array([0.0, 0.0, 0.0, 1.0, 6.0, 0.0, 1.0, 1.0, 0.0, 1.0])
-# occupancy_tokenized_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 2.0, 6.0, 12.0, 4.0, 3.0, 0.0, 4.0])
-# # 15x15 averages
-# avg_allo_line_adj_json_raw_score_15 = np.mean(line_adj_json_raw_score_15)
-# avg_allo_line_adj_txt_raw_score_15 = np.mean(line_adj_txt_raw_score_15)
-# avg_allo_line_jpg_raw_score_15 = np.mean(line_jpg_raw_score_15)
-# avg_allo_line_json_raw_score_15 = np.mean(line_json_raw_score_15)
-# avg_allo_line_tokenized_txt_raw_score_15 = np.mean(line_tokenized_txt_raw_score_15)
-# avg_allo_occupancy_adj_json_raw_score_15 = np.mean(occupancy_adj_json_raw_score_15)
-# avg_allo_occupancy_adj_txt_raw_score_15 = np.mean(occupancy_adj_txt_raw_score_15)
-# avg_allo_occupancy_ascii_txt_raw_score_15 = np.mean(occupancy_ascii_txt_raw_score_15) 
-# avg_allo_occupancy_jpg_raw_score_15 = np.mean(occupancy_jpg_raw_score_15)
-# avg_allo_occupancy_json_raw_score_15 = np.mean(occupancy_json_raw_score_15)
-# avg_allo_occupancy_tokenized_txt_raw_score_15 = np.mean(occupancy_tokenized_txt_raw_score_15)
+# NR -- Allo -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
+# Raw Scores NR Allo 3x3
+line_NR_allo_adj_json_raw_score_3 = np.array([0.0, 0.0, 4.0, 4.0, 2.0, 4.0, 4.0, 2.0, 2.0, 4.0])
+line_NR_allo_adj_txt_raw_score_3 = np.array([0.0, 4.0, 0.0, 4.0, 0.0, 0.0, 4.0, 2.0, 2.0, 4.0])
+line_NR_allo_jpg_raw_score_3 = np.array([2.0, 0.0, 2.0, 4.0, 2.0, 2.0, 4.0, 0.0, 0.0, 0.0])
+line_NR_allo_json_raw_score_3 = np.array([4.0, 0.0, 4.0, 0.0, 2.0, 4.0, 0.0, 0.0, 2.0, 0.0])
+line_NR_allo_tokenized_txt_raw_score_3 = np.array([0.0, 4.0, 0.0, 1.0, 0.0, 0.0, 1.0, 2.0, 0.0, 1.0])
+occupancy_NR_allo_adj_json_raw_score_3 = np.array([4.0, 2.0, 6.0, 8.0, 0.0, 4.0, 8.0, 4.0, 0.0, 8.0])
+occupancy_NR_allo_adj_txt_raw_score_3 = np.array([5.0, 2.0, 0.0, 3.0, 4.0, 2.0, 3.0, 4.0, 0.0, 8.0])
+occupancy_NR_allo_ascii_txt_raw_score_3 = np.array([0.0, 8.0, 0.0, 0.0, 0.0, 0.0, 5.0, 4.0, 4.0, 0.0])
+occupancy_NR_allo_jpg_raw_score_3 = np.array([1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0])
+occupancy_NR_allo_json_raw_score_3 = np.array([5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 0.0, 7.0])
+occupancy_NR_allo_tokenized_txt_raw_score_3 = np.array([0.0, 0.0, 0.0, 4.0, 1.0, 1.0, 0.0, 1.0, 0.0, 8])
+# 3x3 averages
+avg_line_NR_allo_adj_json_raw_score_3 = np.mean(line_NR_allo_adj_json_raw_score_3)
+avg_line_NR_allo_adj_txt_raw_score_3 = np.mean(line_NR_allo_adj_txt_raw_score_3)
+avg_line_NR_allo_jpg_raw_score_3 = np.mean(line_NR_allo_jpg_raw_score_3)
+avg_line_NR_allo_json_raw_score_3 = np.mean(line_NR_allo_json_raw_score_3)
+avg_line_NR_allo_tokenized_txt_raw_score_3 = np.mean(line_NR_allo_tokenized_txt_raw_score_3)
+avg_occupancy_NR_allo_adj_json_raw_score_3 = np.mean(occupancy_NR_allo_adj_json_raw_score_3)
+avg_occupancy_NR_allo_adj_txt_raw_score_3 = np.mean(occupancy_NR_allo_adj_txt_raw_score_3)
+avg_occupancy_NR_allo_ascii_txt_raw_score_3 = np.mean(occupancy_NR_allo_ascii_txt_raw_score_3)  
+avg_occupancy_NR_allo_jpg_raw_score_3 = np.mean(occupancy_NR_allo_jpg_raw_score_3)
+avg_occupancy_NR_allo_json_raw_score_3 = np.mean(occupancy_NR_allo_json_raw_score_3)
+avg_occupancy_NR_allo_tokenized_txt_raw_score_3 = np.mean(occupancy_NR_allo_tokenized_txt_raw_score_3)
+#Raw Scores NR Allo 6x6
+line_NR_allo_adj_json_raw_score_6 = np.array([3.0, 1.0, 3.0, 5.0, 0.0, 4.0, 2.0, 10.0, 2.0, 3.0])
+line_NR_allo_adj_txt_raw_score_6 = np.array([4.0, 0.0, 4.0, 5.0, 3.0, 1.0, 0.0, 6.0, 0.0, 1.0])
+line_NR_allo_jpg_raw_score_6 = np.array([1.0, 0.0, 1.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 2.0])
+line_NR_allo_json_raw_score_6 = np.array([2.0, 1.0, 0.0, 5.0, 3.0, 0.0, 3.0, 0.0, 3.0, 0.0])
+line_NR_allo_tokenized_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 1.0, 3.0, 1.0, 0.0, 1.0, 0.0, 2.0])
+occupancy_NR_allo_adj_json_raw_score_6 = np.array([6.0, 2.0, 5.0, 10.0, 4.0, 2.0, 4.0, 10.0, 2.0, 2.0])
+occupancy_NR_allo_adj_txt_raw_score_6 = np.array([6.0, 2.0, 6.0, 10.0, 4.0, 7.0, 4.0, 18.0, 6.0, 0.0])
+occupancy_NR_allo_ascii_txt_raw_score_6 = np.array([2.0, 4.0, 0.0, 12.0, 0.0, 0.0, 1.0, 11.0, 0.0, 3.0])
+occupancy_NR_allo_jpg_raw_score_6 = np.array([0.0, 0.0, 1.0, 6.0, 1.0, 1.0, 2.0, 1.0, 1.0, 0.0])
+occupancy_NR_allo_json_raw_score_6 = np.array([0.0, 0.0, 4.0, 8.0, 0.0, 4.0, 0.0, 16.0, 0.0, 4.0])
+occupancy_NR_allo_tokenized_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 8.0, 0.0, 0.0, 0.0, 8.0, 0.0, 1])
+#6x6 averages
+avg_line_NR_allo_adj_json_raw_score_6 = np.mean(line_NR_allo_adj_json_raw_score_6)
+avg_line_NR_allo_adj_txt_raw_score_6 = np.mean(line_NR_allo_adj_txt_raw_score_6)
+avg_line_NR_allo_jpg_raw_score_6 = np.mean(line_NR_allo_jpg_raw_score_6)
+avg_line_NR_allo_json_raw_score_6 = np.mean(line_NR_allo_json_raw_score_6)
+avg_line_NR_allo_tokenized_txt_raw_score_6 = np.mean(line_NR_allo_tokenized_txt_raw_score_6)
+avg_occupancy_NR_allo_adj_json_raw_score_6 = np.mean(occupancy_NR_allo_adj_json_raw_score_6)
+avg_occupancy_NR_allo_adj_txt_raw_score_6 = np.mean(occupancy_NR_allo_adj_txt_raw_score_6)
+avg_occupancy_NR_allo_ascii_txt_raw_score_6 = np.mean(occupancy_NR_allo_ascii_txt_raw_score_6)  
+avg_occupancy_NR_allo_jpg_raw_score_6 = np.mean(occupancy_NR_allo_jpg_raw_score_6)
+avg_occupancy_NR_allo_json_raw_score_6 = np.mean(occupancy_NR_allo_json_raw_score_6)
+avg_occupancy_NR_allo_tokenized_txt_raw_score_6 = np.mean(occupancy_NR_allo_tokenized_txt_raw_score_6)
+# Raw Scores NR Allo 15x15
+line_NR_allo_adj_json_raw_score_15 = np.array([0.0, 0.0, 0.0, 1.0, 4.0, 8.0, 1.0, 1.0, 0.0, 1.0])
+line_NR_allo_adj_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 1.0, 5.0, 10.0, 1.0, 1.0, 0.0, 1.0])
+line_NR_allo_jpg_raw_score_15 = np.array([0.0, 0.0, 0.0, 2.0, 1.0, 0.0, 0.0, 0.0, 0.0, 5.0])
+line_NR_allo_json_raw_score_15 = np.array([2.0, 3.0, 1.0, 1.0, 2.0, 8.0, 0.0, 0.0, 1.0, 0.0])
+line_NR_allo_tokenized_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0])
+occupancy_NR_allo_adj_json_raw_score_15 = np.array([2.0, 2.0, 6.0, 0.0, 6.0, 14.0, 3.0, 4.0, 4.0, 8.0])
+occupancy_NR_allo_adj_txt_raw_score_15 = np.array([0.0, 0.0, 2.0, 0.0, 0.0, 16.0, 4.0, 0.0, 2.0, 0.0])
+occupancy_NR_allo_ascii_txt_raw_score_15 = np.array([0.0, 0.0, 2.0, 3.0, 0.0, 0.0, 3.0, 3.0, 0.0, 3.0])
+occupancy_NR_allo_jpg_raw_score_15 = np.array([0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_allo_json_raw_score_15 = np.array([0.0, 0.0, 0.0, 1.0, 6.0, 0.0, 1.0, 1.0, 0.0, 1.0])
+occupancy_NR_allo_tokenized_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 2.0, 6.0, 12.0, 4.0, 3.0, 0.0, 4.0])
+# 15x15 averages
+avg_line_NR_allo_adj_json_raw_score_15 = np.mean(line_NR_allo_adj_json_raw_score_15)
+avg_line_NR_allo_adj_txt_raw_score_15 = np.mean(line_NR_allo_adj_txt_raw_score_15)
+avg_line_NR_allo_jpg_raw_score_15 = np.mean(line_NR_allo_jpg_raw_score_15)
+avg_line_NR_allo_json_raw_score_15 = np.mean(line_NR_allo_json_raw_score_15)
+avg_line_NR_allo_tokenized_txt_raw_score_15 = np.mean(line_NR_allo_tokenized_txt_raw_score_15)
+avg_occupancy_NR_allo_adj_json_raw_score_15 = np.mean(occupancy_NR_allo_adj_json_raw_score_15)
+avg_occupancy_NR_allo_adj_txt_raw_score_15 = np.mean(occupancy_NR_allo_adj_txt_raw_score_15)
+avg_occupancy_NR_allo_ascii_txt_raw_score_15 = np.mean(occupancy_NR_allo_ascii_txt_raw_score_15) 
+avg_occupancy_NR_allo_jpg_raw_score_15 = np.mean(occupancy_NR_allo_jpg_raw_score_15)
+avg_occupancy_NR_allo_json_raw_score_15 = np.mean(occupancy_NR_allo_json_raw_score_15)
+avg_occupancy_NR_allo_tokenized_txt_raw_score_15 = np.mean(occupancy_NR_allo_tokenized_txt_raw_score_15)
 
 # # Dataset for top chart
 # jpg_line = [avg_allo_line_jpg_raw_score , avg_allo_line_jpg_raw_score_6 , avg_allo_line_jpg_raw_score_15]
@@ -1939,79 +1949,79 @@ plt.show()
 # plt.show()
 
 
-# # NR -- Ego -- raw scores ----------- 3x3 & 15x15 -----------------------------------
-# # Raw Scores NR Ego 3x3
-# line_adj_json_raw_score = np.array([1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_adj_txt_raw_score = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_jpg_raw_score = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_json_raw_score = np.array([1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_tokenized_txt_raw_score = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_adj_json_raw_score = np.array([0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0])
-# occupancy_adj_txt_raw_score = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_ascii_txt_raw_score = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_jpg_raw_score = np.array([0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_json_raw_score = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_tokenized_txt_raw_score = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0])
-# # 3x3 averages
-# avg_ego_line_adj_json_raw_score = np.mean(line_adj_json_raw_score)
-# avg_ego_line_adj_txt_raw_score = np.mean(line_adj_txt_raw_score)
-# avg_ego_line_jpg_raw_score = np.mean(line_jpg_raw_score)
-# avg_ego_line_json_raw_score = np.mean(line_json_raw_score)
-# avg_ego_line_tokenized_txt_raw_score = np.mean(line_tokenized_txt_raw_score)
-# avg_ego_occupancy_adj_json_raw_score = np.mean(occupancy_adj_json_raw_score)
-# avg_ego_occupancy_adj_txt_raw_score = np.mean(occupancy_adj_txt_raw_score)
-# avg_ego_occupancy_ascii_txt_raw_score = np.mean(occupancy_ascii_txt_raw_score)  
-# avg_ego_occupancy_jpg_raw_score = np.mean(occupancy_jpg_raw_score)
-# avg_ego_occupancy_json_raw_score = np.mean(occupancy_json_raw_score)
-# avg_ego_occupancy_tokenized_txt_raw_score = np.mean(occupancy_tokenized_txt_raw_score)
-# #Raw Scores NR Ego 6x6
-# line_adj_json_raw_score_6 = np.array([3.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_adj_txt_raw_score_6 = np.array([2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_jpg_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_json_raw_score_6 = np.array([0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0])
-# line_tokenized_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
-# occupancy_adj_json_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_adj_txt_raw_score_6 = np.array([0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_ascii_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_jpg_raw_score_6 = np.array([1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0])
-# occupancy_json_raw_score_6 = np.array([0.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_tokenized_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0])
-# #6x6 averages
-# avg_ego_line_adj_json_raw_score_6 = np.mean(line_adj_json_raw_score_6)
-# avg_ego_line_adj_txt_raw_score_6 = np.mean(line_adj_txt_raw_score_6)
-# avg_ego_line_jpg_raw_score_6 = np.mean(line_jpg_raw_score_6)
-# avg_ego_line_json_raw_score_6 = np.mean(line_json_raw_score_6)
-# avg_ego_line_tokenized_txt_raw_score_6 = np.mean(line_tokenized_txt_raw_score_6)
-# avg_ego_occupancy_adj_json_raw_score_6 = np.mean(occupancy_adj_json_raw_score_6)
-# avg_ego_occupancy_adj_txt_raw_score_6 = np.mean(occupancy_adj_txt_raw_score_6)
-# avg_ego_occupancy_ascii_txt_raw_score_6 = np.mean(occupancy_ascii_txt_raw_score_6)  
-# avg_ego_occupancy_jpg_raw_score_6 = np.mean(occupancy_jpg_raw_score_6)
-# avg_ego_occupancy_json_raw_score_6 = np.mean(occupancy_json_raw_score_6)
-# avg_ego_occupancy_tokenized_txt_raw_score_6 = np.mean(occupancy_tokenized_txt_raw_score_6)
-# # Raw Scores NR Ego 15x15
-# line_adj_json_raw_score_15 = np.array([0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_adj_txt_raw_score_15 = np.array([2.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
-# line_jpg_raw_score_15 = np.array([2.0, 4.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
-# line_json_raw_score_15 = np.array([2.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
-# line_tokenized_txt_raw_score_15 = np.array([1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_adj_json_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
-# occupancy_adj_txt_raw_score_15 = np.array([4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
-# occupancy_ascii_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_jpg_raw_score_15 = np.array([2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
-# occupancy_json_raw_score_15 = np.array([0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
-# occupancy_tokenized_txt_raw_score_15 = np.array([1.0, 6.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 1.0, 0.0])
-# # 15x15 averages
-# avg_ego_line_adj_json_raw_score_15 = np.mean(line_adj_json_raw_score_15)
-# avg_ego_line_adj_txt_raw_score_15 = np.mean(line_adj_txt_raw_score_15)
-# avg_ego_line_jpg_raw_score_15 = np.mean(line_jpg_raw_score_15)
-# avg_ego_line_json_raw_score_15 = np.mean(line_json_raw_score_15)
-# avg_ego_line_tokenized_txt_raw_score_15 = np.mean(line_tokenized_txt_raw_score_15)
-# avg_ego_occupancy_adj_json_raw_score_15 = np.mean(occupancy_adj_json_raw_score_15)
-# avg_ego_occupancy_adj_txt_raw_score_15 = np.mean(occupancy_adj_txt_raw_score_15)
-# avg_ego_occupancy_ascii_txt_raw_score_15 = np.mean(occupancy_ascii_txt_raw_score_15)
-# avg_ego_occupancy_jpg_raw_score_15 = np.mean(occupancy_jpg_raw_score_15)
-# avg_ego_occupancy_json_raw_score_15 = np.mean(occupancy_json_raw_score_15)
-# avg_ego_occupancy_tokenized_txt_raw_score_15 = np.mean(occupancy_tokenized_txt_raw_score_15)
+# NR -- Ego -- raw scores ----------- 3x3 & 15x15 -----------------------------------
+# Raw Scores NR Ego 3x3
+line_NR_ego_adj_json_raw_score_3 = np.array([1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_NR_ego_adj_txt_raw_score_3 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_NR_ego_jpg_raw_score_3 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_NR_ego_json_raw_score_3 = np.array([1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_NR_ego_tokenized_txt_raw_score_3 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_adj_json_raw_score_3 = np.array([0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0])
+occupancy_NR_ego_adj_txt_raw_score_3 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_ascii_txt_raw_score_3 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_jpg_raw_score_3 = np.array([0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_json_raw_score_3 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_tokenized_txt_raw_score_3 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0])
+# 3x3 averages
+avg_line_NR_ego_adj_json_raw_score_3 = np.mean(line_NR_ego_adj_json_raw_score_3)
+avg_line_NR_ego_adj_txt_raw_score_3 = np.mean(line_NR_ego_adj_txt_raw_score_3)
+avg_line_NR_ego_jpg_raw_score_3 = np.mean(line_NR_ego_jpg_raw_score_3)
+avg_line_NR_ego_json_raw_score_3 = np.mean(line_NR_ego_json_raw_score_3)
+avg_line_NR_ego_tokenized_txt_raw_score_3 = np.mean(line_NR_ego_tokenized_txt_raw_score_3)
+avg_occupancy_NR_ego_adj_json_raw_score_3 = np.mean(occupancy_NR_ego_adj_json_raw_score_3)
+avg_occupancy_NR_ego_adj_txt_raw_score_3 = np.mean(occupancy_NR_ego_adj_txt_raw_score_3)
+avg_occupancy_NR_ego_ascii_txt_raw_score_3 = np.mean(occupancy_NR_ego_ascii_txt_raw_score_3)  
+avg_occupancy_NR_ego_jpg_raw_score_3 = np.mean(occupancy_NR_ego_jpg_raw_score_3)
+avg_occupancy_NR_ego_json_raw_score_3 = np.mean(occupancy_NR_ego_json_raw_score_3)
+avg_occupancy_NR_ego_tokenized_txt_raw_score_3 = np.mean(occupancy_NR_ego_tokenized_txt_raw_score_3)
+#Raw Scores NR Ego 6x6
+line_NR_ego_adj_json_raw_score_6 = np.array([3.0, 0.0, 0.0, 0.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_NR_ego_adj_txt_raw_score_6 = np.array([2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_NR_ego_jpg_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_NR_ego_json_raw_score_6 = np.array([0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0])
+line_NR_ego_tokenized_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
+occupancy_NR_ego_adj_json_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_adj_txt_raw_score_6 = np.array([0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_ascii_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_jpg_raw_score_6 = np.array([1.0, 1.0, 0.0, 0.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_json_raw_score_6 = np.array([0.0, 2.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_tokenized_txt_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0])
+#6x6 averages
+avg_line_NR_ego_adj_json_raw_score_6 = np.mean(line_NR_ego_adj_json_raw_score_6)
+avg_line_NR_ego_adj_txt_raw_score_6 = np.mean(line_NR_ego_adj_txt_raw_score_6)
+avg_line_NR_ego_jpg_raw_score_6 = np.mean(line_NR_ego_jpg_raw_score_6)
+avg_line_NR_ego_json_raw_score_6 = np.mean(line_NR_ego_json_raw_score_6)
+avg_line_NR_ego_tokenized_txt_raw_score_6 = np.mean(line_NR_ego_tokenized_txt_raw_score_6)
+avg_occupancy_NR_ego_adj_json_raw_score_6 = np.mean(occupancy_NR_ego_adj_json_raw_score_6)
+avg_occupancy_NR_ego_adj_txt_raw_score_6 = np.mean(occupancy_NR_ego_adj_txt_raw_score_6)
+avg_occupancy_NR_ego_ascii_txt_raw_score_6 = np.mean(occupancy_NR_ego_ascii_txt_raw_score_6)  
+avg_occupancy_NR_ego_jpg_raw_score_6 = np.mean(occupancy_NR_ego_jpg_raw_score_6)
+avg_occupancy_NR_ego_json_raw_score_6 = np.mean(occupancy_NR_ego_json_raw_score_6)
+avg_occupancy_NR_ego_tokenized_txt_raw_score_6 = np.mean(occupancy_NR_ego_tokenized_txt_raw_score_6)
+# Raw Scores NR Ego 15x15
+line_NR_ego_adj_json_raw_score_15 = np.array([0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_NR_ego_adj_txt_raw_score_15 = np.array([2.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
+line_NR_ego_jpg_raw_score_15 = np.array([2.0, 4.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
+line_NR_ego_json_raw_score_15 = np.array([2.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
+line_NR_ego_tokenized_txt_raw_score_15 = np.array([1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_adj_json_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
+occupancy_NR_ego_adj_txt_raw_score_15 = np.array([4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
+occupancy_NR_ego_ascii_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_NR_ego_jpg_raw_score_15 = np.array([2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
+occupancy_NR_ego_json_raw_score_15 = np.array([0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
+occupancy_NR_ego_tokenized_txt_raw_score_15 = np.array([1.0, 6.0, 0.0, 0.0, 0.0, 0, 0.0, 0.0, 1.0, 0.0])
+# 15x15 averages
+avg_line_NR_ego_adj_json_raw_score_15 = np.mean(line_NR_ego_adj_json_raw_score_15)
+avg_line_NR_ego_adj_txt_raw_score_15 = np.mean(line_NR_ego_adj_txt_raw_score_15)
+avg_line_NR_ego_jpg_raw_score_15 = np.mean(line_NR_ego_jpg_raw_score_15)
+avg_line_NR_ego_json_raw_score_15 = np.mean(line_NR_ego_json_raw_score_15)
+avg_line_NR_ego_tokenized_txt_raw_score_15 = np.mean(line_NR_ego_tokenized_txt_raw_score_15)
+avg_occupancy_NR_ego_adj_json_raw_score_15 = np.mean(occupancy_NR_ego_adj_json_raw_score_15)
+avg_occupancy_NR_ego_adj_txt_raw_score_15 = np.mean(occupancy_NR_ego_adj_txt_raw_score_15)
+avg_occupancy_NR_ego_ascii_txt_raw_score_15 = np.mean(occupancy_NR_ego_ascii_txt_raw_score_15)
+avg_occupancy_NR_ego_jpg_raw_score_15 = np.mean(occupancy_NR_ego_jpg_raw_score_15)
+avg_occupancy_NR_ego_json_raw_score_15 = np.mean(occupancy_NR_ego_json_raw_score_15)
+avg_occupancy_NR_ego_tokenized_txt_raw_score_15 = np.mean(occupancy_NR_ego_tokenized_txt_raw_score_15)
 
 
 # # Dataset for top chart
@@ -2093,79 +2103,79 @@ plt.show()
 # plt.show()
 
 
-# # R -- Coords -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
-# # Raw Scores R Coords 3x3
-# line_adj_json_raw_score = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
-# line_adj_txt_raw_score = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
-# line_jpg_raw_score = np.array([2.0, 5.0, 5.0, 5.0, 2.0, 2.0, 2.0, 7.0, 7.0, 5.0])
-# line_json_raw_score = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
-# line_tokenized_txt_raw_score = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
-# occupancy_adj_json_raw_score = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
-# occupancy_adj_txt_raw_score = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
-# occupancy_ascii_txt_raw_score = np.array([2.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 6.0, 7.0])
-# occupancy_jpg_raw_score = np.array([1.0, 2.0, 5.0, 0.0, 1.0, 1.0, 3.0, 0.0, 1.0, 9.0])
-# occupancy_json_raw_score = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
-# occupancy_tokenized_txt_raw_score = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9])
-# # 3x3 averages
-# avg_coords_line_adj_json_raw_score = np.mean(line_adj_json_raw_score)
-# avg_coords_line_adj_txt_raw_score = np.mean(line_adj_txt_raw_score)
-# avg_coords_line_jpg_raw_score = np.mean(line_jpg_raw_score)
-# avg_coords_line_json_raw_score = np.mean(line_json_raw_score)
-# avg_coords_line_tokenized_txt_raw_score = np.mean(line_tokenized_txt_raw_score)
-# avg_coords_occupancy_adj_json_raw_score = np.mean(occupancy_adj_json_raw_score)
-# avg_coords_occupancy_adj_txt_raw_score = np.mean(occupancy_adj_txt_raw_score)
-# avg_coords_occupancy_ascii_txt_raw_score = np.mean(occupancy_ascii_txt_raw_score)  
-# avg_coords_occupancy_jpg_raw_score = np.mean(occupancy_jpg_raw_score)
-# avg_coords_occupancy_json_raw_score = np.mean(occupancy_json_raw_score)
-# avg_coords_occupancy_tokenized_txt_raw_score = np.mean(occupancy_tokenized_txt_raw_score)
-# # Raw Scores R Coords 6x6
-# line_adj_json_raw_score_6 = np.array([17.0, 19.0, 35.0, 29.0, 15.0, 21.0, 25.0, 11.0, 17.0, 21.0])
-# line_adj_txt_raw_score_6 = np.array([17.0, 19.0, 35.0, 29.0, 15.0, 21.0, 25.0, 11.0, 17.0, 21.0])
-# line_jpg_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_json_raw_score_6 = np.array([17.0, 19.0, 35.0, 29.0, 15.0, 21.0, 25.0, 11.0, 17.0, 21.0])
-# line_tokenized_txt_raw_score_6 = np.array([17.0, 19.0, 35.0, 29.0, 15.0, 21.0, 25.0, 11.0, 17.0, 21.0])
-# occupancy_adj_json_raw_score_6 = np.array([33.0, 37.0, 69.0, 57.0, 29.0, 41.0, 49.0, 21.0, 33.0, 41.0])
-# occupancy_adj_txt_raw_score_6 = np.array([33.0, 37.0, 69.0, 57.0, 29.0, 41.0, 49.0, 21.0, 33.0, 41.0])
-# occupancy_ascii_txt_raw_score_6 = np.array([8.0, 12.0, 8.0, 1.0, 9.0, 1.0, 1.0, 0.0, 9.0, 1.0])
-# occupancy_jpg_raw_score_6 = np.array([0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_json_raw_score_6 = np.array([9.0, 18.0, 69.0, 57.0, 29.0, 41.0, 49.0, 21.0, 20.0, 41.0])
-# occupancy_tokenized_txt_raw_score_6 = np.array([33.0, 37.0, 69.0, 57.0, 29.0, 41.0, 49.0, 21.0, 33.0, 41])
-# # 6x6 averages
-# avg_coords_line_adj_json_raw_score_6 = np.mean(line_adj_json_raw_score_6)
-# avg_coords_line_adj_txt_raw_score_6 = np.mean(line_adj_txt_raw_score_6)
-# avg_coords_line_jpg_raw_score_6 = np.mean(line_jpg_raw_score_6)
-# avg_coords_line_json_raw_score_6 = np.mean(line_json_raw_score_6)
-# avg_coords_line_tokenized_txt_raw_score_6 = np.mean(line_tokenized_txt_raw_score_6)
-# avg_coords_occupancy_adj_json_raw_score_6 = np.mean(occupancy_adj_json_raw_score_6)
-# avg_coords_occupancy_adj_txt_raw_score_6 = np.mean(occupancy_adj_txt_raw_score_6)
-# avg_coords_occupancy_ascii_txt_raw_score_6 = np.mean(occupancy_ascii_txt_raw_score_6)  
-# avg_coords_occupancy_jpg_raw_score_6 = np.mean(occupancy_jpg_raw_score_6)
-# avg_coords_occupancy_json_raw_score_6 = np.mean(occupancy_json_raw_score_6)
-# avg_coords_occupancy_tokenized_txt_raw_score_6 = np.mean(occupancy_tokenized_txt_raw_score_6)
-# # Raw Scores R Coords 15x15
-# line_adj_json_raw_score_15 = np.array([131.0, 69.0, 139.0, 57.0, 127.0, 101.0, 67.0, 79.0, 133.0, 47.0])
-# line_adj_txt_raw_score_15 = np.array([25.0, 10.0, 72.0, 57.0, 77.0, 93.0, 67.0, 45.0, 62.0, 47.0])
-# line_jpg_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# line_json_raw_score_15 = np.array([31.0, 11.0, 10.0, 4.0, 16.0, 10.0, 38.0, 40.0, 2.0, 20.0])
-# line_tokenized_txt_raw_score_15 = np.array([126.0, 69.0, 139.0, 57.0, 117.0, 23.0, 67.0, 49.0, 133.0, 47.0])
-# occupancy_adj_json_raw_score_15 = np.array([261.0, 137.0, 191.0, 113.0, 253.0, 201.0, 133.0, 157.0, 265.0, 93.0])
-# occupancy_adj_txt_raw_score_15 = np.array([89.0, 21.0, 69.0, 33.0, 31.0, 85.0, 5.0, 91.0, 123.0, 89.0])
-# occupancy_ascii_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0])
-# occupancy_jpg_raw_score_15 = np.array([5.0, 6.0, 3.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0])
-# occupancy_json_raw_score_15 = np.array([31.0, 48.0, 5.0, 17.0, 9.0, 43.0, 40.0, 25.0, 19.0, 31.0])
-# occupancy_tokenized_txt_raw_score_15 = np.array([103.0, 137.0, 21.0, 113.0, 20, 15.0, 133.0, 21.0, 17.0, 11.0])
-# # 15x15 averages
-# avg_coords_line_adj_json_raw_score_15 = np.mean(line_adj_json_raw_score_15)
-# avg_coords_line_adj_txt_raw_score_15 = np.mean(line_adj_txt_raw_score_15)
-# avg_coords_line_jpg_raw_score_15 = np.mean(line_jpg_raw_score_15)
-# avg_coords_line_json_raw_score_15 = np.mean(line_json_raw_score_15)
-# avg_coords_line_tokenized_txt_raw_score_15 = np.mean(line_tokenized_txt_raw_score_15)
-# avg_coords_occupancy_adj_json_raw_score_15 = np.mean(occupancy_adj_json_raw_score_15)
-# avg_coords_occupancy_adj_txt_raw_score_15 = np.mean(occupancy_adj_txt_raw_score_15)
-# avg_coords_occupancy_ascii_txt_raw_score_15 = np.mean(occupancy_ascii_txt_raw_score_15)
-# avg_coords_occupancy_jpg_raw_score_15 = np.mean(occupancy_jpg_raw_score_15)
-# avg_coords_occupancy_json_raw_score_15 = np.mean(occupancy_json_raw_score_15)
-# avg_coords_occupancy_tokenized_txt_raw_score_15 = np.mean(occupancy_tokenized_txt_raw_score_15)
+# R -- Coords -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
+# Raw Scores R Coords 3x3
+line_R_coords_adj_json_raw_score_3 = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
+line_R_coords_adj_txt_raw_score_3 = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
+line_R_coords_jpg_raw_score_3 = np.array([2.0, 5.0, 5.0, 5.0, 2.0, 2.0, 2.0, 7.0, 7.0, 5.0])
+line_R_coords_json_raw_score_3 = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
+line_R_coords_tokenized_txt_raw_score_3 = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
+occupancy_R_coords_adj_json_raw_score_3 = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
+occupancy_R_coords_adj_txt_raw_score_3 = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
+occupancy_R_coords_ascii_txt_raw_score_3 = np.array([2.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 6.0, 7.0])
+occupancy_R_coords_jpg_raw_score_3 = np.array([1.0, 2.0, 5.0, 0.0, 1.0, 1.0, 3.0, 0.0, 1.0, 9.0])
+occupancy_R_coords_json_raw_score_3 = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9.0])
+occupancy_R_coords_tokenized_txt_raw_score_3 = np.array([9.0, 9.0, 9.0, 9.0, 13.0, 9.0, 9.0, 13.0, 13.0, 9])
+# 3x3 averages
+avg_line_R_coords_adj_json_raw_score_3 = np.mean(line_R_coords_adj_json_raw_score_3)
+avg_line_R_coords_adj_txt_raw_score_3 = np.mean(line_R_coords_adj_txt_raw_score_3)
+avg_line_R_coords_jpg_raw_score_3 = np.mean(line_R_coords_jpg_raw_score_3)
+avg_line_R_coords_json_raw_score_3 = np.mean(line_R_coords_json_raw_score_3)
+avg_line_R_coords_tokenized_txt_raw_score_3 = np.mean(line_R_coords_tokenized_txt_raw_score_3)
+avg_occupancy_R_coords_adj_json_raw_score_3 = np.mean(occupancy_R_coords_adj_json_raw_score_3)
+avg_occupancy_R_coords_adj_txt_raw_score_3 = np.mean(occupancy_R_coords_adj_txt_raw_score_3)
+avg_occupancy_R_coords_ascii_txt_raw_score_3 = np.mean(occupancy_R_coords_ascii_txt_raw_score_3)  
+avg_occupancy_R_coords_jpg_raw_score_3 = np.mean(occupancy_R_coords_jpg_raw_score_3)
+avg_occupancy_R_coords_json_raw_score_3 = np.mean(occupancy_R_coords_json_raw_score_3)
+avg_occupancy_R_coords_tokenized_txt_raw_score_3 = np.mean(occupancy_R_coords_tokenized_txt_raw_score_3)
+# Raw Scores R Coords 6x6
+line_R_coords_adj_json_raw_score_6 = np.array([17.0, 19.0, 35.0, 29.0, 15.0, 21.0, 25.0, 11.0, 17.0, 21.0])
+line_R_coords_adj_txt_raw_score_6 = np.array([17.0, 19.0, 35.0, 29.0, 15.0, 21.0, 25.0, 11.0, 17.0, 21.0])
+line_R_coords_jpg_raw_score_6 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_R_coords_json_raw_score_6 = np.array([17.0, 19.0, 35.0, 29.0, 15.0, 21.0, 25.0, 11.0, 17.0, 21.0])
+line_R_coords_tokenized_txt_raw_score_6 = np.array([17.0, 19.0, 35.0, 29.0, 15.0, 21.0, 25.0, 11.0, 17.0, 21.0])
+occupancy_R_coords_adj_json_raw_score_6 = np.array([33.0, 37.0, 69.0, 57.0, 29.0, 41.0, 49.0, 21.0, 33.0, 41.0])
+occupancy_R_coords_adj_txt_raw_score_6 = np.array([33.0, 37.0, 69.0, 57.0, 29.0, 41.0, 49.0, 21.0, 33.0, 41.0])
+occupancy_R_coords_ascii_txt_raw_score_6 = np.array([8.0, 12.0, 8.0, 1.0, 9.0, 1.0, 1.0, 0.0, 9.0, 1.0])
+occupancy_R_coords_jpg_raw_score_6 = np.array([0.0, 1.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_R_coords_json_raw_score_6 = np.array([9.0, 18.0, 69.0, 57.0, 29.0, 41.0, 49.0, 21.0, 20.0, 41.0])
+occupancy_R_coords_tokenized_txt_raw_score_6 = np.array([33.0, 37.0, 69.0, 57.0, 29.0, 41.0, 49.0, 21.0, 33.0, 41])
+# 6x6 averages
+avg_line_R_coords_adj_json_raw_score_6 = np.mean(line_R_coords_adj_json_raw_score_6)
+avg_line_R_coords_adj_txt_raw_score_6 = np.mean(line_R_coords_adj_txt_raw_score_6)
+avg_line_R_coords_jpg_raw_score_6 = np.mean(line_R_coords_jpg_raw_score_6)
+avg_line_R_coords_json_raw_score_6 = np.mean(line_R_coords_json_raw_score_6)
+avg_line_R_coords_tokenized_txt_raw_score_6 = np.mean(line_R_coords_tokenized_txt_raw_score_6)
+avg_occupancy_R_coords_adj_json_raw_score_6 = np.mean(occupancy_R_coords_adj_json_raw_score_6)
+avg_occupancy_R_coords_adj_txt_raw_score_6 = np.mean(occupancy_R_coords_adj_txt_raw_score_6)
+avg_occupancy_R_coords_ascii_txt_raw_score_6 = np.mean(occupancy_R_coords_ascii_txt_raw_score_6)  
+avg_occupancy_R_coords_jpg_raw_score_6 = np.mean(occupancy_R_coords_jpg_raw_score_6)
+avg_occupancy_R_coords_json_raw_score_6 = np.mean(occupancy_R_coords_json_raw_score_6)
+avg_occupancy_R_coords_tokenized_txt_raw_score_6 = np.mean(occupancy_R_coords_tokenized_txt_raw_score_6)
+# Raw Scores R Coords 15x15
+line_R_coords_adj_json_raw_score_15 = np.array([131.0, 69.0, 139.0, 57.0, 127.0, 101.0, 67.0, 79.0, 133.0, 47.0])
+line_R_coords_adj_txt_raw_score_15 = np.array([25.0, 10.0, 72.0, 57.0, 77.0, 93.0, 67.0, 45.0, 62.0, 47.0])
+line_R_coords_jpg_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+line_R_coords_json_raw_score_15 = np.array([31.0, 11.0, 10.0, 4.0, 16.0, 10.0, 38.0, 40.0, 2.0, 20.0])
+line_R_coords_tokenized_txt_raw_score_15 = np.array([126.0, 69.0, 139.0, 57.0, 117.0, 23.0, 67.0, 49.0, 133.0, 47.0])
+occupancy_R_coords_adj_json_raw_score_15 = np.array([261.0, 137.0, 191.0, 113.0, 253.0, 201.0, 133.0, 157.0, 265.0, 93.0])
+occupancy_R_coords_adj_txt_raw_score_15 = np.array([89.0, 21.0, 69.0, 33.0, 31.0, 85.0, 5.0, 91.0, 123.0, 89.0])
+occupancy_R_coords_ascii_txt_raw_score_15 = np.array([0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0])
+occupancy_R_coords_jpg_raw_score_15 = np.array([5.0, 6.0, 3.0, 1.0, 1.0, 0.0, 1.0, 0.0, 0.0, 0.0])
+occupancy_R_coords_json_raw_score_15 = np.array([31.0, 48.0, 5.0, 17.0, 9.0, 43.0, 40.0, 25.0, 19.0, 31.0])
+occupancy_R_coords_tokenized_txt_raw_score_15 = np.array([103.0, 137.0, 21.0, 113.0, 20, 15.0, 133.0, 21.0, 17.0, 11.0])
+# 15x15 averages
+avg_line_R_coords_adj_json_raw_score_15 = np.mean(line_R_coords_adj_json_raw_score_15)
+avg_line_R_coords_adj_txt_raw_score_15 = np.mean(line_R_coords_adj_txt_raw_score_15)
+avg_line_R_coords_jpg_raw_score_15 = np.mean(line_R_coords_jpg_raw_score_15)
+avg_line_R_coords_json_raw_score_15 = np.mean(line_R_coords_json_raw_score_15)
+avg_line_R_coords_tokenized_txt_raw_score_15 = np.mean(line_R_coords_tokenized_txt_raw_score_15)
+avg_occupancy_R_coords_adj_json_raw_score_15 = np.mean(occupancy_R_coords_adj_json_raw_score_15)
+avg_occupancy_R_coords_adj_txt_raw_score_15 = np.mean(occupancy_R_coords_adj_txt_raw_score_15)
+avg_occupancy_R_coords_ascii_txt_raw_score_15 = np.mean(occupancy_R_coords_ascii_txt_raw_score_15)
+avg_occupancy_R_coords_jpg_raw_score_15 = np.mean(occupancy_R_coords_jpg_raw_score_15)
+avg_occupancy_R_coords_json_raw_score_15 = np.mean(occupancy_R_coords_json_raw_score_15)
+avg_occupancy_R_coords_tokenized_txt_raw_score_15 = np.mean(occupancy_R_coords_tokenized_txt_raw_score_15)
 
 
 # # Dataset for top chart
@@ -2246,79 +2256,79 @@ plt.show()
 # plt.tight_layout()
 # plt.show()
 
-# # R -- Allo -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
-# # Raw Scores R Allo 3x3
-# line_adj_json_raw_score = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
-# line_adj_txt_raw_score = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
-# line_jpg_raw_score = np.array([0.0, 0.0, 4.0, 4.0, 2.0, 1.0, 4.0, 1.0, 6.0, 0.0])
-# line_json_raw_score = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
-# line_tokenized_txt_raw_score = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
-# occupancy_adj_json_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
-# occupancy_adj_txt_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
-# occupancy_ascii_txt_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 5.0, 8.0, 8.0, 12.0, 12.0, 8.0])
-# occupancy_jpg_raw_score = np.array([0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 2.0, 2.0, 0.0, 3.0])
-# occupancy_json_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
-# occupancy_tokenized_txt_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8])
-# # 3x3 averages
-# avg_allo_line_adj_json_raw_score = np.mean(line_adj_json_raw_score)
-# avg_allo_line_adj_txt_raw_score = np.mean(line_adj_txt_raw_score)
-# avg_allo_line_jpg_raw_score = np.mean(line_jpg_raw_score)
-# avg_allo_line_json_raw_score = np.mean(line_json_raw_score)
-# avg_allo_line_tokenized_txt_raw_score = np.mean(line_tokenized_txt_raw_score)
-# avg_allo_occupancy_adj_json_raw_score = np.mean(occupancy_adj_json_raw_score)
-# avg_allo_occupancy_adj_txt_raw_score = np.mean(occupancy_adj_txt_raw_score)
-# avg_allo_occupancy_ascii_txt_raw_score = np.mean(occupancy_ascii_txt_raw_score)  
-# avg_allo_occupancy_jpg_raw_score = np.mean(occupancy_jpg_raw_score)
-# avg_allo_occupancy_json_raw_score = np.mean(occupancy_json_raw_score)
-# avg_allo_occupancy_tokenized_txt_raw_score = np.mean(occupancy_tokenized_txt_raw_score)
-# # Raw Scores R Allo 6x6
-# line_adj_json_raw_score_6 = np.array([16.0, 18.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
-# line_adj_txt_raw_score_6 = np.array([16.0, 18.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
-# line_jpg_raw_score_6 = np.array([1.0, 1.0, 0.0, 0.0, 4.0, 3.0, 1.0, 0.0, 3.0, 0.0])
-# line_json_raw_score_6 = np.array([16.0, 18.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
-# line_tokenized_txt_raw_score_6 = np.array([16.0, 18.0, 13.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
-# occupancy_adj_json_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 48.0, 20.0, 32.0, 40.0])
-# occupancy_adj_txt_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 48.0, 20.0, 32.0, 40.0])
-# occupancy_ascii_txt_raw_score_6 = np.array([2.0, 0.0, 0.0, 14.0, 4.0, 22.0, 6.0, 7.0, 8.0, 4.0])
-# occupancy_jpg_raw_score_6 = np.array([6.0, 2.0, 3.0, 8.0, 2.0, 2.0, 2.0, 0.0, 3.0, 2.0])
-# occupancy_json_raw_score_6 = np.array([18.0, 36.0, 68.0, 4.0, 28.0, 40.0, 48.0, 20.0, 32.0, 15.0])
-# occupancy_tokenized_txt_raw_score_6 = np.array([32.0, 36.0, 35.0, 56.0, 28.0, 40.0, 48.0, 20.0, 32.0, 40])
-# # 6x6 averages
-# avg_allo_line_adj_json_raw_score_6 = np.mean(line_adj_json_raw_score_6)
-# avg_allo_line_adj_txt_raw_score_6 = np.mean(line_adj_txt_raw_score_6)
-# avg_allo_line_jpg_raw_score_6 = np.mean(line_jpg_raw_score_6)
-# avg_allo_line_json_raw_score_6 = np.mean(line_json_raw_score_6)
-# avg_allo_line_tokenized_txt_raw_score_6 = np.mean(line_tokenized_txt_raw_score_6)
-# avg_allo_occupancy_adj_json_raw_score_6 = np.mean(occupancy_adj_json_raw_score_6)
-# avg_allo_occupancy_adj_txt_raw_score_6 = np.mean(occupancy_adj_txt_raw_score_6)
-# avg_allo_occupancy_ascii_txt_raw_score_6 = np.mean(occupancy_ascii_txt_raw_score_6)  
-# avg_allo_occupancy_jpg_raw_score_6 = np.mean(occupancy_jpg_raw_score_6)
-# avg_allo_occupancy_json_raw_score_6 = np.mean(occupancy_json_raw_score_6)
-# avg_allo_occupancy_tokenized_txt_raw_score_6 = np.mean(occupancy_tokenized_txt_raw_score_6)
-# # Raw Scores R Allo 15x15
-# line_adj_json_raw_score_15 = np.array([61.0, 68.0, 138.0, 56.0, 126.0, 100.0, 66.0, 78.0, 132.0, 46.0])
-# line_adj_txt_raw_score_15 = np.array([10.0, 68.0, 74.0, 56.0, 1.0, 98.0, 66.0, 2.0, 77.0, 46.0])
-# line_jpg_raw_score_15 = np.array([1.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
-# line_json_raw_score_15 = np.array([36.0, 10.0, 14.0, 7.0, 12.0, 26.0, 13.0, 23.0, 2.0, 15.0])
-# line_tokenized_txt_raw_score_15 = np.array([43.0, 27.0, 11.0, 3.0, 50.0, 100.0, 66.0, 39.0, 80.0, 46.0])
-# occupancy_adj_json_raw_score_15 = np.array([120.0, 136.0, 106.0, 112.0, 87.0, 200.0, 132.0, 156.0, 188.0, 92.0])
-# occupancy_adj_txt_raw_score_15 = np.array([72.0, 136.0, 20.0, 16.0, 23.0, 154.0, 34.0, 106.0, 104.0, 92.0])
-# occupancy_ascii_txt_raw_score_15 = np.array([4.0, 8.0, 0.0, 0.0, 0.0, 0.0, 4.0, 2.0, 4.0, 0.0])
-# occupancy_jpg_raw_score_15 = np.array([3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-# occupancy_json_raw_score_15 = np.array([1.0, 38.0, 16.0, 44.0, 8.0, 14.0, 4.0, 0.0, 8.0, 7.0])
-# occupancy_tokenized_txt_raw_score_15 = np.array([66.0, 136.0, 12.0, 112.0, 128.0, 20.0, 24.0, 96.0, 2.0, 92])
-# # 15x15 averages
-# avg_allo_line_adj_json_raw_score_15 = np.mean(line_adj_json_raw_score_15)
-# avg_allo_line_adj_txt_raw_score_15 = np.mean(line_adj_txt_raw_score_15)
-# avg_allo_line_jpg_raw_score_15 = np.mean(line_jpg_raw_score_15)
-# avg_allo_line_json_raw_score_15 = np.mean(line_json_raw_score_15)
-# avg_allo_line_tokenized_txt_raw_score_15 = np.mean(line_tokenized_txt_raw_score_15)
-# avg_allo_occupancy_adj_json_raw_score_15 = np.mean(occupancy_adj_json_raw_score_15)
-# avg_allo_occupancy_adj_txt_raw_score_15 = np.mean(occupancy_adj_txt_raw_score_15)
-# avg_allo_occupancy_ascii_txt_raw_score_15 = np.mean(occupancy_ascii_txt_raw_score_15)
-# avg_allo_occupancy_jpg_raw_score_15 = np.mean(occupancy_jpg_raw_score_15)
-# avg_allo_occupancy_json_raw_score_15 = np.mean(occupancy_json_raw_score_15)
-# avg_allo_occupancy_tokenized_txt_raw_score_15 = np.mean(occupancy_tokenized_txt_raw_score_15)
+# R -- Allo -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
+# Raw Scores R Allo 3x3
+line_R_allo_adj_json_raw_score_3 = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
+line_R_allo_adj_txt_raw_score_3 = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
+line_R_allo_jpg_raw_score_3 = np.array([0.0, 0.0, 4.0, 4.0, 2.0, 1.0, 4.0, 1.0, 6.0, 0.0])
+line_R_allo_json_raw_score_3 = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
+line_R_allo_tokenized_txt_raw_score_3 = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
+occupancy_R_allo_adj_json_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
+occupancy_R_allo_adj_txt_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
+occupancy_R_allo_ascii_txt_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 5.0, 8.0, 8.0, 12.0, 12.0, 8.0])
+occupancy_R_allo_jpg_raw_score_3 = np.array([0.0, 0.0, 0.0, 4.0, 0.0, 0.0, 2.0, 2.0, 0.0, 3.0])
+occupancy_R_allo_json_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
+occupancy_R_allo_tokenized_txt_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8])
+# 3x3 averages
+avg_line_R_allo_adj_json_raw_score_3 = np.mean(line_R_allo_adj_json_raw_score_3)
+avg_line_R_allo_adj_txt_raw_score_3 = np.mean(line_R_allo_adj_txt_raw_score_3)
+avg_line_R_allo_jpg_raw_score_3 = np.mean(line_R_allo_jpg_raw_score_3)
+avg_line_R_allo_json_raw_score_3 = np.mean(line_R_allo_json_raw_score_3)
+avg_line_R_allo_tokenized_txt_raw_score_3 = np.mean(line_R_allo_tokenized_txt_raw_score_3)
+avg_occupancy_R_allo_adj_json_raw_score_3 = np.mean(occupancy_R_allo_adj_json_raw_score_3)
+avg_occupancy_R_allo_adj_txt_raw_score_3 = np.mean(occupancy_R_allo_adj_txt_raw_score_3)
+avg_occupancy_R_allo_ascii_txt_raw_score_3 = np.mean(occupancy_R_allo_ascii_txt_raw_score_3)  
+avg_occupancy_R_allo_jpg_raw_score_3 = np.mean(occupancy_R_allo_jpg_raw_score_3)
+avg_occupancy_R_allo_json_raw_score_3 = np.mean(occupancy_R_allo_json_raw_score_3)
+avg_occupancy_R_allo_tokenized_txt_raw_score_3 = np.mean(occupancy_R_allo_tokenized_txt_raw_score_3)
+# Raw Scores R Allo 6x6
+line_R_allo_adj_json_raw_score_6 = np.array([16.0, 18.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
+line_R_allo_adj_txt_raw_score_6 = np.array([16.0, 18.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
+line_R_allo_jpg_raw_score_6 = np.array([1.0, 1.0, 0.0, 0.0, 4.0, 3.0, 1.0, 0.0, 3.0, 0.0])
+line_R_allo_json_raw_score_6 = np.array([16.0, 18.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
+line_R_allo_tokenized_txt_raw_score_6 = np.array([16.0, 18.0, 13.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
+occupancy_R_allo_adj_json_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 48.0, 20.0, 32.0, 40.0])
+occupancy_R_allo_adj_txt_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 48.0, 20.0, 32.0, 40.0])
+occupancy_R_allo_ascii_txt_raw_score_6 = np.array([2.0, 0.0, 0.0, 14.0, 4.0, 22.0, 6.0, 7.0, 8.0, 4.0])
+occupancy_R_allo_jpg_raw_score_6 = np.array([6.0, 2.0, 3.0, 8.0, 2.0, 2.0, 2.0, 0.0, 3.0, 2.0])
+occupancy_R_allo_json_raw_score_6 = np.array([18.0, 36.0, 68.0, 4.0, 28.0, 40.0, 48.0, 20.0, 32.0, 15.0])
+occupancy_R_allo_tokenized_txt_raw_score_6 = np.array([32.0, 36.0, 35.0, 56.0, 28.0, 40.0, 48.0, 20.0, 32.0, 40])
+# 6x6 averages
+avg_line_R_allo_adj_json_raw_score_6 = np.mean(line_R_allo_adj_json_raw_score_6)
+avg_line_R_allo_adj_txt_raw_score_6 = np.mean(line_R_allo_adj_txt_raw_score_6)
+avg_line_R_allo_jpg_raw_score_6 = np.mean(line_R_allo_jpg_raw_score_6)
+avg_line_R_allo_json_raw_score_6 = np.mean(line_R_allo_json_raw_score_6)
+avg_line_R_allo_tokenized_txt_raw_score_6 = np.mean(line_R_allo_tokenized_txt_raw_score_6)
+avg_occupancy_R_allo_adj_json_raw_score_6 = np.mean(occupancy_R_allo_adj_json_raw_score_6)
+avg_occupancy_R_allo_adj_txt_raw_score_6 = np.mean(occupancy_R_allo_adj_txt_raw_score_6)
+avg_occupancy_R_allo_ascii_txt_raw_score_6 = np.mean(occupancy_R_allo_ascii_txt_raw_score_6)  
+avg_occupancy_R_allo_jpg_raw_score_6 = np.mean(occupancy_R_allo_jpg_raw_score_6)
+avg_occupancy_R_allo_json_raw_score_6 = np.mean(occupancy_R_allo_json_raw_score_6)
+avg_occupancy_R_allo_tokenized_txt_raw_score_6 = np.mean(occupancy_R_allo_tokenized_txt_raw_score_6)
+# Raw Scores R Allo 15x15
+line_R_allo_adj_json_raw_score_15 = np.array([61.0, 68.0, 138.0, 56.0, 126.0, 100.0, 66.0, 78.0, 132.0, 46.0])
+line_R_allo_adj_txt_raw_score_15 = np.array([10.0, 68.0, 74.0, 56.0, 1.0, 98.0, 66.0, 2.0, 77.0, 46.0])
+line_R_allo_jpg_raw_score_15 = np.array([1.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0])
+line_R_allo_json_raw_score_15 = np.array([36.0, 10.0, 14.0, 7.0, 12.0, 26.0, 13.0, 23.0, 2.0, 15.0])
+line_R_allo_tokenized_txt_raw_score_15 = np.array([43.0, 27.0, 11.0, 3.0, 50.0, 100.0, 66.0, 39.0, 80.0, 46.0])
+occupancy_R_allo_adj_json_raw_score_15 = np.array([120.0, 136.0, 106.0, 112.0, 87.0, 200.0, 132.0, 156.0, 188.0, 92.0])
+occupancy_R_allo_adj_txt_raw_score_15 = np.array([72.0, 136.0, 20.0, 16.0, 23.0, 154.0, 34.0, 106.0, 104.0, 92.0])
+occupancy_R_allo_ascii_txt_raw_score_15 = np.array([4.0, 8.0, 0.0, 0.0, 0.0, 0.0, 4.0, 2.0, 4.0, 0.0])
+occupancy_R_allo_jpg_raw_score_15 = np.array([3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
+occupancy_R_allo_json_raw_score_15 = np.array([1.0, 38.0, 16.0, 44.0, 8.0, 14.0, 4.0, 0.0, 8.0, 7.0])
+occupancy_R_allo_tokenized_txt_raw_score_15 = np.array([66.0, 136.0, 12.0, 112.0, 128.0, 20.0, 24.0, 96.0, 2.0, 92])
+# 15x15 averages
+avg_line_R_allo_adj_json_raw_score_15 = np.mean(line_R_allo_adj_json_raw_score_15)
+avg_line_R_allo_adj_txt_raw_score_15 = np.mean(line_R_allo_adj_txt_raw_score_15)
+avg_line_R_allo_jpg_raw_score_15 = np.mean(line_R_allo_jpg_raw_score_15)
+avg_line_R_allo_json_raw_score_15 = np.mean(line_R_allo_json_raw_score_15)
+avg_line_R_allo_tokenized_txt_raw_score_15 = np.mean(line_R_allo_tokenized_txt_raw_score_15)
+avg_occupancy_R_allo_adj_json_raw_score_15 = np.mean(occupancy_R_allo_adj_json_raw_score_15)
+avg_occupancy_R_allo_adj_txt_raw_score_15 = np.mean(occupancy_R_allo_adj_txt_raw_score_15)
+avg_occupancy_R_allo_ascii_txt_raw_score_15 = np.mean(occupancy_R_allo_ascii_txt_raw_score_15)
+avg_occupancy_R_allo_jpg_raw_score_15 = np.mean(occupancy_R_allo_jpg_raw_score_15)
+avg_occupancy_R_allo_json_raw_score_15 = np.mean(occupancy_R_allo_json_raw_score_15)
+avg_occupancy_R_allo_tokenized_txt_raw_score_15 = np.mean(occupancy_R_allo_tokenized_txt_raw_score_15)
 
 
 # # Dataset for top chart
@@ -2403,80 +2413,80 @@ plt.show()
 
 
 
-# # R -- Ego -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
-# # Raw Scores R Ego 3x3
-# line_adj_json_raw_score = np.array([1.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
-# line_adj_txt_raw_score = np.array([1.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
-# line_jpg_raw_score = np.array([1.0, 0.0, 2.0, 2.0, 2.0, 0.0, 0.0, 6.0, 1.0, 4.0])
-# line_json_raw_score = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
-# line_tokenized_txt_raw_score = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
-# occupancy_adj_json_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
-# occupancy_adj_txt_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
-# occupancy_ascii_txt_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 4.0, 12.0, 12.0, 6.0])
-# occupancy_jpg_raw_score = np.array([1.0, 0.0, 0.0, 4.0, 4.0, 0.0, 1.0, 11.0, 1.0, 3.0])
-# occupancy_json_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
-# occupancy_tokenized_txt_raw_score = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8])
-# # 3x3 averages
-# avg_ego_line_adj_json_raw_score = np.mean(line_adj_json_raw_score)
-# avg_ego_line_adj_txt_raw_score = np.mean(line_adj_txt_raw_score)
-# avg_ego_line_jpg_raw_score = np.mean(line_jpg_raw_score)
-# avg_ego_line_json_raw_score = np.mean(line_json_raw_score)
-# avg_ego_line_tokenized_txt_raw_score = np.mean(line_tokenized_txt_raw_score)
-# avg_ego_occupancy_adj_json_raw_score = np.mean(occupancy_adj_json_raw_score)
-# avg_ego_occupancy_adj_txt_raw_score = np.mean(occupancy_adj_txt_raw_score)
-# avg_ego_occupancy_ascii_txt_raw_score = np.mean(occupancy_ascii_txt_raw_score)  
-# avg_ego_occupancy_jpg_raw_score = np.mean(occupancy_jpg_raw_score)
-# avg_ego_occupancy_json_raw_score = np.mean(occupancy_json_raw_score)
-# avg_ego_occupancy_tokenized_txt_raw_score = np.mean(occupancy_tokenized_txt_raw_score)
-# #Raw Scores R Ego 6x6
-# line_adj_json_raw_score_6 = np.array([16.0, 18.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
-# line_adj_txt_raw_score_6 = np.array([16.0, 1.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
-# line_jpg_raw_score_6 = np.array([2.0, 2.0, 0.0, 0.0, 3.0, 0.0, 1.0, 0.0, 5.0, 0.0])
-# line_json_raw_score_6 = np.array([16.0, 3.0, 34.0, 28.0, 14.0, 20.0, 20.0, 10.0, 1.0, 20.0])
-# line_tokenized_txt_raw_score_6 = np.array([16.0, 18.0, 13.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
-# occupancy_adj_json_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 48.0, 0.0, 32.0, 40.0])
-# occupancy_adj_txt_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 48.0, 20.0, 32.0, 40.0])
-# occupancy_ascii_txt_raw_score_6 = np.array([4.0, 12.0, 0.0, 10.0, 8.0, 2.0, 5.0, 7.0, 0.0, 4.0])
-# occupancy_jpg_raw_score_6 = np.array([2.0, 6.0, 4.0, 0.0, 6.0, 1.0, 6.0, 10.0, 4.0, 0.0])
-# occupancy_json_raw_score_6 = np.array([32.0, 36.0, 6.0, 10.0, 28.0, 36.0, 48.0, 20.0, 18.0, 4.0])
-# occupancy_tokenized_txt_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 14.0, 20.0, 32.0, 40])
-# #6x6 averages
-# avg_ego_line_adj_json_raw_score_6 = np.mean(line_adj_json_raw_score_6)
-# avg_ego_line_adj_txt_raw_score_6 = np.mean(line_adj_txt_raw_score_6)
-# avg_ego_line_jpg_raw_score_6 = np.mean(line_jpg_raw_score_6)
-# avg_ego_line_json_raw_score_6 = np.mean(line_json_raw_score_6)
-# avg_ego_line_tokenized_txt_raw_score_6 = np.mean(line_tokenized_txt_raw_score_6)
-# avg_ego_occupancy_adj_json_raw_score_6 = np.mean(occupancy_adj_json_raw_score_6)
-# avg_ego_occupancy_adj_txt_raw_score_6 = np.mean(occupancy_adj_txt_raw_score_6)
-# avg_ego_occupancy_ascii_txt_raw_score_6 = np.mean(occupancy_ascii_txt_raw_score_6)  
-# avg_ego_occupancy_jpg_raw_score_6 = np.mean(occupancy_jpg_raw_score_6)
-# avg_ego_occupancy_json_raw_score_6 = np.mean(occupancy_json_raw_score_6)
-# avg_ego_occupancy_tokenized_txt_raw_score_6 = np.mean(occupancy_tokenized_txt_raw_score_6)
-# # Raw Scores R Ego 15x15
-# line_adj_json_raw_score_15 = np.array([4.0, 68.0, 21.0, 56.0, 45.0, 100.0, 66.0, 78.0, 82.0, 46.0])
-# line_adj_txt_raw_score_15 = np.array([3.0, 14.0, 1.0, 56.0, 0.0, 11.0, 0.0, 0.0, 61.0, 0.0])
-# line_jpg_raw_score_15 = np.array([1.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
-# line_json_raw_score_15 = np.array([4.0, 25.0, 13.0, 0.0, 18.0, 26.0, 12.0, 6.0, 10.0, 14.0])
-# line_tokenized_txt_raw_score_15 = np.array([2.0, 20.0, 2.0, 56.0, 0.0, 0.0, 66.0, 78.0, 1.0, 46.0])
-# occupancy_adj_json_raw_score_15 = np.array([89.0, 52.0, 30.0, 112.0, 0.0, 72.0, 86.0, 78.0, 2.0, 92.0])
-# occupancy_adj_txt_raw_score_15 = np.array([4.0, 56.0, 38.0, 0.0, 0.0, 0.0, 35.0, 156.0, 14.0, 13.0])
-# occupancy_ascii_txt_raw_score_15 = np.array([2.0, 9.0, 1.0, 5.0, 8.0, 11.0, 0.0, 0.0, 1.0, 4.0])
-# occupancy_jpg_raw_score_15 = np.array([4.0, 2.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
-# occupancy_json_raw_score_15 = np.array([10.0, 8.0, 6.0, 12.0, 40.0, 0.0, 14.0, 10.0, 4.0, 10.0])
-# occupancy_tokenized_txt_raw_score_15 = np.array([71.0, 66.0, 16.0, 0.0, 6.0, 7.0, 52.0, 36.0, 16.0, 14])
+# R -- Ego -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
+# Raw Scores R Ego 3x3
+line_R_ego_adj_json_raw_score_3 = np.array([1.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
+line_R_ego_adj_txt_raw_score_3 = np.array([1.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
+line_R_ego_jpg_raw_score_3 = np.array([1.0, 0.0, 2.0, 2.0, 2.0, 0.0, 0.0, 6.0, 1.0, 4.0])
+line_R_ego_json_raw_score_3 = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
+line_R_ego_tokenized_txt_raw_score_3 = np.array([4.0, 4.0, 4.0, 4.0, 6.0, 4.0, 4.0, 6.0, 6.0, 4.0])
+occupancy_R_ego_adj_json_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
+occupancy_R_ego_adj_txt_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
+occupancy_R_ego_ascii_txt_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 4.0, 12.0, 12.0, 6.0])
+occupancy_R_ego_jpg_raw_score_3 = np.array([1.0, 0.0, 0.0, 4.0, 4.0, 0.0, 1.0, 11.0, 1.0, 3.0])
+occupancy_R_ego_json_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8.0])
+occupancy_R_ego_tokenized_txt_raw_score_3 = np.array([8.0, 8.0, 8.0, 8.0, 12.0, 8.0, 8.0, 12.0, 12.0, 8])
+# 3x3 averages
+avg_line_R_ego_adj_json_raw_score_3 = np.mean(line_R_ego_adj_json_raw_score_3)
+avg_line_R_ego_adj_txt_raw_score_3 = np.mean(line_R_ego_adj_txt_raw_score_3)
+avg_line_R_ego_jpg_raw_score_3 = np.mean(line_R_ego_jpg_raw_score_3)
+avg_line_R_ego_json_raw_score_3 = np.mean(line_R_ego_json_raw_score_3)
+avg_line_R_ego_tokenized_txt_raw_score_3 = np.mean(line_R_ego_tokenized_txt_raw_score_3)
+avg_occupancy_R_ego_adj_json_raw_score_3 = np.mean(occupancy_R_ego_adj_json_raw_score_3)
+avg_occupancy_R_ego_adj_txt_raw_score_3 = np.mean(occupancy_R_ego_adj_txt_raw_score_3)
+avg_occupancy_R_ego_ascii_txt_raw_score_3 = np.mean(occupancy_R_ego_ascii_txt_raw_score_3)  
+avg_occupancy_R_ego_jpg_raw_score_3 = np.mean(occupancy_R_ego_jpg_raw_score_3)
+avg_occupancy_R_ego_json_raw_score_3 = np.mean(occupancy_R_ego_json_raw_score_3)
+avg_occupancy_R_ego_tokenized_txt_raw_score_3 = np.mean(occupancy_R_ego_tokenized_txt_raw_score_3)
+#Raw Scores R Ego 6x6
+line_R_ego_adj_json_raw_score_6 = np.array([16.0, 18.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
+line_R_ego_adj_txt_raw_score_6 = np.array([16.0, 1.0, 34.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
+line_R_ego_jpg_raw_score_6 = np.array([2.0, 2.0, 0.0, 0.0, 3.0, 0.0, 1.0, 0.0, 5.0, 0.0])
+line_R_ego_json_raw_score_6 = np.array([16.0, 3.0, 34.0, 28.0, 14.0, 20.0, 20.0, 10.0, 1.0, 20.0])
+line_R_ego_tokenized_txt_raw_score_6 = np.array([16.0, 18.0, 13.0, 28.0, 14.0, 20.0, 24.0, 10.0, 16.0, 20.0])
+occupancy_R_ego_adj_json_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 48.0, 0.0, 32.0, 40.0])
+occupancy_R_ego_adj_txt_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 48.0, 20.0, 32.0, 40.0])
+occupancy_R_ego_ascii_txt_raw_score_6 = np.array([4.0, 12.0, 0.0, 10.0, 8.0, 2.0, 5.0, 7.0, 0.0, 4.0])
+occupancy_R_ego_jpg_raw_score_6 = np.array([2.0, 6.0, 4.0, 0.0, 6.0, 1.0, 6.0, 10.0, 4.0, 0.0])
+occupancy_R_ego_json_raw_score_6 = np.array([32.0, 36.0, 6.0, 10.0, 28.0, 36.0, 48.0, 20.0, 18.0, 4.0])
+occupancy_R_ego_tokenized_txt_raw_score_6 = np.array([32.0, 36.0, 68.0, 56.0, 28.0, 40.0, 14.0, 20.0, 32.0, 40])
+#6x6 averages
+avg_line_R_ego_adj_json_raw_score_6 = np.mean(line_R_ego_adj_json_raw_score_6)
+avg_line_R_ego_adj_txt_raw_score_6 = np.mean(line_R_ego_adj_txt_raw_score_6)
+avg_line_R_ego_jpg_raw_score_6 = np.mean(line_R_ego_jpg_raw_score_6)
+avg_line_R_ego_json_raw_score_6 = np.mean(line_R_ego_json_raw_score_6)
+avg_line_R_ego_tokenized_txt_raw_score_6 = np.mean(line_R_ego_tokenized_txt_raw_score_6)
+avg_occupancy_R_ego_adj_json_raw_score_6 = np.mean(occupancy_R_ego_adj_json_raw_score_6)
+avg_occupancy_R_ego_adj_txt_raw_score_6 = np.mean(occupancy_R_ego_adj_txt_raw_score_6)
+avg_occupancy_R_ego_ascii_txt_raw_score_6 = np.mean(occupancy_R_ego_ascii_txt_raw_score_6)  
+avg_occupancy_R_ego_jpg_raw_score_6 = np.mean(occupancy_R_ego_jpg_raw_score_6)
+avg_occupancy_R_ego_json_raw_score_6 = np.mean(occupancy_R_ego_json_raw_score_6)
+avg_occupancy_R_ego_tokenized_txt_raw_score_6 = np.mean(occupancy_R_ego_tokenized_txt_raw_score_6)
+# Raw Scores R Ego 15x15
+line_R_ego_adj_json_raw_score_15 = np.array([4.0, 68.0, 21.0, 56.0, 45.0, 100.0, 66.0, 78.0, 82.0, 46.0])
+line_R_ego_adj_txt_raw_score_15 = np.array([3.0, 14.0, 1.0, 56.0, 0.0, 11.0, 0.0, 0.0, 61.0, 0.0])
+line_R_ego_jpg_raw_score_15 = np.array([1.0, 1.0, 2.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
+line_R_ego_json_raw_score_15 = np.array([4.0, 25.0, 13.0, 0.0, 18.0, 26.0, 12.0, 6.0, 10.0, 14.0])
+line_R_ego_tokenized_txt_raw_score_15 = np.array([2.0, 20.0, 2.0, 56.0, 0.0, 0.0, 66.0, 78.0, 1.0, 46.0])
+occupancy_R_ego_adj_json_raw_score_15 = np.array([89.0, 52.0, 30.0, 112.0, 0.0, 72.0, 86.0, 78.0, 2.0, 92.0])
+occupancy_R_ego_adj_txt_raw_score_15 = np.array([4.0, 56.0, 38.0, 0.0, 0.0, 0.0, 35.0, 156.0, 14.0, 13.0])
+occupancy_R_ego_ascii_txt_raw_score_15 = np.array([2.0, 9.0, 1.0, 5.0, 8.0, 11.0, 0.0, 0.0, 1.0, 4.0])
+occupancy_R_ego_jpg_raw_score_15 = np.array([4.0, 2.0, 4.0, 0.0, 0.0, 0.0, 0.0, 0.0, 2.0, 0.0])
+occupancy_R_ego_json_raw_score_15 = np.array([10.0, 8.0, 6.0, 12.0, 40.0, 0.0, 14.0, 10.0, 4.0, 10.0])
+occupancy_R_ego_tokenized_txt_raw_score_15 = np.array([71.0, 66.0, 16.0, 0.0, 6.0, 7.0, 52.0, 36.0, 16.0, 14])
 
-# # 15x15 averages
-# avg_ego_line_adj_json_raw_score_15 = np.mean(line_adj_json_raw_score_15)
-# avg_ego_line_adj_txt_raw_score_15 = np.mean(line_adj_txt_raw_score_15)
-# avg_ego_line_jpg_raw_score_15 = np.mean(line_jpg_raw_score_15)
-# avg_ego_line_json_raw_score_15 = np.mean(line_json_raw_score_15)
-# avg_ego_line_tokenized_txt_raw_score_15 = np.mean(line_tokenized_txt_raw_score_15)
-# avg_ego_occupancy_adj_json_raw_score_15 = np.mean(occupancy_adj_json_raw_score_15)
-# avg_ego_occupancy_adj_txt_raw_score_15 = np.mean(occupancy_adj_txt_raw_score_15)
-# avg_ego_occupancy_ascii_txt_raw_score_15 = np.mean(occupancy_ascii_txt_raw_score_15)
-# avg_ego_occupancy_jpg_raw_score_15 = np.mean(occupancy_jpg_raw_score_15)
-# avg_ego_occupancy_json_raw_score_15 = np.mean(occupancy_json_raw_score_15)
-# avg_ego_occupancy_tokenized_txt_raw_score_15 = np.mean(occupancy_tokenized_txt_raw_score_15)
+# 15x15 averages
+avg_line_R_ego_adj_json_raw_score_15 = np.mean(line_R_ego_adj_json_raw_score_15)
+avg_line_R_ego_adj_txt_raw_score_15 = np.mean(line_R_ego_adj_txt_raw_score_15)
+avg_line_R_ego_jpg_raw_score_15 = np.mean(line_R_ego_jpg_raw_score_15)
+avg_line_R_ego_json_raw_score_15 = np.mean(line_R_ego_json_raw_score_15)
+avg_line_R_ego_tokenized_txt_raw_score_15 = np.mean(line_R_ego_tokenized_txt_raw_score_15)
+avg_occupancy_R_ego_adj_json_raw_score_15 = np.mean(occupancy_R_ego_adj_json_raw_score_15)
+avg_occupancy_R_ego_adj_txt_raw_score_15 = np.mean(occupancy_R_ego_adj_txt_raw_score_15)
+avg_occupancy_R_ego_ascii_txt_raw_score_15 = np.mean(occupancy_R_ego_ascii_txt_raw_score_15)
+avg_occupancy_R_ego_jpg_raw_score_15 = np.mean(occupancy_R_ego_jpg_raw_score_15)
+avg_occupancy_R_ego_json_raw_score_15 = np.mean(occupancy_R_ego_json_raw_score_15)
+avg_occupancy_R_ego_tokenized_txt_raw_score_15 = np.mean(occupancy_R_ego_tokenized_txt_raw_score_15)
 
 
 # # Dataset for top chart
@@ -2674,3 +2684,10 @@ plt.show()
 
 # plt.tight_layout()
 # plt.show()
+
+
+
+
+
+
+
