@@ -1266,14 +1266,14 @@ occupancy_R_ego_15 = [[avg_occupancy_R_ego_adj_json_output_15,      avg_occupanc
 # Labels for legend
 labels_base = ["Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"]
 markers = ['o', 'v', 's', '*', 'D', 'P']
-red = ['lightcoral', 'red'] #light, dark
-blue = ['cornflowerblue', 'blue'] #light, dark
-green = ['limegreen', 'green'] #light, dark
+red = ['red', 'fuchsia'] #light, dark
+blue = ['blue', 'cyan'] #light, dark
+green = ['lime', 'orange'] #light, dark
 marker_edge = ['none', 'black'] #line, occupancy
 marker_size = [10,10,10]
 
 # Create multiple plots in the same figure
-fig, (ax1, ax2, ax3) = plt.subplots(nrows=3, ncols=1, figsize=(9, 8), sharex=True)
+fig, (ax1, ax2, ax3) = plt.subplots(nrows=3, ncols=1, figsize=(10, 6), sharex=True)
 
 # # Create figure
 # fig, ax = plt.subplots(figsize=(8, 6))
@@ -1464,6 +1464,8 @@ for i, point in enumerate(occupancy_R_ego_15):
 
 
 # Axis labels
+# ax1.set_xlabel("Average Cost Per Task (Tokens)")
+# ax2.set_xlabel("Average Cost Per Task (Tokens)")
 ax3.set_xlabel("Average Cost Per Task (Tokens)")
 ax1.set_ylabel("Accuracy (%)")
 ax2.set_ylabel("Accuracy (%)")
@@ -1478,74 +1480,130 @@ ax2.grid(True, linestyle='--', alpha=0.6)
 ax3.grid(True, linestyle='--', alpha=0.6)
 
 
-# Custom combined legend handles:
-coord_handle = [
-    Line2D([], [], marker='o',  markerfacecolor='lightcoral', markersize=10),
-    Line2D([], [], marker='o',  markerfacecolor='firebrick', markersize=10)
-]
-allo_handle = [
-    Line2D([], [], marker='o', color='none', markerfacecolor='lightgreen', markersize=10),
-    Line2D([], [], marker='o', color='none', markerfacecolor='green', markersize=10)
-]
-ego_handle = [
-    Line2D([], [], marker='o', color='none', markerfacecolor='cyan', markersize=10),
-    Line2D([], [], marker='o', color='none', markerfacecolor='blue', markersize=10)
-]
+# # 1. Define the Custom Legend Elements
+# legend_elements = [
 
 
-
-# 1. Define the Custom Legend Elements
-legend_elements = [
-
-
-    # --- Section: Output Type (Colors) ---
-    Line2D([0], [0], color='none', label=r'$\bf{Output\ Type}$'), # Bold Header
-    Line2D([0], [0], marker='o', color='w', markerfacecolor=red[1], label='Coordinates (Red)', markersize=10),
-    Line2D([0], [0], marker='o', color='w', markerfacecolor=green[1], label='Allocentric (Green)', markersize=10),
-    Line2D([0], [0], marker='o', color='w', markerfacecolor=blue[1], label='Egocentric (Blue)', markersize=10),
+#     # --- Section: Output Type (Colors) ---
+#     Line2D([0], [0], color='none', label=r'$\bf{Output\ Type}$'), # Bold Header
+#     Line2D([0], [0], marker='o', color='w', markerfacecolor=red[1], label='Coordinates (Red)', markersize=10),
+#     Line2D([0], [0], marker='o', color='w', markerfacecolor=green[1], label='Allocentric (Green)', markersize=10),
+#     Line2D([0], [0], marker='o', color='w', markerfacecolor=blue[1], label='Egocentric (Blue)', markersize=10),
     
-    # --- Spacer ---
-    Line2D([0], [0], color='none', label=''), 
+#     # --- Spacer ---
+#     Line2D([0], [0], color='none', label=''), 
 
-    # --- Section: Input Format (Shapes) ---
-    Line2D([0], [0], color='none', label=r'$\bf{Input\ Format}$'), # Bold Header
-    Line2D([0], [0], marker='s', color='lightgrey', label='JPG', linestyle='None'),
-    Line2D([0], [0], marker='*', color='lightgrey', label='JSON', linestyle='None'),
-    Line2D([0], [0], marker='o', color='lightgrey', label='Adjacency JSON', linestyle='None'),
-    Line2D([0], [0], marker='v', color='lightgrey', label='Adjacency Text', linestyle='None'),
-    Line2D([0], [0], marker='D', color='lightgrey', label='Tokenized', linestyle='None'),
-    Line2D([0], [0], marker='P', color='lightgrey', label='ASCII', linestyle='None'),
+#     # --- Section: Input Format (Shapes) ---
+#     Line2D([0], [0], color='none', label=r'$\bf{Input\ Format}$'), # Bold Header
+#     Line2D([0], [0], marker='s', color='lightgrey', label='JPG', linestyle='None'),
+#     Line2D([0], [0], marker='*', color='lightgrey', label='JSON', linestyle='None'),
+#     Line2D([0], [0], marker='o', color='lightgrey', label='Adjacency JSON', linestyle='None'),
+#     Line2D([0], [0], marker='v', color='lightgrey', label='Adjacency Text', linestyle='None'),
+#     Line2D([0], [0], marker='D', color='lightgrey', label='Tokenized', linestyle='None'),
+#     Line2D([0], [0], marker='P', color='lightgrey', label='ASCII', linestyle='None'),
 
-    # --- Spacer ---
-    Line2D([0], [0], color='none', label=''), 
+#     # --- Spacer ---
+#     Line2D([0], [0], color='none', label=''), 
 
-    # --- Section: Model (Hues) ---
-    Line2D([0], [0], color='none', label=r'$\bf{Model\ (Marker\ Hue)}$'), # Bold Header
-    Line2D([0], [0], marker='o', color='w', markerfacecolor='gray', label='Gemini 2.5 Pro', markersize=10),
-    Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgray', label='Gemini 2.5 Flash Lite', markersize=10),
+#     # --- Section: Model (Hues) ---
+#     Line2D([0], [0], color='none', label=r'$\bf{Model\ (Marker\ Hue)}$'), # Bold Header
+#     Line2D([0], [0], marker='o', color='w', markerfacecolor='gray', label='Gemini 2.5 Pro', markersize=10),
+#     Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgray', label='Gemini 2.5 Flash Lite', markersize=10),
 
-    # --- Spacer ---
-    Line2D([0], [0], color='none', label=''), 
+#     # --- Spacer ---
+#     Line2D([0], [0], color='none', label=''), 
 
-    # --- Maze Style ---
-    Line2D([0], [0], color='none', label=r'$\bf{Maze\ Style}$' ), # Bold Header
-    Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgrey', mec='black', ms = marker_size[0], label = 'Occupancy Grid Maze, 7x7, 13x13, 31x31' ),
-    Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgrey', ms = marker_size[1], label = 'Line Walled Maze, 3x3, 6x6, 15x15' ),
+#     # --- Maze Style ---
+#     Line2D([0], [0], color='none', label=r'$\bf{Maze\ Style}$' ), # Bold Header
+#     Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgrey', mec='black', ms = marker_size[0], label = 'Occupancy Grid Maze, 7x7, 13x13, 31x31' ),
+#     Line2D([0], [0], marker='o', color='w', markerfacecolor='lightgrey', ms = marker_size[1], label = 'Line Walled Maze, 3x3, 6x6, 15x15' ),
+# ]
+
+
+# # 2. Add the custom legend to the axis
+# ax2.legend(handles=legend_elements, loc='center left', bbox_to_anchor=(1, 0.5))
+
+# --- Legend Group Definitions ---
+spacer_handle = (
+    Line2D([], [], marker='o', color='none', markerfacecolor='none', markersize=10)
+)
+coord_handle = (
+    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[0], markersize=10),
+    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[1], markersize=10)
+)
+allo_handle = (
+    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=green[0], markersize=10),
+    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=green[1], markersize=10)
+)
+ego_handle = (
+    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[0], markersize=10),
+    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[1], markersize=10)
+)
+
+pro_handle = (
+    Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=red[1], markersize=10),
+    Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=green[1], markersize=10),
+    Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=blue[1], markersize=10)
+)
+
+flashlite_handle = (Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=red[0], markersize=10),
+                    Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=green[0], markersize=10),
+                    Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=blue[0], markersize=10)
+)
+
+handles = [
+    spacer_handle,
+    coord_handle,
+    allo_handle,
+    ego_handle,
+    spacer_handle,
+
+    Line2D([], [], marker='o', color='gray', linestyle='None', markersize = 10),  # Adjacency JSON
+    Line2D([], [], marker='v', color='gray', linestyle='None', markersize = 10),  # Adjacency Text
+    Line2D([], [], marker='s', color='gray', linestyle='None', markersize = 10),  # JPG
+    Line2D([], [], marker='*', color='gray', linestyle='None', markersize = 10),  # JSON
+    Line2D([], [], marker='D', color='gray', linestyle='None', markersize = 10),  # Tokenized
+    Line2D([], [], marker='P', color='gray', linestyle='None', markersize = 10),  # ASCII
+    
+    spacer_handle,
+    pro_handle,
+    flashlite_handle,
+    # Line2D([], [], marker='o', color='none', markerfacecolor=red[1], markersize=10), # Gemini Pro
+    # Line2D([], [], marker='o', color='none', markerfacecolor=red[0], markersize=10), # Gemini Flash Lite
+
+    spacer_handle,  
+    Line2D([], [], marker='o', color='none', markerfacecolor='lightgrey', mec=marker_edge[1], markersize = 10),   # Occupancy
+    Line2D([], [], marker='o', color='none', markerfacecolor='lightgrey', mec=marker_edge[0], markersize = 10), # Line Wall
 ]
 
+labels = [
+    r"$\bf{Output\ Types}$",
+    "Coordinates", "Allocentric", "Egocentric",
+    r"$\bf{Input\ Formats}$",
+    "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII",
+    r"$\bf{Models}$",
+    "Gemini 2.5 Pro", "Gemini 2.5 Flash Lite",
+    r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
+    "Occupancy Grid, 7x7, 13x13, 31x31", "Line Wall, 3x3, 6x6, 15x15"
+]
 
-# 2. Add the custom legend to the axis
-ax2.legend(handles=legend_elements, loc='center left', bbox_to_anchor=(1, 0.5))
-
+ax2.legend(
+    handles,
+    labels,
+    handler_map={tuple: HandlerTuple(ndivide=None)},
+    loc='center left',
+    bbox_to_anchor=(1.02, 0.5),
+    title="Legend"
+)
 
 # Place legend outside the plot on the right
 # ax.legend(loc='center left', bbox_to_anchor=(1, 0.5), title="Representation, Complexity, Output Type, Model")
 # plt.title("Performance vs. Cost Per Task")
-ax1.set_title("Performance vs. Cost Per Task, Low Complexity")
-ax2.set_title("Performance vs. Cost Per Task, Medium Complexity")
-ax3.set_title("Performance vs. Cost Per Task, High Complexity")
+ax1.set_title("Performance vs. Cost Per Task\n Low Complexity")
+ax2.set_title("Medium Complexity")
+ax3.set_title("High Complexity")
 # Adjust layout to make room for legend
-plt.tight_layout(rect=[0, 0, 0.85, 1])  # leave 15% of width for legend
+plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
 
 
 plt.show()
