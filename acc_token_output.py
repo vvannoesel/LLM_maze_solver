@@ -1893,8 +1893,10 @@ labels = [
     "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII",
     # r"$\bf{Models}$",
     # "Gemini 2.5 Pro", "Gemini 2.5 Flash Lite",
-    r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
-    "Occupancy Grid, 7x7, 13x13, 31x31", "Line Wall, 3x3, 6x6, 15x15"
+    # r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
+    # "Occupancy Grid, 7x7, 13x13, 31x31", "Line Wall, 3x3, 6x6, 15x15"
+        r"$\bf{Maze\ Styles}$",
+    "Occupancy Grid", "Line Wall"
 ]
 
 axes[1,1].legend(
@@ -1910,12 +1912,12 @@ axes[1,1].legend(
 # axes[1,1].legend(loc='center left', bbox_to_anchor=(1, 0.5), title="Representation, Complexity, Output Type, Model")
 
 
-axes[0,0].set_title("Low Complexity, Gemini 2.5 Flash Lite")
-axes[0,1].set_title("Low Complexity, Gemini 2.5 Pro")
-axes[1,0].set_title("Medium Complexity, Gemini 2.5 Flash Lite")
-axes[1,1].set_title("Medium Complexity, Gemini 2.5 Pro")
-axes[2,0].set_title("High Complexity, Gemini 2.5 Flash Lite")
-axes[2,1].set_title("High Complexity, Gemini 2.5 Pro")
+axes[0,0].set_title("3x3 and 7x7, Gemini 2.5 Flash Lite")
+axes[0,1].set_title("3x3 and 7x7, Gemini 2.5 Pro")
+axes[1,0].set_title("6x6 and 13x13, Gemini 2.5 Flash Lite")
+axes[1,1].set_title("6x6 and 13x13, Gemini 2.5 Pro")
+axes[2,0].set_title("15x15 and 31x31, Gemini 2.5 Flash Lite")
+axes[2,1].set_title("15x15 and 31x31, Gemini 2.5 Pro")
 
 plt.suptitle("Performance vs. Cost Per Task", fontweight= 'bold')
 
