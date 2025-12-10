@@ -1613,11 +1613,9 @@ for idx, ax in enumerate(axes.flat):
     if idx == 5:
         handles_for_legend, labels_for_legend = ax.get_legend_handles_labels()
 
-# 5. Create Single Global Legend to the Right
-# We take the handles from the bottom-right plot which covers all 12 cases.
-# We stop the plots at 70% of the width, leaving 30% white space on the right.
-plt.subplots_adjust(right=0.70)
-plt.suptitle("Performance Scaling", fontweight='bold')
+
+
+plt.suptitle("Performance Scaling", x=0.82*0.5, fontweight='bold')
 # Position the legend within that white space
 legend=fig.legend(
     handles_for_legend, 
@@ -1632,7 +1630,7 @@ legend.get_title().set_fontweight('bold')
 
 plt.tight_layout()
 # Adjust right margin to make room for the legend
-plt.subplots_adjust(right=0.88) 
+plt.subplots_adjust(right=0.75) 
 plt.show()
 
 

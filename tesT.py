@@ -38,7 +38,7 @@ instructions_allo = ("Instructions:\n" \
 
 # PROMPT 2: EGO
 instructions_ego = ("Instructions:\n" \
-    "1. Give instructions to an agent in the maze. The agent begins by facing south. The agent begins by facing south. You can only use the following four actions:\n" \
+    "1. Give instructions to an agent in the maze. The agent begins by facing south. You can only use the following four actions:\n" \
     "Forward: this moves the agent 1 step in the direction it is facing.\n" \
     "Left: this turns the agent 90° to the left and then moves the agent 1 step in the new direction it is facing.\n" \
     "Right: this turns the agent 90° to the right and then moves the agent 1 step in the new direction it is facing.\n" \
