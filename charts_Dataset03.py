@@ -1465,7 +1465,7 @@ labels_occ = [
 # plt.tight_layout()
 # plt.show()
 
-# ----- Plottoing all 6 accuracy plots in one figure ------------------
+# ----- use this for plotting accuracy: Plottoing all 6 accuracy plots in one figure ------------------
 
 # 1. Define the Legend Labels
 single_legend = [

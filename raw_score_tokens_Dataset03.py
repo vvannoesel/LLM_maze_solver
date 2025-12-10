@@ -1468,9 +1468,9 @@ avg_occupancy_R_ego = [[np.mean(occupancy_R_ego_adj_json_output_tokens), np.mean
 # Labels for legend
 labels_base = ["Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"]
 markers = ['o', 'v', 's', '*', 'D', 'P']
-red = ['red', 'red'] #light, dark
-blue = ['blue', 'blue'] #light, dark
-green = ['lime', 'lime'] #light, dark
+red = ['tomato', 'tomato']#['red', 'red'] #light, dark
+blue = ['dodgerblue','dodgerblue']#['blue', 'blue'] #light, dark
+green = ['lightgreen', 'lightgreen']#['lime', 'lime'] #light, dark
 marker_edge = ['none', 'black'] #line, occupancy
 marker_size = [10,10,10]
 testx = [1, 2, 3, 4, 5, 6]
@@ -1663,10 +1663,10 @@ plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
 # Labels for legend
 labels_base = ["Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"]
 markers = ['o', 'v', 's', '*', 'D', 'P']
-red = ['red', 'red'] #light, dark
-blue = ['blue', 'blue'] #light, dark
-green = ['lime', 'lime'] #light, dark
-marker_edge = ['none', 'black'] #line, occupancy
+red = ['tomato', 'tomato']#['red', 'red'] #light, dark
+blue = ['dodgerblue','dodgerblue']#['blue', 'blue'] #light, dark
+green = ['lightgreen', 'lightgreen']#['lime', 'lime'] #light, dark
+marker_edge = ['dimgrey', 'dimgrey'] #line, occupancy
 marker_size = [10,10,10]
 testx = [1, 2, 3, 4, 5, 6]
 testy = [1, 2, 3, 4, 5, 6]
@@ -1760,15 +1760,15 @@ spacer_handle = (
     Line2D([], [], marker='o', color='none', markerfacecolor='none', markersize=10)
 )
 coord_handle = (
-    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[0], markersize=10),
+    Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=red[0], markersize=10),
     # Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[1], markersize=10)
 )
 allo_handle = (
-    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=green[0], markersize=10),
+    Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=green[0], markersize=10),
     # Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=green[1], markersize=10)
 )
 ego_handle = (
-    Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[0], markersize=10),
+    Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=blue[0], markersize=10),
     # Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[1], markersize=10)
 )
 

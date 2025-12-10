@@ -1619,9 +1619,9 @@ marker_size = [10,10,10]
 # Labels for legend
 labels_base = ["Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"]
 markers = ['o', 'v', 's', '*', 'D', 'P']
-red = ['red', 'red'] #light, dark
-blue = ['blue', 'blue'] #light, dark
-green = ['lime', 'lime'] #light, dark
+red = ['tomato', 'tomato'] #['red', 'red'] #light, dark
+blue = ['dodgerblue', 'dodgerblue']#['blue', 'blue'] #light, dark
+green = ['lightgreen', 'lightgreen']#['lime', 'lime'] #light, dark
 marker_edge = ['none', 'black'] #line, occupancy
 marker_size = [10,10,10]
 testx = [1, 2, 3, 4, 5, 6]
@@ -1919,7 +1919,7 @@ axes[1,1].set_title("6x6 and 13x13, Gemini 2.5 Pro")
 axes[2,0].set_title("15x15 and 31x31, Gemini 2.5 Flash Lite")
 axes[2,1].set_title("15x15 and 31x31, Gemini 2.5 Pro")
 
-plt.suptitle("Performance vs. Cost Per Task", fontweight= 'bold')
+plt.suptitle("Performance vs. Cost Per Task", x=0.48,  fontweight= 'bold')
 
 plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
 
