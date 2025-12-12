@@ -353,7 +353,7 @@ class Maze:
             "size": {"columns": self.cols, "rows": self.rows},
             "start": self.start, "end": self.end , "grid": nodes}
         with open(filename, 'w') as f:
-            json.dump(adj_list, f, indent=2)
+            json.dump(adj_list, f, indent=4)
 
     def to_custom_adjacency_list(self, filename="maze_adj.txt"):
         """Saves the maze as a custom adjacency list format."""
@@ -564,10 +564,10 @@ class OccupancyGridMaze(Maze):
                         if (0 <= n_r < len(self.grid) and 0 <= n_c < len(self.grid[0]) and self.grid[n_r][n_c] == 0):
                             neighbors.append([n_r, n_c])
                     nodes.append({"node": node, "neighbors": neighbors})
-        adj_list = [{"size": {"columns": len(self.grid[0]), "rows": len(self.grid)},
-            "start": self.start, "end": self.end, "grid": nodes}]
+        adj_list = {"size": {"columns": len(self.grid[0]), "rows": len(self.grid)},
+            "start": self.start, "end": self.end, "grid": nodes}
         with open(filename, 'w') as f:
-            json.dump(adj_list, f, indent=2)
+            json.dump(adj_list, f, indent=4)
 
     def to_custom_adjacency_list(self, filename="maze_occupancy_adj.txt"):
         """Saves the occupancy grid maze as a custom adjacency list format."""

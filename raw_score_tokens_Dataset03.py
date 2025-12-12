@@ -1745,6 +1745,22 @@ for i, point in enumerate(avg_occupancy_R_ego):
     label = labels_base[i]  # get label corresponding to the row
     axes[1,1].plot(x, y, marker=markers[i], color = blue[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 7x7, Egocentric, Gemini 2.5 Pro")
 
+# Plot the summed average number of steps as a dotted line
+coords_line = np.array([5.6, 21.0, 95.0])
+coords_occupancy = np.array([10.2, 41.0, 189.0])
+allo_ego_line = np.array([4.6, 20.0, 94.0])
+allo_ego_occupancy = np.array([9.2, 40.0, 188.0])
+
+# plot as a horizontal line
+axes[0,0].axhline(y=np.mean(coords_line), color=red[0], linewidth = 1, linestyle='--', alpha = 0.8)
+axes[0,0].axhline(y=np.mean(allo_ego_line), color=green[0], linewidth = 1, linestyle='--', alpha = 0.8)
+axes[0,1].axhline(y=np.mean(coords_line), color=red[0], linewidth = 1, linestyle='--', alpha = 0.8)
+axes[0,1].axhline(y=np.mean(allo_ego_line), color=green[0], linewidth = 1, linestyle='--', alpha = 0.8)
+axes[1,0].axhline(y=np.mean(coords_occupancy), color=red[0], linewidth = 1, linestyle='--', alpha = 0.8)
+axes[1,0].axhline(y=np.mean(allo_ego_occupancy), color=green[0], linewidth = 1, linestyle='--', alpha = 0.8)
+axes[1,1].axhline(y=np.mean(coords_occupancy), color=red[0], linewidth = 1, linestyle='--', alpha = 0.8)
+axes[1,1].axhline(y=np.mean(allo_ego_occupancy), color=green[0], linewidth = 1, linestyle='--', alpha = 0.8)
+                  
 # # Axis labels
 for i in range(0,2):
     for j in range(0,2):
@@ -1771,6 +1787,13 @@ ego_handle = (
     Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=blue[0], markersize=10),
     # Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=blue[1], markersize=10)
 )
+ground_truth_coords_line_handle = (
+    Line2D([], [], color = red[0], linewidth = 1, linestyle = '--', marker = 'none')
+)
+
+ground_truth_allo_ego_line_handle = (
+    Line2D([], [], color = green[0], linewidth = 1, linestyle = '--', marker = 'none')
+)
 
 pro_handle = (
     Line2D([], [], marker='o', color='none', mec= marker_edge[0], markerfacecolor=red[1], markersize=10),
@@ -1796,6 +1819,9 @@ handles = [
     Line2D([], [], marker='*', color='gray', linestyle='None', markersize = 10),  # JSON
     Line2D([], [], marker='D', color='gray', linestyle='None', markersize = 10),  # Tokenized
     Line2D([], [], marker='P', color='gray', linestyle='None', markersize = 10),  # ASCII
+    spacer_handle,
+    ground_truth_coords_line_handle,
+    ground_truth_allo_ego_line_handle
     
     # spacer_handle,
     # pro_handle,
@@ -1818,7 +1844,9 @@ labels = [
     # r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
     # "Occupancy Grid, 7x7, 13x13, 31x31", "Line Wall, 3x3, 6x6, 15x15"
     #     r"$\bf{Maze\ Styles}$",
-    # "Occupancy Grid", "Line Wall"
+    # "Occupancy Grid", "Line Wall",
+    r"$\bf{True\ Solution\ Length}$",
+    "Coordinates", "Allocentric and Egocentric"
 ]
 
 axes[1,1].legend(
