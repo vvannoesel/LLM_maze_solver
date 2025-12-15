@@ -12,7 +12,7 @@ import re
 import os
 
 
-def export_raw_score(filename: str, score: float, output_file: str = 'raw_scores_Dataset03_15x15.py'):
+def export_raw_score(filename: str, score: float, output_frame_type:str, reasoning_type:str, output_file: str):
     """
     Parses a maze filename to update a specific NumPy array with a new raw score (absolute number of correct consecutive steps).
     The index of the score in the score tensor is based on the trailing 
@@ -46,11 +46,11 @@ def export_raw_score(filename: str, score: float, output_file: str = 'raw_scores
     # This handles cases like 'maze_line_3x3_3.jpg'.
     if representation_str is None:
         # representation_str = 'none'
-        array_name = f"{type_str}_{extension_str}_raw_score"
+        array_name = f"{type_str}_{reasoning_type}_{output_frame_type}_{extension_str}_raw_score_{rows_str}"
     else:
         # Create a unique and valid Python variable name
         # e.g., 'line_adj_txt', 'occupancy_tokenized_json'
-        array_name = f"{type_str}_{representation_str}_{extension_str}_raw_score"
+        array_name = f"{type_str}_{reasoning_type}_{output_frame_type}_{representation_str}_{extension_str}_raw_score_{rows_str}"
     
     # Determine the index based on the {i} part (e.g., _3 -> index 2)
     try:
@@ -112,7 +112,7 @@ def export_raw_score(filename: str, score: float, output_file: str = 'raw_scores
         print(f"Error writing to {output_file}: {e}")
 
 
-def export_output_tokens(filename: str, output_tokens: int, output_file: str = 'output_tokens_Dataset03_15x15.py'):
+def export_output_tokens(filename: str, output_tokens: int, output_frame_type:str, reasoning_type:str, output_file: str ):
     """
     Parses a maze filename to update a specific NumPy array with a new output token count.
     The index of the score in the score tensor is based on the trailing 
@@ -146,11 +146,12 @@ def export_output_tokens(filename: str, output_tokens: int, output_file: str = '
     # This handles cases like 'maze_line_3x3_3.jpg'.
     if representation_str is None:
         # representation_str = 'none'
-        array_name = f"{type_str}_{extension_str}_output_tokens"
+        array_name = f"{type_str}_{reasoning_type}_{output_frame_type}_{extension_str}_output_tokens_{rows_str}"
     else:
         # Create a unique and valid Python variable name
         # e.g., 'line_adj_txt', 'occupancy_tokenized_json'
-        array_name = f"{type_str}_{representation_str}_{extension_str}_output_tokens"
+        array_name = f"{type_str}_{reasoning_type}_{output_frame_type}_{representation_str}_{extension_str}_output_tokens_{rows_str}"
+    
     
     # Determine the index based on the {i} part (e.g., _3 -> index 2)
     try:
@@ -212,7 +213,7 @@ def export_output_tokens(filename: str, output_tokens: int, output_file: str = '
         print(f"Error writing to {output_file}: {e}")
 
 
-def export_prompt_tokens(filename: str, prompt_tokens: int, output_file: str = 'prompt_tokens_Dataset03_15x15.py'):
+def export_prompt_tokens(filename: str, prompt_tokens: int, output_frame_type:str, reasoning_type:str, output_file: str ):
     """
     Parses a maze filename to update a specific NumPy array with a new prompt token count.
     The index of the score in the score tensor is based on the trailing 
@@ -246,11 +247,12 @@ def export_prompt_tokens(filename: str, prompt_tokens: int, output_file: str = '
     # This handles cases like 'maze_line_3x3_3.jpg'.
     if representation_str is None:
         # representation_str = 'none'
-        array_name = f"{type_str}_{extension_str}_input_tokens"
+        array_name = f"{type_str}_{reasoning_type}_{output_frame_type}_{extension_str}_input_tokens_{rows_str}"
     else:
         # Create a unique and valid Python variable name
         # e.g., 'line_adj_txt', 'occupancy_tokenized_json'
-        array_name = f"{type_str}_{representation_str}_{extension_str}_input_tokens"
+        array_name = f"{type_str}_{reasoning_type}_{output_frame_type}_{representation_str}_{extension_str}_input_tokens_{rows_str}"
+    
     
     # Determine the index based on the {i} part (e.g., _3 -> index 2)
     try:
@@ -315,7 +317,7 @@ def export_prompt_tokens(filename: str, prompt_tokens: int, output_file: str = '
 
 
 
-def export_score(filename: str, score: float, output_file: str = 'scores_Dataset03_15x15.py'):
+def export_score(filename: str, score: float, output_frame_type:str, reasoning_type:str, output_file: str):
     """
     Parses a maze filename to update a specific NumPy array with a new score.
     The index of the score in the score tensor is based on the trailing 
@@ -349,11 +351,12 @@ def export_score(filename: str, score: float, output_file: str = 'scores_Dataset
     # This handles cases like 'maze_line_3x3_3.jpg'.
     if representation_str is None:
         # representation_str = 'none'
-        array_name = f"{type_str}_{extension_str}"
+        array_name = f"{type_str}_{reasoning_type}_{output_frame_type}_{extension_str}_{rows_str}"
     else:
         # Create a unique and valid Python variable name
         # e.g., 'line_adj_txt', 'occupancy_tokenized_json'
-        array_name = f"{type_str}_{representation_str}_{extension_str}"
+        array_name = f"{type_str}_{reasoning_type}_{output_frame_type}_{representation_str}_{extension_str}_{rows_str}"
+
     
     # Determine the index based on the {i} part (e.g., _3 -> index 2)
     try:

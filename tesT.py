@@ -434,9 +434,9 @@ def main():
         #     # Dynamically find the correct solution file for the current maze type and add extra info to prompt for each representation
         #     solution_pattern = ""
         #     insert_line = ""
-        #     if file.name.startswith("maze_line_"):
-        #         solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_steps_{i}.txt"
-        #         if file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
+            # if file.name.startswith("maze_line_"):
+            #     solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_steps_{i}.txt"
+            #     if file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
         #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools or write code to solve the maze."\
         #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is shown as an image, where thick black lines are impassable walls, thin light gray lines are passable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
         #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
@@ -640,7 +640,7 @@ def main():
         #         solution_pattern = f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_solution_coords_{i}.txt"
         #         if file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
         #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools or write code to solve the maze."\
-        #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is shown as an image, where thick black lines are impassable walls, thin light gray lines are passable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
+        # #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is shown as an image, where thick black lines are impassable walls, thin light gray lines are passable cell borders, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
         #         elif file.name == f"maze_line_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
         #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools or write code to solve the maze."\
         #                             f"The {MAZE_ROWS}x{MAZE_COLS} maze is represented as a JSON grid, which describes each cell as a set of four (N/E/S/W) walls with boolean 'True' (impassable) or 'False' (passable) values and includes start/end coordinates; the top-left corner is (0,0) in (row, col).\n" )
@@ -657,9 +657,9 @@ def main():
         #             print(f"Warning: not changing prompt for file with unhandled type: {file.name}")
         #             continue
 
-        #     elif file.name.startswith("maze_occupancy_"):
-        #         solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_coords_{i}.txt"
-        #         if file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
+            # elif file.name.startswith("maze_occupancy_"):
+            #     solution_pattern = f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_solution_coords_{i}.txt"
+            #     if file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.jpg":
         #             insert_line = ("You are a maze-solving expert. Your goal is to find the path from start to end. Do not use external tools or write code to solve the maze."\
         #                             f"The {OCC_ROWS}x{OCC_COLS} maze is shown as an image, where white cells are passable, black cells are impassable walls, the circle is the start and the star is the end; the top-left corner is (0,0) in (row, col).\n" )
         #         elif file.name == f"maze_occupancy_{MAZE_ROWS}x{MAZE_COLS}_{i}.json":
@@ -738,10 +738,12 @@ def main():
             # Save the scores, prompt tokens, output tokens and absolute number of correct consecutive steps, each to a numpy array in a separate file to create charts after testing. 
             # save_score(filename= file, score = score)
             # collect_and_save_scores(filename= str(file), score=score)
-                export_score(filename= file, score = score)
-                export_prompt_tokens(filename= file, prompt_tokens = int(prompt_tokens))
-                export_output_tokens(filename = file, output_tokens = int(output_tokens))
-                export_raw_score(filename= file, score = raw_score)
+                # add nonreasoning as string so it can be used in the vector name
+                reasoning_type = "NR"
+                export_score(filename= file, score = score, reasoning_type=reasoning_type, output_frame_type = type, output_file = f'scores_Dataset03_{MAZE_ROWS}x{MAZE_COLS}.py')
+                export_prompt_tokens(filename= file, prompt_tokens = int(prompt_tokens), reasoning_type = reasoning_type, output_frame_type=type, output_file = f'prompt_tokens_Dataset03_{MAZE_ROWS}x{MAZE_COLS}.py')
+                export_output_tokens(filename = file, output_tokens = int(output_tokens), reasoning_type = reasoning_type, output_frame_type=type, output_file = f'output_tokens_Dataset03_{MAZE_ROWS}x{MAZE_COLS}.py')
+                export_raw_score(filename= file, score = raw_score, reasoning_type = reasoning_type, output_frame_type=type, output_file= f'raw_scores_Dataset03_{MAZE_ROWS}x{MAZE_COLS}.py')
             except Exception as e:
                 print(f"\nAn unexpected error occurred during exporting token and score values: {e}")
 

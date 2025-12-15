@@ -750,10 +750,11 @@ def main():
                 # Save the scores to a numpy array in a separate file to create charts after testing. 
                 # save_score(filename= file, score = score)
                 # collect_and_save_scores(filename= str(file), score = score)
-                export_score(filename= file, score = score)
-                export_prompt_tokens(filename= file, prompt_tokens = int(prompt_tokens))
-                export_output_tokens(filename = file, output_tokens = int(output_tokens))
-                export_raw_score(filename= file, score = raw_score)
+                reasoning_type = "NR"
+                export_score(filename= file, score = score, reasoning_type=reasoning_type, output_frame_type = type, output_file = f'scores_Dataset03_{MAZE_ROWS}x{MAZE_COLS}.py')
+                export_prompt_tokens(filename= file, prompt_tokens = int(prompt_tokens), reasoning_type = reasoning_type, output_frame_type=type, output_file = f'prompt_tokens_Dataset03_{MAZE_ROWS}x{MAZE_COLS}.py')
+                export_output_tokens(filename = file, output_tokens = int(output_tokens), reasoning_type = reasoning_type, output_frame_type=type, output_file = f'output_tokens_Dataset03_{MAZE_ROWS}x{MAZE_COLS}.py')
+                export_raw_score(filename= file, score = raw_score, reasoning_type = reasoning_type, output_frame_type=type, output_file= f'raw_scores_Dataset03_{MAZE_ROWS}x{MAZE_COLS}.py')
             except Exception as e:
                 print(f"\nAn unexpected error occurred during exporting token and score values: {e}")
 
