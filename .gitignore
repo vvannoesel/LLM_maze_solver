@@ -19,6 +19,7 @@ comparison_results*
 # Files used for testing code
 autoscore.py
 dummy.py
+dummy_2.py
 example_llm_compare.py
 llm_compare_test.py
 maze_generator.py
@@ -27,3 +28,7 @@ maze_generator_extended_v2.py
 maze_generator_extended.py
 maze_llm_compare.py
 *.xlsx
+output_tokens_Dataset03_5x5.py
+input_tokens_Dataset03_5x5.py
+raw_scores_Dataset03_5x5.py
+scores_Dataset03_5x5.py

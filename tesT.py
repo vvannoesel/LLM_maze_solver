@@ -23,8 +23,8 @@ from score_saver import save_score, collect_and_save_scores, export_score, expor
 from token_count_extracter import extract_prompt_token_count, extract_output_token_count
 
 # --- Configuration ---
-MAZE_ROWS = 15
-MAZE_COLS = 15
+MAZE_ROWS = 5
+MAZE_COLS = 5
 OCC_ROWS = MAZE_ROWS * 2 + 1  # Occupancy grid rows
 OCC_COLS = MAZE_COLS * 2 + 1  # Occupancy grid columns
 MODEL_NAME = "gemini-2.5-flash-lite"
@@ -82,7 +82,7 @@ def import_maze_file() -> Path:
         script_dir = Path(__file__).parent
         file_path = script_dir / "Dataset 03" / f"Dataset 03 {MAZE_ROWS}x{MAZE_COLS} {i}" #/ "maze_line_3x3_ascii.txt"
         # file_path  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
-        # file_path = script_dir / "Dataset 02.1 - ASCII analysis" / f"Dataset 02.1 {MAZE_ROWS}x{MAZE_COLS} {i}"
+        # file_path = script_dir / "Dataset 02 - Statistical analysis" / f"Dataset 02 {MAZE_ROWS}x{MAZE_COLS} {i}"
         # file_path = script_dir / "boom.jpg"
 
         if not file_path.exists():
@@ -416,7 +416,8 @@ def main():
         test_dir = script_dir / "Dataset 03" / f"Dataset 03 {MAZE_ROWS}x{MAZE_COLS} {i}" 
         # test_dir = script_dir / "Dataset 01" / f"Dataset 01 {MAZE_ROWS}x{MAZE_COLS}" 
         # test_dir  = script_dir / f"PROMPT TEST Dataset 01 {MAZE_ROWS}x{MAZE_COLS}"
-        # test_dir = script_dir / "Dataset 02.1 - ASCII analysis" / f"Dataset 02.1 {MAZE_ROWS}x{MAZE_COLS} {i}" 
+        # test_dir = script_dir / "Dataset 02 - Statistical analysis" / f"Dataset 02 {MAZE_ROWS}x{MAZE_COLS} {i}"
+
 
 
         # Get list of files to test, excluding solutions
@@ -798,7 +799,7 @@ def main():
 
 
 if __name__ == "__main__":
-    for i in range(6,7):
+    for i in range(1,2):
         main()
         i+=1
 
