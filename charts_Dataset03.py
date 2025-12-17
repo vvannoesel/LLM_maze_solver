@@ -2412,12 +2412,6 @@ single_legend = [
     'JPG', 
     'JSON', 
     'Tokenized', 
-    'ASCII', 
-    'Adjacency JSON', 
-    'Adjacency Text', 
-    'JPG', 
-    'JSON', 
-    'Tokenized', 
     'ASCII'
 ]
 
@@ -2425,35 +2419,24 @@ single_legend = [
 # Structure: (Means_NR, Means_R, Err_NR, Err_R, Title)
 # NR = Non-Reasoning (Solid), R = Reasoning (Dotted)
 plot_configs = [
-    # Top-Left: line coords
-    (means_line_NR_coords, means_line_R_coords, 
-     error_line_NR_coords, error_line_R_coords, 
-     "Line-Walled Maze, \nCoordinates Output"),
-    
-    # Top-Middle: line allo
-    (means_line_NR_allo, means_line_R_allo, 
-     error_line_NR_allo, error_line_R_allo, 
-     "Line-Walled Maze, \nAllocentric Output"),
-    
-    # Top-Right: line ego
-    (means_line_NR_ego, means_line_R_ego, 
-     error_line_NR_ego, error_line_R_ego, 
-     "Line-Walled Maze, \nEgocentric Output"),
-    
-    # Bottom-Left: occupancy coords
-    (means_occ_NR_coords, means_occ_R_coords, 
-     error_occupancy_NR_coords, error_occupancy_R_coords, 
-     "Occupancy Grid Maze, \nCoordinates Output"),
-    
-    # Bottom-Middle: occupancy allo
-    (means_occ_NR_allo, means_occ_R_allo, 
-     error_occupancy_NR_allo, error_occupancy_R_allo, 
-     "Occupancy Grid Maze, \nAllocentric Output"),
-    
-    # Bottom-Right: occupancy ego
-    (means_occ_NR_ego, means_occ_R_ego, 
-     error_occupancy_NR_ego, error_occupancy_R_ego, 
-     "Occupancy Grid Maze, \nEgocentric Output"),
+    # Col 0: Left left
+    (means_line_NR_coords, means_occ_NR_coords,
+     error_line_NR_coords, error_occupancy_NR_coords),
+    # Col 1: Middle left
+    (means_line_NR_allo, means_occ_NR_allo,
+     error_line_NR_allo, error_occupancy_NR_allo),
+    # Col 2: Right left
+    (means_line_NR_ego, means_occ_NR_ego, 
+     error_line_NR_ego, error_occupancy_NR_ego),
+    # Col 3: Right left
+    (means_line_R_coords, means_occ_R_coords,
+     error_line_R_coords, error_occupancy_R_coords),
+    # Col 4: Right middle
+    (means_line_R_allo, means_occ_R_allo,
+     error_line_R_allo, error_occupancy_R_allo),
+    # Col 5: Right right
+    (means_line_R_ego, means_occ_R_ego,
+     error_line_R_ego, error_occupancy_R_ego)
 ]
 
 # 3. Setup Plotting Parameters
@@ -2482,73 +2465,117 @@ handles_for_legend = []
 labels_for_legend = []
 
 for col in range(6):
-    means_nr, means_r, err_nr, err_r, title = plot_configs[col]
+    means_line, means_occ, err_line, err_occ = plot_configs[col]
 
     # Convert to numpy arrays
-    means_nr = np.array(means_nr)
-    means_r  = np.array(means_r)
-    err_nr   = np.array(err_nr)
-    err_r    = np.array(err_r)
+    means_line = np.array(means_line)
+    means_occ  = np.array(means_occ)
+    err_line  = np.array(err_line)
+    err_occ   = np.array(err_occ)
 
     # Number of methods
-    n_rows = means_nr.shape[0]
+    n_rows_line = means_line.shape[0]
+    n_rows_occ = means_occ.shape[0]
     print("n_rows  ", n_rows)
 
     # Jitter for NR + R
     total_lines = n_rows * 2
     jitter_arr = np.linspace(-0.1, 0.1, total_lines)
 
-#     # ------------------------
-#     # LEFT HALF → NR (cols 0–2)
-#     # ------------------------
-#     if col < 3:
-#         for row in range(2):
-#             ax = axes[row, col]
+    # ------------------------
+    # LEFT HALF → NR (cols 0–2)
+    # ------------------------
+    if col < 3: # cols 0,1,2 are the left half of the fig
+        for row in range(2):
+            ax = axes[row, col] # determining which subplot to use
+            if row < 1:
+                for i in range(n_rows_line): # looping through the representations
+                    x_shifted = x_vals + jitter_arr[i]
 
-#             for i in range(n_rows):
-#                 x_shifted = x_vals + jitter_arr[i]
+                    ax.errorbar(
+                        x_shifted,
+                        means_line[i],
+                        yerr=err_line[i],
+                        fmt='o-',  # doorgetrokken lijn
+                        linewidth=2,
+                        capsize=4,
+                        color=colors[i],
+                        alpha=0.9,
+                        
+                    )
+            else:
+                for i in range(n_rows_occ):
+                    x_shifted = x_vals + jitter_arr[i]
 
-#                 ax.errorbar(
-#                     x_shifted,
-#                     means_nr[i],
-#                     yerr=err_nr[i],
-#                     fmt='o-',
-#                     linewidth=2,
-#                     capsize=4,
-#                     color=colors[i],
-#                     alpha=0.9,
-#                     label=single_legend[i] if (row == 1 and col == 2) else None
-#                 )
+                    ax.errorbar(
+                        x_shifted,
+                        means_occ[i],
+                        yerr=err_occ[i],
+                        fmt='o-',  # doorgetrokken lijn
+                        linewidth=2,
+                        capsize=4,
+                        color=colors[i],
+                        alpha=0.9,
+                        label=single_legend[i] if (row == 1 and col == 2) else None
+                    )
 
-#     # ------------------------
-#     # RIGHT HALF → R (cols 3–5)
-#     # ------------------------
-#     else:
-#         for row in range(2):
-#             ax = axes[row, col]
+    # ------------------------
+    # RIGHT HALF → R (cols 3–5)
+    # ------------------------
+    else:
+        for row in range(2):
+            ax = axes[row, col]
 
-#             for i in range(n_rows):
-#                 x_shifted = x_vals + jitter_arr[i + n_rows]
-#                 leg_idx = i + 6
+            if row <1:
 
-#                 ax.errorbar(
-#                     x_shifted,
-#                     means_r[i],
-#                     yerr=err_r[i],
-#                     fmt='o:',
-#                     linewidth=2,
-#                     capsize=4,
-#                     color=colors[i],
-#                     alpha=0.9,
-#                     label=single_legend[leg_idx] if (row == 1 and col == 5) else None
-#                 )
+                for i in range(n_rows_line):
+                    x_shifted = x_vals + jitter_arr[i + n_rows]
 
+                    ax.errorbar(
+                        x_shifted,
+                        means_line[i],
+                        yerr=err_line[i],
+                        fmt='o:',
+                        linewidth=2,
+                        capsize=4,
+                        color=colors[i],
+                        alpha=0.9,
+                        
+                    )
+            else: 
+                for i in range(n_rows_occ):
+                    x_shifted = x_vals + jitter_arr[i]
+
+                    ax.errorbar(
+                        x_shifted,
+                        means_occ[i],
+                        yerr=err_occ[i],
+                        fmt='o:',
+                        linewidth=2,
+                        capsize=4,
+                        color=colors[i],
+                        alpha=0.9,
+                        label=single_legend[i] if (row == 1 and col == 5) else None
+                    )
+
+axes[0,0].set_title("Line-Walled Maze, \nCoordinates Output")
+axes[1,0].set_title("Occupancy Grid Maze, \nCoordinates Output")
+axes[0,1].set_title("Line-Walled Maze, \nAllocentric Output")
+axes[1,1].set_title("Occupancy Grid Maze, \nAllocentric Output")
+axes[0,2].set_title("Line-Walled Maze, \nEgocentric Output")
+axes[1,2].set_title("Occupancy Grid Maze, \nEgocentric Output")
+axes[0,3].set_title("Line-Walled Maze, \nCoordinates Output")
+axes[1,3].set_title("Occupancy Grid Maze, \nCoordinates Output")
+axes[0,4].set_title("Line-Walled Maze, \nAllocentric Output")
+axes[1,4].set_title("Occupancy Grid Maze, \nAllocentric Output")
+axes[0,5].set_title("Line-Walled Maze, \nEgocentric Output")
+axes[1,5].set_title("Occupancy Grid Maze, \nEgocentric Output")
 # Formatting
 for col in range(6):
     for row in range(2):
         ax = axes[row, col]
 
-        ax.set_title(plot_configs[col][4], fontsize=11)
+        # ax.set_title(plot_configs[col][4], fontsize=11)
         ax.grid(axis='y', linestyle='--', alpha=0.5)
 
         if col < 3:
