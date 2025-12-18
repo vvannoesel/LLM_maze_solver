@@ -673,18 +673,3 @@ avg_r_ego_occupancy_tokenized_txt_output = np.mean(occupancy_R_ego_tokenized_txt
 # print("average output R occ adj txt 15x15:", np.mean(np.array([avg_r_coords_occupancy_adj_txt_output, avg_r_allo_occupancy_adj_txt_output, avg_r_ego_occupancy_adj_txt_output])))
 # print("average output R occ ascii txt 15x15:", np.mean(np.array([avg_r_coords_occupancy_ascii_txt_output, avg_r_allo_occupancy_ascii_txt_output, avg_r_ego_occupancy_ascii_txt_output])))
 # print("average output R occ tokenized txt 15x15:", np.mean(np.array([avg_r_coords_occupancy_tokenized_txt_output, avg_r_allo_occupancy_tokenized_txt_output, avg_r_ego_occupancy_tokenized_txt_output])))
-
-print('RC', np.mean(line_R_coords_adj_json_15))
-print('RA', np.mean(line_R_allo_adj_json_15))
-print('RE', np.mean(line_R_ego_adj_json_15))
-print('NRC', np.mean(line_NR_coords_adj_json_15))
-print('NRA', np.mean(line_NR_allo_adj_json_15))
-print('NRE', np.mean(line_NR_ego_adj_json_15))
-
-print ('RAW STEPS')
-print('RC', np.mean(line_R_coords_adj_json_raw_score_15))
-print('RA', np.mean(line_R_allo_adj_json_raw_score_15))
-print('RE', np.mean(line_R_ego_adj_json_raw_score_15))
-print('NRC', np.mean(line_NR_coords_adj_json_raw_score_15))
-print('NRA', np.mean(line_NR_allo_adj_json_raw_score_15))
-print('NRE', np.mean(line_NR_ego_adj_json_raw_score_15))

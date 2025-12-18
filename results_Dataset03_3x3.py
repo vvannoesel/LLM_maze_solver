@@ -3,7 +3,16 @@ import pandas as pd
 import dataframe_image as dfi
 representations = ['line jpg', 'line json', 'line adjacency json', 'line adjacency txt', 'line tokenized txt', 
                    'occupancy jpg', 'occupancy json', 'occupancy adjacency json', 'occupancy adjacency txt', 'occupancy ascii txt', 'occupancy tokenized txt']
-
+"""
+List of 110:
+occupancy_NR_coords_ascii_txt_3 run 2,3,10
+occupancy_NR_coords_json_3 run 2,4, 7, 10
+occupancy_NR_coords_tokenized_txt_3 run 2, 10
+occupancy_NR_allo_adj_json_3 run 4,7,10
+occupancy_NR_allo_ascii_txt_3 run 2
+occupancy_NR_allo_tokenized_txt_3 run 10
+line_R_ego_jpg_3 run 10
+"""
 
 # NR - COORDS - 1-10 ----------------------------------------------------------------
 
@@ -15,10 +24,10 @@ line_NR_coords_json_3 = np.array([100.0, 20.0, 60.0, 20.0, 42.857142857142854, 1
 line_NR_coords_tokenized_txt_3 = np.array([20.0, 0.0, 0.0, 60.0, 0.0, 0.0, 0.0, 14.285714285714285, 0.0, 20.0])
 occupancy_NR_coords_adj_json_3 = np.array([100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0])
 occupancy_NR_coords_adj_txt_3 = np.array([100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0])
-occupancy_NR_coords_ascii_txt_3 = np.array([0.0, 110.00000000000001, 0.0, 110.00000000000001, 0.0, 0.0, 0.0, 0.0, 0.0, 110.00000000000001])
+occupancy_NR_coords_ascii_txt_3 = np.array([0.0, 100.0, 0.0, 100.0, 0.0, 0.0, 0.0, 0.0, 0.0, 100.0])
 occupancy_NR_coords_jpg_3 = np.array([0.0, 0.0, 55.55555555555556, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0])
-occupancy_NR_coords_json_3 = np.array([100.0, 110.00000000000001, 100.0, 110.00000000000001, 7.6923076923076925, 100.0, 110.00000000000001, 100.0, 100.0, 110.00000000000001])
-occupancy_NR_coords_tokenized_txt_3 = np.array([11.11111111111111, 110.00000000000001, 100.0, 100.0, 7.6923076923076925, 11.11111111111111, 100.0, 100.0, 7.6923076923076925, 110.00000000000001])
+occupancy_NR_coords_json_3 = np.array([100.0, 100.0, 100.0, 100.0, 7.6923076923076925, 100.0, 100.0, 100.0, 100.0, 100.0])
+occupancy_NR_coords_tokenized_txt_3 = np.array([11.11111111111111, 100.0, 100.0, 100.0, 7.6923076923076925, 11.11111111111111, 100.0, 100.0, 7.6923076923076925, 100.0])
 
 # Raw scores
 line_NR_coords_adj_json_raw_score_3 = np.array([5.0, 5.0, 5.0, 5.0, 7.0, 5.0, 5.0, 7.0, 7.0, 5.0])
@@ -112,12 +121,12 @@ line_NR_allo_adj_txt_3 = np.array([0.0, 100.0, 0.0, 100.0, 0.0, 0.0, 100.0, 33.3
 line_NR_allo_jpg_3 = np.array([50.0, 0.0, 50.0, 100.0, 33.33333333333333, 50.0, 100.0, 0.0, 0.0, 0.0])
 line_NR_allo_json_3 = np.array([100.0, 0.0, 100.0, 0.0, 33.33333333333333, 100.0, 0.0, 0.0, 33.33333333333333, 0.0])
 line_NR_allo_tokenized_txt_3 = np.array([0.0, 100.0, 0.0, 25.0, 0.0, 0.0, 25.0, 33.33333333333333, 0.0, 25.0])
-occupancy_NR_allo_adj_json_3 = np.array([50.0, 25.0, 75.0, 110.00000000000001, 0.0, 50.0, 110.00000000000001, 33.33333333333333, 0.0, 110.00000000000001])
-occupancy_NR_allo_adj_txt_3 = np.array([62.5, 25.0, 0.0, 37.5, 33.33333333333333, 25.0, 37.5, 33.33333333333333, 0.0, 110.00000000000001])
-occupancy_NR_allo_ascii_txt_3 = np.array([0.0, 110.00000000000001, 0.0, 0.0, 0.0, 0.0, 62.5, 33.33333333333333, 33.33333333333333, 0.0])
+occupancy_NR_allo_adj_json_3 = np.array([50.0, 25.0, 75.0, 100.0, 0.0, 50.0, 100.0, 33.33333333333333, 0.0, 100.0])
+occupancy_NR_allo_adj_txt_3 = np.array([62.5, 25.0, 0.0, 37.5, 33.33333333333333, 25.0, 37.5, 33.33333333333333, 0.0, 100.0])
+occupancy_NR_allo_ascii_txt_3 = np.array([0.0, 100.0, 0.0, 0.0, 0.0, 0.0, 62.5, 33.33333333333333, 33.33333333333333, 0.0])
 occupancy_NR_allo_jpg_3 = np.array([12.5, 0.0, 12.5, 0.0, 8.333333333333332, 12.5, 12.5, 8.333333333333332, 8.333333333333332, 0.0])
 occupancy_NR_allo_json_3 = np.array([62.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 33.33333333333333, 0.0, 87.5])
-occupancy_NR_allo_tokenized_txt_3 = np.array([0.0, 0.0, 0.0, 50.0, 8.333333333333332, 12.5, 0.0, 8.333333333333332, 0.0, 110.00000000000001])
+occupancy_NR_allo_tokenized_txt_3 = np.array([0.0, 0.0, 0.0, 50.0, 8.333333333333332, 12.5, 0.0, 8.333333333333332, 0.0, 100.0])
 
 
 # Raw Scores
@@ -506,7 +515,7 @@ avg_r_allo_occupancy_tokenized_txt_output = np.mean(occupancy_R_allo_tokenized_t
 # Accuracy
 line_R_ego_adj_json_3 = np.array([25.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0])
 line_R_ego_adj_txt_3 = np.array([25.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0])
-line_R_ego_jpg_3 = np.array([25.0, 0.0, 50.0, 50.0, 33.33333333333333, 0.0, 0.0, 100.0, 16.666666666666664, 110.00000000000001])
+line_R_ego_jpg_3 = np.array([25.0, 0.0, 50.0, 50.0, 33.33333333333333, 0.0, 0.0, 100.0, 16.666666666666664, 100.0])
 line_R_ego_json_3 = np.array([100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0])
 line_R_ego_tokenized_txt_3 = np.array([100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0])
 occupancy_R_ego_adj_json_3 = np.array([100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0, 100.0])
