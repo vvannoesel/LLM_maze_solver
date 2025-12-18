@@ -1347,7 +1347,7 @@ for i in range(0,3):
         axes[i,j].set_xscale('log')  # Set x-axis to logarithmic scale
         axes[i,j].grid(True, linestyle='--', alpha=0.6)
         axes[i,j].set_ylabel("Accuracy (%)")
-        axes[i,j].set_xlabel("Average Cost Per Task (Tokens)")
+        axes[i,j].set_xlabel("Test Compute (Tokens)")
 
 
 
@@ -1437,7 +1437,7 @@ axes[1,1].set_title("6x6 and 13x13, Gemini 2.5 Pro")
 axes[2,0].set_title("15x15 and 31x31, Gemini 2.5 Flash Lite")
 axes[2,1].set_title("15x15 and 31x31, Gemini 2.5 Pro")
 
-plt.suptitle("Performance vs. Cost Per Task", x=0.48,  fontweight= 'bold')
+plt.suptitle("Model Performance as a Function of Test Compute", x=0.48,  fontweight= 'bold')
 
 plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
 

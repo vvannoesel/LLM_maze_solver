@@ -1131,9 +1131,9 @@ ax2.set_xscale('log')
 ax1.grid(True, linestyle='--', alpha=0.6)
 ax2.grid(True, linestyle='--', alpha=0.6)
 ax1.set_ylabel("Number of Correct Steps")
-ax1.set_xlabel("Average Cost Per Task (Tokens)")
+ax1.set_xlabel("Average Test Compute (Tokens)")
 ax2.set_ylabel("Number of Correct Steps")
-ax2.set_xlabel("Average Cost Per Task (Tokens)")
+ax2.set_xlabel("Average Test Compute (Tokens)")
 
 
 
@@ -1220,7 +1220,7 @@ ax1.set_title("Gemini 2.5 Flash Lite")
 ax2.set_title("Gemini 2.5 Pro")
 
 
-plt.suptitle("Absolute Number of Correct Steps vs. Cost Per Task, Combined Average of Maze Complexities", fontweight= 'bold')
+plt.suptitle("Number of Correct Consecutive Steps as a Function of Test Compute", fontweight= 'bold')
 
 plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
 
@@ -1341,7 +1341,7 @@ for i in range(0,2):
         axes[i,j].set_xscale('log')  # Set x-axis to logarithmic scale
         axes[i,j].grid(True, linestyle='--', alpha=0.6)
         axes[i,j].set_ylabel("Number of Correct Steps")
-        axes[i,j].set_xlabel("Average Cost Per Task (Tokens)")
+        axes[i,j].set_xlabel("Average Test Compute  (Tokens)")
 
 
 
@@ -1442,7 +1442,7 @@ axes[1,0].set_title("Occupancy Grid Mazes, Gemini 2.5 Flash Lite")
 axes[1,1].set_title("Occupancy Grid Mazes, Gemini 2.5 Pro")
 
 
-plt.suptitle("Absolute Number of Correct Steps vs. Cost Per Task, Combined Average of Maze Complexities", fontweight= 'bold')
+plt.suptitle("Number of Correct Consecutive Steps as a Function of Test Compute", fontweight= 'bold')
 
 plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
 
