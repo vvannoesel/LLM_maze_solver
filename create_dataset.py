@@ -16,11 +16,12 @@ def create_test_directory(rows, cols):
     """
 
     # Define paths so Data folders are saved relative to this script
+    give_your_dataset_a_name = "Dataset 02 - Statistical analysis"
     script_dir = Path(__file__).parent.resolve()    # Get the directory of the current script
-    dataset_root = script_dir / "Dataset 02 - Statistical analysis"        # Define the root dataset directory
+    dataset_root = script_dir / give_your_dataset_a_name        # Define the root dataset directory
     dataset_root.mkdir(exist_ok=True)               # Create the root directory if it doesn't exist
 
-    base_name = "Dataset 01"
+    base_name = give_your_dataset_a_name
     dir_name = f"{base_name} {rows}x{cols}"
     dir_path = dataset_root / dir_name
     if not dir_path.exists():
@@ -79,7 +80,9 @@ def main():
     Main function to run the full maze generation and saving in "current directory"\Dataset 01 .
     """
     i = 2 # Starting size for rows and columns. Minimum maze is 2x2
-    while i<=3: # Maximum size for rows and columns. Change if needed
+    j = 4 # Maximum size for rows and columns. Change if needed
+    
+    while i<=j: # Setting minimum and maximum size for rows and columns
         ROWS = i
         COLS = i
         try:

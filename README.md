@@ -94,6 +94,19 @@ API_KEY = "YOUR_SECRET_API_KEY_HERE"
 * score_saver.py
     * A python script that stores the scores from tesT.py and tesT_2.py in a numpy array in a file called 'scores_nonreasoning_Dataset01.py. These arrays can be used to create charts. The score is saved to an array with a name similar to the tested file's name.  The score is saved to the [row-2]'nd index of the array, so a 2x2 maze score is saved on the 0th index, 3x3 score on the 1st index, etc. This file is called within the tesT.py and tesT_2.py files. 
 
+# Creating a Dataset
+This project allows two ways to create a dataset. Either you create multiple mazes of the same size (row x col), or you create one square maze for each size, within specified size boundaries.
+## One Size - Multiple Mazes
+- Inputs: dataset directory, maze rows and columns
+- Outputs: the specified directory (if it did not exist) containing separate folders for each maze. Each folder has the name "_directory_name_ _size_ _postfix_number_" (eg. "Dataset 01 3x3 1"). The postfix number is used to distinguish each maze, so you will have mazes 1,2,3,4,5,6,... of your desired size. 
+
+Use **create_dataset_of_same_complexity.py**. This file uses the maze_generator_ext_v3.py file to recurrently create mazes. First, specify the directory you want to use, by including the name of the directory in the **create_test_directory(rows, cols, k)** function, as _give_your_dataset_a_name_. Then, in the **main()**, specify the number of rows and columns your mazes should have, and what the postfix numbers of the files should be. This would ordinarily start at 1, but if you want to append an existing dataset, set it to whatever value the existing dataset contains. 
+
+## Many Sizes - One Maze for Each
+- Inputs: dataset directory, lower bound for maze rows and columns, upper bound for maze rows and columns
+- Outputs: the specified directory (if it did not exist) containing separate folders for each maze. Each folder has the name "_directory_name_ _size_" (eg. "Dataset 01 3x3").
+
+Use **create_dataset_of_same_complexity.py**. This file uses the maze_generator_ext_v3.py file to recurrently create mazes. First, specify the directory you want to use, by including the name of the directory in the **create_test_directory(rows, cols, k)** function, as _give_your_dataset_a_name_. Then, in the **main()**, specify the minimum and maximum number of rows and columns your mazes should have, by changing the values for 'i' and 'j'. Note that this script only creates square mazes.   
 
 # Notes voor Val
 Wanneer je je hele code gaat testen, let dan vooral op het volgende:

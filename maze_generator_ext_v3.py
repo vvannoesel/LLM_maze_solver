@@ -434,21 +434,21 @@ class OccupancyGridMaze(Maze):
             new_solution.append(final_cell_og)
         self.solution = new_solution
 
-    def to_line_maze(self):
-        """Converts the occupancy grid back to a line-based maze."""
-        og_rows, og_cols = len(self.grid), len(self.grid[0])
-        if og_rows % 2 == 0 or og_cols % 2 == 0:
-            raise ValueError("Occupancy grid dimensions must be odd to be converted.")
-        line_rows, line_cols = (og_rows - 1) // 2, (og_cols - 1) // 2
-        restored_maze = Maze(line_cols, line_rows, _generate=False)
-        for r in range(line_rows):
-            for c in range(line_cols):
-                restored_maze.grid[r][c].walls['N'] = (self.grid[2*r][2*c + 1] == 1)
-                restored_maze.grid[r][c].walls['S'] = (self.grid[2*r + 2][2*c + 1] == 1)
-                restored_maze.grid[r][c].walls['E'] = (self.grid[2*r + 1][2*c + 2] == 1)
-                restored_maze.grid[r][c].walls['W'] = (self.grid[2*r + 1][2*c] == 1)
-        restored_maze._solve_maze()
-        return restored_maze
+    # def to_line_maze(self):
+    #     """Converts the occupancy grid back to a line-based maze. Used to validate if conversions are correct"""
+    #     og_rows, og_cols = len(self.grid), len(self.grid[0])
+    #     if og_rows % 2 == 0 or og_cols % 2 == 0:
+    #         raise ValueError("Occupancy grid dimensions must be odd to be converted.")
+    #     line_rows, line_cols = (og_rows - 1) // 2, (og_cols - 1) // 2
+    #     restored_maze = Maze(line_cols, line_rows, _generate=False)
+    #     for r in range(line_rows):
+    #         for c in range(line_cols):
+    #             restored_maze.grid[r][c].walls['N'] = (self.grid[2*r][2*c + 1] == 1)
+    #             restored_maze.grid[r][c].walls['S'] = (self.grid[2*r + 2][2*c + 1] == 1)
+    #             restored_maze.grid[r][c].walls['E'] = (self.grid[2*r + 1][2*c + 2] == 1)
+    #             restored_maze.grid[r][c].walls['W'] = (self.grid[2*r + 1][2*c] == 1)
+    #     restored_maze._solve_maze()
+    #     return restored_maze
 
     # def to_ascii(self): #this function works but does not include start and end markers
     #     """Returns an ASCII string representation of the occupancy grid maze."""
