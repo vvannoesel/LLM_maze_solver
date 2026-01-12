@@ -79,6 +79,7 @@ class Maze:
                 stack.pop()
                 if stack:
                     self.dfs_path.append(stack[-1])
+        print(self.grid)
 
     def _get_unvisited_neighbors(self, row, col):
         """

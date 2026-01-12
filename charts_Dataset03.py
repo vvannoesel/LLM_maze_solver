@@ -1259,12 +1259,12 @@ labels_occ = [
 
 # 1. Define the Legend Labels
 # single_legend = [
-#     'Adjacency JSON - Gemini 2.5 Flash Lite', 
-#     'Adjacency Text - Gemini 2.5 Flash Lite', 
-#     'JPG - Gemini 2.5 Flash Lite', 
-#     'JSON - Gemini 2.5 Flash Lite', 
-#     'Tokenized - Gemini 2.5 Flash Lite', 
-#     'ASCII - Gemini 2.5 Flash Lite', 
+#     'Adjacency JSON - Gemini 2.5 Flash-Lite', 
+#     'Adjacency Text - Gemini 2.5 Flash-Lite', 
+#     'JPG - Gemini 2.5 Flash-Lite', 
+#     'JSON - Gemini 2.5 Flash-Lite', 
+#     'Tokenized - Gemini 2.5 Flash-Lite', 
+#     'ASCII - Gemini 2.5 Flash-Lite', 
 #     'Adjacency JSON - Gemini 2.5 Pro', 
 #     'Adjacency Text - Gemini 2.5 Pro', 
 #     'JPG - Gemini 2.5 Pro', 
@@ -1387,7 +1387,7 @@ for idx, ax in enumerate(axes.flat):
         x_tick_lbls = x_tick_lbls_line
     else:
         x_tick_lbls = x_tick_lbls_occupancy
-        ax.set_xlabel("Maze Complexity")
+        ax.set_xlabel("Maze Size")
     ax.set_title(title, fontsize=11)
     ax.set_xticks(x_vals)
     ax.set_xticklabels(x_tick_lbls)
@@ -1453,7 +1453,7 @@ Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10), 
 ]
 labels = [
 r"$\bf{Models}$",
-"Gemini 2.5 Pro", "Gemini 2.5 Flash Lite",
+"Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
 r"$\bf{Input\ Formats}$",
 "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
 ]
@@ -2637,7 +2637,7 @@ for col in range(6):
             ax.set_ylabel("Number of Correct Consecutive Steps")
 
         if row == 1:
-            ax.set_xlabel("Maze Complexity")
+            ax.set_xlabel("Maze Size")
 
     
     # # Save handles from the last plot (Bottom-Right) because it contains all 12 lines
@@ -2693,7 +2693,7 @@ Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10), 
 ]
 labels = [
 r"$\bf{Models}$",
-"Gemini 2.5 Pro", "Gemini 2.5 Flash Lite",
+"Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
 r"$\bf{Input\ Formats}$",
 "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
 ]
@@ -2745,12 +2745,12 @@ plt.show()
 
 # # 1. Define the Legend Labels
 # single_legend = [
-#     'Adjacency Json - Gemini 2.5 Flash Lite', 
-#     'Adjacency Text - Gemini 2.5 Flash Lite', 
-#     'JPG - Gemini 2.5 Flash Lite', 
-#     'JSON - Gemini 2.5 Flash Lite', 
-#     'Tokenized - Gemini 2.5 Flash Lite', 
-#     'ASCII - Gemini 2.5 Flash Lite', 
+#     'Adjacency Json - Gemini 2.5 Flash-Lite', 
+#     'Adjacency Text - Gemini 2.5 Flash-Lite', 
+#     'JPG - Gemini 2.5 Flash-Lite', 
+#     'JSON - Gemini 2.5 Flash-Lite', 
+#     'Tokenized - Gemini 2.5 Flash-Lite', 
+#     'ASCII - Gemini 2.5 Flash-Lite', 
 #     'Adjacency Json - Gemini 2.5 Pro', 
 #     'Adjacency Text - Gemini 2.5 Pro', 
 #     'JPG - Gemini 2.5 Pro', 
