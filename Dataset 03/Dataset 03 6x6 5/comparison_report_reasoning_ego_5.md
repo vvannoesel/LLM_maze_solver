@@ -854,7 +854,8 @@ Eventually, after *many* incorrect turns, I found the correct path. I then conve
 
 This careful step-by-step process, which I double checked for correctness, provides the solution to the maze, in agent-understandable instructions.
 
-```text
+```
+text
 Forward,Forward,Forward,Forward,Left,Forward,Left,Forward,Forward,Forward,Right,Forward,Right,Forward,Left,Forward,Right,Forward,Forward,Forward,Left,Forward,Right,Forward,Forward,Forward,Left,Forward
 ```
 
@@ -885,7 +886,8 @@ Eventually, after *many* incorrect turns, I found the correct path. I then conve
 
 This careful step-by-step process, which I double checked for correctness, provides the solution to the maze, in agent-understandable instructions.
 
-```text
+```
+text
 Forward,Forward,Forward,Forward,Left,Forward,Left,Forward,Forward,Forward,Right,Forward,Right,Forward,Left,Forward,Right,Forward,Forward,Forward,Left,Forward,Right,Forward,Forward,Forward,Left,Forward
 ```
 """,
@@ -949,7 +951,8 @@ Eventually, after *many* incorrect turns, I found the correct path. I then conve
 
 This careful step-by-step process, which I double checked for correctness, provides the solution to the maze, in agent-understandable instructions.
 
-```text
+```
+text
 Forward,Forward,Forward,Forward,Left,Forward,Left,Forward,Forward,Forward,Right,Forward,Right,Forward,Left,Forward,Right,Forward,Forward,Forward,Left,Forward,Right,Forward,Forward,Forward,Left,Forward
 ```
 """,

@@ -2626,7 +2626,13 @@ for col in range(6):
         # ax.set_title(plot_configs[col][4], fontsize=11)
         ax.grid(axis='y', linestyle='--', alpha=0.5)
 
-        if col < 3:
+        if col < 3 and row == 0:
+            ax.set_xticks(x_vals)
+            ax.set_xticklabels(x_tick_lbls_line)
+        elif col < 3 and row == 1:
+            ax.set_xticks(x_vals)
+            ax.set_xticklabels(x_tick_lbls_occupancy)
+        elif col >= 3 and row == 0:
             ax.set_xticks(x_vals)
             ax.set_xticklabels(x_tick_lbls_line)
         else:
