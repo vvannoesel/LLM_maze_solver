@@ -32,3 +32,6 @@ output_tokens_Dataset03_5x5.py
 input_tokens_Dataset03_5x5.py
 raw_scores_Dataset03_5x5.py
 scores_Dataset03_5x5.py
+*Dataset01.py
+*Dataset02.py
+*.pptx

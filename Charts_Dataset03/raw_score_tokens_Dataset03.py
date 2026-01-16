@@ -1,3 +1,9 @@
+# Import parent directory to access results files 
+import sys
+import os
+parent_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(parent_directory)
+
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd

@@ -1,43 +1,54 @@
+# Import parent directory to access results files 
+import sys
+import os
+parent_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(parent_directory)
+
 import numpy as np
 import matplotlib.ticker as mtick
 import matplotlib.pyplot as plt
-import results_Dataset03_3x3 as h
-import results_Dataset03_6x6 as i
-import results_Dataset03_15x15 as j
+import results_Dataset03_3x3 as r3
+import results_Dataset03_6x6 as r6
+import results_Dataset03_15x15 as r15
 
-representations_line = np.array(['JPG Line', 'JSON Line', 'JSON Adj Line', 'TXT Adj Line', 'Tokenized Line'])
-representations_occupancy = np.array(['JPG Occupancy', 'JSON Occupancy', 'JSON Adj Occupancy', 'TXT Adj Occupancy', 'Tokenized Occupancy', 'ASCII Occupancy'])
+representations_line = np.array(['JPG', 'JSON', 'Adjacency JSON', 'Adjacency Text', 'Tokenized'])
+representations_occupancy = np.array(['JPG', 'JSON', 'Adjacency JSON', 'Adjacency Text', 'Tokenized', 'ASCII'])
 
 occurrence_coords_3_line = np.array([0, 1, 1, 6, 0])/6*100   # make percentage by dividing by number of runs
 occurrence_coords_6_line = np.array([1, 10, 10, 10, 8])*10
-
-occurrence_coords_3_occ = np.array([ 0, 2, 5, 5, 4, 1])/6*100
-occurrence_coords_6_occ = np.array([ 2, 9, 10, 10, 8, 3])*10
+occurrence_coords_15_line = np.array([0, 3, 4, 7, 1])*10
+occurrence_coords_3_occ = np.array([0, 2, 5, 5, 4, 1])/6*100
+occurrence_coords_6_occ = np.array([2, 9, 10, 10, 8, 3])*10
+occurrence_coords_15_occ = np.array([0, 1, 3, 8, 1, 1 ])*10
 
 occurrence_allo_3_line = np.array([0, 3, 3, 4, 1])/6*100
 occurrence_allo_6_line = np.array([0, 10, 10, 10, 5])*10
+occurrence_allo_15_line = np.array([1, 4, 9, 2, 1])*10
 occurrence_allo_3_occ = np.array([ 0, 3, 5, 5, 2, 2])/6*100
 occurrence_allo_6_occ = np.array([ 0, 10, 10, 10, 8, 4])*10
+occurrence_allo_15_occ = np.array([0, 1, 4, 4, 1, 1])*10
 
 occurrence_ego_3_line = np.array([0, 0, 2, 4, 1])/6*100
 occurrence_ego_6_line = np.array([0, 9, 10, 9, 8])*10
+occurrence_ego_15_line = np.array([0, 4, 10, 9, 2])*10
 occurrence_ego_3_occ = np.array([0, 2, 3, 4, 1, 0])/6*100
 occurrence_ego_6_occ = np.array([0, 6, 10, 10, 1, 5])*10
+occurrence_ego_15_occ = np.array([0, 1, 6, 6, 2, 1])*10
 
 
 
 # Build heatmap matrices (rows = representations, cols = maze sizes)
-heatmap_coords_line = np.column_stack([occurrence_coords_3_line, occurrence_coords_6_line])
-heatmap_allo_line   = np.column_stack([occurrence_allo_3_line,  occurrence_allo_6_line])
-heatmap_ego_line = np.column_stack([occurrence_ego_3_line, occurrence_ego_6_line])
-heatmap_coords_occ = np.column_stack([occurrence_coords_3_occ, occurrence_coords_6_occ])
-heatmap_allo_occ   = np.column_stack([occurrence_allo_3_occ,  occurrence_allo_6_occ])
-heatmap_ego_occ   = np.column_stack([occurrence_ego_3_occ,  occurrence_ego_6_occ])
+heatmap_coords_line = np.column_stack([occurrence_coords_3_line, occurrence_coords_6_line, occurrence_coords_15_line])
+heatmap_allo_line   = np.column_stack([occurrence_allo_3_line,  occurrence_allo_6_line, occurrence_allo_15_line])
+heatmap_ego_line = np.column_stack([occurrence_ego_3_line, occurrence_ego_6_line, occurrence_ego_15_line])
+heatmap_coords_occ = np.column_stack([occurrence_coords_3_occ, occurrence_coords_6_occ, occurrence_coords_15_occ])
+heatmap_allo_occ   = np.column_stack([occurrence_allo_3_occ,  occurrence_allo_6_occ, occurrence_allo_15_occ])
+heatmap_ego_occ   = np.column_stack([occurrence_ego_3_occ,  occurrence_ego_6_occ, occurrence_ego_15_occ])
 
 
 
-maze_sizes_line = ['3x3', '6x6']
-maze_sizes_occ = ['7x7', '13x13']
+maze_sizes_line = ['3x3', '6x6', '15x15']
+maze_sizes_occ = ['7x7', '13x13', '31x31']
 
 
 
@@ -111,12 +122,12 @@ for (row, col), (data, title) in plot_map.items():
 # COlorbar settings
 cbar_ax = fig.add_axes([0.92, 0.15, 0.02, 0.7])
 cbar = fig.colorbar(im, cax=cbar_ax)
-cbar.set_label("Number of Occurrences")
+cbar.set_label("Percentual Number of Occurrences")
 cbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(100))
 
 # Figure title and layout
 fig.suptitle(
-    "Heatmaps of Reasoning Occurrences by Representation",
+    "Occurrences of Gemini 2.5 Pro Using Graph Solving Algorithms", # This is only done for reasoning because the NR does not show their work.
     fontweight="bold"
 )
 

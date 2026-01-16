@@ -1,8 +1,11 @@
+# Import parent directory to access results files 
+import sys
+import os
+parent_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(parent_directory)
 
 import matplotlib.pyplot as plt
 import numpy as np
-import pandas as pd
-import dataframe_image as dfi
 from matplotlib.lines import Line2D
 from matplotlib.legend_handler import HandlerTuple, HandlerBase
 from matplotlib import rcParams

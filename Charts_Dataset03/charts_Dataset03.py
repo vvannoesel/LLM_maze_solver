@@ -1,8 +1,11 @@
+# Import parent directory to access results files 
+import sys
+import os
+parent_directory = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
+sys.path.append(parent_directory)
+
 import numpy as np
 import matplotlib.pyplot as plt
-import pandas as pd
-import dataframe_image as dfi
-# import matplotlib.pyplot.axes as axs
 import results_Dataset03_3x3 as r3
 import results_Dataset03_6x6 as r6
 import results_Dataset03_15x15 as r15
