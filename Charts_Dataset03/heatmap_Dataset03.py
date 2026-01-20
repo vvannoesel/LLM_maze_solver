@@ -247,7 +247,7 @@ cbar.ax.yaxis.set_major_formatter(mtick.PercentFormatter(100))
 
 # Figure title and layout
 fig.suptitle(
-    "Occurrences of Gemini 2.5 Pro Using Graph Solving Algorithms", # This is only done for reasoning because the NR does not show their work.
+    "Occurrences of Gemini 2.5 Pro Mentioning Using Graph Solving Algorithms", # This is only done for reasoning because the NR does not show their work.
     fontweight="bold"
 )
 
