@@ -1349,7 +1349,7 @@ for i in range(0,3):
     for j in range(0,2):
         axes[i,j].set_xscale('log')  # Set x-axis to logarithmic scale
         axes[i,j].grid(True, linestyle='--', alpha=0.6)
-        axes[i,j].set_ylabel("Accuracy (%)")
+        axes[i,j].set_ylabel("Completion Score (%)")
         axes[i,j].set_xlabel("Test Compute (Tokens)")
 
 

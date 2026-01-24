@@ -1397,7 +1397,7 @@ for idx, ax in enumerate(axes.flat):
     ax.grid(axis='y', linestyle='--', alpha=0.5)
     
     if idx % 3 == 0:
-        ax.set_ylabel("Accuracy (%)")
+        ax.set_ylabel("Completion Score (%)")
     
 
 
@@ -1408,7 +1408,7 @@ for idx, ax in enumerate(axes.flat):
 
 
 
-plt.suptitle("Accuracy", x=0.9*0.5, fontweight='bold')
+plt.suptitle("Completion Score", x=0.9*0.5, fontweight='bold')
 # Position the legend within that white space
 # legend=fig.legend(
 #     handles_for_legend, 
