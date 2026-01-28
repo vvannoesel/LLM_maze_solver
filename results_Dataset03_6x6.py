@@ -474,6 +474,19 @@ occupancy_R_allo_jpg_output_tokens_6 = np.array([5419.0, 2450.0, 1883.0, 2165.0,
 occupancy_R_allo_json_output_tokens_6 = np.array([12925.0, 8580.0, 17443.0, 27933.0, 8077.0, 14011.0, 12393.0, 4414.0, 10960.0, 15358.0])
 occupancy_R_allo_tokenized_txt_output_tokens_6 = np.array([6708.0, 6990.0, 7499.0, 11540.0, 3074.0, 4217.0, 14502.0, 6598.0, 6265.0, 8402])
 
+# Final answer only output tokens
+line_R_allo_jpg_final_answer_6 = np.array([15, 15, 19, 23, 19, 19, 19, 19, 23, 23])
+line_R_allo_json_final_answer_6 = np.array([31, 35, 67, 55, 27, 39, 47, 19, 31, 39])
+line_R_allo_adj_json_final_answer_6 = np.array([31, 35, 67, 55, 27, 39, 47, 19, 31, 39])
+line_R_allo_adj_txt_final_answer_6 = np.array([31, 35, 67, 55, 27, 39, 47, 19, 31, 39])
+line_R_allo_tokenized_final_answer_6 = np.array([31, 35, 31, 55, 27, 39, 47, 19, 31, 39])
+occupancy_R_allo_jpg_final_answer_6 = np.array([111, 37, 67, 91, 83, 91, 55, 35, 59, 87])
+occupancy_R_allo_json_final_answer_6 = np.array([79, 71, 135, 87, 55, 79, 95, 39, 63, 79])
+occupancy_R_allo_adj_json_final_answer_6 = np.array([63, 71, 135, 111, 55, 79, 95, 39, 63, 79])
+occupancy_R_allo_adj_txt_final_answer_6 = np.array([63, 71, 135, 111, 55, 79, 95, 39, 63, 79])
+occupancy_R_allo_tokenized_final_answer_6 = np.array([63, 71, 133, 111, 55, 79, 95, 39, 63, 79])
+occupancy_R_allo_ascii_final_answer_6 = np.array([39, 63, 39, 47, 39, 67, 47, 93, 47, 71])
+
 
 avg_r_allo_line_jpg_input = np.mean(line_R_allo_jpg_input_tokens_6)
 avg_r_allo_line_json_input = np.mean(line_R_allo_json_input_tokens_6)
@@ -573,6 +586,21 @@ occupancy_R_ego_ascii_txt_output_tokens_6 = np.array([22762.0, 9003.0, 2806.0, 1
 occupancy_R_ego_jpg_output_tokens_6 = np.array([5468.0, 3335.0, 6321.0, 7905.0, 8185.0, 7207.0, 5149.0, 5087.0, 10110.0, 5163.0])
 occupancy_R_ego_json_output_tokens_6 = np.array([12945.0, 10590.0, 14452.0, 26708.0, 10656.0, 7456.0, 8722.0, 8159.0, 22047.0, 12086.0])
 occupancy_R_ego_tokenized_txt_output_tokens_6 = np.array([8801.0, 9813.0, 12147.0, 7806.0, 8871.0, 14289.0, 4835.0, 4969.0, 8420.0, 7251])
+
+
+# Final answer only output tokens
+line_R_ego_jpg_final_answer_6 = np.array([19, 19, 23, 15, 19, 15, 19, 19, 15, 15])
+line_R_ego_json_final_answer_6 = np.array([31, 23, 67, 55, 27, 39, 51, 19, 31, 39])
+line_R_ego_adj_json_final_answer_6 = np.array([31, 35, 67, 55, 27, 39, 47, 19, 31, 39])
+line_R_ego_adj_txt_final_answer_6 = np.array([31, 19, 67, 55, 27, 39, 47, 19, 31, 39])
+line_R_ego_tokenized_final_answer_6 = np.array([31, 35, 31, 55, 27, 39, 47, 19, 31, 39])
+occupancy_R_ego_jpg_final_answer_6 = np.array([59, 55, 95, 75, 39, 63, 63, 83, 69, 51])
+occupancy_R_ego_json_final_answer_6 = np.array([63, 71, 65, 39, 55, 79, 95, 39, 47, 77])
+occupancy_R_ego_adj_json_final_answer_6 = np.array([63, 71, 139, 111, 55, 79, 95, 37, 63, 79])
+occupancy_R_ego_adj_txt_final_answer_6 = np.array([63, 71, 135, 111, 55, 79, 95, 39, 63, 79])
+occupancy_R_ego_tokenized_final_answer_6 = np.array([63, 71, 135, 111, 55, 79, 99, 39, 63, 79])
+occupancy_R_ego_ascii_final_answer_6 = np.array([107, 63, 51, 39, 67, 35, 55, 65, 55, 37])
+
 
 avg_r_ego_line_jpg_input = np.mean(line_R_ego_jpg_input_tokens_6)
 avg_r_ego_line_json_input = np.mean(line_R_ego_json_input_tokens_6)
