@@ -367,17 +367,17 @@ occupancy_R_coords_json_output_tokens_3 = np.array([3193.0, 2760.0, 4692.0, 5823
 occupancy_R_coords_tokenized_txt_output_tokens_3 = np.array([4248.0, 2453.0, 2759.0, 3372.0, 5675.0, 4171.0, 2481.0, 4070.0, 1732.0, 5926])
 
 # Final answer only output tokens
-line_R_coords_jpg_final_answer_3 = np.array([21, 21, 21, np.nan, 21, np.nan, np.nan,29, np.nan, 21])
-line_R_coords_json_final_answer_3 = np.array([21, 21, 21, np.nan, 29, np.nan, np.nan, 29, np.nan, 21])
-line_R_coords_adj_json_final_answer_3 = np.array([21, 21, 21, np.nan, 29, np.nan, np.nan, 29, np.nan, 21])
-line_R_coords_adj_txt_final_answer_3 = np.array([21, 21, 21, np.nan, 29, np.nan, np.nan, 29, np.nan, 21])
-line_R_coords_tokenized_txt_final_answer_3 = np.array([21, 21, 21, np.nan, 29, np.nan, np.nan, 29, np.nan, 21])
-occupancy_R_coords_jpg_final_answer_3 = np.array([45, 45, 33, np.nan, 57, np.nan, np.nan, 41, np.nan ,37])
-occupancy_R_coords_json_final_answer_3 = np.array([37, 37, 37, np.nan, 53, np.nan, np.nan, 53, np.nan, 37])
-occupancy_R_coords_adj_json_final_answer_3 = np.array([37, 37, 37, np.nan, 53, np.nan, np.nan, 53, np.nan, 37])
-occupancy_R_coords_adj_txt_final_answer_3 = np.array([37, 37, 37, np.nan, 53, np.nan, np.nan, 53, np.nan, 37])
-occupancy_R_coords_tokenized_txt_final_answer_3 = np.array([37, 37, 37, np.nan, 53, np.nan, np.nan, 53, np.nan, 37])
-occupancy_R_coords_ascii_txt_final_answer_3 = np.array([37, 37, 37, np.nan , 53, np.nan, np.nan, 53, np.nan, 45])
+line_R_coords_jpg_final_answer_3 = np.array([21.0, 21.0, 21.0, np.nan, 21.0, np.nan, np.nan,29.0, np.nan, 21.0])
+line_R_coords_json_final_answer_3 = np.array([21.0, 21.0, 21.0, np.nan, 29.0, np.nan, np.nan, 29.0, np.nan, 21.0])
+line_R_coords_adj_json_final_answer_3 = np.array([21.0, 21.0, 21.0, np.nan, 29.0, np.nan, np.nan, 29.0, np.nan, 21.0])
+line_R_coords_adj_txt_final_answer_3 = np.array([21.0, 21.0, 21.0, np.nan, 29.0, np.nan, np.nan, 29.0, np.nan, 21.0])
+line_R_coords_tokenized_txt_final_answer_3 = np.array([21.0, 21.0, 21.0, np.nan, 29.0, np.nan, np.nan, 29.0, np.nan, 21.0])
+occupancy_R_coords_jpg_final_answer_3 = np.array([45.0, 45.0, 33.0, np.nan, 57.0, np.nan, np.nan, 41.0, np.nan ,37.0])
+occupancy_R_coords_json_final_answer_3 = np.array([37.0, 37.0, 37.0, np.nan, 53.0, np.nan, np.nan, 53.0, np.nan, 37.0])
+occupancy_R_coords_adj_json_final_answer_3 = np.array([37.0, 37.0, 37.0, np.nan, 53.0, np.nan, np.nan, 53.0, np.nan, 37.0])
+occupancy_R_coords_adj_txt_final_answer_3 = np.array([37.0, 37.0, 37.0, np.nan, 53.0, np.nan, np.nan, 53.0, np.nan, 37.0])
+occupancy_R_coords_tokenized_txt_final_answer_3 = np.array([37.0, 37.0, 37.0, np.nan, 53.0, np.nan, np.nan, 53.0, np.nan, 37.0])
+occupancy_R_coords_ascii_txt_final_answer_3 = np.array([37.0, 37.0, 37.0, np.nan , 53.0, np.nan, np.nan, 53.0, np.nan, 45.0])
 
 
 avg_r_coords_line_jpg_input = np.mean(line_R_coords_jpg_input_tokens_3)
@@ -482,17 +482,17 @@ occupancy_R_allo_tokenized_txt_output_tokens_3 = np.array([2474.0, 2171.0, 1444.
 
 
 # Final answer only output tokens
-line_R_allo_jpg_final_answer_3 = np.array([7, 7, 7, np.nan, 7, np.nan, np.nan, 7, np.nan, 5])
-line_R_allo_json_final_answer_3 = np.array([7, 7, 7, np.nan, 7, np.nan, np.nan, 11, np.nan, 7])
-line_R_allo_adj_json_final_answer_3 = np.array([7, 7, 7, np.nan, 7, np.nan, np.nan, 11, np.nan, 7])
-line_R_allo_adj_txt_final_answer_3 = np.array([7, 7, 7, np.nan, 7, np.nan, np.nan, 11, np.nan, 7])
-line_R_allo_tokenized_txt_final_answer_3 = np.array([7, 7, 7, np.nan, 7, np.nan, np.nan, 11, np.nan, 7])
-occupancy_R_allo_jpg_final_answer_3 = np.array([27, 17,  31, np.nan, 31, np.nan, np.nan, 29, np.nan, 25])
-occupancy_R_allo_json_final_answer_3 = np.array([15, 15, 15, np.nan,  15, np.nan, np.nan, 23, np.nan, 15])
-occupancy_R_allo_adj_json_final_answer_3 = np.array([15, 15, 15, np.nan, 15, np.nan, np.nan, 23, np.nan, 15])
-occupancy_R_allo_adj_txt_final_answer_3 = np.array([15, 15, 15, np.nan, 15, np.nan, np.nan, 23, np.nan, 15])
-occupancy_R_allo_tokenized_txt_final_answer_3 = np.array([15, 15, 15, np.nan, 15, np.nan, np.nan, 23, np.nan, 15])
-occupancy_R_allo_ascii_txt_final_answer_3 = np.array([15, 15, 15, np.nan,  15, np.nan, np.nan, 23, np.nan, 15])
+line_R_allo_jpg_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 7.0, np.nan, np.nan, 7.0, np.nan, 5.0])
+line_R_allo_json_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 7.0, np.nan, np.nan, 11.0, np.nan, 7.0])
+line_R_allo_adj_json_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 7.0, np.nan, np.nan, 11.0, np.nan, 7.0])
+line_R_allo_adj_txt_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 7.0, np.nan, np.nan, 11.0, np.nan, 7.0])
+line_R_allo_tokenized_txt_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 7.0, np.nan, np.nan, 11.0, np.nan, 7.0])
+occupancy_R_allo_jpg_final_answer_3 = np.array([27.0, 17.0,  31.0, np.nan, 31.0, np.nan, np.nan, 29.0, np.nan, 25.0])
+occupancy_R_allo_json_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan,  15.0, np.nan, np.nan, 23.0, np.nan, 15.0])
+occupancy_R_allo_adj_json_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan, 15.0, np.nan, np.nan, 23.0, np.nan, 15.0])
+occupancy_R_allo_adj_txt_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan, 15.0, np.nan, np.nan, 23.0, np.nan, 15.0])
+occupancy_R_allo_tokenized_txt_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan, 15.0, np.nan, np.nan, 23.0, np.nan, 15.0])
+occupancy_R_allo_ascii_txt_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan,  15.0, np.nan, np.nan, 23.0, np.nan, 15.0])
 
 
 avg_r_allo_line_jpg_input = np.mean(line_R_allo_jpg_input_tokens_3)
@@ -597,17 +597,17 @@ occupancy_R_ego_tokenized_txt_output_tokens_3 = np.array([3530.0, 4654.0, 2890.0
 
 
 # Final answer only output tokens
-line_R_ego_jpg_final_answer_3 = np.array([7, 7, 7, np.nan, 7, np.nan, np.nan, 11, np.nan, 9 ])
-line_R_ego_json_final_answer_3 = np.array([7, 7, 7, np.nan, 11, np.nan, np.nan, 11, np.nan, 7])
-line_R_ego_adj_json_final_answer_3 = np.array([7, 7, 7, np.nan, 11, np.nan, np.nan, 11, np.nan, 7])
-line_R_ego_adj_txt_final_answer_3 = np.array([7, 7, 7, np.nan, 11, np.nan, np.nan, 11, np.nan, 7])
-line_R_ego_tokenized_txt_final_answer_3 = np.array([7, 7, 7, np.nan, 11, np.nan, np.nan, 11, np.nan, 7])
-occupancy_R_ego_jpg_final_answer_3 = np.array([15, 13, 31, np.nan, 15, np.nan, np.nan, 21, np.nan, 13])
-occupancy_R_ego_json_final_answer_3 = np.array([15, 15, 15, np.nan, 23, np.nan, np.nan, 23, np.nan, 15])
-occupancy_R_ego_adj_json_final_answer_3 = np.array([15, 15, 15, np.nan, 23, np.nan, np.nan, 23, np.nan, 15])
-occupancy_R_ego_adj_txt_final_answer_3 = np.array([15, 15, 15, np.nan, 23, np.nan, np.nan, 23, np.nan, 15])
-occupancy_R_ego_tokenized_txt_final_answer_3 = np.array([15, 15, 15, np.nan, 23, np.nan, np.nan, 23, np.nan, 15])
-occupancy_R_ego_ascii_txt_final_answer_3 = np.array([15, 15, 15, np.nan, 23, np.nan, np.nan, 23, np.nan, 31])
+line_R_ego_jpg_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 7.0, np.nan, np.nan, 11.0, np.nan, 9.0 ])
+line_R_ego_json_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 11.0, np.nan, np.nan, 11.0, np.nan, 7.0])
+line_R_ego_adj_json_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 11.0, np.nan, np.nan, 11.0, np.nan, 7.0])
+line_R_ego_adj_txt_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 11.0, np.nan, np.nan, 11.0, np.nan, 7.0])
+line_R_ego_tokenized_txt_final_answer_3 = np.array([7.0, 7.0, 7.0, np.nan, 11.0, np.nan, np.nan, 11.0, np.nan, 7.0])
+occupancy_R_ego_jpg_final_answer_3 = np.array([15.0, 13.0, 31.0, np.nan, 15.0, np.nan, np.nan, 21.0, np.nan, 13.0])
+occupancy_R_ego_json_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan, 23.0, np.nan, np.nan, 23.0, np.nan, 15.0])
+occupancy_R_ego_adj_json_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan, 23.0, np.nan, np.nan, 23.0, np.nan, 15.0])
+occupancy_R_ego_adj_txt_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan, 23.0, np.nan, np.nan, 23.0, np.nan, 15.0])
+occupancy_R_ego_tokenized_txt_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan, 23.0, np.nan, np.nan, 23.0, np.nan, 15.0])
+occupancy_R_ego_ascii_txt_final_answer_3 = np.array([15.0, 15.0, 15.0, np.nan, 23.0, np.nan, np.nan, 23.0, np.nan, 31.0])
 
 
 avg_r_ego_line_jpg_input = np.mean(line_R_ego_jpg_input_tokens_3)
