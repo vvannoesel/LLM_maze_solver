@@ -1137,126 +1137,6 @@ labels_occ = [
 # plt.show()
 
 
-# --- I dont remember what this does- i think it plots all 6 acc plots in 1 fig but with lots of legends ---------------------
-
-# subplot_groups = [
-#     means_line_R_coords,  # top-left  (methods x 3)
-#     means_line_R_allo,    # top-middle
-#     means_line_R_ego,     # top-right
-#     means_occ_R_coords,   # bottom-left
-#     means_occ_R_allo,     # bottom-middle
-#     means_occ_R_ego       # bottom-right
-# ]
-
-# subplot_errors = [
-#     error_line_R_coords,  # same indexing as subplot_groups
-#     error_line_R_allo,
-#     error_line_R_ego,
-#     error_occupancy_R_coords,
-#     error_occupancy_R_allo,
-#     error_occupancy_R_ego
-# ]
-
-
-# # Plot shared figure of all 6 accuracies
-
-# x_vals = np.arange(3)   # positions [0,1,2]
-# jitter_strength = 0.02
-# # Create figure
-# fig, axes = plt.subplots(
-#     nrows=2, ncols=3, figsize=(18, 10), sharey=True, sharex = True
-# )
-
-# titles = [
-#     "Average Accuracy Per Complexity, \n Line Maze, Coordinates Output",
-#     "Average Accuracy Per Complexity, \n Line Maze, Allocentric Output",
-#     "Average Accuracy Per Complexity, \n Line Maze, Egocentric Output",
-#     "Average Accuracy Per Complexity, \n Occupancy, Coordinates Output",
-#     "Average Accuracy Per Complexity, \n Occupancy, Allocentric Output",
-#     "Average Accuracy Per Complexity, \n Occupancy, Egocentric Output",
-# ]
-# groups = []
-# errs = []
-
-# for i, (g, e) in enumerate(zip(subplot_groups, subplot_errors)):
-#     ga = np.asarray(g)
-#     ea = np.asarray(e)
-
-#     # Accept either shape (n_methods, 3) OR a list-of-lists with same shape
-#     if ga.ndim != 2 or ea.ndim != 2:
-#         raise ValueError(f"subplot index {i}: each group/error must be 2D arrays. got shapes: group {ga.shape}, error {ea.shape}")
-
-#     if ga.shape[1] != 3 or ea.shape[1] != 3:
-#         raise ValueError(f"subplot index {i}: second dimension must be 3 (three complexities). got: group {ga.shape}, error {ea.shape}")
-
-#     if ga.shape[0] != ea.shape[0]:
-#         raise ValueError(f"subplot index {i}: number of methods (rows) must match between group and error. got: {ga.shape[0]} vs {ea.shape[0]}")
-
-#     groups.append(ga)
-#     errs.append(ea)
-
-# print("All group/error shapes OK:", [g.shape for g in groups])
-
-
-# # Plotting: 2x3 grid
-# fig, axes = plt.subplots(nrows=2, ncols=3, figsize=(12, 8), sharey=True)
-
-# jitter_strength = 0.02
-
-# for idx, ax in enumerate(axes.flat):
-#     group = groups[idx]   # shape (n_methods, 3)
-#     err   = errs[idx]     # shape (n_methods, 3)
-#     n_methods = group.shape[0]
-
-#     # choose label set and xtick labels
-#     if n_methods == len(labels_line):
-#         method_labels = labels_line
-#         x_tick_lbls = x_axis_line
-#     elif n_methods == len(labels_occ):
-#         method_labels = labels_occ
-#         x_tick_lbls = x_axis_occ
-#     else:
-#         # fallback: auto-generate labels
-#         method_labels = [f"Method {i}" for i in range(n_methods)]
-#         x_tick_lbls = x_axis_line  # default
-#     # jitter: one scalar per method
-#     jitter = np.linspace(-jitter_strength, jitter_strength, n_methods)
-
-#     # Plot each method row-by-row
-#     for m in range(n_methods):
-#         y = group[m]        # shape (3,)
-#         yerr = err[m]       # shape (3,)
-#         x_shifted = x_vals + jitter[m]  # scalar shift per-method
-
-#         # final safety check
-#         if x_shifted.shape[0] != y.shape[0]:
-#             raise ValueError(f"subplot {idx} method {m}: x and y lengths mismatch: {x_shifted.shape} vs {y.shape}")
-
-#         ax.errorbar(
-#             x_shifted,
-#             y,
-#             yerr=yerr,
-#             fmt='o-',
-#             capsize=5,
-#             label=method_labels[m],
-#             alpha=0.9
-#         )
-
-#     # Formatting
-#     ax.set_title(titles[idx])
-#     ax.set_xticks(x_vals)
-#     ax.set_xticklabels(x_tick_lbls)
-#     ax.grid(axis='y', linestyle='--', alpha=0.8)
-
-#     # Only left column gets y-axis label
-#     if idx % 3 == 0:
-#         ax.set_ylabel("Accuracy [%]")
-
-#     ax.set_xlabel("Maze Complexity")
-#     ax.legend(loc='best', fontsize='small')
-
-# plt.tight_layout()
-# plt.show()
 
 # ----- use this for plotting accuracy: Plottoing all 6 accuracy plots in one figure ------------------
 
@@ -1379,6 +1259,8 @@ for idx, ax in enumerate(axes.flat):
             fmt='o:',            # Dotted line (:) with markers
             linewidth=2,
             capsize=4,
+            # mfc='none',
+            # mec=colors[i],
             # label=single_legend[leg_idx],
             color=colors[i],      # Same color as the NR counterpart
             alpha=0.9
@@ -1424,7 +1306,7 @@ plt.suptitle("Completion Score", x=0.9*0.5, fontweight='bold')
 
 
 # -----------------------
-# try making a legend
+# Make a legend
 
 # --- Legend Group Definitions ---
 spacer_handle = (
@@ -1473,6 +1355,269 @@ title="Legend"
 plt.tight_layout()
 # Adjust right margin to make room for the legend
 plt.subplots_adjust(right=0.85) 
+# plt.show()
+
+
+#---------------------- End of plotting all 6 accuracy plots in one figure ----------------------
+
+#---------------------- Plot all accuracy plots, but make it 12 figures to separate NR and R -----------------
+
+# Organize Data into Groups for the 6 Subplots
+# Structure: (Means_NR, Means_R, Err_NR, Err_R, Title)
+# NR = Non-Reasoning (Solid), R = Reasoning (Dotted)
+plot_configs = [
+    # Col 0: Left left
+    (means_line_NR_coords, means_occ_NR_coords,
+     error_line_NR_coords, error_occupancy_NR_coords),
+    # Col 1: Middle left
+    (means_line_NR_allo, means_occ_NR_allo,
+     error_line_NR_allo, error_occupancy_NR_allo),
+    # Col 2: Right left
+    (means_line_NR_ego, means_occ_NR_ego, 
+     error_line_NR_ego, error_occupancy_NR_ego),
+    # Col 3: Right left
+    (means_line_R_coords, means_occ_R_coords,
+     error_line_R_coords, error_occupancy_R_coords),
+    # Col 4: Right middle
+    (means_line_R_allo, means_occ_R_allo,
+     error_line_R_allo, error_occupancy_R_allo),
+    # Col 5: Right right
+    (means_line_R_ego, means_occ_R_ego,
+     error_line_R_ego, error_occupancy_R_ego)
+]
+
+# 3. Setup Plotting Parameters
+x_vals = np.arange(3)
+x_tick_lbls_line = ["3x3", "6x6", "15x15"] # Complexity levels
+x_tick_lbls_occupancy = ["7x7", "13x13", "31x31"] # Complexity levels
+# Define a color palette for the 6 distinct methods (ignoring model version)
+# We have 6 base methods (Adj Json, Adj Text, JPG, JSON, Tok, ASCII)
+colors = plt.cm.tab10(np.linspace(0, 1, 10))[:6] 
+
+fig, axes = plt.subplots(nrows=2, ncols=6, figsize=(18, 7), sharey=False, sharex=False)
+
+# Set the different axes ranges for better viewing of the data.
+# Left half
+for row in [0, 1]:
+    for col in [0, 1, 2]:
+        axes[row, col].set_ylim(0, 110)
+
+# Right half
+for row in [0,1]:
+    for col in [3,4,5]:
+        axes[row, col].set_ylim(0, 110)
+
+# Container to grab handles/labels for the global legend later
+handles_for_legend = []
+labels_for_legend = []
+
+for col in range(6):
+    means_line, means_occ, err_line, err_occ = plot_configs[col]
+
+    # Convert to numpy arrays
+    means_line = np.array(means_line)
+    means_occ  = np.array(means_occ)
+    err_line  = np.array(err_line)
+    err_occ   = np.array(err_occ)
+
+    # Number of methods
+    n_rows_line = means_line.shape[0]
+    n_rows_occ = means_occ.shape[0]
+
+
+    # Jitter for NR + R
+    total_lines = n_rows * 2
+    jitter_arr = np.linspace(-0.1, 0.1, total_lines)
+
+    # ------------------------
+    # LEFT HALF → NR (cols 0–2)
+    # ------------------------
+    if col < 3: # cols 0,1,2 are the left half of the fig
+        for row in range(2):
+            ax = axes[row, col] # determining which subplot to use
+            if row < 1:
+                for i in range(n_rows_line): # looping through the representations
+                    x_shifted = x_vals + jitter_arr[i]
+
+                    ax.errorbar(
+                        x_shifted,
+                        means_line[i],
+                        yerr=err_line[i],
+                        fmt='o-',  # doorgetrokken lijn
+                        linewidth=2,
+                        capsize=4,
+                        color=colors[i],
+                        alpha=0.9,
+                        
+                    )
+            else:
+                for i in range(n_rows_occ):
+                    x_shifted = x_vals + jitter_arr[i]
+
+                    ax.errorbar(
+                        x_shifted,
+                        means_occ[i],
+                        yerr=err_occ[i],
+                        fmt='o-',  # doorgetrokken lijn
+                        linewidth=2,
+                        capsize=4,
+                        color=colors[i],
+                        alpha=0.9,
+                        # label=single_legend[i] if (row == 1 and col == 2) else None
+                    )
+
+    # ------------------------
+    # RIGHT HALF → R (cols 3–5)
+    # ------------------------
+    else:
+        for row in range(2):
+            ax = axes[row, col]
+
+            if row <1:
+
+                for i in range(n_rows_line):
+                    x_shifted = x_vals + jitter_arr[i + n_rows]
+
+                    ax.errorbar(
+                        x_shifted,
+                        means_line[i],
+                        yerr=err_line[i],
+                        fmt='o:',
+                        linewidth=2,
+                        capsize=4,
+                        color=colors[i],
+                        alpha=0.9,
+                        
+                    )
+            else: 
+                for i in range(n_rows_occ):
+                    x_shifted = x_vals + jitter_arr[i]
+
+                    ax.errorbar(
+                        x_shifted,
+                        means_occ[i],
+                        yerr=err_occ[i],
+                        fmt='o:',
+                        linewidth=2,
+                        capsize=4,
+                        color=colors[i],
+                        alpha=0.9,
+                        # label=single_legend[i] if (row == 1 and col == 5) else None
+                    )
+
+axes[0,0].set_title("Line-Walled Maze, \nCoordinates Output")
+axes[1,0].set_title("Occupancy Grid Maze, \nCoordinates Output")
+axes[0,1].set_title("Line-Walled Maze, \nAllocentric Output")
+axes[1,1].set_title("Occupancy Grid Maze, \nAllocentric Output")
+axes[0,2].set_title("Line-Walled Maze, \nEgocentric Output")
+axes[1,2].set_title("Occupancy Grid Maze, \nEgocentric Output")
+axes[0,3].set_title("Line-Walled Maze, \nCoordinates Output")
+axes[1,3].set_title("Occupancy Grid Maze, \nCoordinates Output")
+axes[0,4].set_title("Line-Walled Maze, \nAllocentric Output")
+axes[1,4].set_title("Occupancy Grid Maze, \nAllocentric Output")
+axes[0,5].set_title("Line-Walled Maze, \nEgocentric Output")
+axes[1,5].set_title("Occupancy Grid Maze, \nEgocentric Output")
+# Formatting
+for col in range(6):
+    for row in range(2):
+        ax = axes[row, col]
+
+        # ax.set_title(plot_configs[col][4], fontsize=11)
+        ax.grid(axis='y', linestyle='--', alpha=0.5)
+
+        if col < 3 and row == 0:
+            ax.set_xticks(x_vals)
+            ax.set_xticklabels(x_tick_lbls_line)
+        elif col < 3 and row == 1:
+            ax.set_xticks(x_vals)
+            ax.set_xticklabels(x_tick_lbls_occupancy)
+        elif col >= 3 and row == 0:
+            ax.set_xticks(x_vals)
+            ax.set_xticklabels(x_tick_lbls_line)
+        else:
+            ax.set_xticks(x_vals)
+            ax.set_xticklabels(x_tick_lbls_occupancy)
+
+        if col == 0:
+            ax.set_ylabel("Completion Score (%)")
+
+        if row == 1:
+            ax.set_xlabel("Maze Size")
+
+    
+    # # Save handles from the last plot (Bottom-Right) because it contains all 12 lines
+    # if idx == 5:
+    #     handles_for_legend, labels_for_legend = ax.get_legend_handles_labels()
+
+
+
+plt.suptitle("Completion Score", x=0.87*0.5, fontweight='bold')
+# Position the legend within that white space
+# legend=fig.legend(
+#     handles_for_legend, 
+#     labels_for_legend, 
+#     loc='center right',           # Align the right side of the legend...
+#     bbox_to_anchor=(0.99, 0.5),  # ...to the side of the figure
+#     title="Input Formats & Models",
+#     borderaxespad=0.
+# )
+# Make the legend title bold
+# legend.get_title().set_fontweight('bold')
+
+
+# -----------------------
+# Make a legend
+
+# --- Legend Group Definitions ---
+spacer_handle = (
+Line2D([], [], marker='o', color='none', markerfacecolor='none', markersize=10)
+)
+pro_handle = (
+Line2D([], [], marker='none', color='grey', linestyle = ':'),
+# Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[1], markersize=10)
+),
+flashlite_handle = (
+Line2D([], [], marker='none', color='grey', linestyle = '-'),
+# Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[1], markersize=10)
+)
+
+
+handles = [
+spacer_handle,
+pro_handle,
+flashlite_handle,
+spacer_handle,
+
+Line2D([], [], marker='o', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
+Line2D([], [], marker='o', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
+Line2D([], [], marker='o', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='o', color=colors[3], linestyle='None', markersize = 10),  # JSON
+Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10),  # ASCII
+
+]
+labels = [
+r"$\bf{Models}$",
+"Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
+r"$\bf{Input\ Formats}$",
+"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+]
+axes[1,5].legend(
+handles,
+labels,
+handler_map={tuple: HandlerTuple(ndivide=None)},
+loc='center left',
+bbox_to_anchor=(1.02, 0.5),
+title="Legend"
+)
+
+
+
+
+
+plt.tight_layout()
+# Adjust right margin to make room for the legend
+plt.subplots_adjust(right=0.85) 
 plt.show()
 
 
@@ -1482,7 +1627,8 @@ plt.show()
 
 
 
-#------------- Plotting raw scores for all types and sizes ----------------------
+
+#------------- Plotting raw scores for all types and sizes, 12 plots ----------------------
 
 
 # NR -- Coords -- raw scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
@@ -2196,7 +2342,7 @@ avg_occupancy_R_ego_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_R_ego_tok
 # plt.show()
 
 
-# ----- use this for plotting raw scores: Plottoing all 6 raw score plots in one figure ------------------
+# ----- use this for plotting raw scores: Plottoing all 6 raw score plots in one figure, 12 plots ------------------
 
 # Structure the data
 # Top plot data: line-maze data vectors with the complexities as column entries and representations as row entries.
@@ -2670,7 +2816,7 @@ plt.suptitle("Number of Correct Consecutive Steps", x=0.85*0.5, fontweight='bold
 
 
 # -----------------------
-# try making a legend
+# Make a legend
 
 # --- Legend Group Definitions ---
 spacer_handle = (

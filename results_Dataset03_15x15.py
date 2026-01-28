@@ -372,6 +372,21 @@ occupancy_R_coords_jpg_output_tokens_15 = np.array([10193.0, 12494.0, 13728.0, 8
 occupancy_R_coords_json_output_tokens_15 = np.array([17287.0, 13432.0, 24426.0, 19069.0, 20997.0, 19289.0, 25754.0, 15716.0, 18421.0, 19336.0])
 occupancy_R_coords_tokenized_txt_output_tokens_15 = np.array([27461.0, 12623.0, 26548.0, 17015.0, 24129, 26580.0, 19448.0, 25165.0, 27684.0, 22137.0])
 
+
+# Final answer only output tokens
+line_R_coords_jpg_final_answer_15 = np.array([173, 295, 208, 158, 234, 532, 232, 237, 220, 241])
+line_R_coords_json_final_answer_15 = np.array([266, 179, 268, 221, 230, 244, 419, 201, 571, 243])
+line_R_coords_adj_json_final_answer_15 = np.array([599, 300, 649, 267, 585, 460, 310, 385, 620, 220])
+line_R_coords_adj_txt_final_answer_15 = np.array([1534, 248, 405, 267, 388, 460, 310, 276, 309, 220])
+line_R_coords_tokenized_final_answer_15 = np.array([575, 300, 649, 267, 584, 202, 310, 271, 620, 220])
+occupancy_R_coords_jpg_final_answer_15 = np.array([385, 389, 501, 615, 369, 902, 457, 610, 586, 411])
+occupancy_R_coords_json_final_answer_15 = np.array([503, 463, 403, 451, 575, 501, 573, 498, 339, 385])
+occupancy_R_coords_adj_json_final_answer_15 = np.array([1389, 718, 1609, 621, 1339, 1081, 682, 879, 1415, 501])
+occupancy_R_coords_adj_txt_final_answer_15 = np.array([1332, 3782, 3815, 2105, 1654, 650, 936, 1567, 1277, 525])
+occupancy_R_coords_tokenized_final_answer_15 = np.array([1033, 718, 868, 418, 429, 1108, 682, 1182, 545, 678])
+occupancy_R_coords_ascii_final_answer_15 = np.array([322, 304, 546, 621, 420, 702, 306, 526, 508, 546])
+
+
 avg_r_coords_line_jpg_input = np.mean(line_R_coords_jpg_input_tokens_15)
 avg_r_coords_line_json_input = np.mean(line_R_coords_json_input_tokens_15)
 avg_r_coords_occupancy_jpg_input = np.mean(occupancy_R_coords_jpg_input_tokens_15)
