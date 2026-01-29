@@ -140,7 +140,7 @@ occupancy_NR_allo_adj_txt_raw_score_3 = np.array([5.0, 2.0, 0.0, 3.0, 4.0, 2.0, 
 occupancy_NR_allo_ascii_txt_raw_score_3 = np.array([0.0, 8.0, 0.0, 0.0, 0.0, 0.0, 5.0, 4.0, 4.0, 0.0])
 occupancy_NR_allo_jpg_raw_score_3 = np.array([1.0, 0.0, 1.0, 0.0, 1.0, 1.0, 1.0, 1.0, 1.0, 0.0])
 occupancy_NR_allo_json_raw_score_3 = np.array([5.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 4.0, 0.0, 7.0])
-occupancy_NR_allo_tokenized_txt_raw_score_3 = np.array([0.0, 0.0, 0.0, 4.0, 1.0, 1.0, 0.0, 1.0, 0.0, 8])
+occupancy_NR_allo_tokenized_txt_raw_score_3 = np.array([0.0, 0.0, 0.0, 4.0, 1.0, 1.0, 0.0, 1.0, 0.0, 8.0])
 
 # Prompt tokens
 line_NR_allo_adj_json_input_tokens_3 = np.array([706.0, 706.0, 706.0, 712.0, 712.0, 712.0, 712.0, 712.0, 712.0, 712.0])
@@ -153,7 +153,7 @@ occupancy_NR_allo_adj_txt_input_tokens_3 = np.array([450.0, 450.0, 450.0, 456.0,
 occupancy_NR_allo_ascii_txt_input_tokens_3 = np.array([187.0, 187.0, 185.0, 193.0, 193.0, 193.0, 193.0, 193.0, 193.0, 191.0])
 occupancy_NR_allo_jpg_input_tokens_3 = np.array([416.0, 416.0, 416.0, 422.0, 422.0, 422.0, 422.0, 422.0, 422.0, 422.0])
 occupancy_NR_allo_json_input_tokens_3 = np.array([459.0, 459.0, 459.0, 465.0, 465.0, 465.0, 465.0, 465.0, 465.0, 465.0])
-occupancy_NR_allo_tokenized_txt_input_tokens_3 = np.array([738.0, 738.0, 738.0, 744.0, 744.0, 744.0, 744.0, 744.0, 743.0, 743])
+occupancy_NR_allo_tokenized_txt_input_tokens_3 = np.array([738.0, 738.0, 738.0, 744.0, 744.0, 744.0, 744.0, 744.0, 743.0, 743.0])
 
 
 # Output tokens
@@ -167,7 +167,7 @@ occupancy_NR_allo_adj_txt_output_tokens_3 = np.array([21.0, 17.0, 1734.0, 15.0, 
 occupancy_NR_allo_ascii_txt_output_tokens_3 = np.array([43.0, 29.0, 43.0, 23.0, 39.0, 31.0, 25.0, 31.0, 21.0, 29.0])
 occupancy_NR_allo_jpg_output_tokens_3 = np.array([21.0, 15.0, 15.0, 49.0, 21.0, 43.0, 19.0, 17.0, 21.0, 198.0])
 occupancy_NR_allo_json_output_tokens_3 = np.array([17.0, 21.0, 45.0, 21.0, 29.0, 31.0, 21.0, 21.0, 650.0, 35.0])
-occupancy_NR_allo_tokenized_txt_output_tokens_3 = np.array([33.0, 59.0, 4000.0, 650.0, 31.0, 650.0, 31.0, 25.0, 650.0, 650])
+occupancy_NR_allo_tokenized_txt_output_tokens_3 = np.array([33.0, 59.0, 4000.0, 650.0, 31.0, 650.0, 31.0, 25.0, 650.0, 650.0])
 
 avg_nr_allo_line_jpg_input = np.mean(line_NR_allo_jpg_input_tokens_3)
 avg_nr_allo_line_json_input = np.mean(line_NR_allo_json_input_tokens_3)
