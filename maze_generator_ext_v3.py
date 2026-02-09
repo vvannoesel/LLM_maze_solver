@@ -236,7 +236,7 @@ class Maze:
         offset_y = (upscaled_height - maze_height) / 2
 
         # 4. Draw light-gray grid lines
-        grid_color = "#9393938a"
+        grid_color = "#939393"
         for r in range(self.rows + 1):
             y = r * cell_size + offset_y
             draw.line([(offset_x, y), (offset_x + maze_width, y)], fill=grid_color, width=1)

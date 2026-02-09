@@ -328,16 +328,21 @@ fig, axes = plt.subplots(3, 1, figsize=(10, 9), sharex=True)
 
 for ax, vec, title in zip(axes, vectors, titles):
     ax.hist(vec, bins=bins, color='tomato', edgecolor = 'black', alpha = 0.5)
-    ax.set_ylabel('Frequency (-)')
-    ax.set_title(title)
+    ax.set_ylabel('Frequency (-)', fontsize = 16)
+    ax.set_title(title, fontsize = 18)
     ax.grid(axis='y', alpha=0.3)
 
 # X-axis labeling
-axes[-1].set_xlabel('Completion Score (%)')
+axes[-1].set_xlabel('Completion Score (%)', fontsize=16)
 axes[-1].set_xticks(bins)
 axes[-1].set_xlim(0, 100)
 
-plt.suptitle('Completion Score Frequency at Maximum Final Answer Token Output, Gemini 2.5 Flash-Lite', fontweight = 'bold', fontsize=14)
+# Adjust tick text size
+axes[0].tick_params(axis='both', which='major', labelsize=14)
+axes[1].tick_params(axis='both', which='major', labelsize=14)
+axes[-1].tick_params(axis='both', which='major', labelsize=14)
+
+plt.suptitle('Completion Score Frequency at Maximum Final Answer Token Output, Gemini 2.5 Flash-Lite', fontweight = 'bold', fontsize=20)
 
 plt.tight_layout()
 plt.show()
