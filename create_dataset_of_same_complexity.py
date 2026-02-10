@@ -98,10 +98,10 @@ def main():
     Main function to run the full maze generation and saving in "current directory"\Dataset 03 .
     """
 
-    ROWS = 3
-    COLS = 3
-    low_postfix =  42 # Change this to your desired postfix value /// This is the lower value for 'k' 
-    high_postfix = 71 # Change this to your desired postfix value /// This is the upper value for 'k'
+    ROWS = 6
+    COLS = 6
+    low_postfix = 25  # Change this to your desired postfix value /// This is the lower value for 'k' 
+    high_postfix = 51 # Change this to your desired postfix value /// This is the upper value for 'k'
 
     for i in range(low_postfix, high_postfix):  # Repeat, each time with a different 'k' value
         print(f"\n=== Run {i} ===")
