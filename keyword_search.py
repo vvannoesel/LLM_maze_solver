@@ -2,7 +2,6 @@
 
 import os
 import re
-import numpy as np
 from pathlib import Path
 
 def keyword_search(md_filepath, search_phrases, vector_size=30):
