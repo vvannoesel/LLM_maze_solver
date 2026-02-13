@@ -51,7 +51,7 @@
                 "walls": {
                     "N": false,
                     "E": true,
-                    "S": true,
+                    "S": false,
                     "W": true
                 }
             },
@@ -75,8 +75,8 @@
             },
             {
                 "walls": {
-                    "N": true,
-                    "E": false,
+                    "N": false,
+                    "E": true,
                     "S": true,
                     "W": false
                 }
@@ -86,7 +86,7 @@
                     "N": false,
                     "E": true,
                     "S": true,
-                    "W": false
+                    "W": true
                 }
             }
         ]

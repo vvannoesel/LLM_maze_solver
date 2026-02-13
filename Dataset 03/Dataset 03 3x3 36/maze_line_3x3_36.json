@@ -24,8 +24,8 @@
             {
                 "walls": {
                     "N": true,
-                    "E": true,
-                    "S": false,
+                    "E": false,
+                    "S": true,
                     "W": false
                 }
             },
@@ -34,7 +34,7 @@
                     "N": true,
                     "E": true,
                     "S": false,
-                    "W": true
+                    "W": false
                 }
             }
         ],
@@ -49,8 +49,8 @@
             },
             {
                 "walls": {
-                    "N": false,
-                    "E": true,
+                    "N": true,
+                    "E": false,
                     "S": false,
                     "W": true
                 }
@@ -59,8 +59,8 @@
                 "walls": {
                     "N": false,
                     "E": true,
-                    "S": false,
-                    "W": true
+                    "S": true,
+                    "W": false
                 }
             }
         ],
@@ -83,7 +83,7 @@
             },
             {
                 "walls": {
-                    "N": false,
+                    "N": true,
                     "E": true,
                     "S": true,
                     "W": false

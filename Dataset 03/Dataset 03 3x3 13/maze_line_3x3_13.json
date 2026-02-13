@@ -1,0 +1,94 @@
+{
+    "size": {
+        "columns": 3,
+        "rows": 3
+    },
+    "start": [
+        0,
+        0
+    ],
+    "end": [
+        2,
+        2
+    ],
+    "grid": [
+        [
+            {
+                "walls": {
+                    "N": true,
+                    "E": false,
+                    "S": true,
+                    "W": true
+                }
+            },
+            {
+                "walls": {
+                    "N": true,
+                    "E": true,
+                    "S": false,
+                    "W": false
+                }
+            },
+            {
+                "walls": {
+                    "N": true,
+                    "E": true,
+                    "S": false,
+                    "W": true
+                }
+            }
+        ],
+        [
+            {
+                "walls": {
+                    "N": true,
+                    "E": true,
+                    "S": false,
+                    "W": true
+                }
+            },
+            {
+                "walls": {
+                    "N": false,
+                    "E": true,
+                    "S": false,
+                    "W": true
+                }
+            },
+            {
+                "walls": {
+                    "N": false,
+                    "E": true,
+                    "S": false,
+                    "W": true
+                }
+            }
+        ],
+        [
+            {
+                "walls": {
+                    "N": false,
+                    "E": false,
+                    "S": true,
+                    "W": true
+                }
+            },
+            {
+                "walls": {
+                    "N": false,
+                    "E": false,
+                    "S": true,
+                    "W": false
+                }
+            },
+            {
+                "walls": {
+                    "N": false,
+                    "E": true,
+                    "S": true,
+                    "W": false
+                }
+            }
+        ]
+    ]
+}
