@@ -153,7 +153,8 @@ from pathlib import Path
 
 
 # # results
-#     line_R_coords_adj_txt_15 = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0]
+line_R_coords_adj_txt_15 = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0]
+line_R_coords_adj_txt_algorithm_mention_15 = [1, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 0]
 
 
 
@@ -184,7 +185,7 @@ def keyword_search(md_filepath, search_phrases, category_label, vector_size=30):
     ]
 
     # Generate the vector names for ALL modes to ensure we don't delete data when writing
-    all_modes = ['ego', 'allo', 'coords']
+    all_modes = ['coords']#['ego', 'allo', 'coords']
     all_target_vectors = []
     for m in all_modes:
         # FIX: Pass both mode and the category label here
