@@ -275,6 +275,124 @@ for k in range(1, 31):
 print("Processing Complete.")
 
 
+
+
+
+
+
+
+
+# import re
+# import os
+# from pathlib import Path
+
+# def keyword_search(md_filepath, search_phrases, exclude_phrases=None, category_label="category", vector_size=30):
+#     output_file = "category_occurrences.py"
+#     if exclude_phrases is None:
+#         exclude_phrases = []
+
+#     # 1. Extract mode and index from filename
+#     match = re.search(r'reasoning_(ego|allo|coords)_(\d+)\.md$', str(md_filepath))
+#     if not match:
+#         return
+    
+#     file_mode = match.group(1) 
+#     file_idx = int(match.group(2))
+
+#     # 2. Define templates
+#     base_templates = [
+#         "line_R_{mode}_adj_json_{cat}_15", "line_R_{mode}_adj_txt_{cat}_15", "line_R_{mode}_jpg_{cat}_15", 
+#         "line_R_{mode}_json_{cat}_15", "line_R_{mode}_tokenized_txt_{cat}_15", "occupancy_R_{mode}_adj_json_{cat}_15", 
+#         "occupancy_R_{mode}_adj_txt_{cat}_15", "occupancy_R_{mode}_ascii_txt_{cat}_15", "occupancy_R_{mode}_jpg_{cat}_15", 
+#         "occupancy_R_{mode}_json_{cat}_15", "occupancy_R_{mode}_tokenized_txt_{cat}_15"
+#     ]
+
+#     all_modes = ['coords']
+#     all_target_vectors = []
+#     for m in all_modes:
+#         all_target_vectors.extend([t.format(mode=m, cat=category_label) for t in base_templates])
+
+#     # 3. Load existing vectors
+#     vector_data = {vec: [0] * vector_size for vec in all_target_vectors}
+#     if os.path.exists(output_file):
+#         with open(output_file, "r") as f:
+#             content = f.read()
+#             existing_vars = re.findall(r"(\w+)\s*=\s*(\[.*?\])", content, re.DOTALL)
+#             for var_name, var_value in existing_vars:
+#                 vector_data[var_name] = eval(var_value)
+
+#     # 4. Helper to map MD headers
+#     def get_vector_name(header_str, mode, cat):
+#         h = header_str.lower().strip("` ")
+#         prefix = f"line_R_{mode}" if "line" in h else f"occupancy_R_{mode}"
+        
+#         mapping = {
+#             "adj_json": "adj_json" if "json" in h and "adj" in h else None,
+#             "adj_txt": "adj_txt" if "txt" in h and "adj" in h else None,
+#             "tokenized": "tokenized_txt",
+#             "ascii": "ascii_txt",
+#             "json": "json" if "json" in h and "adj" not in h else None,
+#             "jpg": "jpg"
+#         }
+        
+#         subtype = None
+#         for key, val in mapping.items():
+#             if key in h:
+#                 subtype = val
+#                 break
+        
+#         return f"{prefix}_{subtype}_{cat}_15" if subtype else None
+
+#     # 5. Parsing the File with Exclusion Logic
+#     current_vector = None
+#     in_internal_thoughts = False
+    
+#     with open(md_filepath, "r", encoding="utf-8") as f:
+#         for line in f:
+#             clean_line = line.strip().lower() # Lowercase once for efficiency
+            
+#             if clean_line.startswith("###"):
+#                 header_val = clean_line.replace("###", "").strip()
+#                 current_vector = get_vector_name(header_val, file_mode, category_label)
+#                 in_internal_thoughts = False
+#                 continue
+            
+#             if clean_line == "**internal thoughts:**":
+#                 in_internal_thoughts = True
+#                 continue
+            
+#             if in_internal_thoughts and clean_line.startswith("**unfiltered response:**"):
+#                 in_internal_thoughts = False
+#                 continue
+            
+#             if in_internal_thoughts and current_vector:
+#                 # CHECK: Does the line contain a search phrase?
+#                 has_keyword = any(p.lower() in clean_line for p in search_phrases)
+#                 # CHECK: Does the line contain an excluded phrase?
+#                 has_exclude = any(e.lower() in clean_line for e in exclude_phrases)
+
+#                 # Logic: Must have keyword AND must NOT have exclude word
+#                 if has_keyword and not has_exclude:
+#                     if current_vector in vector_data:
+#                         vector_data[current_vector][file_idx-1] = 1
+
+#     # 6. Save updated vectors
+#     with open(output_file, "w") as f:
+#         f.write("# Persistent Category Occurrences\n\n")
+#         for vec in sorted(vector_data.keys()):
+#             f.write(f"{vec} = {vector_data[vec]}\n")
+
+
+
+
+
+
+
+
+
+
+
+
 # --- Example Run ---
 script_dir = Path(__file__).parent
 

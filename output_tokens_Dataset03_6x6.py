@@ -1,2 +1,13 @@
 import numpy as np
 
+line_R_coords_adj_json_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 3030.0, 4006.0, 3687.0, 4885.0, 4148.0])
+line_R_coords_adj_txt_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 4126.0, 4614.0, 3910.0, 5079.0, 4285.0])
+line_R_coords_jpg_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 1645.0, 1771.0, 3891.0, 1922.0, 3025.0])
+line_R_coords_json_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 5019.0, 6658.0, 6860.0, 4037.0, 18918.0])
+line_R_coords_tokenized_txt_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 5132.0, 7262.0, 5682.0, 4811.0, 4434.0])
+occupancy_R_coords_adj_json_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 6552.0, 7840.0, 7544.0, 4559.0, 6086.0])
+occupancy_R_coords_adj_txt_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 5757.0, 5993.0, 5385.0, 6503.0, 6978.0])
+occupancy_R_coords_ascii_txt_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 4426.0, 15668.0, 13883.0, 23180.0, 2137.0])
+occupancy_R_coords_jpg_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 1901.0, 4821.0, 5534.0, 2778.0, 2692.0])
+occupancy_R_coords_json_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 16784.0, 10781.0, 17527.0, 8177.0, 11307.0])
+occupancy_R_coords_tokenized_txt_output_tokens_6 = np.array([nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, nan, 8203.0, 19907.0, 4949.0, 4753.0, 5603])
