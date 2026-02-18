@@ -1,12 +1,2 @@
 import numpy as np
-line_NR_ego_adj_json_output_tokens_6 = np.array([57.0, 43.0, 47.0, 59.0, 43.0, 650.0, 111.0, 111.0, 59.0, 97.0])
-line_NR_ego_adj_txt_output_tokens_6 = np.array([43.0, 650.0, 650.0, 105.0, 39.0, 53.0, 35.0, 81.0, 650.0, 650.0])
-line_NR_ego_jpg_output_tokens_6 = np.array([51.0, 42.0, 80.0, 57.0, 650.0, 37.0, 411.0, 74.0, 31.0, 33.0])
-line_NR_ego_json_output_tokens_6 = np.array([83.0, 51.0, 51.0, 47.0, 650.0, 49.0, 49.0, 35.0, 129.0, 47.0])
-line_NR_ego_tokenized_txt_output_tokens_6 = np.array([296.0, 650.0, 650.0, 650.0, 650.0, 41.0, 650.0, 650.0, 650.0, 650.0])
-occupancy_NR_ego_adj_json_output_tokens_6 = np.array([650.0, 221.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0])
-occupancy_NR_ego_adj_txt_output_tokens_6 = np.array([650.0, 650.0, 650.0, 417.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0])
-occupancy_NR_ego_ascii_txt_output_tokens_6 = np.array([650.0, 211.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0])
-occupancy_NR_ego_jpg_output_tokens_6 = np.array([71.0, 650.0, 93.0, 650.0, 650.0, 650.0, 79.0, 650.0, 650.0, 650.0])
-occupancy_NR_ego_json_output_tokens_6 = np.array([650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0])
-occupancy_NR_ego_tokenized_txt_output_tokens_6 = np.array([650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650.0, 650])
+
