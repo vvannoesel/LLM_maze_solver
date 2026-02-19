@@ -103,87 +103,87 @@ sample_sizes_15x15_NR_coords=[
 
 # NR -- Allo -- Accuracy scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
 # Accuracy NR Allo 3x3 averages
-avg_line_adj_json = np.mean(r3.line_NR_allo_adj_json_3)
-avg_line_adj_txt = np.mean(r3.line_NR_allo_adj_txt_3)
-avg_line_jpg = np.mean(r3.line_NR_allo_jpg_3)
-avg_line_json = np.mean(r3.line_NR_allo_json_3)
-avg_line_tokenized_txt = np.mean(r3.line_NR_allo_tokenized_txt_3)
-avg_occupancy_adj_json = np.mean(r3.occupancy_NR_allo_adj_json_3)
-avg_occupancy_adj_txt = np.mean(r3.occupancy_NR_allo_adj_txt_3)
-avg_occupancy_ascii_txt = np.mean(r3.occupancy_NR_allo_ascii_txt_3)  
-avg_occupancy_jpg = np.mean(r3.occupancy_NR_allo_jpg_3)
-avg_occupancy_json = np.mean(r3.occupancy_NR_allo_json_3)
-avg_occupancy_tokenized_txt = np.mean(r3.occupancy_NR_allo_tokenized_txt_3)
+avg_line_adj_json = np.nanmean(r3.line_NR_allo_adj_json_3)
+avg_line_adj_txt = np.nanmean(r3.line_NR_allo_adj_txt_3)
+avg_line_jpg = np.nanmean(r3.line_NR_allo_jpg_3)
+avg_line_json = np.nanmean(r3.line_NR_allo_json_3)
+avg_line_tokenized_txt = np.nanmean(r3.line_NR_allo_tokenized_txt_3)
+avg_occupancy_adj_json = np.nanmean(r3.occupancy_NR_allo_adj_json_3)
+avg_occupancy_adj_txt = np.nanmean(r3.occupancy_NR_allo_adj_txt_3)
+avg_occupancy_ascii_txt = np.nanmean(r3.occupancy_NR_allo_ascii_txt_3)  
+avg_occupancy_jpg = np.nanmean(r3.occupancy_NR_allo_jpg_3)
+avg_occupancy_json = np.nanmean(r3.occupancy_NR_allo_json_3)
+avg_occupancy_tokenized_txt = np.nanmean(r3.occupancy_NR_allo_tokenized_txt_3)
 
 # Accuracy NR Allo 6x6 averages
 
-avg_line_adj_json_6 = np.mean(r6.line_NR_allo_adj_json_6)
-avg_line_adj_txt_6 = np.mean(r6.line_NR_allo_adj_txt_6)
-avg_line_jpg_6 = np.mean(r6.line_NR_allo_jpg_6)
-avg_line_json_6 = np.mean(r6.line_NR_allo_json_6)
-avg_line_tokenized_txt_6 = np.mean(r6.line_NR_allo_tokenized_txt_6)
-avg_occupancy_adj_json_6 = np.mean(r6.occupancy_NR_allo_adj_json_6)
-avg_occupancy_adj_txt_6 = np.mean(r6.occupancy_NR_allo_adj_txt_6)
-avg_occupancy_ascii_txt_6 = np.mean(r6.occupancy_NR_allo_ascii_txt_6)  
-avg_occupancy_jpg_6 = np.mean(r6.occupancy_NR_allo_jpg_6)
-avg_occupancy_json_6 = np.mean(r6.occupancy_NR_allo_json_6)
-avg_occupancy_tokenized_txt_6 = np.mean(r6.occupancy_NR_allo_tokenized_txt_6)
+avg_line_adj_json_6 = np.nanmean(r6.line_NR_allo_adj_json_6)
+avg_line_adj_txt_6 = np.nanmean(r6.line_NR_allo_adj_txt_6)
+avg_line_jpg_6 = np.nanmean(r6.line_NR_allo_jpg_6)
+avg_line_json_6 = np.nanmean(r6.line_NR_allo_json_6)
+avg_line_tokenized_txt_6 = np.nanmean(r6.line_NR_allo_tokenized_txt_6)
+avg_occupancy_adj_json_6 = np.nanmean(r6.occupancy_NR_allo_adj_json_6)
+avg_occupancy_adj_txt_6 = np.nanmean(r6.occupancy_NR_allo_adj_txt_6)
+avg_occupancy_ascii_txt_6 = np.nanmean(r6.occupancy_NR_allo_ascii_txt_6)  
+avg_occupancy_jpg_6 = np.nanmean(r6.occupancy_NR_allo_jpg_6)
+avg_occupancy_json_6 = np.nanmean(r6.occupancy_NR_allo_json_6)
+avg_occupancy_tokenized_txt_6 = np.nanmean(r6.occupancy_NR_allo_tokenized_txt_6)
 
 
 # Accuracy NR Allo 15x15 averages
-avg_line_adj_json_15 = np.mean(r15.line_NR_allo_adj_json_15)
-avg_line_adj_txt_15 = np.mean(r15.line_NR_allo_adj_txt_15)
-avg_line_jpg_15 = np.mean(r15.line_NR_allo_jpg_15)
-avg_line_json_15 = np.mean(r15.line_NR_allo_json_15)
-avg_line_tokenized_txt_15 = np.mean(r15.line_NR_allo_tokenized_txt_15)
-avg_occupancy_adj_json_15 = np.mean(r15.occupancy_NR_allo_adj_json_15)
-avg_occupancy_adj_txt_15 = np.mean(r15.occupancy_NR_allo_adj_txt_15)
-avg_occupancy_ascii_txt_15 = np.mean(r15.occupancy_NR_allo_ascii_txt_15)  
-avg_occupancy_jpg_15 = np.mean(r15.occupancy_NR_allo_jpg_15)
-avg_occupancy_json_15 = np.mean(r15.occupancy_NR_allo_json_15)
-avg_occupancy_tokenized_txt_15 = np.mean(r15.occupancy_NR_allo_tokenized_txt_15)
+avg_line_adj_json_15 = np.nanmean(r15.line_NR_allo_adj_json_15)
+avg_line_adj_txt_15 = np.nanmean(r15.line_NR_allo_adj_txt_15)
+avg_line_jpg_15 = np.nanmean(r15.line_NR_allo_jpg_15)
+avg_line_json_15 = np.nanmean(r15.line_NR_allo_json_15)
+avg_line_tokenized_txt_15 = np.nanmean(r15.line_NR_allo_tokenized_txt_15)
+avg_occupancy_adj_json_15 = np.nanmean(r15.occupancy_NR_allo_adj_json_15)
+avg_occupancy_adj_txt_15 = np.nanmean(r15.occupancy_NR_allo_adj_txt_15)
+avg_occupancy_ascii_txt_15 = np.nanmean(r15.occupancy_NR_allo_ascii_txt_15)  
+avg_occupancy_jpg_15 = np.nanmean(r15.occupancy_NR_allo_jpg_15)
+avg_occupancy_json_15 = np.nanmean(r15.occupancy_NR_allo_json_15)
+avg_occupancy_tokenized_txt_15 = np.nanmean(r15.occupancy_NR_allo_tokenized_txt_15)
 
 # fig, ax = plt.subplots(figsize=(15, 8))
 # ax.axis("off")
 # plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%) - Gemini 2.5 Flash-Lite, Allocentric Output", fontsize=16, pad=20)
 
 sample_sizes_3x3_NR_allo = [
-    sample_size(np.std(r3.line_NR_allo_adj_json_3)),
-    sample_size(np.std(r3.line_NR_allo_adj_txt_3)),
-    sample_size(np.std(r3.line_NR_allo_jpg_3)),
-    sample_size(np.std(r3.line_NR_allo_json_3)),
-    sample_size(np.std(r3.line_NR_allo_tokenized_txt_3)),
-    sample_size(np.std(r3.occupancy_NR_allo_adj_json_3)),
-    sample_size(np.std(r3.occupancy_NR_allo_adj_txt_3)),
-    sample_size(np.std(r3.occupancy_NR_allo_ascii_txt_3)),
-    sample_size(np.std(r3.occupancy_NR_allo_jpg_3)),
-    sample_size(np.std(r3.occupancy_NR_allo_json_3)),
-    sample_size(np.std(r3.occupancy_NR_allo_tokenized_txt_3))
+    sample_size(np.nanstd(r3.line_NR_allo_adj_json_3)),
+    sample_size(np.nanstd(r3.line_NR_allo_adj_txt_3)),
+    sample_size(np.nanstd(r3.line_NR_allo_jpg_3)),
+    sample_size(np.nanstd(r3.line_NR_allo_json_3)),
+    sample_size(np.nanstd(r3.line_NR_allo_tokenized_txt_3)),
+    sample_size(np.nanstd(r3.occupancy_NR_allo_adj_json_3)),
+    sample_size(np.nanstd(r3.occupancy_NR_allo_adj_txt_3)),
+    sample_size(np.nanstd(r3.occupancy_NR_allo_ascii_txt_3)),
+    sample_size(np.nanstd(r3.occupancy_NR_allo_jpg_3)),
+    sample_size(np.nanstd(r3.occupancy_NR_allo_json_3)),
+    sample_size(np.nanstd(r3.occupancy_NR_allo_tokenized_txt_3))
     ]
 sample_sizes_6x6_NR_allo=[
-    sample_size(np.std(r6.line_NR_allo_adj_json_6)),
-    sample_size(np.std(r6.line_NR_allo_adj_txt_6)),
-    sample_size(np.std(r6.line_NR_allo_jpg_6)),
-    sample_size(np.std(r6.line_NR_allo_json_6)),
-    sample_size(np.std(r6.line_NR_allo_tokenized_txt_6)),
-    sample_size(np.std(r6.occupancy_NR_allo_adj_json_6)),
-    sample_size(np.std(r6.occupancy_NR_allo_adj_txt_6)),
-    sample_size(np.std(r6.occupancy_NR_allo_ascii_txt_6)),
-    sample_size(np.std(r6.occupancy_NR_allo_jpg_6)),
-    sample_size(np.std(r6.occupancy_NR_allo_json_6)),
-    sample_size(np.std(r6.occupancy_NR_allo_tokenized_txt_6)) ]
+    sample_size(np.nanstd(r6.line_NR_allo_adj_json_6)),
+    sample_size(np.nanstd(r6.line_NR_allo_adj_txt_6)),
+    sample_size(np.nanstd(r6.line_NR_allo_jpg_6)),
+    sample_size(np.nanstd(r6.line_NR_allo_json_6)),
+    sample_size(np.nanstd(r6.line_NR_allo_tokenized_txt_6)),
+    sample_size(np.nanstd(r6.occupancy_NR_allo_adj_json_6)),
+    sample_size(np.nanstd(r6.occupancy_NR_allo_adj_txt_6)),
+    sample_size(np.nanstd(r6.occupancy_NR_allo_ascii_txt_6)),
+    sample_size(np.nanstd(r6.occupancy_NR_allo_jpg_6)),
+    sample_size(np.nanstd(r6.occupancy_NR_allo_json_6)),
+    sample_size(np.nanstd(r6.occupancy_NR_allo_tokenized_txt_6)) ]
 sample_sizes_15x15_NR_allo=[
-    sample_size(np.std(r15.line_NR_allo_adj_json_15)),
-    sample_size(np.std(r15.line_NR_allo_adj_txt_15)),
-    sample_size(np.std(r15.line_NR_allo_jpg_15)),
-    sample_size(np.std(r15.line_NR_allo_json_15)),
-    sample_size(np.std(r15.line_NR_allo_tokenized_txt_15)),
-    sample_size(np.std(r15.occupancy_NR_allo_adj_json_15)),
-    sample_size(np.std(r15.occupancy_NR_allo_adj_txt_15)),
-    sample_size(np.std(r15.occupancy_NR_allo_ascii_txt_15)),
-    sample_size(np.std(r15.occupancy_NR_allo_jpg_15)),
-    sample_size(np.std(r15.occupancy_NR_allo_json_15)),
-    sample_size(np.std(r15.occupancy_NR_allo_tokenized_txt_15)) ]
+    sample_size(np.nanstd(r15.line_NR_allo_adj_json_15)),
+    sample_size(np.nanstd(r15.line_NR_allo_adj_txt_15)),
+    sample_size(np.nanstd(r15.line_NR_allo_jpg_15)),
+    sample_size(np.nanstd(r15.line_NR_allo_json_15)),
+    sample_size(np.nanstd(r15.line_NR_allo_tokenized_txt_15)),
+    sample_size(np.nanstd(r15.occupancy_NR_allo_adj_json_15)),
+    sample_size(np.nanstd(r15.occupancy_NR_allo_adj_txt_15)),
+    sample_size(np.nanstd(r15.occupancy_NR_allo_ascii_txt_15)),
+    sample_size(np.nanstd(r15.occupancy_NR_allo_jpg_15)),
+    sample_size(np.nanstd(r15.occupancy_NR_allo_json_15)),
+    sample_size(np.nanstd(r15.occupancy_NR_allo_tokenized_txt_15)) ]
 
 # NR -- Ego -- accuracy scores ----------- 3x3, 6x6 & 15x15 -----------------------------------
 # Accuracy NR Ego 3x3 averages

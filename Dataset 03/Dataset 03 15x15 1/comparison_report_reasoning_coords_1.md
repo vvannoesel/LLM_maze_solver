@@ -352,13 +352,12 @@ Here is the plan. I will build an adjacency list, add the start node to the queu
 To do this, I will manually simulate a bit of BFS, but keep my algorithm correct. I'm going to track the path manually, and I am going to have to be careful with the trace.
 
 I build the adjacency map:
-```
 adj_map = {}
 for item in grid:
   node = tuple(item['node'])
   neighbors = [tuple(n) for n in item['neighbors']]
   adj_map[node] = neighbors
-```
+
 
 Then I set up: `start = (0, 0)`, `end = (14, 14)`, `queue = [[start]]`, `visited = {start}`.
 
@@ -407,13 +406,13 @@ Here is the plan. I will build an adjacency list, add the start node to the queu
 To do this, I will manually simulate a bit of BFS, but keep my algorithm correct. I'm going to track the path manually, and I am going to have to be careful with the trace.
 
 I build the adjacency map:
-```
+
 adj_map = {}
 for item in grid:
   node = tuple(item['node'])
   neighbors = [tuple(n) for n in item['neighbors']]
   adj_map[node] = neighbors
-```
+
 
 Then I set up: `start = (0, 0)`, `end = (14, 14)`, `queue = [[start]]`, `visited = {start}`.
 
@@ -495,13 +494,13 @@ Here is the plan. I will build an adjacency list, add the start node to the queu
 To do this, I will manually simulate a bit of BFS, but keep my algorithm correct. I'm going to track the path manually, and I am going to have to be careful with the trace.
 
 I build the adjacency map:
-```
+
 adj_map = {}
 for item in grid:
   node = tuple(item['node'])
   neighbors = [tuple(n) for n in item['neighbors']]
   adj_map[node] = neighbors
-```
+
 
 Then I set up: `start = (0, 0)`, `end = (14, 14)`, `queue = [[start]]`, `visited = {start}`.
 
