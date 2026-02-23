@@ -284,7 +284,7 @@ import os
 from pathlib import Path
 import ast
 
-def keyword_search(md_filepath, search_phrases, category_label, exclude_phrases, vector_size):
+def keyword_search(md_filepath, search_phrases, category_label, exclude_phrases, vector_size): # this function hasbeen validated. 
     output_file = "category_occurrences.py"
     if exclude_phrases is None:
         exclude_phrases = []
@@ -415,9 +415,7 @@ def keyword_search(md_filepath, search_phrases, category_label, exclude_phrases,
 
 # --- Example Run ---
 if __name__ == "__main__":
-    phrases = ["BFS"]
-    exclusions = ["Breadth-First Search (BFS)", "(0,0) to (14,14)"]
-    category = 'algorithm_naming'
+
 
     script_dir = Path(__file__).parent 
     # Update this path if the Maze ID or Dataset changes
@@ -454,62 +452,52 @@ if __name__ == "__main__":
         script_dir / "Dataset 03" / "Dataset 03 15x15 30" / "comparison_report_reasoning_coords_30.md"
         
 ]
+
     for f in files:
         if f.exists():
             # Set vector_size to at least 11 if processing file #11
-            keyword_search(f, phrases, category_label=category, exclude_phrases=exclusions, vector_size=len(files))
+            keyword_search(f, phrases, category_label=cat, exclude_phrases=None, vector_size=len(files))
             print(f"Processed {f.name}. Results saved to category_occurrences.py.")
         else:
             print(f"File not found: {f}")
 
 
 
-
-# --- Example Run ---
-# script_dir = Path(__file__).parent
-
-
-# # files to test. This list can now contain any mixture of ego, allo, or coords files
-
-
-# files = [
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 1" / "comparison_report_reasoning_coords_1.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 2" / "comparison_report_reasoning_coords_2.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 3" / "comparison_report_reasoning_coords_3.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 4" / "comparison_report_reasoning_coords_4.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 5" / "comparison_report_reasoning_coords_5.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 6" / "comparison_report_reasoning_coords_6.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 7" / "comparison_report_reasoning_coords_7.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 8" / "comparison_report_reasoning_coords_8.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 9" / "comparison_report_reasoning_coords_9.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 10" / "comparison_report_reasoning_coords_10.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 11" / "comparison_report_reasoning_coords_11.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 12" / "comparison_report_reasoning_coords_12.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 13" / "comparison_report_reasoning_coords_13.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 14" / "comparison_report_reasoning_coords_14.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 15" / "comparison_report_reasoning_coords_15.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 16" / "comparison_report_reasoning_coords_16.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 17" / "comparison_report_reasoning_coords_17.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 18" / "comparison_report_reasoning_coords_18.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 19" / "comparison_report_reasoning_coords_19.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 20" / "comparison_report_reasoning_coords_20.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 21" / "comparison_report_reasoning_coords_21.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 22" / "comparison_report_reasoning_coords_22.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 23" / "comparison_report_reasoning_coords_23.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 24" / "comparison_report_reasoning_coords_24.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 25" / "comparison_report_reasoning_coords_25.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 26" / "comparison_report_reasoning_coords_26.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 27" / "comparison_report_reasoning_coords_27.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 28" / "comparison_report_reasoning_coords_28.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 29" / "comparison_report_reasoning_coords_29.md",
-#     script_dir / "Dataset 03" / "Dataset 03 15x15 30" / "comparison_report_reasoning_coords_30.md",
+    category = ['algorithm', 'step_by_step', 'backtracking', 'frustration', 'restart', 'reverse_search', 'verification', 'false_confidence' ]
+    phrases_algorithm = [ 'DFS', 'BFS', 'dfs', 'bfs', 'Breadth-First', 'Depth-First', 'breadth-first', 'depth-first', 'algorithm', 'visited',
+                          'queue', 'queuing', 'dequeuing', 'enqueuing', 'parent', 'right-hand', 'wall-following']
+    phrases_sbs = [') to (', 
+                   '), (',
+                   ') and (',
+                   ') or (',
+                   ') has (', 
+                   '), then (',
+                   ') then (', 
+                   '), and then (', 
+                   ') and then (',
+                   'Path: `(',
+                   'options are ('
+                   ]
+    exclusions_sbs = ['(0,0) to (14,14)', "(1,1) to (29,29)", '(0,0) to (5,5)', "(1,1) to 11,11)", '(0,0) to (2,2)', "(1,1) to (5,5)"]
+    phrases_backtracking = ['dead-end', 'dead end', 'backtrack', 'retracing', 'I go back', 'track back', 'backtrack when', 'backtracked when'
+                            'recalculate', 'over and over', 'stuck', 'retrace', 'loops']
+    phrases_frustration = ['complicated', 'challenge', 'confusing' ,'confused', 'stuck', 'struggling', 
+                           'struggle', 'difficult', 'difficult to parse', 'suspect', 'suspicion', 'no solution', 'typo', 'twists', 
+                           'proving to be a challenge', 'proves to be a challenge' ,'twisty', 'careful', 'complex', 
+                           'more elaborate than I expected', 'more intricate than I anticipated', 'trap', 'is the problem flawed?' , 'oversight']
+    phrases_restart  =["I'll need to visualize the maze in a different way", "I'll begin from the starting node again", 
+                       "I'll begin from the start again", "I did it again", 'restart', 'several attempts', 'trial and error',
+                         'I had to go back', 'rethink', 'more systematic', 'retrace', 'new method', 'try again', 're-routing', 
+                         're-evaluate', 'switch', 'I start again', 'disconnect', 'change my approach', 'another approach', 'change my tactic', 
+                         'refining the approach', 'strategy shift' ]
+    phrases_reverse_search = ['tracing from the end', 'working backward', 'from the target', 'from the end', 
+                              'starting at (14,14)', 'starting at (29,29)', 'starting at (2,2)','starting at (11,11)', 'starting at (5,5)', 
+                              'working backward', 'meeting in the middle', 'trace a path backward', 'from (14,14) to (0,0)', 
+                              'from (29,29) to (1,1)', 'from (5,5) to (0,0)', 'from (2,2) to (0,0)', 'from (11,11) to (0,0)', 'from (5,5) to (1,1)',
+                              'path from the end point', 'both ends tracing']
+    phrases_verification = ['check the path step by step','review', 'carefully ensure', ' meticulous', 'catch any error', 'examin', 'comparing',
+                            'confirmed', 'check', 'go back over each step', 'verify', 'sanity check', 'valid', 'retrace', 'verified', ]
+    phrases_false_confidence = ['I made it', 'confident', 'it works', 'paid off', 'solved', 'correct', 'complete', 'this is the solution', 'easy, right?','no problem']
     
-# ]
+    exclusions_false_confidence = ['not confident']
 
-# phrases = ["DFS", "BFS", "dfs", "bfs", "Breadth-First", "Depth-First", "breadth-first", "depth-first", 
-#            "dictionary", "visited", "queue", "queuing", "dequeuing", "enqueuing", "parent" ]
-# category = 'algorithm_naming'
-# for f in files:
-#     if f.exists():
-#         # print(f)
-#         keyword_search(f, phrases, category_label=category)
