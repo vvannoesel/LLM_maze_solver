@@ -36,14 +36,14 @@ line_R_coords_adj_txt_verification_15 = [7, 5, 3, 1, 2, 3, 12, 3, 15, 6, 1, 7, 3
 
 
 
-occurrences_binary_algorithm_15 = binary_occurrence(line_R_coords_adj_txt_algorithm_15)
-occurrences_binary_backtracking_15 = binary_occurrence(line_R_coords_adj_txt_backtracking_15)
-occurrences_binary_false_confidence_15 = binary_occurrence(line_R_coords_adj_txt_false_confidence_15)
-occurrences_binary_frustration_15 = binary_occurrence(line_R_coords_adj_txt_frustration_15)
-occurrences_binary_restart_15 = binary_occurrence(line_R_coords_adj_txt_restart_15)
-occurrences_binary_reverse_search_15 = binary_occurrence(line_R_coords_adj_txt_reverse_search_15)
-occurrences_binary_step_by_step_15 = binary_occurrence(line_R_coords_adj_txt_step_by_step_15)
-occurrences_binary_verification_15 = binary_occurrence(line_R_coords_adj_txt_verification_15)
+occurrences_binary_line_adj_txt_algorithm_15 = binary_occurrence(line_R_coords_adj_txt_algorithm_15)
+occurrences_binary_line_adj_txt_backtracking_15 = binary_occurrence(line_R_coords_adj_txt_backtracking_15)
+occurrences_binary_line_adj_txt_false_confidence_15 = binary_occurrence(line_R_coords_adj_txt_false_confidence_15)
+occurrences_binary_line_adj_txt_frustration_15 = binary_occurrence(line_R_coords_adj_txt_frustration_15)
+occurrences_binary_line_adj_txt_restart_15 = binary_occurrence(line_R_coords_adj_txt_restart_15)
+occurrences_binary_line_adj_txt_reverse_search_15 = binary_occurrence(line_R_coords_adj_txt_reverse_search_15)
+occurrences_binary_line_adj_txt_step_by_step_15 = binary_occurrence(line_R_coords_adj_txt_step_by_step_15)
+occurrences_binary_line_adj_txt_verification_15 = binary_occurrence(line_R_coords_adj_txt_verification_15)
 
 
 
@@ -141,6 +141,118 @@ occupancy_R_coords_tokenized_txt_verification_15 = [3, 3, 4, 6, 3, 0, 3, 3, 6, 0
 
 
 
+
+
+
+
+
+
+
+occurrences_binary_line_tokenized_algorithm_15 = binary_occurrence(line_R_coords_tokenized_txt_algorithm_15)
+occurrences_binary_line_tokenized_backtracking_15 = binary_occurrence(line_R_coords_tokenized_txt_backtracking_15)
+occurrences_binary_line_tokenized_false_confidence_15 = binary_occurrence(line_R_coords_tokenized_txt_false_confidence_15)
+occurrences_binary_line_tokenized_frustration_15 = binary_occurrence(line_R_coords_tokenized_txt_frustration_15)
+occurrences_binary_line_tokenized_restart_15 = binary_occurrence(line_R_coords_tokenized_txt_restart_15)
+occurrences_binary_line_tokenized_reverse_search_15 = binary_occurrence(line_R_coords_tokenized_txt_reverse_search_15)
+occurrences_binary_line_tokenized_step_by_step_15 = binary_occurrence(line_R_coords_tokenized_txt_step_by_step_15)
+occurrences_binary_line_tokenized_verification_15 = binary_occurrence(line_R_coords_tokenized_txt_verification_15)
+
+occurrences_binary_line_adj_json_algorithm_15 = binary_occurrence(line_R_coords_adj_json_algorithm_15)
+occurrences_binary_line_adj_json_backtracking_15 = binary_occurrence(line_R_coords_adj_json_backtracking_15)
+occurrences_binary_line_adj_json_false_confidence_15 = binary_occurrence(line_R_coords_adj_json_false_confidence_15)
+occurrences_binary_line_adj_json_frustration_15 = binary_occurrence(line_R_coords_adj_json_frustration_15)
+occurrences_binary_line_adj_json_restart_15 = binary_occurrence(line_R_coords_adj_json_restart_15)
+occurrences_binary_line_adj_json_reverse_search_15 = binary_occurrence(line_R_coords_adj_json_reverse_search_15)
+occurrences_binary_line_adj_json_step_by_step_15 = binary_occurrence(line_R_coords_adj_json_step_by_step_15)
+occurrences_binary_line_adj_json_verification_15 = binary_occurrence(line_R_coords_adj_json_verification_15)
+
+
+occurrences_binary_line_adj_txt_algorithm_15 = binary_occurrence(line_R_coords_adj_txt_algorithm_15)
+occurrences_binary_line_adj_txt_backtracking_15 = binary_occurrence(line_R_coords_adj_txt_backtracking_15)
+occurrences_binary_line_adj_txt_false_confidence_15 = binary_occurrence(line_R_coords_adj_txt_false_confidence_15)
+occurrences_binary_line_adj_txt_frustration_15 = binary_occurrence(line_R_coords_adj_txt_frustration_15)
+occurrences_binary_line_adj_txt_restart_15 = binary_occurrence(line_R_coords_adj_txt_restart_15)
+occurrences_binary_line_adj_txt_reverse_search_15 = binary_occurrence(line_R_coords_adj_txt_reverse_search_15)
+occurrences_binary_line_adj_txt_step_by_step_15 = binary_occurrence(line_R_coords_adj_txt_step_by_step_15)
+occurrences_binary_line_adj_txt_verification_15 = binary_occurrence(line_R_coords_adj_txt_verification_15)
+
+occurrences_binary_line_jpg_algorithm_15 = binary_occurrence(line_R_coords_jpg_algorithm_15)
+occurrences_binary_line_jpg_backtracking_15 = binary_occurrence(line_R_coords_jpg_backtracking_15)
+occurrences_binary_line_jpg_false_confidence_15 = binary_occurrence(line_R_coords_jpg_false_confidence_15)
+occurrences_binary_line_jpg_frustration_15 = binary_occurrence(line_R_coords_jpg_frustration_15)
+occurrences_binary_line_jpg_restart_15 = binary_occurrence(line_R_coords_jpg_restart_15)
+occurrences_binary_line_jpg_reverse_search_15 = binary_occurrence(line_R_coords_jpg_reverse_search_15)
+occurrences_binary_line_jpg_step_by_step_15 = binary_occurrence(line_R_coords_jpg_step_by_step_15)
+occurrences_binary_line_jpg_verification_15 = binary_occurrence(line_R_coords_jpg_verification_15)
+
+occurrences_binary_line_json_algorithm_15 = binary_occurrence(line_R_coords_json_algorithm_15)
+occurrences_binary_line_json_backtracking_15 = binary_occurrence(line_R_coords_json_backtracking_15)
+occurrences_binary_line_json_false_confidence_15 = binary_occurrence(line_R_coords_json_false_confidence_15)
+occurrences_binary_line_json_frustration_15 = binary_occurrence(line_R_coords_json_frustration_15)
+occurrences_binary_line_json_restart_15 = binary_occurrence(line_R_coords_json_restart_15)
+occurrences_binary_line_json_reverse_search_15 = binary_occurrence(line_R_coords_json_reverse_search_15)
+occurrences_binary_line_json_step_by_step_15 = binary_occurrence(line_R_coords_json_step_by_step_15)
+occurrences_binary_line_json_verification_15 = binary_occurrence(line_R_coords_json_verification_15)
+
+occurrences_binary_occupancy_adj_json_algorithm_15 = binary_occurrence(occupancy_R_coords_adj_json_algorithm_15)
+occurrences_binary_occupancy_adj_json_backtracking_15 = binary_occurrence(occupancy_R_coords_adj_json_backtracking_15)
+occurrences_binary_occupancy_adj_json_false_confidence_15 = binary_occurrence(occupancy_R_coords_adj_json_false_confidence_15)
+occurrences_binary_occupancy_adj_json_frustration_15 = binary_occurrence(occupancy_R_coords_adj_json_frustration_15)
+occurrences_binary_occupancy_adj_json_restart_15 = binary_occurrence(occupancy_R_coords_adj_json_restart_15)
+occurrences_binary_occupancy_adj_json_reverse_search_15 = binary_occurrence(occupancy_R_coords_adj_json_reverse_search_15)
+occurrences_binary_occupancy_adj_json_step_by_step_15 = binary_occurrence(occupancy_R_coords_adj_json_step_by_step_15)
+occurrences_binary_occupancy_adj_json_verification_15 = binary_occurrence(occupancy_R_coords_adj_json_verification_15)
+
+occurrences_binary_occupancy_adj_txt_algorithm_15 = binary_occurrence(occupancy_R_coords_adj_txt_algorithm_15)
+occurrences_binary_occupancy_adj_txt_backtracking_15 = binary_occurrence(occupancy_R_coords_adj_txt_backtracking_15)
+occurrences_binary_occupancy_adj_txt_false_confidence_15 = binary_occurrence(occupancy_R_coords_adj_txt_false_confidence_15)
+occurrences_binary_occupancy_adj_txt_frustration_15 = binary_occurrence(occupancy_R_coords_adj_txt_frustration_15)
+occurrences_binary_occupancy_adj_txt_restart_15 = binary_occurrence(occupancy_R_coords_adj_txt_restart_15)
+occurrences_binary_occupancy_adj_txt_reverse_search_15 = binary_occurrence(occupancy_R_coords_adj_txt_reverse_search_15)
+occurrences_binary_occupancy_adj_txt_step_by_step_15 = binary_occurrence(occupancy_R_coords_adj_txt_step_by_step_15)
+occurrences_binary_occupancy_adj_txt_verification_15 = binary_occurrence(occupancy_R_coords_adj_txt_verification_15)
+
+occurrences_binary_occupancy_json_algorithm_15 = binary_occurrence(occupancy_R_coords_json_algorithm_15)
+occurrences_binary_occupancy_json_backtracking_15 = binary_occurrence(occupancy_R_coords_json_backtracking_15)
+occurrences_binary_occupancy_json_false_confidence_15 = binary_occurrence(occupancy_R_coords_json_false_confidence_15)
+occurrences_binary_occupancy_json_frustration_15 = binary_occurrence(occupancy_R_coords_json_frustration_15)
+occurrences_binary_occupancy_json_restart_15 = binary_occurrence(occupancy_R_coords_json_restart_15)
+occurrences_binary_occupancy_json_reverse_search_15 = binary_occurrence(occupancy_R_coords_json_reverse_search_15)
+occurrences_binary_occupancy_json_step_by_step_15 = binary_occurrence(occupancy_R_coords_json_step_by_step_15)
+occurrences_binary_occupancy_json_verification_15 = binary_occurrence(occupancy_R_coords_json_verification_15)
+
+occurrences_binary_occupancy_tokenized_algorithm_15 = binary_occurrence(occupancy_R_coords_tokenized_txt_algorithm_15)
+occurrences_binary_occupancy_tokenized_backtracking_15 = binary_occurrence(occupancy_R_coords_tokenized_txt_backtracking_15)
+occurrences_binary_occupancy_tokenized_false_confidence_15 = binary_occurrence(occupancy_R_coords_tokenized_txt_false_confidence_15)
+occurrences_binary_occupancy_tokenized_frustration_15 = binary_occurrence(occupancy_R_coords_tokenized_txt_frustration_15)
+occurrences_binary_occupancy_tokenized_restart_15 = binary_occurrence(occupancy_R_coords_tokenized_txt_restart_15)
+occurrences_binary_occupancy_tokenized_reverse_search_15 = binary_occurrence(occupancy_R_coords_tokenized_txt_reverse_search_15)
+occurrences_binary_occupancy_tokenized_step_by_step_15 = binary_occurrence(occupancy_R_coords_tokenized_txt_step_by_step_15)
+occurrences_binary_occupancy_tokenized_verification_15 = binary_occurrence(occupancy_R_coords_tokenized_txt_verification_15)
+
+occurrences_binary_occupancy_ascii_algorithm_15 = binary_occurrence(occupancy_R_coords_ascii_txt_algorithm_15)
+occurrences_binary_occupancy_ascii_backtracking_15 = binary_occurrence(occupancy_R_coords_ascii_txt_backtracking_15)
+occurrences_binary_occupancy_ascii_false_confidence_15 = binary_occurrence(occupancy_R_coords_ascii_txt_false_confidence_15)
+occurrences_binary_occupancy_ascii_frustration_15 = binary_occurrence(occupancy_R_coords_ascii_txt_frustration_15)
+occurrences_binary_occupancy_ascii_restart_15 = binary_occurrence(occupancy_R_coords_ascii_txt_restart_15)
+occurrences_binary_occupancy_ascii_reverse_search_15 = binary_occurrence(occupancy_R_coords_ascii_txt_reverse_search_15)
+occurrences_binary_occupancy_ascii_step_by_step_15 = binary_occurrence(occupancy_R_coords_ascii_txt_step_by_step_15)
+occurrences_binary_occupancy_ascii_verification_15 = binary_occurrence(occupancy_R_coords_ascii_txt_verification_15)
+
+occurrences_binary_occupancy_jpg_algorithm_15 = binary_occurrence(occupancy_R_coords_jpg_algorithm_15)
+occurrences_binary_occupancy_jpg_backtracking_15 = binary_occurrence(occupancy_R_coords_jpg_backtracking_15)
+occurrences_binary_occupancy_jpg_false_confidence_15 = binary_occurrence(occupancy_R_coords_jpg_false_confidence_15)
+occurrences_binary_occupancy_jpg_frustration_15 = binary_occurrence(occupancy_R_coords_jpg_frustration_15)
+occurrences_binary_occupancy_jpg_restart_15 = binary_occurrence(occupancy_R_coords_jpg_restart_15)
+occurrences_binary_occupancy_jpg_reverse_search_15 = binary_occurrence(occupancy_R_coords_jpg_reverse_search_15)
+occurrences_binary_occupancy_jpg_step_by_step_15 = binary_occurrence(occupancy_R_coords_jpg_step_by_step_15)
+occurrences_binary_occupancy_jpg_verification_15 = binary_occurrence(occupancy_R_coords_jpg_verification_15)
+
+
+
+
+
+
 occurrence_binary_algo_line_adj_json = binary_occurrence(line_R_coords_adj_json_algorithm_15)
 occurrence_binary_algo_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_algorithm_15)
 occurrence_binary_algo_line_json = binary_occurrence(line_R_coords_json_algorithm_15)
@@ -152,108 +264,6 @@ occurrence_binary_algo_occ_json = binary_occurrence(occupancy_R_coords_json_algo
 occurrence_binary_algo_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_algorithm_15)
 occurrence_binary_algo_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_algorithm_15)
 occurrence_binary_algo_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_algorithm_15)
-
-
-
-# List of (occurrence_vector, score_vector, label)
-datasets_algorithm = [
-    (occurrence_binary_algo_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
-    (occurrence_binary_algo_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
-    (occurrence_binary_algo_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
-    (occurrence_binary_algo_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
-    (occurrence_binary_algo_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
-    (occurrence_binary_algo_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
-    (occurrence_binary_algo_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
-    (occurrence_binary_algo_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
-    (occurrence_binary_algo_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
-    (occurrence_binary_algo_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
-    (occurrence_binary_algo_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
-]
-
-occurrence_binary_backtracking_line_adj_json = binary_occurrence(line_R_coords_adj_json_backtracking_15)
-occurrence_binary_backtracking_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_backtracking_15)
-occurrence_binary_backtracking_line_json = binary_occurrence(line_R_coords_json_backtracking_15)
-occurrence_binary_backtracking_line_jpg = binary_occurrence(line_R_coords_jpg_backtracking_15)
-occurrence_binary_backtracking_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_backtracking_15)
-occurrence_binary_backtracking_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_backtracking_15)
-occurrence_binary_backtracking_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_backtracking_15)
-occurrence_binary_backtracking_occ_json = binary_occurrence(occupancy_R_coords_json_backtracking_15)
-occurrence_binary_backtracking_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_backtracking_15)
-occurrence_binary_backtracking_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_backtracking_15)
-occurrence_binary_backtracking_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_backtracking_15)
-
-
-# List of (occurrence_vector, score_vector, label)
-datasets_backtracking = [
-    (occurrence_binary_backtracking_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
-    (occurrence_binary_backtracking_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
-    (occurrence_binary_backtracking_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
-    (occurrence_binary_backtracking_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
-    (occurrence_binary_backtracking_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
-    (occurrence_binary_backtracking_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
-    (occurrence_binary_backtracking_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
-    (occurrence_binary_backtracking_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
-    (occurrence_binary_backtracking_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
-    (occurrence_binary_backtracking_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
-    (occurrence_binary_backtracking_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
-]
-
-occurrence_binary_false_confidence_line_adj_json = binary_occurrence(line_R_coords_adj_json_false_confidence_15)
-occurrence_binary_false_confidence_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_false_confidence_15)
-occurrence_binary_false_confidence_line_json = binary_occurrence(line_R_coords_json_false_confidence_15)
-occurrence_binary_false_confidence_line_jpg = binary_occurrence(line_R_coords_jpg_false_confidence_15)
-occurrence_binary_false_confidence_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_false_confidence_15)
-occurrence_binary_false_confidence_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_false_confidence_15)
-occurrence_binary_false_confidence_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_false_confidence_15)
-occurrence_binary_false_confidence_occ_json = binary_occurrence(occupancy_R_coords_json_false_confidence_15)
-occurrence_binary_false_confidence_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_false_confidence_15)
-occurrence_binary_false_confidence_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_false_confidence_15)
-occurrence_binary_false_confidence_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_false_confidence_15)
-
-
-
-# List of (occurrence_vector, score_vector, label)
-datasets_false_confidence = [
-    (occurrence_binary_false_confidence_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
-    (occurrence_binary_false_confidence_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
-    (occurrence_binary_false_confidence_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
-    (occurrence_binary_false_confidence_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
-    (occurrence_binary_false_confidence_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
-    (occurrence_binary_false_confidence_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
-    (occurrence_binary_false_confidence_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
-    (occurrence_binary_false_confidence_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
-    (occurrence_binary_false_confidence_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
-    (occurrence_binary_false_confidence_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
-    (occurrence_binary_false_confidence_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
-]
-
-occurrence_binary_frustration_line_adj_json = binary_occurrence(line_R_coords_adj_json_frustration_15)
-occurrence_binary_frustration_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_frustration_15)
-occurrence_binary_frustration_line_json = binary_occurrence(line_R_coords_json_frustration_15)
-occurrence_binary_frustration_line_jpg = binary_occurrence(line_R_coords_jpg_frustration_15)
-occurrence_binary_frustration_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_frustration_15)
-occurrence_binary_frustration_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_frustration_15)
-occurrence_binary_frustration_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_frustration_15)
-occurrence_binary_frustration_occ_json = binary_occurrence(occupancy_R_coords_json_frustration_15)
-occurrence_binary_frustration_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_frustration_15)
-occurrence_binary_frustration_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_frustration_15)
-occurrence_binary_frustration_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_frustration_15)
-
-
-# List of (occurrence_vector, score_vector, label)
-datasets_frustration = [
-    (occurrence_binary_frustration_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
-    (occurrence_binary_frustration_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
-    (occurrence_binary_frustration_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
-    (occurrence_binary_frustration_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
-    (occurrence_binary_frustration_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
-    (occurrence_binary_frustration_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
-    (occurrence_binary_frustration_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
-    (occurrence_binary_frustration_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
-    (occurrence_binary_frustration_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
-    (occurrence_binary_frustration_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
-    (occurrence_binary_frustration_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
-]
 
 occurrence_binary_restart_line_adj_json = binary_occurrence(line_R_coords_adj_json_restart_15)
 occurrence_binary_restart_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_restart_15)
@@ -268,22 +278,6 @@ occurrence_binary_restart_occ_tokenized = binary_occurrence(occupancy_R_coords_t
 occurrence_binary_restart_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_restart_15)
 
 
-# List of (occurrence_vector, score_vector, label)
-datasets_restart = [
-    (occurrence_binary_restart_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
-    (occurrence_binary_restart_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
-    (occurrence_binary_restart_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
-    (occurrence_binary_restart_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
-    (occurrence_binary_restart_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
-    (occurrence_binary_restart_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
-    (occurrence_binary_restart_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
-    (occurrence_binary_restart_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
-    (occurrence_binary_restart_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
-    (occurrence_binary_restart_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
-    (occurrence_binary_restart_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
-]
-
-
 occurrence_binary_reverse_search_line_adj_json = binary_occurrence(line_R_coords_adj_json_reverse_search_15)
 occurrence_binary_reverse_search_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_reverse_search_15)
 occurrence_binary_reverse_search_line_json = binary_occurrence(line_R_coords_json_reverse_search_15)
@@ -296,206 +290,273 @@ occurrence_binary_reverse_search_occ_jpg = binary_occurrence(occupancy_R_coords_
 occurrence_binary_reverse_search_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_reverse_search_15)
 occurrence_binary_reverse_search_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_reverse_search_15)
 
+line_R_coords_adj_json_restart_15 = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0]
+print(occurrence_binary_reverse_search_line_adj_json)
+present_scores = r15.line_R_coords_adj_json_15[occurrence_binary_reverse_search_line_adj_json == 1]
+print(present_scores)
+# creating heatmap: presence vs score for all inputs
 
-# List of (occurrence_vector, score_vector, label)
-datasets_reverse_search = [
-    (occurrence_binary_reverse_search_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
-    (occurrence_binary_reverse_search_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
-    (occurrence_binary_reverse_search_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
-    (occurrence_binary_reverse_search_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
-    (occurrence_binary_reverse_search_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
-    (occurrence_binary_reverse_search_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
-    (occurrence_binary_reverse_search_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
-    (occurrence_binary_reverse_search_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
-    (occurrence_binary_reverse_search_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
-    (occurrence_binary_reverse_search_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
-    (occurrence_binary_reverse_search_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+score_vectors = [
+    r15.line_R_coords_adj_json_15,
+    r15.line_R_coords_adj_txt_15,
+    r15.line_R_coords_jpg_15,
+    r15.line_R_coords_json_15,
+    r15.line_R_coords_tokenized_txt_15,
+    r15.occupancy_R_coords_adj_json_15,
+    r15.occupancy_R_coords_adj_txt_15,
+    r15.occupancy_R_coords_jpg_15,
+    r15.occupancy_R_coords_json_15,
+    r15.occupancy_R_coords_tokenized_txt_15,
+    r15.occupancy_R_coords_ascii_txt_15
 ]
 
 
-occurrence_binary_step_by_step_line_adj_json = binary_occurrence(line_R_coords_adj_json_step_by_step_15)
-occurrence_binary_step_by_step_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_step_by_step_15)
-occurrence_binary_step_by_step_line_json = binary_occurrence(line_R_coords_json_step_by_step_15)
-occurrence_binary_step_by_step_line_jpg = binary_occurrence(line_R_coords_jpg_step_by_step_15)
-occurrence_binary_step_by_step_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_step_by_step_15)
-occurrence_binary_step_by_step_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_step_by_step_15)
-occurrence_binary_step_by_step_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_step_by_step_15)
-occurrence_binary_step_by_step_occ_json = binary_occurrence(occupancy_R_coords_json_step_by_step_15)
-occurrence_binary_step_by_step_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_step_by_step_15)
-occurrence_binary_step_by_step_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_step_by_step_15)
-occurrence_binary_step_by_step_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_step_by_step_15)
+binary_occurrence_vectors_algo = [
+    occurrence_binary_algo_line_adj_json,
+    occurrence_binary_algo_line_adj_txt,
+    occurrence_binary_algo_line_jpg,
+    occurrence_binary_algo_line_json,
+    occurrence_binary_algo_line_tokenized,
+    occurrence_binary_algo_occ_adj_json,
+    occurrence_binary_algo_occ_adj_txt,
+    occurrence_binary_algo_occ_jpg,
+    occurrence_binary_algo_occ_json,
+    occurrence_binary_algo_occ_tokenized,
+    occurrence_binary_algo_occ_ascii
+    ]
 
+binary_occurrence_vectors_restart = [
+    occurrence_binary_restart_line_adj_json,
+    occurrence_binary_restart_line_adj_txt,
+    occurrence_binary_restart_line_jpg,
+    occurrence_binary_restart_line_json,
+    occurrence_binary_restart_line_tokenized,
+    occurrence_binary_restart_occ_adj_json,
+    occurrence_binary_restart_occ_adj_txt,
+    occurrence_binary_restart_occ_jpg,
+    occurrence_binary_restart_occ_json,
+    occurrence_binary_restart_occ_tokenized,
+    occurrence_binary_restart_occ_ascii
+    ]
 
-# List of (occurrence_vector, score_vector, label)
-datasets_step_by_step = [
-    (occurrence_binary_step_by_step_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
-    (occurrence_binary_step_by_step_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
-    (occurrence_binary_step_by_step_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
-    (occurrence_binary_step_by_step_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
-    (occurrence_binary_step_by_step_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
-    (occurrence_binary_step_by_step_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
-    (occurrence_binary_step_by_step_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
-    (occurrence_binary_step_by_step_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
-    (occurrence_binary_step_by_step_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
-    (occurrence_binary_step_by_step_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
-    (occurrence_binary_step_by_step_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+binary_occurrence_vectors_reverse_search = [
+    occurrence_binary_reverse_search_line_adj_json,
+    occurrence_binary_reverse_search_line_adj_txt,
+    occurrence_binary_reverse_search_line_jpg,
+    occurrence_binary_reverse_search_line_json,
+    occurrence_binary_reverse_search_line_tokenized,
+    occurrence_binary_reverse_search_occ_adj_json,
+    occurrence_binary_reverse_search_occ_adj_txt,
+    occurrence_binary_reverse_search_occ_jpg,
+    occurrence_binary_reverse_search_occ_json,
+    occurrence_binary_reverse_search_occ_tokenized,
+    occurrence_binary_reverse_search_occ_ascii
+    ]
+
+labels = [
+    "Line Adj JSON",
+    "Line Adj Txt",
+    "Line JPG",
+    "Line JSON",
+    "Line Tokenized",
+    "Occ Adj JSON",
+    "Occ Adj Txt",
+    "Occ JPG",
+    "Occ JSON",
+    "Occ Tokenized",
+    "Occ ASCII"
 ]
 
-occurrence_binary_verification_line_adj_json = binary_occurrence(line_R_coords_adj_json_verification_15)
-occurrence_binary_verification_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_verification_15)
-occurrence_binary_verification_line_json = binary_occurrence(line_R_coords_json_verification_15)
-occurrence_binary_verification_line_jpg = binary_occurrence(line_R_coords_jpg_verification_15)
-occurrence_binary_verification_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_verification_15)
-occurrence_binary_verification_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_verification_15)
-occurrence_binary_verification_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_verification_15)
-occurrence_binary_verification_occ_json = binary_occurrence(occupancy_R_coords_json_verification_15)
-occurrence_binary_verification_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_verification_15)
-occurrence_binary_verification_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_verification_15)
-occurrence_binary_verification_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_verification_15)
+
+# Heatmap of score distribution in the case that keyword is present. 
+# bins = np.arange(0, 105, 5)   # 0,5,10,...,100
+# bin_labels = [f"{i}-{i+5}" for i in range(0, 100, 5)]
 
 
-# List of (occurrence_vector, score_vector, label)
-datasets_verification = [
-    (occurrence_binary_verification_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
-    (occurrence_binary_verification_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
-    (occurrence_binary_verification_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
-    (occurrence_binary_verification_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
-    (occurrence_binary_verification_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
-    (occurrence_binary_verification_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
-    (occurrence_binary_verification_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
-    (occurrence_binary_verification_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
-    (occurrence_binary_verification_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
-    (occurrence_binary_verification_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
-    (occurrence_binary_verification_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
-]
+# heatmap_matrix = np.zeros((20, len(score_vectors)))
 
+# for col, (scores, occurrences) in enumerate(zip(score_vectors, binary_occurrence_vectors_algo)): # change input vectors here to decide which keyword heatmap to plot. 
 
-# plotting 1 fig with 8 subplots that show occurrence vs completion score
+#     # Make sure the scores and occurrences are np arrays
+#     scores = np.array(scores)
+#     occurrences = np.array(occurrences)
 
-# Create 2x4 subplot grid (8 total)
-fig, axes = plt.subplots(2, 4, figsize=(18, 8))
-axes = axes.flatten()
+#     # Only keep scores where keyword is present
+#     present_scores = scores[occurrences == 1]
 
-def plot_keyword(ax, datasets, title, ylabel):
+#     if len(present_scores) == 0:
+#         continue  # column remains zero
 
-    x_vals = []
-    y_vals = []
+#     # Histogram counts per bin
+#     counts, _ = np.histogram(present_scores, bins=bins)
 
-    for occurrence_vector, score_vector, label, color, mec in datasets:
+#     # Convert to percentage of keyword-present events
+#     percentages = (counts / len(present_scores)) * 100
 
-        occurrence_vector = np.array(occurrence_vector)
-        score_vector = np.array(score_vector)
+#     heatmap_matrix[:, col] = percentages
 
-        y_sum = np.mean(occurrence_vector)
-        x_mean = np.mean(score_vector)
+# plt.figure(figsize=(12, 8))
 
-        x_vals.append(x_mean)
-        y_vals.append(y_sum)
+# im = plt.imshow(
+#     heatmap_matrix,
+#     aspect='auto',
+#     origin='lower' ,
+#     cmap="Oranges"
+# )
 
-        ax.scatter(
-            x_mean,
-            y_sum,
-            color=color,
-            edgecolor=mec,
-            s=60,
-            label=label
-        )
+# plt.colorbar(im, label='Percentage of Keyword-Present Events (%)')
 
-    x_vals = np.array(x_vals)
-    y_vals = np.array(y_vals)
+# plt.xticks(ticks=np.arange(len(labels)), labels=labels, rotation=45, ha='right')
+# plt.yticks(ticks=np.arange(20), labels=bin_labels)
 
-    # Trend line
-    z = np.polyfit(x_vals, y_vals, 1)
-    p = np.poly1d(z)
+# plt.xlabel("Dataset")
+# plt.ylabel("Completion Score (%)")
+# plt.title("Distribution of Scores When Algorithm Naming Keywords Are Present, \nCoordinates Output, 15x15/31x31", fontweight='bold')
 
-    sorted_idx = np.argsort(x_vals)
+# # annotate the cells with the percentage values of keyword-present events (only non-zero)
+# for i in range(heatmap_matrix.shape[0]):      # rows (bins)
+#     for j in range(heatmap_matrix.shape[1]):  # columns (datasets)
 
-    ax.plot(
-        x_vals[sorted_idx],
-        p(x_vals[sorted_idx]),
-        linestyle='--',
-        color='black',
-        alpha=0.7
-    )
+#         value = heatmap_matrix[i, j]
 
-    ax.set_title(title, fontweight = 'bold', fontsize=10)
-    ax.set_xlabel('Mean Completion Score (%)')
-    ax.set_ylabel(ylabel)
-    ax.grid(linestyle=':', alpha=0.6)
+#         if value > 0:   # only write non-zero cells (cleaner)
+#             plt.text(
+#                 j, i,
+#                 f"{value:.0f}%",
+#                 ha='center',
+#                 va='center',
+#                 color='white' if value > 50 else 'black',
+#                 fontsize=8
+#             )
 
-
-
-plot_keyword(axes[0], datasets_algorithm, "Algorithm",  "Presence (%)")
-plot_keyword(axes[1], datasets_backtracking, "Backtracking", "Presence (%)")
-plot_keyword(axes[2], datasets_false_confidence, "False Confidence", "Presence (%)")
-plot_keyword(axes[3], datasets_frustration, "Frustration", "Presence (%)")
-plot_keyword(axes[4], datasets_restart, "Restart", "Presence (%)")
-plot_keyword(axes[5], datasets_reverse_search, "Reverse Search", "Presence (%)")
-plot_keyword(axes[6], datasets_step_by_step, "Step-by-Step", "Presence (%)")
-plot_keyword(axes[7], datasets_verification, "Verification", "Presence (%)")
-
-plt.suptitle('Keyword Categories vs Completion Score \nCoordinates Output, 15x15', fontsize=14)
-plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
-plt.show()
+# plt.tight_layout()
+# # plt.show()
 
 
 
 
+# for col, (scores, occurrences) in enumerate(zip(score_vectors, binary_occurrence_vectors_restart)):
 
+#     # Make sure the scores and occurrences are np arrays
+#     scores = np.array(scores)
+#     occurrences = np.array(occurrences)
 
+#     # Only keep scores where keyword is present
+#     present_scores = scores[occurrences == 1]
 
+#     if len(present_scores) == 0:
+#         continue  # column remains zero
 
+#     # Histogram counts per bin
+#     counts, _ = np.histogram(present_scores, bins=bins)
 
+#     # Convert to percentage of keyword-present events
+#     percentages = (counts / len(present_scores)) * 100
 
-# ----- Creates Bar charts comparing avg completion score for present/absent keywords ---
-'''Does not show differences in scores achieved, regardless of keyword presence. 
-Does show that verification and backtracking always occur. '''
-# # Score vector
-# scores = np.array(r15.line_R_coords_adj_txt_15)
+#     heatmap_matrix[:, col] = percentages
 
-# # Dictionary of occurrence vectors
-# occurrence_dict = {
-#     "Algorithm Naming": occurrences_binary_algorithm_15,
-#     "Backtracking": occurrences_binary_backtracking_15,
-#     "False Confidence": occurrences_binary_false_confidence_15,
-#     "Frustration": occurrences_binary_frustration_15,
-#     "Restart": occurrences_binary_restart_15,
-#     "Reverse Search": occurrences_binary_reverse_search_15,
-#     "Step-by-Step": occurrences_binary_step_by_step_15,
-#     "Verification": occurrences_binary_verification_15,
-# }
+# plt.figure(figsize=(12, 8))
 
-# # Create figure with 8 subplots (2 rows × 4 columns)
-# fig, axes = plt.subplots(2, 4, figsize=(16, 8), sharex=True)
-# axes = axes.flatten()
+# im = plt.imshow(
+#     heatmap_matrix,
+#     aspect='auto',
+#     origin='lower' ,
+#     cmap="Oranges",
 
-# for ax, (title, occurrence_vector) in zip(axes, occurrence_dict.items()):
     
-#     occurrence_vector = np.array(occurrence_vector)
+# )
 
-#     # Separate scores
-#     yes_scores = scores[occurrence_vector == 1]
-#     no_scores  = scores[occurrence_vector == 0]
+# # texts = annotate_heatmap(im, valfmt="{x:.1f} t")
 
-#     # Compute means safely
-#     mean_yes = np.mean(yes_scores) if len(yes_scores) > 0 else 0
-#     mean_no  = np.mean(no_scores) if len(no_scores) > 0 else 0
-#     stdev_yes = np.std(yes_scores) if len(yes_scores) >0 else 0
-#     stdev_no = np.std(no_scores) if len(no_scores) >0 else 0
+# plt.colorbar(im, label='Percentage of Keyword-Present Events (%)')
 
-#     labels = ['Present, std = {:.1f}'.format(stdev_yes), 'Absent, std = {:.1f}'.format(stdev_no)]
-#     means = [mean_yes, mean_no]
+# plt.xticks(ticks=np.arange(len(labels)), labels=labels, rotation=45, ha='right')
+# plt.yticks(ticks=np.arange(20), labels=bin_labels)
 
-#     # Plot horizontal bars
-#     ax.barh(labels, means, alpha=0.7)
+# plt.xlabel("Dataset")
+# plt.ylabel("Completion Score (%)")
+# plt.title("Distribution of Scores When Restart Keywords Are Present, \nCoordinates Output, 15x15/31x31", fontweight='bold')
 
-#     ax.set_title(title, fontsize=10)
-#     ax.set_xlim(0, 100)
-#     ax.grid(axis='x', linestyle=':', alpha=0.6)
+# # annotate the cells with the percentage values of keyword-present events (only non-zero)
+# for i in range(heatmap_matrix.shape[0]):      # rows (bins)
+#     for j in range(heatmap_matrix.shape[1]):  # columns (datasets)
 
-# # Common x-axis label
-# fig.supxlabel('Average Completion Score (%)', fontsize=12)
-# fig.supylabel('Keyword Occurrence', fontsize=12)
+#         value = heatmap_matrix[i, j]
+
+#         if value > 0:   # only write non-zero cells (cleaner)
+#             plt.text(
+#                 j, i,
+#                 f"{value:.0f}%",
+#                 ha='center',
+#                 va='center',
+#                 color='white' if value > 50 else 'black',
+#                 fontsize=8
+#             )
+
+# plt.tight_layout()
+# # plt.show()
+
+
+
+
+
+# for col, (scores, occurrences) in enumerate(zip(score_vectors, binary_occurrence_vectors_reverse_search)):
+
+#     # Make sure the scores and occurrences are np arrays
+#     scores = np.array(scores)
+#     occurrences = np.array(occurrences)
+
+#     # Only keep scores where keyword is present
+#     present_scores = scores[occurrences == 1]
+
+#     if len(present_scores) == 0:
+#         continue  # column remains zero
+
+#     # Histogram counts per bin
+#     counts, _ = np.histogram(present_scores, bins=bins)
+
+#     # Convert to percentage of keyword-present events
+#     percentages = (counts / len(present_scores)) * 100
+
+#     heatmap_matrix[:, col] = percentages
+
+# plt.figure(figsize=(12, 8))
+
+# im = plt.imshow(
+#     heatmap_matrix,
+#     aspect='auto',
+#     origin='lower' ,
+#     cmap="Oranges",
+
+    
+# )
+
+# # texts = annotate_heatmap(im, valfmt="{x:.1f} t")
+
+# plt.colorbar(im, label='Percentage of Keyword-Present Events (%)')
+
+# plt.xticks(ticks=np.arange(len(labels)), labels=labels, rotation=45, ha='right')
+# plt.yticks(ticks=np.arange(20), labels=bin_labels)
+
+# plt.xlabel("Dataset")
+# plt.ylabel("Completion Score (%)")
+# plt.title("Distribution of Scores When Reverse Search Keywords Are Present, \nCoordinates Output, 15x15/31x31", fontweight='bold')
+
+# # annotate the cells with the percentage values of keyword-present events (only non-zero)
+# for i in range(heatmap_matrix.shape[0]):      # rows (bins)
+#     for j in range(heatmap_matrix.shape[1]):  # columns (datasets)
+
+#         value = heatmap_matrix[i, j]
+
+#         if value > 0:   # only write non-zero cells (cleaner)
+#             plt.text(
+#                 j, i,
+#                 f"{value:.0f}%",
+#                 ha='center',
+#                 va='center',
+#                 color='white' if value > 50 else 'black',
+#                 fontsize=8
+#             )
 
 # plt.tight_layout()
 # plt.show()
@@ -518,7 +579,604 @@ Does show that verification and backtracking always occur. '''
 
 
 
-# ----- Plotting number of used tokens vs number of output characters  - no interesting results. ---------
+
+
+
+
+
+# # plotting 1 fig with 8 subplots that show occurrence vs completion score - somewhat useful graphic
+# # List of (occurrence_vector, score_vector, label)
+# datasets_algorithm = [
+#     (occurrence_binary_algo_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
+#     (occurrence_binary_algo_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
+#     (occurrence_binary_algo_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
+#     (occurrence_binary_algo_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
+#     (occurrence_binary_algo_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
+#     (occurrence_binary_algo_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
+#     (occurrence_binary_algo_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
+#     (occurrence_binary_algo_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
+#     (occurrence_binary_algo_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
+#     (occurrence_binary_algo_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
+#     (occurrence_binary_algo_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+# ]
+
+# occurrence_binary_backtracking_line_adj_json = binary_occurrence(line_R_coords_adj_json_backtracking_15)
+# occurrence_binary_backtracking_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_backtracking_15)
+# occurrence_binary_backtracking_line_json = binary_occurrence(line_R_coords_json_backtracking_15)
+# occurrence_binary_backtracking_line_jpg = binary_occurrence(line_R_coords_jpg_backtracking_15)
+# occurrence_binary_backtracking_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_backtracking_15)
+# occurrence_binary_backtracking_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_backtracking_15)
+# occurrence_binary_backtracking_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_backtracking_15)
+# occurrence_binary_backtracking_occ_json = binary_occurrence(occupancy_R_coords_json_backtracking_15)
+# occurrence_binary_backtracking_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_backtracking_15)
+# occurrence_binary_backtracking_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_backtracking_15)
+# occurrence_binary_backtracking_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_backtracking_15)
+
+
+# # List of (occurrence_vector, score_vector, label)
+# datasets_backtracking = [
+#     (occurrence_binary_backtracking_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
+#     (occurrence_binary_backtracking_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
+#     (occurrence_binary_backtracking_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
+#     (occurrence_binary_backtracking_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
+#     (occurrence_binary_backtracking_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
+#     (occurrence_binary_backtracking_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
+#     (occurrence_binary_backtracking_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
+#     (occurrence_binary_backtracking_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
+#     (occurrence_binary_backtracking_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
+#     (occurrence_binary_backtracking_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
+#     (occurrence_binary_backtracking_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+# ]
+
+# occurrence_binary_false_confidence_line_adj_json = binary_occurrence(line_R_coords_adj_json_false_confidence_15)
+# occurrence_binary_false_confidence_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_false_confidence_15)
+# occurrence_binary_false_confidence_line_json = binary_occurrence(line_R_coords_json_false_confidence_15)
+# occurrence_binary_false_confidence_line_jpg = binary_occurrence(line_R_coords_jpg_false_confidence_15)
+# occurrence_binary_false_confidence_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_false_confidence_15)
+# occurrence_binary_false_confidence_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_false_confidence_15)
+# occurrence_binary_false_confidence_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_false_confidence_15)
+# occurrence_binary_false_confidence_occ_json = binary_occurrence(occupancy_R_coords_json_false_confidence_15)
+# occurrence_binary_false_confidence_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_false_confidence_15)
+# occurrence_binary_false_confidence_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_false_confidence_15)
+# occurrence_binary_false_confidence_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_false_confidence_15)
+
+
+
+# # List of (occurrence_vector, score_vector, label)
+# datasets_false_confidence = [
+#     (occurrence_binary_false_confidence_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
+#     (occurrence_binary_false_confidence_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
+#     (occurrence_binary_false_confidence_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
+#     (occurrence_binary_false_confidence_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
+#     (occurrence_binary_false_confidence_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
+#     (occurrence_binary_false_confidence_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
+#     (occurrence_binary_false_confidence_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
+#     (occurrence_binary_false_confidence_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
+#     (occurrence_binary_false_confidence_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
+#     (occurrence_binary_false_confidence_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
+#     (occurrence_binary_false_confidence_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+# ]
+
+# occurrence_binary_frustration_line_adj_json = binary_occurrence(line_R_coords_adj_json_frustration_15)
+# occurrence_binary_frustration_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_frustration_15)
+# occurrence_binary_frustration_line_json = binary_occurrence(line_R_coords_json_frustration_15)
+# occurrence_binary_frustration_line_jpg = binary_occurrence(line_R_coords_jpg_frustration_15)
+# occurrence_binary_frustration_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_frustration_15)
+# occurrence_binary_frustration_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_frustration_15)
+# occurrence_binary_frustration_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_frustration_15)
+# occurrence_binary_frustration_occ_json = binary_occurrence(occupancy_R_coords_json_frustration_15)
+# occurrence_binary_frustration_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_frustration_15)
+# occurrence_binary_frustration_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_frustration_15)
+# occurrence_binary_frustration_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_frustration_15)
+
+
+# # List of (occurrence_vector, score_vector, label)
+# datasets_frustration = [
+#     (occurrence_binary_frustration_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
+#     (occurrence_binary_frustration_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
+#     (occurrence_binary_frustration_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
+#     (occurrence_binary_frustration_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
+#     (occurrence_binary_frustration_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
+#     (occurrence_binary_frustration_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
+#     (occurrence_binary_frustration_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
+#     (occurrence_binary_frustration_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
+#     (occurrence_binary_frustration_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
+#     (occurrence_binary_frustration_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
+#     (occurrence_binary_frustration_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+# ]
+
+# occurrence_binary_restart_line_adj_json = binary_occurrence(line_R_coords_adj_json_restart_15)
+# occurrence_binary_restart_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_restart_15)
+# occurrence_binary_restart_line_json = binary_occurrence(line_R_coords_json_restart_15)
+# occurrence_binary_restart_line_jpg = binary_occurrence(line_R_coords_jpg_restart_15)
+# occurrence_binary_restart_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_restart_15)
+# occurrence_binary_restart_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_restart_15)
+# occurrence_binary_restart_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_restart_15)
+# occurrence_binary_restart_occ_json = binary_occurrence(occupancy_R_coords_json_restart_15)
+# occurrence_binary_restart_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_restart_15)
+# occurrence_binary_restart_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_restart_15)
+# occurrence_binary_restart_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_restart_15)
+
+
+# # List of (occurrence_vector, score_vector, label)
+# datasets_restart = [
+#     (occurrence_binary_restart_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
+#     (occurrence_binary_restart_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
+#     (occurrence_binary_restart_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
+#     (occurrence_binary_restart_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
+#     (occurrence_binary_restart_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
+#     (occurrence_binary_restart_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
+#     (occurrence_binary_restart_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
+#     (occurrence_binary_restart_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
+#     (occurrence_binary_restart_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
+#     (occurrence_binary_restart_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
+#     (occurrence_binary_restart_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+# ]
+
+
+# occurrence_binary_reverse_search_line_adj_json = binary_occurrence(line_R_coords_adj_json_reverse_search_15)
+# occurrence_binary_reverse_search_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_reverse_search_15)
+# occurrence_binary_reverse_search_line_json = binary_occurrence(line_R_coords_json_reverse_search_15)
+# occurrence_binary_reverse_search_line_jpg = binary_occurrence(line_R_coords_jpg_reverse_search_15)
+# occurrence_binary_reverse_search_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_reverse_search_15)
+# occurrence_binary_reverse_search_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_reverse_search_15)
+# occurrence_binary_reverse_search_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_reverse_search_15)
+# occurrence_binary_reverse_search_occ_json = binary_occurrence(occupancy_R_coords_json_reverse_search_15)
+# occurrence_binary_reverse_search_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_reverse_search_15)
+# occurrence_binary_reverse_search_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_reverse_search_15)
+# occurrence_binary_reverse_search_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_reverse_search_15)
+
+
+# # List of (occurrence_vector, score_vector, label)
+# datasets_reverse_search = [
+#     (occurrence_binary_reverse_search_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
+#     (occurrence_binary_reverse_search_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
+#     (occurrence_binary_reverse_search_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
+#     (occurrence_binary_reverse_search_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
+#     (occurrence_binary_reverse_search_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
+#     (occurrence_binary_reverse_search_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
+#     (occurrence_binary_reverse_search_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
+#     (occurrence_binary_reverse_search_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
+#     (occurrence_binary_reverse_search_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
+#     (occurrence_binary_reverse_search_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
+#     (occurrence_binary_reverse_search_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+# ]
+
+
+# occurrence_binary_step_by_step_line_adj_json = binary_occurrence(line_R_coords_adj_json_step_by_step_15)
+# occurrence_binary_step_by_step_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_step_by_step_15)
+# occurrence_binary_step_by_step_line_json = binary_occurrence(line_R_coords_json_step_by_step_15)
+# occurrence_binary_step_by_step_line_jpg = binary_occurrence(line_R_coords_jpg_step_by_step_15)
+# occurrence_binary_step_by_step_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_step_by_step_15)
+# occurrence_binary_step_by_step_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_step_by_step_15)
+# occurrence_binary_step_by_step_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_step_by_step_15)
+# occurrence_binary_step_by_step_occ_json = binary_occurrence(occupancy_R_coords_json_step_by_step_15)
+# occurrence_binary_step_by_step_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_step_by_step_15)
+# occurrence_binary_step_by_step_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_step_by_step_15)
+# occurrence_binary_step_by_step_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_step_by_step_15)
+
+
+# # List of (occurrence_vector, score_vector, label)
+# datasets_step_by_step = [
+#     (occurrence_binary_step_by_step_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
+#     (occurrence_binary_step_by_step_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
+#     (occurrence_binary_step_by_step_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
+#     (occurrence_binary_step_by_step_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
+#     (occurrence_binary_step_by_step_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
+#     (occurrence_binary_step_by_step_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
+#     (occurrence_binary_step_by_step_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
+#     (occurrence_binary_step_by_step_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
+#     (occurrence_binary_step_by_step_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
+#     (occurrence_binary_step_by_step_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
+#     (occurrence_binary_step_by_step_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+# ]
+
+# occurrence_binary_verification_line_adj_json = binary_occurrence(line_R_coords_adj_json_verification_15)
+# occurrence_binary_verification_line_adj_txt = binary_occurrence(line_R_coords_adj_txt_verification_15)
+# occurrence_binary_verification_line_json = binary_occurrence(line_R_coords_json_verification_15)
+# occurrence_binary_verification_line_jpg = binary_occurrence(line_R_coords_jpg_verification_15)
+# occurrence_binary_verification_line_tokenized = binary_occurrence(line_R_coords_tokenized_txt_verification_15)
+# occurrence_binary_verification_occ_adj_json = binary_occurrence(occupancy_R_coords_adj_json_verification_15)
+# occurrence_binary_verification_occ_adj_txt = binary_occurrence(occupancy_R_coords_adj_txt_verification_15)
+# occurrence_binary_verification_occ_json = binary_occurrence(occupancy_R_coords_json_verification_15)
+# occurrence_binary_verification_occ_jpg = binary_occurrence(occupancy_R_coords_jpg_verification_15)
+# occurrence_binary_verification_occ_tokenized = binary_occurrence(occupancy_R_coords_tokenized_txt_verification_15)
+# occurrence_binary_verification_occ_ascii = binary_occurrence(occupancy_R_coords_ascii_txt_verification_15)
+
+
+# # List of (occurrence_vector, score_vector, label)
+# datasets_verification = [
+#     (occurrence_binary_verification_line_adj_json, r15.line_R_coords_adj_json_15, "Line Adjacency JSON", 'tab:blue', None),
+#     (occurrence_binary_verification_line_adj_txt, r15.line_R_coords_adj_txt_15, "Line Adjacency Txt", 'tab:orange',None),
+#     (occurrence_binary_verification_line_json, r15.line_R_coords_json_15, "Line JSON", 'tab:red',None),
+#     (occurrence_binary_verification_line_jpg, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green',None),
+#     (occurrence_binary_verification_line_tokenized, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple',None),
+#     (occurrence_binary_verification_occ_adj_json, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'black'),
+#     (occurrence_binary_verification_occ_adj_txt, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'black'),
+#     (occurrence_binary_verification_occ_json, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'black'),
+#     (occurrence_binary_verification_occ_jpg, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'black'),
+#     (occurrence_binary_verification_occ_tokenized, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'black'),
+#     (occurrence_binary_verification_occ_ascii, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'black'),
+# ]
+
+
+
+
+# # Create 2x4 subplot grid (8 total)
+# fig, axes = plt.subplots(2, 4, figsize=(18, 8))
+# axes = axes.flatten()
+
+# def plot_keyword(ax, datasets, title, ylabel):
+
+#     x_vals = []
+#     y_vals = []
+
+#     for occurrence_vector, score_vector, label, color, mec in datasets:
+
+#         occurrence_vector = np.array(occurrence_vector)
+#         score_vector = np.array(score_vector)
+
+#         y_sum = np.mean(occurrence_vector)
+#         x_mean = np.mean(score_vector)
+
+#         x_vals.append(x_mean)
+#         y_vals.append(y_sum)
+
+#         ax.scatter(
+#             x_mean,
+#             y_sum,
+#             color=color,
+#             edgecolor=mec,
+#             s=60,
+#             label=label
+#         )
+
+#     x_vals = np.array(x_vals)
+#     y_vals = np.array(y_vals)
+
+#     # Trend line
+#     z = np.polyfit(x_vals, y_vals, 1)
+#     p = np.poly1d(z)
+
+#     sorted_idx = np.argsort(x_vals)
+
+#     ax.plot(
+#         x_vals[sorted_idx],
+#         p(x_vals[sorted_idx]),
+#         linestyle='--',
+#         color='black',
+#         alpha=0.7
+#     )
+
+#     ax.set_title(title, fontweight = 'bold', fontsize=10)
+#     ax.set_xlabel('Mean Completion Score (%)')
+#     ax.set_ylabel(ylabel)
+#     ax.grid(linestyle=':', alpha=0.6)
+
+
+
+# plot_keyword(axes[0], datasets_algorithm, "Algorithm",  "Presence (%)")
+# plot_keyword(axes[1], datasets_backtracking, "Backtracking", "Presence (%)")
+# plot_keyword(axes[2], datasets_false_confidence, "False Confidence", "Presence (%)")
+# plot_keyword(axes[3], datasets_frustration, "Frustration", "Presence (%)")
+# plot_keyword(axes[4], datasets_restart, "Restart", "Presence (%)")
+# plot_keyword(axes[5], datasets_reverse_search, "Reverse Search", "Presence (%)")
+# plot_keyword(axes[6], datasets_step_by_step, "Step-by-Step", "Presence (%)")
+# plot_keyword(axes[7], datasets_verification, "Verification", "Presence (%)")
+
+# plt.suptitle('Keyword Categories vs Completion Score \nCoordinates Output, 15x15', fontsize=14)
+# plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+# plt.show()
+
+
+
+
+
+
+
+
+
+
+# ----- Creates Bar charts comparing avg completion score for present/absent keywords ---
+'''Does not show differences in scores achieved, regardless of keyword presence. 
+Does show that verification and backtracking always occur. '''
+representations = {
+    "Line Adjacency JSON": {
+        "scores": r15.line_R_coords_adj_json_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_line_adj_json_algorithm_15,
+            "Backtracking": occurrences_binary_line_adj_json_backtracking_15,
+            "False Confidence": occurrences_binary_line_adj_json_false_confidence_15,
+            "Frustration": occurrences_binary_line_adj_json_frustration_15,
+            "Restart": occurrences_binary_line_adj_json_restart_15,
+            "Reverse Search": occurrences_binary_line_adj_json_reverse_search_15,
+            "Step-by-Step": occurrences_binary_line_adj_json_step_by_step_15,
+            "Verification": occurrences_binary_line_adj_json_verification_15,
+        }
+    },
+    "Line Adjacency Text": {
+        "scores": r15.line_R_coords_adj_txt_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_line_adj_txt_algorithm_15,
+            "Backtracking": occurrences_binary_line_adj_txt_backtracking_15,
+            "False Confidence": occurrences_binary_line_adj_txt_false_confidence_15,
+            "Frustration": occurrences_binary_line_adj_txt_frustration_15,
+            "Restart": occurrences_binary_line_adj_txt_restart_15,
+            "Reverse Search": occurrences_binary_line_adj_txt_reverse_search_15,
+            "Step-by-Step": occurrences_binary_line_adj_txt_step_by_step_15,
+            "Verification": occurrences_binary_line_adj_txt_verification_15,
+        }
+    },
+    "Line JSON": {
+        "scores": r15.line_R_coords_json_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_line_json_algorithm_15,
+            "Backtracking": occurrences_binary_line_json_backtracking_15,
+            "False Confidence": occurrences_binary_line_json_false_confidence_15,
+            "Frustration": occurrences_binary_line_json_frustration_15,
+            "Restart": occurrences_binary_line_json_restart_15,
+            "Reverse Search": occurrences_binary_line_json_reverse_search_15,
+            "Step-by-Step": occurrences_binary_line_json_step_by_step_15,
+            "Verification": occurrences_binary_line_json_verification_15,
+        }
+    },
+    "Line JPG": {
+        "scores": r15.line_R_coords_jpg_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_line_jpg_algorithm_15,
+            "Backtracking": occurrences_binary_line_jpg_backtracking_15,
+            "False Confidence": occurrences_binary_line_jpg_false_confidence_15,
+            "Frustration": occurrences_binary_line_jpg_frustration_15,
+            "Restart": occurrences_binary_line_jpg_restart_15,
+            "Reverse Search": occurrences_binary_line_jpg_reverse_search_15,
+            "Step-by-Step": occurrences_binary_line_jpg_step_by_step_15,
+            "Verification": occurrences_binary_line_jpg_verification_15,
+        }
+    },
+    "Line Tokenized": {
+        "scores": r15.line_R_coords_tokenized_txt_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_line_tokenized_algorithm_15,
+            "Backtracking": occurrences_binary_line_tokenized_backtracking_15,
+            "False Confidence": occurrences_binary_line_tokenized_false_confidence_15,
+            "Frustration": occurrences_binary_line_tokenized_frustration_15,
+            "Restart": occurrences_binary_line_tokenized_restart_15,
+            "Reverse Search": occurrences_binary_line_tokenized_reverse_search_15,
+            "Step-by-Step": occurrences_binary_line_tokenized_step_by_step_15,
+            "Verification": occurrences_binary_line_tokenized_verification_15,
+        }
+    },
+    "Occupancy Adjacency JSON": {
+        "scores": r15.occupancy_R_coords_adj_json_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_occupancy_adj_json_algorithm_15,
+            "Backtracking": occurrences_binary_occupancy_adj_json_backtracking_15,
+            "False Confidence": occurrences_binary_occupancy_adj_json_false_confidence_15,
+            "Frustration": occurrences_binary_occupancy_adj_json_frustration_15,
+            "Restart": occurrences_binary_occupancy_adj_json_restart_15,
+            "Reverse Search": occurrences_binary_occupancy_adj_json_reverse_search_15,
+            "Step-by-Step": occurrences_binary_occupancy_adj_json_step_by_step_15,
+            "Verification": occurrences_binary_occupancy_adj_json_verification_15,
+        }
+    },
+    "Occupancy Adjacency Text": {
+        "scores": r15.occupancy_R_coords_adj_txt_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_occupancy_adj_txt_algorithm_15,
+            "Backtracking": occurrences_binary_occupancy_adj_txt_backtracking_15,
+            "False Confidence": occurrences_binary_occupancy_adj_txt_false_confidence_15,
+            "Frustration": occurrences_binary_occupancy_adj_txt_frustration_15,
+            "Restart": occurrences_binary_occupancy_adj_txt_restart_15,
+            "Reverse Search": occurrences_binary_occupancy_adj_txt_reverse_search_15,
+            "Step-by-Step": occurrences_binary_occupancy_adj_txt_step_by_step_15,
+            "Verification": occurrences_binary_occupancy_adj_txt_verification_15,
+        }
+    },
+    "Occupancy JSON": {
+        "scores": r15.occupancy_R_coords_json_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_occupancy_json_algorithm_15,
+            "Backtracking": occurrences_binary_occupancy_json_backtracking_15,
+            "False Confidence": occurrences_binary_occupancy_json_false_confidence_15,
+            "Frustration": occurrences_binary_occupancy_json_frustration_15,
+            "Restart": occurrences_binary_occupancy_json_restart_15,
+            "Reverse Search": occurrences_binary_occupancy_json_reverse_search_15,
+            "Step-by-Step": occurrences_binary_occupancy_json_step_by_step_15,
+            "Verification": occurrences_binary_occupancy_json_verification_15,
+        }
+    },
+    "Occupancy JPG": {
+        "scores": r15.occupancy_R_coords_jpg_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_occupancy_jpg_algorithm_15,
+            "Backtracking": occurrences_binary_occupancy_jpg_backtracking_15,
+            "False Confidence": occurrences_binary_occupancy_jpg_false_confidence_15,
+            "Frustration": occurrences_binary_occupancy_jpg_frustration_15,
+            "Restart": occurrences_binary_occupancy_jpg_restart_15,
+            "Reverse Search": occurrences_binary_occupancy_jpg_reverse_search_15,
+            "Step-by-Step": occurrences_binary_occupancy_jpg_step_by_step_15,
+            "Verification": occurrences_binary_occupancy_jpg_verification_15,
+        }
+    },
+        "Occupancy Tokenized": {
+        "scores": r15.occupancy_R_coords_tokenized_txt_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_occupancy_tokenized_algorithm_15,
+            "Backtracking": occurrences_binary_occupancy_tokenized_backtracking_15,
+            "False Confidence": occurrences_binary_occupancy_tokenized_false_confidence_15,
+            "Frustration": occurrences_binary_occupancy_tokenized_frustration_15,
+            "Restart": occurrences_binary_occupancy_tokenized_restart_15,
+            "Reverse Search": occurrences_binary_occupancy_tokenized_reverse_search_15,
+            "Step-by-Step": occurrences_binary_occupancy_tokenized_step_by_step_15,
+            "Verification": occurrences_binary_occupancy_tokenized_verification_15,
+        }
+    },
+            "Occupancy ASCII": {
+        "scores": r15.occupancy_R_coords_ascii_txt_15,
+        "keywords": {
+            "Algorithm Naming": occurrences_binary_occupancy_ascii_algorithm_15,
+            "Backtracking": occurrences_binary_occupancy_ascii_backtracking_15,
+            "False Confidence": occurrences_binary_occupancy_ascii_false_confidence_15,
+            "Frustration": occurrences_binary_occupancy_ascii_frustration_15,
+            "Restart": occurrences_binary_occupancy_ascii_restart_15,
+            "Reverse Search": occurrences_binary_occupancy_ascii_reverse_search_15,
+            "Step-by-Step": occurrences_binary_occupancy_ascii_step_by_step_15,
+            "Verification": occurrences_binary_occupancy_ascii_verification_15,
+        }
+    }
+
+}
+
+
+
+
+# plotting all representations for each keyword
+
+keywords = [
+    "Algorithm Naming",
+    "Backtracking",
+    "False Confidence",
+    "Frustration",
+    "Restart",
+    "Reverse Search",
+    "Step-by-Step",
+    "Verification",
+]
+
+rep_names = list(representations.keys())
+
+fig, axes = plt.subplots(2, 4, figsize=(20, 10), sharex=True)
+axes = axes.flatten()
+
+for ax, keyword in zip(axes, keywords):
+
+    present_means = []
+    absent_means = []
+
+    for rep in rep_names:
+
+        scores = np.array(representations[rep]["scores"])
+        occurrence_vector = np.array(
+            representations[rep]["keywords"][keyword]
+        )
+
+        yes_scores = scores[occurrence_vector == 1]
+        no_scores  = scores[occurrence_vector == 0]
+
+        mean_yes = np.mean(yes_scores) if len(yes_scores) > 0 else 0
+        mean_no  = np.mean(no_scores) if len(no_scores) > 0 else 0
+
+        present_means.append(mean_yes)
+        absent_means.append(mean_no)
+
+    y_positions = np.arange(len(rep_names))
+    bar_height = 0.35
+
+
+    ax.barh(y_positions - bar_height/2,
+            present_means,
+            height=bar_height,
+            alpha=0.8,
+            label="Present")
+
+    ax.barh(y_positions + bar_height/2,
+            absent_means,
+            height=bar_height,
+            alpha=0.6,
+            label="Absent")
+
+    ax.set_yticks(y_positions)
+    ax.set_yticklabels(rep_names, fontsize=8)
+
+    ax.set_title(keyword, fontweight='bold')
+    ax.set_xlim(0, 100)
+    ax.grid(axis='x', linestyle=':', alpha=0.5)
+
+fig.supxlabel("Average Completion Score (%)", fontsize=14)
+fig.supylabel("Representation", fontsize=14)
+
+plt.suptitle(
+    "Average Completion Score When Keyword Is Present vs Absent\nAcross All Representations",
+    fontsize=16,
+    fontweight='bold'
+)
+
+# Single shared legend
+handles, labels = axes[0].get_legend_handles_labels()
+fig.legend(handles, labels, loc='lower center', ncol=2, fontsize=12)
+
+plt.tight_layout(rect=[0, 0.05, 1, 0.95])
+# plt.show()
+
+
+# plot only the differences between performance for present and absent. Positive is mean_yes>mean_no, negative is mean_yes<mean_no
+
+keywords = [
+    "Algorithm Naming",
+    "Backtracking",
+    "False Confidence",
+    "Frustration",
+    "Restart",
+    "Reverse Search",
+    "Step-by-Step",
+    "Verification",
+]
+
+rep_names = list(representations.keys())
+
+fig, axes = plt.subplots(2, 4, figsize=(20, 10), sharex=True)
+axes = axes.flatten()
+
+for ax, keyword in zip(axes, keywords):
+
+    differences = []
+
+    for rep in rep_names:
+
+        scores = np.array(representations[rep]["scores"])
+        occurrence_vector = np.array(
+            representations[rep]["keywords"][keyword]
+        )
+
+        yes_scores = scores[occurrence_vector == 1]
+        no_scores  = scores[occurrence_vector == 0]
+
+        mean_yes = np.mean(yes_scores) if len(yes_scores) > 0 else 0
+        mean_no  = np.mean(no_scores) if len(no_scores) > 0 else 0
+
+        diff = mean_yes - mean_no
+        differences.append(diff)
+
+    y_positions = np.arange(len(rep_names))
+
+    ax.barh(y_positions, differences)
+
+    ax.set_yticks(y_positions)
+    ax.set_yticklabels(rep_names, fontsize=8)
+
+    ax.axvline(0, linestyle='--')  # zero reference line
+
+    ax.set_title(keyword, fontweight='bold')
+    ax.set_xlim(-50, 50)  # adjust if needed
+    ax.grid(axis='x', linestyle=':', alpha=0.5)
+
+fig.supxlabel("Difference in Completion Score (Present − Absent) (%)", fontsize=14)
+fig.supylabel("Representation", fontsize=14)
+
+plt.suptitle(
+    "Effect of Keyword Presence on Completion Score\n(Mean Difference)",
+    fontsize=16,
+    fontweight='bold'
+)
+
+plt.tight_layout(rect=[0, 0.03, 1, 0.95])
+plt.show()
+
+
+
+
+
+# # ----- Plotting number of used tokens vs number of output characters  - no interesting results. ---------
 
 # # Number of thinking tokens
 # # y= r15.line_R_coords_adj_txt_output_tokens_15 - r15.line_R_coords_adj_txt_final_answer_15 
@@ -558,7 +1216,7 @@ Does show that verification and backtracking always occur. '''
 # )
 
 # plt.tight_layout()
-# # plt.show()
+# plt.show()
 
 
 

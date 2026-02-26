@@ -210,7 +210,7 @@ if __name__ == "__main__":
                    'options are ('
                    ]
     exclusions_sbs = ['(0,0) to (14,14)', "(1,1) to (29,29)", '(0,0) to (5,5)', "(1,1) to 11,11)", '(0,0) to (2,2)', "(1,1) to (5,5)"]
-    phrases_backtracking = ['dead-end', 'dead end', 'backtrack', 'retracing', 'I go back', 'track back', 'backtrack when', 'backtracked when'
+    phrases_backtracking = ['dead-end', 'backtrack', 'retracing', 'I go back', 'track back', 'backtrack when', 'backtracked when'
                             'recalculate', 'over and over', 'stuck', 'retrace', 'loops']
     phrases_frustration = ['complicated', 'challenge', 'confusing' ,'confused', 'stuck', 'struggling', 
                            'struggle', 'difficult', 'difficult to parse', 'suspect', 'suspicion', 'no solution', 'typo', 'twists', 
@@ -219,7 +219,7 @@ if __name__ == "__main__":
     phrases_restart  =["I'll need to visualize the maze in a different way", "I'll begin from the starting node again", 
                        "I'll begin from the start again", "I did it again", 'restart', 'several attempts', 'trial and error',
                          'I had to go back', 'rethink', 'more systematic', 'retrace', 'new method', 'try again', 're-routing', 
-                         're-evaluate', 'switch', 'I start again', 'disconnect', 'change my approach', 'another approach', 'change my tactic', 
+                         're-evaluate', 'switch', 'I start again', 'start fresh', 'disconnect', 'change my approach', 'another approach', 'change my tactic', 
                          'refining the approach', 'strategy shift' ]
     phrases_reverse_search = ['tracing from the end', 'working backward', 'from the target', 'from the end', 
                               'starting at (14,14)', 'starting at (29,29)', 'starting at (2,2)','starting at (11,11)', 'starting at (5,5)', 
