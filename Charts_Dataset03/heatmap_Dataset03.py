@@ -25,7 +25,7 @@ def vector_from_indices(indices, source_array):
         return None
     return np.array([source_array[i - 1] for i in indices])
 
-# print("check:", vector_from_indices([2,3], r3.line_R_coords_json_3))
+
 
 indices_coords_line_jpg_3 = np.empty((0,0))
 indices_coords_line_json_3 = np.array([5, 10])
