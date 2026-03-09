@@ -196,7 +196,8 @@ if __name__ == "__main__":
       
     
     phrases_algorithm = [ 'DFS', 'BFS', 'dfs', 'bfs', 'Breadth-First', 'Depth-First', 'breadth-first', 'depth-first', 'algorithm', 'visited',
-                          'queue', 'queuing', 'dequeuing', 'enqueuing', 'parent', 'right-hand', 'wall-following']
+                          'queue', 'queuing', 'dequeuing', 'enqueuing', 'parent',]
+    phrases_heuristic = ['down-right', 'right-down', 'down and right', 'downwards and to the right', 'downward and to the right', 'down then right', 'right then down', 'to the right and down', 'right then down', 'to the right and down',  'right-hand', 'wall-following', 'heuristic',  'visually tracing', 'visual', 'eyes']
     phrases_sbs = [') to (', 
                    '), (',
                    ') and (',
@@ -234,9 +235,10 @@ if __name__ == "__main__":
 
 
 
-    categories = ['algorithm', 'step_by_step', 'backtracking', 'frustration', 'restart', 'reverse_search', 'verification', 'false_confidence' ]
+    categories = ['algorithm', 'heuristic', 'step_by_step', 'backtracking', 'frustration', 'restart', 'reverse_search', 'verification', 'false_confidence' ]
 
     phrases = [phrases_algorithm,
+               phrases_heuristic, 
                phrases_sbs,
                phrases_backtracking,
                phrases_frustration,
@@ -244,7 +246,7 @@ if __name__ == "__main__":
                phrases_reverse_search,
                phrases_verification,
                phrases_false_confidence]
-    exclusions = [None, exclusions_sbs, None, None, None, None, None, exclusions_false_confidence]
+    exclusions = [None, None, exclusions_sbs, None, None, None, None, None, exclusions_false_confidence]
 
 
 

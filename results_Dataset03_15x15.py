@@ -385,7 +385,17 @@ occupancy_R_coords_ascii_txt_reasoning_tokens_15 = [10352, 6702, 13868, 10097, 8
 occupancy_R_coords_jpg_reasoning_tokens_15 = [9808, 12105, 13227, 8348, 9586, 4856, 8492, 15399, 6360, 16771, 10847, 6499, 14358, 13620, 6663, 9234, 8749, 10593, 6535, 8357, 7941, 10095, 9282, 6927, 21657, 12337, 20981, 18933, 18336, 14760, 19915, 20047, 16610, 6293, 4963, 5246, 9018, 14931, 8188, 8671, 19471, 13581, 12146, 17565, 23909, 5698, 21789, 9966, 8127, 7970]
 occupancy_R_coords_json_reasoning_tokens_15 = [16784, 12969, 24023, 18618, 20422, 18788, 25181, 15218, 18082, 18951, 7135, 18648, 23251, 21839, 17576, 5160, 11618, 20788, 19620, 16333, 13110, 20733, 20815, 22606, 11516, 21957, 19281, 20431, 12475, 19490, 20466, 17790, 9902, 20534, 16886, 13419, 24209, 20792, 16735, 19425, 12290, 15281, 24356, 22955, 17271, 19549, 23206, 20238, 21464, 16755]
 occupancy_R_coords_tokenized_txt_reasoning_tokens_15 = [26428, 11905, 25680, 16394, 23700, 25472, 18766, 23983, 27139, 21459, 24198, 20946, 20357, 19474, 15662, 33007, 21759, 13475, 19086, 24689, 25999, 24415, 19421, 29053, 10261, 19752, 22842, 23615, 18484, 24415, 16792, 18773, 20312, 15548, 23980, 20145, 26163, 24191, 22922, 22511, 25952, 21260, 15506, 20261, 19461, 12480, 28368, 28845, 16809, 13407]
-
+print('mean jpg line', np.mean(line_R_coords_jpg_reasoning_tokens_15))
+print('mean json line', np.mean(line_R_coords_json_reasoning_tokens_15))
+print('mean adj json line', np.mean(line_R_coords_adj_json_reasoning_tokens_15))
+print('mean adj txt line', np.mean(line_R_coords_adj_txt_reasoning_tokens_15))
+print('mean tokenized line', np.mean(line_R_coords_tokenized_txt_reasoning_tokens_15))
+print('mean jpg occupancy', np.mean(occupancy_R_coords_jpg_reasoning_tokens_15))
+print('mean json occupancy', np.mean(occupancy_R_coords_json_reasoning_tokens_15))
+print('mean adj json occupancy', np.mean(occupancy_R_coords_adj_json_reasoning_tokens_15))
+print('mean adj txt occupancy', np.mean(occupancy_R_coords_adj_txt_reasoning_tokens_15))    
+print('mean asciioccupancy', np.mean(occupancy_R_coords_ascii_txt_reasoning_tokens_15))
+print('mean tokenized txt occupancy', np.mean(occupancy_R_coords_tokenized_txt_reasoning_tokens_15))
 
 # Final answer only output tokens
 line_R_coords_jpg_final_answer_15 = np.array([173.0, 295.0, 208.0, 158.0, 234.0, 532.0, 232.0, 237.0, 220.0, 241.0])
