@@ -195,9 +195,15 @@ if __name__ == "__main__":
 
       
     
-    phrases_algorithm = [ 'DFS', 'BFS', 'dfs', 'bfs', 'Breadth-First', 'Depth-First', 'breadth-first', 'depth-first', 'algorithm', 'visited',
-                          'queue', 'queuing', 'dequeuing', 'enqueuing', 'parent',]
-    phrases_heuristic = ['down-right', 'right-down', 'down and right', 'downwards and to the right', 'downward and to the right', 'down then right', 'right then down', 'to the right and down', 'right then down', 'to the right and down',  'right-hand', 'wall-following', 'heuristic',  'visually tracing', 'visual', 'eyes']
+    # phrases_algorithm = [ 'DFS', 'BFS', 'dfs', 'bfs', 'Breadth-First', 'Depth-First', 'breadth-first', 'depth-first', 'algorithm', 'visited',
+                        #   'queue', 'queuing', 'dequeuing', 'enqueuing', 'parent','A*']
+    phrases_algorithm = [ 'visited', 'queue', 'queuing', 'dequeuing', 'enqueuing', 'parent',]
+    
+    phrases_heuristic = ['down-right', 'right-down', 'down and right', 'downwards and to the right', 
+                         'downward and to the right', 'down then right', 'right then down', 
+                         'to the right and down', 'right then down', 'to the right and down', 
+                         'right-hand', 'wall-following', 'heuristic',  'visually tracing', 'visual', 'eyes',
+                         'down, right', 'right, down', 'southeast']
     phrases_sbs = [') to (', 
                    '), (',
                    ') and (',
@@ -228,7 +234,7 @@ if __name__ == "__main__":
                               'from (29,29) to (1,1)', 'from (5,5) to (0,0)', 'from (2,2) to (0,0)', 'from (11,11) to (0,0)', 'from (5,5) to (1,1)',
                               'path from the end point', 'both ends tracing']
     phrases_verification = ['check the path step by step','review', 'carefully ensure', ' meticulous', 'catch any error', 'examin', 'comparing',
-                            'confirmed', 'check', 'go back over each step', 'verify', 'sanity check', 'valid', 'retrace', 'verified', ]
+                            'confirmed', 'check', 'go back over each step', 'verify', 'sanity check', 'valid', 'retrace', 'verified', 'double-check' ]
     phrases_false_confidence = ['I made it', 'confident', 'it works', 'paid off', 'solved', 'correct', 'complete', 'this is the solution', 'easy, right?','no problem']
     
     exclusions_false_confidence = ['not confident']
