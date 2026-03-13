@@ -216,26 +216,34 @@ if __name__ == "__main__":
                    'Path: `(',
                    'options are ('
                    ]
-    exclusions_sbs = ['(0,0) to (14,14)', "(1,1) to (29,29)", '(0,0) to (5,5)', "(1,1) to 11,11)", '(0,0) to (2,2)', "(1,1) to (5,5)"]
-    phrases_backtracking = ['dead-end', 'backtrack', 'retracing', 'I go back', 'track back', 'backtrack when', 'backtracked when'
-                            'recalculate', 'over and over', 'stuck', 'retrace', 'loops']
+    exclusions_sbs = ['(0,0) to (14,14)', "(1,1) to (29,29)", '(0,0) to (5,5)', "(1,1) to (11,11)", '(0,0) to (2,2)', "(1,1) to (5,5)"]
+    phrases_backtracking = [ 'backtracking', 'backtrack when', 'backtracked when','recalculate', 'track back', 'backtrack', 
+                            'backtracking and checking', 'I tried backtracking', 'retracing',
+                            'backtracked', 'after backtracking', 'I have to backtrack'] # dead-end: often leads to restart so it is excluded. 
+    exclusions_backtrack  = ['backtrack when I hit', 'backtracking when I hit','backtrack whenever I hit', 'backtracking whenever I hit',
+                             'backtrack when necessary', 'backtracking and re-checking', 'backtrack and re-check', 'prepared to backtrack', 
+                             'backtrack if i need to']
     phrases_frustration = ['complicated', 'challenge', 'confusing' ,'confused', 'stuck', 'struggling', 
                            'struggle', 'difficult', 'difficult to parse', 'suspect', 'suspicion', 'no solution', 'typo', 'twists', 
-                           'proving to be a challenge', 'proves to be a challenge' ,'twisty', 'careful', 'complex', 
+                           'proving to be a challenge', 'proves to be a challenge' ,'twisty', 'complex', 
                            'more elaborate than I expected', 'more intricate than I anticipated', 'trap', 'is the problem flawed?' , 'oversight']
     phrases_restart  =["I'll need to visualize the maze in a different way", "I'll begin from the starting node again", 
                        "I'll begin from the start again", "I did it again", 'restart', 'several attempts', 'trial and error',
-                         'I had to go back', 'rethink', 'more systematic', 'retrace', 'new method', 'try again', 're-routing', 
-                         're-evaluate', 'switch', 'I start again', 'start fresh', 'disconnect', 'change my approach', 'another approach', 'change my tactic', 
-                         'refining the approach', 'strategy shift' ]
-    phrases_reverse_search = ['tracing from the end', 'working backward', 'from the target', 'from the end', 
-                              'starting at (14,14)', 'starting at (29,29)', 'starting at (2,2)','starting at (11,11)', 'starting at (5,5)', 
-                              'working backward', 'meeting in the middle', 'trace a path backward', 'from (14,14) to (0,0)', 
-                              'from (29,29) to (1,1)', 'from (5,5) to (0,0)', 'from (2,2) to (0,0)', 'from (11,11) to (0,0)', 'from (5,5) to (1,1)',
-                              'path from the end point', 'both ends tracing']
-    phrases_verification = ['check the path step by step','review', 'carefully ensure', ' meticulous', 'catch any error', 'examin', 'comparing',
-                            'confirmed', 'check', 'go back over each step', 'verify', 'sanity check', 'valid', 'retrace', 'verified', 'double-check' ]
-    phrases_false_confidence = ['I made it', 'confident', 'it works', 'paid off', 'solved', 'correct', 'complete', 'this is the solution', 'easy, right?','no problem']
+                         'I had to go back', 'rethink', 'more systematic', 'new method', 'try again', 're-routing', 
+                         're-evaluate', 'switch', 'I start again', 'start fresh', 'change my approach', 'another approach', 'change my tactic', 
+                         'refining the approach', 'strategy shift' ] 
+    phrases_reverse_search = [ 'working backward', 'from the target', 'from the end', 'starting at (14,14)', 'starting at (29,29)', 
+                              'starting at (2,2)','starting at (11,11)', 'starting at (5,5)', 'working backward', 'meeting in the middle', 
+                              'trace a path backward', 'from (14,14) to (0,0)', 'from (29,29) to (1,1)', 'from (5,5) to (0,0)', 
+                              'from (2,2) to (0,0)', 'from (11,11) to (0,0)', 'from (5,5) to (1,1)', 'path from the end point', 
+                              'both ends tracing']
+    phrases_verification = ['check the path step by step','review', 'carefully ensure', 'examin', 'comparing',
+                            'confirmed','thorough check', 'check the path', 'double-check', 'sanity check', 'check to verify', 
+                            'checking that the answer', 'checking the answer', 'make sure to check',
+                            'go back over each step', 'verify',  'valid', 'verified',  ] #'examin' works for 'examination', 'examine', and 'examining'. 'retrac' works for retracing and retrace
+    exclusions_verification = ['any valid connection' ]
+    
+    phrases_false_confidence = ['I made it', "I've made it" 'confident', 'it works', 'paid off', 'solved', 'correct', 'complete', 'this is the solution', 'easy, right?','no problem']
     
     exclusions_false_confidence = ['not confident']
 
@@ -252,7 +260,7 @@ if __name__ == "__main__":
                phrases_reverse_search,
                phrases_verification,
                phrases_false_confidence]
-    exclusions = [None, None, exclusions_sbs, None, None, None, None, None, exclusions_false_confidence]
+    exclusions = [None, None, exclusions_sbs, exclusions_backtrack, None, None, None, exclusions_verification, exclusions_false_confidence]
 
 
 
