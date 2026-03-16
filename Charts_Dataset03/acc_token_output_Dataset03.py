@@ -603,294 +603,7 @@ avg_final_occupancy_R_ego_tokenized_txt_15 = np.mean(r15.occupancy_R_ego_tokeniz
 # Creating an acc vs token output plot ----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 # Creating data for plotting - using  ALL OUTPUT TOKENS (INCL. THINKING)
-# figure = 'all_tokens'  # this is for setting the correct title and axis labels
-# line_NR_coords_3 = [[avg_line_NR_coords_adj_json_output_3,      avg_line_NR_coords_adj_json_3],
-#                    [avg_line_NR_coords_adj_txt_output_3,        avg_line_NR_coords_adj_txt_3],
-#                    [avg_line_NR_coords_jpg_output_3,            avg_line_NR_coords_jpg_3],
-#                    [avg_line_NR_coords_json_output_3,           avg_line_NR_coords_json_3],
-#                    [avg_line_NR_coords_tokenized_txt_output_3,  avg_line_NR_coords_tokenized_txt_3]
-#                    ]
-
-# occupancy_NR_coords_3 = [[avg_occupancy_NR_coords_adj_json_output_3,    avg_occupancy_NR_coords_adj_json_3],
-#                          [avg_occupancy_NR_coords_adj_txt_output_3,           avg_occupancy_NR_coords_adj_txt_3],
-#                          [avg_occupancy_NR_coords_jpg_output_3,               avg_occupancy_NR_coords_jpg_3],
-#                          [avg_occupancy_NR_coords_json_output_3,              avg_occupancy_NR_coords_json_3],
-#                          [avg_occupancy_NR_coords_tokenized_txt_output_3,     avg_occupancy_NR_coords_tokenized_txt_3],
-#                          [avg_occupancy_NR_coords_ascii_txt_output_3,        avg_occupancy_NR_coords_ascii_txt_3]
-#                          ]
-
-
-# line_R_coords_3 = [[avg_line_R_coords_adj_json_output_3,        avg_line_R_coords_adj_json_3],
-#                    [avg_line_R_coords_adj_txt_output_3,         avg_line_R_coords_adj_txt_3],
-#                    [avg_line_R_coords_jpg_output_3,             avg_line_R_coords_jpg_3],
-#                    [avg_line_R_coords_json_output_3,            avg_line_R_coords_json_3],
-#                    [avg_line_R_coords_tokenized_txt_output_3,   avg_line_R_coords_tokenized_txt_3]
-#                    ]
-
-# occupancy_R_coords_3 = [[avg_occupancy_R_coords_adj_json_output_3,      avg_occupancy_R_coords_adj_json_3],
-#                         [avg_occupancy_R_coords_adj_txt_output_3,            avg_occupancy_R_coords_adj_txt_3],
-#                         [avg_occupancy_R_coords_jpg_output_3,                avg_occupancy_R_coords_jpg_3],
-#                         [avg_occupancy_R_coords_json_output_3,               avg_occupancy_R_coords_json_3],
-#                         [avg_occupancy_R_coords_tokenized_txt_output_3,      avg_occupancy_R_coords_tokenized_txt_3],
-#                         [avg_occupancy_R_coords_ascii_txt_output_3,         avg_occupancy_R_coords_ascii_txt_3]
-#                         ]
-                    
-# line_NR_allo_3 = [[avg_line_NR_allo_adj_json_output_3,      avg_line_NR_allo_adj_json_3],
-#                   [avg_line_NR_allo_adj_txt_output_3,        avg_line_NR_allo_adj_txt_3],
-#                   [avg_line_NR_allo_jpg_output_3,            avg_line_NR_allo_jpg_3],
-#                   [avg_line_NR_allo_json_output_3,           avg_line_NR_allo_json_3],
-#                   [avg_line_NR_allo_tokenized_txt_output_3,  avg_line_NR_allo_tokenized_txt_3]
-#                   ]
-
-# occupancy_NR_allo_3 = [[avg_occupancy_NR_allo_adj_json_output_3,    avg_occupancy_NR_allo_adj_json_3],
-#                        [avg_occupancy_NR_allo_adj_txt_output_3,           avg_occupancy_NR_allo_adj_txt_3],
-#                        [avg_occupancy_NR_allo_jpg_output_3,               avg_occupancy_NR_allo_jpg_3],
-#                        [avg_occupancy_NR_allo_json_output_3,              avg_occupancy_NR_allo_json_3],
-#                        [avg_occupancy_NR_allo_tokenized_txt_output_3,     avg_occupancy_NR_allo_tokenized_txt_3],
-#                        [avg_occupancy_NR_allo_ascii_txt_output_3,        avg_occupancy_NR_allo_ascii_txt_3]
-#                        ]
-
-
-# line_R_allo_3 = [[avg_line_R_allo_adj_json_output_3,        avg_line_R_allo_adj_json_3],
-#                 [avg_line_R_allo_adj_txt_output_3,         avg_line_R_allo_adj_txt_3],
-#                 [avg_line_R_allo_jpg_output_3,             avg_line_R_allo_jpg_3],
-#                 [avg_line_R_allo_json_output_3,            avg_line_R_allo_json_3],
-#                 [avg_line_R_allo_tokenized_txt_output_3,   avg_line_R_allo_tokenized_txt_3]
-#                 ]
-
-# occupancy_R_allo_3 = [[avg_occupancy_R_allo_adj_json_output_3,          avg_occupancy_R_allo_adj_json_3],
-#                       [avg_occupancy_R_allo_adj_txt_output_3,           avg_occupancy_R_allo_adj_txt_3],
-#                       [avg_occupancy_R_allo_jpg_output_3,               avg_occupancy_R_allo_jpg_3],
-#                       [avg_occupancy_R_allo_json_output_3,              avg_occupancy_R_allo_json_3],
-#                       [avg_occupancy_R_allo_tokenized_txt_output_3,     avg_occupancy_R_allo_tokenized_txt_3],
-#                       [avg_occupancy_R_allo_ascii_txt_output_3,         avg_occupancy_R_allo_ascii_txt_3]
-#                       ]
-                    
-# line_NR_ego_3 = [[avg_line_NR_ego_adj_json_output_3,      avg_line_NR_ego_adj_json_3],
-#                 [avg_line_NR_ego_adj_txt_output_3,        avg_line_NR_ego_adj_txt_3],
-#                 [avg_line_NR_ego_jpg_output_3,            avg_line_NR_ego_jpg_3],
-#                 [avg_line_NR_ego_json_output_3,           avg_line_NR_ego_json_3],
-#                 [avg_line_NR_ego_tokenized_txt_output_3,  avg_line_NR_ego_tokenized_txt_3]
-#                 ]
-
-# occupancy_NR_ego_3 = [[avg_occupancy_NR_ego_adj_json_output_3,          avg_occupancy_NR_ego_adj_json_3],
-#                       [avg_occupancy_NR_ego_adj_txt_output_3,           avg_occupancy_NR_ego_adj_txt_3],
-#                       [avg_occupancy_NR_ego_jpg_output_3,               avg_occupancy_NR_ego_jpg_3],
-#                       [avg_occupancy_NR_ego_json_output_3,              avg_occupancy_NR_ego_json_3],
-#                       [avg_occupancy_NR_ego_tokenized_txt_output_3,     avg_occupancy_NR_ego_tokenized_txt_3],
-#                       [avg_occupancy_NR_ego_ascii_txt_output_3,         avg_occupancy_NR_ego_ascii_txt_3]
-#                       ]
-
-
-# line_R_ego_3 = [[avg_line_R_ego_adj_json_output_3,        avg_line_R_ego_adj_json_3],
-#                 [avg_line_R_ego_adj_txt_output_3,         avg_line_R_ego_adj_txt_3],
-#                 [avg_line_R_ego_jpg_output_3,             avg_line_R_ego_jpg_3],
-#                 [avg_line_R_ego_json_output_3,            avg_line_R_ego_json_3],
-#                 [avg_line_R_ego_tokenized_txt_output_3,   avg_line_R_ego_tokenized_txt_3]
-#                 ]
-
-# occupancy_R_ego_3 = [[avg_occupancy_R_ego_adj_json_output_3,      avg_occupancy_R_ego_adj_json_3],
-#                      [avg_occupancy_R_ego_adj_txt_output_3,            avg_occupancy_R_ego_adj_txt_3],
-#                      [avg_occupancy_R_ego_jpg_output_3,                avg_occupancy_R_ego_jpg_3],
-#                      [avg_occupancy_R_ego_json_output_3,               avg_occupancy_R_ego_json_3],
-#                      [avg_occupancy_R_ego_tokenized_txt_output_3,      avg_occupancy_R_ego_tokenized_txt_3],
-#                      [avg_occupancy_R_ego_ascii_txt_output_3,          avg_occupancy_R_ego_ascii_txt_3]
-#                      ]
-                    
-
-
-# line_NR_coords_6 = [[avg_line_NR_coords_adj_json_output_6,      avg_line_NR_coords_adj_json_6],
-#                    [avg_line_NR_coords_adj_txt_output_6,        avg_line_NR_coords_adj_txt_6],
-#                    [avg_line_NR_coords_jpg_output_6,            avg_line_NR_coords_jpg_6],
-#                    [avg_line_NR_coords_json_output_6,           avg_line_NR_coords_json_6],
-#                    [avg_line_NR_coords_tokenized_txt_output_6,  avg_line_NR_coords_tokenized_txt_6]
-#                    ]
-
-# occupancy_NR_coords_6 = [[avg_occupancy_NR_coords_adj_json_output_6,    avg_occupancy_NR_coords_adj_json_6],
-#                          [avg_occupancy_NR_coords_adj_txt_output_6,           avg_occupancy_NR_coords_adj_txt_6],
-#                          [avg_occupancy_NR_coords_jpg_output_6,               avg_occupancy_NR_coords_jpg_6],
-#                          [avg_occupancy_NR_coords_json_output_6,              avg_occupancy_NR_coords_json_6],
-#                          [avg_occupancy_NR_coords_tokenized_txt_output_6,     avg_occupancy_NR_coords_tokenized_txt_6],
-#                          [avg_occupancy_NR_coords_ascii_txt_output_6,         avg_occupancy_NR_coords_ascii_txt_6]
-#                          ]
-
-
-# line_R_coords_6 = [[avg_line_R_coords_adj_json_output_6,        avg_line_R_coords_adj_json_6],
-#                    [avg_line_R_coords_adj_txt_output_6,         avg_line_R_coords_adj_txt_6],
-#                    [avg_line_R_coords_jpg_output_6,             avg_line_R_coords_jpg_6],
-#                    [avg_line_R_coords_json_output_6,            avg_line_R_coords_json_6],
-#                    [avg_line_R_coords_tokenized_txt_output_6,   avg_line_R_coords_tokenized_txt_6]
-#                    ]
-
-# occupancy_R_coords_6 = [[avg_occupancy_R_coords_adj_json_output_6,      avg_occupancy_R_coords_adj_json_6],
-#                         [avg_occupancy_R_coords_adj_txt_output_6,            avg_occupancy_R_coords_adj_txt_6],
-#                         [avg_occupancy_R_coords_jpg_output_6,                avg_occupancy_R_coords_jpg_6],
-#                         [avg_occupancy_R_coords_json_output_6,               avg_occupancy_R_coords_json_6],
-#                         [avg_occupancy_R_coords_tokenized_txt_output_6,      avg_occupancy_R_coords_tokenized_txt_6],
-#                         [avg_occupancy_R_coords_ascii_txt_output_6,         avg_occupancy_R_coords_ascii_txt_6]
-#                         ]
-                    
-# line_NR_allo_6 = [[avg_line_NR_allo_adj_json_output_6,      avg_line_NR_allo_adj_json_6],
-#                   [avg_line_NR_allo_adj_txt_output_6,        avg_line_NR_allo_adj_txt_6],
-#                   [avg_line_NR_allo_jpg_output_6,            avg_line_NR_allo_jpg_6],
-#                   [avg_line_NR_allo_json_output_6,           avg_line_NR_allo_json_6],
-#                   [avg_line_NR_allo_tokenized_txt_output_6,  avg_line_NR_allo_tokenized_txt_6]
-#                   ]
-
-# occupancy_NR_allo_6 = [[avg_occupancy_NR_allo_adj_json_output_6,    avg_occupancy_NR_allo_adj_json_6],
-#                        [avg_occupancy_NR_allo_adj_txt_output_6,           avg_occupancy_NR_allo_adj_txt_6],
-#                        [avg_occupancy_NR_allo_jpg_output_6,               avg_occupancy_NR_allo_jpg_6],
-#                        [avg_occupancy_NR_allo_json_output_6,              avg_occupancy_NR_allo_json_6],
-#                        [avg_occupancy_NR_allo_tokenized_txt_output_6,     avg_occupancy_NR_allo_tokenized_txt_6],
-#                        [avg_occupancy_NR_allo_ascii_txt_output_6,        avg_occupancy_NR_allo_ascii_txt_6]   
-#                        ]
-
-
-# line_R_allo_6 = [[avg_line_R_allo_adj_json_output_6,        avg_line_R_allo_adj_json_6],
-#                 [avg_line_R_allo_adj_txt_output_6,         avg_line_R_allo_adj_txt_6],
-#                 [avg_line_R_allo_jpg_output_6,             avg_line_R_allo_jpg_6],
-#                 [avg_line_R_allo_json_output_6,            avg_line_R_allo_json_6],
-#                 [avg_line_R_allo_tokenized_txt_output_6,   avg_line_R_allo_tokenized_txt_6]
-#                 ]
-
-# occupancy_R_allo_6 = [[avg_occupancy_R_allo_adj_json_output_6,      avg_occupancy_R_allo_adj_json_6],
-#                       [avg_occupancy_R_allo_adj_txt_output_6,            avg_occupancy_R_allo_adj_txt_6],
-#                       [avg_occupancy_R_allo_jpg_output_6,                avg_occupancy_R_allo_jpg_6],
-#                       [avg_occupancy_R_allo_json_output_6,               avg_occupancy_R_allo_json_6],
-#                       [avg_occupancy_R_allo_tokenized_txt_output_6,      avg_occupancy_R_allo_tokenized_txt_6],
-#                       [avg_occupancy_R_allo_ascii_txt_output_6,          avg_occupancy_R_allo_ascii_txt_6]
-#                       ]
-                    
-# line_NR_ego_6 = [[avg_line_NR_ego_adj_json_output_6,      avg_line_NR_ego_adj_json_6],
-#                 [avg_line_NR_ego_adj_txt_output_6,        avg_line_NR_ego_adj_txt_6],
-#                 [avg_line_NR_ego_jpg_output_6,            avg_line_NR_ego_jpg_6],
-#                 [avg_line_NR_ego_json_output_6,           avg_line_NR_ego_json_6],
-#                 [avg_line_NR_ego_tokenized_txt_output_6,  avg_line_NR_ego_tokenized_txt_6]
-#                 ]
-
-# occupancy_NR_ego_6 = [[avg_occupancy_NR_ego_adj_json_output_6,    avg_occupancy_NR_ego_adj_json_6],
-#                       [avg_occupancy_NR_ego_adj_txt_output_6,           avg_occupancy_NR_ego_adj_txt_6],
-#                       [avg_occupancy_NR_ego_jpg_output_6,               avg_occupancy_NR_ego_jpg_6],
-#                       [avg_occupancy_NR_ego_json_output_6,              avg_occupancy_NR_ego_json_6],
-#                       [avg_occupancy_NR_ego_tokenized_txt_output_6,     avg_occupancy_NR_ego_tokenized_txt_6],
-#                         [avg_occupancy_NR_ego_ascii_txt_output_6,         avg_occupancy_NR_ego_ascii_txt_6]
-#                       ]
-
-
-# line_R_ego_6 = [[avg_line_R_ego_adj_json_output_6,        avg_line_R_ego_adj_json_6],
-#                 [avg_line_R_ego_adj_txt_output_6,         avg_line_R_ego_adj_txt_6],
-#                 [avg_line_R_ego_jpg_output_6,             avg_line_R_ego_jpg_6],
-#                 [avg_line_R_ego_json_output_6,            avg_line_R_ego_json_6],
-#                 [avg_line_R_ego_tokenized_txt_output_6,   avg_line_R_ego_tokenized_txt_6]
-#                 ]
-
-# occupancy_R_ego_6 = [[avg_occupancy_R_ego_adj_json_output_6,      avg_occupancy_R_ego_adj_json_6],
-#                      [avg_occupancy_R_ego_adj_txt_output_6,            avg_occupancy_R_ego_adj_txt_6],
-#                      [avg_occupancy_R_ego_jpg_output_6,                avg_occupancy_R_ego_jpg_6],
-#                      [avg_occupancy_R_ego_json_output_6,               avg_occupancy_R_ego_json_6],
-#                      [avg_occupancy_R_ego_tokenized_txt_output_6,      avg_occupancy_R_ego_tokenized_txt_6],
-#                     [avg_occupancy_R_ego_ascii_txt_output_6,          avg_occupancy_R_ego_ascii_txt_6]
-#                      ]
-                    
-
-
-
-# line_NR_coords_15 = [[avg_line_NR_coords_adj_json_output_15,      avg_line_NR_coords_adj_json_15],
-#                    [avg_line_NR_coords_adj_txt_output_15,        avg_line_NR_coords_adj_txt_15],
-#                    [avg_line_NR_coords_jpg_output_15,            avg_line_NR_coords_jpg_15],
-#                    [avg_line_NR_coords_json_output_15,           avg_line_NR_coords_json_15],
-#                    [avg_line_NR_coords_tokenized_txt_output_15,  avg_line_NR_coords_tokenized_txt_15]
-#                    ]
-
-# occupancy_NR_coords_15 = [[avg_occupancy_NR_coords_adj_json_output_15,    avg_occupancy_NR_coords_adj_json_15],
-#                          [avg_occupancy_NR_coords_adj_txt_output_15,           avg_occupancy_NR_coords_adj_txt_15],
-#                          [avg_occupancy_NR_coords_jpg_output_15,               avg_occupancy_NR_coords_jpg_15],
-#                          [avg_occupancy_NR_coords_json_output_15,              avg_occupancy_NR_coords_json_15],
-#                          [avg_occupancy_NR_coords_tokenized_txt_output_15,     avg_occupancy_NR_coords_tokenized_txt_15],
-#                         [avg_occupancy_NR_coords_ascii_txt_output_15,         avg_occupancy_NR_coords_ascii_txt_15]
-#                          ]
-
-
-# line_R_coords_15 = [[avg_line_R_coords_adj_json_output_15,        avg_line_R_coords_adj_json_15],
-#                    [avg_line_R_coords_adj_txt_output_15,         avg_line_R_coords_adj_txt_15],
-#                    [avg_line_R_coords_jpg_output_15,             avg_line_R_coords_jpg_15],
-#                    [avg_line_R_coords_json_output_15,            avg_line_R_coords_json_15],
-#                    [avg_line_R_coords_tokenized_txt_output_15,   avg_line_R_coords_tokenized_txt_15]
-#                    ]
-
-# occupancy_R_coords_15 = [[avg_occupancy_R_coords_adj_json_output_15,      avg_occupancy_R_coords_adj_json_15],
-#                         [avg_occupancy_R_coords_adj_txt_output_15,            avg_occupancy_R_coords_adj_txt_15],
-#                         [avg_occupancy_R_coords_jpg_output_15,                avg_occupancy_R_coords_jpg_15],
-#                         [avg_occupancy_R_coords_json_output_15,               avg_occupancy_R_coords_json_15],
-#                         [avg_occupancy_R_coords_tokenized_txt_output_15,      avg_occupancy_R_coords_tokenized_txt_15],
-#                         [avg_occupancy_R_coords_ascii_txt_output_15,         avg_occupancy_R_coords_ascii_txt_15]
-#                         ]
-                    
-# line_NR_allo_15 = [[avg_line_NR_allo_adj_json_output_15,      avg_line_NR_allo_adj_json_15],
-#                   [avg_line_NR_allo_adj_txt_output_15,        avg_line_NR_allo_adj_txt_15],
-#                   [avg_line_NR_allo_jpg_output_15,            avg_line_NR_allo_jpg_15],
-#                   [avg_line_NR_allo_json_output_15,           avg_line_NR_allo_json_15],
-#                   [avg_line_NR_allo_tokenized_txt_output_15,  avg_line_NR_allo_tokenized_txt_15]
-#                   ]
-
-# occupancy_NR_allo_15 = [[avg_occupancy_NR_allo_adj_json_output_15,    avg_occupancy_NR_allo_adj_json_15],
-#                        [avg_occupancy_NR_allo_adj_txt_output_15,           avg_occupancy_NR_allo_adj_txt_15],
-#                        [avg_occupancy_NR_allo_jpg_output_15,               avg_occupancy_NR_allo_jpg_15],
-#                        [avg_occupancy_NR_allo_json_output_15,              avg_occupancy_NR_allo_json_15],
-#                        [avg_occupancy_NR_allo_tokenized_txt_output_15,     avg_occupancy_NR_allo_tokenized_txt_15],
-#                         [avg_occupancy_NR_allo_ascii_txt_output_15,        avg_occupancy_NR_allo_ascii_txt_15]
-#                        ]
-
-
-# line_R_allo_15 = [[avg_line_R_allo_adj_json_output_15,        avg_line_R_allo_adj_json_15],
-#                 [avg_line_R_allo_adj_txt_output_15,         avg_line_R_allo_adj_txt_15],
-#                 [avg_line_R_allo_jpg_output_15,             avg_line_R_allo_jpg_15],
-#                 [avg_line_R_allo_json_output_15,            avg_line_R_allo_json_15],
-#                 [avg_line_R_allo_tokenized_txt_output_15,   avg_line_R_allo_tokenized_txt_15]
-#                 ]
-
-# occupancy_R_allo_15 = [[avg_occupancy_R_allo_adj_json_output_15,      avg_occupancy_R_allo_adj_json_15],
-#                       [avg_occupancy_R_allo_adj_txt_output_15,            avg_occupancy_R_allo_adj_txt_15],
-#                       [avg_occupancy_R_allo_jpg_output_15,                avg_occupancy_R_allo_jpg_15],
-#                       [avg_occupancy_R_allo_json_output_15,               avg_occupancy_R_allo_json_15],
-#                       [avg_occupancy_R_allo_tokenized_txt_output_15,      avg_occupancy_R_allo_tokenized_txt_15],
-#                     [avg_occupancy_R_allo_ascii_txt_output_15,          avg_occupancy_R_allo_ascii_txt_15]
-#                       ]
-                    
-# line_NR_ego_15 = [[avg_line_NR_ego_adj_json_output_15,      avg_line_NR_ego_adj_json_15],
-#                 [avg_line_NR_ego_adj_txt_output_15,        avg_line_NR_ego_adj_txt_15],
-#                 [avg_line_NR_ego_jpg_output_15,            avg_line_NR_ego_jpg_15],
-#                 [avg_line_NR_ego_json_output_15,           avg_line_NR_ego_json_15],
-#                 [avg_line_NR_ego_tokenized_txt_output_15,  avg_line_NR_ego_tokenized_txt_15]
-#                 ]
-
-# occupancy_NR_ego_15 = [[avg_occupancy_NR_ego_adj_json_output_15,    avg_occupancy_NR_ego_adj_json_15],
-#                       [avg_occupancy_NR_ego_adj_txt_output_15,           avg_occupancy_NR_ego_adj_txt_15],
-#                       [avg_occupancy_NR_ego_jpg_output_15,               avg_occupancy_NR_ego_jpg_15],
-#                       [avg_occupancy_NR_ego_json_output_15,              avg_occupancy_NR_ego_json_15],
-#                       [avg_occupancy_NR_ego_tokenized_txt_output_15,     avg_occupancy_NR_ego_tokenized_txt_15],
-#                     [avg_occupancy_NR_ego_ascii_txt_output_15,         avg_occupancy_NR_ego_ascii_txt_15]
-#                       ]
-
-
-# line_R_ego_15 = [[avg_line_R_ego_adj_json_output_15,        avg_line_R_ego_adj_json_15],
-#                 [avg_line_R_ego_adj_txt_output_15,         avg_line_R_ego_adj_txt_15],
-#                 [avg_line_R_ego_jpg_output_15,             avg_line_R_ego_jpg_15],
-#                 [avg_line_R_ego_json_output_15,            avg_line_R_ego_json_15],
-#                 [avg_line_R_ego_tokenized_txt_output_15,   avg_line_R_ego_tokenized_txt_15]
-#                 ]
-
-# occupancy_R_ego_15 = [[avg_occupancy_R_ego_adj_json_output_15,      avg_occupancy_R_ego_adj_json_15],
-#                      [avg_occupancy_R_ego_adj_txt_output_15,            avg_occupancy_R_ego_adj_txt_15],
-#                      [avg_occupancy_R_ego_jpg_output_15,                avg_occupancy_R_ego_jpg_15],
-#                      [avg_occupancy_R_ego_json_output_15,               avg_occupancy_R_ego_json_15],
-#                      [avg_occupancy_R_ego_tokenized_txt_output_15,      avg_occupancy_R_ego_tokenized_txt_15],
-#                     [avg_occupancy_R_ego_ascii_txt_output_15,          avg_occupancy_R_ego_ascii_txt_15]
-#                      ]
-
-
-# Creating data for plotting - using FINAL ANSWER TOKENS (EXCL. THINKING)
-figure = 'final_answer_tokens' # this is for choosing the correct title and axis labels
+figure = 'all_tokens'  # this is for setting the correct title and axis labels
 line_NR_coords_3 = [[avg_line_NR_coords_adj_json_output_3,      avg_line_NR_coords_adj_json_3],
                    [avg_line_NR_coords_adj_txt_output_3,        avg_line_NR_coords_adj_txt_3],
                    [avg_line_NR_coords_jpg_output_3,            avg_line_NR_coords_jpg_3],
@@ -907,19 +620,19 @@ occupancy_NR_coords_3 = [[avg_occupancy_NR_coords_adj_json_output_3,    avg_occu
                          ]
 
 
-line_R_coords_3 = [[avg_final_line_R_coords_adj_json_3,        avg_line_R_coords_adj_json_3],
-                   [avg_final_line_R_coords_adj_txt_3,         avg_line_R_coords_adj_txt_3],
-                   [avg_final_line_R_coords_jpg_3,             avg_line_R_coords_jpg_3],
-                   [avg_final_line_R_coords_json_3,            avg_line_R_coords_json_3],
-                   [avg_final_line_R_coords_tokenized_txt_3,   avg_line_R_coords_tokenized_txt_3]
+line_R_coords_3 = [[avg_line_R_coords_adj_json_output_3,        avg_line_R_coords_adj_json_3],
+                   [avg_line_R_coords_adj_txt_output_3,         avg_line_R_coords_adj_txt_3],
+                   [avg_line_R_coords_jpg_output_3,             avg_line_R_coords_jpg_3],
+                   [avg_line_R_coords_json_output_3,            avg_line_R_coords_json_3],
+                   [avg_line_R_coords_tokenized_txt_output_3,   avg_line_R_coords_tokenized_txt_3]
                    ]
 
-occupancy_R_coords_3 = [[avg_final_occupancy_R_coords_adj_json_3,      avg_occupancy_R_coords_adj_json_3],
-                        [avg_final_occupancy_R_coords_adj_txt_3,            avg_occupancy_R_coords_adj_txt_3],
-                        [avg_final_occupancy_R_coords_jpg_3,                avg_occupancy_R_coords_jpg_3],
-                        [avg_final_occupancy_R_coords_json_3,               avg_occupancy_R_coords_json_3],
-                        [avg_final_occupancy_R_coords_tokenized_txt_3,      avg_occupancy_R_coords_tokenized_txt_3],
-                        [avg_final_occupancy_R_coords_ascii_txt_3,         avg_occupancy_R_coords_ascii_txt_3]
+occupancy_R_coords_3 = [[avg_occupancy_R_coords_adj_json_output_3,      avg_occupancy_R_coords_adj_json_3],
+                        [avg_occupancy_R_coords_adj_txt_output_3,            avg_occupancy_R_coords_adj_txt_3],
+                        [avg_occupancy_R_coords_jpg_output_3,                avg_occupancy_R_coords_jpg_3],
+                        [avg_occupancy_R_coords_json_output_3,               avg_occupancy_R_coords_json_3],
+                        [avg_occupancy_R_coords_tokenized_txt_output_3,      avg_occupancy_R_coords_tokenized_txt_3],
+                        [avg_occupancy_R_coords_ascii_txt_output_3,         avg_occupancy_R_coords_ascii_txt_3]
                         ]
                     
 line_NR_allo_3 = [[avg_line_NR_allo_adj_json_output_3,      avg_line_NR_allo_adj_json_3],
@@ -938,19 +651,19 @@ occupancy_NR_allo_3 = [[avg_occupancy_NR_allo_adj_json_output_3,    avg_occupanc
                        ]
 
 
-line_R_allo_3 = [[avg_final_line_R_allo_adj_json_3,        avg_line_R_allo_adj_json_3],
-                [avg_final_line_R_allo_adj_txt_3,         avg_line_R_allo_adj_txt_3],
-                [avg_final_line_R_allo_jpg_3,             avg_line_R_allo_jpg_3],
-                [avg_final_line_R_allo_json_3,            avg_line_R_allo_json_3],
-                [avg_final_line_R_allo_tokenized_txt_3,   avg_line_R_allo_tokenized_txt_3]
+line_R_allo_3 = [[avg_line_R_allo_adj_json_output_3,        avg_line_R_allo_adj_json_3],
+                [avg_line_R_allo_adj_txt_output_3,         avg_line_R_allo_adj_txt_3],
+                [avg_line_R_allo_jpg_output_3,             avg_line_R_allo_jpg_3],
+                [avg_line_R_allo_json_output_3,            avg_line_R_allo_json_3],
+                [avg_line_R_allo_tokenized_txt_output_3,   avg_line_R_allo_tokenized_txt_3]
                 ]
 
-occupancy_R_allo_3 = [[avg_final_occupancy_R_allo_adj_json_3,          avg_occupancy_R_allo_adj_json_3],
-                      [avg_final_occupancy_R_allo_adj_txt_3,           avg_occupancy_R_allo_adj_txt_3],
-                      [avg_final_occupancy_R_allo_jpg_3,               avg_occupancy_R_allo_jpg_3],
-                      [avg_final_occupancy_R_allo_json_3,              avg_occupancy_R_allo_json_3],
-                      [avg_final_occupancy_R_allo_tokenized_txt_3,     avg_occupancy_R_allo_tokenized_txt_3],
-                      [avg_final_occupancy_R_allo_ascii_txt_3,         avg_occupancy_R_allo_ascii_txt_3]
+occupancy_R_allo_3 = [[avg_occupancy_R_allo_adj_json_output_3,          avg_occupancy_R_allo_adj_json_3],
+                      [avg_occupancy_R_allo_adj_txt_output_3,           avg_occupancy_R_allo_adj_txt_3],
+                      [avg_occupancy_R_allo_jpg_output_3,               avg_occupancy_R_allo_jpg_3],
+                      [avg_occupancy_R_allo_json_output_3,              avg_occupancy_R_allo_json_3],
+                      [avg_occupancy_R_allo_tokenized_txt_output_3,     avg_occupancy_R_allo_tokenized_txt_3],
+                      [avg_occupancy_R_allo_ascii_txt_output_3,         avg_occupancy_R_allo_ascii_txt_3]
                       ]
                     
 line_NR_ego_3 = [[avg_line_NR_ego_adj_json_output_3,      avg_line_NR_ego_adj_json_3],
@@ -969,19 +682,19 @@ occupancy_NR_ego_3 = [[avg_occupancy_NR_ego_adj_json_output_3,          avg_occu
                       ]
 
 
-line_R_ego_3 = [[avg_final_line_R_ego_adj_json_3,        avg_line_R_ego_adj_json_3],
-                [avg_final_line_R_ego_adj_txt_3,         avg_line_R_ego_adj_txt_3],
-                [avg_final_line_R_ego_jpg_3,             avg_line_R_ego_jpg_3],
-                [avg_final_line_R_ego_json_3,            avg_line_R_ego_json_3],
-                [avg_final_line_R_ego_tokenized_txt_3,   avg_line_R_ego_tokenized_txt_3]
+line_R_ego_3 = [[avg_line_R_ego_adj_json_output_3,        avg_line_R_ego_adj_json_3],
+                [avg_line_R_ego_adj_txt_output_3,         avg_line_R_ego_adj_txt_3],
+                [avg_line_R_ego_jpg_output_3,             avg_line_R_ego_jpg_3],
+                [avg_line_R_ego_json_output_3,            avg_line_R_ego_json_3],
+                [avg_line_R_ego_tokenized_txt_output_3,   avg_line_R_ego_tokenized_txt_3]
                 ]
 
-occupancy_R_ego_3 = [[avg_final_occupancy_R_ego_adj_json_3,      avg_occupancy_R_ego_adj_json_3],
-                     [avg_final_occupancy_R_ego_adj_txt_3,            avg_occupancy_R_ego_adj_txt_3],
-                     [avg_final_occupancy_R_ego_jpg_3,                avg_occupancy_R_ego_jpg_3],
-                     [avg_final_occupancy_R_ego_json_3,               avg_occupancy_R_ego_json_3],
-                     [avg_final_occupancy_R_ego_tokenized_txt_3,      avg_occupancy_R_ego_tokenized_txt_3],
-                     [avg_final_occupancy_R_ego_ascii_txt_3,          avg_occupancy_R_ego_ascii_txt_3]
+occupancy_R_ego_3 = [[avg_occupancy_R_ego_adj_json_output_3,      avg_occupancy_R_ego_adj_json_3],
+                     [avg_occupancy_R_ego_adj_txt_output_3,            avg_occupancy_R_ego_adj_txt_3],
+                     [avg_occupancy_R_ego_jpg_output_3,                avg_occupancy_R_ego_jpg_3],
+                     [avg_occupancy_R_ego_json_output_3,               avg_occupancy_R_ego_json_3],
+                     [avg_occupancy_R_ego_tokenized_txt_output_3,      avg_occupancy_R_ego_tokenized_txt_3],
+                     [avg_occupancy_R_ego_ascii_txt_output_3,          avg_occupancy_R_ego_ascii_txt_3]
                      ]
                     
 
@@ -1002,19 +715,19 @@ occupancy_NR_coords_6 = [[avg_occupancy_NR_coords_adj_json_output_6,    avg_occu
                          ]
 
 
-line_R_coords_6 = [[avg_final_line_R_coords_adj_json_6,        avg_line_R_coords_adj_json_6],
-                   [avg_final_line_R_coords_adj_txt_6,         avg_line_R_coords_adj_txt_6],
-                   [avg_final_line_R_coords_jpg_6,             avg_line_R_coords_jpg_6],
-                   [avg_final_line_R_coords_json_6,            avg_line_R_coords_json_6],
-                   [avg_final_line_R_coords_tokenized_txt_6,   avg_line_R_coords_tokenized_txt_6]
+line_R_coords_6 = [[avg_line_R_coords_adj_json_output_6,        avg_line_R_coords_adj_json_6],
+                   [avg_line_R_coords_adj_txt_output_6,         avg_line_R_coords_adj_txt_6],
+                   [avg_line_R_coords_jpg_output_6,             avg_line_R_coords_jpg_6],
+                   [avg_line_R_coords_json_output_6,            avg_line_R_coords_json_6],
+                   [avg_line_R_coords_tokenized_txt_output_6,   avg_line_R_coords_tokenized_txt_6]
                    ]
 
-occupancy_R_coords_6 = [[avg_final_occupancy_R_coords_adj_json_6,      avg_occupancy_R_coords_adj_json_6],
-                        [avg_final_occupancy_R_coords_adj_txt_6,            avg_occupancy_R_coords_adj_txt_6],
-                        [avg_final_occupancy_R_coords_jpg_6,                avg_occupancy_R_coords_jpg_6],
-                        [avg_final_occupancy_R_coords_json_6,               avg_occupancy_R_coords_json_6],
-                        [avg_final_occupancy_R_coords_tokenized_txt_6,      avg_occupancy_R_coords_tokenized_txt_6],
-                        [avg_final_occupancy_R_coords_ascii_txt_6,         avg_occupancy_R_coords_ascii_txt_6]
+occupancy_R_coords_6 = [[avg_occupancy_R_coords_adj_json_output_6,      avg_occupancy_R_coords_adj_json_6],
+                        [avg_occupancy_R_coords_adj_txt_output_6,            avg_occupancy_R_coords_adj_txt_6],
+                        [avg_occupancy_R_coords_jpg_output_6,                avg_occupancy_R_coords_jpg_6],
+                        [avg_occupancy_R_coords_json_output_6,               avg_occupancy_R_coords_json_6],
+                        [avg_occupancy_R_coords_tokenized_txt_output_6,      avg_occupancy_R_coords_tokenized_txt_6],
+                        [avg_occupancy_R_coords_ascii_txt_output_6,         avg_occupancy_R_coords_ascii_txt_6]
                         ]
                     
 line_NR_allo_6 = [[avg_line_NR_allo_adj_json_output_6,      avg_line_NR_allo_adj_json_6],
@@ -1033,19 +746,19 @@ occupancy_NR_allo_6 = [[avg_occupancy_NR_allo_adj_json_output_6,    avg_occupanc
                        ]
 
 
-line_R_allo_6 = [[avg_final_line_R_allo_adj_json_6,        avg_line_R_allo_adj_json_6],
-                [avg_final_line_R_allo_adj_txt_6,         avg_line_R_allo_adj_txt_6],
-                [avg_final_line_R_allo_jpg_6,             avg_line_R_allo_jpg_6],
-                [avg_final_line_R_allo_json_6,            avg_line_R_allo_json_6],
-                [avg_final_line_R_allo_tokenized_txt_6,   avg_line_R_allo_tokenized_txt_6]
+line_R_allo_6 = [[avg_line_R_allo_adj_json_output_6,        avg_line_R_allo_adj_json_6],
+                [avg_line_R_allo_adj_txt_output_6,         avg_line_R_allo_adj_txt_6],
+                [avg_line_R_allo_jpg_output_6,             avg_line_R_allo_jpg_6],
+                [avg_line_R_allo_json_output_6,            avg_line_R_allo_json_6],
+                [avg_line_R_allo_tokenized_txt_output_6,   avg_line_R_allo_tokenized_txt_6]
                 ]
 
-occupancy_R_allo_6 = [[avg_final_occupancy_R_allo_adj_json_6,      avg_occupancy_R_allo_adj_json_6],
-                      [avg_final_occupancy_R_allo_adj_txt_6,            avg_occupancy_R_allo_adj_txt_6],
-                      [avg_final_occupancy_R_allo_jpg_6,                avg_occupancy_R_allo_jpg_6],
-                      [avg_final_occupancy_R_allo_json_6,               avg_occupancy_R_allo_json_6],
-                      [avg_final_occupancy_R_allo_tokenized_txt_6,      avg_occupancy_R_allo_tokenized_txt_6],
-                      [avg_final_occupancy_R_allo_ascii_txt_6,          avg_occupancy_R_allo_ascii_txt_6]
+occupancy_R_allo_6 = [[avg_occupancy_R_allo_adj_json_output_6,      avg_occupancy_R_allo_adj_json_6],
+                      [avg_occupancy_R_allo_adj_txt_output_6,            avg_occupancy_R_allo_adj_txt_6],
+                      [avg_occupancy_R_allo_jpg_output_6,                avg_occupancy_R_allo_jpg_6],
+                      [avg_occupancy_R_allo_json_output_6,               avg_occupancy_R_allo_json_6],
+                      [avg_occupancy_R_allo_tokenized_txt_output_6,      avg_occupancy_R_allo_tokenized_txt_6],
+                      [avg_occupancy_R_allo_ascii_txt_output_6,          avg_occupancy_R_allo_ascii_txt_6]
                       ]
                     
 line_NR_ego_6 = [[avg_line_NR_ego_adj_json_output_6,      avg_line_NR_ego_adj_json_6],
@@ -1064,19 +777,19 @@ occupancy_NR_ego_6 = [[avg_occupancy_NR_ego_adj_json_output_6,    avg_occupancy_
                       ]
 
 
-line_R_ego_6 = [[avg_final_line_R_ego_adj_json_6,        avg_line_R_ego_adj_json_6],
-                [avg_final_line_R_ego_adj_txt_6,         avg_line_R_ego_adj_txt_6],
-                [avg_final_line_R_ego_jpg_6,             avg_line_R_ego_jpg_6],
-                [avg_final_line_R_ego_json_6,            avg_line_R_ego_json_6],
-                [avg_final_line_R_ego_tokenized_txt_6,   avg_line_R_ego_tokenized_txt_6]
+line_R_ego_6 = [[avg_line_R_ego_adj_json_output_6,        avg_line_R_ego_adj_json_6],
+                [avg_line_R_ego_adj_txt_output_6,         avg_line_R_ego_adj_txt_6],
+                [avg_line_R_ego_jpg_output_6,             avg_line_R_ego_jpg_6],
+                [avg_line_R_ego_json_output_6,            avg_line_R_ego_json_6],
+                [avg_line_R_ego_tokenized_txt_output_6,   avg_line_R_ego_tokenized_txt_6]
                 ]
 
-occupancy_R_ego_6 = [[avg_final_occupancy_R_ego_adj_json_6,      avg_occupancy_R_ego_adj_json_6],
-                     [avg_final_occupancy_R_ego_adj_txt_6,            avg_occupancy_R_ego_adj_txt_6],
-                     [avg_final_occupancy_R_ego_jpg_6,                avg_occupancy_R_ego_jpg_6],
-                     [avg_final_occupancy_R_ego_json_6,               avg_occupancy_R_ego_json_6],
-                     [avg_final_occupancy_R_ego_tokenized_txt_6,      avg_occupancy_R_ego_tokenized_txt_6],
-                    [avg_final_occupancy_R_ego_ascii_txt_6,          avg_occupancy_R_ego_ascii_txt_6]
+occupancy_R_ego_6 = [[avg_occupancy_R_ego_adj_json_output_6,      avg_occupancy_R_ego_adj_json_6],
+                     [avg_occupancy_R_ego_adj_txt_output_6,            avg_occupancy_R_ego_adj_txt_6],
+                     [avg_occupancy_R_ego_jpg_output_6,                avg_occupancy_R_ego_jpg_6],
+                     [avg_occupancy_R_ego_json_output_6,               avg_occupancy_R_ego_json_6],
+                     [avg_occupancy_R_ego_tokenized_txt_output_6,      avg_occupancy_R_ego_tokenized_txt_6],
+                    [avg_occupancy_R_ego_ascii_txt_output_6,          avg_occupancy_R_ego_ascii_txt_6]
                      ]
                     
 
@@ -1098,19 +811,19 @@ occupancy_NR_coords_15 = [[avg_occupancy_NR_coords_adj_json_output_15,    avg_oc
                          ]
 
 
-line_R_coords_15 = [[avg_final_line_R_coords_adj_json_15,        avg_line_R_coords_adj_json_15],
-                   [avg_final_line_R_coords_adj_txt_15,         avg_line_R_coords_adj_txt_15],
-                   [avg_final_line_R_coords_jpg_15,             avg_line_R_coords_jpg_15],
-                   [avg_final_line_R_coords_json_15,            avg_line_R_coords_json_15],
-                   [avg_final_line_R_coords_tokenized_txt_15,   avg_line_R_coords_tokenized_txt_15]
+line_R_coords_15 = [[avg_line_R_coords_adj_json_output_15,        avg_line_R_coords_adj_json_15],
+                   [avg_line_R_coords_adj_txt_output_15,         avg_line_R_coords_adj_txt_15],
+                   [avg_line_R_coords_jpg_output_15,             avg_line_R_coords_jpg_15],
+                   [avg_line_R_coords_json_output_15,            avg_line_R_coords_json_15],
+                   [avg_line_R_coords_tokenized_txt_output_15,   avg_line_R_coords_tokenized_txt_15]
                    ]
 
-occupancy_R_coords_15 = [[avg_final_occupancy_R_coords_adj_json_15,      avg_occupancy_R_coords_adj_json_15],
-                        [avg_final_occupancy_R_coords_adj_txt_15,            avg_occupancy_R_coords_adj_txt_15],
-                        [avg_final_occupancy_R_coords_jpg_15,                avg_occupancy_R_coords_jpg_15],
-                        [avg_final_occupancy_R_coords_json_15,               avg_occupancy_R_coords_json_15],
-                        [avg_final_occupancy_R_coords_tokenized_txt_15,      avg_occupancy_R_coords_tokenized_txt_15],
-                        [avg_final_occupancy_R_coords_ascii_txt_15,         avg_occupancy_R_coords_ascii_txt_15]
+occupancy_R_coords_15 = [[avg_occupancy_R_coords_adj_json_output_15,      avg_occupancy_R_coords_adj_json_15],
+                        [avg_occupancy_R_coords_adj_txt_output_15,            avg_occupancy_R_coords_adj_txt_15],
+                        [avg_occupancy_R_coords_jpg_output_15,                avg_occupancy_R_coords_jpg_15],
+                        [avg_occupancy_R_coords_json_output_15,               avg_occupancy_R_coords_json_15],
+                        [avg_occupancy_R_coords_tokenized_txt_output_15,      avg_occupancy_R_coords_tokenized_txt_15],
+                        [avg_occupancy_R_coords_ascii_txt_output_15,         avg_occupancy_R_coords_ascii_txt_15]
                         ]
                     
 line_NR_allo_15 = [[avg_line_NR_allo_adj_json_output_15,      avg_line_NR_allo_adj_json_15],
@@ -1129,19 +842,19 @@ occupancy_NR_allo_15 = [[avg_occupancy_NR_allo_adj_json_output_15,    avg_occupa
                        ]
 
 
-line_R_allo_15 = [[avg_final_line_R_allo_adj_json_15,        avg_line_R_allo_adj_json_15],
-                [avg_final_line_R_allo_adj_txt_15,         avg_line_R_allo_adj_txt_15],
-                [avg_final_line_R_allo_jpg_15,             avg_line_R_allo_jpg_15],
-                [avg_final_line_R_allo_json_15,            avg_line_R_allo_json_15],
-                [avg_final_line_R_allo_tokenized_txt_15,   avg_line_R_allo_tokenized_txt_15]
+line_R_allo_15 = [[avg_line_R_allo_adj_json_output_15,        avg_line_R_allo_adj_json_15],
+                [avg_line_R_allo_adj_txt_output_15,         avg_line_R_allo_adj_txt_15],
+                [avg_line_R_allo_jpg_output_15,             avg_line_R_allo_jpg_15],
+                [avg_line_R_allo_json_output_15,            avg_line_R_allo_json_15],
+                [avg_line_R_allo_tokenized_txt_output_15,   avg_line_R_allo_tokenized_txt_15]
                 ]
 
-occupancy_R_allo_15 = [[avg_final_occupancy_R_allo_adj_json_15,      avg_occupancy_R_allo_adj_json_15],
-                      [avg_final_occupancy_R_allo_adj_txt_15,            avg_occupancy_R_allo_adj_txt_15],
-                      [avg_final_occupancy_R_allo_jpg_15,                avg_occupancy_R_allo_jpg_15],
-                      [avg_final_occupancy_R_allo_json_15,               avg_occupancy_R_allo_json_15],
-                      [avg_final_occupancy_R_allo_tokenized_txt_15,      avg_occupancy_R_allo_tokenized_txt_15],
-                    [avg_final_occupancy_R_allo_ascii_txt_15,          avg_occupancy_R_allo_ascii_txt_15]
+occupancy_R_allo_15 = [[avg_occupancy_R_allo_adj_json_output_15,      avg_occupancy_R_allo_adj_json_15],
+                      [avg_occupancy_R_allo_adj_txt_output_15,            avg_occupancy_R_allo_adj_txt_15],
+                      [avg_occupancy_R_allo_jpg_output_15,                avg_occupancy_R_allo_jpg_15],
+                      [avg_occupancy_R_allo_json_output_15,               avg_occupancy_R_allo_json_15],
+                      [avg_occupancy_R_allo_tokenized_txt_output_15,      avg_occupancy_R_allo_tokenized_txt_15],
+                    [avg_occupancy_R_allo_ascii_txt_output_15,          avg_occupancy_R_allo_ascii_txt_15]
                       ]
                     
 line_NR_ego_15 = [[avg_line_NR_ego_adj_json_output_15,      avg_line_NR_ego_adj_json_15],
@@ -1160,20 +873,307 @@ occupancy_NR_ego_15 = [[avg_occupancy_NR_ego_adj_json_output_15,    avg_occupanc
                       ]
 
 
-line_R_ego_15 = [[avg_final_line_R_ego_adj_json_15,        avg_line_R_ego_adj_json_15],
-                [avg_final_line_R_ego_adj_txt_15,         avg_line_R_ego_adj_txt_15],
-                [avg_final_line_R_ego_jpg_15,             avg_line_R_ego_jpg_15],
-                [avg_final_line_R_ego_json_15,            avg_line_R_ego_json_15],
-                [avg_final_line_R_ego_tokenized_txt_15,   avg_line_R_ego_tokenized_txt_15]
+line_R_ego_15 = [[avg_line_R_ego_adj_json_output_15,        avg_line_R_ego_adj_json_15],
+                [avg_line_R_ego_adj_txt_output_15,         avg_line_R_ego_adj_txt_15],
+                [avg_line_R_ego_jpg_output_15,             avg_line_R_ego_jpg_15],
+                [avg_line_R_ego_json_output_15,            avg_line_R_ego_json_15],
+                [avg_line_R_ego_tokenized_txt_output_15,   avg_line_R_ego_tokenized_txt_15]
                 ]
 
-occupancy_R_ego_15 = [[avg_final_occupancy_R_ego_adj_json_15,      avg_occupancy_R_ego_adj_json_15],
-                     [avg_final_occupancy_R_ego_adj_txt_15,            avg_occupancy_R_ego_adj_txt_15],
-                     [avg_final_occupancy_R_ego_jpg_15,                avg_occupancy_R_ego_jpg_15],
-                     [avg_final_occupancy_R_ego_json_15,               avg_occupancy_R_ego_json_15],
-                     [avg_final_occupancy_R_ego_tokenized_txt_15,      avg_occupancy_R_ego_tokenized_txt_15],
-                    [avg_final_occupancy_R_ego_ascii_txt_15,          avg_occupancy_R_ego_ascii_txt_15]
+occupancy_R_ego_15 = [[avg_occupancy_R_ego_adj_json_output_15,      avg_occupancy_R_ego_adj_json_15],
+                     [avg_occupancy_R_ego_adj_txt_output_15,            avg_occupancy_R_ego_adj_txt_15],
+                     [avg_occupancy_R_ego_jpg_output_15,                avg_occupancy_R_ego_jpg_15],
+                     [avg_occupancy_R_ego_json_output_15,               avg_occupancy_R_ego_json_15],
+                     [avg_occupancy_R_ego_tokenized_txt_output_15,      avg_occupancy_R_ego_tokenized_txt_15],
+                    [avg_occupancy_R_ego_ascii_txt_output_15,          avg_occupancy_R_ego_ascii_txt_15]
                      ]
+
+
+# Creating data for plotting - using FINAL ANSWER TOKENS (EXCL. THINKING)
+# figure = 'final_answer_tokens' # this is for choosing the correct title and axis labels
+# line_NR_coords_3 = [[avg_line_NR_coords_adj_json_output_3,      avg_line_NR_coords_adj_json_3],
+#                    [avg_line_NR_coords_adj_txt_output_3,        avg_line_NR_coords_adj_txt_3],
+#                    [avg_line_NR_coords_jpg_output_3,            avg_line_NR_coords_jpg_3],
+#                    [avg_line_NR_coords_json_output_3,           avg_line_NR_coords_json_3],
+#                    [avg_line_NR_coords_tokenized_txt_output_3,  avg_line_NR_coords_tokenized_txt_3]
+#                    ]
+
+# occupancy_NR_coords_3 = [[avg_occupancy_NR_coords_adj_json_output_3,    avg_occupancy_NR_coords_adj_json_3],
+#                          [avg_occupancy_NR_coords_adj_txt_output_3,           avg_occupancy_NR_coords_adj_txt_3],
+#                          [avg_occupancy_NR_coords_jpg_output_3,               avg_occupancy_NR_coords_jpg_3],
+#                          [avg_occupancy_NR_coords_json_output_3,              avg_occupancy_NR_coords_json_3],
+#                          [avg_occupancy_NR_coords_tokenized_txt_output_3,     avg_occupancy_NR_coords_tokenized_txt_3],
+#                          [avg_occupancy_NR_coords_ascii_txt_output_3,        avg_occupancy_NR_coords_ascii_txt_3]
+#                          ]
+
+
+# line_R_coords_3 = [[avg_final_line_R_coords_adj_json_3,        avg_line_R_coords_adj_json_3],
+#                    [avg_final_line_R_coords_adj_txt_3,         avg_line_R_coords_adj_txt_3],
+#                    [avg_final_line_R_coords_jpg_3,             avg_line_R_coords_jpg_3],
+#                    [avg_final_line_R_coords_json_3,            avg_line_R_coords_json_3],
+#                    [avg_final_line_R_coords_tokenized_txt_3,   avg_line_R_coords_tokenized_txt_3]
+#                    ]
+
+# occupancy_R_coords_3 = [[avg_final_occupancy_R_coords_adj_json_3,      avg_occupancy_R_coords_adj_json_3],
+#                         [avg_final_occupancy_R_coords_adj_txt_3,            avg_occupancy_R_coords_adj_txt_3],
+#                         [avg_final_occupancy_R_coords_jpg_3,                avg_occupancy_R_coords_jpg_3],
+#                         [avg_final_occupancy_R_coords_json_3,               avg_occupancy_R_coords_json_3],
+#                         [avg_final_occupancy_R_coords_tokenized_txt_3,      avg_occupancy_R_coords_tokenized_txt_3],
+#                         [avg_final_occupancy_R_coords_ascii_txt_3,         avg_occupancy_R_coords_ascii_txt_3]
+#                         ]
+                    
+# line_NR_allo_3 = [[avg_line_NR_allo_adj_json_output_3,      avg_line_NR_allo_adj_json_3],
+#                   [avg_line_NR_allo_adj_txt_output_3,        avg_line_NR_allo_adj_txt_3],
+#                   [avg_line_NR_allo_jpg_output_3,            avg_line_NR_allo_jpg_3],
+#                   [avg_line_NR_allo_json_output_3,           avg_line_NR_allo_json_3],
+#                   [avg_line_NR_allo_tokenized_txt_output_3,  avg_line_NR_allo_tokenized_txt_3]
+#                   ]
+
+# occupancy_NR_allo_3 = [[avg_occupancy_NR_allo_adj_json_output_3,    avg_occupancy_NR_allo_adj_json_3],
+#                        [avg_occupancy_NR_allo_adj_txt_output_3,           avg_occupancy_NR_allo_adj_txt_3],
+#                        [avg_occupancy_NR_allo_jpg_output_3,               avg_occupancy_NR_allo_jpg_3],
+#                        [avg_occupancy_NR_allo_json_output_3,              avg_occupancy_NR_allo_json_3],
+#                        [avg_occupancy_NR_allo_tokenized_txt_output_3,     avg_occupancy_NR_allo_tokenized_txt_3],
+#                        [avg_occupancy_NR_allo_ascii_txt_output_3,        avg_occupancy_NR_allo_ascii_txt_3]
+#                        ]
+
+
+# line_R_allo_3 = [[avg_final_line_R_allo_adj_json_3,        avg_line_R_allo_adj_json_3],
+#                 [avg_final_line_R_allo_adj_txt_3,         avg_line_R_allo_adj_txt_3],
+#                 [avg_final_line_R_allo_jpg_3,             avg_line_R_allo_jpg_3],
+#                 [avg_final_line_R_allo_json_3,            avg_line_R_allo_json_3],
+#                 [avg_final_line_R_allo_tokenized_txt_3,   avg_line_R_allo_tokenized_txt_3]
+#                 ]
+
+# occupancy_R_allo_3 = [[avg_final_occupancy_R_allo_adj_json_3,          avg_occupancy_R_allo_adj_json_3],
+#                       [avg_final_occupancy_R_allo_adj_txt_3,           avg_occupancy_R_allo_adj_txt_3],
+#                       [avg_final_occupancy_R_allo_jpg_3,               avg_occupancy_R_allo_jpg_3],
+#                       [avg_final_occupancy_R_allo_json_3,              avg_occupancy_R_allo_json_3],
+#                       [avg_final_occupancy_R_allo_tokenized_txt_3,     avg_occupancy_R_allo_tokenized_txt_3],
+#                       [avg_final_occupancy_R_allo_ascii_txt_3,         avg_occupancy_R_allo_ascii_txt_3]
+#                       ]
+                    
+# line_NR_ego_3 = [[avg_line_NR_ego_adj_json_output_3,      avg_line_NR_ego_adj_json_3],
+#                 [avg_line_NR_ego_adj_txt_output_3,        avg_line_NR_ego_adj_txt_3],
+#                 [avg_line_NR_ego_jpg_output_3,            avg_line_NR_ego_jpg_3],
+#                 [avg_line_NR_ego_json_output_3,           avg_line_NR_ego_json_3],
+#                 [avg_line_NR_ego_tokenized_txt_output_3,  avg_line_NR_ego_tokenized_txt_3]
+#                 ]
+
+# occupancy_NR_ego_3 = [[avg_occupancy_NR_ego_adj_json_output_3,          avg_occupancy_NR_ego_adj_json_3],
+#                       [avg_occupancy_NR_ego_adj_txt_output_3,           avg_occupancy_NR_ego_adj_txt_3],
+#                       [avg_occupancy_NR_ego_jpg_output_3,               avg_occupancy_NR_ego_jpg_3],
+#                       [avg_occupancy_NR_ego_json_output_3,              avg_occupancy_NR_ego_json_3],
+#                       [avg_occupancy_NR_ego_tokenized_txt_output_3,     avg_occupancy_NR_ego_tokenized_txt_3],
+#                       [avg_occupancy_NR_ego_ascii_txt_output_3,         avg_occupancy_NR_ego_ascii_txt_3]
+#                       ]
+
+
+# line_R_ego_3 = [[avg_final_line_R_ego_adj_json_3,        avg_line_R_ego_adj_json_3],
+#                 [avg_final_line_R_ego_adj_txt_3,         avg_line_R_ego_adj_txt_3],
+#                 [avg_final_line_R_ego_jpg_3,             avg_line_R_ego_jpg_3],
+#                 [avg_final_line_R_ego_json_3,            avg_line_R_ego_json_3],
+#                 [avg_final_line_R_ego_tokenized_txt_3,   avg_line_R_ego_tokenized_txt_3]
+#                 ]
+
+# occupancy_R_ego_3 = [[avg_final_occupancy_R_ego_adj_json_3,      avg_occupancy_R_ego_adj_json_3],
+#                      [avg_final_occupancy_R_ego_adj_txt_3,            avg_occupancy_R_ego_adj_txt_3],
+#                      [avg_final_occupancy_R_ego_jpg_3,                avg_occupancy_R_ego_jpg_3],
+#                      [avg_final_occupancy_R_ego_json_3,               avg_occupancy_R_ego_json_3],
+#                      [avg_final_occupancy_R_ego_tokenized_txt_3,      avg_occupancy_R_ego_tokenized_txt_3],
+#                      [avg_final_occupancy_R_ego_ascii_txt_3,          avg_occupancy_R_ego_ascii_txt_3]
+#                      ]
+                    
+
+
+# line_NR_coords_6 = [[avg_line_NR_coords_adj_json_output_6,      avg_line_NR_coords_adj_json_6],
+#                    [avg_line_NR_coords_adj_txt_output_6,        avg_line_NR_coords_adj_txt_6],
+#                    [avg_line_NR_coords_jpg_output_6,            avg_line_NR_coords_jpg_6],
+#                    [avg_line_NR_coords_json_output_6,           avg_line_NR_coords_json_6],
+#                    [avg_line_NR_coords_tokenized_txt_output_6,  avg_line_NR_coords_tokenized_txt_6]
+#                    ]
+
+# occupancy_NR_coords_6 = [[avg_occupancy_NR_coords_adj_json_output_6,    avg_occupancy_NR_coords_adj_json_6],
+#                          [avg_occupancy_NR_coords_adj_txt_output_6,           avg_occupancy_NR_coords_adj_txt_6],
+#                          [avg_occupancy_NR_coords_jpg_output_6,               avg_occupancy_NR_coords_jpg_6],
+#                          [avg_occupancy_NR_coords_json_output_6,              avg_occupancy_NR_coords_json_6],
+#                          [avg_occupancy_NR_coords_tokenized_txt_output_6,     avg_occupancy_NR_coords_tokenized_txt_6],
+#                          [avg_occupancy_NR_coords_ascii_txt_output_6,         avg_occupancy_NR_coords_ascii_txt_6]
+#                          ]
+
+
+# line_R_coords_6 = [[avg_final_line_R_coords_adj_json_6,        avg_line_R_coords_adj_json_6],
+#                    [avg_final_line_R_coords_adj_txt_6,         avg_line_R_coords_adj_txt_6],
+#                    [avg_final_line_R_coords_jpg_6,             avg_line_R_coords_jpg_6],
+#                    [avg_final_line_R_coords_json_6,            avg_line_R_coords_json_6],
+#                    [avg_final_line_R_coords_tokenized_txt_6,   avg_line_R_coords_tokenized_txt_6]
+#                    ]
+
+# occupancy_R_coords_6 = [[avg_final_occupancy_R_coords_adj_json_6,      avg_occupancy_R_coords_adj_json_6],
+#                         [avg_final_occupancy_R_coords_adj_txt_6,            avg_occupancy_R_coords_adj_txt_6],
+#                         [avg_final_occupancy_R_coords_jpg_6,                avg_occupancy_R_coords_jpg_6],
+#                         [avg_final_occupancy_R_coords_json_6,               avg_occupancy_R_coords_json_6],
+#                         [avg_final_occupancy_R_coords_tokenized_txt_6,      avg_occupancy_R_coords_tokenized_txt_6],
+#                         [avg_final_occupancy_R_coords_ascii_txt_6,         avg_occupancy_R_coords_ascii_txt_6]
+#                         ]
+                    
+# line_NR_allo_6 = [[avg_line_NR_allo_adj_json_output_6,      avg_line_NR_allo_adj_json_6],
+#                   [avg_line_NR_allo_adj_txt_output_6,        avg_line_NR_allo_adj_txt_6],
+#                   [avg_line_NR_allo_jpg_output_6,            avg_line_NR_allo_jpg_6],
+#                   [avg_line_NR_allo_json_output_6,           avg_line_NR_allo_json_6],
+#                   [avg_line_NR_allo_tokenized_txt_output_6,  avg_line_NR_allo_tokenized_txt_6]
+#                   ]
+
+# occupancy_NR_allo_6 = [[avg_occupancy_NR_allo_adj_json_output_6,    avg_occupancy_NR_allo_adj_json_6],
+#                        [avg_occupancy_NR_allo_adj_txt_output_6,           avg_occupancy_NR_allo_adj_txt_6],
+#                        [avg_occupancy_NR_allo_jpg_output_6,               avg_occupancy_NR_allo_jpg_6],
+#                        [avg_occupancy_NR_allo_json_output_6,              avg_occupancy_NR_allo_json_6],
+#                        [avg_occupancy_NR_allo_tokenized_txt_output_6,     avg_occupancy_NR_allo_tokenized_txt_6],
+#                        [avg_occupancy_NR_allo_ascii_txt_output_6,        avg_occupancy_NR_allo_ascii_txt_6]   
+#                        ]
+
+
+# line_R_allo_6 = [[avg_final_line_R_allo_adj_json_6,        avg_line_R_allo_adj_json_6],
+#                 [avg_final_line_R_allo_adj_txt_6,         avg_line_R_allo_adj_txt_6],
+#                 [avg_final_line_R_allo_jpg_6,             avg_line_R_allo_jpg_6],
+#                 [avg_final_line_R_allo_json_6,            avg_line_R_allo_json_6],
+#                 [avg_final_line_R_allo_tokenized_txt_6,   avg_line_R_allo_tokenized_txt_6]
+#                 ]
+
+# occupancy_R_allo_6 = [[avg_final_occupancy_R_allo_adj_json_6,      avg_occupancy_R_allo_adj_json_6],
+#                       [avg_final_occupancy_R_allo_adj_txt_6,            avg_occupancy_R_allo_adj_txt_6],
+#                       [avg_final_occupancy_R_allo_jpg_6,                avg_occupancy_R_allo_jpg_6],
+#                       [avg_final_occupancy_R_allo_json_6,               avg_occupancy_R_allo_json_6],
+#                       [avg_final_occupancy_R_allo_tokenized_txt_6,      avg_occupancy_R_allo_tokenized_txt_6],
+#                       [avg_final_occupancy_R_allo_ascii_txt_6,          avg_occupancy_R_allo_ascii_txt_6]
+#                       ]
+                    
+# line_NR_ego_6 = [[avg_line_NR_ego_adj_json_output_6,      avg_line_NR_ego_adj_json_6],
+#                 [avg_line_NR_ego_adj_txt_output_6,        avg_line_NR_ego_adj_txt_6],
+#                 [avg_line_NR_ego_jpg_output_6,            avg_line_NR_ego_jpg_6],
+#                 [avg_line_NR_ego_json_output_6,           avg_line_NR_ego_json_6],
+#                 [avg_line_NR_ego_tokenized_txt_output_6,  avg_line_NR_ego_tokenized_txt_6]
+#                 ]
+
+# occupancy_NR_ego_6 = [[avg_occupancy_NR_ego_adj_json_output_6,    avg_occupancy_NR_ego_adj_json_6],
+#                       [avg_occupancy_NR_ego_adj_txt_output_6,           avg_occupancy_NR_ego_adj_txt_6],
+#                       [avg_occupancy_NR_ego_jpg_output_6,               avg_occupancy_NR_ego_jpg_6],
+#                       [avg_occupancy_NR_ego_json_output_6,              avg_occupancy_NR_ego_json_6],
+#                       [avg_occupancy_NR_ego_tokenized_txt_output_6,     avg_occupancy_NR_ego_tokenized_txt_6],
+#                         [avg_occupancy_NR_ego_ascii_txt_output_6,         avg_occupancy_NR_ego_ascii_txt_6]
+#                       ]
+
+
+# line_R_ego_6 = [[avg_final_line_R_ego_adj_json_6,        avg_line_R_ego_adj_json_6],
+#                 [avg_final_line_R_ego_adj_txt_6,         avg_line_R_ego_adj_txt_6],
+#                 [avg_final_line_R_ego_jpg_6,             avg_line_R_ego_jpg_6],
+#                 [avg_final_line_R_ego_json_6,            avg_line_R_ego_json_6],
+#                 [avg_final_line_R_ego_tokenized_txt_6,   avg_line_R_ego_tokenized_txt_6]
+#                 ]
+
+# occupancy_R_ego_6 = [[avg_final_occupancy_R_ego_adj_json_6,      avg_occupancy_R_ego_adj_json_6],
+#                      [avg_final_occupancy_R_ego_adj_txt_6,            avg_occupancy_R_ego_adj_txt_6],
+#                      [avg_final_occupancy_R_ego_jpg_6,                avg_occupancy_R_ego_jpg_6],
+#                      [avg_final_occupancy_R_ego_json_6,               avg_occupancy_R_ego_json_6],
+#                      [avg_final_occupancy_R_ego_tokenized_txt_6,      avg_occupancy_R_ego_tokenized_txt_6],
+#                     [avg_final_occupancy_R_ego_ascii_txt_6,          avg_occupancy_R_ego_ascii_txt_6]
+#                      ]
+                    
+
+
+
+# line_NR_coords_15 = [[avg_line_NR_coords_adj_json_output_15,      avg_line_NR_coords_adj_json_15],
+#                    [avg_line_NR_coords_adj_txt_output_15,        avg_line_NR_coords_adj_txt_15],
+#                    [avg_line_NR_coords_jpg_output_15,            avg_line_NR_coords_jpg_15],
+#                    [avg_line_NR_coords_json_output_15,           avg_line_NR_coords_json_15],
+#                    [avg_line_NR_coords_tokenized_txt_output_15,  avg_line_NR_coords_tokenized_txt_15]
+#                    ]
+
+# occupancy_NR_coords_15 = [[avg_occupancy_NR_coords_adj_json_output_15,    avg_occupancy_NR_coords_adj_json_15],
+#                          [avg_occupancy_NR_coords_adj_txt_output_15,           avg_occupancy_NR_coords_adj_txt_15],
+#                          [avg_occupancy_NR_coords_jpg_output_15,               avg_occupancy_NR_coords_jpg_15],
+#                          [avg_occupancy_NR_coords_json_output_15,              avg_occupancy_NR_coords_json_15],
+#                          [avg_occupancy_NR_coords_tokenized_txt_output_15,     avg_occupancy_NR_coords_tokenized_txt_15],
+#                         [avg_occupancy_NR_coords_ascii_txt_output_15,         avg_occupancy_NR_coords_ascii_txt_15]
+#                          ]
+
+
+# line_R_coords_15 = [[avg_final_line_R_coords_adj_json_15,        avg_line_R_coords_adj_json_15],
+#                    [avg_final_line_R_coords_adj_txt_15,         avg_line_R_coords_adj_txt_15],
+#                    [avg_final_line_R_coords_jpg_15,             avg_line_R_coords_jpg_15],
+#                    [avg_final_line_R_coords_json_15,            avg_line_R_coords_json_15],
+#                    [avg_final_line_R_coords_tokenized_txt_15,   avg_line_R_coords_tokenized_txt_15]
+#                    ]
+
+# occupancy_R_coords_15 = [[avg_final_occupancy_R_coords_adj_json_15,      avg_occupancy_R_coords_adj_json_15],
+#                         [avg_final_occupancy_R_coords_adj_txt_15,            avg_occupancy_R_coords_adj_txt_15],
+#                         [avg_final_occupancy_R_coords_jpg_15,                avg_occupancy_R_coords_jpg_15],
+#                         [avg_final_occupancy_R_coords_json_15,               avg_occupancy_R_coords_json_15],
+#                         [avg_final_occupancy_R_coords_tokenized_txt_15,      avg_occupancy_R_coords_tokenized_txt_15],
+#                         [avg_final_occupancy_R_coords_ascii_txt_15,         avg_occupancy_R_coords_ascii_txt_15]
+#                         ]
+                    
+# line_NR_allo_15 = [[avg_line_NR_allo_adj_json_output_15,      avg_line_NR_allo_adj_json_15],
+#                   [avg_line_NR_allo_adj_txt_output_15,        avg_line_NR_allo_adj_txt_15],
+#                   [avg_line_NR_allo_jpg_output_15,            avg_line_NR_allo_jpg_15],
+#                   [avg_line_NR_allo_json_output_15,           avg_line_NR_allo_json_15],
+#                   [avg_line_NR_allo_tokenized_txt_output_15,  avg_line_NR_allo_tokenized_txt_15]
+#                   ]
+
+# occupancy_NR_allo_15 = [[avg_occupancy_NR_allo_adj_json_output_15,    avg_occupancy_NR_allo_adj_json_15],
+#                        [avg_occupancy_NR_allo_adj_txt_output_15,           avg_occupancy_NR_allo_adj_txt_15],
+#                        [avg_occupancy_NR_allo_jpg_output_15,               avg_occupancy_NR_allo_jpg_15],
+#                        [avg_occupancy_NR_allo_json_output_15,              avg_occupancy_NR_allo_json_15],
+#                        [avg_occupancy_NR_allo_tokenized_txt_output_15,     avg_occupancy_NR_allo_tokenized_txt_15],
+#                         [avg_occupancy_NR_allo_ascii_txt_output_15,        avg_occupancy_NR_allo_ascii_txt_15]
+#                        ]
+
+
+# line_R_allo_15 = [[avg_final_line_R_allo_adj_json_15,        avg_line_R_allo_adj_json_15],
+#                 [avg_final_line_R_allo_adj_txt_15,         avg_line_R_allo_adj_txt_15],
+#                 [avg_final_line_R_allo_jpg_15,             avg_line_R_allo_jpg_15],
+#                 [avg_final_line_R_allo_json_15,            avg_line_R_allo_json_15],
+#                 [avg_final_line_R_allo_tokenized_txt_15,   avg_line_R_allo_tokenized_txt_15]
+#                 ]
+
+# occupancy_R_allo_15 = [[avg_final_occupancy_R_allo_adj_json_15,      avg_occupancy_R_allo_adj_json_15],
+#                       [avg_final_occupancy_R_allo_adj_txt_15,            avg_occupancy_R_allo_adj_txt_15],
+#                       [avg_final_occupancy_R_allo_jpg_15,                avg_occupancy_R_allo_jpg_15],
+#                       [avg_final_occupancy_R_allo_json_15,               avg_occupancy_R_allo_json_15],
+#                       [avg_final_occupancy_R_allo_tokenized_txt_15,      avg_occupancy_R_allo_tokenized_txt_15],
+#                     [avg_final_occupancy_R_allo_ascii_txt_15,          avg_occupancy_R_allo_ascii_txt_15]
+#                       ]
+                    
+# line_NR_ego_15 = [[avg_line_NR_ego_adj_json_output_15,      avg_line_NR_ego_adj_json_15],
+#                 [avg_line_NR_ego_adj_txt_output_15,        avg_line_NR_ego_adj_txt_15],
+#                 [avg_line_NR_ego_jpg_output_15,            avg_line_NR_ego_jpg_15],
+#                 [avg_line_NR_ego_json_output_15,           avg_line_NR_ego_json_15],
+#                 [avg_line_NR_ego_tokenized_txt_output_15,  avg_line_NR_ego_tokenized_txt_15]
+#                 ]
+
+# occupancy_NR_ego_15 = [[avg_occupancy_NR_ego_adj_json_output_15,    avg_occupancy_NR_ego_adj_json_15],
+#                       [avg_occupancy_NR_ego_adj_txt_output_15,           avg_occupancy_NR_ego_adj_txt_15],
+#                       [avg_occupancy_NR_ego_jpg_output_15,               avg_occupancy_NR_ego_jpg_15],
+#                       [avg_occupancy_NR_ego_json_output_15,              avg_occupancy_NR_ego_json_15],
+#                       [avg_occupancy_NR_ego_tokenized_txt_output_15,     avg_occupancy_NR_ego_tokenized_txt_15],
+#                     [avg_occupancy_NR_ego_ascii_txt_output_15,         avg_occupancy_NR_ego_ascii_txt_15]
+#                       ]
+
+
+# line_R_ego_15 = [[avg_final_line_R_ego_adj_json_15,        avg_line_R_ego_adj_json_15],
+#                 [avg_final_line_R_ego_adj_txt_15,         avg_line_R_ego_adj_txt_15],
+#                 [avg_final_line_R_ego_jpg_15,             avg_line_R_ego_jpg_15],
+#                 [avg_final_line_R_ego_json_15,            avg_line_R_ego_json_15],
+#                 [avg_final_line_R_ego_tokenized_txt_15,   avg_line_R_ego_tokenized_txt_15]
+#                 ]
+
+# occupancy_R_ego_15 = [[avg_final_occupancy_R_ego_adj_json_15,      avg_occupancy_R_ego_adj_json_15],
+#                      [avg_final_occupancy_R_ego_adj_txt_15,            avg_occupancy_R_ego_adj_txt_15],
+#                      [avg_final_occupancy_R_ego_jpg_15,                avg_occupancy_R_ego_jpg_15],
+#                      [avg_final_occupancy_R_ego_json_15,               avg_occupancy_R_ego_json_15],
+#                      [avg_final_occupancy_R_ego_tokenized_txt_15,      avg_occupancy_R_ego_tokenized_txt_15],
+#                     [avg_final_occupancy_R_ego_ascii_txt_15,          avg_occupancy_R_ego_ascii_txt_15]
+#                      ]
 
 
 
@@ -1695,16 +1695,26 @@ for i in range(0,3):
     for j in range(0,2):
         axes[i,j].set_xscale('log')  # Set x-axis to logarithmic scale
         axes[i,j].grid(True, linestyle='--', alpha=0.6)
-        axes[i,j].set_ylabel("Completion Score (%)")
+
+        # # ylabel placed on all rows
+        # axes[i,j].set_ylabel("Completion Score (%)")
+        # ylabel placed only once in the figure
+        fig.supylabel("Completion Score (%)")
         if figure == 'all_tokens':
-            # Title for the figure using ALL tokens
-            axes[i,j].set_xlabel("Test Compute (Tokens)")
+            # # xlabel for the figure using ALL tokens, placed on all columns
+            # axes[i,j].set_xlabel("Test Compute (Tokens)")
+            # xlabel for the figure using ALL tokens, placed once
+            fig.supxlabel("Test Compute (Tokens)")
         elif figure == 'final_answer_tokens':
-            # Title for the figure using EXCLUSIVELY final answer tokens
-            axes[i,j].set_xlabel("Final Answer Test Compute (Tokens)")
+            # # xlabel for the figure using EXCLUSIVELY final answer tokens, placed on all columns
+            # axes[i,j].set_xlabel("Final Answer Test Compute (Tokens)")
+            # xlabel for the figure using ALL tokens, placed once
+            fig.supxlabel("Final Answer Test Compute (Tokens)")
         elif figure == 'thinking_tokens':
-             # Title for the figure using EXCLUSIVELY thinking tokens
-            axes[i,j].set_xlabel("Thinking Compute (Tokens)")
+            #  # xlabel for the figure using EXCLUSIVELY thinking tokens, placed on all columns
+            # axes[i,j].set_xlabel("Thinking Compute (Tokens)")
+            # xlabel for the figure using ALL tokens, placed once
+            fig.supxlabel("Thinking Compute (Tokens)")
 
 
 

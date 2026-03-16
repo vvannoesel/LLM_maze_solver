@@ -1271,6 +1271,7 @@ for idx, ax in enumerate(axes.flat):
     if idx < 3:
         x_tick_lbls = x_tick_lbls_line
     else:
+        pass
         x_tick_lbls = x_tick_lbls_occupancy
         ax.set_xlabel("Maze Size")
     ax.set_title(title, fontsize=11)
@@ -1538,11 +1539,16 @@ for col in range(6):
             ax.set_xticks(x_vals)
             ax.set_xticklabels(x_tick_lbls_occupancy)
 
-        if col == 0:
-            ax.set_ylabel("Completion Score (%)")
+        #Labelling axes in each row and col:
+        # if col == 0:
+            # ax.set_ylabel("Completion Score (%)")
 
-        if row == 1:
-            ax.set_xlabel("Maze Size")
+        # if row == 1:
+        #     ax.set_xlabel("Maze Size")
+
+    # Labelling axes once for the whole fig.
+    fig.supxlabel('Maze Size', x= 0.45)
+    fig.supylabel('Completion Score (%)')
 
     
     # # Save handles from the last plot (Bottom-Right) because it contains all 12 lines
@@ -1551,7 +1557,7 @@ for col in range(6):
 
 
 
-plt.suptitle("Completion Score", x=0.87*0.5, fontweight='bold')
+plt.suptitle("Completion Score", x=0.89*0.5, fontweight='bold')
 # Position the legend within that white space
 # legend=fig.legend(
 #     handles_for_legend, 
@@ -2788,11 +2794,16 @@ for col in range(6):
             ax.set_xticks(x_vals)
             ax.set_xticklabels(x_tick_lbls_occupancy)
 
-        if col == 0:
-            ax.set_ylabel("Number of Correct Consecutive Steps")
+        # Labelling axes in each row and col
+        # if col == 0:
+        #     ax.set_ylabel("Number of Correct Consecutive Steps")
 
-        if row == 1:
-            ax.set_xlabel("Maze Size")
+        # if row == 1:
+        #     ax.set_xlabel("Maze Size")
+
+    # Labelling axes once for the whole fig
+    fig.supxlabel('Maze Size', x=0.45)
+    fig.supylabel("Number of Correct Consecutive Steps From The Start")
 
     
     # # Save handles from the last plot (Bottom-Right) because it contains all 12 lines
@@ -2801,7 +2812,7 @@ for col in range(6):
 
 
 
-plt.suptitle("Number of Correct Consecutive Steps", x=0.85*0.5, fontweight='bold')
+plt.suptitle("Number of Correct Consecutive Steps From The Start", x=0.85*0.5, fontweight='bold')
 # Position the legend within that white space
 # legend=fig.legend(
 #     handles_for_legend, 
