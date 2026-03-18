@@ -111,6 +111,6 @@ Use **create_dataset_of_same_complexity.py**. This file uses the maze_generator_
 # Notes voor Val
 Wanneer je je hele code gaat testen, let dan vooral op het volgende:
 - wordt de juiste folderstructuur gecreeerd en zijn alle paths relatief? ZORG DAT ALLE PADEN RELATIEF ZIJN !!!
-- alle dependencies correct gelist worden in de instructies. Mis ik er geen?? - je mist 'pip install google-genai'
+- alle dependencies correct gelist worden in de instructies. Mis ik er geen?? - je mist 'pip install google-genai', je mist 'python -m pip install scipy'
 - pas .gitignore aan zodat anderen niet last hebben van alle files die ik alleen locaal heb. 
 - in active environment, pip install pandas (for charts).

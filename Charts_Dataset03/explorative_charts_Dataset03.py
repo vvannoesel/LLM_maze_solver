@@ -6,6 +6,8 @@ sys.path.append(parent_directory)
 
 import numpy as np
 import matplotlib.pyplot as plt
+import pandas as pd
+from scipy import stats
 import results_Dataset03_3x3 as r3
 import results_Dataset03_6x6 as r6
 import results_Dataset03_15x15 as r15
@@ -775,6 +777,38 @@ def plot_keyword(ax, datasets, title, ylabel):
     x_vals = np.array(x_vals)
     y_vals = np.array(y_vals)
 
+    # calculate the Pearson Correlation Coefficient to find out which keywords are correlated to performance (-1 and 1 indicate correlation, 0 is no correlation)
+    pearson=stats.pearsonr(x_vals, y_vals)
+    # print('scipy pearson:', title, '\n', pearson, '\n') #prints both p-value and r-value (called 'statistic')
+
+    #print each r- and p-value per keyword to terminal
+    data = {'Keyword Category': title, #['Algorithm', 'Heuristic', 'Frustration', 'False Confidence', 'Backtracking', 'Restart', 'Reverse Search', 'Step-by-Step', 'Verification'],
+            'correlation coefficient': pearson[0],
+            'p-value': [pearson[1]]}
+    df=pd.DataFrame(data)
+    print(df)
+
+    # add p and r value as textbox in each subplot
+    if pearson[1] < 0.001:
+        textstr = '\n'.join((
+        r'$r=%.2f$' % (pearson[0], ),
+        r'$p <0.001$'))
+    else:
+        textstr = '\n'.join((
+        r'$r=%.2f$' % (pearson[0], ),
+        r'$p=%.3f$' % (pearson[1], )))
+
+    #THIS WORKS, BUT MISSES THE P-VALUE: 
+    # data = {'Performance Score': x_vals,
+    #         'Occurrence in dataset': y_vals}
+    # df=pd.DataFrame(data)
+    # pearson_corr = df.corr(method='pearson')
+    # print('correlation coefficient', title, '\n', pearson_corr, '\n' )
+
+    
+    
+    
+
     # Trend line
     z = np.polyfit(x_vals, y_vals, 1)
     p = np.poly1d(z)
@@ -794,6 +828,12 @@ def plot_keyword(ax, datasets, title, ylabel):
     # ax.set_xlabel('Mean Completion Score (%)')
     # ax.set_ylabel(ylabel)
     ax.grid(linestyle=':', alpha=0.6)
+    
+    # these are matplotlib.patch.Patch properties
+    props = dict(boxstyle='round', facecolor='wheat', alpha=0.8)
+    # place a text box in upper left in axes coords
+    ax.text(0.35, 0.15, textstr, transform=ax.transAxes, fontsize=9,
+        verticalalignment='top', bbox=props)
 
 
 # Create 2x4 subplot grid (8 total)
