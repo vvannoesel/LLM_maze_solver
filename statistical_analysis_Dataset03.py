@@ -659,7 +659,7 @@ df = pd.DataFrame({
 # Create table image
 fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
-plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 3x3 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Types", fontsize=16, pad=20)
+plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 3x3/7x7 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
 
 table = ax.table(
@@ -691,7 +691,7 @@ df = pd.DataFrame({
 # Create table image
 fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
-plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 6x6 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Types", fontsize=16, pad=20)
+plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 6x6/13x13 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
 
 table = ax.table(
@@ -722,7 +722,7 @@ df = pd.DataFrame({
 # Create table image
 fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
-plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 15x15 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Types", fontsize=16, pad=20)
+plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 15x15/31x31 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
 
 table = ax.table(
