@@ -2267,6 +2267,37 @@ avg_occupancy_R_ego_jpg_raw_score_15 = np.mean(r15.occupancy_R_ego_jpg_raw_score
 avg_occupancy_R_ego_json_raw_score_15 = np.mean(r15.occupancy_R_ego_json_raw_score_15)
 avg_occupancy_R_ego_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_R_ego_tokenized_txt_raw_score_15)
 
+print('NR - coords - 3x3 - Adj json: ', avg_line_NR_coords_adj_json_raw_score_3, '\n')
+print('NR - coords - 6x6 - Adj json: ', avg_line_NR_coords_adj_json_raw_score_6, '\n')
+print('NR - coords - 15x15 - Adj json: ', avg_line_NR_coords_adj_json_raw_score_15, '\n')
+print('NR - coords - 7x7 - Adj json: ', avg_occupancy_NR_coords_adj_json_raw_score_3, '\n')
+print('NR - coords - 13x13 - Adj json: ', avg_occupancy_NR_coords_adj_json_raw_score_6, '\n')
+print('NR - coords - 31x31 - Adj json: ', avg_occupancy_NR_coords_adj_json_raw_score_15, '\n')
+
+print('NR - coords - 3x3 - Adj txt: ', avg_line_NR_coords_adj_txt_raw_score_3, '\n')
+print('NR - coords - 6x6 - Adj txt: ', avg_line_NR_coords_adj_txt_raw_score_6, '\n')
+print('NR - coords - 15x15 - Adj txt: ', avg_line_NR_coords_adj_txt_raw_score_15, '\n')
+print('NR - coords - 7x7 - Adj txt: ', avg_occupancy_NR_coords_adj_txt_raw_score_3, '\n')
+print('NR - coords - 13x13 - Adj txt: ', avg_occupancy_NR_coords_adj_txt_raw_score_6, '\n')
+print('NR - coords - 31x31 - Adj txt: ', avg_occupancy_NR_coords_adj_txt_raw_score_15, '\n')
+
+print('R - coords - 3x3 - Adj json: ', avg_line_R_coords_adj_json_raw_score_3, '\n')
+print('R - coords - 6x6 - Adj json: ', avg_line_R_coords_adj_json_raw_score_6, '\n')
+print('R - coords - 15x15 - Adj json: ', avg_line_R_coords_adj_json_raw_score_15, '\n')
+print('R - coords - 7x7 - Adj json: ', avg_occupancy_R_coords_adj_json_raw_score_3, '\n')
+print('R - coords - 13x13 - Adj json: ', avg_occupancy_R_coords_adj_json_raw_score_6, '\n')
+print('R - coords - 31x31 - Adj json: ', avg_occupancy_R_coords_adj_json_raw_score_15, '\n')
+
+print('R - coords - 3x3 - Adj txt: ', avg_line_R_coords_adj_txt_raw_score_3, '\n')
+print('R - coords - 6x6 - Adj txt: ', avg_line_R_coords_adj_txt_raw_score_6, '\n')
+print('R - coords - 15x15 - Adj txt: ', avg_line_R_coords_adj_txt_raw_score_15, '\n')
+print('R - coords - 7x7 - Adj txt: ', avg_occupancy_R_coords_adj_txt_raw_score_3, '\n')
+print('R - coords - 13x13 - Adj txt: ', avg_occupancy_R_coords_adj_txt_raw_score_6, '\n')
+print('R - coords - 31x31 - Adj txt: ', avg_occupancy_R_coords_adj_txt_raw_score_15, '\n')
+
+
+
+
 
 
 # # Dataset for top chart
@@ -2564,7 +2595,7 @@ error_occupancy_R_allo = [
     [confidence_interval(r3.occupancy_R_allo_jpg_raw_score_3),            confidence_interval(r6.occupancy_R_allo_jpg_raw_score_6),            confidence_interval(r15.occupancy_R_allo_jpg_raw_score_15)],
     [confidence_interval(r3.occupancy_R_allo_json_raw_score_3),           confidence_interval(r6.occupancy_R_allo_json_raw_score_6),           confidence_interval(r15.occupancy_R_allo_json_raw_score_15)],
     [confidence_interval(r3.occupancy_R_allo_tokenized_txt_raw_score_3),  confidence_interval(r6.occupancy_R_allo_tokenized_txt_raw_score_6),  confidence_interval(r15.occupancy_R_allo_tokenized_txt_raw_score_15)],
-    [ confidence_interval(r3.occupancy_R_allo_ascii_txt_raw_score_3),     confidence_interval(r6.occupancy_R_allo_ascii_txt_raw_score_6),      confidence_interval(r15.occupancy_R_allo_ascii_txt_raw_score_15)]
+    [confidence_interval(r3.occupancy_R_allo_ascii_txt_raw_score_3),     confidence_interval(r6.occupancy_R_allo_ascii_txt_raw_score_6),      confidence_interval(r15.occupancy_R_allo_ascii_txt_raw_score_15)]
 ]
 
 # Line, R, ego

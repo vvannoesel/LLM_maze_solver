@@ -239,7 +239,7 @@ def occurrence_extractor(input_vector_name, input_vector_accuracy_vector, empty_
     Then it takes the corresponding completion scores and saves them to a new list. Used to show that high token output is a 
     sign of giving up on the task. 
     '''
-    for a in range(0,10):
+    for a in range(len(input_vector_name)):
         # print(a)
         if input_vector_name[a] == 650.0 or input_vector_name[a] == 4000.0:
             # print(input_vector_accuracy_vector[a])

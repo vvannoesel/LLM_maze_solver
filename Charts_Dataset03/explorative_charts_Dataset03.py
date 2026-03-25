@@ -2164,12 +2164,12 @@ mixed_datasets_coords_algorithm_6_15 = [
     (occurrences_binary_line_coords_json_algorithm_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_algorithm_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_algorithm_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_algorithm_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_algorithm_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_algorithm_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_algorithm_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_algorithm_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_algorithm_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_algorithm_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_algorithm_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_algorithm_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_algorithm_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_algorithm_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_algorithm_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 ]
 
 # List of (occurrence_vector, score_vector, label)
@@ -2190,12 +2190,12 @@ mixed_datasets_coords_heuristic_6_15 = [
     (occurrences_binary_line_coords_json_heuristic_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_heuristic_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_heuristic_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_heuristic_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_heuristic_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_heuristic_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_heuristic_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_heuristic_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_heuristic_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_heuristic_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_heuristic_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_heuristic_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_heuristic_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_heuristic_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_heuristic_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2217,12 +2217,12 @@ mixed_datasets_coords_backtracking_6_15 = [
     (occurrences_binary_line_coords_json_backtracking_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_backtracking_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_backtracking_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_backtracking_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_backtracking_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_backtracking_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_backtracking_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_backtracking_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_backtracking_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_backtracking_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_backtracking_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_backtracking_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_backtracking_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_backtracking_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_backtracking_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2245,12 +2245,12 @@ mixed_datasets_coords_false_confidence_6_15 = [
     (occurrences_binary_line_coords_json_false_confidence_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_false_confidence_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_false_confidence_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_false_confidence_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_false_confidence_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_false_confidence_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_false_confidence_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_false_confidence_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_false_confidence_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_false_confidence_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_false_confidence_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_false_confidence_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_false_confidence_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_false_confidence_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_false_confidence_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2273,12 +2273,12 @@ mixed_datasets_coords_frustration_6_15 = [
     (occurrences_binary_line_coords_json_frustration_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_frustration_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_frustration_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_frustration_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_frustration_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_frustration_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_frustration_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_frustration_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_frustration_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_frustration_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_frustration_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_frustration_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_frustration_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_frustration_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_frustration_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2300,12 +2300,12 @@ mixed_datasets_coords_restart_6_15 = [
     (occurrences_binary_line_coords_json_restart_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_restart_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_restart_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_restart_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_restart_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_restart_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_restart_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_restart_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_restart_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_restart_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_restart_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_restart_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_restart_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_restart_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_restart_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2328,12 +2328,12 @@ mixed_datasets_coords_reverse_search_6_15 = [
     (occurrences_binary_line_coords_json_reverse_search_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_reverse_search_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_reverse_search_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_reverse_search_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_reverse_search_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_reverse_search_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_reverse_search_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_reverse_search_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_reverse_search_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_reverse_search_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_reverse_search_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_reverse_search_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_reverse_search_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_reverse_search_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_reverse_search_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2356,12 +2356,12 @@ mixed_datasets_coords_step_by_step_6_15 = [
     (occurrences_binary_line_coords_json_step_by_step_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_step_by_step_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_step_by_step_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_step_by_step_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_step_by_step_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_step_by_step_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_step_by_step_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_step_by_step_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'h'),
-    (occurrences_binary_occupancy_coords_ascii_step_by_step_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_step_by_step_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_step_by_step_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_step_by_step_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_step_by_step_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_step_by_step_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'd'),
+    (occurrences_binary_occupancy_coords_ascii_step_by_step_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2383,12 +2383,12 @@ mixed_datasets_coords_verification_6_15 = [
     (occurrences_binary_line_coords_json_verification_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_verification_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_verification_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_verification_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_verification_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_verification_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_verification_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_verification_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_verification_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_verification_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_verification_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_verification_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_verification_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_verification_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_verification_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 ]
 
 
@@ -2416,12 +2416,12 @@ mixed_datasets_allo_algorithm_6_15 = [
     (occurrences_binary_line_allo_json_algorithm_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_algorithm_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_algorithm_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_algorithm_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_algorithm_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_algorithm_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_algorithm_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_algorithm_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_algorithm_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_algorithm_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_algorithm_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_algorithm_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_algorithm_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_algorithm_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_algorithm_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 ]
 
 # List of (occurrence_vector, score_vector, label)
@@ -2442,12 +2442,12 @@ mixed_datasets_allo_heuristic_6_15 = [
     (occurrences_binary_line_allo_json_heuristic_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_heuristic_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_heuristic_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_heuristic_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_heuristic_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_heuristic_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_heuristic_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_heuristic_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_heuristic_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_heuristic_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_heuristic_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_heuristic_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_heuristic_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_heuristic_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_heuristic_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2469,12 +2469,12 @@ mixed_datasets_allo_backtracking_6_15 = [
     (occurrences_binary_line_allo_json_backtracking_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_backtracking_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_backtracking_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_backtracking_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_backtracking_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_backtracking_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_backtracking_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_backtracking_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_backtracking_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_backtracking_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_backtracking_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_backtracking_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_backtracking_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_backtracking_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_backtracking_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2497,12 +2497,12 @@ mixed_datasets_allo_false_confidence_6_15 = [
     (occurrences_binary_line_allo_json_false_confidence_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_false_confidence_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_false_confidence_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_false_confidence_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_false_confidence_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_false_confidence_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_false_confidence_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_false_confidence_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_false_confidence_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_false_confidence_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_false_confidence_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_false_confidence_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_false_confidence_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_false_confidence_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_false_confidence_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2525,12 +2525,12 @@ mixed_datasets_allo_frustration_6_15 = [
     (occurrences_binary_line_allo_json_frustration_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_frustration_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_frustration_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_frustration_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_frustration_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_frustration_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_frustration_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_frustration_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_frustration_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_frustration_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_frustration_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_frustration_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_frustration_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_frustration_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_frustration_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2552,12 +2552,12 @@ mixed_datasets_allo_restart_6_15 = [
     (occurrences_binary_line_allo_json_restart_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_restart_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_restart_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_restart_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_restart_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_restart_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_restart_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_restart_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_restart_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_restart_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_restart_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_restart_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_restart_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_restart_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_restart_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2580,12 +2580,12 @@ mixed_datasets_allo_reverse_search_6_15 = [
     (occurrences_binary_line_allo_json_reverse_search_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_reverse_search_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_reverse_search_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_reverse_search_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_reverse_search_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_reverse_search_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_reverse_search_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_reverse_search_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_reverse_search_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_reverse_search_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_reverse_search_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_reverse_search_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_reverse_search_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_reverse_search_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_reverse_search_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2608,12 +2608,12 @@ mixed_datasets_allo_step_by_step_6_15 = [
     (occurrences_binary_line_allo_json_step_by_step_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_step_by_step_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_step_by_step_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_step_by_step_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_step_by_step_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_step_by_step_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_step_by_step_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_step_by_step_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'h'),
-    (occurrences_binary_occupancy_allo_ascii_step_by_step_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_step_by_step_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_step_by_step_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_step_by_step_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_step_by_step_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_step_by_step_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'd'),
+    (occurrences_binary_occupancy_allo_ascii_step_by_step_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2635,12 +2635,12 @@ mixed_datasets_allo_verification_6_15 = [
     (occurrences_binary_line_allo_json_verification_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_verification_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_verification_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_verification_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_verification_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_verification_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_verification_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_verification_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_verification_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_verification_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_verification_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_verification_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_verification_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_verification_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_verification_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 ]
 
 
@@ -2675,12 +2675,12 @@ mixed_datasets_ego_algorithm_6_15 = [
     (occurrences_binary_line_ego_json_algorithm_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_algorithm_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_algorithm_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_algorithm_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_algorithm_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_algorithm_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_algorithm_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_algorithm_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_algorithm_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_algorithm_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_algorithm_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_algorithm_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_algorithm_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_algorithm_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_algorithm_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 ]
 
 # List of (occurrence_vector, score_vector, label)
@@ -2701,12 +2701,12 @@ mixed_datasets_ego_heuristic_6_15 = [
     (occurrences_binary_line_ego_json_heuristic_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_heuristic_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_heuristic_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_heuristic_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_heuristic_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_heuristic_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_heuristic_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_heuristic_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_heuristic_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_heuristic_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_heuristic_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_heuristic_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_heuristic_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_heuristic_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_heuristic_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2728,12 +2728,12 @@ mixed_datasets_ego_backtracking_6_15 = [
     (occurrences_binary_line_ego_json_backtracking_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_backtracking_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_backtracking_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_backtracking_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_backtracking_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_backtracking_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_backtracking_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_backtracking_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_backtracking_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_backtracking_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_backtracking_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_backtracking_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_backtracking_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_backtracking_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_backtracking_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2756,12 +2756,12 @@ mixed_datasets_ego_false_confidence_6_15 = [
     (occurrences_binary_line_ego_json_false_confidence_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_false_confidence_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_false_confidence_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_false_confidence_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_false_confidence_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_false_confidence_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_false_confidence_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_false_confidence_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_false_confidence_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_false_confidence_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_false_confidence_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_false_confidence_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_false_confidence_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_false_confidence_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_false_confidence_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2784,12 +2784,12 @@ mixed_datasets_ego_frustration_6_15 = [
     (occurrences_binary_line_ego_json_frustration_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_frustration_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_frustration_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_frustration_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_frustration_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_frustration_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_frustration_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_frustration_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_frustration_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_frustration_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_frustration_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_frustration_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_frustration_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_frustration_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_frustration_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2811,12 +2811,12 @@ mixed_datasets_ego_restart_6_15 = [
     (occurrences_binary_line_ego_json_restart_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_restart_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_restart_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_restart_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_restart_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_restart_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_restart_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_restart_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_restart_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_restart_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_restart_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_restart_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_restart_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_restart_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_restart_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2839,12 +2839,12 @@ mixed_datasets_ego_reverse_search_6_15 = [
     (occurrences_binary_line_ego_json_reverse_search_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_reverse_search_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_reverse_search_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_reverse_search_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_reverse_search_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_reverse_search_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_reverse_search_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_reverse_search_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_reverse_search_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_reverse_search_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_reverse_search_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_reverse_search_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_reverse_search_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_reverse_search_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_reverse_search_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2867,12 +2867,12 @@ mixed_datasets_ego_step_by_step_6_15 = [
     (occurrences_binary_line_ego_json_step_by_step_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_step_by_step_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_step_by_step_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_step_by_step_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_step_by_step_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_step_by_step_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_step_by_step_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_step_by_step_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'h'),
-    (occurrences_binary_occupancy_ego_ascii_step_by_step_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_step_by_step_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_step_by_step_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_step_by_step_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_step_by_step_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_step_by_step_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'd'),
+    (occurrences_binary_occupancy_ego_ascii_step_by_step_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -2894,12 +2894,12 @@ mixed_datasets_ego_verification_6_15 = [
     (occurrences_binary_line_ego_json_verification_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_verification_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_verification_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_verification_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_verification_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_verification_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_verification_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_verification_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_verification_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_verification_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_verification_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_verification_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_verification_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_verification_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_verification_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 ]
 
 
@@ -2929,12 +2929,12 @@ huge_datasets_algorithm_6_15 = [
     (occurrences_binary_line_coords_json_algorithm_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_algorithm_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_algorithm_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_algorithm_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_algorithm_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_algorithm_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_algorithm_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_algorithm_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_algorithm_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_algorithm_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_algorithm_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_algorithm_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_algorithm_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_algorithm_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_algorithm_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_allo_adj_json_algorithm_6, r6.line_R_allo_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_allo_adj_txt_algorithm_6, r6.line_R_allo_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_allo_json_algorithm_6, r6.line_R_allo_json_6, "Line JSON", 'tab:red', 'o'),
@@ -2951,12 +2951,12 @@ huge_datasets_algorithm_6_15 = [
     (occurrences_binary_line_allo_json_algorithm_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_algorithm_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_algorithm_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_algorithm_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_algorithm_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_algorithm_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_algorithm_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_algorithm_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_algorithm_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_algorithm_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_algorithm_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_algorithm_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_algorithm_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_algorithm_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_algorithm_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_ego_adj_json_algorithm_6, r6.line_R_ego_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_ego_adj_txt_algorithm_6, r6.line_R_ego_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_ego_json_algorithm_6, r6.line_R_ego_json_6, "Line JSON", 'tab:red', 'o'),
@@ -2973,12 +2973,12 @@ huge_datasets_algorithm_6_15 = [
     (occurrences_binary_line_ego_json_algorithm_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_algorithm_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_algorithm_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_algorithm_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_algorithm_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_algorithm_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_algorithm_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_algorithm_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_algorithm_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_algorithm_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_algorithm_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_algorithm_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_algorithm_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_algorithm_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_algorithm_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 ]
 
 # List of (occurrence_vector, score_vector, label)
@@ -2999,12 +2999,12 @@ huge_datasets_heuristic_6_15 = [
     (occurrences_binary_line_coords_json_heuristic_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_heuristic_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_heuristic_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_heuristic_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_heuristic_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_heuristic_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_heuristic_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_heuristic_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_heuristic_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_heuristic_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_heuristic_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_heuristic_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_heuristic_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_heuristic_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_heuristic_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_allo_adj_json_heuristic_6, r6.line_R_allo_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_allo_adj_txt_heuristic_6, r6.line_R_allo_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_allo_json_heuristic_6, r6.line_R_allo_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3021,12 +3021,12 @@ huge_datasets_heuristic_6_15 = [
     (occurrences_binary_line_allo_json_heuristic_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_heuristic_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_heuristic_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_heuristic_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_heuristic_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_heuristic_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_heuristic_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_heuristic_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_heuristic_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_heuristic_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_heuristic_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_heuristic_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_heuristic_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_heuristic_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_heuristic_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_ego_adj_json_heuristic_6, r6.line_R_ego_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_ego_adj_txt_heuristic_6, r6.line_R_ego_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_ego_json_heuristic_6, r6.line_R_ego_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3043,12 +3043,12 @@ huge_datasets_heuristic_6_15 = [
     (occurrences_binary_line_ego_json_heuristic_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_heuristic_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_heuristic_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_heuristic_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_heuristic_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_heuristic_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_heuristic_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_heuristic_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_heuristic_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_heuristic_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_heuristic_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_heuristic_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_heuristic_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_heuristic_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_heuristic_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 
 ]
@@ -3071,12 +3071,12 @@ huge_datasets_backtracking_6_15 = [
     (occurrences_binary_line_coords_json_backtracking_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_backtracking_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_backtracking_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_backtracking_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_backtracking_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_backtracking_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_backtracking_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_backtracking_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_backtracking_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_backtracking_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_backtracking_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_backtracking_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_backtracking_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_backtracking_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_backtracking_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_allo_adj_json_backtracking_6, r6.line_R_allo_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_allo_adj_txt_backtracking_6, r6.line_R_allo_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_allo_json_backtracking_6, r6.line_R_allo_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3093,12 +3093,12 @@ huge_datasets_backtracking_6_15 = [
     (occurrences_binary_line_allo_json_backtracking_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_backtracking_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_backtracking_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_backtracking_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_backtracking_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_backtracking_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_backtracking_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_backtracking_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_backtracking_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_backtracking_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_backtracking_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_backtracking_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_backtracking_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_backtracking_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_backtracking_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_ego_adj_json_backtracking_6, r6.line_R_ego_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_ego_adj_txt_backtracking_6, r6.line_R_ego_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_ego_json_backtracking_6, r6.line_R_ego_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3115,12 +3115,12 @@ huge_datasets_backtracking_6_15 = [
     (occurrences_binary_line_ego_json_backtracking_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_backtracking_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_backtracking_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_backtracking_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_backtracking_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_backtracking_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_backtracking_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_backtracking_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_backtracking_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_backtracking_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_backtracking_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_backtracking_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_backtracking_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_backtracking_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_backtracking_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 
 ]
@@ -3144,12 +3144,12 @@ huge_datasets_false_confidence_6_15 = [
     (occurrences_binary_line_coords_json_false_confidence_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_false_confidence_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_false_confidence_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_false_confidence_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_false_confidence_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_false_confidence_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_false_confidence_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_false_confidence_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_false_confidence_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_false_confidence_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_false_confidence_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_false_confidence_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_false_confidence_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_false_confidence_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_false_confidence_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_allo_adj_json_false_confidence_6, r6.line_R_allo_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_allo_adj_txt_false_confidence_6, r6.line_R_allo_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_allo_json_false_confidence_6, r6.line_R_allo_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3166,12 +3166,12 @@ huge_datasets_false_confidence_6_15 = [
     (occurrences_binary_line_allo_json_false_confidence_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_false_confidence_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_false_confidence_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_false_confidence_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_false_confidence_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_false_confidence_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_false_confidence_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_false_confidence_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_false_confidence_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_false_confidence_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_false_confidence_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_false_confidence_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_false_confidence_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_false_confidence_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_false_confidence_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_ego_adj_json_false_confidence_6, r6.line_R_ego_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_ego_adj_txt_false_confidence_6, r6.line_R_ego_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_ego_json_false_confidence_6, r6.line_R_ego_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3188,12 +3188,12 @@ huge_datasets_false_confidence_6_15 = [
     (occurrences_binary_line_ego_json_false_confidence_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_false_confidence_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_false_confidence_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_false_confidence_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_false_confidence_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_false_confidence_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_false_confidence_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_false_confidence_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_false_confidence_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_false_confidence_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_false_confidence_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_false_confidence_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_false_confidence_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_false_confidence_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_false_confidence_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -3216,12 +3216,12 @@ huge_datasets_frustration_6_15 = [
     (occurrences_binary_line_coords_json_frustration_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_frustration_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_frustration_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_frustration_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_frustration_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_frustration_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_frustration_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_frustration_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_frustration_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_frustration_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_frustration_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_frustration_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_frustration_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_frustration_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_frustration_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_allo_adj_json_frustration_6, r6.line_R_allo_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_allo_adj_txt_frustration_6, r6.line_R_allo_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_allo_json_frustration_6, r6.line_R_allo_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3238,12 +3238,12 @@ huge_datasets_frustration_6_15 = [
     (occurrences_binary_line_allo_json_frustration_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_frustration_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_frustration_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_frustration_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_frustration_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_frustration_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_frustration_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_frustration_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_frustration_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_frustration_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_frustration_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_frustration_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_frustration_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_frustration_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_frustration_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_ego_adj_json_frustration_6, r6.line_R_ego_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_ego_adj_txt_frustration_6, r6.line_R_ego_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_ego_json_frustration_6, r6.line_R_ego_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3260,12 +3260,12 @@ huge_datasets_frustration_6_15 = [
     (occurrences_binary_line_ego_json_frustration_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_frustration_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_frustration_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_frustration_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_frustration_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_frustration_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_frustration_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_frustration_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_frustration_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_frustration_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_frustration_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_frustration_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_frustration_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_frustration_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_frustration_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 
 ]
@@ -3288,12 +3288,12 @@ huge_datasets_restart_6_15 = [
     (occurrences_binary_line_coords_json_restart_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_restart_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_restart_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_restart_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_restart_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_restart_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_restart_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_restart_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_restart_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_restart_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_restart_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_restart_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_restart_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_restart_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_restart_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_ego_adj_json_restart_6, r6.line_R_ego_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_ego_adj_txt_restart_6, r6.line_R_ego_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_ego_json_restart_6, r6.line_R_ego_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3310,12 +3310,12 @@ huge_datasets_restart_6_15 = [
     (occurrences_binary_line_ego_json_restart_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_restart_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_restart_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_restart_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_restart_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_restart_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_restart_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_restart_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_restart_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_restart_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_restart_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_restart_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_restart_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_restart_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_restart_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_allo_adj_json_restart_6, r6.line_R_allo_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_allo_adj_txt_restart_6, r6.line_R_allo_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_allo_json_restart_6, r6.line_R_allo_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3332,12 +3332,12 @@ huge_datasets_restart_6_15 = [
     (occurrences_binary_line_allo_json_restart_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_restart_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_restart_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_restart_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_restart_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_restart_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_restart_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_restart_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_restart_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_restart_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_restart_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_restart_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_restart_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_restart_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_restart_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 
 ]
@@ -3361,12 +3361,12 @@ huge_datasets_reverse_search_6_15 = [
     (occurrences_binary_line_coords_json_reverse_search_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_reverse_search_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_reverse_search_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_reverse_search_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_reverse_search_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_reverse_search_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_reverse_search_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_reverse_search_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_reverse_search_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_reverse_search_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_reverse_search_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_reverse_search_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_reverse_search_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_reverse_search_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_reverse_search_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_allo_adj_json_reverse_search_6, r6.line_R_allo_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_allo_adj_txt_reverse_search_6, r6.line_R_allo_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_allo_json_reverse_search_6, r6.line_R_allo_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3383,12 +3383,12 @@ huge_datasets_reverse_search_6_15 = [
     (occurrences_binary_line_allo_json_reverse_search_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_reverse_search_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_reverse_search_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_reverse_search_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_reverse_search_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_reverse_search_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_reverse_search_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_reverse_search_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_reverse_search_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_reverse_search_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_reverse_search_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_reverse_search_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_reverse_search_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_reverse_search_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_reverse_search_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_ego_adj_json_reverse_search_6, r6.line_R_ego_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_ego_adj_txt_reverse_search_6, r6.line_R_ego_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_ego_json_reverse_search_6, r6.line_R_ego_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3405,12 +3405,12 @@ huge_datasets_reverse_search_6_15 = [
     (occurrences_binary_line_ego_json_reverse_search_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_reverse_search_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_reverse_search_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_reverse_search_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_reverse_search_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_reverse_search_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_reverse_search_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_reverse_search_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_reverse_search_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_reverse_search_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_reverse_search_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_reverse_search_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_reverse_search_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_reverse_search_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_reverse_search_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     
 
 ]
@@ -3434,12 +3434,12 @@ huge_datasets_step_by_step_6_15 = [
     (occurrences_binary_line_allo_json_step_by_step_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_step_by_step_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_step_by_step_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_step_by_step_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_step_by_step_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_step_by_step_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_step_by_step_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_step_by_step_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'h'),
-    (occurrences_binary_occupancy_allo_ascii_step_by_step_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_step_by_step_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_step_by_step_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_step_by_step_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_step_by_step_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_step_by_step_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'd'),
+    (occurrences_binary_occupancy_allo_ascii_step_by_step_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_ego_adj_json_step_by_step_6, r6.line_R_ego_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_ego_adj_txt_step_by_step_6, r6.line_R_ego_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_ego_json_step_by_step_6, r6.line_R_ego_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3456,12 +3456,12 @@ huge_datasets_step_by_step_6_15 = [
     (occurrences_binary_line_ego_json_step_by_step_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_step_by_step_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_step_by_step_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_step_by_step_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_step_by_step_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_step_by_step_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_step_by_step_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_step_by_step_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'h'),
-    (occurrences_binary_occupancy_ego_ascii_step_by_step_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_step_by_step_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_step_by_step_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_step_by_step_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_step_by_step_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_step_by_step_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'd'),
+    (occurrences_binary_occupancy_ego_ascii_step_by_step_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_coords_adj_json_step_by_step_6, r6.line_R_coords_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_coords_adj_txt_step_by_step_6, r6.line_R_coords_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_coords_json_step_by_step_6, r6.line_R_coords_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3478,12 +3478,12 @@ huge_datasets_step_by_step_6_15 = [
     (occurrences_binary_line_coords_json_step_by_step_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_step_by_step_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_step_by_step_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_step_by_step_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_step_by_step_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_step_by_step_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_step_by_step_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_step_by_step_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'h'),
-    (occurrences_binary_occupancy_coords_ascii_step_by_step_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_step_by_step_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_step_by_step_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_step_by_step_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_step_by_step_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_step_by_step_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple', 'd'),
+    (occurrences_binary_occupancy_coords_ascii_step_by_step_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 
 ]
 
@@ -3505,12 +3505,12 @@ huge_datasets_verification_6_15 = [
     (occurrences_binary_line_coords_json_verification_15, r15.line_R_coords_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_coords_jpg_verification_15, r15.line_R_coords_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_coords_tokenized_verification_15, r15.line_R_coords_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_coords_adj_json_verification_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_coords_adj_txt_verification_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_coords_json_verification_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_coords_jpg_verification_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_coords_tokenized_verification_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_coords_ascii_verification_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_coords_adj_json_verification_15, r15.occupancy_R_coords_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_coords_adj_txt_verification_15, r15.occupancy_R_coords_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_coords_json_verification_15, r15.occupancy_R_coords_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_coords_jpg_verification_15, r15.occupancy_R_coords_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_coords_tokenized_verification_15, r15.occupancy_R_coords_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_coords_ascii_verification_15, r15.occupancy_R_coords_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_allo_adj_json_verification_6, r6.line_R_allo_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_allo_adj_txt_verification_6, r6.line_R_allo_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_allo_json_verification_6, r6.line_R_allo_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3527,12 +3527,12 @@ huge_datasets_verification_6_15 = [
     (occurrences_binary_line_allo_json_verification_15, r15.line_R_allo_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_allo_jpg_verification_15, r15.line_R_allo_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_allo_tokenized_verification_15, r15.line_R_allo_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_allo_adj_json_verification_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_allo_adj_txt_verification_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_allo_json_verification_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_allo_jpg_verification_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_allo_tokenized_verification_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_allo_ascii_verification_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_allo_adj_json_verification_15, r15.occupancy_R_allo_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_allo_adj_txt_verification_15, r15.occupancy_R_allo_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_allo_json_verification_15, r15.occupancy_R_allo_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_allo_jpg_verification_15, r15.occupancy_R_allo_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_allo_tokenized_verification_15, r15.occupancy_R_allo_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_allo_ascii_verification_15, r15.occupancy_R_allo_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
     (occurrences_binary_line_ego_adj_json_verification_6, r6.line_R_ego_adj_json_6, "Line Adjacency JSON", 'tab:blue', 'o'),
     (occurrences_binary_line_ego_adj_txt_verification_6, r6.line_R_ego_adj_txt_6, "Line Adjacency Txt", 'tab:orange', 'o'),
     (occurrences_binary_line_ego_json_verification_6, r6.line_R_ego_json_6, "Line JSON", 'tab:red', 'o'),
@@ -3549,15 +3549,962 @@ huge_datasets_verification_6_15 = [
     (occurrences_binary_line_ego_json_verification_15, r15.line_R_ego_json_15, "Line JSON", 'tab:red', 's'),
     (occurrences_binary_line_ego_jpg_verification_15, r15.line_R_ego_jpg_15, "Line JPG", 'tab:green', 's'),
     (occurrences_binary_line_ego_tokenized_verification_15, r15.line_R_ego_tokenized_txt_15, "Line Tokenized", 'tab:purple', 's'),
-    (occurrences_binary_occupancy_ego_adj_json_verification_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'h'),
-    (occurrences_binary_occupancy_ego_adj_txt_verification_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'h'),
-    (occurrences_binary_occupancy_ego_json_verification_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'h'),
-    (occurrences_binary_occupancy_ego_jpg_verification_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'h'),
-    (occurrences_binary_occupancy_ego_tokenized_verification_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'h'),
-    (occurrences_binary_occupancy_ego_ascii_verification_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'h'),
+    (occurrences_binary_occupancy_ego_adj_json_verification_15, r15.occupancy_R_ego_adj_json_15, "Occupancy Adjacency JSON", 'tab:blue', 'd'),
+    (occurrences_binary_occupancy_ego_adj_txt_verification_15, r15.occupancy_R_ego_adj_txt_15, "Occupancy Adjacency Txt", 'tab:orange', 'd'),
+    (occurrences_binary_occupancy_ego_json_verification_15, r15.occupancy_R_ego_json_15, "Occupancy JSON", 'tab:red', 'd'),
+    (occurrences_binary_occupancy_ego_jpg_verification_15, r15.occupancy_R_ego_jpg_15, "Occupancy JPG", 'tab:green', 'd'),
+    (occurrences_binary_occupancy_ego_tokenized_verification_15, r15.occupancy_R_ego_tokenized_txt_15, "Occupancy Tokenized", 'tab:purple',  'd'),
+    (occurrences_binary_occupancy_ego_ascii_verification_15, r15.occupancy_R_ego_ascii_txt_15, "Occupancy ASCII", 'tab:brown', 'd'),
 ]
 
 
+
+
+
+
+
+
+all_line_scores_adj_json= [r6.line_R_coords_adj_json_6, r6.line_R_allo_adj_json_6,r15.line_R_coords_adj_json_15,r15.line_R_allo_adj_json_15,r6.line_R_ego_adj_json_6,r15.line_R_ego_adj_json_15]
+all_line_scores_adj_txt= [r6.line_R_coords_adj_txt_6, r6.line_R_allo_adj_txt_6,r15.line_R_coords_adj_txt_15,r15.line_R_allo_adj_txt_15,r6.line_R_ego_adj_txt_6,r15.line_R_ego_adj_txt_15]
+all_line_scores_json= [r6.line_R_coords_json_6, r6.line_R_allo_json_6,r15.line_R_coords_json_15,r15.line_R_allo_json_15,r6.line_R_ego_json_6,r15.line_R_ego_json_15]
+all_line_scores_tokenized_txt= [r6.line_R_coords_tokenized_txt_6, r6.line_R_allo_tokenized_txt_6,r15.line_R_coords_tokenized_txt_15,r15.line_R_allo_tokenized_txt_15,r6.line_R_ego_tokenized_txt_6,r15.line_R_ego_tokenized_txt_15]
+all_line_scores_jpg = [r6.line_R_coords_jpg_6, r6.line_R_allo_jpg_6,r15.line_R_coords_jpg_15,r15.line_R_allo_jpg_15,r6.line_R_ego_jpg_6,r15.line_R_ego_jpg_15]
+all_occupancy_scores_adj_json= [r6.occupancy_R_coords_adj_json_6, r6.occupancy_R_allo_adj_json_6,r15.occupancy_R_coords_adj_json_15,r15.occupancy_R_allo_adj_json_15,r6.occupancy_R_ego_adj_json_6,r15.occupancy_R_ego_adj_json_15]
+all_occupancy_scores_adj_txt= [r6.occupancy_R_coords_adj_txt_6, r6.occupancy_R_allo_adj_txt_6,r15.occupancy_R_coords_adj_txt_15,r15.occupancy_R_allo_adj_txt_15,r6.occupancy_R_ego_adj_txt_6,r15.occupancy_R_ego_adj_txt_15]
+all_occupancy_scores_json= [r6.occupancy_R_coords_json_6, r6.occupancy_R_allo_json_6,r15.occupancy_R_coords_json_15,r15.occupancy_R_allo_json_15,r6.occupancy_R_ego_json_6,r15.occupancy_R_ego_json_15]
+all_occupancy_scores_tokenized_txt= [r6.occupancy_R_coords_tokenized_txt_6, r6.occupancy_R_allo_tokenized_txt_6,r15.occupancy_R_coords_tokenized_txt_15,r15.occupancy_R_allo_tokenized_txt_15,r6.occupancy_R_ego_tokenized_txt_6,r15.occupancy_R_ego_tokenized_txt_15]
+all_occupancy_scores_jpg = [r6.occupancy_R_coords_jpg_6, r6.occupancy_R_allo_jpg_6,r15.occupancy_R_coords_jpg_15,r15.occupancy_R_allo_jpg_15,r6.occupancy_R_ego_jpg_6,r15.occupancy_R_ego_jpg_15]
+all_occupancy_scores_ascii_txt = [r6.occupancy_R_coords_ascii_txt_6, r6.occupancy_R_allo_ascii_txt_6,r15.occupancy_R_coords_ascii_txt_15,r15.occupancy_R_allo_ascii_txt_15,r6.occupancy_R_ego_ascii_txt_6,r15.occupancy_R_ego_ascii_txt_15]
+
+# verification
+all_line_adj_json_verification = [occurrences_binary_line_coords_adj_json_verification_6,
+                                        occurrences_binary_line_allo_adj_json_verification_6,
+                                        occurrences_binary_line_coords_adj_json_verification_15,
+                                        occurrences_binary_line_allo_adj_json_verification_15,
+                                        occurrences_binary_line_ego_adj_json_verification_6,
+                                        occurrences_binary_line_ego_adj_json_verification_15
+                                        ]
+
+
+all_line_adj_txt_verification = [occurrences_binary_line_coords_adj_txt_verification_6,
+                                        occurrences_binary_line_allo_adj_txt_verification_6,
+                                        occurrences_binary_line_coords_adj_txt_verification_15,
+                                        occurrences_binary_line_allo_adj_txt_verification_15,
+                                        occurrences_binary_line_ego_adj_txt_verification_6,
+                                        occurrences_binary_line_ego_adj_txt_verification_15
+                                        ]
+
+all_line_json_verification = [occurrences_binary_line_coords_json_verification_6,
+                                        occurrences_binary_line_allo_json_verification_6,
+                                        occurrences_binary_line_coords_json_verification_15,
+                                        occurrences_binary_line_allo_json_verification_15,
+                                        occurrences_binary_line_ego_json_verification_6,
+                                        occurrences_binary_line_ego_json_verification_15
+                                        ]
+
+all_line_tokenized_txt_verification = [occurrences_binary_line_coords_tokenized_verification_6,
+                                        occurrences_binary_line_allo_tokenized_verification_6,
+                                        occurrences_binary_line_coords_tokenized_verification_15,
+                                        occurrences_binary_line_allo_tokenized_verification_15,
+                                        occurrences_binary_line_ego_tokenized_verification_6,
+                                        occurrences_binary_line_ego_tokenized_verification_15
+                                        ]
+
+all_line_jpg_verification = [occurrences_binary_line_coords_jpg_verification_6,
+                                        occurrences_binary_line_allo_jpg_verification_6,
+                                        occurrences_binary_line_coords_jpg_verification_15,
+                                        occurrences_binary_line_allo_jpg_verification_15,
+                                        occurrences_binary_line_ego_jpg_verification_6,
+                                        occurrences_binary_line_ego_jpg_verification_15
+                                        ]
+
+all_occupancy_adj_json_verification = [occurrences_binary_occupancy_coords_adj_json_verification_6,
+                                        occurrences_binary_occupancy_allo_adj_json_verification_6,
+                                        occurrences_binary_occupancy_coords_adj_json_verification_15,
+                                        occurrences_binary_occupancy_allo_adj_json_verification_15,
+                                        occurrences_binary_occupancy_ego_adj_json_verification_6,
+                                        occurrences_binary_occupancy_ego_adj_json_verification_15
+                                        ]
+
+
+all_occupancy_adj_txt_verification = [occurrences_binary_occupancy_coords_adj_txt_verification_6,
+                                        occurrences_binary_occupancy_allo_adj_txt_verification_6,
+                                        occurrences_binary_occupancy_coords_adj_txt_verification_15,
+                                        occurrences_binary_occupancy_allo_adj_txt_verification_15,
+                                        occurrences_binary_occupancy_ego_adj_txt_verification_6,
+                                        occurrences_binary_occupancy_ego_adj_txt_verification_15
+                                        ]
+
+all_occupancy_json_verification = [occurrences_binary_occupancy_coords_json_verification_6,
+                                        occurrences_binary_occupancy_allo_json_verification_6,
+                                        occurrences_binary_occupancy_coords_json_verification_15,
+                                        occurrences_binary_occupancy_allo_json_verification_15,
+                                        occurrences_binary_occupancy_ego_json_verification_6,
+                                        occurrences_binary_occupancy_ego_json_verification_15
+                                        ]
+
+all_occupancy_tokenized_txt_verification = [occurrences_binary_occupancy_coords_tokenized_verification_6,
+                                        occurrences_binary_occupancy_allo_tokenized_verification_6,
+                                        occurrences_binary_occupancy_coords_tokenized_verification_15,
+                                        occurrences_binary_occupancy_allo_tokenized_verification_15,
+                                        occurrences_binary_occupancy_ego_tokenized_verification_6,
+                                        occurrences_binary_occupancy_ego_tokenized_verification_15
+                                        ]
+
+all_occupancy_jpg_verification = [occurrences_binary_occupancy_coords_jpg_verification_6,
+                                        occurrences_binary_occupancy_allo_jpg_verification_6,
+                                        occurrences_binary_occupancy_coords_jpg_verification_15,
+                                        occurrences_binary_occupancy_allo_jpg_verification_15,
+                                        occurrences_binary_occupancy_ego_jpg_verification_6,
+                                        occurrences_binary_occupancy_ego_jpg_verification_15
+                                        ]
+
+all_occupancy_ascii_txt_verification = [occurrences_binary_occupancy_coords_ascii_verification_6,
+                                        occurrences_binary_occupancy_allo_ascii_verification_6,
+                                        occurrences_binary_occupancy_coords_ascii_verification_15,
+                                        occurrences_binary_occupancy_allo_ascii_verification_15,
+                                        occurrences_binary_occupancy_ego_ascii_verification_6,
+                                        occurrences_binary_occupancy_ego_ascii_verification_15
+                                        ]
+
+
+
+# reverse search
+all_line_adj_json_reverse_search = [occurrences_binary_line_coords_adj_json_reverse_search_6,
+                                        occurrences_binary_line_allo_adj_json_reverse_search_6,
+                                        occurrences_binary_line_coords_adj_json_reverse_search_15,
+                                        occurrences_binary_line_allo_adj_json_reverse_search_15,
+                                        occurrences_binary_line_ego_adj_json_reverse_search_6,
+                                        occurrences_binary_line_ego_adj_json_reverse_search_15
+                                        ]
+
+
+all_line_adj_txt_reverse_search = [occurrences_binary_line_coords_adj_txt_reverse_search_6,
+                                        occurrences_binary_line_allo_adj_txt_reverse_search_6,
+                                        occurrences_binary_line_coords_adj_txt_reverse_search_15,
+                                        occurrences_binary_line_allo_adj_txt_reverse_search_15,
+                                        occurrences_binary_line_ego_adj_txt_reverse_search_6,
+                                        occurrences_binary_line_ego_adj_txt_reverse_search_15
+                                        ]
+
+all_line_json_reverse_search = [occurrences_binary_line_coords_json_reverse_search_6,
+                                        occurrences_binary_line_allo_json_reverse_search_6,
+                                        occurrences_binary_line_coords_json_reverse_search_15,
+                                        occurrences_binary_line_allo_json_reverse_search_15,
+                                        occurrences_binary_line_ego_json_reverse_search_6,
+                                        occurrences_binary_line_ego_json_reverse_search_15
+                                        ]
+
+all_line_tokenized_txt_reverse_search = [occurrences_binary_line_coords_tokenized_reverse_search_6,
+                                        occurrences_binary_line_allo_tokenized_reverse_search_6,
+                                        occurrences_binary_line_coords_tokenized_reverse_search_15,
+                                        occurrences_binary_line_allo_tokenized_reverse_search_15,
+                                        occurrences_binary_line_ego_tokenized_reverse_search_6,
+                                        occurrences_binary_line_ego_tokenized_reverse_search_15
+                                        ]
+
+all_line_jpg_reverse_search = [occurrences_binary_line_coords_jpg_reverse_search_6,
+                                        occurrences_binary_line_allo_jpg_reverse_search_6,
+                                        occurrences_binary_line_coords_jpg_reverse_search_15,
+                                        occurrences_binary_line_allo_jpg_reverse_search_15,
+                                        occurrences_binary_line_ego_jpg_reverse_search_6,
+                                        occurrences_binary_line_ego_jpg_reverse_search_15
+                                        ]
+
+all_occupancy_adj_json_reverse_search = [occurrences_binary_occupancy_coords_adj_json_reverse_search_6,
+                                        occurrences_binary_occupancy_allo_adj_json_reverse_search_6,
+                                        occurrences_binary_occupancy_coords_adj_json_reverse_search_15,
+                                        occurrences_binary_occupancy_allo_adj_json_reverse_search_15,
+                                        occurrences_binary_occupancy_ego_adj_json_reverse_search_6,
+                                        occurrences_binary_occupancy_ego_adj_json_reverse_search_15
+                                        ]
+
+
+all_occupancy_adj_txt_reverse_search = [occurrences_binary_occupancy_coords_adj_txt_reverse_search_6,
+                                        occurrences_binary_occupancy_allo_adj_txt_reverse_search_6,
+                                        occurrences_binary_occupancy_coords_adj_txt_reverse_search_15,
+                                        occurrences_binary_occupancy_allo_adj_txt_reverse_search_15,
+                                        occurrences_binary_occupancy_ego_adj_txt_reverse_search_6,
+                                        occurrences_binary_occupancy_ego_adj_txt_reverse_search_15
+                                        ]
+
+all_occupancy_json_reverse_search = [occurrences_binary_occupancy_coords_json_reverse_search_6,
+                                        occurrences_binary_occupancy_allo_json_reverse_search_6,
+                                        occurrences_binary_occupancy_coords_json_reverse_search_15,
+                                        occurrences_binary_occupancy_allo_json_reverse_search_15,
+                                        occurrences_binary_occupancy_ego_json_reverse_search_6,
+                                        occurrences_binary_occupancy_ego_json_reverse_search_15
+                                        ]
+
+all_occupancy_tokenized_txt_reverse_search = [occurrences_binary_occupancy_coords_tokenized_reverse_search_6,
+                                        occurrences_binary_occupancy_allo_tokenized_reverse_search_6,
+                                        occurrences_binary_occupancy_coords_tokenized_reverse_search_15,
+                                        occurrences_binary_occupancy_allo_tokenized_reverse_search_15,
+                                        occurrences_binary_occupancy_ego_tokenized_reverse_search_6,
+                                        occurrences_binary_occupancy_ego_tokenized_reverse_search_15
+                                        ]
+
+all_occupancy_jpg_reverse_search = [occurrences_binary_occupancy_coords_jpg_reverse_search_6,
+                                        occurrences_binary_occupancy_allo_jpg_reverse_search_6,
+                                        occurrences_binary_occupancy_coords_jpg_reverse_search_15,
+                                        occurrences_binary_occupancy_allo_jpg_reverse_search_15,
+                                        occurrences_binary_occupancy_ego_jpg_reverse_search_6,
+                                        occurrences_binary_occupancy_ego_jpg_reverse_search_15
+                                        ]
+
+all_occupancy_ascii_txt_reverse_search = [occurrences_binary_occupancy_coords_ascii_reverse_search_6,
+                                        occurrences_binary_occupancy_allo_ascii_reverse_search_6,
+                                        occurrences_binary_occupancy_coords_ascii_reverse_search_15,
+                                        occurrences_binary_occupancy_allo_ascii_reverse_search_15,
+                                        occurrences_binary_occupancy_ego_ascii_reverse_search_6,
+                                        occurrences_binary_occupancy_ego_ascii_reverse_search_15
+                                        ]
+# restart
+all_line_adj_json_restart = [occurrences_binary_line_coords_adj_json_restart_6,
+                                        occurrences_binary_line_allo_adj_json_restart_6,
+                                        occurrences_binary_line_coords_adj_json_restart_15,
+                                        occurrences_binary_line_allo_adj_json_restart_15,
+                                        occurrences_binary_line_ego_adj_json_restart_6,
+                                        occurrences_binary_line_ego_adj_json_restart_15
+                                        ]
+
+
+all_line_adj_txt_restart = [occurrences_binary_line_coords_adj_txt_restart_6,
+                                        occurrences_binary_line_allo_adj_txt_restart_6,
+                                        occurrences_binary_line_coords_adj_txt_restart_15,
+                                        occurrences_binary_line_allo_adj_txt_restart_15,
+                                        occurrences_binary_line_ego_adj_txt_restart_6,
+                                        occurrences_binary_line_ego_adj_txt_restart_15
+                                        ]
+
+all_line_json_restart = [occurrences_binary_line_coords_json_restart_6,
+                                        occurrences_binary_line_allo_json_restart_6,
+                                        occurrences_binary_line_coords_json_restart_15,
+                                        occurrences_binary_line_allo_json_restart_15,
+                                        occurrences_binary_line_ego_json_restart_6,
+                                        occurrences_binary_line_ego_json_restart_15
+                                        ]
+
+all_line_tokenized_txt_restart = [occurrences_binary_line_coords_tokenized_restart_6,
+                                        occurrences_binary_line_allo_tokenized_restart_6,
+                                        occurrences_binary_line_coords_tokenized_restart_15,
+                                        occurrences_binary_line_allo_tokenized_restart_15,
+                                        occurrences_binary_line_ego_tokenized_restart_6,
+                                        occurrences_binary_line_ego_tokenized_restart_15
+                                        ]
+
+all_line_jpg_restart = [occurrences_binary_line_coords_jpg_restart_6,
+                                        occurrences_binary_line_allo_jpg_restart_6,
+                                        occurrences_binary_line_coords_jpg_restart_15,
+                                        occurrences_binary_line_allo_jpg_restart_15,
+                                        occurrences_binary_line_ego_jpg_restart_6,
+                                        occurrences_binary_line_ego_jpg_restart_15
+                                        ]
+
+all_occupancy_adj_json_restart = [occurrences_binary_occupancy_coords_adj_json_restart_6,
+                                        occurrences_binary_occupancy_allo_adj_json_restart_6,
+                                        occurrences_binary_occupancy_coords_adj_json_restart_15,
+                                        occurrences_binary_occupancy_allo_adj_json_restart_15,
+                                        occurrences_binary_occupancy_ego_adj_json_restart_6,
+                                        occurrences_binary_occupancy_ego_adj_json_restart_15
+                                        ]
+
+
+all_occupancy_adj_txt_restart = [occurrences_binary_occupancy_coords_adj_txt_restart_6,
+                                        occurrences_binary_occupancy_allo_adj_txt_restart_6,
+                                        occurrences_binary_occupancy_coords_adj_txt_restart_15,
+                                        occurrences_binary_occupancy_allo_adj_txt_restart_15,
+                                        occurrences_binary_occupancy_ego_adj_txt_restart_6,
+                                        occurrences_binary_occupancy_ego_adj_txt_restart_15
+                                        ]
+
+all_occupancy_json_restart = [occurrences_binary_occupancy_coords_json_restart_6,
+                                        occurrences_binary_occupancy_allo_json_restart_6,
+                                        occurrences_binary_occupancy_coords_json_restart_15,
+                                        occurrences_binary_occupancy_allo_json_restart_15,
+                                        occurrences_binary_occupancy_ego_json_restart_6,
+                                        occurrences_binary_occupancy_ego_json_restart_15
+                                        ]
+
+all_occupancy_tokenized_txt_restart = [occurrences_binary_occupancy_coords_tokenized_restart_6,
+                                        occurrences_binary_occupancy_allo_tokenized_restart_6,
+                                        occurrences_binary_occupancy_coords_tokenized_restart_15,
+                                        occurrences_binary_occupancy_allo_tokenized_restart_15,
+                                        occurrences_binary_occupancy_ego_tokenized_restart_6,
+                                        occurrences_binary_occupancy_ego_tokenized_restart_15
+                                        ]
+
+all_occupancy_jpg_restart = [occurrences_binary_occupancy_coords_jpg_restart_6,
+                                        occurrences_binary_occupancy_allo_jpg_restart_6,
+                                        occurrences_binary_occupancy_coords_jpg_restart_15,
+                                        occurrences_binary_occupancy_allo_jpg_restart_15,
+                                        occurrences_binary_occupancy_ego_jpg_restart_6,
+                                        occurrences_binary_occupancy_ego_jpg_restart_15
+                                        ]
+
+all_occupancy_ascii_txt_restart = [occurrences_binary_occupancy_coords_ascii_restart_6,
+                                        occurrences_binary_occupancy_allo_ascii_restart_6,
+                                        occurrences_binary_occupancy_coords_ascii_restart_15,
+                                        occurrences_binary_occupancy_allo_ascii_restart_15,
+                                        occurrences_binary_occupancy_ego_ascii_restart_6,
+                                        occurrences_binary_occupancy_ego_ascii_restart_15
+                                        ]
+# algortihm
+all_line_adj_json_algorithm = [occurrences_binary_line_coords_adj_json_algorithm_6,
+                                        occurrences_binary_line_allo_adj_json_algorithm_6,
+                                        occurrences_binary_line_coords_adj_json_algorithm_15,
+                                        occurrences_binary_line_allo_adj_json_algorithm_15,
+                                        occurrences_binary_line_ego_adj_json_algorithm_6,
+                                        occurrences_binary_line_ego_adj_json_algorithm_15
+                                        ]
+
+
+all_line_adj_txt_algorithm = [occurrences_binary_line_coords_adj_txt_algorithm_6,
+                                        occurrences_binary_line_allo_adj_txt_algorithm_6,
+                                        occurrences_binary_line_coords_adj_txt_algorithm_15,
+                                        occurrences_binary_line_allo_adj_txt_algorithm_15,
+                                        occurrences_binary_line_ego_adj_txt_algorithm_6,
+                                        occurrences_binary_line_ego_adj_txt_algorithm_15
+                                        ]
+
+all_line_json_algorithm = [occurrences_binary_line_coords_json_algorithm_6,
+                                        occurrences_binary_line_allo_json_algorithm_6,
+                                        occurrences_binary_line_coords_json_algorithm_15,
+                                        occurrences_binary_line_allo_json_algorithm_15,
+                                        occurrences_binary_line_ego_json_algorithm_6,
+                                        occurrences_binary_line_ego_json_algorithm_15
+                                        ]
+
+all_line_tokenized_txt_algorithm = [occurrences_binary_line_coords_tokenized_algorithm_6,
+                                        occurrences_binary_line_allo_tokenized_algorithm_6,
+                                        occurrences_binary_line_coords_tokenized_algorithm_15,
+                                        occurrences_binary_line_allo_tokenized_algorithm_15,
+                                        occurrences_binary_line_ego_tokenized_algorithm_6,
+                                        occurrences_binary_line_ego_tokenized_algorithm_15
+                                        ]
+
+all_line_jpg_algorithm = [occurrences_binary_line_coords_jpg_algorithm_6,
+                                        occurrences_binary_line_allo_jpg_algorithm_6,
+                                        occurrences_binary_line_coords_jpg_algorithm_15,
+                                        occurrences_binary_line_allo_jpg_algorithm_15,
+                                        occurrences_binary_line_ego_jpg_algorithm_6,
+                                        occurrences_binary_line_ego_jpg_algorithm_15
+                                        ]
+
+all_occupancy_adj_json_algorithm = [occurrences_binary_occupancy_coords_adj_json_algorithm_6,
+                                        occurrences_binary_occupancy_allo_adj_json_algorithm_6,
+                                        occurrences_binary_occupancy_coords_adj_json_algorithm_15,
+                                        occurrences_binary_occupancy_allo_adj_json_algorithm_15,
+                                        occurrences_binary_occupancy_ego_adj_json_algorithm_6,
+                                        occurrences_binary_occupancy_ego_adj_json_algorithm_15
+                                        ]
+
+
+all_occupancy_adj_txt_algorithm = [occurrences_binary_occupancy_coords_adj_txt_algorithm_6,
+                                        occurrences_binary_occupancy_allo_adj_txt_algorithm_6,
+                                        occurrences_binary_occupancy_coords_adj_txt_algorithm_15,
+                                        occurrences_binary_occupancy_allo_adj_txt_algorithm_15,
+                                        occurrences_binary_occupancy_ego_adj_txt_algorithm_6,
+                                        occurrences_binary_occupancy_ego_adj_txt_algorithm_15
+                                        ]
+
+all_occupancy_json_algorithm = [occurrences_binary_occupancy_coords_json_algorithm_6,
+                                        occurrences_binary_occupancy_allo_json_algorithm_6,
+                                        occurrences_binary_occupancy_coords_json_algorithm_15,
+                                        occurrences_binary_occupancy_allo_json_algorithm_15,
+                                        occurrences_binary_occupancy_ego_json_algorithm_6,
+                                        occurrences_binary_occupancy_ego_json_algorithm_15
+                                        ]
+
+all_occupancy_tokenized_txt_algorithm = [occurrences_binary_occupancy_coords_tokenized_algorithm_6,
+                                        occurrences_binary_occupancy_allo_tokenized_algorithm_6,
+                                        occurrences_binary_occupancy_coords_tokenized_algorithm_15,
+                                        occurrences_binary_occupancy_allo_tokenized_algorithm_15,
+                                        occurrences_binary_occupancy_ego_tokenized_algorithm_6,
+                                        occurrences_binary_occupancy_ego_tokenized_algorithm_15
+                                        ]
+
+all_occupancy_jpg_algorithm = [occurrences_binary_occupancy_coords_jpg_algorithm_6,
+                                        occurrences_binary_occupancy_allo_jpg_algorithm_6,
+                                        occurrences_binary_occupancy_coords_jpg_algorithm_15,
+                                        occurrences_binary_occupancy_allo_jpg_algorithm_15,
+                                        occurrences_binary_occupancy_ego_jpg_algorithm_6,
+                                        occurrences_binary_occupancy_ego_jpg_algorithm_15
+                                        ]
+
+all_occupancy_ascii_txt_algorithm = [occurrences_binary_occupancy_coords_ascii_algorithm_6,
+                                        occurrences_binary_occupancy_allo_ascii_algorithm_6,
+                                        occurrences_binary_occupancy_coords_ascii_algorithm_15,
+                                        occurrences_binary_occupancy_allo_ascii_algorithm_15,
+                                        occurrences_binary_occupancy_ego_ascii_algorithm_6,
+                                        occurrences_binary_occupancy_ego_ascii_algorithm_15
+                                        ]
+# heuristic
+all_line_adj_json_heuristic = [occurrences_binary_line_coords_adj_json_heuristic_6,
+                                        occurrences_binary_line_allo_adj_json_heuristic_6,
+                                        occurrences_binary_line_coords_adj_json_heuristic_15,
+                                        occurrences_binary_line_allo_adj_json_heuristic_15,
+                                        occurrences_binary_line_ego_adj_json_heuristic_6,
+                                        occurrences_binary_line_ego_adj_json_heuristic_15
+                                        ]
+
+
+all_line_adj_txt_heuristic = [occurrences_binary_line_coords_adj_txt_heuristic_6,
+                                        occurrences_binary_line_allo_adj_txt_heuristic_6,
+                                        occurrences_binary_line_coords_adj_txt_heuristic_15,
+                                        occurrences_binary_line_allo_adj_txt_heuristic_15,
+                                        occurrences_binary_line_ego_adj_txt_heuristic_6,
+                                        occurrences_binary_line_ego_adj_txt_heuristic_15
+                                        ]
+
+all_line_json_heuristic = [occurrences_binary_line_coords_json_heuristic_6,
+                                        occurrences_binary_line_allo_json_heuristic_6,
+                                        occurrences_binary_line_coords_json_heuristic_15,
+                                        occurrences_binary_line_allo_json_heuristic_15,
+                                        occurrences_binary_line_ego_json_heuristic_6,
+                                        occurrences_binary_line_ego_json_heuristic_15
+                                        ]
+
+all_line_tokenized_txt_heuristic = [occurrences_binary_line_coords_tokenized_heuristic_6,
+                                        occurrences_binary_line_allo_tokenized_heuristic_6,
+                                        occurrences_binary_line_coords_tokenized_heuristic_15,
+                                        occurrences_binary_line_allo_tokenized_heuristic_15,
+                                        occurrences_binary_line_ego_tokenized_heuristic_6,
+                                        occurrences_binary_line_ego_tokenized_heuristic_15
+                                        ]
+
+all_line_jpg_heuristic = [occurrences_binary_line_coords_jpg_heuristic_6,
+                                        occurrences_binary_line_allo_jpg_heuristic_6,
+                                        occurrences_binary_line_coords_jpg_heuristic_15,
+                                        occurrences_binary_line_allo_jpg_heuristic_15,
+                                        occurrences_binary_line_ego_jpg_heuristic_6,
+                                        occurrences_binary_line_ego_jpg_heuristic_15
+                                        ]
+
+all_occupancy_adj_json_heuristic = [occurrences_binary_occupancy_coords_adj_json_heuristic_6,
+                                        occurrences_binary_occupancy_allo_adj_json_heuristic_6,
+                                        occurrences_binary_occupancy_coords_adj_json_heuristic_15,
+                                        occurrences_binary_occupancy_allo_adj_json_heuristic_15,
+                                        occurrences_binary_occupancy_ego_adj_json_heuristic_6,
+                                        occurrences_binary_occupancy_ego_adj_json_heuristic_15
+                                        ]
+
+
+all_occupancy_adj_txt_heuristic = [occurrences_binary_occupancy_coords_adj_txt_heuristic_6,
+                                        occurrences_binary_occupancy_allo_adj_txt_heuristic_6,
+                                        occurrences_binary_occupancy_coords_adj_txt_heuristic_15,
+                                        occurrences_binary_occupancy_allo_adj_txt_heuristic_15,
+                                        occurrences_binary_occupancy_ego_adj_txt_heuristic_6,
+                                        occurrences_binary_occupancy_ego_adj_txt_heuristic_15
+                                        ]
+
+all_occupancy_json_heuristic = [occurrences_binary_occupancy_coords_json_heuristic_6,
+                                        occurrences_binary_occupancy_allo_json_heuristic_6,
+                                        occurrences_binary_occupancy_coords_json_heuristic_15,
+                                        occurrences_binary_occupancy_allo_json_heuristic_15,
+                                        occurrences_binary_occupancy_ego_json_heuristic_6,
+                                        occurrences_binary_occupancy_ego_json_heuristic_15
+                                        ]
+
+all_occupancy_tokenized_txt_heuristic = [occurrences_binary_occupancy_coords_tokenized_heuristic_6,
+                                        occurrences_binary_occupancy_allo_tokenized_heuristic_6,
+                                        occurrences_binary_occupancy_coords_tokenized_heuristic_15,
+                                        occurrences_binary_occupancy_allo_tokenized_heuristic_15,
+                                        occurrences_binary_occupancy_ego_tokenized_heuristic_6,
+                                        occurrences_binary_occupancy_ego_tokenized_heuristic_15
+                                        ]
+
+all_occupancy_jpg_heuristic = [occurrences_binary_occupancy_coords_jpg_heuristic_6,
+                                        occurrences_binary_occupancy_allo_jpg_heuristic_6,
+                                        occurrences_binary_occupancy_coords_jpg_heuristic_15,
+                                        occurrences_binary_occupancy_allo_jpg_heuristic_15,
+                                        occurrences_binary_occupancy_ego_jpg_heuristic_6,
+                                        occurrences_binary_occupancy_ego_jpg_heuristic_15
+                                        ]
+
+all_occupancy_ascii_txt_heuristic = [occurrences_binary_occupancy_coords_ascii_heuristic_6,
+                                        occurrences_binary_occupancy_allo_ascii_heuristic_6,
+                                        occurrences_binary_occupancy_coords_ascii_heuristic_15,
+                                        occurrences_binary_occupancy_allo_ascii_heuristic_15,
+                                        occurrences_binary_occupancy_ego_ascii_heuristic_6,
+                                        occurrences_binary_occupancy_ego_ascii_heuristic_15
+                                        ]
+# false confidence
+all_line_adj_json_false_confidence = [occurrences_binary_line_coords_adj_json_false_confidence_6,
+                                        occurrences_binary_line_allo_adj_json_false_confidence_6,
+                                        occurrences_binary_line_coords_adj_json_false_confidence_15,
+                                        occurrences_binary_line_allo_adj_json_false_confidence_15,
+                                        occurrences_binary_line_ego_adj_json_false_confidence_6,
+                                        occurrences_binary_line_ego_adj_json_false_confidence_15
+                                        ]
+
+
+all_line_adj_txt_false_confidence = [occurrences_binary_line_coords_adj_txt_false_confidence_6,
+                                        occurrences_binary_line_allo_adj_txt_false_confidence_6,
+                                        occurrences_binary_line_coords_adj_txt_false_confidence_15,
+                                        occurrences_binary_line_allo_adj_txt_false_confidence_15,
+                                        occurrences_binary_line_ego_adj_txt_false_confidence_6,
+                                        occurrences_binary_line_ego_adj_txt_false_confidence_15
+                                        ]
+
+all_line_json_false_confidence = [occurrences_binary_line_coords_json_false_confidence_6,
+                                        occurrences_binary_line_allo_json_false_confidence_6,
+                                        occurrences_binary_line_coords_json_false_confidence_15,
+                                        occurrences_binary_line_allo_json_false_confidence_15,
+                                        occurrences_binary_line_ego_json_false_confidence_6,
+                                        occurrences_binary_line_ego_json_false_confidence_15
+                                        ]
+
+all_line_tokenized_txt_false_confidence = [occurrences_binary_line_coords_tokenized_false_confidence_6,
+                                        occurrences_binary_line_allo_tokenized_false_confidence_6,
+                                        occurrences_binary_line_coords_tokenized_false_confidence_15,
+                                        occurrences_binary_line_allo_tokenized_false_confidence_15,
+                                        occurrences_binary_line_ego_tokenized_false_confidence_6,
+                                        occurrences_binary_line_ego_tokenized_false_confidence_15
+                                        ]
+
+all_line_jpg_false_confidence = [occurrences_binary_line_coords_jpg_false_confidence_6,
+                                        occurrences_binary_line_allo_jpg_false_confidence_6,
+                                        occurrences_binary_line_coords_jpg_false_confidence_15,
+                                        occurrences_binary_line_allo_jpg_false_confidence_15,
+                                        occurrences_binary_line_ego_jpg_false_confidence_6,
+                                        occurrences_binary_line_ego_jpg_false_confidence_15
+                                        ]
+
+all_occupancy_adj_json_false_confidence = [occurrences_binary_occupancy_coords_adj_json_false_confidence_6,
+                                        occurrences_binary_occupancy_allo_adj_json_false_confidence_6,
+                                        occurrences_binary_occupancy_coords_adj_json_false_confidence_15,
+                                        occurrences_binary_occupancy_allo_adj_json_false_confidence_15,
+                                        occurrences_binary_occupancy_ego_adj_json_false_confidence_6,
+                                        occurrences_binary_occupancy_ego_adj_json_false_confidence_15
+                                        ]
+
+
+all_occupancy_adj_txt_false_confidence = [occurrences_binary_occupancy_coords_adj_txt_false_confidence_6,
+                                        occurrences_binary_occupancy_allo_adj_txt_false_confidence_6,
+                                        occurrences_binary_occupancy_coords_adj_txt_false_confidence_15,
+                                        occurrences_binary_occupancy_allo_adj_txt_false_confidence_15,
+                                        occurrences_binary_occupancy_ego_adj_txt_false_confidence_6,
+                                        occurrences_binary_occupancy_ego_adj_txt_false_confidence_15
+                                        ]
+
+all_occupancy_json_false_confidence = [occurrences_binary_occupancy_coords_json_false_confidence_6,
+                                        occurrences_binary_occupancy_allo_json_false_confidence_6,
+                                        occurrences_binary_occupancy_coords_json_false_confidence_15,
+                                        occurrences_binary_occupancy_allo_json_false_confidence_15,
+                                        occurrences_binary_occupancy_ego_json_false_confidence_6,
+                                        occurrences_binary_occupancy_ego_json_false_confidence_15
+                                        ]
+
+all_occupancy_tokenized_txt_false_confidence = [occurrences_binary_occupancy_coords_tokenized_false_confidence_6,
+                                        occurrences_binary_occupancy_allo_tokenized_false_confidence_6,
+                                        occurrences_binary_occupancy_coords_tokenized_false_confidence_15,
+                                        occurrences_binary_occupancy_allo_tokenized_false_confidence_15,
+                                        occurrences_binary_occupancy_ego_tokenized_false_confidence_6,
+                                        occurrences_binary_occupancy_ego_tokenized_false_confidence_15
+                                        ]
+
+all_occupancy_jpg_false_confidence = [occurrences_binary_occupancy_coords_jpg_false_confidence_6,
+                                        occurrences_binary_occupancy_allo_jpg_false_confidence_6,
+                                        occurrences_binary_occupancy_coords_jpg_false_confidence_15,
+                                        occurrences_binary_occupancy_allo_jpg_false_confidence_15,
+                                        occurrences_binary_occupancy_ego_jpg_false_confidence_6,
+                                        occurrences_binary_occupancy_ego_jpg_false_confidence_15
+                                        ]
+
+all_occupancy_ascii_txt_false_confidence = [occurrences_binary_occupancy_coords_ascii_false_confidence_6,
+                                        occurrences_binary_occupancy_allo_ascii_false_confidence_6,
+                                        occurrences_binary_occupancy_coords_ascii_false_confidence_15,
+                                        occurrences_binary_occupancy_allo_ascii_false_confidence_15,
+                                        occurrences_binary_occupancy_ego_ascii_false_confidence_6,
+                                        occurrences_binary_occupancy_ego_ascii_false_confidence_15
+                                        ]
+# frustration
+all_line_adj_json_frustration = [occurrences_binary_line_coords_adj_json_frustration_6,
+                                        occurrences_binary_line_allo_adj_json_frustration_6,
+                                        occurrences_binary_line_coords_adj_json_frustration_15,
+                                        occurrences_binary_line_allo_adj_json_frustration_15,
+                                        occurrences_binary_line_ego_adj_json_frustration_6,
+                                        occurrences_binary_line_ego_adj_json_frustration_15
+                                        ]
+
+
+all_line_adj_txt_frustration = [occurrences_binary_line_coords_adj_txt_frustration_6,
+                                        occurrences_binary_line_allo_adj_txt_frustration_6,
+                                        occurrences_binary_line_coords_adj_txt_frustration_15,
+                                        occurrences_binary_line_allo_adj_txt_frustration_15,
+                                        occurrences_binary_line_ego_adj_txt_frustration_6,
+                                        occurrences_binary_line_ego_adj_txt_frustration_15
+                                        ]
+
+all_line_json_frustration = [occurrences_binary_line_coords_json_frustration_6,
+                                        occurrences_binary_line_allo_json_frustration_6,
+                                        occurrences_binary_line_coords_json_frustration_15,
+                                        occurrences_binary_line_allo_json_frustration_15,
+                                        occurrences_binary_line_ego_json_frustration_6,
+                                        occurrences_binary_line_ego_json_frustration_15
+                                        ]
+
+all_line_tokenized_txt_frustration = [occurrences_binary_line_coords_tokenized_frustration_6,
+                                        occurrences_binary_line_allo_tokenized_frustration_6,
+                                        occurrences_binary_line_coords_tokenized_frustration_15,
+                                        occurrences_binary_line_allo_tokenized_frustration_15,
+                                        occurrences_binary_line_ego_tokenized_frustration_6,
+                                        occurrences_binary_line_ego_tokenized_frustration_15
+                                        ]
+
+all_line_jpg_frustration = [occurrences_binary_line_coords_jpg_frustration_6,
+                                        occurrences_binary_line_allo_jpg_frustration_6,
+                                        occurrences_binary_line_coords_jpg_frustration_15,
+                                        occurrences_binary_line_allo_jpg_frustration_15,
+                                        occurrences_binary_line_ego_jpg_frustration_6,
+                                        occurrences_binary_line_ego_jpg_frustration_15
+                                        ]
+
+all_occupancy_adj_json_frustration = [occurrences_binary_occupancy_coords_adj_json_frustration_6,
+                                        occurrences_binary_occupancy_allo_adj_json_frustration_6,
+                                        occurrences_binary_occupancy_coords_adj_json_frustration_15,
+                                        occurrences_binary_occupancy_allo_adj_json_frustration_15,
+                                        occurrences_binary_occupancy_ego_adj_json_frustration_6,
+                                        occurrences_binary_occupancy_ego_adj_json_frustration_15
+                                        ]
+
+
+all_occupancy_adj_txt_frustration = [occurrences_binary_occupancy_coords_adj_txt_frustration_6,
+                                        occurrences_binary_occupancy_allo_adj_txt_frustration_6,
+                                        occurrences_binary_occupancy_coords_adj_txt_frustration_15,
+                                        occurrences_binary_occupancy_allo_adj_txt_frustration_15,
+                                        occurrences_binary_occupancy_ego_adj_txt_frustration_6,
+                                        occurrences_binary_occupancy_ego_adj_txt_frustration_15
+                                        ]
+
+all_occupancy_json_frustration = [occurrences_binary_occupancy_coords_json_frustration_6,
+                                        occurrences_binary_occupancy_allo_json_frustration_6,
+                                        occurrences_binary_occupancy_coords_json_frustration_15,
+                                        occurrences_binary_occupancy_allo_json_frustration_15,
+                                        occurrences_binary_occupancy_ego_json_frustration_6,
+                                        occurrences_binary_occupancy_ego_json_frustration_15
+                                        ]
+
+all_occupancy_tokenized_txt_frustration = [occurrences_binary_occupancy_coords_tokenized_frustration_6,
+                                        occurrences_binary_occupancy_allo_tokenized_frustration_6,
+                                        occurrences_binary_occupancy_coords_tokenized_frustration_15,
+                                        occurrences_binary_occupancy_allo_tokenized_frustration_15,
+                                        occurrences_binary_occupancy_ego_tokenized_frustration_6,
+                                        occurrences_binary_occupancy_ego_tokenized_frustration_15
+                                        ]
+
+all_occupancy_jpg_frustration = [occurrences_binary_occupancy_coords_jpg_frustration_6,
+                                        occurrences_binary_occupancy_allo_jpg_frustration_6,
+                                        occurrences_binary_occupancy_coords_jpg_frustration_15,
+                                        occurrences_binary_occupancy_allo_jpg_frustration_15,
+                                        occurrences_binary_occupancy_ego_jpg_frustration_6,
+                                        occurrences_binary_occupancy_ego_jpg_frustration_15
+                                        ]
+
+all_occupancy_ascii_txt_frustration = [occurrences_binary_occupancy_coords_ascii_frustration_6,
+                                        occurrences_binary_occupancy_allo_ascii_frustration_6,
+                                        occurrences_binary_occupancy_coords_ascii_frustration_15,
+                                        occurrences_binary_occupancy_allo_ascii_frustration_15,
+                                        occurrences_binary_occupancy_ego_ascii_frustration_6,
+                                        occurrences_binary_occupancy_ego_ascii_frustration_15
+                                        ]
+#step by step
+all_line_adj_json_step_by_step = [occurrences_binary_line_coords_adj_json_step_by_step_6,
+                                        occurrences_binary_line_allo_adj_json_step_by_step_6,
+                                        occurrences_binary_line_coords_adj_json_step_by_step_15,
+                                        occurrences_binary_line_allo_adj_json_step_by_step_15,
+                                        occurrences_binary_line_ego_adj_json_step_by_step_6,
+                                        occurrences_binary_line_ego_adj_json_step_by_step_15
+                                        ]
+
+
+all_line_adj_txt_step_by_step = [occurrences_binary_line_coords_adj_txt_step_by_step_6,
+                                        occurrences_binary_line_allo_adj_txt_step_by_step_6,
+                                        occurrences_binary_line_coords_adj_txt_step_by_step_15,
+                                        occurrences_binary_line_allo_adj_txt_step_by_step_15,
+                                        occurrences_binary_line_ego_adj_txt_step_by_step_6,
+                                        occurrences_binary_line_ego_adj_txt_step_by_step_15
+                                        ]
+
+all_line_json_step_by_step = [occurrences_binary_line_coords_json_step_by_step_6,
+                                        occurrences_binary_line_allo_json_step_by_step_6,
+                                        occurrences_binary_line_coords_json_step_by_step_15,
+                                        occurrences_binary_line_allo_json_step_by_step_15,
+                                        occurrences_binary_line_ego_json_step_by_step_6,
+                                        occurrences_binary_line_ego_json_step_by_step_15
+                                        ]
+
+all_line_tokenized_txt_step_by_step = [occurrences_binary_line_coords_tokenized_step_by_step_6,
+                                        occurrences_binary_line_allo_tokenized_step_by_step_6,
+                                        occurrences_binary_line_coords_tokenized_step_by_step_15,
+                                        occurrences_binary_line_allo_tokenized_step_by_step_15,
+                                        occurrences_binary_line_ego_tokenized_step_by_step_6,
+                                        occurrences_binary_line_ego_tokenized_step_by_step_15
+                                        ]
+
+all_line_jpg_step_by_step = [occurrences_binary_line_coords_jpg_step_by_step_6,
+                                        occurrences_binary_line_allo_jpg_step_by_step_6,
+                                        occurrences_binary_line_coords_jpg_step_by_step_15,
+                                        occurrences_binary_line_allo_jpg_step_by_step_15,
+                                        occurrences_binary_line_ego_jpg_step_by_step_6,
+                                        occurrences_binary_line_ego_jpg_step_by_step_15
+                                        ]
+
+all_occupancy_adj_json_step_by_step = [occurrences_binary_occupancy_coords_adj_json_step_by_step_6,
+                                        occurrences_binary_occupancy_allo_adj_json_step_by_step_6,
+                                        occurrences_binary_occupancy_coords_adj_json_step_by_step_15,
+                                        occurrences_binary_occupancy_allo_adj_json_step_by_step_15,
+                                        occurrences_binary_occupancy_ego_adj_json_step_by_step_6,
+                                        occurrences_binary_occupancy_ego_adj_json_step_by_step_15
+                                        ]
+
+
+all_occupancy_adj_txt_step_by_step = [occurrences_binary_occupancy_coords_adj_txt_step_by_step_6,
+                                        occurrences_binary_occupancy_allo_adj_txt_step_by_step_6,
+                                        occurrences_binary_occupancy_coords_adj_txt_step_by_step_15,
+                                        occurrences_binary_occupancy_allo_adj_txt_step_by_step_15,
+                                        occurrences_binary_occupancy_ego_adj_txt_step_by_step_6,
+                                        occurrences_binary_occupancy_ego_adj_txt_step_by_step_15
+                                        ]
+
+all_occupancy_json_step_by_step = [occurrences_binary_occupancy_coords_json_step_by_step_6,
+                                        occurrences_binary_occupancy_allo_json_step_by_step_6,
+                                        occurrences_binary_occupancy_coords_json_step_by_step_15,
+                                        occurrences_binary_occupancy_allo_json_step_by_step_15,
+                                        occurrences_binary_occupancy_ego_json_step_by_step_6,
+                                        occurrences_binary_occupancy_ego_json_step_by_step_15
+                                        ]
+
+all_occupancy_tokenized_txt_step_by_step = [occurrences_binary_occupancy_coords_tokenized_step_by_step_6,
+                                        occurrences_binary_occupancy_allo_tokenized_step_by_step_6,
+                                        occurrences_binary_occupancy_coords_tokenized_step_by_step_15,
+                                        occurrences_binary_occupancy_allo_tokenized_step_by_step_15,
+                                        occurrences_binary_occupancy_ego_tokenized_step_by_step_6,
+                                        occurrences_binary_occupancy_ego_tokenized_step_by_step_15
+                                        ]
+
+all_occupancy_jpg_step_by_step = [occurrences_binary_occupancy_coords_jpg_step_by_step_6,
+                                        occurrences_binary_occupancy_allo_jpg_step_by_step_6,
+                                        occurrences_binary_occupancy_coords_jpg_step_by_step_15,
+                                        occurrences_binary_occupancy_allo_jpg_step_by_step_15,
+                                        occurrences_binary_occupancy_ego_jpg_step_by_step_6,
+                                        occurrences_binary_occupancy_ego_jpg_step_by_step_15
+                                        ]
+
+all_occupancy_ascii_txt_step_by_step = [occurrences_binary_occupancy_coords_ascii_step_by_step_6,
+                                        occurrences_binary_occupancy_allo_ascii_step_by_step_6,
+                                        occurrences_binary_occupancy_coords_ascii_step_by_step_15,
+                                        occurrences_binary_occupancy_allo_ascii_step_by_step_15,
+                                        occurrences_binary_occupancy_ego_ascii_step_by_step_6,
+                                        occurrences_binary_occupancy_ego_ascii_step_by_step_15
+                                        ]
+#backtracking
+all_line_adj_json_backtracking = [occurrences_binary_line_coords_adj_json_backtracking_6,
+                                        occurrences_binary_line_allo_adj_json_backtracking_6,
+                                        occurrences_binary_line_coords_adj_json_backtracking_15,
+                                        occurrences_binary_line_allo_adj_json_backtracking_15,
+                                        occurrences_binary_line_ego_adj_json_backtracking_6,
+                                        occurrences_binary_line_ego_adj_json_backtracking_15
+                                        ]
+
+
+all_line_adj_txt_backtracking = [occurrences_binary_line_coords_adj_txt_backtracking_6,
+                                        occurrences_binary_line_allo_adj_txt_backtracking_6,
+                                        occurrences_binary_line_coords_adj_txt_backtracking_15,
+                                        occurrences_binary_line_allo_adj_txt_backtracking_15,
+                                        occurrences_binary_line_ego_adj_txt_backtracking_6,
+                                        occurrences_binary_line_ego_adj_txt_backtracking_15
+                                        ]
+
+all_line_json_backtracking = [occurrences_binary_line_coords_json_backtracking_6,
+                                        occurrences_binary_line_allo_json_backtracking_6,
+                                        occurrences_binary_line_coords_json_backtracking_15,
+                                        occurrences_binary_line_allo_json_backtracking_15,
+                                        occurrences_binary_line_ego_json_backtracking_6,
+                                        occurrences_binary_line_ego_json_backtracking_15
+                                        ]
+
+all_line_tokenized_txt_backtracking = [occurrences_binary_line_coords_tokenized_backtracking_6,
+                                        occurrences_binary_line_allo_tokenized_backtracking_6,
+                                        occurrences_binary_line_coords_tokenized_backtracking_15,
+                                        occurrences_binary_line_allo_tokenized_backtracking_15,
+                                        occurrences_binary_line_ego_tokenized_backtracking_6,
+                                        occurrences_binary_line_ego_tokenized_backtracking_15
+                                        ]
+
+all_line_jpg_backtracking = [occurrences_binary_line_coords_jpg_backtracking_6,
+                                        occurrences_binary_line_allo_jpg_backtracking_6,
+                                        occurrences_binary_line_coords_jpg_backtracking_15,
+                                        occurrences_binary_line_allo_jpg_backtracking_15,
+                                        occurrences_binary_line_ego_jpg_backtracking_6,
+                                        occurrences_binary_line_ego_jpg_backtracking_15
+                                        ]
+
+all_occupancy_adj_json_backtracking = [occurrences_binary_occupancy_coords_adj_json_backtracking_6,
+                                        occurrences_binary_occupancy_allo_adj_json_backtracking_6,
+                                        occurrences_binary_occupancy_coords_adj_json_backtracking_15,
+                                        occurrences_binary_occupancy_allo_adj_json_backtracking_15,
+                                        occurrences_binary_occupancy_ego_adj_json_backtracking_6,
+                                        occurrences_binary_occupancy_ego_adj_json_backtracking_15
+                                        ]
+
+
+all_occupancy_adj_txt_backtracking = [occurrences_binary_occupancy_coords_adj_txt_backtracking_6,
+                                        occurrences_binary_occupancy_allo_adj_txt_backtracking_6,
+                                        occurrences_binary_occupancy_coords_adj_txt_backtracking_15,
+                                        occurrences_binary_occupancy_allo_adj_txt_backtracking_15,
+                                        occurrences_binary_occupancy_ego_adj_txt_backtracking_6,
+                                        occurrences_binary_occupancy_ego_adj_txt_backtracking_15
+                                        ]
+
+all_occupancy_json_backtracking = [occurrences_binary_occupancy_coords_json_backtracking_6,
+                                        occurrences_binary_occupancy_allo_json_backtracking_6,
+                                        occurrences_binary_occupancy_coords_json_backtracking_15,
+                                        occurrences_binary_occupancy_allo_json_backtracking_15,
+                                        occurrences_binary_occupancy_ego_json_backtracking_6,
+                                        occurrences_binary_occupancy_ego_json_backtracking_15
+                                        ]
+
+all_occupancy_tokenized_txt_backtracking = [occurrences_binary_occupancy_coords_tokenized_backtracking_6,
+                                        occurrences_binary_occupancy_allo_tokenized_backtracking_6,
+                                        occurrences_binary_occupancy_coords_tokenized_backtracking_15,
+                                        occurrences_binary_occupancy_allo_tokenized_backtracking_15,
+                                        occurrences_binary_occupancy_ego_tokenized_backtracking_6,
+                                        occurrences_binary_occupancy_ego_tokenized_backtracking_15
+                                        ]
+
+all_occupancy_jpg_backtracking = [occurrences_binary_occupancy_coords_jpg_backtracking_6,
+                                        occurrences_binary_occupancy_allo_jpg_backtracking_6,
+                                        occurrences_binary_occupancy_coords_jpg_backtracking_15,
+                                        occurrences_binary_occupancy_allo_jpg_backtracking_15,
+                                        occurrences_binary_occupancy_ego_jpg_backtracking_6,
+                                        occurrences_binary_occupancy_ego_jpg_backtracking_15
+                                        ]
+print(all_occupancy_jpg_backtracking)
+print(np.mean(all_occupancy_jpg_backtracking))
+all_occupancy_ascii_txt_backtracking = [occurrences_binary_occupancy_coords_ascii_backtracking_6,
+                                        occurrences_binary_occupancy_allo_ascii_backtracking_6,
+                                        occurrences_binary_occupancy_coords_ascii_backtracking_15,
+                                        occurrences_binary_occupancy_allo_ascii_backtracking_15,
+                                        occurrences_binary_occupancy_ego_ascii_backtracking_6,
+                                        occurrences_binary_occupancy_ego_ascii_backtracking_15
+                                        ]
+
+
+
+
+
+
+small_dataset_verification = [(all_line_adj_json_verification, all_line_scores_adj_json, "Line Adjacency JSON", 'tab:blue', 'o'),
+                 (all_line_adj_txt_verification, all_line_scores_adj_txt, "Line Adjacency Text", 'tab:orange', 'o'),
+                 (all_line_json_verification, all_line_scores_json, "Line JSON", 'tab:red', 'o'),
+                 (all_line_tokenized_txt_verification, all_line_scores_tokenized_txt, "Line Tokenized", 'tab:purple', 'o'),
+                 (all_line_jpg_verification, all_line_scores_jpg, "Line JPG", 'tab:green', 'o'),
+                 (all_occupancy_adj_json_verification, all_occupancy_scores_adj_json, "Occupancy Adjacency JSON", 'tab:blue', 'v'),
+                 (all_occupancy_adj_txt_verification, all_occupancy_scores_adj_txt, "Occupancy Adjacency Text", 'tab:orange', 'v'),
+                 (all_occupancy_json_verification, all_occupancy_scores_json, "Occupancy JSON", 'tab:red', 'v'),
+                 (all_occupancy_tokenized_txt_verification, all_occupancy_scores_tokenized_txt, "Occupancy Tokenized", 'tab:purple', 'v'),
+                 (all_occupancy_jpg_verification, all_occupancy_scores_jpg, "Occupancy JPG", 'tab:green', 'v'),
+                 (all_occupancy_ascii_txt_verification, all_occupancy_scores_ascii_txt, "Occupancy ASCII", 'tab:brown', 'v')]
+
+
+
+small_dataset_backtracking = [(all_line_adj_json_backtracking, all_line_scores_adj_json, "Line Adjacency JSON", 'tab:blue', 'o'),
+                 (all_line_adj_txt_backtracking, all_line_scores_adj_txt, "Line Adjacency Text", 'tab:orange', 'o'),
+                 (all_line_json_backtracking, all_line_scores_json, "Line JSON", 'tab:red', 'o'),
+                 (all_line_tokenized_txt_backtracking, all_line_scores_tokenized_txt, "Line Tokenized", 'tab:purple', 'o'),
+                 (all_line_jpg_backtracking, all_line_scores_jpg, "Line JPG", 'tab:green', 'o'),
+                 (all_occupancy_adj_json_backtracking, all_occupancy_scores_adj_json, "Occupancy Adjacency JSON", 'tab:blue', 'v'),
+                 (all_occupancy_adj_txt_backtracking, all_occupancy_scores_adj_txt, "Occupancy Adjacency Text", 'tab:orange', 'v'),
+                 (all_occupancy_json_backtracking, all_occupancy_scores_json, "Occupancy JSON", 'tab:red', 'v'),
+                 (all_occupancy_tokenized_txt_backtracking, all_occupancy_scores_tokenized_txt, "Occupancy Tokenized", 'tab:purple', 'v'),
+                 (all_occupancy_jpg_backtracking, all_occupancy_scores_jpg, "Occupancy JPG", 'tab:green', 'v'),
+                 (all_occupancy_ascii_txt_backtracking, all_occupancy_scores_ascii_txt, "Occupancy ASCII", 'tab:brown', 'v')]
+
+small_dataset_algorithm = [(all_line_adj_json_algorithm, all_line_scores_adj_json, "Line Adjacency JSON", 'tab:blue', 'o'),
+                 (all_line_adj_txt_algorithm, all_line_scores_adj_txt, "Line Adjacency Text", 'tab:orange', 'o'),
+                 (all_line_json_algorithm, all_line_scores_json, "Line JSON", 'tab:red', 'o'),
+                 (all_line_tokenized_txt_algorithm, all_line_scores_tokenized_txt, "Line Tokenized", 'tab:purple', 'o'),
+                 (all_line_jpg_algorithm, all_line_scores_jpg, "Line JPG", 'tab:green', 'o'),
+                 (all_occupancy_adj_json_algorithm, all_occupancy_scores_adj_json, "Occupancy Adjacency JSON", 'tab:blue', 'v'),
+                 (all_occupancy_adj_txt_algorithm, all_occupancy_scores_adj_txt, "Occupancy Adjacency Text", 'tab:orange', 'v'),
+                 (all_occupancy_json_algorithm, all_occupancy_scores_json, "Occupancy JSON", 'tab:red', 'v'),
+                 (all_occupancy_tokenized_txt_algorithm, all_occupancy_scores_tokenized_txt, "Occupancy Tokenized", 'tab:purple', 'v'),
+                 (all_occupancy_jpg_algorithm, all_occupancy_scores_jpg, "Occupancy JPG", 'tab:green', 'v'),
+                 (all_occupancy_ascii_txt_algorithm, all_occupancy_scores_ascii_txt, "Occupancy ASCII", 'tab:brown', 'v')]
+
+small_dataset_heuristic = [(all_line_adj_json_heuristic, all_line_scores_adj_json, "Line Adjacency JSON", 'tab:blue', 'o'),
+                 (all_line_adj_txt_heuristic, all_line_scores_adj_txt, "Line Adjacency Text", 'tab:orange', 'o'),
+                 (all_line_json_heuristic, all_line_scores_json, "Line JSON", 'tab:red', 'o'),
+                 (all_line_tokenized_txt_heuristic, all_line_scores_tokenized_txt, "Line Tokenized", 'tab:purple', 'o'),
+                 (all_line_jpg_heuristic, all_line_scores_jpg, "Line JPG", 'tab:green', 'o'),
+                 (all_occupancy_adj_json_heuristic, all_occupancy_scores_adj_json, "Occupancy Adjacency JSON", 'tab:blue', 'v'),
+                 (all_occupancy_adj_txt_heuristic, all_occupancy_scores_adj_txt, "Occupancy Adjacency Text", 'tab:orange', 'v'),
+                 (all_occupancy_json_heuristic, all_occupancy_scores_json, "Occupancy JSON", 'tab:red', 'v'),
+                 (all_occupancy_tokenized_txt_heuristic, all_occupancy_scores_tokenized_txt, "Occupancy Tokenized", 'tab:purple', 'v'),
+                 (all_occupancy_jpg_heuristic, all_occupancy_scores_jpg, "Occupancy JPG", 'tab:green', 'v'),
+                 (all_occupancy_ascii_txt_heuristic, all_occupancy_scores_ascii_txt, "Occupancy ASCII", 'tab:brown', 'v')]
+
+small_dataset_frustration = [(all_line_adj_json_frustration, all_line_scores_adj_json, "Line Adjacency JSON", 'tab:blue', 'o'),
+                 (all_line_adj_txt_frustration, all_line_scores_adj_txt, "Line Adjacency Text", 'tab:orange', 'o'),
+                 (all_line_json_frustration, all_line_scores_json, "Line JSON", 'tab:red', 'o'),
+                 (all_line_tokenized_txt_frustration, all_line_scores_tokenized_txt, "Line Tokenized", 'tab:purple', 'o'),
+                 (all_line_jpg_frustration, all_line_scores_jpg, "Line JPG", 'tab:green', 'o'),
+                 (all_occupancy_adj_json_frustration, all_occupancy_scores_adj_json, "Occupancy Adjacency JSON", 'tab:blue', 'v'),
+                 (all_occupancy_adj_txt_frustration, all_occupancy_scores_adj_txt, "Occupancy Adjacency Text", 'tab:orange', 'v'),
+                 (all_occupancy_json_frustration, all_occupancy_scores_json, "Occupancy JSON", 'tab:red', 'v'),
+                 (all_occupancy_tokenized_txt_frustration, all_occupancy_scores_tokenized_txt, "Occupancy Tokenized", 'tab:purple', 'v'),
+                 (all_occupancy_jpg_frustration, all_occupancy_scores_jpg, "Occupancy JPG", 'tab:green', 'v'),
+                 (all_occupancy_ascii_txt_frustration, all_occupancy_scores_ascii_txt, "Occupancy ASCII", 'tab:brown', 'v')]
+
+small_dataset_false_confidence = [(all_line_adj_json_false_confidence, all_line_scores_adj_json, "Line Adjacency JSON", 'tab:blue', 'o'),
+                 (all_line_adj_txt_false_confidence, all_line_scores_adj_txt, "Line Adjacency Text", 'tab:orange', 'o'),
+                 (all_line_json_false_confidence, all_line_scores_json, "Line JSON", 'tab:red', 'o'),
+                 (all_line_tokenized_txt_false_confidence, all_line_scores_tokenized_txt, "Line Tokenized", 'tab:purple', 'o'),
+                 (all_line_jpg_false_confidence, all_line_scores_jpg, "Line JPG", 'tab:green', 'o'),
+                 (all_occupancy_adj_json_false_confidence, all_occupancy_scores_adj_json, "Occupancy Adjacency JSON", 'tab:blue', 'v'),
+                 (all_occupancy_adj_txt_false_confidence, all_occupancy_scores_adj_txt, "Occupancy Adjacency Text", 'tab:orange', 'v'),
+                 (all_occupancy_json_false_confidence, all_occupancy_scores_json, "Occupancy JSON", 'tab:red', 'v'),
+                 (all_occupancy_tokenized_txt_false_confidence, all_occupancy_scores_tokenized_txt, "Occupancy Tokenized", 'tab:purple', 'v'),
+                 (all_occupancy_jpg_false_confidence, all_occupancy_scores_jpg, "Occupancy JPG", 'tab:green', 'v'),
+                 (all_occupancy_ascii_txt_false_confidence, all_occupancy_scores_ascii_txt, "Occupancy ASCII", 'tab:brown', 'v')]
+
+small_dataset_step_by_step = [(all_line_adj_json_step_by_step, all_line_scores_adj_json, "Line Adjacency JSON", 'tab:blue', 'o'),
+                 (all_line_adj_txt_step_by_step, all_line_scores_adj_txt, "Line Adjacency Text", 'tab:orange', 'o'),
+                 (all_line_json_step_by_step, all_line_scores_json, "Line JSON", 'tab:red', 'o'),
+                 (all_line_tokenized_txt_step_by_step, all_line_scores_tokenized_txt, "Line Tokenized", 'tab:purple', 'o'),
+                 (all_line_jpg_step_by_step, all_line_scores_jpg, "Line JPG", 'tab:green', 'o'),
+                 (all_occupancy_adj_json_step_by_step, all_occupancy_scores_adj_json, "Occupancy Adjacency JSON", 'tab:blue', 'v'),
+                 (all_occupancy_adj_txt_step_by_step, all_occupancy_scores_adj_txt, "Occupancy Adjacency Text", 'tab:orange', 'v'),
+                 (all_occupancy_json_step_by_step, all_occupancy_scores_json, "Occupancy JSON", 'tab:red', 'v'),
+                 (all_occupancy_tokenized_txt_step_by_step, all_occupancy_scores_tokenized_txt, "Occupancy Tokenized", 'tab:purple', 'v'),
+                 (all_occupancy_jpg_step_by_step, all_occupancy_scores_jpg, "Occupancy JPG", 'tab:green', 'v'),
+                 (all_occupancy_ascii_txt_step_by_step, all_occupancy_scores_ascii_txt, "Occupancy ASCII", 'tab:brown', 'v')]
+
+small_dataset_restart = [(all_line_adj_json_restart, all_line_scores_adj_json, "Line Adjacency JSON", 'tab:blue', 'o'),
+                 (all_line_adj_txt_restart, all_line_scores_adj_txt, "Line Adjacency Text", 'tab:orange', 'o'),
+                 (all_line_json_restart, all_line_scores_json, "Line JSON", 'tab:red', 'o'),
+                 (all_line_tokenized_txt_restart, all_line_scores_tokenized_txt, "Line Tokenized", 'tab:purple', 'o'),
+                 (all_line_jpg_restart, all_line_scores_jpg, "Line JPG", 'tab:green', 'o'),
+                 (all_occupancy_adj_json_restart, all_occupancy_scores_adj_json, "Occupancy Adjacency JSON", 'tab:blue', 'v'),
+                 (all_occupancy_adj_txt_restart, all_occupancy_scores_adj_txt, "Occupancy Adjacency Text", 'tab:orange', 'v'),
+                 (all_occupancy_json_restart, all_occupancy_scores_json, "Occupancy JSON", 'tab:red', 'v'),
+                 (all_occupancy_tokenized_txt_restart, all_occupancy_scores_tokenized_txt, "Occupancy Tokenized", 'tab:purple', 'v'),
+                 (all_occupancy_jpg_restart, all_occupancy_scores_jpg, "Occupancy JPG", 'tab:green', 'v'),
+                 (all_occupancy_ascii_txt_restart, all_occupancy_scores_ascii_txt, "Occupancy ASCII", 'tab:brown', 'v')]
+
+small_dataset_reverse_search = [(all_line_adj_json_reverse_search, all_line_scores_adj_json, "Line Adjacency JSON", 'tab:blue', 'o'),
+                 (all_line_adj_txt_reverse_search, all_line_scores_adj_txt, "Line Adjacency Text", 'tab:orange', 'o'),
+                 (all_line_json_reverse_search, all_line_scores_json, "Line JSON", 'tab:red', 'o'),
+                 (all_line_tokenized_txt_reverse_search, all_line_scores_tokenized_txt, "Line Tokenized", 'tab:purple', 'o'),
+                 (all_line_jpg_reverse_search, all_line_scores_jpg, "Line JPG", 'tab:green', 'o'),
+                 (all_occupancy_adj_json_reverse_search, all_occupancy_scores_adj_json, "Occupancy Adjacency JSON", 'tab:blue', 'v'),
+                 (all_occupancy_adj_txt_reverse_search, all_occupancy_scores_adj_txt, "Occupancy Adjacency Text", 'tab:orange', 'v'),
+                 (all_occupancy_json_reverse_search, all_occupancy_scores_json, "Occupancy JSON", 'tab:red', 'v'),
+                 (all_occupancy_tokenized_txt_reverse_search, all_occupancy_scores_tokenized_txt, "Occupancy Tokenized", 'tab:purple', 'v'),
+                 (all_occupancy_jpg_reverse_search, all_occupancy_scores_jpg, "Occupancy JPG", 'tab:green', 'v'),
+                 (all_occupancy_ascii_txt_reverse_search, all_occupancy_scores_ascii_txt, "Occupancy ASCII", 'tab:brown', 'v')]
 
 
 
@@ -3650,6 +4597,118 @@ def plot_keyword(ax, datasets, title, ylabel):
         verticalalignment='top', bbox=props)
 
 
+
+
+
+
+
+
+# Create 2x4 subplot grid (8 total)
+fig, axes = plt.subplots(2, 2, figsize=(22, 8))
+axes = axes.flatten()
+
+# Set 1 common x-y label for the entire figure
+fig.supxlabel('Mean Completion Score (%)', fontsize = 12)
+fig.supylabel('Keyword Presence (%)', fontsize = 12)
+
+
+plot_keyword(axes[0], small_dataset_algorithm, "Algorithm",  "Presence (%)")
+plot_keyword(axes[1], small_dataset_heuristic, "Heuristics", "Presence (%)")
+plot_keyword(axes[2], small_dataset_false_confidence, "False Confidence", "Presence (%)")
+
+
+# Make a legend
+# specify colors
+colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+
+# --- Design Legend Group Markers ---
+spacer_handle = (
+Line2D([], [], marker='o', color='none', markerfacecolor='none', markersize=10)
+)
+line_handle = (
+Line2D([], [], marker='o', color='grey', linestyle = 'none'),
+),
+occupancy_handle = (
+Line2D([], [], marker='v', color='grey', linestyle = 'none'),
+)
+
+line_handle_6 = (
+Line2D([], [], marker='o', color='grey', linestyle = 'none'),
+),
+occupancy_handle_6 = (
+Line2D([], [], marker='v', color='grey', linestyle = 'none'),
+)
+
+line_handle_15 = (
+Line2D([], [], marker='s', color='grey', linestyle = 'none'),
+),
+occupancy_handle_15 = (
+Line2D([], [], marker='d', color='grey', linestyle = 'none'),
+)
+
+
+# Create legend order with spacers for grouping
+handles = [
+spacer_handle,
+line_handle,
+occupancy_handle,
+spacer_handle,
+
+Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
+Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
+Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
+
+]
+
+# Add labels to the markers
+labels = [
+r"$\bf{Input\ Maze\ Style}$",
+"Line Wall", "Occupancy Grid",
+r"$\bf{Input\ Formats}$",
+"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+]
+
+axes[3].axis("off")
+
+axes[3].legend(
+    handles,
+    labels,
+    handler_map={tuple: HandlerTuple(ndivide=None)},
+    loc="center",
+    title="Legend",
+    frameon=True
+)
+
+plt.suptitle(r'$\bf{Presence\ of\ Each\ Keyword\ Category\ vs\ Completion\ Score}$'
+                   '\nGemini 2.5 Pro, Coordinates Output, 6x6/13x13', #15x15/31x31',
+                    fontsize=14)
+
+# # plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+# plt.tight_layout(rect=[0.03, 0, 0.97, 0.95])
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Create 2x4 subplot grid (8 total)
 fig, axes = plt.subplots(2, 4, figsize=(22, 8))
 axes = axes.flatten()
@@ -3706,7 +4765,7 @@ line_handle_15 = (
 Line2D([], [], marker='s', color='grey', linestyle = 'none'),
 ),
 occupancy_handle_15 = (
-Line2D([], [], marker='h', color='grey', linestyle = 'none'),
+Line2D([], [], marker='d', color='grey', linestyle = 'none'),
 )
 
 
@@ -3863,7 +4922,7 @@ line_handle_15 = (
 Line2D([], [], marker='s', color='grey', linestyle = 'none'),
 ),
 occupancy_handle_15 = (
-Line2D([], [], marker='h', color='grey', linestyle = 'none'),
+Line2D([], [], marker='d', color='grey', linestyle = 'none'),
 )
 
 # Create legend order with spacers for grouping
@@ -4059,7 +5118,7 @@ line_handle_15 = (
 Line2D([], [], marker='s', color='grey', linestyle = 'none'),
 ),
 occupancy_handle_15 = (
-Line2D([], [], marker='h', color='grey', linestyle = 'none'),
+Line2D([], [], marker='d', color='grey', linestyle = 'none'),
 )
 
 
@@ -4153,7 +5212,7 @@ line_handle_15 = (
 Line2D([], [], marker='s', color='grey', linestyle = 'none'),
 ),
 occupancy_handle_15 = (
-Line2D([], [], marker='h', color='grey', linestyle = 'none'),
+Line2D([], [], marker='d', color='grey', linestyle = 'none'),
 )
 
 
