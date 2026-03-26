@@ -286,7 +286,7 @@ phrases_restart  =["I'll need to visualize the maze in a different way", "I'll b
                     "I'll begin from the start again", "I did it again", 'restart', 'several attempts', 'trial and error',
                         'I had to go back', 'rethink', 'more systematic', 'new method', 'try again', 're-routing', 
                         're-evaluate', 'switch', 'I start again', 'start fresh', 'change my approach', 'another approach', 'change my tactic', 
-                        'refining the approach', 'strategy shift' ] 
+                        'refining the approach', 'strategy shift', 'second trace' ] 
 phrases_reverse_search = [ 'working backward', 'from the target', 'from the end', 'starting at (14,14)', 'starting at (29,29)', 
                             'starting at (2,2)','starting at (11,11)', 'starting at (5,5)', 'working backward', 'meeting in the middle', 
                             'trace a path backward', 'from (14,14) to (0,0)', 'from (29,29) to (1,1)', 'from (5,5) to (0,0)', 
@@ -301,6 +301,8 @@ exclusions_verification = ['any valid connection' ]
 phrases_false_confidence = ['I made it', "I've made it", 'confident', 'it works', 'paid off', 'solved', 'correct', 'complete', 'this is the solution', 'easy, right?','no problem']
 
 exclusions_false_confidence = ['not confident']
+
+
 
 
 

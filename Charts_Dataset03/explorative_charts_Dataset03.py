@@ -4683,7 +4683,7 @@ axes[3].legend(
 )
 
 plt.suptitle(r'$\bf{Presence\ of\ Each\ Keyword\ Category\ vs\ Completion\ Score}$'
-                   '\nGemini 2.5 Pro, Coordinates Output, 6x6/13x13', #15x15/31x31',
+                   '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31',
                     fontsize=14)
 
 # # plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
