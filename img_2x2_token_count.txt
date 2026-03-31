@@ -1,0 +1,32 @@
+count: (printed from call_llm using print(total_tokens))-> same result as printing from main. 
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) total_tokens=390 cached_content_token_count=None
+
+response metadata: (printed from call_llm using print(response.usage_metadata)) -> same result as printing from main. 
+
+cache_tokens_details=None cached_content_token_count=None candidates_token_count=3 candidates_tokens_details=None prompt_token_count=390 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=132
+), ModalityTokenCount(
+  modality=<MediaModality.IMAGE: 'IMAGE'>,
+  token_count=258
+)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=393 traffic_type=None
+
+
+LLM response: down,right (printed from main using print(response.text))
+
+metadata2: (printed from main using print(response.usage_metadata))
+cache_tokens_details=None cached_content_token_count=None candidates_token_count=3 candidates_tokens_details=None prompt_token_count=390 prompt_tokens_details=[ModalityTokenCount(
+  modality=<MediaModality.TEXT: 'TEXT'>,
+  token_count=132
+), ModalityTokenCount(
+  modality=<MediaModality.IMAGE: 'IMAGE'>,
+  token_count=258
+)] thoughts_token_count=None tool_use_prompt_token_count=None tool_use_prompt_tokens_details=None total_token_count=393 traffic_type=None
+
+inputtokens2: (printed from main using print(total_tokens))
+
+sdk_http_response=HttpResponse(
+  headers=<dict len=11>
+) total_tokens=390 cached_content_token_count=None

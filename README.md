@@ -14,45 +14,36 @@ cd Codes
 2. Create the environment, called myfirstproject 
 ```
 Windows: C:\Users\Your_Name\Codes> python -m venv myfirstproject
+macOS/Linux: $ python -m venv myfirstproject
 ```
 3. To activate the environment, make sure to be within the folder where this environment was created ('C:\Users\Your_Name\Codes' in the previous steps)
 ```
 Windows: C:\Users\Your_Name\Codes> .\myfirstproject\Scripts\activate
+macOS/Linux: $ source myfirstproject/bin/activate
 ```
-4. Install the Pillow library within the activated environment to be able to create maze images in the _maze_generator_ext_v3.py_ file.
+4. Install the Pillow library within the activated environment to be able to run the _maze_generator_ext_v3.py_ file.
 ```
 Windows: (myfirstproject) C:\Users\Your_Name\Codes> pip install pillow
-
+Linux: $ sudo apt install python3-pil
 ```
 5. Install NumPy and Matplotlib to create charts.
 ```
 Windows: (myfirstproject) C:\Users\Your_Name\Codes> pip install numpy
          (myfirstproject) C:\Users\Your_Name\Codes> pip install matplotlib
+Linux: $ sudo apt install numpy -> CHECK OF DIT KLOPT
+       $ sudo apt install matplotlib -> CHECK OF DIT KLOPT
 ```
 6. To deactivate the environment, run the following command
 ```
 Windows: (myfirstproject) C:\Users\Your_Name\Codes> deactivate
+macOS/Linux: (myfirstproject) ... $ deactivate
 ```
 7. Create all your scripts within this folder. They will run within the same clean environment and can securely access the API key. 
 
-### How to add an API key
-1. Inside your virtual environment, install the following libraries:
-
-```
-PIL/Pillow - for maze image generation
-NumPy - to store the data in arrays and perform mathematical operations
-Matplotlib - to generate charts for analysis
-Google-Genai - to use Google Gemini API
-SciPy - for calculations on the data
-```
-by running the following command in the Anaconda prompt while the environment is active
+### How to add an API key - Hier moet nog mac/linux instructies bij!
+1. Inside your virtual environment, install the following libraries by running the following command in the Anaconda prompt while the environment is active
 ```
 Windows: (myfirstproject) C:\Users\Your_Name\Codes> pip install google-generativeai python-dotenv google-genai
-(myfirstproject) C:\Users\Your_Name\Codes> pip install pillow
-(myfirstproject) C:\Users\Your_Name\Codes> pip install numpy
-(myfirstproject) C:\Users\Your_Name\Codes> pip install matplotlib
-(myfirstproject) C:\Users\Your_Name\Codes> pip install google-genai
-(myfirstproject) C:\Users\Your_Name\Codes> python -m pip install scipy
 ```
 2. Inside your project folder ('C:\Users\Your_Name\Codes' in the previous steps), create a file called .env
 3. Inside the .env file, add your key
@@ -77,15 +68,6 @@ API_KEY = "YOUR_SECRET_API_KEY_HERE"
     |   |   Dataset 01 2x2
     |   |   Dataset 01 3x3
     |   |   ...
-    |───Dataset 02
-    |   |   Dataset 01 2x2
-    |   |   Dataset 01 3x3
-    |   |   ...
-    |───Dataset 03
-    |   |   Dataset 01 2x2
-    |   |   Dataset 01 3x3
-    |   |   ...
-    
 ```
 * .env
     * A text file that is not included in the git because it contains my API-keys. Create your own and save your API key in the format of: 
