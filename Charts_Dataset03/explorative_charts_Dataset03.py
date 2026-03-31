@@ -4886,6 +4886,114 @@ fig.supxlabel('Mean Completion Score (%)', fontsize = 12)
 fig.supylabel('Keyword Presence (%)', fontsize = 12)
 
 
+plot_keyword(axes[0], small_dataset_algorithm, "Algorithm",  "Presence (%)")
+plot_keyword(axes[1], small_dataset_heuristic, "Heuristics", "Presence (%)")
+plot_keyword(axes[2], small_dataset_frustration, "Frustration", "Presence (%)")
+plot_keyword(axes[3], small_dataset_false_confidence, "False Confidence", "Presence (%)")
+plot_keyword(axes[4], small_dataset_backtracking, "Backtracking", "Presence (%)")
+plot_keyword(axes[5], small_dataset_restart, "Restart", "Presence (%)")
+plot_keyword(axes[6], small_dataset_reverse_search, "Reverse Search", "Presence (%)")
+plot_keyword(axes[7], small_dataset_step_by_step, "Step-by-Step", "Presence (%)")
+plot_keyword(axes[8], small_dataset_verification, "Verification", "Presence (%)")
+
+# Make a legend
+# specify colors
+colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+
+# --- Design Legend Group Markers ---
+spacer_handle = (
+Line2D([], [], marker='o', color='none', markerfacecolor='none', markersize=10)
+)
+line_handle = (
+Line2D([], [], marker='o', color='grey', linestyle = 'none'),
+),
+occupancy_handle = (
+Line2D([], [], marker='v', color='grey', linestyle = 'none'),
+)
+
+line_handle_6 = (
+Line2D([], [], marker='o', color='grey', linestyle = 'none'),
+),
+occupancy_handle_6 = (
+Line2D([], [], marker='v', color='grey', linestyle = 'none'),
+)
+
+line_handle_15 = (
+Line2D([], [], marker='s', color='grey', linestyle = 'none'),
+),
+occupancy_handle_15 = (
+Line2D([], [], marker='d', color='grey', linestyle = 'none'),
+)
+
+# Create legend order with spacers for grouping
+handles = [
+spacer_handle,
+line_handle,
+occupancy_handle,
+spacer_handle,
+
+Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
+Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
+Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
+
+]
+
+# Add labels to the markers
+labels = [
+r"$\bf{Input\ Maze\ Style}$",
+"Line Wall", "Occupancy Grid",
+r"$\bf{Input\ Formats}$",
+"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+]
+
+axes[9].axis("off")
+
+axes[9].legend(
+    handles,
+    labels,
+    handler_map={tuple: HandlerTuple(ndivide=None)},
+    loc="center",
+    title="Legend",
+    frameon=True
+)
+
+plt.suptitle(r'$\bf{Presence\ of\ All\ Explored\ Keyword\ Categories\ vs\ Completion\ Score}$'
+                   '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31', #15x15/31x31',
+                    fontsize=14)
+
+# plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+plt.tight_layout(rect=[0.03, 0, 0.97, 0.95])
+plt.show()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Create 2x4 subplot grid (8 total)
+fig, axes = plt.subplots(2, 5, figsize=(22, 8))
+axes = axes.flatten()
+
+# Set 1 common x-y label for the entire figure
+fig.supxlabel('Mean Completion Score (%)', fontsize = 12)
+fig.supylabel('Keyword Presence (%)', fontsize = 12)
+
+
 plot_keyword(axes[0], huge_datasets_algorithm_6_15, "Algorithm",  "Presence (%)")
 plot_keyword(axes[1], huge_datasets_heuristic_6_15, "Heuristics", "Presence (%)")
 plot_keyword(axes[2], huge_datasets_frustration_6_15, "Frustration", "Presence (%)")
@@ -4963,7 +5071,7 @@ axes[9].legend(
 )
 
 plt.suptitle(r'$\bf{Presence\ of\ Each\ Keyword\ Category\ vs\ Completion\ Score}$'
-                   '\nGemini 2.5 Pro, ll Output FoRs, 6x6/13x13 and 15x15/31x31', #15x15/31x31',
+                   '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31', #15x15/31x31',
                     fontsize=14)
 
 # plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
