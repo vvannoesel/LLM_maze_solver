@@ -1,66 +1,96 @@
 
 # Prompting LLMs With Perfect Mazes To Investigate Their Ability For Reasoning, Spatial Understanding and Navigation
-This project contains codes and datasets that were used to test LLM's ability of spatial reasoning. This knowledge was then used to research the reasoning mechanisms and limitations of a SOTA reasoning LLM, compared to performance of a non-reasoning LLM as a baseline. For this project I used Python version 3.11.4 . 
+This project contains codes and datasets that were used to test LLM's ability of spatial reasoning. This knowledge was then used to research the reasoning mechanisms and limitations of a SOTA reasoning LLM, compared to performance of a non-reasoning LLM as a baseline. For this project I used Python version 3.11.4.
+
+## Index
+* [Setup](#setup)
+* [Structure of this project](#structure-of-this-project)
+* [Creating a dataset](#creating-a-dataset)
+* [Calling the API](#calling-the-api)
 
 ## Setup
+This project uses Python version 3.11.4 and all instructions are specifically for Windows systems. If you are familiar with setting up environments and API keys, skip to the section [How to set up dependencies](#how-to-set-up-dependencies) for a full list of necessary installs. 
+
 
 ### How to set up the virtual environment
 All instructions are for Windows.
-1. In an Anaconda prompt, make a directory and navigate to it
+
+1. In an Anaconda prompt window, navigate to the folder where you cloned or forked this repository to. We will refer to this folder as 'LLM_maze_solver'.
+2. Create the environment, called 'my_env'. In the commandline type the following:
 ```
-mkdir Codes
-cd Codes
+ conda create -n my_env python=3.11.4
 ```
-2. Create the environment, called myfirstproject 
+reply 'yes' to complete the installation.
+
+
+3. To activate the environment, again navigate to the folder that contains the environment ( C:\Users\Your_Name\LLM_maze_solver ) , and use:
 ```
-Windows: C:\Users\Your_Name\Codes> python -m venv myfirstproject
+conda acivate my_env
 ```
-3. To activate the environment, make sure to be within the folder where this environment was created ('C:\Users\Your_Name\Codes' in the previous steps)
+To deactivate the environment, use:
 ```
-Windows: C:\Users\Your_Name\Codes> .\myfirstproject\Scripts\activate
+conda deactivate
 ```
 
-4. To deactivate the environment, run the following command
+
+
+
+
+
+### How to enable API calling
+1. Inside your project folder ('C:\Users\Your_Name\LLM_maze_solver' in the previous steps), create a file called .env
+
+2. Add the .env file to your .gitignore file. 
+3. Inside the .env file, add your key. Make sure it is called 'GEMINI_API_KEY' as this is called in the tesT.py and tesT_2.py files. 
 ```
-Windows: (myfirstproject) C:\Users\Your_Name\Codes> deactivate
+GEMINI_API_KEY = "YOUR_SECRET_API_KEY_HERE"
 ```
-5. Create all your scripts within this folder. They will run within the same clean environment and can securely access the API key. 
+
+
+
 
 ### How to set up dependencies
-1. Inside your virtual environment, install the following libraries:
+Inside your virtual environment, install the following libraries:
 
 ```
-NumPy - to support large arrays and mathematical operations
-Matplotlib - to create charts
-Scipy - for data analysis
-Pandas - for making tables
-PIL/Pillow: to create maze images
+Python 3.11.4
+NumPy 
+Matplotlib 
+Scipy 
+Pandas 
+PIL/Pillow: may be automatically included in the Matplotlib installation
+Dataframe_image
 Google Genai: to call Google Gemini API
 ```
-
- by running the following command in the Anaconda prompt while the environment is active
+by running the following Windows commands in the Anaconda prompt while the environment is active. PIL/Pillow may be automatically included in the Matplotlib installation.
 ```
-Windows: 
-(myfirstproject) C:\Users\Your_Name\Codes> pip install numpy
-(myfirstproject) C:\Users\Your_Name\Codes> pip install matplotlib
-(myfirstproject) C:\Users\Your_Name\Codes> python -m pip install scipy
-(myfirstproject) C:\Users\Your_Name\Codes> pip install pandas
-(myfirstproject) C:\Users\Your_Name\Codes> pip install pillow
-(myfirstproject) C:\Users\Your_Name\Codes> pip install google-generativeai python-dotenv google-genai
+pip install numpy
 ```
-2. Inside your project folder ('C:\Users\Your_Name\Codes' in the previous steps), create a file called .env
-
-3. Add the .env file to your .gitignore file. 
-4. Inside the .env file, add your key
 ```
-API_KEY = "YOUR_SECRET_API_KEY_HERE"
+pip install matplotlib
+```
+```
+pip install pillow
+```
+```
+python -m pip install scipy
+```
+```
+pip install pandas
+```
+```
+pip install dataframe_image
+```
+```
+pip install google-generativeai python-dotenv google-genai
 ```
 
 
 
 ## Structure of this project
 ```
-    Codes
+    LLM_maze_solver
+    |   my_env/ (optional, if you followed the setup instructions in full)
     |   README.md
     |   .env
     |   maze_generator_ext_v3.py    (file that generates all mazes)
@@ -111,22 +141,44 @@ API_KEY = "YOUR_SECRET_API_KEY_HERE"
     * A file that contains all keyword search terms and the code to perform the analysis. Uses all LLM outputs in Dataset03, and creates file 'category_occurrence.py' to generate arrays with keyword occurrences. Can specify which maze size and output frame of reference to use in the main() function. 
 * score_saver.py and token_count_extracter.py
     * Files that score the LLMs' output, save their scores and filter the metadata to save the number of input and output tokens as arrays.
-# Creating a Dataset
+## Creating a Dataset
 This project allows two ways to create a dataset. Either you create multiple mazes of the same size (row x col), or you create one square maze for each size, within specified size boundaries.
-## One Size - Multiple Mazes
+### One Size - Multiple Mazes
 - Inputs: dataset directory, maze rows and columns
 - Outputs: the specified directory (if it did not exist) containing separate folders for each maze. Each folder has the name "_directory_name_ _size_ _postfix_number_" (eg. "Dataset 01 3x3 1"). The postfix number is used to distinguish each maze, so you will have mazes 1,2,3,4,5,6,... of your desired size. 
 
 Use **create_dataset_of_same_complexity.py**. This file uses the maze_generator_ext_v3.py file to recurrently create mazes. First, specify the directory you want to use, by including the name of the directory in the **create_test_directory(rows, cols, k)** function, as _give_your_dataset_a_name_. Then, in the **main()**, specify the number of rows and columns your mazes should have, and what the postfix numbers of the files should be. This would ordinarily start at 1, but if you want to append an existing dataset, set it to whatever value the existing dataset contains. 
 
-## Many Sizes - One Maze for Each
+### Many Sizes - One Maze for Each
 - Inputs: dataset directory, lower bound for maze rows and columns, upper bound for maze rows and columns
 - Outputs: the specified directory (if it did not exist) containing separate folders for each maze. Each folder has the name "_directory_name_ _size_" (eg. "Dataset 01 3x3").
 
 Use **create_dataset_of_same_complexity.py**. This file uses the maze_generator_ext_v3.py file to recurrently create mazes. First, specify the directory you want to use, by including the name of the directory in the **create_test_directory(rows, cols, k)** function, as _give_your_dataset_a_name_. Then, in the **main()**, specify the minimum and maximum number of rows and columns your mazes should have, by changing the values for 'i' and 'j'. Note that this script only creates square mazes.   
 
-# Calling the API
+## Calling the API
+### How to run tests
+Using the files tesT.py and tesT_2.py, we can run the mazes through the APIs of Gemini 2.5 Flash-Lite and Gemini 2.5 Pro, respectively. Before you run, specify the following: 
+*   MAZE_ROWS and MAZE_COLS in lines 27 and 28, describing the nxn size of the mazes 
+* Which output frame of reference (FoR) to use, by **selecting and deselecting specific sections of main()**. The sections are marked in the code, but the line numbers are also listed below. 
+* Only if you want to run the test on a new dataset, replace the 'file_path' directory path in the import\_maze_file( ) function.
 
+Lines to uncomment:
+
+| Output frame of reference (FoR)  | tesT.py |tesT_2.py|
+| -------- | ------- |--------|
+| Coordinates  | 637-736   | 648-746 |
+| Allocentric|  436-531 | 444-540 |
+| Egocentric   | 534-631  |545-640 |
+
+
+### How the results are stored
+After running the test, the LLM output is saved in a file called comparison_report_{LLM}\_{FoR}_{n}.md. **BEWARE** : if you run the test on the existing dataset, your new comparison report will replace the existing report.
+
+All quantitative data is stored in arrays in separate files. In all cases, nxn is replaced by the maze size.
+* The comparison scores are saved in a file called _scores_Dataset03_nxn.py_.
+* The number of input tokens as reported by Gemini's metadata are saved in a file called _prompt_tokens_Dataset03_nxn.py_.
+* The number of output tokens as reported by Gemini's metadata are saved in a file called _output_tokens_Dataset03_nxn.py_.
+* The number of consecutive correct steps counted from the start of the answer until the first mistake, is saved in a file called _raw_scores_Dataset03_nxn.py_.
 
 # Notes voor Val
 Wanneer je je hele code gaat testen, let dan vooral op het volgende:
