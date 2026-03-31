@@ -143,6 +143,8 @@ pip install google-generativeai python-dotenv google-genai
     * Files that score the LLMs' output, save their scores and filter the metadata to save the number of input and output tokens as arrays.
 ## Creating a Dataset
 This project allows two ways to create a dataset. Either you create multiple mazes of the same size (row x col), or you create one square maze for each size, within specified size boundaries.
+### Making a single maze
+If you wish to make 1 maze in all representations, use 'maze_generator_ext_v3.py'. In this file, choose the preferred square maze size and input in 'easy_rows, easy_cols' under the 'if __name__ ==' section.
 ### One Size - Multiple Mazes
 - Inputs: dataset directory, maze rows and columns
 - Outputs: the specified directory (if it did not exist) containing separate folders for each maze. Each folder has the name "_directory_name_ _size_ _postfix_number_" (eg. "Dataset 01 3x3 1"). The postfix number is used to distinguish each maze, so you will have mazes 1,2,3,4,5,6,... of your desired size. 
