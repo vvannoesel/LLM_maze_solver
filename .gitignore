@@ -15,7 +15,7 @@ Test*/
 genai_val/
 __pycache__/
 comparison_results*
-'Dataset 02.1 - ASCII analysis'/
+Dataset_02.1_ASCII_analysis/
 
 # Files used for testing code
 autoscore.py
