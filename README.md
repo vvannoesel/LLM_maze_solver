@@ -44,7 +44,7 @@ Windows:
 (myfirstproject) C:\Users\Your_Name\Codes> pip install numpy
 (myfirstproject) C:\Users\Your_Name\Codes> pip install matplotlib
 (myfirstproject) C:\Users\Your_Name\Codes> python -m pip install scipy
-(myfirstproject) C:\Users\Your_Name\Codes> python -m pip install pandas
+(myfirstproject) C:\Users\Your_Name\Codes> pip install pandas
 (myfirstproject) C:\Users\Your_Name\Codes> pip install pillow
 (myfirstproject) C:\Users\Your_Name\Codes> pip install google-generativeai python-dotenv google-genai
 ```
@@ -110,7 +110,7 @@ API_KEY = "YOUR_SECRET_API_KEY_HERE"
 * keyword_search.py
     * A file that contains all keyword search terms and the code to perform the analysis. Uses all LLM outputs in Dataset03, and creates file 'category_occurrence.py' to generate arrays with keyword occurrences. Can specify which maze size and output frame of reference to use in the main() function. 
 * score_saver.py and token_count_extracter.py
-    * files that score the LLMs' output, save their scores and filter the metadata to save the number of input and output tokens as arrays.
+    * Files that score the LLMs' output, save their scores and filter the metadata to save the number of input and output tokens as arrays.
 # Creating a Dataset
 This project allows two ways to create a dataset. Either you create multiple mazes of the same size (row x col), or you create one square maze for each size, within specified size boundaries.
 ## One Size - Multiple Mazes
@@ -131,6 +131,4 @@ Use **create_dataset_of_same_complexity.py**. This file uses the maze_generator_
 # Notes voor Val
 Wanneer je je hele code gaat testen, let dan vooral op het volgende:
 - wordt de juiste folderstructuur gecreeerd en zijn alle paths relatief? ZORG DAT ALLE PADEN RELATIEF ZIJN !!!
-- alle dependencies correct gelist worden in de instructies. Mis ik er geen?? - je mist 'pip install google-genai', je mist 'python -m pip install scipy', 'pip install pandas'
-- pas .gitignore aan zodat anderen niet last hebben van alle files die ik alleen locaal heb. 
 
