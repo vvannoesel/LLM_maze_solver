@@ -43,3 +43,5 @@ van_Noesel_12jan2026_(jdw).pdf
 img_2x2_token_count.txt
 charts_Dataset01.py
 charts_Dataset02.py
+charts_normalized_Dataset01.py
+generate_and_score.py
