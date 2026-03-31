@@ -160,6 +160,7 @@ Use **create_dataset_of_same_complexity.py**. This file uses the maze_generator_
 Using the files tesT.py and tesT_2.py, we can run the mazes through the APIs of Gemini 2.5 Flash-Lite and Gemini 2.5 Pro, respectively. Before you run, specify the following: 
 *   MAZE_ROWS and MAZE_COLS in lines 27 and 28, describing the nxn size of the mazes 
 * Which output frame of reference (FoR) to use, by **selecting and deselecting specific sections of main()**. The sections are marked in the code, but the line numbers are also listed below. 
+* how many mazes to run, and which indexes to start and end on. Indexes are the last number in the maze files names (i.e. maze files are called 'Dataset 03 nxn index'). These can be specified in the range of the for-loop inside 'if __name__==' loop at the bottom of the files. 
 * Only if you want to run the test on a new dataset, replace the 'file_path' directory path in the import\_maze_file( ) function.
 
 Lines to uncomment:
@@ -174,13 +175,10 @@ Lines to uncomment:
 ### How the results are stored
 After running the test, the LLM output is saved in a file called comparison_report_{LLM}\_{FoR}_{n}.md. **BEWARE** : if you run the test on the existing dataset, your new comparison report will replace the existing report.
 
-All quantitative data is stored in arrays in separate files. In all cases, nxn is replaced by the maze size.
+All quantitative data is stored in arrays in separate files that will be created if they do not already exist. In all cases, nxn is replaced by the maze size. Data is stored in index i-1 of the arrays, where 'i' denotes the index of the maze file (e.g. file 'Dataset 03 3x3 10' is the 10th maze file, and will be stored on index 9).
 * The comparison scores are saved in a file called _scores_Dataset03_nxn.py_.
 * The number of input tokens as reported by Gemini's metadata are saved in a file called _prompt_tokens_Dataset03_nxn.py_.
 * The number of output tokens as reported by Gemini's metadata are saved in a file called _output_tokens_Dataset03_nxn.py_.
 * The number of consecutive correct steps counted from the start of the answer until the first mistake, is saved in a file called _raw_scores_Dataset03_nxn.py_.
 
-# Notes voor Val
-Wanneer je je hele code gaat testen, let dan vooral op het volgende:
-- wordt de juiste folderstructuur gecreeerd en zijn alle paths relatief? ZORG DAT ALLE PADEN RELATIEF ZIJN !!!
 
