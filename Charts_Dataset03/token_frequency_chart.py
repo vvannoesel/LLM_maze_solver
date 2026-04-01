@@ -1,3 +1,12 @@
+"""
+Created on Fri Jan 16 11:13:34 2026
+@author: valer
+This code extracts every occurrence where the output of Gemini 2.5 Flash-Lite 
+was the maximum token output (650 or 4000) by checking the final answer token output vector, which is a sign of giving up on the task.
+It plots the frequency of these occurrences as a function of the completion score, 
+to show that giving up on the task is more likely to happen at low completion scores.
+"""
+
 # Import parent directory to access results files 
 import sys
 import os

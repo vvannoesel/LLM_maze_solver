@@ -1,3 +1,12 @@
+"""
+Created on Mon Feb 9 15:31:58 2026
+@author: valer
+This code uses the data from the keywordsearch to look for correlations inside the data. 
+Not all code is useful, most of it is old attempts at charts, not all of them conveying a clear message. 
+Running this code as-is will create the keyword search charts found in the paper. 
+"""
+
+
 # Import parent directory to access results files 
 import sys
 import os

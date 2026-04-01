@@ -1,3 +1,10 @@
+"""
+Created on Fri Nov 14 10:24:47 2025
+@author: valer
+This code plots all average completion scores from Dataset03.It also plots the 'raw scores' which is the number of 
+consecutive correct steps counted from the start of the LLM's answer until the first mistake.
+"""
+
 # Import parent directory to access results files 
 import sys
 import os

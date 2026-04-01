@@ -45,3 +45,5 @@ charts_Dataset01.py
 charts_Dataset02.py
 charts_normalized_Dataset01.py
 generate_and_score.py
+Charts_Dataset03/heatmap_Dataset03.py
+Charts_Dataset03/raw_score_tokens_Dataset03.py

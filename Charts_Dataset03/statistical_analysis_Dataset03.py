@@ -1,3 +1,11 @@
+"""
+Created on Wed Nov 26 12:41:15 2025
+@author: valer
+This code calculates the necessary sample size to achieve a desired statistical power (α=0.05, error margin = 5%) 
+for each representation and condition in the Dataset03 experiment.
+"""
+
+
 # Import parent directory to access results files 
 import sys
 import os

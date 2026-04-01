@@ -1,3 +1,14 @@
+"""
+Created on Wed Nov 26 19:14:00 2025
+@author: valer
+This code calculates the average accuracy and average output token count for each representation and condition in the Dataset03 experiment, 
+for the 3x3, 6x6, and 15x15 grid sizes. The results are imported from separate files for each grid size.
+The output of this file is a chart that shows model performance as a function of test compute for both LLMs.
+By deselecting and selecting some sections, you can include or exclude reasoning and/or final answer tokens from the output token count.
+"""
+
+
+
 # Import parent directory to access results files 
 import sys
 import os
