@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 Created on Wed Jul 30 10:08:42 2025
-
 @author: valer and Gemini 2.5 Pro
+
+This code defines two classes, Maze and OccupancyGridMaze, to generate and represent mazes in different formats.
+This code can be used to create 1 maze at a time, but it is also used in create_dataset.py and create_dataset_of_same_complexity.py
+ to generate multiple mazes of specified sizes.
 """
 import random
 import json

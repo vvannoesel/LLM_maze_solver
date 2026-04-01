@@ -1,6 +1,6 @@
 """
 @author: valer 29 september 11:52:06 2025
-Script to automatically generate mazes of specified sizes and save their various representations
+Script to automatically generate multiple mazes of a specified size and save their various representations
 """
 
 from pathlib import Path

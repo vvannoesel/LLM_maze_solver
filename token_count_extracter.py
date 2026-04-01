@@ -1,3 +1,13 @@
+"""
+Created on Mon Oct 20 15:00:25 2025
+@author: valer and Gemini 2.5 Pro
+This code extracts the token counts from the LLM's response in the reasoning comparison reports for the Dataset03 experiment,
+specifically the prompt token count, total token count, and final answer token count, by searching for specific patterns in the text.
+The extracted counts are saved in separate vectors that are stored in a separate Python file, 
+to be used for further analysis and chart creation.
+"""
+
+
 import re
 
 def extract_prompt_token_count(text: str) -> str: 

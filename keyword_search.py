@@ -1,3 +1,9 @@
+"""
+Created on Wed Feb 11 18:00:05 2026
+@author: valer and Gemini 3 Pro
+This code searches for specific keywords in the "Internal Thoughts" sections of the reasoning comparison reports 
+for the Dataset03 experiment, counts their occurrences, and saves these counts in vectors that are stored in a separate Python file.
+"""
 
 
 import re

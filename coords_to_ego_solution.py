@@ -1,3 +1,13 @@
+"""
+Created on Mon Oct 20 17:46:15 2025
+@author: valer
+This code converts a sequence of coordinates representing a path through a maze into a 
+series of navigation steps (forward, left, right, backward) based on the agent's starting position and orientation.
+This code is used to create the egocentric navigation solutions for the line-based and occupancy grid mazes, by taking the coordinate solutions
+generated in maze_generator_ext_v3.py, and saves them in text files in the folder of the associated maze files.
+This code is called in maze_generator_ext_v3.py and never used on its own.
+"""
+
 from pathlib import Path
 
 

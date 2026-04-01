@@ -3,7 +3,7 @@
 This script stores the scores from tesT.py and tesT_2.py in a numpy array in a file called 'scores_Dataset01.py.
 These arrays can be used to create charts.
 The score is saved to an array with a name similar to the tested file's name. 
-The score is saved to the [row-2]'nd index of the array, so a 2x2 maze score is saved on the 0th index, 3x3 score on the 1st index, etc.
+The score is saved to the [postfix-1]'th index of the array, so maze number 2 will be saved on index 1, maze number 3 on index 2, etc.
 """
 
 import numpy as np
