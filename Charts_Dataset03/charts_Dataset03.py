@@ -3115,3 +3115,224 @@ plt.show()
 # plt.subplots_adjust(right=0.75) 
 # plt.show()
 
+
+
+
+
+
+
+
+
+
+means_NR_coords = [
+    [avg_line_NR_coords_adj_json,       avg_line_NR_coords_adj_json_6, avg_occupancy_NR_coords_adj_json,   avg_occupancy_NR_coords_adj_json_6,    avg_line_NR_coords_adj_json_15, avg_occupancy_NR_coords_adj_json_15],
+    [avg_line_NR_coords_adj_txt,        avg_line_NR_coords_adj_txt_6,        avg_occupancy_NR_coords_adj_txt, avg_occupancy_NR_coords_adj_txt_6,        avg_line_NR_coords_adj_txt_15, avg_occupancy_NR_coords_adj_txt_15],
+    [avg_line_NR_coords_jpg,            avg_line_NR_coords_jpg_6,            avg_occupancy_NR_coords_jpg,            avg_occupancy_NR_coords_jpg_6,            avg_line_NR_coords_jpg_15, avg_occupancy_NR_coords_jpg_15],
+    [avg_line_NR_coords_json,           avg_line_NR_coords_json_6,           avg_occupancy_NR_coords_json,           avg_occupancy_NR_coords_json_6,           avg_line_NR_coords_json_15, avg_occupancy_NR_coords_json_15],
+    [avg_line_NR_coords_tokenized_txt,  avg_line_NR_coords_tokenized_txt_6,  avg_occupancy_NR_coords_tokenized_txt,  avg_occupancy_NR_coords_tokenized_txt_6,  avg_line_NR_coords_tokenized_txt_15, avg_occupancy_NR_coords_tokenized_txt_15]
+]
+means_ascii_txt_NR_coords = [
+    avg_occupancy_NR_coords_ascii_txt, avg_occupancy_NR_coords_ascii_txt_6, avg_occupancy_NR_coords_ascii_txt_15
+]
+
+means_NR_allo = [
+    [avg_line_NR_allo_adj_json,       avg_line_NR_allo_adj_json_6, avg_occupancy_NR_allo_adj_json,   avg_occupancy_NR_allo_adj_json_6,    avg_line_NR_allo_adj_json_15, avg_occupancy_NR_allo_adj_json_15],
+    [avg_line_NR_allo_adj_txt,        avg_line_NR_allo_adj_txt_6,        avg_occupancy_NR_allo_adj_txt, avg_occupancy_NR_allo_adj_txt_6,        avg_line_NR_allo_adj_txt_15, avg_occupancy_NR_allo_adj_txt_15],
+    [avg_line_NR_allo_jpg,            avg_line_NR_allo_jpg_6,            avg_occupancy_NR_allo_jpg,            avg_occupancy_NR_allo_jpg_6,            avg_line_NR_allo_jpg_15, avg_occupancy_NR_allo_jpg_15],
+    [avg_line_NR_allo_json,           avg_line_NR_allo_json_6,           avg_occupancy_NR_allo_json,           avg_occupancy_NR_allo_json_6,           avg_line_NR_allo_json_15, avg_occupancy_NR_allo_json_15],
+    [avg_line_NR_allo_tokenized_txt,  avg_line_NR_allo_tokenized_txt_6,  avg_occupancy_NR_allo_tokenized_txt,  avg_occupancy_NR_allo_tokenized_txt_6,  avg_line_NR_allo_tokenized_txt_15, avg_occupancy_NR_allo_tokenized_txt_15]
+]
+
+means_ascii_txt_NR_allo = [
+    avg_occupancy_NR_allo_ascii_txt, avg_occupancy_NR_allo_ascii_txt_6, avg_occupancy_NR_allo_ascii_txt_15
+]
+means_NR_ego = [
+    [avg_line_NR_ego_adj_json,       avg_line_NR_ego_adj_json_6, avg_occupancy_NR_ego_adj_json,   avg_occupancy_NR_ego_adj_json_6,    avg_line_NR_ego_adj_json_15, avg_occupancy_NR_ego_adj_json_15],
+    [avg_line_NR_ego_adj_txt,        avg_line_NR_ego_adj_txt_6,        avg_occupancy_NR_ego_adj_txt, avg_occupancy_NR_ego_adj_txt_6,        avg_line_NR_ego_adj_txt_15, avg_occupancy_NR_ego_adj_txt_15],
+    [avg_line_NR_ego_jpg,            avg_line_NR_ego_jpg_6,            avg_occupancy_NR_ego_jpg,            avg_occupancy_NR_ego_jpg_6,            avg_line_NR_ego_jpg_15, avg_occupancy_NR_ego_jpg_15],
+    [avg_line_NR_ego_json,           avg_line_NR_ego_json_6,           avg_occupancy_NR_ego_json,           avg_occupancy_NR_ego_json_6,           avg_line_NR_ego_json_15, avg_occupancy_NR_ego_json_15],
+    [avg_line_NR_ego_tokenized_txt,  avg_line_NR_ego_tokenized_txt_6,  avg_occupancy_NR_ego_tokenized_txt,  avg_occupancy_NR_ego_tokenized_txt_6,  avg_line_NR_ego_tokenized_txt_15, avg_occupancy_NR_ego_tokenized_txt_15]
+]
+
+means_ascii_txt_NR_ego = [
+    avg_occupancy_NR_ego_ascii_txt, avg_occupancy_NR_ego_ascii_txt_6, avg_occupancy_NR_ego_ascii_txt_15
+]
+
+means_R_coords = [
+    [avg_line_R_coords_adj_json,       avg_line_R_coords_adj_json_6, avg_occupancy_R_coords_adj_json,   avg_occupancy_R_coords_adj_json_6,    avg_line_R_coords_adj_json_15, avg_occupancy_R_coords_adj_json_15],
+    [avg_line_R_coords_adj_txt,        avg_line_R_coords_adj_txt_6,        avg_occupancy_R_coords_adj_txt, avg_occupancy_R_coords_adj_txt_6,        avg_line_R_coords_adj_txt_15, avg_occupancy_R_coords_adj_txt_15],
+    [avg_line_R_coords_jpg,            avg_line_R_coords_jpg_6,            avg_occupancy_R_coords_jpg,            avg_occupancy_R_coords_jpg_6,            avg_line_R_coords_jpg_15, avg_occupancy_R_coords_jpg_15],
+    [avg_line_R_coords_json,           avg_line_R_coords_json_6,           avg_occupancy_R_coords_json,           avg_occupancy_R_coords_json_6,           avg_line_R_coords_json_15, avg_occupancy_R_coords_json_15],
+    [avg_line_R_coords_tokenized_txt,  avg_line_R_coords_tokenized_txt_6,  avg_occupancy_R_coords_tokenized_txt,  avg_occupancy_R_coords_tokenized_txt_6,  avg_line_R_coords_tokenized_txt_15, avg_occupancy_R_coords_tokenized_txt_15]
+]
+
+means_ascii_txt_R_coords = [
+    avg_occupancy_R_coords_ascii_txt, avg_occupancy_R_coords_ascii_txt_6, avg_occupancy_R_coords_ascii_txt_15
+]
+means_R_allo = [
+    [avg_line_R_allo_adj_json,       avg_line_R_allo_adj_json_6, avg_occupancy_R_allo_adj_json,   avg_occupancy_R_allo_adj_json_6,    avg_line_R_allo_adj_json_15, avg_occupancy_R_allo_adj_json_15],
+    [avg_line_R_allo_adj_txt,        avg_line_R_allo_adj_txt_6,        avg_occupancy_R_allo_adj_txt, avg_occupancy_R_allo_adj_txt_6,        avg_line_R_allo_adj_txt_15, avg_occupancy_R_allo_adj_txt_15],
+    [avg_line_R_allo_jpg,            avg_line_R_allo_jpg_6,            avg_occupancy_R_allo_jpg,            avg_occupancy_R_allo_jpg_6,            avg_line_R_allo_jpg_15, avg_occupancy_R_allo_jpg_15],
+    [avg_line_R_allo_json,           avg_line_R_allo_json_6,           avg_occupancy_R_allo_json,           avg_occupancy_R_allo_json_6,           avg_line_R_allo_json_15, avg_occupancy_R_allo_json_15],
+    [avg_line_R_allo_tokenized_txt,  avg_line_R_allo_tokenized_txt_6,  avg_occupancy_R_allo_tokenized_txt,  avg_occupancy_R_allo_tokenized_txt_6,  avg_line_R_allo_tokenized_txt_15, avg_occupancy_R_allo_tokenized_txt_15]
+]
+means_ascii_txt_R_allo = [
+    avg_occupancy_R_allo_ascii_txt, avg_occupancy_R_allo_ascii_txt_6, avg_occupancy_R_allo_ascii_txt_15
+]
+
+means_R_ego = [
+    [avg_line_R_ego_adj_json,       avg_line_R_ego_adj_json_6, avg_occupancy_R_ego_adj_json,   avg_occupancy_R_ego_adj_json_6,    avg_line_R_ego_adj_json_15, avg_occupancy_R_ego_adj_json_15],
+    [avg_line_R_ego_adj_txt,        avg_line_R_ego_adj_txt_6,        avg_occupancy_R_ego_adj_txt, avg_occupancy_R_ego_adj_txt_6,        avg_line_R_ego_adj_txt_15, avg_occupancy_R_ego_adj_txt_15],
+    [avg_line_R_ego_jpg,            avg_line_R_ego_jpg_6,            avg_occupancy_R_ego_jpg,            avg_occupancy_R_ego_jpg_6,            avg_line_R_ego_jpg_15, avg_occupancy_R_ego_jpg_15],
+    [avg_line_R_ego_json,           avg_line_R_ego_json_6,           avg_occupancy_R_ego_json,           avg_occupancy_R_ego_json_6,           avg_line_R_ego_json_15, avg_occupancy_R_ego_json_15],
+    [avg_line_R_ego_tokenized_txt,  avg_line_R_ego_tokenized_txt_6,  avg_occupancy_R_ego_tokenized_txt,  avg_occupancy_R_ego_tokenized_txt_6,  avg_line_R_ego_tokenized_txt_15, avg_occupancy_R_ego_tokenized_txt_15]
+]
+means_ascii_txt_R_ego = [
+    avg_occupancy_R_ego_ascii_txt, avg_occupancy_R_ego_ascii_txt_6, avg_occupancy_R_ego_ascii_txt_15
+]
+
+
+#superposition figure of line-wall and occupancy grid.
+
+# x-axis
+x_ticks = np.arange(6)
+x_labels = ["3x3", "6x6", "7x7", "13x13", "15x15", "31x31"]
+
+colors = [
+    "C0",    # adjacency json
+    "C1",  # adjacency txt
+    "C2",   # jpg
+    "C3",     # json
+    "C4"   # tokenized
+]
+
+labels = [
+    "Adj JSON",
+    "Adj TXT",
+    "JPG",
+    "JSON",
+    "Tokenized"
+]
+ascii_color = "C5"
+def plot_block(ax, means, ascii_means=None, linestyle="-"):
+    
+    for i, dataset in enumerate(means):
+        x = x_ticks
+        y = [
+            dataset[0],  # 3x3
+            dataset[1],  # 6x6
+            dataset[2],  # 7x7
+            dataset[3],  # 13x13
+            dataset[4],  # 15x15
+            dataset[5],  # 31x31
+        ]
+        
+        ax.plot(x, y, color=colors[i], label=labels[i], alpha = 0.8,linestyle=linestyle, marker='o', markersize = 8)
+        ax.grid(axis='y', linestyle='--', alpha=0.5)
+
+    # ASCII special case
+    if ascii_means is not None:
+        ascii_x = [2, 3, 5]  # 7x7, 13x13, 31x31
+        ax.plot(ascii_x, ascii_means, color=ascii_color, alpha=0.8,linestyle=linestyle, label="ASCII", marker='o', markersize = 8)
+        ax.grid(axis='y', linestyle='--', alpha=0.5)
+
+
+fig, axs = plt.subplots(2, 3, figsize=(16, 10), sharey=True)
+
+# ---- TOP (NR) ----
+plot_block(axs[0,0], means_NR_coords, means_ascii_txt_NR_coords)
+plot_block(axs[0,1], means_NR_allo,   means_ascii_txt_NR_allo)
+plot_block(axs[0,2], means_NR_ego,    means_ascii_txt_NR_ego)
+
+# ---- BOTTOM (R) dotted ----
+plot_block(axs[1,0], means_R_coords, means_ascii_txt_R_coords, linestyle=":")
+plot_block(axs[1,1], means_R_allo,   means_ascii_txt_R_allo, linestyle=":")
+plot_block(axs[1,2], means_R_ego,    means_ascii_txt_R_ego, linestyle=":")
+
+# #title and labels 
+axs[0,0].set_title("Coordinates output\nGemini2.5 Flash-Lite")
+axs[0,1].set_title("Allocentric output\nGemini2.5 Flash-Lite")
+axs[0,2].set_title("Egocentricoutput\nGemini2.5 Flash-Lite")
+axs[1,0].set_title("Coordinates output\nGemini2.5 Pro")
+axs[1,1].set_title("Allocentric output\nGemini2.5 Pro")
+axs[1,2].set_title("Egocentricoutput\nGemini2.5 Pro")
+fig.suptitle("Superimposed Completion Scores of Line-wall and Occupancy Grid Mazes", fontsize=16, fontweight='bold')
+fig.supxlabel("Maze Size", fontsize=11)
+fig.supylabel("Completion Score (%)", fontsize=11)
+
+# X axis
+for ax in axs[0,:]:
+    ax.set_xticks(x_ticks)
+    ax.set_xticklabels(x_labels)
+    # ax.set_xlabel("Maze Size")
+for ax in axs[1,:]:
+    ax.set_xticks(x_ticks)
+    ax.set_xticklabels(x_labels)
+    # ax.set_xlabel("Grid Size")
+
+# Y axis
+# for ax in axs[:,0]:
+    # ax.set_ylabel("Score (%)")
+
+
+# -----------------------
+# Make a legend
+
+# --- Legend Group Definitions ---
+spacer_handle = (
+Line2D([], [], marker='o', color='none', markerfacecolor='none', markersize=10)
+)
+pro_handle = (
+Line2D([], [], marker='none', color='grey', linestyle = ':'),
+# Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[1], markersize=10)
+),
+flashlite_handle = (
+Line2D([], [], marker='none', color='grey', linestyle = '-'),
+# Line2D([], [], marker='o', color='none', mec= 'none', markerfacecolor=red[1], markersize=10)
+)
+
+
+handles = [
+spacer_handle,
+pro_handle,
+flashlite_handle,
+spacer_handle,
+
+Line2D([], [], marker='o', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
+Line2D([], [], marker='o', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
+Line2D([], [], marker='o', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='o', color=colors[3], linestyle='None', markersize = 10),  # JSON
+Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+Line2D([], [], marker='o', color=ascii_color, linestyle='None', markersize = 10),  # ASCII
+
+]
+labels = [
+r"$\bf{Models}$",
+"Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
+r"$\bf{Input\ Formats}$",
+"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+]
+axs[1,2].legend(
+handles,
+labels,
+handler_map={tuple: HandlerTuple(ndivide=None)},
+loc='center left',
+bbox_to_anchor=(1.02, 0.5),
+title="Legend"
+)
+
+
+#grid lines in all subfigs
+for ax in axs[0,:]:
+    ax.grid(axis='y', linestyle='--', alpha=0.5)
+for ax in axs[1,:]:
+    ax.grid(axis='y', linestyle='--', alpha=0.5)
+# ax[0,0].grid(axis='y', linestyle='--', alpha=0.5)
+# ax[0,1].grid(axis='y', linestyle='--', alpha=0.5)
+# ax[0,2].grid(axis='y', linestyle='--', alpha=0.5)
+# ax[1,0].grid(axis='y', linestyle='--', alpha=0.5)
+# ax[1,1].grid(axis='y', linestyle='--', alpha=0.5)
+# ax[1,2].grid(axis='y', linestyle='--', alpha=0.5)
+
+plt.tight_layout()
+plt.show()
