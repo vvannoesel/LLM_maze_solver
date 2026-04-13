@@ -77,6 +77,9 @@ avg_occupancy_tokenized_txt_15 = np.mean(r15.occupancy_NR_coords_tokenized_txt_1
 # ax.axis("off")
 # plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%) - Gemini 2.5 Flash-Lite, Coordinates Output", fontsize=16, pad=20)
 
+
+
+
 sample_sizes_3x3_NR_coords = [
     sample_size(np.std(r3.line_NR_coords_adj_json_3)),
     sample_size(np.std(r3.line_NR_coords_adj_txt_3)),
@@ -570,17 +573,17 @@ sample_sizes_15x15_R_ego=[
 # n_occupancy_ascii_txt_15 = sample_size(sd_occupancy_ascii_txt_15) 
 
 representations = [
-    "Line Adj JSON",
-    "Line Adj TXT",
-    "Line JPG",
-    "Line JSON",
-    "Line Tokenized TXT",
+    "Line-Wall Adj JSON",
+    "Line-Wall Adj TXT",
+    "Line-Wall JPG",
+    "Line-Wall JSON",
+    "Line-Wall Tokenized",
     "Occupancy Adj JSON",
     "Occupancy Adj TXT",
-    "Occupancy ASCII TXT",
+    "Occupancy ASCII",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized TXT"
+    "Occupancy Tokenized"
 ]
 
 # sample_sizes_3x3 = [
@@ -662,19 +665,24 @@ representations = [
 
 df = pd.DataFrame({
     "Representation": representations,
-    "Sample Size Coordinates, \n Reasoning": sample_sizes_3x3_R_coords,
-    "Sample Size Allocentric, \n Reasoning": sample_sizes_3x3_R_allo,
-    "Sample Size Egocentric, \n Reasoning": sample_sizes_3x3_R_ego,
-    "Sample Size Coordinates, \n Non-Reasoning": sample_sizes_3x3_NR_coords,
-    "Sample Size Allocentric, \n Non-Reasoning": sample_sizes_3x3_NR_allo,
-    "Sample Size Egocentric, \n Non-Reasoning": sample_sizes_3x3_NR_ego
+    "Sample Size Coordinates Output, \n Gemini 2.5 Pro": sample_sizes_3x3_R_coords,
+    "Sample Size Allocentric Output, \n Gemini 2.5 Pro": sample_sizes_3x3_R_allo,
+    "Sample Size Egocentric Output, \n Gemini 2.5 Pro": sample_sizes_3x3_R_ego,
+    "Sample Size Coordinates Output, \n Gemini 2.5 Flash-Lite": sample_sizes_3x3_NR_coords,
+    "Sample Size Allocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_3x3_NR_allo,
+    "Sample Size Egocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_3x3_NR_ego
 })
 
 # Create table image
 fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
-plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 3x3/7x7 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
+# plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 3x3/7x7 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
+plt.suptitle("Sample Sizes, Determined so that the 95% Confidence Interval for the Mean Completion Score Would Have a Half-Width No Greater Than 5 Percentage Points,\nComputed Separately for Each Combination of Input Representation, Output Frame of Reference, Maze Size, and LLM", fontsize=14)
+plt.title("3x3/7x7 Mazes", fontsize=12)
+# '''Sample sizes were determined so that the 95% confidence interval for the mean completion score 
+# would have a half-width no greater than 5 percentage points, computed separately for each combination of 
+# input representation, output frame of reference, maze size, and LLM'''
 
 table = ax.table(
     cellText=df.values,
@@ -685,7 +693,18 @@ table = ax.table(
 
 table.auto_set_font_size(False)
 table.set_fontsize(10)
-table.scale(1.2, 2.0)
+table.scale(1.2,2.5)
+
+# Make header row bold
+for col in range(len(df.columns)):
+    table[(0, col)].set_text_props(weight='bold')
+
+# Make first column bold
+for row in range(1, len(df) + 1):
+    table[(row, 0)].set_text_props(weight='bold')
+    # Shade header row
+for col in range(len(df.columns)):
+    table[(0, col)].set_facecolor("#f0f0f0")
 
 plt.tight_layout()
 plt.show()
@@ -694,19 +713,21 @@ plt.show()
 df = pd.DataFrame({
     "Representation": representations,
 
-    "Sample Size Coordinates, \n Reasoning": sample_sizes_6x6_R_coords,
-    "Sample Size Allocentric, \n Reasoning": sample_sizes_6x6_R_allo,
-    "Sample Size Egocentric, \n Reasoning": sample_sizes_6x6_R_ego,
-    "Sample Size Coordinates, \n Non-Reasoning": sample_sizes_6x6_NR_coords,
-    "Sample Size Allocentric, \n Non-Reasoning": sample_sizes_6x6_NR_allo,
-    "Sample Size Egocentric, \n Non-Reasoning": sample_sizes_6x6_NR_ego
+    "Sample Size Coordinates Output, \n Gemini 2.5 Pro": sample_sizes_6x6_R_coords,
+    "Sample Size Allocentric Output, \n Gemini 2.5 Pro": sample_sizes_6x6_R_allo,
+    "Sample Size Egocentric Output, \n Gemini 2.5 Pro": sample_sizes_6x6_R_ego,
+    "Sample Size Coordinates Output, \n Gemini 2.5 Flash-Lite": sample_sizes_6x6_NR_coords,
+    "Sample Size Allocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_6x6_NR_allo,
+    "Sample Size Egocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_6x6_NR_ego
 })
 
 # Create table image
 fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
-plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 6x6/13x13 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
+# plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 6x6/13x13 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
+plt.suptitle("Sample Sizes, Determined so that the 95% Confidence Interval for the Mean Completion Score Would Have a Half-Width No Greater Than 5 Percentage Points,\nComputed Separately for Each Combination of Input Representation, Output Frame of Reference, Maze Size, and LLM", fontsize=14)
+plt.title("6x6/13x13 Mazes", fontsize=12)
 
 table = ax.table(
     cellText=df.values,
@@ -717,7 +738,19 @@ table = ax.table(
 
 table.auto_set_font_size(False)
 table.set_fontsize(10)
-table.scale(1.2, 2.0)
+table.scale(1.2, 2.5)
+
+
+# Make header row bold
+for col in range(len(df.columns)):
+    table[(0, col)].set_text_props(weight='bold')
+
+# Make first column bold
+for row in range(1, len(df) + 1):
+    table[(row, 0)].set_text_props(weight='bold')
+    # Shade header row
+for col in range(len(df.columns)):
+    table[(0, col)].set_facecolor("#f0f0f0")
 
 plt.tight_layout()
 plt.show()
@@ -725,19 +758,21 @@ plt.show()
 
 df = pd.DataFrame({
     "Representation": representations,
-    "Sample Size Coordinates, \n Reasoning": sample_sizes_15x15_R_coords,
-    "Sample Size Allocentric, \n Reasoning": sample_sizes_15x15_R_allo,
-    "Sample Size Egocentric, \n Reasoning": sample_sizes_15x15_R_ego,
-    "Sample Size Coordinates, \n Non-Reasoning": sample_sizes_15x15_NR_coords,
-    "Sample Size Allocentric, \n Non-Reasoning": sample_sizes_15x15_NR_allo,
-    "Sample Size Egocentric, \n Non-Reasoning": sample_sizes_15x15_NR_ego
+    "Sample Size Coordinates Output, \n Gemini 2.5 Pro": sample_sizes_15x15_R_coords,
+    "Sample Size Allocentric Output, \n Gemini 2.5 Pro": sample_sizes_15x15_R_allo,
+    "Sample Size Egocentric Output, \n Gemini 2.5 Pro": sample_sizes_15x15_R_ego,
+    "Sample Size Coordinates Output, \n Gemini 2.5 Flash-Lite": sample_sizes_15x15_NR_coords,
+    "Sample Size Allocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_15x15_NR_allo,
+    "Sample Size Egocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_15x15_NR_ego
 })
 
 # Create table image
 fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
-plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 15x15/31x31 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
+# plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 15x15/31x31 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
+plt.suptitle("Sample Sizes, Determined so that the 95% Confidence Interval for the Mean Completion Score Would Have a Half-Width No Greater Than 5 Percentage Points,\nComputed Separately for Each Combination of Input Representation, Output Frame of Reference, Maze Size, and LLM", fontsize=14)
+plt.title("15x15/31x31 Mazes", fontsize=12)
 
 table = ax.table(
     cellText=df.values,
@@ -746,9 +781,22 @@ table = ax.table(
     cellLoc="center"
 )
 
-table.auto_set_font_size(True)
-# table.set_fontsize(10)
-table.scale(1.2, 2.0)
+
+table.auto_set_font_size(False)
+table.set_fontsize(10)
+table.scale(1.2, 2.5)
+
+
+# Make header row bold
+for col in range(len(df.columns)):
+    table[(0, col)].set_text_props(weight='bold')
+
+# Make first column bold
+for row in range(1, len(df) + 1):
+    table[(row, 0)].set_text_props(weight='bold')
+    # Shade header row
+for col in range(len(df.columns)):
+    table[(0, col)].set_facecolor("#f0f0f0")
 
 plt.tight_layout()
 plt.show()

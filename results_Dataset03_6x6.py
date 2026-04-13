@@ -8,6 +8,7 @@ representations = ['line jpg', 'line json', 'line adjacency json', 'line adjacen
 List of 110:
 line_NR_allo_adj_json_6 run 8
 occupancy_R_ego_adj_json_6 run 3
+total: 2
 """
 
 # NR - COORDS - 1-10 ----------------------------------------------------------------

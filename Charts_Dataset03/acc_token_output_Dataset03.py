@@ -1784,7 +1784,7 @@ handles = [
 ]
 
 labels = [
-    r"$\bf{Output\ Types}$",
+    r"$\bf{Output\ FoRs}$",
     "Coordinates", "Allocentric", "Egocentric",
     r"$\bf{Input\ Formats}$",
     "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII",
@@ -1840,10 +1840,11 @@ plt.show()
 
 
 
-
-
-
-
+print('ratios: completion score / tokens \n')
+print('allo adj json 6x6 line', avg_line_R_allo_adj_json_6/avg_line_R_allo_adj_json_output_6,'\n')
+print('coords adj json 6x6 line', avg_line_R_coords_adj_json_6/avg_line_R_coords_adj_json_output_6,'\n')
+print('coords tokenized 6x6 line', avg_line_R_coords_tokenized_txt_6/avg_line_R_coords_tokenized_txt_output_6,'\n')
+print('allo json 6x6 line', avg_line_R_allo_json_6/avg_line_R_allo_json_output_6,'\n')
 
 
 

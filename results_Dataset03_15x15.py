@@ -5,6 +5,7 @@ import dataframe_image as dfi
 """
 List of 110:
 occupancy_R_ego_adj_json_15 run 14
+total: 1
 """
 # for i in range(0,50):
 #     if occupancy_R_ego_adj_json_15[i] == 110.00000000000001 :

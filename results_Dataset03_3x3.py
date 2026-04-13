@@ -18,6 +18,7 @@ line_R_coords_jpg_3 run 19, 37, 44
 line_R_allo_jpg_3 run 37
 line_R_ego_jpg_3 run 10
 occupancy_R_ego_jpg_3 run 30
+total: 50
 """
 
 # NR - COORDS - 1-10 ----------------------------------------------------------------

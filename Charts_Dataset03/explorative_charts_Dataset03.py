@@ -4556,7 +4556,7 @@ def plot_keyword(ax, datasets, title, ylabel):
     # print('scipy pearson:', title, '\n', pearson, '\n') #prints both p-value and r-value (called 'statistic')
 
     #print each r- and p-value per keyword to terminal
-    data = {'Keyword Category': title, #['Algorithm', 'Heuristic', 'Frustration', 'False Confidence', 'Backtracking', 'Restart', 'Reverse Search', 'Step-by-Step', 'Verification'],
+    data = {'Keyword Category': title, #['Algorithm', 'Heuristic', 'Frustration', 'Declared Confidence', 'Backtracking', 'Restart', 'Reverse Search', 'Step-by-Step', 'Verification'],
             'correlation coefficient': pearson[0],
             'p-value': [pearson[1]]}
     df=pd.DataFrame(data)
@@ -4623,7 +4623,7 @@ fig.supylabel('Keyword Presence (%)', fontsize = 12)
 
 plot_keyword(axes[0], small_dataset_algorithm, "Algorithm",  "Presence (%)")
 plot_keyword(axes[1], small_dataset_heuristic, "Heuristics", "Presence (%)")
-plot_keyword(axes[2], small_dataset_false_confidence, "False Confidence", "Presence (%)")
+plot_keyword(axes[2], small_dataset_false_confidence, "Declared Confidence", "Presence (%)")
 
 
 # Make a legend
@@ -4729,7 +4729,7 @@ fig.supylabel('Keyword Presence (%)', fontsize = 12)
 # plot_keyword(axes[0], datasets_coords_algorithm_6, "Algorithm",  "Presence (%)")
 # plot_keyword(axes[1], datasets_coords_heuristic_6, "Heuristics", "Presence (%)")
 # plot_keyword(axes[2], datasets_coords_frustration_6, "Frustration", "Presence (%)")
-# plot_keyword(axes[3], datasets_coords_false_confidence_6, "False Confidence", "Presence (%)")
+# plot_keyword(axes[3], datasets_coords_false_confidence_6, "Declared Confidence", "Presence (%)")
 # plot_keyword(axes[4], datasets_coords_backtracking_6, "Backtracking", "Presence (%)")
 # plot_keyword(axes[5], datasets_coords_restart_6, "Restart", "Presence (%)")
 # plot_keyword(axes[6], datasets_coords_reverse_search_6, "Reverse Search", "Presence (%)")
@@ -4741,7 +4741,7 @@ fig.supylabel('Keyword Presence (%)', fontsize = 12)
 plot_keyword(axes[0], huge_datasets_algorithm_6_15, "Algorithm",  "Presence (%)")
 plot_keyword(axes[1], huge_datasets_heuristic_6_15, "Heuristics", "Presence (%)")
 plot_keyword(axes[2], huge_datasets_frustration_6_15, "Frustration", "Presence (%)")
-plot_keyword(axes[3], huge_datasets_false_confidence_6_15, "False Confidence", "Presence (%)")
+plot_keyword(axes[3], huge_datasets_false_confidence_6_15, "Declared Confidence", "Presence (%)")
 # plot_keyword(axes[4], huge_datasets_backtracking_6_15, "Backtracking", "Presence (%)")
 plot_keyword(axes[4], huge_datasets_restart_6_15, "Restart", "Presence (%)")
 plot_keyword(axes[5], huge_datasets_reverse_search_6_15, "Reverse Search", "Presence (%)")
@@ -4898,7 +4898,7 @@ fig.supylabel('Keyword Presence (%)', fontsize = 12)
 plot_keyword(axes[0], small_dataset_algorithm, "Algorithm",  "Presence (%)")
 plot_keyword(axes[1], small_dataset_heuristic, "Heuristics", "Presence (%)")
 plot_keyword(axes[2], small_dataset_frustration, "Frustration", "Presence (%)")
-plot_keyword(axes[3], small_dataset_false_confidence, "False Confidence", "Presence (%)")
+plot_keyword(axes[3], small_dataset_false_confidence, "Declared Confidence", "Presence (%)")
 plot_keyword(axes[4], small_dataset_backtracking, "Backtracking", "Presence (%)")
 plot_keyword(axes[5], small_dataset_restart, "Restart", "Presence (%)")
 plot_keyword(axes[6], small_dataset_reverse_search, "Reverse Search", "Presence (%)")
@@ -5006,7 +5006,7 @@ fig.supylabel('Keyword Presence (%)', fontsize = 12)
 plot_keyword(axes[0], huge_datasets_algorithm_6_15, "Algorithm",  "Presence (%)")
 plot_keyword(axes[1], huge_datasets_heuristic_6_15, "Heuristics", "Presence (%)")
 plot_keyword(axes[2], huge_datasets_frustration_6_15, "Frustration", "Presence (%)")
-plot_keyword(axes[3], huge_datasets_false_confidence_6_15, "False Confidence", "Presence (%)")
+plot_keyword(axes[3], huge_datasets_false_confidence_6_15, "Declared Confidence", "Presence (%)")
 plot_keyword(axes[4], huge_datasets_backtracking_6_15, "Backtracking", "Presence (%)")
 plot_keyword(axes[5], huge_datasets_restart_6_15, "Restart", "Presence (%)")
 plot_keyword(axes[6], huge_datasets_reverse_search_6_15, "Reverse Search", "Presence (%)")
@@ -5106,7 +5106,7 @@ fig.supylabel('Keyword Presence (%)', fontsize = 12)
 plot_keyword(axes[0], mixed_datasets_coords_algorithm_6_15, "Algorithm",  "Presence (%)")
 plot_keyword(axes[1], mixed_datasets_coords_heuristic_6_15, "Heuristics", "Presence (%)")
 plot_keyword(axes[2], mixed_datasets_coords_frustration_6_15, "Frustration", "Presence (%)")
-plot_keyword(axes[3], mixed_datasets_coords_false_confidence_6_15, "False Confidence", "Presence (%)")
+plot_keyword(axes[3], mixed_datasets_coords_false_confidence_6_15, "Declared Confidence", "Presence (%)")
 plot_keyword(axes[4], mixed_datasets_coords_backtracking_6_15, "Backtracking", "Presence (%)")
 plot_keyword(axes[5], mixed_datasets_coords_restart_6_15, "Restart", "Presence (%)")
 plot_keyword(axes[6], mixed_datasets_coords_reverse_search_6_15, "Reverse Search", "Presence (%)")
@@ -5202,7 +5202,7 @@ fig.supylabel('Keyword Presence (%)', fontsize = 12)
 plot_keyword(axes[0], mixed_datasets_allo_algorithm_6_15, "Algorithm",  "Presence (%)")
 plot_keyword(axes[1], mixed_datasets_allo_heuristic_6_15, "Heuristics", "Presence (%)")
 plot_keyword(axes[2], mixed_datasets_allo_frustration_6_15, "Frustration", "Presence (%)")
-plot_keyword(axes[3], mixed_datasets_allo_false_confidence_6_15, "False Confidence", "Presence (%)")
+plot_keyword(axes[3], mixed_datasets_allo_false_confidence_6_15, "Declared Confidence", "Presence (%)")
 plot_keyword(axes[4], mixed_datasets_allo_backtracking_6_15, "Backtracking", "Presence (%)")
 plot_keyword(axes[5], mixed_datasets_allo_restart_6_15, "Restart", "Presence (%)")
 plot_keyword(axes[6], mixed_datasets_allo_reverse_search_6_15, "Reverse Search", "Presence (%)")
@@ -5296,7 +5296,7 @@ fig.supylabel('Keyword Presence (%)', fontsize = 12)
 plot_keyword(axes[0], mixed_datasets_ego_algorithm_6_15, "Algorithm",  "Presence (%)")
 plot_keyword(axes[1], mixed_datasets_ego_heuristic_6_15, "Heuristics", "Presence (%)")
 plot_keyword(axes[2], mixed_datasets_ego_frustration_6_15, "Frustration", "Presence (%)")
-plot_keyword(axes[3], mixed_datasets_ego_false_confidence_6_15, "False Confidence", "Presence (%)")
+plot_keyword(axes[3], mixed_datasets_ego_false_confidence_6_15, "Declared Confidence", "Presence (%)")
 plot_keyword(axes[4], mixed_datasets_ego_backtracking_6_15, "Backtracking", "Presence (%)")
 plot_keyword(axes[5], mixed_datasets_ego_restart_6_15, "Restart", "Presence (%)")
 plot_keyword(axes[6], mixed_datasets_ego_reverse_search_6_15, "Reverse Search", "Presence (%)")
@@ -5722,7 +5722,7 @@ plt.grid()
 
 # plt.xlabel("Dataset")
 # plt.ylabel("Completion Score (%)")
-# plt.title("Distribution of Scores When False Confidence Keywords Are Present, \nCoordinates Output, 15x15/31x31", fontweight='bold')
+# plt.title("Distribution of Scores When Declared Confidence Keywords Are Present, \nCoordinates Output, 15x15/31x31", fontweight='bold')
 
 # # annotate the cells with the percentage values of keyword-present events (only non-zero)
 # for i in range(heatmap_matrix.shape[0]):      # rows (bins)
@@ -6274,7 +6274,7 @@ plt.grid()
 
 # plot_keyword(axes[0], datasets_algorithm, "Algorithm",  "Presence Normalized by Mean Reasoning Lenght (presence per 1000 tokens)")
 # plot_keyword(axes[1], datasets_backtracking, "Backtracking", "Presence Normalized by Mean Reasoning Lenght (presence per 1000 tokens)")
-# plot_keyword(axes[2], datasets_false_confidence, "False Confidence", "Presence Normalized by Mean Reasoning Lenght (presence per 1000 tokens)")
+# plot_keyword(axes[2], datasets_false_confidence, "Declared Confidence", "Presence Normalized by Mean Reasoning Lenght (presence per 1000 tokens)")
 # plot_keyword(axes[3], datasets_frustration, "Frustration", "Presence Normalized by Mean Reasoning Lenght (presence per 1000 tokens)")
 # plot_keyword(axes[4], datasets_restart, "Restart", "Presence Normalized by Mean Reasoning Lenght (presence per 1000 tokens)")
 # plot_keyword(axes[5], datasets_reverse_search, "Reverse Search", "Presence Normalized by Mean Reasoning Lenght (presence per 1000 tokens)")
@@ -6296,7 +6296,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_line_adj_json_algorithm_15,
 #             "Backtracking": occurrences_binary_line_adj_json_backtracking_15,
-#             "False Confidence": occurrences_binary_line_adj_json_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_line_adj_json_false_confidence_15,
 #             "Frustration": occurrences_binary_line_adj_json_frustration_15,
 #             "Restart": occurrences_binary_line_adj_json_restart_15,
 #             "Reverse Search": occurrences_binary_line_adj_json_reverse_search_15,
@@ -6309,7 +6309,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_line_adj_txt_algorithm_15,
 #             "Backtracking": occurrences_binary_line_adj_txt_backtracking_15,
-#             "False Confidence": occurrences_binary_line_adj_txt_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_line_adj_txt_false_confidence_15,
 #             "Frustration": occurrences_binary_line_adj_txt_frustration_15,
 #             "Restart": occurrences_binary_line_adj_txt_restart_15,
 #             "Reverse Search": occurrences_binary_line_adj_txt_reverse_search_15,
@@ -6322,7 +6322,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_line_json_algorithm_15,
 #             "Backtracking": occurrences_binary_line_json_backtracking_15,
-#             "False Confidence": occurrences_binary_line_json_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_line_json_false_confidence_15,
 #             "Frustration": occurrences_binary_line_json_frustration_15,
 #             "Restart": occurrences_binary_line_json_restart_15,
 #             "Reverse Search": occurrences_binary_line_json_reverse_search_15,
@@ -6335,7 +6335,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_line_jpg_algorithm_15,
 #             "Backtracking": occurrences_binary_line_jpg_backtracking_15,
-#             "False Confidence": occurrences_binary_line_jpg_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_line_jpg_false_confidence_15,
 #             "Frustration": occurrences_binary_line_jpg_frustration_15,
 #             "Restart": occurrences_binary_line_jpg_restart_15,
 #             "Reverse Search": occurrences_binary_line_jpg_reverse_search_15,
@@ -6348,7 +6348,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_line_tokenized_algorithm_15,
 #             "Backtracking": occurrences_binary_line_tokenized_backtracking_15,
-#             "False Confidence": occurrences_binary_line_tokenized_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_line_tokenized_false_confidence_15,
 #             "Frustration": occurrences_binary_line_tokenized_frustration_15,
 #             "Restart": occurrences_binary_line_tokenized_restart_15,
 #             "Reverse Search": occurrences_binary_line_tokenized_reverse_search_15,
@@ -6361,7 +6361,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_occupancy_adj_json_algorithm_15,
 #             "Backtracking": occurrences_binary_occupancy_adj_json_backtracking_15,
-#             "False Confidence": occurrences_binary_occupancy_adj_json_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_occupancy_adj_json_false_confidence_15,
 #             "Frustration": occurrences_binary_occupancy_adj_json_frustration_15,
 #             "Restart": occurrences_binary_occupancy_adj_json_restart_15,
 #             "Reverse Search": occurrences_binary_occupancy_adj_json_reverse_search_15,
@@ -6374,7 +6374,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_occupancy_adj_txt_algorithm_15,
 #             "Backtracking": occurrences_binary_occupancy_adj_txt_backtracking_15,
-#             "False Confidence": occurrences_binary_occupancy_adj_txt_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_occupancy_adj_txt_false_confidence_15,
 #             "Frustration": occurrences_binary_occupancy_adj_txt_frustration_15,
 #             "Restart": occurrences_binary_occupancy_adj_txt_restart_15,
 #             "Reverse Search": occurrences_binary_occupancy_adj_txt_reverse_search_15,
@@ -6387,7 +6387,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_occupancy_json_algorithm_15,
 #             "Backtracking": occurrences_binary_occupancy_json_backtracking_15,
-#             "False Confidence": occurrences_binary_occupancy_json_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_occupancy_json_false_confidence_15,
 #             "Frustration": occurrences_binary_occupancy_json_frustration_15,
 #             "Restart": occurrences_binary_occupancy_json_restart_15,
 #             "Reverse Search": occurrences_binary_occupancy_json_reverse_search_15,
@@ -6400,7 +6400,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_occupancy_jpg_algorithm_15,
 #             "Backtracking": occurrences_binary_occupancy_jpg_backtracking_15,
-#             "False Confidence": occurrences_binary_occupancy_jpg_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_occupancy_jpg_false_confidence_15,
 #             "Frustration": occurrences_binary_occupancy_jpg_frustration_15,
 #             "Restart": occurrences_binary_occupancy_jpg_restart_15,
 #             "Reverse Search": occurrences_binary_occupancy_jpg_reverse_search_15,
@@ -6413,7 +6413,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_occupancy_tokenized_algorithm_15,
 #             "Backtracking": occurrences_binary_occupancy_tokenized_backtracking_15,
-#             "False Confidence": occurrences_binary_occupancy_tokenized_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_occupancy_tokenized_false_confidence_15,
 #             "Frustration": occurrences_binary_occupancy_tokenized_frustration_15,
 #             "Restart": occurrences_binary_occupancy_tokenized_restart_15,
 #             "Reverse Search": occurrences_binary_occupancy_tokenized_reverse_search_15,
@@ -6426,7 +6426,7 @@ plt.grid()
 #         "keywords": {
 #             "Algorithm Naming": occurrences_binary_occupancy_ascii_algorithm_15,
 #             "Backtracking": occurrences_binary_occupancy_ascii_backtracking_15,
-#             "False Confidence": occurrences_binary_occupancy_ascii_false_confidence_15,
+#             "Declared Confidence": occurrences_binary_occupancy_ascii_false_confidence_15,
 #             "Frustration": occurrences_binary_occupancy_ascii_frustration_15,
 #             "Restart": occurrences_binary_occupancy_ascii_restart_15,
 #             "Reverse Search": occurrences_binary_occupancy_ascii_reverse_search_15,
@@ -6445,7 +6445,7 @@ plt.grid()
 # keywords = [
 #     "Algorithm Naming",
 #     "Backtracking",
-#     "False Confidence",
+#     "Declared Confidence",
 #     "Frustration",
 #     "Restart",
 #     "Reverse Search",
@@ -6536,7 +6536,7 @@ plt.grid()
 # keywords = [
 #     "Algorithm Naming",
 #     "Backtracking",
-#     "False Confidence",
+#     "Declared Confidence",
 #     "Frustration",
 #     "Restart",
 #     "Reverse Search",
