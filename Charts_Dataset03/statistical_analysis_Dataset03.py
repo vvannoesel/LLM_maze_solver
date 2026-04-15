@@ -1505,5 +1505,61 @@ for col in range(len(df.columns)):
     table[(0, col)].set_facecolor("#f0f0f0")
 
 plt.tight_layout()
-plt.show()
+# plt.show()
+
+
+
+
+
+list_half = [
+             hw_15x15_NR_allo, 
+             hw_15x15_NR_ego, 
+             hw_15x15_NR_coords,
+             hw_15x15_R_coords,
+             hw_15x15_R_allo, 
+             hw_15x15_R_ego,
+            #  hw_6x6_NR_allo,
+            #  hw_6x6_NR_ego,
+            #  hw_6x6_NR_coords, 
+            #  hw_6x6_R_coords,
+            #  hw_6x6_R_allo,
+            #  hw_6x6_R_ego,
+            #  hw_3x3_NR_ego,
+            #  hw_3x3_NR_coords,
+            #  hw_3x3_NR_allo,
+            #  hw_3x3_R_coords,
+            #  hw_3x3_R_allo,
+            #  hw_3x3_R_ego
+            ]
+
+def sort(lst):
+    
+    empty0 = 0
+    empty1 = 0
+    empty2 = 0
+    empty3 = 0
+    empty4 = 0
+    for j,bla in enumerate(lst):
+
+        for i,val in enumerate(bla):
+            if 0.0<= val < 2.5:
+                empty0 +=1
+            elif 2.5 <= val < 5:
+                empty1 +=1
+            elif 5 <= val < 7.5:
+                empty2 +=1
+            elif 7.5 <= val < 10:
+                empty3 +=1
+            elif 10<=val <12.5:
+                empty4 +=1
+            else:
+                print("Value out of range:", val)
+    print("0-2.5:", empty0, '\n')
+    print("2.5-5:", empty1, '\n')
+    print("5-7.5:", empty2, '\n')
+    print("7.5-10:", empty3, '\n')
+    print("10+:", empty4, '\n') 
+    return empty0, empty1, empty2, empty3, empty4
+
+sort(list_half)
 

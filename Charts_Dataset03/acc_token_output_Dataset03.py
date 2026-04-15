@@ -1839,13 +1839,17 @@ plt.show()
 
 
 
-
-print('ratios: completion score / tokens \n')
+print('R ratios: completion score / tokens \n')
 print('allo adj json 6x6 line', avg_line_R_allo_adj_json_6/avg_line_R_allo_adj_json_output_6,'\n')
 print('coords adj json 6x6 line', avg_line_R_coords_adj_json_6/avg_line_R_coords_adj_json_output_6,'\n')
 print('coords tokenized 6x6 line', avg_line_R_coords_tokenized_txt_6/avg_line_R_coords_tokenized_txt_output_6,'\n')
 print('allo json 6x6 line', avg_line_R_allo_json_6/avg_line_R_allo_json_output_6,'\n')
 
+print('NR ratios: completion score / tokens \n')
+print('coords adj json 6x6 line', avg_line_NR_coords_adj_json_6/avg_line_NR_coords_adj_json_output_6,'\n')
+print('coords adj txt 6x6 line', avg_line_NR_coords_adj_txt_6/avg_line_NR_coords_adj_txt_output_6,'\n')
+print('coords adj json 6x6 occ', avg_occupancy_NR_coords_adj_json_6/avg_occupancy_NR_coords_adj_json_output_6,'\n')
+print('coords adj txt 6x6 occ', avg_occupancy_NR_coords_adj_txt_6/avg_occupancy_NR_coords_adj_txt_output_6,'\n')
 
 
 
