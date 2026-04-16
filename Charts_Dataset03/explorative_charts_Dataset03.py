@@ -4598,6 +4598,7 @@ def plot_keyword(ax, datasets, title, ylabel):
     # ax.set_xlabel('Mean Completion Score (%)')
     # ax.set_ylabel(ylabel)
     ax.grid(linestyle=':', alpha=0.6)
+    ax.set_xlim(0, 105)
     
     # these are matplotlib.patch.Patch properties
     props = dict(boxstyle='round', facecolor='wheat', alpha=0.8)
@@ -4675,7 +4676,7 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 # Add labels to the markers
 labels = [
 r"$\bf{Input\ Maze\ Style}$",
-"Line Wall", "Occupancy Grid",
+"Line-Wall", "Occupancy Grid",
 r"$\bf{Input\ Formats}$",
 "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
 ]
@@ -4691,7 +4692,11 @@ axes[3].legend(
     frameon=True
 )
 
-plt.suptitle(r'$\bf{Presence\ of\ Each\ Keyword\ Category\ vs\ Completion\ Score}$'
+# plt.suptitle(r'$\bf{Presence\ of\ Each\ Keyword\ Category\ vs\ Completion\ Score}$'
+#                    '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31',
+#                     fontsize=14)
+
+plt.suptitle(r'$\bf{Mean\ Completion\ Score\ as\ a\ Function\ of\ Keyword\ Presence}$'
                    '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31',
                     fontsize=14)
 
@@ -4850,7 +4855,7 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 # Add labels to the markers
 labels = [
 r"$\bf{Input\ Maze\ Style}$",
-"6x6 Line Wall", "13x13 Occupancy Grid", "15x15 Line Wall", "31x31 Occupancy grid",
+"6x6 Line-Wall", "13x13 Occupancy Grid", "15x15 Line-Wall", "31x31 Occupancy grid",
 r"$\bf{Input\ Formats}$",
 "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
 ]
@@ -4953,7 +4958,7 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 # Add labels to the markers
 labels = [
 r"$\bf{Input\ Maze\ Style}$",
-"Line Wall", "Occupancy Grid",
+"Line-Wall", "Occupancy Grid",
 r"$\bf{Input\ Formats}$",
 "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
 ]
@@ -4969,7 +4974,7 @@ axes[9].legend(
     frameon=True
 )
 
-plt.suptitle(r'$\bf{Presence\ of\ All\ Explored\ Keyword\ Categories\ vs\ Completion\ Score}$'
+plt.suptitle(r'$\bf{Mean\ Completion\ Score\ as\ a\ Function\ of\ Keyword\ Presence\ of\ All\ Explored\ Categories}$'
                    '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31', #15x15/31x31',
                     fontsize=14)
 
@@ -5063,7 +5068,7 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 # Add labels to the markers
 labels = [
 r"$\bf{Input\ Maze\ Style}$",
-"6x6 Line Wall", "13x13 Occupancy Grid", "15x15 Line Wall", "31x31 Occupancy grid",
+"6x6 Line-Wall", "13x13 Occupancy Grid", "15x15 Line-Wall", "31x31 Occupancy grid",
 r"$\bf{Input\ Formats}$",
 "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
 ]
@@ -5165,7 +5170,7 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 # Add labels to the markers
 labels = [
 r"$\bf{Input\ Maze\ Style}$",
-"6x6 Line Wall", "13x13 Occupancy Grid", "15x15 Line Wall", "31x31 Occupancy grid",
+"6x6 Line-Wall", "13x13 Occupancy Grid", "15x15 Line-Wall", "31x31 Occupancy grid",
 r"$\bf{Input\ Formats}$",
 "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
 ]
@@ -5260,7 +5265,7 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 # Add labels to the markers
 labels = [
 r"$\bf{Input\ Maze\ Style}$",
-"6x6 Line Wall", "13x13 Occupancy Grid", "15x15 Line Wall", "31x31 Occupancy grid",
+"6x6 Line-Wall", "13x13 Occupancy Grid", "15x15 Line-Wall", "31x31 Occupancy grid",
 r"$\bf{Input\ Formats}$",
 "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
 ]
@@ -5354,7 +5359,7 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 # Add labels to the markers
 labels = [
 r"$\bf{Input\ Maze\ Style}$",
-"6x6 Line Wall", "13x13 Occupancy Grid", "15x15 Line Wall", "31x31 Occupancy grid",
+"6x6 Line-Wall", "13x13 Occupancy Grid", "15x15 Line-Wall", "31x31 Occupancy grid",
 r"$\bf{Input\ Formats}$",
 "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
 ]
