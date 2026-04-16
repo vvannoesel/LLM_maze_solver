@@ -9,7 +9,7 @@ Performance is measured through a ”completion score”—the percentage of the
 Key findings reveal that:
 * Optimal Representation: Structured graph-based representations, particularly Adjacency List JSON, consistently yield the highest performance for both model types.
 * Frame of Reference Impact: Models perform significantly better when answering in absolute coordinates. Egocentric outputs, which require continuous relational analysis and state tracking, result in the lowest accuracy, often approaching 0% in non-reasoning models.
-* Reasoning Behaviors: Analysis of internal reasoning traces shows that the use of formal graph-solving algorithms is positively correlated with success, while exclusive reliance on heuristics or unfounded declarations of confidence is negatively correlated with completion scores.\
+* Reasoning Behaviors: Analysis of internal reasoning traces shows that the use of formal graph-solving algorithms is positively correlated with success, while exclusive reliance on heuristics or unfounded declarations of confidence is negatively correlated with completion scores.
 
 The results suggest that LLM spatial reasoning is highly dependent on input formatting and that while models can often plan valid paths, they struggle with the linguistic translation of these paths into complex egocentric instructions. This study provides a unified framework
 for understanding the ”full picture” of multi-hop spatial reasoning in LLMs, highlighting critical bottlenecks in current LLM-based autonomous navigation capabilities.
