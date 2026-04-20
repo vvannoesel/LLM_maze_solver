@@ -4697,7 +4697,7 @@ axes[3].legend(
 #                     fontsize=14)
 
 plt.suptitle(r'$\bf{Mean\ Completion\ Score\ as\ a\ Function\ of\ Keyword\ Presence}$'
-                   '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31',
+                   '\nGemini 2.5 Pro, All Output FoRs, Maze Sizes 6x6/13x13 and 15x15/31x31',
                     fontsize=14)
 
 # # plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
@@ -4872,7 +4872,7 @@ axes[7].legend(
 )
 
 plt.suptitle(r'$\bf{Presence\ of\ Each\ Keyword\ Category\ vs\ Completion\ Score}$'
-                   '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31', #15x15/31x31',
+                   '\nGemini 2.5 Pro, All Output FoRs, Maze Sizes 6x6/13x13 and 15x15/31x31', #15x15/31x31',
                     fontsize=14)
 
 # plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
@@ -4975,7 +4975,7 @@ axes[9].legend(
 )
 
 plt.suptitle(r'$\bf{Mean\ Completion\ Score\ as\ a\ Function\ of\ Keyword\ Presence\ of\ All\ Explored\ Categories}$'
-                   '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31', #15x15/31x31',
+                   '\nGemini 2.5 Pro, All Output FoRs, Maze Sizes 6x6/13x13 and 15x15/31x31', #15x15/31x31',
                     fontsize=14)
 
 # plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
@@ -5085,7 +5085,7 @@ axes[9].legend(
 )
 
 plt.suptitle(r'$\bf{Presence\ of\ Each\ Keyword\ Category\ vs\ Completion\ Score}$'
-                   '\nGemini 2.5 Pro, All Output FoRs, 6x6/13x13 and 15x15/31x31', #15x15/31x31',
+                   '\nGemini 2.5 Pro, All Output FoRs, Maze Sizes 6x6/13x13 and 15x15/31x31', #15x15/31x31',
                     fontsize=14)
 
 # plt.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
