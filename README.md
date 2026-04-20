@@ -1,18 +1,19 @@
 
 # Prompting LLMs With Perfect Mazes To Investigate Their Ability For Reasoning, Spatial Understanding and Navigation
-This project contains codes, datasets, and results that were used to test LLM's ability of spatial reasoning.
+This project contains codes, datasets, and results that were used to test LLM's ability of spatial reasoning.\
+This thesis was created to obtain a master's degree in robotics engineering from Delft University of Technology. The full paper is available in this repository. Below is the abstract.
 
 **Abstract** \
-This research investigates the multi-hop spatial reasoning and navigation capabilities of reasoning and non-reasoning Large Language Models (LLMs). Using perfect mazes as a controlled testbed, the study examines how various input representations—including visual (JPG), descriptive (ASCII, JSON, Tokenized), and graph-based (Adjacency List) formats—interact with different output Frames of Reference (FoRs) to influence model performance.\
+This research investigates the multi-hop spatial reasoning and navigation capabilities of reasoning and non-reasoning Large Language Models (LLMs). Using perfect mazes as a controlled testbed, the study examines how various input representations—including visual (JPG, ASCII), grid-based (JSON, Tokenized), and graph-based (Adjacency List) formats—interact with different output Frames of Reference (FoRs) to influence model performance.\
 The methodology involves an evaluation using Gemini 2.5 Pro (reasoning) and Gemini 2.5 Flash-Lite (non-reasoning) across 11 maze representations and three output frames: fixed world (coordinates), allocentric (cardinal directions), and egocentric (relative directions).\
-Performance is measured through a ”completion score”—the percentage of the path navigated correctly before the first error—and ”test compute” to assess efficiency.\
+Performance is measured through a "completion score"—the percentage of the path navigated correctly before the first error—and "test compute" to assess efficiency.\
 Key findings reveal that:
-* Optimal Representation: Structured graph-based representations, particularly Adjacency List JSON, consistently yield the highest performance for both model types.
+* Optimal Representation: Structured graph-based representations, particularly Adjacency List JSON (a graph-based representation formatted as JSON file), consistently yield the highest performance for both model types.
 * Frame of Reference Impact: Models perform significantly better when answering in absolute coordinates. Egocentric outputs, which require continuous relational analysis and state tracking, result in the lowest accuracy, often approaching 0% in non-reasoning models.
 * Reasoning Behaviors: Analysis of internal reasoning traces shows that the use of formal graph-solving algorithms is positively correlated with success, while exclusive reliance on heuristics or unfounded declarations of confidence is negatively correlated with completion scores.\
 
 The results suggest that LLM spatial reasoning is highly dependent on input formatting and that while models can often plan valid paths, they struggle with the linguistic translation of these paths into complex egocentric instructions. This study provides a unified framework
-for understanding the ”full picture” of multi-hop spatial reasoning in LLMs, highlighting critical bottlenecks in current LLM-based autonomous navigation capabilities.
+for understanding the "full picture" of multi-hop spatial reasoning in LLMs, highlighting critical bottlenecks in current LLM-based autonomous navigation capabilities.
 
 ![representations](Results_charts/Dataset03/finals/representations.png)
 
