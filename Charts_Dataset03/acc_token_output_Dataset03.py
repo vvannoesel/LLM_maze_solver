@@ -1715,17 +1715,17 @@ for i in range(0,3):
             # # xlabel for the figure using ALL tokens, placed on all columns
             # axes[i,j].set_xlabel("Test Compute (Tokens)")
             # xlabel for the figure using ALL tokens, placed once
-            fig.supxlabel("Test Compute (Tokens)")
+            fig.supxlabel("Number of Output Tokens (Tokens)")
         elif figure == 'final_answer_tokens':
             # # xlabel for the figure using EXCLUSIVELY final answer tokens, placed on all columns
             # axes[i,j].set_xlabel("Final Answer Test Compute (Tokens)")
             # xlabel for the figure using ALL tokens, placed once
-            fig.supxlabel("Final Answer Test Compute (Tokens)")
+            fig.supxlabel("Final Answer Output Tokens (Tokens)")
         elif figure == 'thinking_tokens':
             #  # xlabel for the figure using EXCLUSIVELY thinking tokens, placed on all columns
             # axes[i,j].set_xlabel("Thinking Compute (Tokens)")
             # xlabel for the figure using ALL tokens, placed once
-            fig.supxlabel("Thinking Compute (Tokens)")
+            fig.supxlabel("Output Thinking Tokens (Tokens)")
 
 
 
@@ -1780,7 +1780,7 @@ handles = [
 
     spacer_handle,  
     Line2D([], [], marker='o', color='none', markerfacecolor='lightgrey', mec=marker_edge[1], markersize = 10),   # Occupancy
-    Line2D([], [], marker='o', color='none', markerfacecolor='lightgrey', mec=marker_edge[0], markersize = 10), # Line Wall
+    Line2D([], [], marker='o', color='none', markerfacecolor='lightgrey', mec=marker_edge[0], markersize = 10), # Line-wall
 ]
 
 labels = [
@@ -1791,9 +1791,9 @@ labels = [
     # r"$\bf{Models}$",
     # "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
     # r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
-    # "Occupancy Grid, 7x7, 13x13, 31x31", "Line Wall, 3x3, 6x6, 15x15"
+    # "Occupancy Grid, 7x7, 13x13, 31x31", "Line-wall, 3x3, 6x6, 15x15"
         r"$\bf{Maze\ Styles}$",
-    "Occupancy Grid", "Line Wall"
+    "Occupancy Grid", "Line-wall"
 ]
 
 axes[1,1].legend(
@@ -1818,13 +1818,13 @@ axes[2,1].set_title("15x15 and 31x31, Gemini 2.5 Pro")
 
 if figure == 'all_tokens':
     # Title for the figure using ALL tokens
-    plt.suptitle("Model Performance as a Function of Test Compute", x=0.48,  fontweight= 'bold')
+    plt.suptitle("Model Performance as a Function of Number of Output Tokens", x=0.48,  fontweight= 'bold')
 elif figure == 'final_answer_tokens':
     # Title for the figure using EXCLUSIVELY final answer tokens
-    plt.suptitle("Model Performance as a Function of Final Answer Test Compute", x=0.48,  fontweight= 'bold')
+    plt.suptitle("Model Performance as a Function of Final Answer Number of Output Tokens", x=0.48,  fontweight= 'bold')
 elif figure == 'thinking_tokens':
      # Title for the figure using EXCLUSIVELY thinking tokens
-    plt.suptitle("Model Performance as a Function of Thinking Compute", x=0.48,  fontweight= 'bold')
+    plt.suptitle("Model Performance as a Function of Number of Output Thinking Tokens", x=0.48,  fontweight= 'bold')
 
 plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
 

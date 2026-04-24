@@ -1170,17 +1170,17 @@ plot_configs = [
     # Top-Left: line coords
     (means_line_NR_coords, means_line_R_coords, 
      error_line_NR_coords, error_line_R_coords, 
-     "Line-Wall Maze, Coordinates Output"),
+     "Line-wall Maze, Coordinates Output"),
     
     # Top-Middle: line allo
     (means_line_NR_allo, means_line_R_allo, 
      error_line_NR_allo, error_line_R_allo, 
-     "Line-Wall Maze, Allocentric Output"),
+     "Line-wall Maze, Allocentric Output"),
     
     # Top-Right: line ego
     (means_line_NR_ego, means_line_R_ego, 
      error_line_NR_ego, error_line_R_ego, 
-     "Line-Wall Maze, Egocentric Output"),
+     "Line-wall Maze, Egocentric Output"),
     
     # Bottom-Left: occupancy coords
     (means_occ_NR_coords, means_occ_R_coords, 
@@ -1513,17 +1513,17 @@ for col in range(6):
                         # label=single_legend[i] if (row == 1 and col == 5) else None
                     )
 
-axes[0,0].set_title("Line-Wall Maze, \nCoordinates Output")
+axes[0,0].set_title("Line-wall Maze, \nCoordinates Output")
 axes[1,0].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,1].set_title("Line-Wall Maze, \nAllocentric Output")
+axes[0,1].set_title("Line-wall Maze, \nAllocentric Output")
 axes[1,1].set_title("Occupancy Grid Maze, \nAllocentric Output")
-axes[0,2].set_title("Line-Wall Maze, \nEgocentric Output")
+axes[0,2].set_title("Line-wall Maze, \nEgocentric Output")
 axes[1,2].set_title("Occupancy Grid Maze, \nEgocentric Output")
-axes[0,3].set_title("Line-Wall Maze, \nCoordinates Output")
+axes[0,3].set_title("Line-wall Maze, \nCoordinates Output")
 axes[1,3].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,4].set_title("Line-Wall Maze, \nAllocentric Output")
+axes[0,4].set_title("Line-wall Maze, \nAllocentric Output")
 axes[1,4].set_title("Occupancy Grid Maze, \nAllocentric Output")
-axes[0,5].set_title("Line-Wall Maze, \nEgocentric Output")
+axes[0,5].set_title("Line-wall Maze, \nEgocentric Output")
 axes[1,5].set_title("Occupancy Grid Maze, \nEgocentric Output")
 # Formatting
 for col in range(6):
@@ -2799,17 +2799,17 @@ for col in range(6):
                         # label=single_legend[i] if (row == 1 and col == 5) else None
                     )
 
-axes[0,0].set_title("Line-Wall Maze, \nCoordinates Output")
+axes[0,0].set_title("Line-wall Maze, \nCoordinates Output")
 axes[1,0].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,1].set_title("Line-Wall Maze, \nAllocentric Output")
+axes[0,1].set_title("Line-wall Maze, \nAllocentric Output")
 axes[1,1].set_title("Occupancy Grid Maze, \nAllocentric Output")
-axes[0,2].set_title("Line-Wall Maze, \nEgocentric Output")
+axes[0,2].set_title("Line-wall Maze, \nEgocentric Output")
 axes[1,2].set_title("Occupancy Grid Maze, \nEgocentric Output")
-axes[0,3].set_title("Line-Wall Maze, \nCoordinates Output")
+axes[0,3].set_title("Line-wall Maze, \nCoordinates Output")
 axes[1,3].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,4].set_title("Line-Wall Maze, \nAllocentric Output")
+axes[0,4].set_title("Line-wall Maze, \nAllocentric Output")
 axes[1,4].set_title("Occupancy Grid Maze, \nAllocentric Output")
-axes[0,5].set_title("Line-Wall Maze, \nEgocentric Output")
+axes[0,5].set_title("Line-wall Maze, \nEgocentric Output")
 axes[1,5].set_title("Occupancy Grid Maze, \nEgocentric Output")
 # Formatting
 for col in range(6):
@@ -2970,17 +2970,17 @@ plt.show()
 #     # Top-Left: line coords
 #     (means_line_NR_coords, means_line_R_coords, 
 #      error_line_NR_coords, error_line_R_coords, 
-#      "Line-Walled Maze, Coordinates Output"),
+#      "Line-walled Maze, Coordinates Output"),
     
 #     # Top-Middle: line allo
 #     (means_line_NR_allo, means_line_R_allo, 
 #      error_line_NR_allo, error_line_R_allo, 
-#      "Line-Walled Maze, Allocentric Output"),
+#      "Line-walled Maze, Allocentric Output"),
     
 #     # Top-Right: line ego
 #     (means_line_NR_ego, means_line_R_ego, 
 #      error_line_NR_ego, error_line_R_ego, 
-#      "Line-Walled Maze, Egocentric Output"),
+#      "Line-walled Maze, Egocentric Output"),
     
 #     # Bottom-Left: occupancy coords
 #     (means_occ_NR_coords, means_occ_R_coords, 
@@ -3192,7 +3192,7 @@ means_ascii_txt_R_ego = [
 ]
 
 
-#superposition figure of line-wall and occupancy grid.
+#superposition figure of Line-wall and occupancy grid.
 
 # x-axis
 x_ticks = np.arange(6)
