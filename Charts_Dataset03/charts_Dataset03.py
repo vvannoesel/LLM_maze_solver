@@ -136,7 +136,7 @@ labels_line = [
     "Line Adjacency txt",
     "Line JPG",
     "Line JSON",
-    "Line Tokenized"
+    "Line tokenized"
 ]
 
 # Bottom plot data: occupancy-maze data vectors with the complexities as column entries and representations as row entries. 
@@ -172,7 +172,7 @@ labels_occ = [
     "Occupancy Adjacency txt",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized",
+    "Occupancy tokenized",
     "Occupancy ASCII"
 ]
 
@@ -322,7 +322,7 @@ labels_line = [
     "Line Adjacency txt",
     "Line JPG",
     "Line JSON",
-    "Line Tokenized"
+    "Line Tagged"
 ]
 
 # Bottom plot data
@@ -358,7 +358,7 @@ labels_occ = [
     "Occupancy Adjacency txt",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized",
+    "Occupancy tokenized",
     "Occupancy ASCII"
 ]
 
@@ -506,7 +506,7 @@ labels_line = [
     "Line Adjacency txt",
     "Line JPG",
     "Line JSON",
-    "Line Tokenized"
+    "Line Tagged"
 ]
 
 # Bottom plot data
@@ -542,7 +542,7 @@ labels_occ = [
     "Occupancy Adjacency txt",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized",
+    "Occupancy tokenized",
     "Occupancy ASCII"
 ]
 
@@ -692,7 +692,7 @@ labels_line = [
     "Line Adjacency txt",
     "Line JPG",
     "Line JSON",
-    "Line Tokenized"
+    "Line Tagged"
 ]
 
 # Bottom plot data
@@ -728,7 +728,7 @@ labels_occ = [
     "Occupancy Adjacency txt",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized",
+    "Occupancy tokenized",
     "Occupancy ASCII"
 ]
 
@@ -877,7 +877,7 @@ labels_line = [
     "Line Adjacency txt",
     "Line JPG",
     "Line JSON",
-    "Line Tokenized"
+    "Line Tagged"
 ]
 
 # Bottom plot data
@@ -913,7 +913,7 @@ labels_occ = [
     "Occupancy Adjacency txt",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized",
+    "Occupancy Tagged",
     "Occupancy ASCII"
 ]
 
@@ -1060,7 +1060,7 @@ labels_line = [
     "Line Adjacency txt",
     "Line JPG",
     "Line JSON",
-    "Line Tokenized"
+    "Line Tagged"
 ]
 
 # Bottom plot data
@@ -1096,7 +1096,7 @@ labels_occ = [
     "Occupancy Adjacency txt",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized",
+    "Occupancy Tagged",
     "Occupancy ASCII"
 ]
 
@@ -1153,13 +1153,13 @@ labels_occ = [
 #     'Adjacency Text - Gemini 2.5 Flash-Lite', 
 #     'JPG - Gemini 2.5 Flash-Lite', 
 #     'JSON - Gemini 2.5 Flash-Lite', 
-#     'Tokenized - Gemini 2.5 Flash-Lite', 
+#     'tokenized - Gemini 2.5 Flash-Lite', 
 #     'ASCII - Gemini 2.5 Flash-Lite', 
 #     'Adjacency JSON - Gemini 2.5 Pro', 
 #     'Adjacency Text - Gemini 2.5 Pro', 
 #     'JPG - Gemini 2.5 Pro', 
 #     'JSON - Gemini 2.5 Pro', 
-#     'Tokenized - Gemini 2.5 Pro', 
+#     'tokenized - Gemini 2.5 Pro', 
 #     'ASCII - Gemini 2.5 Pro'
 # ]
 
@@ -1340,7 +1340,7 @@ Line2D([], [], marker='o', color=colors[0], linestyle='None', markersize = 10), 
 Line2D([], [], marker='o', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
 Line2D([], [], marker='o', color=colors[2], linestyle='None', markersize = 10),  # JPG
 Line2D([], [], marker='o', color=colors[3], linestyle='None', markersize = 10),  # JSON
-Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tagged
 Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
 ]
@@ -1348,7 +1348,7 @@ labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
 r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"
 ]
 axes[1,2].legend(
 handles,
@@ -1613,7 +1613,7 @@ labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
 r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"
 ]
 axes[1,5].legend(
 handles,
@@ -1689,7 +1689,7 @@ avg_occupancy_NR_coords_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_NR_co
 # adj_txt_line = [avg_coords_line_adj_txt_raw_score , avg_coords_line_adj_txt_raw_score_6,  avg_coords_line_adj_txt_raw_score_15]
 # tokenized_line = [avg_coords_line_tokenized_txt_raw_score, avg_coords_line_tokenized_txt_raw_score_6 , avg_coords_line_tokenized_txt_raw_score_15]
 # dataset_line = [ jpg_line, json_line, adj_json_line, adj_txt_line, tokenized_line]
-# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line Tokenized' ]
+# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line tokenized' ]
 
 # # Dataset for bottom chart
 # jpg_occupancy = [avg_coords_occupancy_jpg_raw_score , avg_coords_occupancy_jpg_raw_score_6 ,  avg_coords_occupancy_jpg_raw_score_15]
@@ -1699,7 +1699,7 @@ avg_occupancy_NR_coords_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_NR_co
 # tokenized_occupancy = [avg_coords_occupancy_tokenized_txt_raw_score , avg_coords_occupancy_tokenized_txt_raw_score_6 , avg_coords_occupancy_tokenized_txt_raw_score_15]
 # ascii_occupancy = [avg_coords_occupancy_ascii_txt_raw_score , avg_coords_occupancy_ascii_txt_raw_score_6 , avg_coords_occupancy_ascii_txt_raw_score_15]
 # dataset_occupancy = [ jpg_occupancy, json_occupancy, adj_json_occupancy, adj_txt_occupancy, tokenized_occupancy, ascii_occupancy]
-# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy Tokenized' , 'Occupancy ASCII']
+# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy tokenized' , 'Occupancy ASCII']
 
 # x_pos = np.array([0, 1, 2])   # three x-axis positions
 # jitter_strength = 0.01
@@ -1808,7 +1808,7 @@ avg_occupancy_NR_allo_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_NR_allo
 # adj_txt_line = [avg_allo_line_adj_txt_raw_score , avg_allo_line_adj_txt_raw_score_6,  avg_allo_line_adj_txt_raw_score_15]
 # tokenized_line = [avg_allo_line_tokenized_txt_raw_score, avg_allo_line_tokenized_txt_raw_score_6 , avg_allo_line_tokenized_txt_raw_score_15]
 # dataset_line = [ jpg_line, json_line, adj_json_line, adj_txt_line, tokenized_line]
-# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line Tokenized' ]
+# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line tokenized' ]
 
 # # Dataset for bottom chart
 # jpg_occupancy = [avg_allo_occupancy_jpg_raw_score , avg_allo_occupancy_jpg_raw_score_6 ,  avg_allo_occupancy_jpg_raw_score_15]
@@ -1818,7 +1818,7 @@ avg_occupancy_NR_allo_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_NR_allo
 # tokenized_occupancy = [avg_allo_occupancy_tokenized_txt_raw_score , avg_allo_occupancy_tokenized_txt_raw_score_6 , avg_allo_occupancy_tokenized_txt_raw_score_15]
 # ascii_occupancy = [avg_allo_occupancy_ascii_txt_raw_score , avg_allo_occupancy_ascii_txt_raw_score_6 , avg_allo_occupancy_ascii_txt_raw_score_15]
 # dataset_occupancy = [ jpg_occupancy, json_occupancy, adj_json_occupancy, adj_txt_occupancy, tokenized_occupancy, ascii_occupancy]
-# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy Tokenized' , 'Occupancy ASCII']
+# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy tokenized' , 'Occupancy ASCII']
 
 # x_pos = np.array([0, 1, 2])   # three x-axis positions
 # jitter_strength = 0.02
@@ -1926,7 +1926,7 @@ avg_occupancy_NR_ego_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_NR_ego_t
 # adj_txt_line = [avg_ego_line_adj_txt_raw_score , avg_ego_line_adj_txt_raw_score_6,  avg_ego_line_adj_txt_raw_score_15]
 # tokenized_line = [avg_ego_line_tokenized_txt_raw_score, avg_ego_line_tokenized_txt_raw_score_6 , avg_ego_line_tokenized_txt_raw_score_15]
 # dataset_line = [ jpg_line, json_line, adj_json_line, adj_txt_line, tokenized_line]
-# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line Tokenized' ]
+# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line tokenized' ]
 
 # # Dataset for bottom chart
 # jpg_occupancy = [avg_ego_occupancy_jpg_raw_score , avg_ego_occupancy_jpg_raw_score_6 ,  avg_ego_occupancy_jpg_raw_score_15]
@@ -1936,7 +1936,7 @@ avg_occupancy_NR_ego_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_NR_ego_t
 # tokenized_occupancy = [avg_ego_occupancy_tokenized_txt_raw_score , avg_ego_occupancy_tokenized_txt_raw_score_6 , avg_ego_occupancy_tokenized_txt_raw_score_15]
 # ascii_occupancy = [avg_ego_occupancy_ascii_txt_raw_score , avg_ego_occupancy_ascii_txt_raw_score_6 , avg_ego_occupancy_ascii_txt_raw_score_15]
 # dataset_occupancy = [ jpg_occupancy, json_occupancy, adj_json_occupancy, adj_txt_occupancy, tokenized_occupancy, ascii_occupancy]
-# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy Tokenized' , 'Occupancy ASCII']
+# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy tokenized' , 'Occupancy ASCII']
 
 # x_pos = np.array([0, 1, 2])   # three x-axis positions
 # jitter_strength = 0.01
@@ -2044,7 +2044,7 @@ avg_occupancy_R_coords_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_R_coor
 # adj_txt_line = [avg_coords_line_adj_txt_raw_score , avg_coords_line_adj_txt_raw_score_6,  avg_coords_line_adj_txt_raw_score_15]
 # tokenized_line = [avg_coords_line_tokenized_txt_raw_score, avg_coords_line_tokenized_txt_raw_score_6 , avg_coords_line_tokenized_txt_raw_score_15]
 # dataset_line = [ jpg_line, json_line, adj_json_line, adj_txt_line, tokenized_line]
-# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line Tokenized' ]
+# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line tokenized' ]
 
 # # Dataset for bottom chart
 # jpg_occupancy = [avg_coords_occupancy_jpg_raw_score , avg_coords_occupancy_jpg_raw_score_6 ,  avg_coords_occupancy_jpg_raw_score_15]
@@ -2054,7 +2054,7 @@ avg_occupancy_R_coords_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_R_coor
 # tokenized_occupancy = [avg_coords_occupancy_tokenized_txt_raw_score , avg_coords_occupancy_tokenized_txt_raw_score_6 , avg_coords_occupancy_tokenized_txt_raw_score_15]
 # ascii_occupancy = [avg_coords_occupancy_ascii_txt_raw_score , avg_coords_occupancy_ascii_txt_raw_score_6 , avg_coords_occupancy_ascii_txt_raw_score_15]
 # dataset_occupancy = [ jpg_occupancy, json_occupancy, adj_json_occupancy, adj_txt_occupancy, tokenized_occupancy, ascii_occupancy]
-# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy Tokenized' , 'Occupancy ASCII']
+# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy tokenized' , 'Occupancy ASCII']
 
 # x_pos = np.array([0, 1, 2])   # three x-axis positions
 # jitter_strength = 0.01
@@ -2161,7 +2161,7 @@ avg_occupancy_R_allo_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_R_allo_t
 # adj_txt_line = [avg_allo_line_adj_txt_raw_score , avg_allo_line_adj_txt_raw_score_6,  avg_allo_line_adj_txt_raw_score_15]
 # tokenized_line = [avg_allo_line_tokenized_txt_raw_score, avg_allo_line_tokenized_txt_raw_score_6 , avg_allo_line_tokenized_txt_raw_score_15]
 # dataset_line = [ jpg_line, json_line, adj_json_line, adj_txt_line, tokenized_line]
-# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line Tokenized' ]
+# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line tokenized' ]
 
 # # Dataset for bottom chart
 # jpg_occupancy = [avg_allo_occupancy_jpg_raw_score , avg_allo_occupancy_jpg_raw_score_6 ,  avg_allo_occupancy_jpg_raw_score_15]
@@ -2171,7 +2171,7 @@ avg_occupancy_R_allo_tokenized_txt_raw_score_15 = np.mean(r15.occupancy_R_allo_t
 # tokenized_occupancy = [avg_allo_occupancy_tokenized_txt_raw_score , avg_allo_occupancy_tokenized_txt_raw_score_6 , avg_allo_occupancy_tokenized_txt_raw_score_15]
 # ascii_occupancy = [avg_allo_occupancy_ascii_txt_raw_score , avg_allo_occupancy_ascii_txt_raw_score_6 , avg_allo_occupancy_ascii_txt_raw_score_15]
 # dataset_occupancy = [ jpg_occupancy, json_occupancy, adj_json_occupancy, adj_txt_occupancy, tokenized_occupancy, ascii_occupancy]
-# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy Tokenized' , 'Occupancy ASCII']
+# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy tokenized' , 'Occupancy ASCII']
 
 # x_pos = np.array([0, 1, 2])   # three x-axis positions
 # jitter_strength = 0.01
@@ -2314,7 +2314,7 @@ print('R - coords - 31x31 - Adj txt: ', avg_occupancy_R_coords_adj_txt_raw_score
 # adj_txt_line = [avg_ego_line_adj_txt_raw_score , avg_ego_line_adj_txt_raw_score_6,  avg_ego_line_adj_txt_raw_score_15]
 # tokenized_line = [avg_ego_line_tokenized_txt_raw_score, avg_ego_line_tokenized_txt_raw_score_6 , avg_ego_line_tokenized_txt_raw_score_15]
 # dataset_line = [ jpg_line, json_line, adj_json_line, adj_txt_line, tokenized_line]
-# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line Tokenized' ]
+# labels_line = ['Line JPG', 'Line JSON', 'Line Adjacency JSON', 'Line Adjacency txt', 'Line tokenized' ]
 
 # # Dataset for bottom chart
 # jpg_occupancy = [avg_ego_occupancy_jpg_raw_score , avg_ego_occupancy_jpg_raw_score_6 ,  avg_ego_occupancy_jpg_raw_score_15]
@@ -2324,7 +2324,7 @@ print('R - coords - 31x31 - Adj txt: ', avg_occupancy_R_coords_adj_txt_raw_score
 # tokenized_occupancy = [avg_ego_occupancy_tokenized_txt_raw_score , avg_ego_occupancy_tokenized_txt_raw_score_6 , avg_ego_occupancy_tokenized_txt_raw_score_15]
 # ascii_occupancy = [avg_ego_occupancy_ascii_txt_raw_score , avg_ego_occupancy_ascii_txt_raw_score_6 , avg_ego_occupancy_ascii_txt_raw_score_15]
 # dataset_occupancy = [ jpg_occupancy, json_occupancy, adj_json_occupancy, adj_txt_occupancy, tokenized_occupancy, ascii_occupancy]
-# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy Tokenized' , 'Occupancy ASCII']
+# labels_occupancy = ['Occupancy JPG', 'Occupancy JSON', 'Occupancy Adjacency JSON', 'Occupancy Adjacency txt', 'Occupancy tokenized' , 'Occupancy ASCII']
 
 # x_pos = np.array([0, 1, 2])   # three x-axis positions
 # jitter_strength = 0.01
@@ -2396,7 +2396,7 @@ labels_line = [
     "Line Adjacency txt",
     "Line JPG",
     "Line JSON",
-    "Line Tokenized"
+    "Line Tagged"
 ]
 
 labels_occ = [
@@ -2404,7 +2404,7 @@ labels_occ = [
     "Occupancy Adjacency txt",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized",
+    "Occupancy Tagged",
     "Occupancy ASCII"
 ]
 
@@ -2652,7 +2652,7 @@ error_occupancy_R_ego = [
 #     'Adjacency Text', 
 #     'JPG', 
 #     'JSON', 
-#     'Tokenized', 
+#     'tokenized', 
 #     'ASCII'
 # ]
 
@@ -2891,7 +2891,7 @@ Line2D([], [], marker='o', color=colors[0], linestyle='None', markersize = 10), 
 Line2D([], [], marker='o', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
 Line2D([], [], marker='o', color=colors[2], linestyle='None', markersize = 10),  # JPG
 Line2D([], [], marker='o', color=colors[3], linestyle='None', markersize = 10),  # JSON
-Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tagged
 Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
 ]
@@ -2899,7 +2899,7 @@ labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
 r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"
 ]
 axes[1,5].legend(
 handles,
@@ -2953,13 +2953,13 @@ plt.show()
 #     'Adjacency Text - Gemini 2.5 Flash-Lite', 
 #     'JPG - Gemini 2.5 Flash-Lite', 
 #     'JSON - Gemini 2.5 Flash-Lite', 
-#     'Tokenized - Gemini 2.5 Flash-Lite', 
+#     'Tagged - Gemini 2.5 Flash-Lite', 
 #     'ASCII - Gemini 2.5 Flash-Lite', 
 #     'Adjacency Json - Gemini 2.5 Pro', 
 #     'Adjacency Text - Gemini 2.5 Pro', 
 #     'JPG - Gemini 2.5 Pro', 
 #     'JSON - Gemini 2.5 Pro', 
-#     'Tokenized - Gemini 2.5 Pro', 
+#     'Tagged - Gemini 2.5 Pro', 
 #     'ASCII - Gemini 2.5 Pro'
 # ]
 
@@ -3203,7 +3203,7 @@ colors = [
     "C1",  # adjacency txt
     "C2",   # jpg
     "C3",     # json
-    "C4"   # tokenized
+    "C4"   # Tagged
 ]
 
 labels = [
@@ -3211,7 +3211,7 @@ labels = [
     "Adj TXT",
     "JPG",
     "JSON",
-    "Tokenized"
+    "Tagged"
 ]
 ascii_color = "C5"
 def plot_block(ax, means, ascii_means=None, linestyle="-"):
@@ -3302,7 +3302,7 @@ Line2D([], [], marker='o', color=colors[0], linestyle='None', markersize = 10), 
 Line2D([], [], marker='o', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
 Line2D([], [], marker='o', color=colors[2], linestyle='None', markersize = 10),  # JPG
 Line2D([], [], marker='o', color=colors[3], linestyle='None', markersize = 10),  # JSON
-Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tagged
 Line2D([], [], marker='o', color=ascii_color, linestyle='None', markersize = 10),  # ASCII
 
 ]
@@ -3310,7 +3310,7 @@ labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
 r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"
 ]
 axs[1,2].legend(
 handles,

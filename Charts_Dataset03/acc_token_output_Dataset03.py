@@ -1495,7 +1495,7 @@ occupancy_R_ego_15 = [[avg_occupancy_R_ego_adj_json_output_15,      avg_occupanc
 
 
 # Labels for legend
-labels_base = ["Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"]
+labels_base = ["Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"]
 markers = ['o', 'v', 's', '*', 'D', 'P']
 red = ['tomato', 'tomato'] #['red', 'red'] #light, dark
 blue = ['dodgerblue', 'dodgerblue']#['blue', 'blue'] #light, dark
@@ -1787,7 +1787,7 @@ labels = [
     r"$\bf{Output\ FoRs}$",
     "Coordinates", "Allocentric", "Egocentric",
     r"$\bf{Input\ Formats}$",
-    "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII",
+    "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII",
     # r"$\bf{Models}$",
     # "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
     # r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
