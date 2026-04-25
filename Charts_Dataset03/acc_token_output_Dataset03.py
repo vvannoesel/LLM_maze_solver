@@ -1495,7 +1495,7 @@ occupancy_R_ego_15 = [[avg_occupancy_R_ego_adj_json_output_15,      avg_occupanc
 
 
 # Labels for legend
-labels_base = ["Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"]
+labels_base = ["Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"]
 markers = ['o', 'v', 's', '*', 'D', 'P']
 red = ['tomato', 'tomato'] #['red', 'red'] #light, dark
 blue = ['dodgerblue', 'dodgerblue']#['blue', 'blue'] #light, dark
@@ -1786,14 +1786,14 @@ handles = [
 labels = [
     r"$\bf{Output\ FoRs}$",
     "Coordinates", "Allocentric", "Egocentric",
-    r"$\bf{Input\ Formats}$",
-    "Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII",
+    r"$\bf{Input\ Representations}$",
+    "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII",
     # r"$\bf{Models}$",
     # "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
     # r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
-    # "Occupancy Grid, 7x7, 13x13, 31x31", "Line-wall, 3x3, 6x6, 15x15"
+    # "Occupancy grid, 7x7, 13x13, 31x31", "Line-wall, 3x3, 6x6, 15x15"
         r"$\bf{Maze\ Styles}$",
-    "Occupancy Grid", "Line-wall"
+    "Occupancy grid", "Line-wall"
 ]
 
 axes[1,1].legend(

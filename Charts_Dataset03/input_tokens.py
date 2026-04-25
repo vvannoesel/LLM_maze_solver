@@ -214,7 +214,7 @@ for idx, ax in enumerate(axes.flat):
     else:
         pass
         x_tick_lbls = x_tick_lbls_occupancy
-        ax.set_xlabel("Maze Size", fontsize=11)
+        ax.set_xlabel("Maze Size (-)", fontsize=11)
     ax.set_title(title, fontsize=11)
     ax.set_xticks(x_vals)
     ax.set_xticklabels(x_tick_lbls)
@@ -285,7 +285,7 @@ labels = [
 # r"$\bf{Models}$",
 # "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
 r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+"Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 # axes[1].legend(
 # handles,
@@ -405,7 +405,7 @@ for idx, ax in enumerate(axes.flat):
         ax.set_ylabel("Mean Input Tokens (tokens)", fontsize=11)
 
     # fig.supylabel("Mean Input Tokens", fontsize=11)
-    fig.supxlabel("Maze Size", fontsize=11)
+    fig.supxlabel("Maze Size (-)", fontsize=11)
     
 
 
@@ -458,15 +458,15 @@ Line2D([], [], marker='o', color=colors[0], linestyle='None', markersize = 10), 
 Line2D([], [], marker='o', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
 Line2D([], [], marker='o', color=colors[2], linestyle='None', markersize = 10),  # JPG
 Line2D([], [], marker='o', color=colors[3], linestyle='None', markersize = 10),  # JSON
-Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+Line2D([], [], marker='o', color=colors[4], linestyle='None', markersize = 10),  # Tagged
 Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
 ]
 labels = [
 # r"$\bf{Models}$",
 # "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tokenized", "ASCII"
+r"$\bf{Input\ Representations}$",
+"Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axes[1].legend(
 handles,

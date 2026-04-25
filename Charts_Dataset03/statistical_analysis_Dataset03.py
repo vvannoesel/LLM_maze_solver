@@ -540,17 +540,17 @@ sample_sizes_15x15_R_ego=[
 
 
 representations = [
-    "Line-Wall Adj JSON",
-    "Line-Wall Adj TXT",
-    "Line-Wall JPG",
-    "Line-Wall JSON",
-    "Line-Wall Tokenized",
-    "Occupancy Adj JSON",
-    "Occupancy Adj TXT",
+    "Line-wall AL-JSON",
+    "Line-wall AL-TXT",
+    "Line-wall JPG",
+    "Line-wall JSON",
+    "Line-wall Tagged",
+    "Occupancy AL-JSON",
+    "Occupancy AL-TXT",
     "Occupancy ASCII",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized"
+    "Occupancy Tagged"
 ]
 
 
@@ -946,17 +946,17 @@ sd_15x15_R_ego=[
 
 
 representations = [
-    "Line-Wall Adj JSON",
-    "Line-Wall Adj TXT",
-    "Line-Wall JPG",
-    "Line-Wall JSON",
-    "Line-Wall Tokenized",
-    "Occupancy Adj JSON",
-    "Occupancy Adj TXT",
+    "Line-wall AL-JSON",
+    "Line-wall AL-TXT",
+    "Line-wall JPG",
+    "Line-wall JSON",
+    "Line-wall Tagged",
+    "Occupancy AL-JSON",
+    "Occupancy AL-TXT",
     "Occupancy ASCII",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized"
+    "Occupancy Tagged"
 ]
 
 
@@ -1355,28 +1355,28 @@ hw_15x15_R_ego=[
 
 
 representations = [
-    "Line-Wall Adj JSON",
-    "Line-Wall Adj TXT",
-    "Line-Wall JPG",
-    "Line-Wall JSON",
-    "Line-Wall Tokenized",
-    "Occupancy Adj JSON",
-    "Occupancy Adj TXT",
+    "Line-wall AL-JSON",
+    "Line-wall AL-TXT",
+    "Line-wall JPG",
+    "Line-wall JSON",
+    "Line-wall Tagged",
+    "Occupancy AL-JSON",
+    "Occupancy AL-TXT",
     "Occupancy ASCII",
     "Occupancy JPG",
     "Occupancy JSON",
-    "Occupancy Tokenized"
+    "Occupancy Tagged"
 ]
 
 
 df = pd.DataFrame({
     "Representation": representations,
-    "CI half-width Coordinates Output, \n Gemini 2.5 Pro": hw_3x3_R_coords,
-    "CI half-width Allocentric Output, \n Gemini 2.5 Pro": hw_3x3_R_allo,
-    "CI half-width Egocentric Output, \n Gemini 2.5 Pro": hw_3x3_R_ego,
-    "CI half-width Coordinates Output, \n Gemini 2.5 Flash-Lite": hw_3x3_NR_coords,
-    "CI half-width Allocentric Output, \n Gemini 2.5 Flash-Lite": hw_3x3_NR_allo,
-    "CI half-width Egocentric Output, \n Gemini 2.5 Flash-Lite": hw_3x3_NR_ego
+    "CI half-width\nCoordinates Output,\nGemini 2.5 Pro": hw_3x3_R_coords,
+    "CI half-width\nAllocentric Output,\nGemini 2.5 Pro": hw_3x3_R_allo,
+    "CI half-width\nEgocentric Output,\nGemini 2.5 Pro": hw_3x3_R_ego,
+    "CI half-width\nCoordinates Output,\nGemini 2.5 Flash-Lite": hw_3x3_NR_coords,
+    "CI half-width\nAllocentric Output,\nGemini 2.5 Flash-Lite": hw_3x3_NR_allo,
+    "CI half-width\nEgocentric Output,\nGemini 2.5 Flash-Lite": hw_3x3_NR_ego
 })
 
 # Create table image
@@ -1399,7 +1399,7 @@ table = ax.table(
 
 table.auto_set_font_size(False)
 table.set_fontsize(10)
-table.scale(1.2,2.5)
+table.scale(2.2, 3.0)
 
 # Make header row bold
 for col in range(len(df.columns)):
@@ -1412,19 +1412,19 @@ for row in range(1, len(df) + 1):
 for col in range(len(df.columns)):
     table[(0, col)].set_facecolor("#f0f0f0")
 
-plt.tight_layout()
+# plt.tight_layout()
 # plt.show()
 
 
 df = pd.DataFrame({
     "Representation": representations,
 
-    "CI half-width Coordinates Output, \n Gemini 2.5 Pro": hw_6x6_R_coords,
-    "CI half-width Allocentric Output, \n Gemini 2.5 Pro": hw_6x6_R_allo,
-    "CI half-width Egocentric Output, \n Gemini 2.5 Pro": hw_6x6_R_ego,
-    "CI half-width Coordinates Output, \n Gemini 2.5 Flash-Lite": hw_6x6_NR_coords,
-    "CI half-width Allocentric Output, \n Gemini 2.5 Flash-Lite": hw_6x6_NR_allo,
-    "CI half-width Egocentric Output, \n Gemini 2.5 Flash-Lite": hw_6x6_NR_ego
+    "CI half-width\nCoordinates Output,\nGemini 2.5 Pro": hw_6x6_R_coords,
+    "CI half-width\nAllocentric Output,\nGemini 2.5 Pro": hw_6x6_R_allo,
+    "CI half-width\nEgocentric Output,\nGemini 2.5 Pro": hw_6x6_R_ego,
+    "CI half-width\nCoordinates Output,\nGemini 2.5 Flash-Lite": hw_6x6_NR_coords,
+    "CI half-width\nAllocentric Output,\nGemini 2.5 Flash-Lite": hw_6x6_NR_allo,
+    "CI half-width\nEgocentric Output,\nGemini 2.5 Flash-Lite": hw_6x6_NR_ego
 })
 
 # Create table image
@@ -1444,7 +1444,7 @@ table = ax.table(
 
 table.auto_set_font_size(False)
 table.set_fontsize(10)
-table.scale(1.2, 2.5)
+table.scale(2.2, 3.0)
 
 
 # Make header row bold
@@ -1458,18 +1458,18 @@ for row in range(1, len(df) + 1):
 for col in range(len(df.columns)):
     table[(0, col)].set_facecolor("#f0f0f0")
 
-plt.tight_layout()
+# plt.tight_layout()
 # plt.show()
 
 
 df = pd.DataFrame({
     "Representation": representations,
-    "CI half-width Coordinates Output, \n Gemini 2.5 Pro": hw_15x15_R_coords,
-    "CI half-width Allocentric Output, \n Gemini 2.5 Pro": hw_15x15_R_allo,
-    "CI half-width Egocentric Output, \n Gemini 2.5 Pro": hw_15x15_R_ego,
-    "CI half-width Coordinates Output, \n Gemini 2.5 Flash-Lite": hw_15x15_NR_coords,
-    "CI half-width Allocentric Output, \n Gemini 2.5 Flash-Lite": hw_15x15_NR_allo,
-    "CI half-width Egocentric Output, \n Gemini 2.5 Flash-Lite": hw_15x15_NR_ego
+    "CI half-width\nCoordinates Output,\nGemini 2.5 Pro": hw_15x15_R_coords,
+    "CI half-width\nAllocentric Output,\nGemini 2.5 Pro": hw_15x15_R_allo,
+    "CI half-width\nEgocentric Output,\nGemini 2.5 Pro": hw_15x15_R_ego,
+    "CI half-width\nCoordinates Output,\nGemini 2.5 Flash-Lite": hw_15x15_NR_coords,
+    "CI half-width\nAllocentric Output,\nGemini 2.5 Flash-Lite": hw_15x15_NR_allo,
+    "CI half-width\nEgocentric Output,\nGemini 2.5 Flash-Lite": hw_15x15_NR_ego
 })
 
 # Create table image
@@ -1490,7 +1490,7 @@ table = ax.table(
 
 table.auto_set_font_size(False)
 table.set_fontsize(10)
-table.scale(1.2, 2.5)
+table.scale(2.2, 3.0)
 
 
 # Make header row bold
@@ -1504,8 +1504,8 @@ for row in range(1, len(df) + 1):
 for col in range(len(df.columns)):
     table[(0, col)].set_facecolor("#f0f0f0")
 
-plt.tight_layout()
-# plt.show()
+# plt.tight_layout()
+plt.show()
 
 
 

@@ -1170,17 +1170,17 @@ plot_configs = [
     # Top-Left: line coords
     (means_line_NR_coords, means_line_R_coords, 
      error_line_NR_coords, error_line_R_coords, 
-     "Line-wall Maze, Coordinates Output"),
+     "Line-Wall Maze, Coordinates Output"),
     
     # Top-Middle: line allo
     (means_line_NR_allo, means_line_R_allo, 
      error_line_NR_allo, error_line_R_allo, 
-     "Line-wall Maze, Allocentric Output"),
+     "Line-Wall Maze, Allocentric Output"),
     
     # Top-Right: line ego
     (means_line_NR_ego, means_line_R_ego, 
      error_line_NR_ego, error_line_R_ego, 
-     "Line-wall Maze, Egocentric Output"),
+     "Line-Wall Maze, Egocentric Output"),
     
     # Bottom-Left: occupancy coords
     (means_occ_NR_coords, means_occ_R_coords, 
@@ -1280,7 +1280,7 @@ for idx, ax in enumerate(axes.flat):
     else:
         pass
         x_tick_lbls = x_tick_lbls_occupancy
-        ax.set_xlabel("Maze Size")
+        ax.set_xlabel("Maze Size (-)")
     ax.set_title(title, fontsize=11)
     ax.set_xticks(x_vals)
     ax.set_xticklabels(x_tick_lbls)
@@ -1347,8 +1347,8 @@ Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10), 
 labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"
+r"$\bf{Input\ Representations}$",
+"Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axes[1,2].legend(
 handles,
@@ -1513,17 +1513,17 @@ for col in range(6):
                         # label=single_legend[i] if (row == 1 and col == 5) else None
                     )
 
-axes[0,0].set_title("Line-wall Maze, \nCoordinates Output")
+axes[0,0].set_title("Line-Wall Maze, \nCoordinates Output")
 axes[1,0].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,1].set_title("Line-wall Maze, \nAllocentric Output")
+axes[0,1].set_title("Line-Wall Maze, \nAllocentric Output")
 axes[1,1].set_title("Occupancy Grid Maze, \nAllocentric Output")
-axes[0,2].set_title("Line-wall Maze, \nEgocentric Output")
+axes[0,2].set_title("Line-Wall Maze, \nEgocentric Output")
 axes[1,2].set_title("Occupancy Grid Maze, \nEgocentric Output")
-axes[0,3].set_title("Line-wall Maze, \nCoordinates Output")
+axes[0,3].set_title("Line-Wall Maze, \nCoordinates Output")
 axes[1,3].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,4].set_title("Line-wall Maze, \nAllocentric Output")
+axes[0,4].set_title("Line-Wall Maze, \nAllocentric Output")
 axes[1,4].set_title("Occupancy Grid Maze, \nAllocentric Output")
-axes[0,5].set_title("Line-wall Maze, \nEgocentric Output")
+axes[0,5].set_title("Line-Wall Maze, \nEgocentric Output")
 axes[1,5].set_title("Occupancy Grid Maze, \nEgocentric Output")
 # Formatting
 for col in range(6):
@@ -1551,10 +1551,10 @@ for col in range(6):
             # ax.set_ylabel("Completion Score (%)")
 
         # if row == 1:
-        #     ax.set_xlabel("Maze Size")
+        #     ax.set_xlabel("Maze Size (-)")
 
     # Labelling axes once for the whole fig.
-    fig.supxlabel('Maze Size', x= 0.45)
+    fig.supxlabel('Maze Size (-)', x= 0.45)
     fig.supylabel('Completion Score (%)')
 
     
@@ -1612,8 +1612,8 @@ Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10), 
 labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"
+r"$\bf{Input\ Representations}$",
+"Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axes[1,5].legend(
 handles,
@@ -2799,17 +2799,17 @@ for col in range(6):
                         # label=single_legend[i] if (row == 1 and col == 5) else None
                     )
 
-axes[0,0].set_title("Line-wall Maze, \nCoordinates Output")
+axes[0,0].set_title("Line-Wall Maze, \nCoordinates Output")
 axes[1,0].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,1].set_title("Line-wall Maze, \nAllocentric Output")
+axes[0,1].set_title("Line-Wall Maze, \nAllocentric Output")
 axes[1,1].set_title("Occupancy Grid Maze, \nAllocentric Output")
-axes[0,2].set_title("Line-wall Maze, \nEgocentric Output")
+axes[0,2].set_title("Line-Wall Maze, \nEgocentric Output")
 axes[1,2].set_title("Occupancy Grid Maze, \nEgocentric Output")
-axes[0,3].set_title("Line-wall Maze, \nCoordinates Output")
+axes[0,3].set_title("Line-Wall Maze, \nCoordinates Output")
 axes[1,3].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,4].set_title("Line-wall Maze, \nAllocentric Output")
+axes[0,4].set_title("Line-Wall Maze, \nAllocentric Output")
 axes[1,4].set_title("Occupancy Grid Maze, \nAllocentric Output")
-axes[0,5].set_title("Line-wall Maze, \nEgocentric Output")
+axes[0,5].set_title("Line-Wall Maze, \nEgocentric Output")
 axes[1,5].set_title("Occupancy Grid Maze, \nEgocentric Output")
 # Formatting
 for col in range(6):
@@ -2837,11 +2837,11 @@ for col in range(6):
         #     ax.set_ylabel("Number of Correct Consecutive Steps")
 
         # if row == 1:
-        #     ax.set_xlabel("Maze Size")
+        #     ax.set_xlabel("Maze Size (-)")
 
     # Labelling axes once for the whole fig
-    fig.supxlabel('Maze Size', x=0.45)
-    fig.supylabel("Number of Correct Consecutive Steps From The Start")
+    fig.supxlabel('Maze Size (-)', x=0.45)
+    fig.supylabel("Number of Correct Consecutive Steps From The Start (Steps)")
 
     
     # # Save handles from the last plot (Bottom-Right) because it contains all 12 lines
@@ -2898,8 +2898,8 @@ Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10), 
 labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"
+r"$\bf{Input\ Representations}$",
+"Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axes[1,5].legend(
 handles,
@@ -3211,7 +3211,7 @@ labels = [
     "Adj TXT",
     "JPG",
     "JSON",
-    "Tagged"
+    "Tagged per-cell"
 ]
 ascii_color = "C5"
 def plot_block(ax, means, ascii_means=None, linestyle="-"):
@@ -3256,15 +3256,15 @@ axs[0,2].set_title("Egocentricoutput\nGemini2.5 Flash-Lite")
 axs[1,0].set_title("Coordinates output\nGemini2.5 Pro")
 axs[1,1].set_title("Allocentric output\nGemini2.5 Pro")
 axs[1,2].set_title("Egocentricoutput\nGemini2.5 Pro")
-fig.suptitle("Superimposed Completion Scores of Line-wall and Occupancy Grid Mazes", fontsize=16, fontweight='bold')
-fig.supxlabel("Maze Size", fontsize=11)
+fig.suptitle("Superimposed Completion Scores of Line-Wall and Occupancy Grid Mazes", fontsize=16, fontweight='bold')
+fig.supxlabel("Maze Size (-)", fontsize=11)
 fig.supylabel("Completion Score (%)", fontsize=11)
 
 # X axis
 for ax in axs[0,:]:
     ax.set_xticks(x_ticks)
     ax.set_xticklabels(x_labels)
-    # ax.set_xlabel("Maze Size")
+    # ax.set_xlabel("Maze Size (-)")
 for ax in axs[1,:]:
     ax.set_xticks(x_ticks)
     ax.set_xticklabels(x_labels)
@@ -3309,8 +3309,8 @@ Line2D([], [], marker='o', color=ascii_color, linestyle='None', markersize = 10)
 labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Formats}$",
-"Adjacency JSON", "Adjacency Text", "JPG", "JSON", "Tagged", "ASCII"
+r"$\bf{Input\ Representations}$",
+"Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axs[1,2].legend(
 handles,
