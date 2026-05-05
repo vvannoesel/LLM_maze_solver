@@ -29,7 +29,7 @@ import results_Dataset03_15x15 as r15
 representations = ['line jpg', 'line json', 'line adjacency json', 'line adjacency txt', 'line tokenized txt', 
                    'occupancy jpg', 'occupancy json', 'occupancy adjacency json', 'occupancy adjacency txt', 'occupancy ascii txt', 'occupancy tokenized txt']
 # X-axis labels
-x_labels = ['Coordinates', 'Allocentric', 'Egocentric']
+x_labels = ['Coordinates', 'Absolute directions', 'Egocentric']
 x_vals = np.arange(len(x_labels))
 
 # 3x3 NR - COORDS - 1-10 ----------------------------------------------------------------
@@ -1525,7 +1525,7 @@ for i, point in enumerate(line_NR_coords_3):
 for i, point in enumerate(line_NR_allo_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[0,0].plot(x, y, marker=markers[i],  color = green[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Allocentric, Gemini 2.5 Flash-Lite")
+    axes[0,0].plot(x, y, marker=markers[i],  color = green[0], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Absolute directions, Gemini 2.5 Flash-Lite")
 
 for i, point in enumerate(line_NR_ego_3):
     x, y = point
@@ -1540,7 +1540,7 @@ for i, point in enumerate(line_R_coords_3):
 for i, point in enumerate(line_R_allo_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[0,1].plot(x, y, marker=markers[i],  color = green[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Allocentric, Gemini 2.5 Pro")
+    axes[0,1].plot(x, y, marker=markers[i],  color = green[1], mec=marker_edge[0], ms = marker_size[0], linestyle='None', label=label+", 3x3, Absolute directions, Gemini 2.5 Pro")
 
 for i, point in enumerate(line_R_ego_3):
     x, y = point
@@ -1557,7 +1557,7 @@ for i, point in enumerate(occupancy_NR_coords_3):
 for i, point in enumerate(occupancy_NR_allo_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[0,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Allocentric, Gemini 2.5 Flash-Lite")
+    axes[0,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Absolute directions, Gemini 2.5 Flash-Lite")
 
 for i, point in enumerate(occupancy_NR_ego_3):
     x, y = point
@@ -1572,7 +1572,7 @@ for i, point in enumerate(occupancy_R_coords_3):
 for i, point in enumerate(occupancy_R_allo_3):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[0,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Allocentric, Gemini 2.5 Pro")
+    axes[0,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[0], linestyle='None', label=label+", 7x7, Absolute directions, Gemini 2.5 Pro")
 
 for i, point in enumerate(occupancy_R_ego_3):
     x, y = point
@@ -1587,7 +1587,7 @@ for i, point in enumerate(line_NR_coords_6):
 for i, point in enumerate(line_NR_allo_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[1,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Allocentric, Gemini 2.5 Flash-Lite")
+    axes[1,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Absolute directions, Gemini 2.5 Flash-Lite")
 for i, point in enumerate(line_NR_ego_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
@@ -1599,7 +1599,7 @@ for i, point in enumerate(line_R_coords_6):
 for i, point in enumerate(line_R_allo_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[1,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Allocentric, Gemini 2.5 Pro")
+    axes[1,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[1], linestyle='None', label=label+", 6x6, Absolute directions, Gemini 2.5 Pro")
 for i, point in enumerate(line_R_ego_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
@@ -1614,7 +1614,7 @@ for i, point in enumerate(occupancy_NR_coords_6):
 for i, point in enumerate(occupancy_NR_allo_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[1,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Allocentric, Gemini 2.5 Flash-Lite")
+    axes[1,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Absolute directions, Gemini 2.5 Flash-Lite")
 
 for i, point in enumerate(occupancy_NR_ego_6):
     x, y = point
@@ -1629,7 +1629,7 @@ for i, point in enumerate(occupancy_R_coords_6):
 for i, point in enumerate(occupancy_R_allo_6):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[1,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Allocentric, Gemini 2.5 Pro")
+    axes[1,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[1], linestyle='None', label=label+", 13x13, Absolute directions, Gemini 2.5 Pro")
 
 for i, point in enumerate(occupancy_R_ego_6):
     x, y = point
@@ -1646,7 +1646,7 @@ for i, point in enumerate(line_NR_coords_15):
 for i, point in enumerate(line_NR_allo_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[2,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Allocentric, Gemini 2.5 Flash-Lite")
+    axes[2,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Absolute directions, Gemini 2.5 Flash-Lite")
 
 for i, point in enumerate(line_NR_ego_15):
     x, y = point
@@ -1661,7 +1661,7 @@ for i, point in enumerate(line_R_coords_15):
 for i, point in enumerate(line_R_allo_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[2,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Allocentric, Gemini 2.5 Pro")
+    axes[2,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[0], ms = marker_size[2], linestyle='None', label=label+", 15x15, Absolute directions, Gemini 2.5 Pro")
 
 for i, point in enumerate(line_R_ego_15):
     x, y = point
@@ -1678,7 +1678,7 @@ for i, point in enumerate(occupancy_NR_coords_15):
 for i, point in enumerate(occupancy_NR_allo_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[2,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Allocentric, Gemini 2.5 Flash-Lite")
+    axes[2,0].plot(x, y, marker=markers[i], color = green[0], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Absolute directions, Gemini 2.5 Flash-Lite")
 
 for i, point in enumerate(occupancy_NR_ego_15):
     x, y = point
@@ -1693,7 +1693,7 @@ for i, point in enumerate(occupancy_R_coords_15):
 for i, point in enumerate(occupancy_R_allo_15):
     x, y = point
     label = labels_base[i]  # get label corresponding to the row
-    axes[2,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Allocentric, Gemini 2.5 Pro")
+    axes[2,1].plot(x, y, marker=markers[i], color = green[1], mec=marker_edge[1], ms = marker_size[2], linestyle='None', label=label+", 31x31, Absolute directions, Gemini 2.5 Pro")
 
 for i, point in enumerate(occupancy_R_ego_15):
     x, y = point
@@ -1715,7 +1715,7 @@ for i in range(0,3):
             # # xlabel for the figure using ALL tokens, placed on all columns
             # axes[i,j].set_xlabel("Test Compute (Tokens)")
             # xlabel for the figure using ALL tokens, placed once
-            fig.supxlabel("Number of Output Tokens (Tokens)")
+            fig.supxlabel("Mean Number of Output Tokens (Tokens)")
         elif figure == 'final_answer_tokens':
             # # xlabel for the figure using EXCLUSIVELY final answer tokens, placed on all columns
             # axes[i,j].set_xlabel("Final Answer Test Compute (Tokens)")
@@ -1785,7 +1785,7 @@ handles = [
 
 labels = [
     r"$\bf{Output\ FoRs}$",
-    "Coordinates", "Allocentric", "Egocentric",
+    "Coordinates", "Absolute directions", "Egocentric",
     r"$\bf{Input\ Representations}$",
     "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII",
     # r"$\bf{Models}$",
@@ -1818,13 +1818,13 @@ axes[2,1].set_title("15x15 and 31x31, Gemini 2.5 Pro")
 
 if figure == 'all_tokens':
     # Title for the figure using ALL tokens
-    plt.suptitle("Model Performance as a Function of Number of Output Tokens", x=0.48,  fontweight= 'bold')
+    plt.suptitle("Model Performance as a Function of Mean Number of Output Tokens", x=0.48,  fontweight= 'bold')
 elif figure == 'final_answer_tokens':
     # Title for the figure using EXCLUSIVELY final answer tokens
-    plt.suptitle("Model Performance as a Function of Final Answer Number of Output Tokens", x=0.48,  fontweight= 'bold')
+    plt.suptitle("Model Performance as a Function of Final Answer Mean Number of Output Tokens", x=0.48,  fontweight= 'bold')
 elif figure == 'thinking_tokens':
      # Title for the figure using EXCLUSIVELY thinking tokens
-    plt.suptitle("Model Performance as a Function of Number of Output Thinking Tokens", x=0.48,  fontweight= 'bold')
+    plt.suptitle("Model Performance as a Function of Mean Number of Output Thinking Tokens", x=0.48,  fontweight= 'bold')
 
 plt.tight_layout(rect=[0, 0, 0.97, 1])  # leave 15% of width for legend
 

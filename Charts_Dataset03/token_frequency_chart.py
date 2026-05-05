@@ -328,7 +328,7 @@ print(avg_ego)
 
 # create figure of frequency histogram
 vectors = [final_coords_list_15, final_allo_list_15, final_ego_list_15]
-titles = ['Coordinates Output', 'Allocentric Output', 'Egocentric Output']
+titles = ['Coordinates Output', 'Absolute Directions Output', 'Egocentric Output']
 
 # Define bins: 0–5, 6–10, ..., 96–100
 bins = np.arange(0, 105, 5)
@@ -337,7 +337,7 @@ fig, axes = plt.subplots(3, 1, figsize=(10, 9), sharex=True)
 
 for ax, vec, title in zip(axes, vectors, titles):
     ax.hist(vec, bins=bins, color='tomato', edgecolor = 'black', alpha = 0.5)
-    ax.set_ylabel('Frequency (-)', fontsize = 16)
+    # ax.set_ylabel('Frequency (-)', fontsize = 16)
     ax.set_title(title, fontsize = 18)
     ax.grid(axis='y', alpha=0.3)
 
@@ -345,6 +345,8 @@ for ax, vec, title in zip(axes, vectors, titles):
 axes[-1].set_xlabel('Completion Score (%)', fontsize=16)
 axes[-1].set_xticks(bins)
 axes[-1].set_xlim(0, 100)
+
+fig.supylabel('Frequency (-)', fontsize=16)
 
 # Adjust tick text size
 axes[0].tick_params(axis='both', which='major', labelsize=14)

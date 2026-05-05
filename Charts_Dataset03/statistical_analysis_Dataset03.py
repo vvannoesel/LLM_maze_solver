@@ -557,10 +557,10 @@ representations = [
 df = pd.DataFrame({
     "Representation": representations,
     "Sample Size Coordinates Output, \n Gemini 2.5 Pro": sample_sizes_3x3_R_coords,
-    "Sample Size Allocentric Output, \n Gemini 2.5 Pro": sample_sizes_3x3_R_allo,
+    "Sample Size Abs. Directions Output, \n Gemini 2.5 Pro": sample_sizes_3x3_R_allo,
     "Sample Size Egocentric Output, \n Gemini 2.5 Pro": sample_sizes_3x3_R_ego,
     "Sample Size Coordinates Output, \n Gemini 2.5 Flash-Lite": sample_sizes_3x3_NR_coords,
-    "Sample Size Allocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_3x3_NR_allo,
+    "Sample Size Abs. Directions Output, \n Gemini 2.5 Flash-Lite": sample_sizes_3x3_NR_allo,
     "Sample Size Egocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_3x3_NR_ego
 })
 
@@ -603,10 +603,10 @@ df = pd.DataFrame({
     "Representation": representations,
 
     "Sample Size Coordinates Output, \n Gemini 2.5 Pro": sample_sizes_6x6_R_coords,
-    "Sample Size Allocentric Output, \n Gemini 2.5 Pro": sample_sizes_6x6_R_allo,
+    "Sample Size Abs. Directions Output, \n Gemini 2.5 Pro": sample_sizes_6x6_R_allo,
     "Sample Size Egocentric Output, \n Gemini 2.5 Pro": sample_sizes_6x6_R_ego,
     "Sample Size Coordinates Output, \n Gemini 2.5 Flash-Lite": sample_sizes_6x6_NR_coords,
-    "Sample Size Allocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_6x6_NR_allo,
+    "Sample Size Abs. Directions Output, \n Gemini 2.5 Flash-Lite": sample_sizes_6x6_NR_allo,
     "Sample Size Egocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_6x6_NR_ego
 })
 
@@ -648,10 +648,10 @@ plt.tight_layout()
 df = pd.DataFrame({
     "Representation": representations,
     "Sample Size Coordinates Output, \n Gemini 2.5 Pro": sample_sizes_15x15_R_coords,
-    "Sample Size Allocentric Output, \n Gemini 2.5 Pro": sample_sizes_15x15_R_allo,
+    "Sample Size Abs. Directions Output, \n Gemini 2.5 Pro": sample_sizes_15x15_R_allo,
     "Sample Size Egocentric Output, \n Gemini 2.5 Pro": sample_sizes_15x15_R_ego,
     "Sample Size Coordinates Output, \n Gemini 2.5 Flash-Lite": sample_sizes_15x15_NR_coords,
-    "Sample Size Allocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_15x15_NR_allo,
+    "Sample Size Abs. Directions Output, \n Gemini 2.5 Flash-Lite": sample_sizes_15x15_NR_allo,
     "Sample Size Egocentric Output, \n Gemini 2.5 Flash-Lite": sample_sizes_15x15_NR_ego
 })
 
@@ -963,10 +963,10 @@ representations = [
 df = pd.DataFrame({
     "Representation": representations,
     "Standard dev. Coordinates Output, \n Gemini 2.5 Pro": sd_3x3_R_coords,
-    "Standard dev. Allocentric Output, \n Gemini 2.5 Pro": sd_3x3_R_allo,
+    "Standard dev. Abs. Directions Output, \n Gemini 2.5 Pro": sd_3x3_R_allo,
     "Standard dev. Egocentric Output, \n Gemini 2.5 Pro": sd_3x3_R_ego,
     "Standard dev. Coordinates Output, \n Gemini 2.5 Flash-Lite": sd_3x3_NR_coords,
-    "Standard dev. Allocentric Output, \n Gemini 2.5 Flash-Lite": sd_3x3_NR_allo,
+    "Standard dev. Abs. Directions Output, \n Gemini 2.5 Flash-Lite": sd_3x3_NR_allo,
     "Standard dev. Egocentric Output, \n Gemini 2.5 Flash-Lite": sd_3x3_NR_ego
 })
 
@@ -1011,10 +1011,10 @@ df = pd.DataFrame({
     "Representation": representations,
 
     "Standard dev. Coordinates Output, \n Gemini 2.5 Pro": sd_6x6_R_coords,
-    "Standard dev. Allocentric Output, \n Gemini 2.5 Pro": sd_6x6_R_allo,
+    "Standard dev. Abs. Directions Output, \n Gemini 2.5 Pro": sd_6x6_R_allo,
     "Standard dev. Egocentric Output, \n Gemini 2.5 Pro": sd_6x6_R_ego,
     "Standard dev. Coordinates Output, \n Gemini 2.5 Flash-Lite": sd_6x6_NR_coords,
-    "Standard dev. Allocentric Output, \n Gemini 2.5 Flash-Lite": sd_6x6_NR_allo,
+    "Standard dev. Abs. Directions Output, \n Gemini 2.5 Flash-Lite": sd_6x6_NR_allo,
     "Standard dev. Egocentric Output, \n Gemini 2.5 Flash-Lite": sd_6x6_NR_ego
 })
 
@@ -1056,10 +1056,10 @@ plt.tight_layout()
 df = pd.DataFrame({
     "Representation": representations,
     "Standard dev. Coordinates Output, \n Gemini 2.5 Pro": sd_15x15_R_coords,
-    "Standard dev. Allocentric Output, \n Gemini 2.5 Pro": sd_15x15_R_allo,
+    "Standard dev. Abs. Directions Output, \n Gemini 2.5 Pro": sd_15x15_R_allo,
     "Standard dev. Egocentric Output, \n Gemini 2.5 Pro": sd_15x15_R_ego,
     "Standard dev. Coordinates Output, \n Gemini 2.5 Flash-Lite": sd_15x15_NR_coords,
-    "Standard dev. Allocentric Output, \n Gemini 2.5 Flash-Lite": sd_15x15_NR_allo,
+    "Standard dev. Abs. Directions Output, \n Gemini 2.5 Flash-Lite": sd_15x15_NR_allo,
     "Standard dev. Egocentric Output, \n Gemini 2.5 Flash-Lite": sd_15x15_NR_ego
 })
 
@@ -1372,10 +1372,10 @@ representations = [
 df = pd.DataFrame({
     "Representation": representations,
     "CI half-width\nCoordinates Output,\nGemini 2.5 Pro": hw_3x3_R_coords,
-    "CI half-width\nAllocentric Output,\nGemini 2.5 Pro": hw_3x3_R_allo,
+    "CI half-width\nAbs. Directions Output,\nGemini 2.5 Pro": hw_3x3_R_allo,
     "CI half-width\nEgocentric Output,\nGemini 2.5 Pro": hw_3x3_R_ego,
     "CI half-width\nCoordinates Output,\nGemini 2.5 Flash-Lite": hw_3x3_NR_coords,
-    "CI half-width\nAllocentric Output,\nGemini 2.5 Flash-Lite": hw_3x3_NR_allo,
+    "CI half-width\nAbs. Directions Output,\nGemini 2.5 Flash-Lite": hw_3x3_NR_allo,
     "CI half-width\nEgocentric Output,\nGemini 2.5 Flash-Lite": hw_3x3_NR_ego
 })
 
@@ -1420,10 +1420,10 @@ df = pd.DataFrame({
     "Representation": representations,
 
     "CI half-width\nCoordinates Output,\nGemini 2.5 Pro": hw_6x6_R_coords,
-    "CI half-width\nAllocentric Output,\nGemini 2.5 Pro": hw_6x6_R_allo,
+    "CI half-width\nAbs. Directions Output,\nGemini 2.5 Pro": hw_6x6_R_allo,
     "CI half-width\nEgocentric Output,\nGemini 2.5 Pro": hw_6x6_R_ego,
     "CI half-width\nCoordinates Output,\nGemini 2.5 Flash-Lite": hw_6x6_NR_coords,
-    "CI half-width\nAllocentric Output,\nGemini 2.5 Flash-Lite": hw_6x6_NR_allo,
+    "CI half-width\nAbs. Directions Output,\nGemini 2.5 Flash-Lite": hw_6x6_NR_allo,
     "CI half-width\nEgocentric Output,\nGemini 2.5 Flash-Lite": hw_6x6_NR_ego
 })
 
@@ -1465,10 +1465,10 @@ for col in range(len(df.columns)):
 df = pd.DataFrame({
     "Representation": representations,
     "CI half-width\nCoordinates Output,\nGemini 2.5 Pro": hw_15x15_R_coords,
-    "CI half-width\nAllocentric Output,\nGemini 2.5 Pro": hw_15x15_R_allo,
+    "CI half-width\nAbs. Directions Output,\nGemini 2.5 Pro": hw_15x15_R_allo,
     "CI half-width\nEgocentric Output,\nGemini 2.5 Pro": hw_15x15_R_ego,
     "CI half-width\nCoordinates Output,\nGemini 2.5 Flash-Lite": hw_15x15_NR_coords,
-    "CI half-width\nAllocentric Output,\nGemini 2.5 Flash-Lite": hw_15x15_NR_allo,
+    "CI half-width\nAbs. Directions Output,\nGemini 2.5 Flash-Lite": hw_15x15_NR_allo,
     "CI half-width\nEgocentric Output,\nGemini 2.5 Flash-Lite": hw_15x15_NR_ego
 })
 
@@ -1505,7 +1505,7 @@ for col in range(len(df.columns)):
     table[(0, col)].set_facecolor("#f0f0f0")
 
 # plt.tight_layout()
-plt.show()
+# plt.show()
 
 
 
@@ -1562,4 +1562,112 @@ def sort(lst):
     return empty0, empty1, empty2, empty3, empty4
 
 sort(list_half)
+
+
+
+
+
+
+# Checking if the data is normally distributed, using the shapiro-wilk test
+
+from scipy.stats import shapiro
+
+
+def z_score_standardization(data):
+    mean = np.nanmean(data)
+    std = np.nanstd(data)
+    z_scores = (data - mean) / std
+    return z_scores
+
+# dummy = [0,1,2, 1]
+# print(np.std(dummy))
+z_scores = z_score_standardization(r15.line_R_allo_tokenized_txt_15)
+print(z_scores)
+
+
+fig, ax = plt.subplots(figsize=(30, 8))
+
+plt.hist(z_scores, bins=10)
+plt.title("Histogram of Z-scores, 15x15 line r allo tokenized")
+plt.show()
+
+
+def frequency(data):
+    bin0=0
+    bin1=0
+    for a in range(len(data)):
+        if data[a] == 0.0 or (0.0 < data[a] < 2.5):
+            bin0 +=1
+        if 2.5 <= data[a] < 5:
+            bin1 +=1    
+        if 5 <= data[a] < 7.5:
+            bin2 +=1
+        if 7.5 <= data[a] < 10:
+            bin3 +=1
+        if 10 <= data[a] < 12.5:
+            bin4 +=1
+        if 12.5 <= data[a] < 15:
+            bin5 +=1
+        if 15 <= data[a] < 17.5:
+            bin6 +=1
+        if 17.5 <= data[a] < 20:
+            bin7 +=1
+        if 20 <= data[a] < 22.5:
+            bin8 +=1
+        if 22.5 <= data[a] < 25:
+            bin9 +=1
+        if 25 <= data[a] < 27.5:
+            bin10 +=1
+        if 27.5 <= data[a] < 30:
+            bin11 +=1
+        if 30 <= data[a] < 32.5:
+            bin12 +=1
+        if 32.5 <= data[a] < 35:
+            bin13 +=1
+        if 35 <= data[a] < 37.5:
+            bin14 +=1
+        if 37.5 <= data[a] < 40:
+            bin15 +=1
+        if 40 <= data[a] < 42.5:
+            bin16 +=1
+        if 42.5 <= data[a] < 45:
+            bin17 +=1
+        if 45 <= data[a] < 47.5:
+            bin18 +=1
+        if 47.5 <= data[a] < 50:
+            bin19 +=1
+        if 50 <= data[a] < 52.5:
+            bin20 +=1
+        if 52.5 <= data[a] < 55:
+            bin21 +=1
+        if 55 <= data[a] < 57.5:
+            bin22 +=1
+        if 57.5 <= data[a] < 60:
+            bin23 +=1
+        if 60 <= data[a] < 62.5:
+            bin24 +=1
+        if 62.5 <= data[a] < 65:
+            bin25 +=1
+        if 65 <= data[a] < 67.5:
+            bin26 +=1
+        if 67.5 <= data[a] < 70:
+            bin27 +=1
+        if 70 <= data[a] < 72.5:
+            bin28 +=1
+        if 72.5 <= data[a] < 75:
+            bin29 +=1
+        if 75 <= data[a] < 77.5:
+            bin30 +=1
+        if 77.5 <= data[a] < 80:
+            bin31 +=1
+        if 80 <= data[a] < 82.5:
+            bin32 +=1
+        if 82.5 <= data[a] < 85:
+            bin33 +=1
+        if 85 <= data[a] < 87.5:
+            bin34 +=1
+        if 87.5 <= data[a] < 90:
+            bin35 +=1
+        
+
 

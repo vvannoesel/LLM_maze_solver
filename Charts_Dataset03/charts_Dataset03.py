@@ -1175,7 +1175,7 @@ plot_configs = [
     # Top-Middle: line allo
     (means_line_NR_allo, means_line_R_allo, 
      error_line_NR_allo, error_line_R_allo, 
-     "Line-Wall Maze, Allocentric Output"),
+     "Line-Wall Maze, Abs. directions Output"),
     
     # Top-Right: line ego
     (means_line_NR_ego, means_line_R_ego, 
@@ -1190,7 +1190,7 @@ plot_configs = [
     # Bottom-Middle: occupancy allo
     (means_occ_NR_allo, means_occ_R_allo, 
      error_occupancy_NR_allo, error_occupancy_R_allo, 
-     "Occupancy Grid Maze, Allocentric Output"),
+     "Occupancy Grid Maze, Abs. directions Output"),
     
     # Bottom-Right: occupancy ego
     (means_occ_NR_ego, means_occ_R_ego, 
@@ -1515,14 +1515,14 @@ for col in range(6):
 
 axes[0,0].set_title("Line-Wall Maze, \nCoordinates Output")
 axes[1,0].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,1].set_title("Line-Wall Maze, \nAllocentric Output")
-axes[1,1].set_title("Occupancy Grid Maze, \nAllocentric Output")
+axes[0,1].set_title("Line-Wall Maze, \nAbs. Directions Output")
+axes[1,1].set_title("Occupancy Grid Maze, \nAbs. Directions Output")
 axes[0,2].set_title("Line-Wall Maze, \nEgocentric Output")
 axes[1,2].set_title("Occupancy Grid Maze, \nEgocentric Output")
 axes[0,3].set_title("Line-Wall Maze, \nCoordinates Output")
 axes[1,3].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,4].set_title("Line-Wall Maze, \nAllocentric Output")
-axes[1,4].set_title("Occupancy Grid Maze, \nAllocentric Output")
+axes[0,4].set_title("Line-Wall Maze, \nAbs. Directions Output")
+axes[1,4].set_title("Occupancy Grid Maze, \nAbs. Directions Output")
 axes[0,5].set_title("Line-Wall Maze, \nEgocentric Output")
 axes[1,5].set_title("Occupancy Grid Maze, \nEgocentric Output")
 # Formatting
@@ -2801,14 +2801,14 @@ for col in range(6):
 
 axes[0,0].set_title("Line-Wall Maze, \nCoordinates Output")
 axes[1,0].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,1].set_title("Line-Wall Maze, \nAllocentric Output")
-axes[1,1].set_title("Occupancy Grid Maze, \nAllocentric Output")
+axes[0,1].set_title("Line-Wall Maze, \nAbs. Directions Output")
+axes[1,1].set_title("Occupancy Grid Maze, \nAbs. Directions Output")
 axes[0,2].set_title("Line-Wall Maze, \nEgocentric Output")
 axes[1,2].set_title("Occupancy Grid Maze, \nEgocentric Output")
 axes[0,3].set_title("Line-Wall Maze, \nCoordinates Output")
 axes[1,3].set_title("Occupancy Grid Maze, \nCoordinates Output")
-axes[0,4].set_title("Line-Wall Maze, \nAllocentric Output")
-axes[1,4].set_title("Occupancy Grid Maze, \nAllocentric Output")
+axes[0,4].set_title("Line-Wall Maze, \nAbs. Directions Output")
+axes[1,4].set_title("Occupancy Grid Maze, \nAbs. Directions Output")
 axes[0,5].set_title("Line-Wall Maze, \nEgocentric Output")
 axes[1,5].set_title("Occupancy Grid Maze, \nEgocentric Output")
 # Formatting
@@ -3251,10 +3251,10 @@ plot_block(axs[1,2], means_R_ego,    means_ascii_txt_R_ego, linestyle=":")
 
 # #title and labels 
 axs[0,0].set_title("Coordinates output\nGemini2.5 Flash-Lite")
-axs[0,1].set_title("Allocentric output\nGemini2.5 Flash-Lite")
+axs[0,1].set_title("Abs. directions output\nGemini2.5 Flash-Lite")
 axs[0,2].set_title("Egocentricoutput\nGemini2.5 Flash-Lite")
 axs[1,0].set_title("Coordinates output\nGemini2.5 Pro")
-axs[1,1].set_title("Allocentric output\nGemini2.5 Pro")
+axs[1,1].set_title("Abs. directions output\nGemini2.5 Pro")
 axs[1,2].set_title("Egocentricoutput\nGemini2.5 Pro")
 fig.suptitle("Superimposed Completion Scores of Line-Wall and Occupancy Grid Mazes", fontsize=16, fontweight='bold')
 fig.supxlabel("Maze Size (-)", fontsize=11)
