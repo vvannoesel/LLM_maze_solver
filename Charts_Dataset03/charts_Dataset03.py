@@ -16,6 +16,7 @@ import matplotlib.pyplot as plt
 import results_Dataset03_3x3 as r3
 import results_Dataset03_6x6 as r6
 import results_Dataset03_15x15 as r15
+from scipy.stats import bootstrap
 from matplotlib.lines import Line2D
 from matplotlib.legend_handler import HandlerTuple
 
@@ -32,6 +33,28 @@ def confidence_interval(vector):
     # lower_bound = mean-error
     # upper_bound = mean+error
     return error #lower_bound, upper_bound 
+
+def bootstrap_CI(scores):
+    #set manual value of half-width=0.0 for degenerate samples (all values the same) to avoid error
+    if np.nanstd(scores) == 0:
+        error = 0.0
+    else:
+        res = bootstrap(
+        (scores,),
+        np.nanmean,
+        confidence_level=0.95,
+        n_resamples=10000,
+        method='BCa',   # good default for non-normal data
+        random_state=42
+        )
+
+        # Extract full confidence interval
+        ci_low = res.confidence_interval.low
+        ci_high = res.confidence_interval.high
+
+        # Half-width is the error each side of the mean
+        error = (ci_high - ci_low) / 2
+    return error
 
 # --- Plotting mean accuracy with stdev error bars for all types and sizes until run 10 ----------
 
@@ -123,12 +146,22 @@ std_line_NR_coords = [
     [sd_line_NR_coords_tokenized_txt, sd_line_NR_coords_tokenized_txt_6, sd_line_NR_coords_tokenized_txt_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_NR_coords = [
     [confidence_interval(r3.line_NR_coords_adj_json_3),       confidence_interval(r6.line_NR_coords_adj_json_6),       confidence_interval(r15.line_NR_coords_adj_json_15)],
     [confidence_interval(r3.line_NR_coords_adj_txt_3),        confidence_interval(r6.line_NR_coords_adj_txt_6),        confidence_interval(r15.line_NR_coords_adj_txt_15)],
     [confidence_interval(r3.line_NR_coords_jpg_3),            confidence_interval(r6.line_NR_coords_jpg_6),            confidence_interval(r15.line_NR_coords_jpg_15)],
     [confidence_interval(r3.line_NR_coords_json_3),           confidence_interval(r6.line_NR_coords_json_6),           confidence_interval(r15.line_NR_coords_json_15)],
     [confidence_interval(r3.line_NR_coords_tokenized_txt_3),  confidence_interval(r6.line_NR_coords_tokenized_txt_6),  confidence_interval(r15.line_NR_coords_tokenized_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_NR_coords = [
+    [bootstrap_CI(r3.line_NR_coords_adj_json_3),       bootstrap_CI(r6.line_NR_coords_adj_json_6),       bootstrap_CI(r15.line_NR_coords_adj_json_15)],
+    [bootstrap_CI(r3.line_NR_coords_adj_txt_3),        bootstrap_CI(r6.line_NR_coords_adj_txt_6),        bootstrap_CI(r15.line_NR_coords_adj_txt_15)],
+    [bootstrap_CI(r3.line_NR_coords_jpg_3),            bootstrap_CI(r6.line_NR_coords_jpg_6),            bootstrap_CI(r15.line_NR_coords_jpg_15)],
+    [bootstrap_CI(r3.line_NR_coords_json_3),           bootstrap_CI(r6.line_NR_coords_json_6),           bootstrap_CI(r15.line_NR_coords_json_15)],
+    [bootstrap_CI(r3.line_NR_coords_tokenized_txt_3),  bootstrap_CI(r6.line_NR_coords_tokenized_txt_6),  bootstrap_CI(r15.line_NR_coords_tokenized_txt_15)]
 ]
 
 labels_line = [
@@ -157,7 +190,7 @@ std_occ_NR_coords = [
     [sd_occupancy_NR_coords_tokenized_txt,  sd_occupancy_NR_coords_tokenized_txt_6,  sd_occupancy_NR_coords_tokenized_txt_15],
     [sd_occupancy_NR_coords_ascii_txt,      sd_occupancy_NR_coords_ascii_txt_6,      sd_occupancy_NR_coords_ascii_txt_15]
 ]
-
+# non-bootstrapped confidence intervals
 error_occupancy_NR_coords = [
     [confidence_interval(r3.occupancy_NR_coords_adj_json_3),       confidence_interval(r6.occupancy_NR_coords_adj_json_6),       confidence_interval(r15.occupancy_NR_coords_adj_json_15)],
     [confidence_interval(r3.occupancy_NR_coords_adj_txt_3),        confidence_interval(r6.occupancy_NR_coords_adj_txt_6),        confidence_interval(r15.occupancy_NR_coords_adj_txt_15)],
@@ -165,6 +198,16 @@ error_occupancy_NR_coords = [
     [confidence_interval(r3.occupancy_NR_coords_json_3),           confidence_interval(r6.occupancy_NR_coords_json_6),           confidence_interval(r15.occupancy_NR_coords_json_15)],
     [confidence_interval(r3.occupancy_NR_coords_tokenized_txt_3),  confidence_interval(r6.occupancy_NR_coords_tokenized_txt_6),  confidence_interval(r15.occupancy_NR_coords_tokenized_txt_15)],
     [ confidence_interval(r3.occupancy_NR_coords_ascii_txt_3),     confidence_interval(r6.occupancy_NR_coords_ascii_txt_6),      confidence_interval(r15.occupancy_NR_coords_ascii_txt_15)]
+]
+
+# bootstrapped confidence intervals
+bs_error_occupancy_NR_coords = [
+    [bootstrap_CI(r3.occupancy_NR_coords_adj_json_3),       bootstrap_CI(r6.occupancy_NR_coords_adj_json_6),       bootstrap_CI(r15.occupancy_NR_coords_adj_json_15)],
+    [bootstrap_CI(r3.occupancy_NR_coords_adj_txt_3),        bootstrap_CI(r6.occupancy_NR_coords_adj_txt_6),        bootstrap_CI(r15.occupancy_NR_coords_adj_txt_15)],
+    [bootstrap_CI(r3.occupancy_NR_coords_jpg_3),            bootstrap_CI(r6.occupancy_NR_coords_jpg_6),            bootstrap_CI(r15.occupancy_NR_coords_jpg_15)],
+    [bootstrap_CI(r3.occupancy_NR_coords_json_3),           bootstrap_CI(r6.occupancy_NR_coords_json_6),           bootstrap_CI(r15.occupancy_NR_coords_json_15)],
+    [bootstrap_CI(r3.occupancy_NR_coords_tokenized_txt_3),  bootstrap_CI(r6.occupancy_NR_coords_tokenized_txt_6),  bootstrap_CI(r15.occupancy_NR_coords_tokenized_txt_15)],
+    [ bootstrap_CI(r3.occupancy_NR_coords_ascii_txt_3),     bootstrap_CI(r6.occupancy_NR_coords_ascii_txt_6),      bootstrap_CI(r15.occupancy_NR_coords_ascii_txt_15)]
 ]
 
 labels_occ = [
@@ -308,12 +351,22 @@ std_line_NR_allo = [
     [sd_line_NR_allo_tokenized_txt,  sd_line_NR_allo_tokenized_txt_6,  sd_line_NR_allo_tokenized_txt_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_NR_allo = [
     [confidence_interval(r3.line_NR_allo_adj_json_3),       confidence_interval(r6.line_NR_allo_adj_json_6),       confidence_interval(r15.line_NR_allo_adj_json_15)],
     [confidence_interval(r3.line_NR_allo_adj_txt_3),        confidence_interval(r6.line_NR_allo_adj_txt_6),        confidence_interval(r15.line_NR_allo_adj_txt_15)],
     [confidence_interval(r3.line_NR_allo_jpg_3),            confidence_interval(r6.line_NR_allo_jpg_6),            confidence_interval(r15.line_NR_allo_jpg_15)],
     [confidence_interval(r3.line_NR_allo_json_3),           confidence_interval(r6.line_NR_allo_json_6),           confidence_interval(r15.line_NR_allo_json_15)],
     [confidence_interval(r3.line_NR_allo_tokenized_txt_3),  confidence_interval(r6.line_NR_allo_tokenized_txt_6),  confidence_interval(r15.line_NR_allo_tokenized_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_NR_allo = [
+    [bootstrap_CI(r3.line_NR_allo_adj_json_3),       bootstrap_CI(r6.line_NR_allo_adj_json_6),       bootstrap_CI(r15.line_NR_allo_adj_json_15)],
+    [bootstrap_CI(r3.line_NR_allo_adj_txt_3),        bootstrap_CI(r6.line_NR_allo_adj_txt_6),        bootstrap_CI(r15.line_NR_allo_adj_txt_15)],
+    [bootstrap_CI(r3.line_NR_allo_jpg_3),            bootstrap_CI(r6.line_NR_allo_jpg_6),            bootstrap_CI(r15.line_NR_allo_jpg_15)],
+    [bootstrap_CI(r3.line_NR_allo_json_3),           bootstrap_CI(r6.line_NR_allo_json_6),           bootstrap_CI(r15.line_NR_allo_json_15)],
+    [bootstrap_CI(r3.line_NR_allo_tokenized_txt_3),  bootstrap_CI(r6.line_NR_allo_tokenized_txt_6),  bootstrap_CI(r15.line_NR_allo_tokenized_txt_15)]
 ]
 
 
@@ -344,6 +397,7 @@ std_occ_NR_allo = [
     [sd_occupancy_NR_allo_ascii_txt,      sd_occupancy_NR_allo_ascii_txt_6,      sd_occupancy_NR_allo_ascii_txt_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_occupancy_NR_allo = [
     [confidence_interval(r3.occupancy_NR_allo_adj_json_3),       confidence_interval(r6.occupancy_NR_allo_adj_json_6),       confidence_interval(r15.occupancy_NR_allo_adj_json_15)],
     [confidence_interval(r3.occupancy_NR_allo_adj_txt_3),        confidence_interval(r6.occupancy_NR_allo_adj_txt_6),        confidence_interval(r15.occupancy_NR_allo_adj_txt_15)],
@@ -351,6 +405,16 @@ error_occupancy_NR_allo = [
     [confidence_interval(r3.occupancy_NR_allo_json_3),           confidence_interval(r6.occupancy_NR_allo_json_6),           confidence_interval(r15.occupancy_NR_allo_json_15)],
     [confidence_interval(r3.occupancy_NR_allo_tokenized_txt_3),  confidence_interval(r6.occupancy_NR_allo_tokenized_txt_6),  confidence_interval(r15.occupancy_NR_allo_tokenized_txt_15)],
     [ confidence_interval(r3.occupancy_NR_allo_ascii_txt_3),     confidence_interval(r6.occupancy_NR_allo_ascii_txt_6),      confidence_interval(r15.occupancy_NR_allo_ascii_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_NR_allo = [
+    [bootstrap_CI(r3.occupancy_NR_allo_adj_json_3),       bootstrap_CI(r6.occupancy_NR_allo_adj_json_6),       bootstrap_CI(r15.occupancy_NR_allo_adj_json_15)],
+    [bootstrap_CI(r3.occupancy_NR_allo_adj_txt_3),        bootstrap_CI(r6.occupancy_NR_allo_adj_txt_6),        bootstrap_CI(r15.occupancy_NR_allo_adj_txt_15)],
+    [bootstrap_CI(r3.occupancy_NR_allo_jpg_3),            bootstrap_CI(r6.occupancy_NR_allo_jpg_6),            bootstrap_CI(r15.occupancy_NR_allo_jpg_15)],
+    [bootstrap_CI(r3.occupancy_NR_allo_json_3),           bootstrap_CI(r6.occupancy_NR_allo_json_6),           bootstrap_CI(r15.occupancy_NR_allo_json_15)],
+    [bootstrap_CI(r3.occupancy_NR_allo_tokenized_txt_3),  bootstrap_CI(r6.occupancy_NR_allo_tokenized_txt_6),  bootstrap_CI(r15.occupancy_NR_allo_tokenized_txt_15)],
+    [ bootstrap_CI(r3.occupancy_NR_allo_ascii_txt_3),     bootstrap_CI(r6.occupancy_NR_allo_ascii_txt_6),      bootstrap_CI(r15.occupancy_NR_allo_ascii_txt_15)]
 ]
 
 labels_occ = [
@@ -493,12 +557,22 @@ std_line_NR_ego = [
     [sd_line_NR_ego_tokenized_txt,  sd_line_NR_ego_tokenized_txt_6,  sd_line_NR_ego_tokenized_txt_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_NR_ego = [
     [confidence_interval(r3.line_NR_ego_adj_json_3),       confidence_interval(r6.line_NR_ego_adj_json_6),       confidence_interval(r15.line_NR_ego_adj_json_15)],
     [confidence_interval(r3.line_NR_ego_adj_txt_3),        confidence_interval(r6.line_NR_ego_adj_txt_6),        confidence_interval(r15.line_NR_ego_adj_txt_15)],
     [confidence_interval(r3.line_NR_ego_jpg_3),            confidence_interval(r6.line_NR_ego_jpg_6),            confidence_interval(r15.line_NR_ego_jpg_15)],
     [confidence_interval(r3.line_NR_ego_json_3),           confidence_interval(r6.line_NR_ego_json_6),           confidence_interval(r15.line_NR_ego_json_15)],
     [confidence_interval(r3.line_NR_ego_tokenized_txt_3),  confidence_interval(r6.line_NR_ego_tokenized_txt_6),  confidence_interval(r15.line_NR_ego_tokenized_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_NR_ego = [
+    [bootstrap_CI(r3.line_NR_ego_adj_json_3),       bootstrap_CI(r6.line_NR_ego_adj_json_6),       bootstrap_CI(r15.line_NR_ego_adj_json_15)],
+    [bootstrap_CI(r3.line_NR_ego_adj_txt_3),        bootstrap_CI(r6.line_NR_ego_adj_txt_6),        bootstrap_CI(r15.line_NR_ego_adj_txt_15)],
+    [bootstrap_CI(r3.line_NR_ego_jpg_3),            bootstrap_CI(r6.line_NR_ego_jpg_6),            bootstrap_CI(r15.line_NR_ego_jpg_15)],
+    [bootstrap_CI(r3.line_NR_ego_json_3),           bootstrap_CI(r6.line_NR_ego_json_6),           bootstrap_CI(r15.line_NR_ego_json_15)],
+    [bootstrap_CI(r3.line_NR_ego_tokenized_txt_3),  bootstrap_CI(r6.line_NR_ego_tokenized_txt_6),  bootstrap_CI(r15.line_NR_ego_tokenized_txt_15)]
 ]
 
 labels_line = [
@@ -528,6 +602,7 @@ std_occ_NR_ego = [
     [sd_occupancy_NR_ego_ascii_txt,      sd_occupancy_NR_ego_ascii_txt_6,      sd_occupancy_NR_ego_ascii_txt_15],
 ]
 
+#non-bootstrapped confidence intervals
 error_occupancy_NR_ego = [
     [confidence_interval(r3.occupancy_NR_ego_adj_json_3),       confidence_interval(r6.occupancy_NR_ego_adj_json_6),       confidence_interval(r15.occupancy_NR_ego_adj_json_15)],
     [confidence_interval(r3.occupancy_NR_ego_adj_txt_3),        confidence_interval(r6.occupancy_NR_ego_adj_txt_6),        confidence_interval(r15.occupancy_NR_ego_adj_txt_15)],
@@ -535,6 +610,16 @@ error_occupancy_NR_ego = [
     [confidence_interval(r3.occupancy_NR_ego_json_3),           confidence_interval(r6.occupancy_NR_ego_json_6),           confidence_interval(r15.occupancy_NR_ego_json_15)],
     [confidence_interval(r3.occupancy_NR_ego_tokenized_txt_3),  confidence_interval(r6.occupancy_NR_ego_tokenized_txt_6),  confidence_interval(r15.occupancy_NR_ego_tokenized_txt_15)],
     [ confidence_interval(r3.occupancy_NR_ego_ascii_txt_3),     confidence_interval(r6.occupancy_NR_ego_ascii_txt_6),      confidence_interval(r15.occupancy_NR_ego_ascii_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_NR_ego = [
+    [bootstrap_CI(r3.occupancy_NR_ego_adj_json_3),       bootstrap_CI(r6.occupancy_NR_ego_adj_json_6),       bootstrap_CI(r15.occupancy_NR_ego_adj_json_15)],
+    [bootstrap_CI(r3.occupancy_NR_ego_adj_txt_3),        bootstrap_CI(r6.occupancy_NR_ego_adj_txt_6),        bootstrap_CI(r15.occupancy_NR_ego_adj_txt_15)],
+    [bootstrap_CI(r3.occupancy_NR_ego_jpg_3),            bootstrap_CI(r6.occupancy_NR_ego_jpg_6),            bootstrap_CI(r15.occupancy_NR_ego_jpg_15)],
+    [bootstrap_CI(r3.occupancy_NR_ego_json_3),           bootstrap_CI(r6.occupancy_NR_ego_json_6),           bootstrap_CI(r15.occupancy_NR_ego_json_15)],
+    [bootstrap_CI(r3.occupancy_NR_ego_tokenized_txt_3),  bootstrap_CI(r6.occupancy_NR_ego_tokenized_txt_6),  bootstrap_CI(r15.occupancy_NR_ego_tokenized_txt_15)],
+    [ bootstrap_CI(r3.occupancy_NR_ego_ascii_txt_3),     bootstrap_CI(r6.occupancy_NR_ego_ascii_txt_6),      bootstrap_CI(r15.occupancy_NR_ego_ascii_txt_15)]
 ]
 
 labels_occ = [
@@ -679,12 +764,22 @@ std_line_R_coords = [
     [sd_line_R_coords_tokenized_txt,  sd_line_R_coords_tokenized_txt_6,  sd_line_R_coords_tokenized_txt_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_R_coords = [
     [confidence_interval(r3.line_R_coords_adj_json_3),       confidence_interval(r6.line_R_coords_adj_json_6),       confidence_interval(r15.line_R_coords_adj_json_15)],
     [confidence_interval(r3.line_R_coords_adj_txt_3),        confidence_interval(r6.line_R_coords_adj_txt_6),        confidence_interval(r15.line_R_coords_adj_txt_15)],
     [confidence_interval(r3.line_R_coords_jpg_3),            confidence_interval(r6.line_R_coords_jpg_6),            confidence_interval(r15.line_R_coords_jpg_15)],
     [confidence_interval(r3.line_R_coords_json_3),           confidence_interval(r6.line_R_coords_json_6),           confidence_interval(r15.line_R_coords_json_15)],
     [confidence_interval(r3.line_R_coords_tokenized_txt_3),  confidence_interval(r6.line_R_coords_tokenized_txt_6),  confidence_interval(r15.line_R_coords_tokenized_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_R_coords = [
+    [bootstrap_CI(r3.line_R_coords_adj_json_3),       bootstrap_CI(r6.line_R_coords_adj_json_6),       bootstrap_CI(r15.line_R_coords_adj_json_15)],
+    [bootstrap_CI(r3.line_R_coords_adj_txt_3),        bootstrap_CI(r6.line_R_coords_adj_txt_6),        bootstrap_CI(r15.line_R_coords_adj_txt_15)],
+    [bootstrap_CI(r3.line_R_coords_jpg_3),            bootstrap_CI(r6.line_R_coords_jpg_6),            bootstrap_CI(r15.line_R_coords_jpg_15)],
+    [bootstrap_CI(r3.line_R_coords_json_3),           bootstrap_CI(r6.line_R_coords_json_6),           bootstrap_CI(r15.line_R_coords_json_15)],
+    [bootstrap_CI(r3.line_R_coords_tokenized_txt_3),  bootstrap_CI(r6.line_R_coords_tokenized_txt_6),  bootstrap_CI(r15.line_R_coords_tokenized_txt_15)]
 ]
 
 labels_line = [
@@ -714,6 +809,7 @@ std_occ_R_coords = [
     [sd_occupancy_R_coords_ascii_txt,      sd_occupancy_R_coords_ascii_txt_6,      sd_occupancy_R_coords_ascii_txt_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_occupancy_R_coords = [
     [confidence_interval(r3.occupancy_R_coords_adj_json_3),       confidence_interval(r6.occupancy_R_coords_adj_json_6),       confidence_interval(r15.occupancy_R_coords_adj_json_15)],
     [confidence_interval(r3.occupancy_R_coords_adj_txt_3),        confidence_interval(r6.occupancy_R_coords_adj_txt_6),        confidence_interval(r15.occupancy_R_coords_adj_txt_15)],
@@ -721,6 +817,16 @@ error_occupancy_R_coords = [
     [confidence_interval(r3.occupancy_R_coords_json_3),           confidence_interval(r6.occupancy_R_coords_json_6),           confidence_interval(r15.occupancy_R_coords_json_15)],
     [confidence_interval(r3.occupancy_R_coords_tokenized_txt_3),  confidence_interval(r6.occupancy_R_coords_tokenized_txt_6),  confidence_interval(r15.occupancy_R_coords_tokenized_txt_15)],
     [ confidence_interval(r3.occupancy_R_coords_ascii_txt_3),     confidence_interval(r6.occupancy_R_coords_ascii_txt_6),      confidence_interval(r15.occupancy_R_coords_ascii_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_R_coords = [
+    [bootstrap_CI(r3.occupancy_R_coords_adj_json_3),       bootstrap_CI(r6.occupancy_R_coords_adj_json_6),       bootstrap_CI(r15.occupancy_R_coords_adj_json_15)],
+    [bootstrap_CI(r3.occupancy_R_coords_adj_txt_3),        bootstrap_CI(r6.occupancy_R_coords_adj_txt_6),        bootstrap_CI(r15.occupancy_R_coords_adj_txt_15)],
+    [bootstrap_CI(r3.occupancy_R_coords_jpg_3),            bootstrap_CI(r6.occupancy_R_coords_jpg_6),            bootstrap_CI(r15.occupancy_R_coords_jpg_15)],
+    [bootstrap_CI(r3.occupancy_R_coords_json_3),           bootstrap_CI(r6.occupancy_R_coords_json_6),           bootstrap_CI(r15.occupancy_R_coords_json_15)],
+    [bootstrap_CI(r3.occupancy_R_coords_tokenized_txt_3),  bootstrap_CI(r6.occupancy_R_coords_tokenized_txt_6),  bootstrap_CI(r15.occupancy_R_coords_tokenized_txt_15)],
+    [ bootstrap_CI(r3.occupancy_R_coords_ascii_txt_3),     bootstrap_CI(r6.occupancy_R_coords_ascii_txt_6),      bootstrap_CI(r15.occupancy_R_coords_ascii_txt_15)]
 ]
 
 labels_occ = [
@@ -864,12 +970,22 @@ std_line_R_allo = [
     [sd_line_R_allo_tokenized_txt,  sd_line_R_allo_tokenized_txt_6,  sd_line_R_allo_tokenized_txt_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_R_allo = [
     [confidence_interval(r3.line_R_allo_adj_json_3),       confidence_interval(r6.line_R_allo_adj_json_6),       confidence_interval(r15.line_R_allo_adj_json_15)],
     [confidence_interval(r3.line_R_allo_adj_txt_3),        confidence_interval(r6.line_R_allo_adj_txt_6),        confidence_interval(r15.line_R_allo_adj_txt_15)],
     [confidence_interval(r3.line_R_allo_jpg_3),            confidence_interval(r6.line_R_allo_jpg_6),            confidence_interval(r15.line_R_allo_jpg_15)],
     [confidence_interval(r3.line_R_allo_json_3),           confidence_interval(r6.line_R_allo_json_6),           confidence_interval(r15.line_R_allo_json_15)],
     [confidence_interval(r3.line_R_allo_tokenized_txt_3),  confidence_interval(r6.line_R_allo_tokenized_txt_6),  confidence_interval(r15.line_R_allo_tokenized_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_R_allo = [
+    [bootstrap_CI(r3.line_R_allo_adj_json_3),       bootstrap_CI(r6.line_R_allo_adj_json_6),       bootstrap_CI(r15.line_R_allo_adj_json_15)],
+    [bootstrap_CI(r3.line_R_allo_adj_txt_3),        bootstrap_CI(r6.line_R_allo_adj_txt_6),        bootstrap_CI(r15.line_R_allo_adj_txt_15)],
+    [bootstrap_CI(r3.line_R_allo_jpg_3),            bootstrap_CI(r6.line_R_allo_jpg_6),            bootstrap_CI(r15.line_R_allo_jpg_15)],
+    [bootstrap_CI(r3.line_R_allo_json_3),           bootstrap_CI(r6.line_R_allo_json_6),           bootstrap_CI(r15.line_R_allo_json_15)],
+    [bootstrap_CI(r3.line_R_allo_tokenized_txt_3),  bootstrap_CI(r6.line_R_allo_tokenized_txt_6),  bootstrap_CI(r15.line_R_allo_tokenized_txt_15)]
 ]
 
 labels_line = [
@@ -899,6 +1015,7 @@ std_occ_R_allo = [
     [sd_occupancy_R_allo_ascii_txt,      sd_occupancy_R_allo_ascii_txt_6,      sd_occupancy_R_allo_ascii_txt_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_occupancy_R_allo = [
     [confidence_interval(r3.occupancy_R_allo_adj_json_3),       confidence_interval(r6.occupancy_R_allo_adj_json_6),       confidence_interval(r15.occupancy_R_allo_adj_json_15)],
     [confidence_interval(r3.occupancy_R_allo_adj_txt_3),        confidence_interval(r6.occupancy_R_allo_adj_txt_6),        confidence_interval(r15.occupancy_R_allo_adj_txt_15)],
@@ -906,6 +1023,16 @@ error_occupancy_R_allo = [
     [confidence_interval(r3.occupancy_R_allo_json_3),           confidence_interval(r6.occupancy_R_allo_json_6),           confidence_interval(r15.occupancy_R_allo_json_15)],
     [confidence_interval(r3.occupancy_R_allo_tokenized_txt_3),  confidence_interval(r6.occupancy_R_allo_tokenized_txt_6),  confidence_interval(r15.occupancy_R_allo_tokenized_txt_15)],
     [ confidence_interval(r3.occupancy_R_allo_ascii_txt_3),     confidence_interval(r6.occupancy_R_allo_ascii_txt_6),      confidence_interval(r15.occupancy_R_allo_ascii_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_R_allo = [
+    [bootstrap_CI(r3.occupancy_R_allo_adj_json_3),       bootstrap_CI(r6.occupancy_R_allo_adj_json_6),       bootstrap_CI(r15.occupancy_R_allo_adj_json_15)],
+    [bootstrap_CI(r3.occupancy_R_allo_adj_txt_3),        bootstrap_CI(r6.occupancy_R_allo_adj_txt_6),        bootstrap_CI(r15.occupancy_R_allo_adj_txt_15)],
+    [bootstrap_CI(r3.occupancy_R_allo_jpg_3),            bootstrap_CI(r6.occupancy_R_allo_jpg_6),            bootstrap_CI(r15.occupancy_R_allo_jpg_15)],
+    [bootstrap_CI(r3.occupancy_R_allo_json_3),           bootstrap_CI(r6.occupancy_R_allo_json_6),           bootstrap_CI(r15.occupancy_R_allo_json_15)],
+    [bootstrap_CI(r3.occupancy_R_allo_tokenized_txt_3),  bootstrap_CI(r6.occupancy_R_allo_tokenized_txt_6),  bootstrap_CI(r15.occupancy_R_allo_tokenized_txt_15)],
+    [ bootstrap_CI(r3.occupancy_R_allo_ascii_txt_3),     bootstrap_CI(r6.occupancy_R_allo_ascii_txt_6),      bootstrap_CI(r15.occupancy_R_allo_ascii_txt_15)]
 ]
 
 labels_occ = [
@@ -1047,12 +1174,23 @@ std_line_R_ego = [
     [sd_line_R_ego_json,           sd_line_R_ego_json_6,           sd_line_R_ego_json_15],
     [sd_line_R_ego_tokenized_txt,  sd_line_R_ego_tokenized_txt_6,  sd_line_R_ego_tokenized_txt_15]
 ]
+
+#non-bootstrapped confidence intervals
 error_line_R_ego = [
     [confidence_interval(r3.line_R_ego_adj_json_3),       confidence_interval(r6.line_R_ego_adj_json_6),       confidence_interval(r15.line_R_ego_adj_json_15)],
     [confidence_interval(r3.line_R_ego_adj_txt_3),        confidence_interval(r6.line_R_ego_adj_txt_6),        confidence_interval(r15.line_R_ego_adj_txt_15)],
     [confidence_interval(r3.line_R_ego_jpg_3),            confidence_interval(r6.line_R_ego_jpg_6),            confidence_interval(r15.line_R_ego_jpg_15)],
     [confidence_interval(r3.line_R_ego_json_3),           confidence_interval(r6.line_R_ego_json_6),           confidence_interval(r15.line_R_ego_json_15)],
     [confidence_interval(r3.line_R_ego_tokenized_txt_3),  confidence_interval(r6.line_R_ego_tokenized_txt_6),  confidence_interval(r15.line_R_ego_tokenized_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_R_ego = [
+    [bootstrap_CI(r3.line_R_ego_adj_json_3),       bootstrap_CI(r6.line_R_ego_adj_json_6),       bootstrap_CI(r15.line_R_ego_adj_json_15)],
+    [bootstrap_CI(r3.line_R_ego_adj_txt_3),        bootstrap_CI(r6.line_R_ego_adj_txt_6),        bootstrap_CI(r15.line_R_ego_adj_txt_15)],
+    [bootstrap_CI(r3.line_R_ego_jpg_3),            bootstrap_CI(r6.line_R_ego_jpg_6),            bootstrap_CI(r15.line_R_ego_jpg_15)],
+    [bootstrap_CI(r3.line_R_ego_json_3),           bootstrap_CI(r6.line_R_ego_json_6),           bootstrap_CI(r15.line_R_ego_json_15)],
+    [bootstrap_CI(r3.line_R_ego_tokenized_txt_3),  bootstrap_CI(r6.line_R_ego_tokenized_txt_6),  bootstrap_CI(r15.line_R_ego_tokenized_txt_15)]
 ]
 
 labels_line = [
@@ -1082,6 +1220,7 @@ std_occ_R_ego = [
     [sd_occupancy_R_ego_ascii_txt,      sd_occupancy_R_ego_ascii_txt_6,      sd_occupancy_R_ego_ascii_txt_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_occupancy_R_ego = [
     [confidence_interval(r3.occupancy_R_ego_adj_json_3),       confidence_interval(r6.occupancy_R_ego_adj_json_6),       confidence_interval(r15.occupancy_R_ego_adj_json_15)],
     [confidence_interval(r3.occupancy_R_ego_adj_txt_3),        confidence_interval(r6.occupancy_R_ego_adj_txt_6),        confidence_interval(r15.occupancy_R_ego_adj_txt_15)],
@@ -1089,6 +1228,16 @@ error_occupancy_R_ego = [
     [confidence_interval(r3.occupancy_R_ego_json_3),           confidence_interval(r6.occupancy_R_ego_json_6),           confidence_interval(r15.occupancy_R_ego_json_15)],
     [confidence_interval(r3.occupancy_R_ego_tokenized_txt_3),  confidence_interval(r6.occupancy_R_ego_tokenized_txt_6),  confidence_interval(r15.occupancy_R_ego_tokenized_txt_15)],
     [ confidence_interval(r3.occupancy_R_ego_ascii_txt_3),     confidence_interval(r6.occupancy_R_ego_ascii_txt_6),      confidence_interval(r15.occupancy_R_ego_ascii_txt_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_R_ego = [
+    [bootstrap_CI(r3.occupancy_R_ego_adj_json_3),       bootstrap_CI(r6.occupancy_R_ego_adj_json_6),       bootstrap_CI(r15.occupancy_R_ego_adj_json_15)],
+    [bootstrap_CI(r3.occupancy_R_ego_adj_txt_3),        bootstrap_CI(r6.occupancy_R_ego_adj_txt_6),        bootstrap_CI(r15.occupancy_R_ego_adj_txt_15)],
+    [bootstrap_CI(r3.occupancy_R_ego_jpg_3),            bootstrap_CI(r6.occupancy_R_ego_jpg_6),            bootstrap_CI(r15.occupancy_R_ego_jpg_15)],
+    [bootstrap_CI(r3.occupancy_R_ego_json_3),           bootstrap_CI(r6.occupancy_R_ego_json_6),           bootstrap_CI(r15.occupancy_R_ego_json_15)],
+    [bootstrap_CI(r3.occupancy_R_ego_tokenized_txt_3),  bootstrap_CI(r6.occupancy_R_ego_tokenized_txt_6),  bootstrap_CI(r15.occupancy_R_ego_tokenized_txt_15)],
+    [ bootstrap_CI(r3.occupancy_R_ego_ascii_txt_3),     bootstrap_CI(r6.occupancy_R_ego_ascii_txt_6),      bootstrap_CI(r15.occupancy_R_ego_ascii_txt_15)]
 ]
 
 labels_occ = [
@@ -1166,35 +1315,44 @@ labels_occ = [
 # 2. Organize Data into Groups for the 6 Subplots
 # Structure: (Means_NR, Means_R, Err_NR, Err_R, Title)
 # NR = Non-Reasoning (Solid), R = Reasoning (Dotted)
+
+# using non-bootstrapped confidence intervals for error bars. 
+# switch to bootstrapped by uncommenting bs_error line in each, and commenting out the error_ data.
 plot_configs = [
     # Top-Left: line coords
     (means_line_NR_coords, means_line_R_coords, 
-     error_line_NR_coords, error_line_R_coords, 
+    #  error_line_NR_coords, error_line_R_coords, 
+     bs_error_line_NR_coords, bs_error_line_R_coords, 
      "Line-Wall Maze, Coordinates Output"),
     
     # Top-Middle: line allo
     (means_line_NR_allo, means_line_R_allo, 
-     error_line_NR_allo, error_line_R_allo, 
+    #  error_line_NR_allo, error_line_R_allo, 
+     bs_error_line_NR_allo, bs_error_line_R_allo,
      "Line-Wall Maze, Abs. directions Output"),
     
     # Top-Right: line ego
     (means_line_NR_ego, means_line_R_ego, 
-     error_line_NR_ego, error_line_R_ego, 
+    #  error_line_NR_ego, error_line_R_ego, 
+     bs_error_line_NR_ego, bs_error_line_R_ego, 
      "Line-Wall Maze, Egocentric Output"),
     
     # Bottom-Left: occupancy coords
     (means_occ_NR_coords, means_occ_R_coords, 
-     error_occupancy_NR_coords, error_occupancy_R_coords, 
+    #  error_occupancy_NR_coords, error_occupancy_R_coords, 
+     bs_error_occupancy_NR_coords, bs_error_occupancy_R_coords, 
      "Occupancy Grid Maze, Coordinates Output"),
     
     # Bottom-Middle: occupancy allo
     (means_occ_NR_allo, means_occ_R_allo, 
-     error_occupancy_NR_allo, error_occupancy_R_allo, 
+    #  error_occupancy_NR_allo, error_occupancy_R_allo, 
+     bs_error_occupancy_NR_allo, bs_error_occupancy_R_allo, 
      "Occupancy Grid Maze, Abs. directions Output"),
     
     # Bottom-Right: occupancy ego
     (means_occ_NR_ego, means_occ_R_ego, 
-     error_occupancy_NR_ego, error_occupancy_R_ego, 
+    #  error_occupancy_NR_ego, error_occupancy_R_ego, 
+     bs_error_occupancy_NR_ego, bs_error_occupancy_R_ego, 
      "Occupancy Grid Maze, Egocentric Output"),
 ]
 
@@ -1373,25 +1531,33 @@ plt.subplots_adjust(right=0.85)
 # Organize Data into Groups for the 6 Subplots
 # Structure: (Means_NR, Means_R, Err_NR, Err_R, Title)
 # NR = Non-Reasoning (Solid), R = Reasoning (Dotted)
+
+#use bs_error for bootstrapped confidence intervals, error_ for non-bootstrapped.
 plot_configs = [
     # Col 0: Left left
     (means_line_NR_coords, means_occ_NR_coords,
-     error_line_NR_coords, error_occupancy_NR_coords),
+    #  error_line_NR_coords, error_occupancy_NR_coords
+     bs_error_line_NR_coords, bs_error_occupancy_NR_coords),
     # Col 1: Middle left
     (means_line_NR_allo, means_occ_NR_allo,
-     error_line_NR_allo, error_occupancy_NR_allo),
+    #  error_line_NR_allo, error_occupancy_NR_allo
+     bs_error_line_NR_allo, bs_error_occupancy_NR_allo),
     # Col 2: Right left
     (means_line_NR_ego, means_occ_NR_ego, 
-     error_line_NR_ego, error_occupancy_NR_ego),
+    #  error_line_NR_ego, error_occupancy_NR_ego
+    bs_error_line_NR_ego, bs_error_occupancy_NR_ego),
     # Col 3: Right left
     (means_line_R_coords, means_occ_R_coords,
-     error_line_R_coords, error_occupancy_R_coords),
+    #  error_line_R_coords, error_occupancy_R_coords
+     bs_error_line_R_coords, bs_error_occupancy_R_coords),
     # Col 4: Right middle
     (means_line_R_allo, means_occ_R_allo,
-     error_line_R_allo, error_occupancy_R_allo),
+    #  error_line_R_allo, error_occupancy_R_allo
+     bs_error_line_R_allo, bs_error_occupancy_R_allo),
     # Col 5: Right right
     (means_line_R_ego, means_occ_R_ego,
-     error_line_R_ego, error_occupancy_R_ego)
+    #  error_line_R_ego, error_occupancy_R_ego
+     bs_error_line_R_ego, bs_error_occupancy_R_ego)
 ]
 
 # 3. Setup Plotting Parameters
@@ -2417,12 +2583,22 @@ means_line_NR_coords = [
     [avg_line_NR_coords_tokenized_txt_raw_score_3,  avg_line_NR_coords_tokenized_txt_raw_score_6,  avg_line_NR_coords_tokenized_txt_raw_score_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_NR_coords = [
     [confidence_interval(r3.line_NR_coords_adj_json_raw_score_3),       confidence_interval(r6.line_NR_coords_adj_json_raw_score_6),       confidence_interval(r15.line_NR_coords_adj_json_raw_score_15)],
     [confidence_interval(r3.line_NR_coords_adj_txt_raw_score_3),        confidence_interval(r6.line_NR_coords_adj_txt_raw_score_6),        confidence_interval(r15.line_NR_coords_adj_txt_raw_score_15)],
     [confidence_interval(r3.line_NR_coords_jpg_raw_score_3),            confidence_interval(r6.line_NR_coords_jpg_raw_score_6),            confidence_interval(r15.line_NR_coords_jpg_raw_score_15)],
     [confidence_interval(r3.line_NR_coords_json_raw_score_3),           confidence_interval(r6.line_NR_coords_json_raw_score_6),           confidence_interval(r15.line_NR_coords_json_raw_score_15)],
     [confidence_interval(r3.line_NR_coords_tokenized_txt_raw_score_3),  confidence_interval(r6.line_NR_coords_tokenized_txt_raw_score_6),  confidence_interval(r15.line_NR_coords_tokenized_txt_raw_score_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_NR_coords = [
+    [bootstrap_CI(r3.line_NR_coords_adj_json_raw_score_3),       bootstrap_CI(r6.line_NR_coords_adj_json_raw_score_6),       bootstrap_CI(r15.line_NR_coords_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_coords_adj_txt_raw_score_3),        bootstrap_CI(r6.line_NR_coords_adj_txt_raw_score_6),        bootstrap_CI(r15.line_NR_coords_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_coords_jpg_raw_score_3),            bootstrap_CI(r6.line_NR_coords_jpg_raw_score_6),            bootstrap_CI(r15.line_NR_coords_jpg_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_coords_json_raw_score_3),           bootstrap_CI(r6.line_NR_coords_json_raw_score_6),           bootstrap_CI(r15.line_NR_coords_json_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_coords_tokenized_txt_raw_score_3),  bootstrap_CI(r6.line_NR_coords_tokenized_txt_raw_score_6),  bootstrap_CI(r15.line_NR_coords_tokenized_txt_raw_score_15)]
 ]
 
 
@@ -2437,7 +2613,7 @@ means_occ_NR_coords = [
     [avg_occupancy_NR_coords_ascii_txt_raw_score_3,      avg_occupancy_NR_coords_ascii_txt_raw_score_6,      avg_occupancy_NR_coords_ascii_txt_raw_score_15],
 ]
 
-
+#non-bootstrapped confidence intervals
 error_occupancy_NR_coords = [
     [confidence_interval(r3.occupancy_NR_coords_adj_json_raw_score_3),       confidence_interval(r6.occupancy_NR_coords_adj_json_raw_score_6),       confidence_interval(r15.occupancy_NR_coords_adj_json_raw_score_15)],
     [confidence_interval(r3.occupancy_NR_coords_adj_txt_raw_score_3),        confidence_interval(r6.occupancy_NR_coords_adj_txt_raw_score_6),        confidence_interval(r15.occupancy_NR_coords_adj_txt_raw_score_15)],
@@ -2445,6 +2621,16 @@ error_occupancy_NR_coords = [
     [confidence_interval(r3.occupancy_NR_coords_json_raw_score_3),           confidence_interval(r6.occupancy_NR_coords_json_raw_score_6),           confidence_interval(r15.occupancy_NR_coords_json_raw_score_15)],
     [confidence_interval(r3.occupancy_NR_coords_tokenized_txt_raw_score_3),  confidence_interval(r6.occupancy_NR_coords_tokenized_txt_raw_score_6),  confidence_interval(r15.occupancy_NR_coords_tokenized_txt_raw_score_15)],
     [ confidence_interval(r3.occupancy_NR_coords_ascii_txt_raw_score_3),     confidence_interval(r6.occupancy_NR_coords_ascii_txt_raw_score_6),      confidence_interval(r15.occupancy_NR_coords_ascii_txt_raw_score_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_NR_coords = [
+    [bootstrap_CI(r3.occupancy_NR_coords_adj_json_raw_score_3),       bootstrap_CI(r6.occupancy_NR_coords_adj_json_raw_score_6),       bootstrap_CI(r15.occupancy_NR_coords_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_coords_adj_txt_raw_score_3),        bootstrap_CI(r6.occupancy_NR_coords_adj_txt_raw_score_6),        bootstrap_CI(r15.occupancy_NR_coords_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_coords_jpg_raw_score_3),            bootstrap_CI(r6.occupancy_NR_coords_jpg_raw_score_6),            bootstrap_CI(r15.occupancy_NR_coords_jpg_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_coords_json_raw_score_3),           bootstrap_CI(r6.occupancy_NR_coords_json_raw_score_6),           bootstrap_CI(r15.occupancy_NR_coords_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_coords_tokenized_txt_raw_score_3),  bootstrap_CI(r6.occupancy_NR_coords_tokenized_txt_raw_score_6),  bootstrap_CI(r15.occupancy_NR_coords_tokenized_txt_raw_score_15)],
+    [ bootstrap_CI(r3.occupancy_NR_coords_ascii_txt_raw_score_3),     bootstrap_CI(r6.occupancy_NR_coords_ascii_txt_raw_score_6),      bootstrap_CI(r15.occupancy_NR_coords_ascii_txt_raw_score_15)]
 ]
 
 
@@ -2458,12 +2644,22 @@ means_line_NR_allo = [
     [avg_line_NR_allo_tokenized_txt_raw_score_3,  avg_line_NR_allo_tokenized_txt_raw_score_6,  avg_line_NR_allo_tokenized_txt_raw_score_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_NR_allo = [
     [confidence_interval(r3.line_NR_allo_adj_json_raw_score_3),       confidence_interval(r6.line_NR_allo_adj_json_raw_score_6),       confidence_interval(r15.line_NR_allo_adj_json_raw_score_15)],
     [confidence_interval(r3.line_NR_allo_adj_txt_raw_score_3),        confidence_interval(r6.line_NR_allo_adj_txt_raw_score_6),        confidence_interval(r15.line_NR_allo_adj_txt_raw_score_15)],
     [confidence_interval(r3.line_NR_allo_jpg_raw_score_3),            confidence_interval(r6.line_NR_allo_jpg_raw_score_6),            confidence_interval(r15.line_NR_allo_jpg_raw_score_15)],
     [confidence_interval(r3.line_NR_allo_json_raw_score_3),           confidence_interval(r6.line_NR_allo_json_raw_score_6),           confidence_interval(r15.line_NR_allo_json_raw_score_15)],
     [confidence_interval(r3.line_NR_allo_tokenized_txt_raw_score_3),  confidence_interval(r6.line_NR_allo_tokenized_txt_raw_score_6),  confidence_interval(r15.line_NR_allo_tokenized_txt_raw_score_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_NR_allo = [
+    [bootstrap_CI(r3.line_NR_allo_adj_json_raw_score_3),       bootstrap_CI(r6.line_NR_allo_adj_json_raw_score_6),       bootstrap_CI(r15.line_NR_allo_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_allo_adj_txt_raw_score_3),        bootstrap_CI(r6.line_NR_allo_adj_txt_raw_score_6),        bootstrap_CI(r15.line_NR_allo_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_allo_jpg_raw_score_3),            bootstrap_CI(r6.line_NR_allo_jpg_raw_score_6),            bootstrap_CI(r15.line_NR_allo_jpg_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_allo_json_raw_score_3),           bootstrap_CI(r6.line_NR_allo_json_raw_score_6),           bootstrap_CI(r15.line_NR_allo_json_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_allo_tokenized_txt_raw_score_3),  bootstrap_CI(r6.line_NR_allo_tokenized_txt_raw_score_6),  bootstrap_CI(r15.line_NR_allo_tokenized_txt_raw_score_15)]
 ]
 
 
@@ -2477,6 +2673,7 @@ means_occ_NR_allo = [
     [avg_occupancy_NR_allo_ascii_txt_raw_score_3,      avg_occupancy_NR_allo_ascii_txt_raw_score_6,      avg_occupancy_NR_allo_ascii_txt_raw_score_15],
 ]
 
+#non-bootstrapped confidence intervals
 error_occupancy_NR_allo = [
     [confidence_interval(r3.occupancy_NR_allo_adj_json_raw_score_3),       confidence_interval(r6.occupancy_NR_allo_adj_json_raw_score_6),       confidence_interval(r15.occupancy_NR_allo_adj_json_raw_score_15)],
     [confidence_interval(r3.occupancy_NR_allo_adj_txt_raw_score_3),        confidence_interval(r6.occupancy_NR_allo_adj_txt_raw_score_6),        confidence_interval(r15.occupancy_NR_allo_adj_txt_raw_score_15)],
@@ -2484,6 +2681,16 @@ error_occupancy_NR_allo = [
     [confidence_interval(r3.occupancy_NR_allo_json_raw_score_3),           confidence_interval(r6.occupancy_NR_allo_json_raw_score_6),           confidence_interval(r15.occupancy_NR_allo_json_raw_score_15)],
     [confidence_interval(r3.occupancy_NR_allo_tokenized_txt_raw_score_3),  confidence_interval(r6.occupancy_NR_allo_tokenized_txt_raw_score_6),  confidence_interval(r15.occupancy_NR_allo_tokenized_txt_raw_score_15)],
     [ confidence_interval(r3.occupancy_NR_allo_ascii_txt_raw_score_3),     confidence_interval(r6.occupancy_NR_allo_ascii_txt_raw_score_6),      confidence_interval(r15.occupancy_NR_allo_ascii_txt_raw_score_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_NR_allo = [
+    [bootstrap_CI(r3.occupancy_NR_allo_adj_json_raw_score_3),       bootstrap_CI(r6.occupancy_NR_allo_adj_json_raw_score_6),       bootstrap_CI(r15.occupancy_NR_allo_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_allo_adj_txt_raw_score_3),        bootstrap_CI(r6.occupancy_NR_allo_adj_txt_raw_score_6),        bootstrap_CI(r15.occupancy_NR_allo_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_allo_jpg_raw_score_3),            bootstrap_CI(r6.occupancy_NR_allo_jpg_raw_score_6),            bootstrap_CI(r15.occupancy_NR_allo_jpg_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_allo_json_raw_score_3),           bootstrap_CI(r6.occupancy_NR_allo_json_raw_score_6),           bootstrap_CI(r15.occupancy_NR_allo_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_allo_tokenized_txt_raw_score_3),  bootstrap_CI(r6.occupancy_NR_allo_tokenized_txt_raw_score_6),  bootstrap_CI(r15.occupancy_NR_allo_tokenized_txt_raw_score_15)],
+    [ bootstrap_CI(r3.occupancy_NR_allo_ascii_txt_raw_score_3),     bootstrap_CI(r6.occupancy_NR_allo_ascii_txt_raw_score_6),      bootstrap_CI(r15.occupancy_NR_allo_ascii_txt_raw_score_15)]
 ]
 
 # Line, NR, ego
@@ -2495,12 +2702,22 @@ means_line_NR_ego = [
     [avg_line_NR_ego_tokenized_txt_raw_score_3,  avg_line_NR_ego_tokenized_txt_raw_score_6,  avg_line_NR_ego_tokenized_txt_raw_score_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_NR_ego = [
     [confidence_interval(r3.line_NR_ego_adj_json_raw_score_3),       confidence_interval(r6.line_NR_ego_adj_json_raw_score_6),       confidence_interval(r15.line_NR_ego_adj_json_raw_score_15)],
     [confidence_interval(r3.line_NR_ego_adj_txt_raw_score_3),        confidence_interval(r6.line_NR_ego_adj_txt_raw_score_6),        confidence_interval(r15.line_NR_ego_adj_txt_raw_score_15)],
     [confidence_interval(r3.line_NR_ego_jpg_raw_score_3),            confidence_interval(r6.line_NR_ego_jpg_raw_score_6),            confidence_interval(r15.line_NR_ego_jpg_raw_score_15)],
     [confidence_interval(r3.line_NR_ego_json_raw_score_3),           confidence_interval(r6.line_NR_ego_json_raw_score_6),           confidence_interval(r15.line_NR_ego_json_raw_score_15)],
     [confidence_interval(r3.line_NR_ego_tokenized_txt_raw_score_3),  confidence_interval(r6.line_NR_ego_tokenized_txt_raw_score_6),  confidence_interval(r15.line_NR_ego_tokenized_txt_raw_score_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_NR_ego = [
+    [bootstrap_CI(r3.line_NR_ego_adj_json_raw_score_3),       bootstrap_CI(r6.line_NR_ego_adj_json_raw_score_6),       bootstrap_CI(r15.line_NR_ego_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_ego_adj_txt_raw_score_3),        bootstrap_CI(r6.line_NR_ego_adj_txt_raw_score_6),        bootstrap_CI(r15.line_NR_ego_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_ego_jpg_raw_score_3),            bootstrap_CI(r6.line_NR_ego_jpg_raw_score_6),            bootstrap_CI(r15.line_NR_ego_jpg_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_ego_json_raw_score_3),           bootstrap_CI(r6.line_NR_ego_json_raw_score_6),           bootstrap_CI(r15.line_NR_ego_json_raw_score_15)],
+    [bootstrap_CI(r3.line_NR_ego_tokenized_txt_raw_score_3),  bootstrap_CI(r6.line_NR_ego_tokenized_txt_raw_score_6),  bootstrap_CI(r15.line_NR_ego_tokenized_txt_raw_score_15)]
 ]
 
 
@@ -2515,6 +2732,7 @@ means_occ_NR_ego = [
 
 ]
 
+#non-bootstrapped confidence intervals
 error_occupancy_NR_ego = [
     [confidence_interval(r3.occupancy_NR_ego_adj_json_raw_score_3),       confidence_interval(r6.occupancy_NR_ego_adj_json_raw_score_6),       confidence_interval(r15.occupancy_NR_ego_adj_json_raw_score_15)],
     [confidence_interval(r3.occupancy_NR_ego_adj_txt_raw_score_3),        confidence_interval(r6.occupancy_NR_ego_adj_txt_raw_score_6),        confidence_interval(r15.occupancy_NR_ego_adj_txt_raw_score_15)],
@@ -2523,6 +2741,17 @@ error_occupancy_NR_ego = [
     [confidence_interval(r3.occupancy_NR_ego_tokenized_txt_raw_score_3),  confidence_interval(r6.occupancy_NR_ego_tokenized_txt_raw_score_6),  confidence_interval(r15.occupancy_NR_ego_tokenized_txt_raw_score_15)],
     [ confidence_interval(r3.occupancy_NR_ego_ascii_txt_raw_score_3),     confidence_interval(r6.occupancy_NR_ego_ascii_txt_raw_score_6),      confidence_interval(r15.occupancy_NR_ego_ascii_txt_raw_score_15)]
 ]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_NR_ego = [
+    [bootstrap_CI(r3.occupancy_NR_ego_adj_json_raw_score_3),       bootstrap_CI(r6.occupancy_NR_ego_adj_json_raw_score_6),       bootstrap_CI(r15.occupancy_NR_ego_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_ego_adj_txt_raw_score_3),        bootstrap_CI(r6.occupancy_NR_ego_adj_txt_raw_score_6),        bootstrap_CI(r15.occupancy_NR_ego_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_ego_jpg_raw_score_3),            bootstrap_CI(r6.occupancy_NR_ego_jpg_raw_score_6),            bootstrap_CI(r15.occupancy_NR_ego_jpg_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_ego_json_raw_score_3),           bootstrap_CI(r6.occupancy_NR_ego_json_raw_score_6),           bootstrap_CI(r15.occupancy_NR_ego_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_NR_ego_tokenized_txt_raw_score_3),  bootstrap_CI(r6.occupancy_NR_ego_tokenized_txt_raw_score_6),  bootstrap_CI(r15.occupancy_NR_ego_tokenized_txt_raw_score_15)],
+    [ bootstrap_CI(r3.occupancy_NR_ego_ascii_txt_raw_score_3),     bootstrap_CI(r6.occupancy_NR_ego_ascii_txt_raw_score_6),      bootstrap_CI(r15.occupancy_NR_ego_ascii_txt_raw_score_15)]
+]
+
 
 
 
@@ -2536,6 +2765,7 @@ means_line_R_coords = [
     [avg_line_R_coords_tokenized_txt_raw_score_3,  avg_line_R_coords_tokenized_txt_raw_score_6,  avg_line_R_coords_tokenized_txt_raw_score_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_R_coords = [
     [confidence_interval(r3.line_R_coords_adj_json_raw_score_3),       confidence_interval(r6.line_R_coords_adj_json_raw_score_6),       confidence_interval(r15.line_R_coords_adj_json_raw_score_15)],
     [confidence_interval(r3.line_R_coords_adj_txt_raw_score_3),        confidence_interval(r6.line_R_coords_adj_txt_raw_score_6),        confidence_interval(r15.line_R_coords_adj_txt_raw_score_15)],
@@ -2544,6 +2774,14 @@ error_line_R_coords = [
     [confidence_interval(r3.line_R_coords_tokenized_txt_raw_score_3),  confidence_interval(r6.line_R_coords_tokenized_txt_raw_score_6),  confidence_interval(r15.line_R_coords_tokenized_txt_raw_score_15)]
 ]
 
+#bootstrapped confidence intervals
+bs_error_line_R_coords = [
+    [bootstrap_CI(r3.line_R_coords_adj_json_raw_score_3),       bootstrap_CI(r6.line_R_coords_adj_json_raw_score_6),       bootstrap_CI(r15.line_R_coords_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.line_R_coords_adj_txt_raw_score_3),        bootstrap_CI(r6.line_R_coords_adj_txt_raw_score_6),        bootstrap_CI(r15.line_R_coords_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.line_R_coords_jpg_raw_score_3),            bootstrap_CI(r6.line_R_coords_jpg_raw_score_6),            bootstrap_CI(r15.line_R_coords_jpg_raw_score_15)],
+    [bootstrap_CI(r3.line_R_coords_json_raw_score_3),           bootstrap_CI(r6.line_R_coords_json_raw_score_6),           bootstrap_CI(r15.line_R_coords_json_raw_score_15)],
+    [bootstrap_CI(r3.line_R_coords_tokenized_txt_raw_score_3),  bootstrap_CI(r6.line_R_coords_tokenized_txt_raw_score_6),  bootstrap_CI(r15.line_R_coords_tokenized_txt_raw_score_15)]
+]
 
 
 # Occupancy, R, coords
@@ -2556,7 +2794,7 @@ means_occ_R_coords = [
     [avg_occupancy_R_coords_ascii_txt_raw_score_3,      avg_occupancy_R_coords_ascii_txt_raw_score_6,      avg_occupancy_R_coords_ascii_txt_raw_score_15]
 ]
 
-
+#non-bootstrapped confidence intervals
 error_occupancy_R_coords = [
     [confidence_interval(r3.occupancy_R_coords_adj_json_raw_score_3),       confidence_interval(r6.occupancy_R_coords_adj_json_raw_score_6),       confidence_interval(r15.occupancy_R_coords_adj_json_raw_score_15)],
     [confidence_interval(r3.occupancy_R_coords_adj_txt_raw_score_3),        confidence_interval(r6.occupancy_R_coords_adj_txt_raw_score_6),        confidence_interval(r15.occupancy_R_coords_adj_txt_raw_score_15)],
@@ -2566,6 +2804,15 @@ error_occupancy_R_coords = [
     [confidence_interval(r3.occupancy_R_coords_ascii_txt_raw_score_3),     confidence_interval(r6.occupancy_R_coords_ascii_txt_raw_score_6),      confidence_interval(r15.occupancy_R_coords_ascii_txt_raw_score_15)]
 ]
 
+#bootstrapped confidence intervals
+bs_error_occupancy_R_coords = [
+    [bootstrap_CI(r3.occupancy_R_coords_adj_json_raw_score_3),       bootstrap_CI(r6.occupancy_R_coords_adj_json_raw_score_6),       bootstrap_CI(r15.occupancy_R_coords_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_coords_adj_txt_raw_score_3),        bootstrap_CI(r6.occupancy_R_coords_adj_txt_raw_score_6),        bootstrap_CI(r15.occupancy_R_coords_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_coords_jpg_raw_score_3),            bootstrap_CI(r6.occupancy_R_coords_jpg_raw_score_6),            bootstrap_CI(r15.occupancy_R_coords_jpg_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_coords_json_raw_score_3),           bootstrap_CI(r6.occupancy_R_coords_json_raw_score_6),           bootstrap_CI(r15.occupancy_R_coords_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_coords_tokenized_txt_raw_score_3),  bootstrap_CI(r6.occupancy_R_coords_tokenized_txt_raw_score_6),  bootstrap_CI(r15.occupancy_R_coords_tokenized_txt_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_coords_ascii_txt_raw_score_3),     bootstrap_CI(r6.occupancy_R_coords_ascii_txt_raw_score_6),      bootstrap_CI(r15.occupancy_R_coords_ascii_txt_raw_score_15)]
+]
 
 
 # Line, R, allo
@@ -2577,6 +2824,7 @@ means_line_R_allo = [
     [avg_line_R_allo_tokenized_txt_raw_score_3,  avg_line_R_allo_tokenized_txt_raw_score_6,  avg_line_R_allo_tokenized_txt_raw_score_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_R_allo = [
     [confidence_interval(r3.line_R_allo_adj_json_raw_score_3),       confidence_interval(r6.line_R_allo_adj_json_raw_score_6),       confidence_interval(r15.line_R_allo_adj_json_raw_score_15)],
     [confidence_interval(r3.line_R_allo_adj_txt_raw_score_3),        confidence_interval(r6.line_R_allo_adj_txt_raw_score_6),        confidence_interval(r15.line_R_allo_adj_txt_raw_score_15)],
@@ -2585,6 +2833,14 @@ error_line_R_allo = [
     [confidence_interval(r3.line_R_allo_tokenized_txt_raw_score_3),  confidence_interval(r6.line_R_allo_tokenized_txt_raw_score_6),  confidence_interval(r15.line_R_allo_tokenized_txt_raw_score_15)]
 ]
 
+#bootstrapped confidence intervals
+bs_error_line_R_allo = [
+    [bootstrap_CI(r3.line_R_allo_adj_json_raw_score_3),       bootstrap_CI(r6.line_R_allo_adj_json_raw_score_6),       bootstrap_CI(r15.line_R_allo_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.line_R_allo_adj_txt_raw_score_3),        bootstrap_CI(r6.line_R_allo_adj_txt_raw_score_6),        bootstrap_CI(r15.line_R_allo_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.line_R_allo_jpg_raw_score_3),            bootstrap_CI(r6.line_R_allo_jpg_raw_score_6),            bootstrap_CI(r15.line_R_allo_jpg_raw_score_15)],
+    [bootstrap_CI(r3.line_R_allo_json_raw_score_3),           bootstrap_CI(r6.line_R_allo_json_raw_score_6),           bootstrap_CI(r15.line_R_allo_json_raw_score_15)],
+    [bootstrap_CI(r3.line_R_allo_tokenized_txt_raw_score_3),  bootstrap_CI(r6.line_R_allo_tokenized_txt_raw_score_6),  bootstrap_CI(r15.line_R_allo_tokenized_txt_raw_score_15)]
+]
 
 # Occupancy, R, allo
 means_occ_R_allo = [
@@ -2596,6 +2852,7 @@ means_occ_R_allo = [
     [avg_occupancy_R_allo_ascii_txt_raw_score_3,      avg_occupancy_R_allo_ascii_txt_raw_score_6,      avg_occupancy_R_allo_ascii_txt_raw_score_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_occupancy_R_allo = [
     [confidence_interval(r3.occupancy_R_allo_adj_json_raw_score_3),       confidence_interval(r6.occupancy_R_allo_adj_json_raw_score_6),       confidence_interval(r15.occupancy_R_allo_adj_json_raw_score_15)],
     [confidence_interval(r3.occupancy_R_allo_adj_txt_raw_score_3),        confidence_interval(r6.occupancy_R_allo_adj_txt_raw_score_6),        confidence_interval(r15.occupancy_R_allo_adj_txt_raw_score_15)],
@@ -2604,6 +2861,17 @@ error_occupancy_R_allo = [
     [confidence_interval(r3.occupancy_R_allo_tokenized_txt_raw_score_3),  confidence_interval(r6.occupancy_R_allo_tokenized_txt_raw_score_6),  confidence_interval(r15.occupancy_R_allo_tokenized_txt_raw_score_15)],
     [confidence_interval(r3.occupancy_R_allo_ascii_txt_raw_score_3),     confidence_interval(r6.occupancy_R_allo_ascii_txt_raw_score_6),      confidence_interval(r15.occupancy_R_allo_ascii_txt_raw_score_15)]
 ]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_R_allo = [
+    [bootstrap_CI(r3.occupancy_R_allo_adj_json_raw_score_3),       bootstrap_CI(r6.occupancy_R_allo_adj_json_raw_score_6),       bootstrap_CI(r15.occupancy_R_allo_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_allo_adj_txt_raw_score_3),        bootstrap_CI(r6.occupancy_R_allo_adj_txt_raw_score_6),        bootstrap_CI(r15.occupancy_R_allo_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_allo_jpg_raw_score_3),            bootstrap_CI(r6.occupancy_R_allo_jpg_raw_score_6),            bootstrap_CI(r15.occupancy_R_allo_jpg_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_allo_json_raw_score_3),           bootstrap_CI(r6.occupancy_R_allo_json_raw_score_6),           bootstrap_CI(r15.occupancy_R_allo_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_allo_tokenized_txt_raw_score_3),  bootstrap_CI(r6.occupancy_R_allo_tokenized_txt_raw_score_6),  bootstrap_CI(r15.occupancy_R_allo_tokenized_txt_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_allo_ascii_txt_raw_score_3),     bootstrap_CI(r6.occupancy_R_allo_ascii_txt_raw_score_6),      bootstrap_CI(r15.occupancy_R_allo_ascii_txt_raw_score_15)]
+]
+
 
 # Line, R, ego
 means_line_R_ego = [
@@ -2614,12 +2882,22 @@ means_line_R_ego = [
     [avg_line_R_ego_tokenized_txt_raw_score_3,  avg_line_R_ego_tokenized_txt_raw_score_6,  avg_line_R_ego_tokenized_txt_raw_score_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_line_R_ego = [
     [confidence_interval(r3.line_R_ego_adj_json_raw_score_3),       confidence_interval(r6.line_R_ego_adj_json_raw_score_6),       confidence_interval(r15.line_R_ego_adj_json_raw_score_15)],
     [confidence_interval(r3.line_R_ego_adj_txt_raw_score_3),        confidence_interval(r6.line_R_ego_adj_txt_raw_score_6),        confidence_interval(r15.line_R_ego_adj_txt_raw_score_15)],
     [confidence_interval(r3.line_R_ego_jpg_raw_score_3),            confidence_interval(r6.line_R_ego_jpg_raw_score_6),            confidence_interval(r15.line_R_ego_jpg_raw_score_15)],
     [confidence_interval(r3.line_R_ego_json_raw_score_3),           confidence_interval(r6.line_R_ego_json_raw_score_6),           confidence_interval(r15.line_R_ego_json_raw_score_15)],
     [confidence_interval(r3.line_R_ego_tokenized_txt_raw_score_3),  confidence_interval(r6.line_R_ego_tokenized_txt_raw_score_6),  confidence_interval(r15.line_R_ego_tokenized_txt_raw_score_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_line_R_ego = [
+    [bootstrap_CI(r3.line_R_ego_adj_json_raw_score_3),       bootstrap_CI(r6.line_R_ego_adj_json_raw_score_6),       bootstrap_CI(r15.line_R_ego_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.line_R_ego_adj_txt_raw_score_3),        bootstrap_CI(r6.line_R_ego_adj_txt_raw_score_6),        bootstrap_CI(r15.line_R_ego_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.line_R_ego_jpg_raw_score_3),            bootstrap_CI(r6.line_R_ego_jpg_raw_score_6),            bootstrap_CI(r15.line_R_ego_jpg_raw_score_15)],
+    [bootstrap_CI(r3.line_R_ego_json_raw_score_3),           bootstrap_CI(r6.line_R_ego_json_raw_score_6),           bootstrap_CI(r15.line_R_ego_json_raw_score_15)],
+    [bootstrap_CI(r3.line_R_ego_tokenized_txt_raw_score_3),  bootstrap_CI(r6.line_R_ego_tokenized_txt_raw_score_6),  bootstrap_CI(r15.line_R_ego_tokenized_txt_raw_score_15)]
 ]
 
 
@@ -2633,6 +2911,7 @@ means_occ_R_ego = [
     [avg_occupancy_R_ego_ascii_txt_raw_score_3,      avg_occupancy_R_ego_ascii_txt_raw_score_6,      avg_occupancy_R_ego_ascii_txt_raw_score_15]
 ]
 
+#non-bootstrapped confidence intervals
 error_occupancy_R_ego = [
     [confidence_interval(r3.occupancy_R_ego_adj_json_raw_score_3),       confidence_interval(r6.occupancy_R_ego_adj_json_raw_score_6),       confidence_interval(r15.occupancy_R_ego_adj_json_raw_score_15)],
     [confidence_interval(r3.occupancy_R_ego_adj_txt_raw_score_3),        confidence_interval(r6.occupancy_R_ego_adj_txt_raw_score_6),        confidence_interval(r15.occupancy_R_ego_adj_txt_raw_score_15)],
@@ -2640,6 +2919,16 @@ error_occupancy_R_ego = [
     [confidence_interval(r3.occupancy_R_ego_json_raw_score_3),           confidence_interval(r6.occupancy_R_ego_json_raw_score_6),           confidence_interval(r15.occupancy_R_ego_json_raw_score_15)],
     [confidence_interval(r3.occupancy_R_ego_tokenized_txt_raw_score_3),  confidence_interval(r6.occupancy_R_ego_tokenized_txt_raw_score_6),  confidence_interval(r15.occupancy_R_ego_tokenized_txt_raw_score_15)],
     [ confidence_interval(r3.occupancy_R_ego_ascii_txt_raw_score_3),     confidence_interval(r6.occupancy_R_ego_ascii_txt_raw_score_6),      confidence_interval(r15.occupancy_R_ego_ascii_txt_raw_score_15)]
+]
+
+#bootstrapped confidence intervals
+bs_error_occupancy_R_ego = [
+    [bootstrap_CI(r3.occupancy_R_ego_adj_json_raw_score_3),       bootstrap_CI(r6.occupancy_R_ego_adj_json_raw_score_6),       bootstrap_CI(r15.occupancy_R_ego_adj_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_ego_adj_txt_raw_score_3),        bootstrap_CI(r6.occupancy_R_ego_adj_txt_raw_score_6),        bootstrap_CI(r15.occupancy_R_ego_adj_txt_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_ego_jpg_raw_score_3),            bootstrap_CI(r6.occupancy_R_ego_jpg_raw_score_6),            bootstrap_CI(r15.occupancy_R_ego_jpg_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_ego_json_raw_score_3),           bootstrap_CI(r6.occupancy_R_ego_json_raw_score_6),           bootstrap_CI(r15.occupancy_R_ego_json_raw_score_15)],
+    [bootstrap_CI(r3.occupancy_R_ego_tokenized_txt_raw_score_3),  bootstrap_CI(r6.occupancy_R_ego_tokenized_txt_raw_score_6),  bootstrap_CI(r15.occupancy_R_ego_tokenized_txt_raw_score_15)],
+    [ bootstrap_CI(r3.occupancy_R_ego_ascii_txt_raw_score_3),     bootstrap_CI(r6.occupancy_R_ego_ascii_txt_raw_score_6),      bootstrap_CI(r15.occupancy_R_ego_ascii_txt_raw_score_15)]
 ]
 
 

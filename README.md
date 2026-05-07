@@ -10,7 +10,7 @@ The methodology involves an evaluation using Gemini 2.5 Pro (reasoning) and Gemi
 The findings indicate that performance is highest when mazes are expressed using structured graph-based representations, particularly Adjacency List JSON (a graph-based representation formatted as a JSON file), across model types, while the choice of output FoR strongly shapes outcomes, with absolute coordinate responses yielding substantially better results than egocentric ones that require continuous relational analysis and state tracking and therefore lead to markedly lower completion scores, especially for the non-reasoning model. In addition, inspection of internal reasoning traces suggests that the use of formal graph-solving algorithms is positively correlated with success, while exclusive reliance on heuristics or unfounded declarations of confidence is negatively correlated with completion scores.\
 By systematically varying input representation and output FoR this work provides the first integrated evaluation of these factors, addressing the lack of unified benchmarks and clarifying how methodological choices shape observed LLM spatial reasoning performance.\
 \
-**IMPORTANT NOTE:** Some variable names are different in the final paper than the code.\
+**IMPORTANT NOTE:** Some variable names are different in the final paper than the code and files with results.\
 All files contain reference to an output frame of reference called 'allocentric'/'allo'. At the time of writing code this is how we called the frame of reference that uses absolute directions from an allocentric perspective. Similarly, all files reference an input representation called 'Tokenized'/'tokenized_txt'. At the time of writing code this is how we called the 'Tagged per-cell' input representation.  
 
 ![representations](Results_charts/Dataset03/finals/representations.png)
@@ -128,7 +128,7 @@ For instructions on how to clone this repository on a Windows operating system, 
     |   |   Dataset 03 3x3 02
     |   |   ... 
 ```
-**IMPORTANT NOTE:** Some variable names are different in the final paper than the code.\
+**IMPORTANT NOTE:** Some variable names are different in the final paper than the code and files with results.\
 All files contain reference to an output frame of reference called 'allocentric'/'allo'. At the time of writing code this is how we called the frame of reference that uses absolute directions from an allocentric perspective. Similarly, all files reference an input representation called 'Tokenized'/'tokenized_txt'. At the time of writing code this is how we called the 'Tagged per-cell' input representation.  
 
 * maze_generator__ext_v3.py 
