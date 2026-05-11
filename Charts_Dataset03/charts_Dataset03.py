@@ -1505,7 +1505,7 @@ Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10), 
 labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axes[1,2].legend(
@@ -1778,7 +1778,7 @@ Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10), 
 labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axes[1,5].legend(
@@ -3187,7 +3187,7 @@ Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10), 
 labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axes[1,5].legend(
@@ -3598,7 +3598,7 @@ Line2D([], [], marker='o', color=ascii_color, linestyle='None', markersize = 10)
 labels = [
 r"$\bf{Models}$",
 "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axs[1,2].legend(

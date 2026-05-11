@@ -405,7 +405,7 @@ for idx, ax in enumerate(axes.flat):
         ax.set_ylabel("Mean Input Tokens (tokens)", fontsize=11)
 
     # fig.supylabel("Mean Input Tokens", fontsize=11)
-    fig.supxlabel("Maze Size (-)", fontsize=11)
+    fig.supxlabel("Maze Size (-)", fontsize=11,x=0.94*0.5)
     
 
 
@@ -416,7 +416,7 @@ for idx, ax in enumerate(axes.flat):
 
 
 
-plt.suptitle("Mean Input Tokens Per Representation,\nMaze Style, and Maze Size", x=0.94*0.5, fontweight='bold')
+plt.suptitle("Mean Input Tokens Per Spatial Representation,\nWall Encoding, and Maze Size", x=0.94*0.5, fontweight='bold')
 # Position the legend within that white space
 # legend=fig.legend(
 #     handles_for_legend, 
@@ -465,7 +465,7 @@ Line2D([], [], marker='o', color=colors[5], linestyle='None', markersize = 10), 
 labels = [
 # r"$\bf{Models}$",
 # "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 axes[1].legend(

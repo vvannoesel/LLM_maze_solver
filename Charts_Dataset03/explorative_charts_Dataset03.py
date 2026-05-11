@@ -4676,9 +4676,9 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 
 # Add labels to the markers
 labels = [
-r"$\bf{Input\ Maze\ Style}$",
+r"$\bf{Wall\ Encodings}$",
 "Line-wall", "Occupancy grid",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 
@@ -4804,7 +4804,7 @@ Line2D([], [], marker='d', color='grey', linestyle = 'none'),
 # labels = [
 # r"$\bf{Input\ Maze\ Style}$",
 # "Line Wall", "Occupancy grid",
-# r"$\bf{Input\ Representations}$",
+# r"$\bf{Maze\ Representations}$",
 # "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 # ]
 
@@ -4855,9 +4855,9 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 
 # Add labels to the markers
 labels = [
-r"$\bf{Input\ Maze\ Style}$",
+r"$\bf{Wall\ Encodings}$",
 "6x6 Line-wall", "13x13 Occupancy grid", "15x15 Line-wall", "31x31 Occupancy grid",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 
@@ -4958,9 +4958,9 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 
 # Add labels to the markers
 labels = [
-r"$\bf{Input\ Maze\ Style}$",
+r"$\bf{Wall\ Encodings }$",
 "Line-wall", "Occupancy grid",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 
@@ -5068,9 +5068,9 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 
 # Add labels to the markers
 labels = [
-r"$\bf{Input\ Maze\ Style}$",
+r"$\bf{Wall\ Encodings}$",
 "6x6 Line-wall", "13x13 Occupancy grid", "15x15 Line-wall", "31x31 Occupancy grid",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 
@@ -5170,9 +5170,9 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 
 # Add labels to the markers
 labels = [
-r"$\bf{Input\ Maze\ Style}$",
+r"$\bf{Wall\ Encodings}$",
 "6x6 Line-wall", "13x13 Occupancy grid", "15x15 Line-wall", "31x31 Occupancy grid",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 
@@ -5265,9 +5265,9 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 
 # Add labels to the markers
 labels = [
-r"$\bf{Input\ Maze\ Style}$",
+r"$\bf{Wall\ Encodings}$",
 "6x6 Line-wall", "13x13 Occupancy grid", "15x15 Line-wall", "31x31 Occupancy grid",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 
@@ -5359,9 +5359,9 @@ Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10), 
 
 # Add labels to the markers
 labels = [
-r"$\bf{Input\ Maze\ Style}$",
+r"$\bf{Wall\ Encodings }$",
 "6x6 Line-wall", "13x13 Occupancy grid", "15x15 Line-wall", "31x31 Occupancy grid",
-r"$\bf{Input\ Representations}$",
+r"$\bf{Maze\ Representations}$",
 "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
 ]
 

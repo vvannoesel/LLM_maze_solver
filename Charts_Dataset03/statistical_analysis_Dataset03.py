@@ -569,7 +569,7 @@ fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
 # plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 3x3/7x7 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
-plt.suptitle("Sample Sizes, Determined so that the 95% Confidence Interval for the Mean Completion Score Would Have a Half-Width No Greater Than 5 Percentage Points,\nComputed Separately for Each Combination of Input Representation, Output Frame of Reference, Maze Size, and LLM", fontsize=14)
+plt.suptitle("Sample Sizes, Determined so that the 95% Confidence Interval for the Mean Completion Score Would Have a Half-Width No Greater Than 5 Percentage Points,\nComputed Separately for Each Combination of Spatial Representation, Output Frame of Reference, Maze Size, and LLM", fontsize=14)
 plt.title("3x3/7x7 Mazes", fontsize=12)
 
 
@@ -615,7 +615,7 @@ fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
 # plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 6x6/13x13 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
-plt.suptitle("Sample Sizes, Determined so that the 95% Confidence Interval for the Mean Completion Score Would Have a Half-Width No Greater Than 5 Percentage Points,\nComputed Separately for Each Combination of Input Representation, Output Frame of Reference, Maze Size, and LLM", fontsize=14)
+plt.suptitle("Sample Sizes, Determined so that the 95% Confidence Interval for the Mean Completion Score Would Have a Half-Width No Greater Than 5 Percentage Points,\nComputed Separately for Each Combination of Spatial Representation, Output Frame of Reference, Maze Size, and LLM", fontsize=14)
 plt.title("6x6/13x13 Mazes", fontsize=12)
 
 table = ax.table(
@@ -660,7 +660,7 @@ fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
 # plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 15x15/31x31 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
-plt.suptitle("Sample Sizes, Determined so that the 95% Confidence Interval for the Mean Completion Score Would Have a Half-Width No Greater Than 5 Percentage Points,\nComputed Separately for Each Combination of Input Representation, Output Frame of Reference, Maze Size, and LLM", fontsize=14)
+plt.suptitle("Sample Sizes, Determined so that the 95% Confidence Interval for the Mean Completion Score Would Have a Half-Width No Greater Than 5 Percentage Points,\nComputed Separately for Each Combination of Spatial Representation, Output Frame of Reference, Maze Size, and LLM", fontsize=14)
 plt.title("15x15/31x31 Mazes", fontsize=12)
 
 table = ax.table(
@@ -975,11 +975,11 @@ fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
 # plt.title("Required Standard dev.s for Desired Statistical Power (α=0.05, error margin = 5%), \n 3x3/7x7 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
-plt.suptitle("Standard deviations for each combination of input representation, output FoR, and LLM", fontsize=14)
+plt.suptitle("Standard deviations for each combination of Spatial Representation, output FoR, and LLM", fontsize=14)
 plt.title("3x3/7x7 Mazes", fontsize=12)
 # '''Sample sizes were determined so that the 95% confidence interval for the mean completion score 
 # would have a half-width no greater than 5 percentage points, computed separately for each combination of 
-# input representation, output frame of reference, maze size, and LLM'''
+# Spatial Representation, output frame of reference, maze size, and LLM'''
 
 table = ax.table(
     cellText=df.values,
@@ -1023,7 +1023,7 @@ fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
 # plt.title("Required Standard dev.s for Desired Statistical Power (α=0.05, error margin = 5%), \n 6x6/13x13 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
-plt.suptitle("Standard deviations for each combination of input representation, output FoR, and LLM", fontsize=14)
+plt.suptitle("Standard deviations for each combination of Spatial Representation, output FoR, and LLM", fontsize=14)
 plt.title("6x6/13x13 Mazes", fontsize=12)
 
 table = ax.table(
@@ -1068,7 +1068,7 @@ fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
 # plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 15x15/31x31 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
-plt.suptitle("Standard deviations for each combination of input representation, output FoR, and LLM", fontsize=14)
+plt.suptitle("Standard deviations for each combination of Spatial Representation, output FoR, and LLM", fontsize=14)
 plt.title("15x15/31x31 Mazes", fontsize=12)
 
 table = ax.table(
@@ -1384,11 +1384,11 @@ fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
 # plt.title("Required CI half-widths for Desired Statistical Power (α=0.05, error margin = 5%), \n 3x3/7x7 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
-plt.suptitle("Half-Widths of the 95% Confidence Interval for the Mean Completion Scores, Given in Percentage Points,\nComputed separately for Each Combination of Input Representation, Output FoR, Maze Size, and LLM", fontsize=14)
+plt.suptitle("Half-Widths of the 95% Confidence Interval for the Mean Completion Scores, Given in Percentage Points,\nComputed separately for Each Combination of Spatial Representation, Output FoR, Maze Size, and LLM", fontsize=14)
 plt.title("3x3/7x7 Mazes", fontsize=12)
 # '''Sample sizes were determined so that the 95% confidence interval for the mean completion score 
 # would have a half-width no greater than 5 percentage points, computed separately for each combination of 
-# input representation, output frame of reference, maze size, and LLM'''
+# Spatial Representation, output frame of reference, maze size, and LLM'''
 
 table = ax.table(
     cellText=df.values,
@@ -1432,7 +1432,7 @@ fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
 # plt.title("Required CI half-widths for Desired Statistical Power (α=0.05, error margin = 5%), \n 6x6/13x13 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
-plt.suptitle("Half-Widths of the 95% Confidence Interval for the Mean Completion Scores, Given in Percentage Points,\nComputed separately for Each Combination of Input Representation, Output FoR, Maze Size, and LLM", fontsize=14)
+plt.suptitle("Half-Widths of the 95% Confidence Interval for the Mean Completion Scores, Given in Percentage Points,\nComputed separately for Each Combination of Spatial Representation, Output FoR, Maze Size, and LLM", fontsize=14)
 plt.title("6x6/13x13 Mazes", fontsize=12)
 
 table = ax.table(
@@ -1477,7 +1477,7 @@ fig, ax = plt.subplots(figsize=(30, 8))
 ax.axis("off")
 # plt.title("Required Sample Sizes for Desired Statistical Power (α=0.05, error margin = 5%), \n 15x15/31x31 Maze, Gemini 2.5 Pro and Flash-Lite, All Output Frames of Reference", fontsize=16, pad=20)
 
-plt.suptitle("Half-Widths of the 95% Confidence Interval for the Mean Completion Scores, Given in Percentage Points,\nComputed separately for Each Combination of Input Representation, Output FoR, Maze Size, and LLM", fontsize=14)
+plt.suptitle("Half-Widths of the 95% Confidence Interval for the Mean Completion Scores, Given in Percentage Points,\nComputed separately for Each Combination of Spatial Representation, Output FoR, Maze Size, and LLM", fontsize=14)
 plt.title("15x15/31x31 Mazes", fontsize=12)
 
 table = ax.table(

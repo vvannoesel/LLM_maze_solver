@@ -1786,13 +1786,13 @@ handles = [
 labels = [
     r"$\bf{Output\ FoRs}$",
     "Coordinates", "Absolute directions", "Egocentric",
-    r"$\bf{Input\ Representations}$",
+    r"$\bf{Maze\ Representations}$",
     "Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII",
     # r"$\bf{Models}$",
     # "Gemini 2.5 Pro", "Gemini 2.5 Flash-Lite",
     # r"$\bf{Maze\ Styles\ and\ Complexities\ (Low -> High)}$",
     # "Occupancy grid, 7x7, 13x13, 31x31", "Line-wall, 3x3, 6x6, 15x15"
-        r"$\bf{Maze\ Styles}$",
+        r"$\bf{Wall\ Encodings}$",
     "Occupancy grid", "Line-wall"
 ]
 
