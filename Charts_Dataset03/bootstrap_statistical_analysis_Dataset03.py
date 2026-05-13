@@ -297,12 +297,12 @@ representations = [
     "Line-wall JPG",
     "Line-wall JSON",
     "Line-wall Tagged",
-    "Occupancy AL-JSON",
-    "Occupancy AL-TXT",
-    "Occupancy ASCII",
-    "Occupancy JPG",
-    "Occupancy JSON",
-    "Occupancy Tagged"
+    "Occupancy grid AL-JSON",
+    "Occupancy grid AL-TXT",
+    "Occupancy grid ASCII",
+    "Occupancy grid JPG",
+    "Occupancy grid JSON",
+    "Occupancy grid Tagged"
 ]
 
 

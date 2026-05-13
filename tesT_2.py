@@ -52,7 +52,7 @@ instructions_ego = ("Instructions:\n" \
 # PROMPT 3: COORDINATES
 instructions_coords = ("Instructions:\n" \
     "1. You cannot move diagonally or through walls, only from one cell to an adjacent cell.\n" \
-    "2. Create a comma-separated sequence all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1).\n" \
+    "2. Create a comma-separated sequence of all coordinates on the path from start to end, including the start and end points. For example: (0,0),(1,0),(1,1),(2,1),(3,1).\n" \
     "3. Provide only the final list of coordinates from start to end in your response." )
 
 
