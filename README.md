@@ -14,7 +14,7 @@ By systematically varying input spatial representation and output FoR this work 
 All files contain reference to an output frame of reference called 'allocentric'/'allo'. At the time of writing code this is how we called the frame of reference that uses absolute directions from an allocentric perspective. Similarly, all files reference an input representation called 'Tokenized'/'tokenized_txt'. At the time of writing code this is how we called the 'Tagged per-cell' input representation.  
 
 ![representations](Results_charts/Dataset03/finals/representations.png)
-
+h
 ## Index
 * [How to clone this repository](#how-to-clone-this-repository)
 * [Setup](#setup)
