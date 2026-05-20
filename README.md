@@ -4,10 +4,12 @@ This project contains codes, datasets, and results that were used to test LLM's 
 This thesis was created to obtain a master's degree in robotics engineering from Delft University of Technology. The full paper is available in this repository. Below is the abstract.
 
 **Abstract** \
-Current evaluations of Large Language Model (LLM) spatial reasoning focus on several isolated competencies rather than a unified task, and use an array of different input formats, leaving it unclear how input spatial representation and output Frame of Reference (FoR) influence performance on navigation tasks. This study asks: how do spatial representations and frames of reference influence LLMs' spatial reasoning capabilities, and which combinations are conducive to it?\
+Current evaluations of Large Language Model (LLM) spatial reasoning focus on several isolated competencies rather than a unified task, and use an array of different input formats. As a result, the influence of spatial representation and output Frame of Reference (FoR) on performance in navigation tasks remains unclear. This study asks: how do spatial representations and frames of reference influence LLMs' spatial reasoning capabilities, and which combinations are conducive to it?\
 This research investigates the spatial reasoning and navigation capabilities of one reasoning and one non-reasoning LLM. Using perfect mazes as a controlled testbed, this thesis examines how various input spatial representations, including visual (JPG and ASCII), grid-based (JSON and Tagged per-cell), and graph-based (Adjacency List) formats, interact with different output FoRs to influence model performance.\
-The methodology involves an evaluation using Gemini 2.5 Pro (reasoning) and Gemini 2.5 Flash-Lite (non-reasoning) across 11 spatial representations and three output FoRs: allocentric using absolute coordinates ("coordinates"), allocentric using absolute directions ("absolute directions"), and egocentric (relative directions). Performance is measured using two metrics: a "completion score", defined as the percentage of the path navigated correctly before the first error, and the number of "output tokens" generated, used as a proxy for efficiency.\
-The findings indicate that performance is highest when mazes are expressed using structured graph-based spatial representations, particularly Adjacency List JSON (a graph-based representation formatted as a JSON file), across model types, while the choice of output FoR strongly shapes outcomes, with absolute coordinate responses yielding substantially better results than egocentric ones that require continuous relational analysis and state tracking and therefore lead to markedly lower completion scores, especially for the non-reasoning model. In addition, inspection of internal reasoning traces suggests that the use of formal graph-solving algorithms is positively correlated with success, while exclusive reliance on heuristics or unfounded declarations of confidence is negatively correlated with completion scores.\
+The methodology involves an evaluation using Gemini 2.5 Pro (reasoning) and Gemini 2.5 Flash-Lite (non-reasoning) across 11 spatial representations and three output FoRs: allocentric using absolute coordinates ("coordinates"), allocentric using absolute directions ("absolute directions"), and egocentric (relative directions). Performance is measured using two metrics: a "completion score", defined as the percentage of the path navigated correctly before the first error, and the mean number of output tokens' generated, used as a proxy for efficiency.\
+The findings of this research indicate that performance is highest when mazes are expressed using structured graph-based spatial representations, particularly Adjacency List JSON (a graph-based representation formatted as a JSON file), across model types, while the choice of output FoR strongly shapes outcomes, with absolute coordinate responses yielding substantially better results than egocentric ones that require continuous relational analysis and state tracking and therefore lead to markedly lower completion scores, especially for the non-reasoning model. In addition, inspection of internal reasoning traces suggests that the use of formal graph-solving algorithms is positively correlated with success, while exclusive reliance on heuristics and unfounded declarations of confidence are negatively correlated with completion scores.\
+% There are three key findings regarding the optimal representation, impact of the frame of reference, and model reasoning behaviors. First, structured graph-based representations, particularly Adjacency List JSON (a graph-based representation formatted as a JSON file), consistently yield the highest performance for both model types. Second, models perform significantly better when answering in absolute coordinates. Egocentric outputs, which require continuous relational analysis and state tracking, result in the lowest completion scores, often approaching 0\% in the non-reasoning model. Third, analysis of internal reasoning traces shows that the use of formal graph-solving algorithms is positively correlated with success, while exclusive reliance on heuristics or unfounded declarations of confidence is negatively correlated with completion scores.\
+% The results suggest that LLM spatial reasoning is highly dependent on input representation format and that while models can often plan valid paths, they struggle to translate them into different FoRs. 
 By systematically varying input spatial representation and output FoR this work provides the first integrated evaluation of these factors, addressing the lack of unified benchmarks and clarifying how methodological choices shape observed LLM spatial reasoning performance.\
 \
 **IMPORTANT NOTE:** Some variable names are different in the final paper than the code and files with results.\
@@ -16,20 +18,22 @@ All files contain reference to an output frame of reference called 'allocentric'
 ![representations](Results_charts/Dataset03/finals/representations.png)
 
 ## Index
-* [Setup](#setup)
 * [How to clone this repository](#how-to-clone-this-repository)
+* [Setup](#setup)
 * [Structure of this project](#structure-of-this-project)
 * [Creating a dataset](#creating-a-dataset)
 * [Calling the API](#calling-the-api)
 
 
+## How to clone this repository
+For instructions on how to clone this repository on a Windows operating system, follow the instructions in [this video](https://www.youtube.com/watch?v=LtpFR07iGs8) starting at 1:35.
 
 ## Setup
 This project uses Python version 3.11.4 and all instructions are specifically for Windows systems. If you are familiar with setting up environments and API keys, skip to the section [How to set up dependencies](#how-to-set-up-dependencies) for a full list of necessary installs. 
 
 
 ### How to set up the virtual environment
-All instructions are for Windows.
+All instructions are for Windows. Before setting up the environment, make sure to have this repository cloned on your device.
 
 1. In an Anaconda prompt window, navigate to the folder where you cloned or forked this repository to. We will refer to this folder as 'LLM_maze_solver'.
 2. To create the environment (called 'my_env'), in the Anaconda commandline type the following:
@@ -98,9 +102,6 @@ pip install dataframe_image
 ```
 pip install google-generativeai python-dotenv google-genai
 ```
-
-## How to clone this repository
-For instructions on how to clone this repository on a Windows operating system, follow the instructions in [this video](https://www.youtube.com/watch?v=LtpFR07iGs8) starting at 1:35.
 
 ## Structure of this project
 ```
