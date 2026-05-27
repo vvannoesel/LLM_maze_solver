@@ -1566,7 +1566,7 @@ x_tick_lbls_line = ["3x3", "6x6", "15x15"] # Complexity levels
 x_tick_lbls_occupancy = ["7x7", "13x13", "31x31"] # Complexity levels
 # Define a color palette for the 6 distinct methods (ignoring model version)
 # We have 6 base methods (Adj Json, Adj Text, JPG, JSON, Tok, ASCII)
-colors = plt.cm.tab10(np.linspace(0, 1, 10))[:6] 
+colors = plt.cm.tab10(np.linspace(0, 1, 10))[:6]  #blue, orange, green, red, purple, brown
 
 fig, axes = plt.subplots(nrows=2, ncols=6, figsize=(18, 7), sharey=False, sharex=False)
 

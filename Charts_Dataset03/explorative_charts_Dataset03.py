@@ -4628,7 +4628,7 @@ plot_keyword(axes[2], small_dataset_false_confidence, "Declared Confidence", "Pr
 
 # Make a legend
 # specify colors
-colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown']
 
 # --- Design Legend Group Markers ---
 spacer_handle = (
@@ -4665,8 +4665,8 @@ spacer_handle,
 
 Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
 Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
-Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
 Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
@@ -4754,7 +4754,7 @@ plot_keyword(axes[6], huge_datasets_verification_6_15, "Verification", "Presence
 
 # Make a legend
 # specify colors
-colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown']
 
 # --- Design Legend Group Markers ---
 spacer_handle = (
@@ -4791,8 +4791,8 @@ Line2D([], [], marker='d', color='grey', linestyle = 'none'),
 
 # Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
 # Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
-# Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 # Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+# Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 # Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
 # Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
@@ -4844,8 +4844,8 @@ spacer_handle,
 
 Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
 Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
-Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
 Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
@@ -4911,7 +4911,7 @@ plot_keyword(axes[8], small_dataset_verification, "Verification", "Presence (%)"
 
 # Make a legend
 # specify colors
-colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown']
 
 # --- Design Legend Group Markers ---
 spacer_handle = (
@@ -4947,8 +4947,8 @@ spacer_handle,
 
 Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
 Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
-Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
 Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
@@ -5019,7 +5019,7 @@ plot_keyword(axes[8], huge_datasets_verification_6_15, "Verification", "Presence
 
 # Make a legend
 # specify colors
-colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown']
 
 # --- Design Legend Group Markers ---
 spacer_handle = (
@@ -5057,8 +5057,8 @@ spacer_handle,
 
 Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
 Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
-Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
 Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
@@ -5120,7 +5120,7 @@ plot_keyword(axes[8], mixed_datasets_coords_verification_6_15, "Verification", "
 
 # Make a legend
 # specify colors
-colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red',  'tab:purple', 'tab:brown']
 
 # --- Design Legend Group Markers ---
 spacer_handle = (
@@ -5159,8 +5159,8 @@ spacer_handle,
 
 Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
 Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
-Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
 Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
@@ -5215,7 +5215,7 @@ plot_keyword(axes[8], mixed_datasets_allo_verification_6_15, "Verification", "Pr
 
 # Make a legend
 # specify colors
-colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red',  'tab:purple', 'tab:brown']
 
 # --- Design Legend Group Markers ---
 spacer_handle = (
@@ -5254,8 +5254,8 @@ spacer_handle,
 
 Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
 Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
-Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
 Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
@@ -5309,7 +5309,7 @@ plot_keyword(axes[8], mixed_datasets_ego_verification_6_15, "Verification", "Pre
 
 # Make a legend
 # specify colors
-colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red',  'tab:purple', 'tab:brown']
 
 # --- Design Legend Group Markers ---
 spacer_handle = (
@@ -5348,8 +5348,8 @@ spacer_handle,
 
 Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
 Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
-Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
 Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
 Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
 
@@ -6720,7 +6720,7 @@ plot_keyword(axes[1], small_dataset_heuristic, "Heuristics", "Presence (%)")
 
 # Make a legend
 # specify colors
-colors = ['tab:blue', 'tab:orange', 'tab:red', 'tab:green', 'tab:purple', 'tab:brown']
+colors = ['tab:blue', 'tab:orange', 'tab:green', 'tab:red', 'tab:purple', 'tab:brown']
 
 # --- Design Legend Group Markers ---
 spacer_handle = (
@@ -6755,12 +6755,22 @@ line_handle,
 occupancy_handle,
 spacer_handle,
 
-Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
-Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
-Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
+# Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
+# Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
+# Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
+# Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
+# Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+# Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
+
+
 Line2D([], [], marker='s', color=colors[2], linestyle='None', markersize = 10),  # JPG
-Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
 Line2D([], [], marker='s', color=colors[5], linestyle='None', markersize = 10),  # ASCII
+Line2D([], [], marker='s', color=colors[4], linestyle='None', markersize = 10),  # Tokenized
+Line2D([], [], marker='s', color=colors[3], linestyle='None', markersize = 10),  # JSON
+Line2D([], [], marker='s', color=colors[1], linestyle='None', markersize = 10),  # Adjacency Text
+Line2D([], [], marker='s', color=colors[0], linestyle='None', markersize = 10),  # Adjacency JSON
+
+
 
 ]
 
@@ -6769,7 +6779,8 @@ labels = [
 r"$\bf{Wall\ Encodings}$",
 "Line-wall", "Occupancy grid",
 r"$\bf{Maze\ Representations}$",
-"Adjacency List JSON", "Adjacency List Text", "JPG", "JSON", "Tagged per-cell", "ASCII"
+"JPG", "ASCII",  "Grid-based Text", "Grid-based JSON","Adjacency List Text","Adjacency List JSON"
+# "Adjacency List JSON", "Adjacency List Text", "JPG", "Grid-based JSON", "Grid-based Text", "ASCII"
 ]
 
 axes[2].axis("off")
@@ -6785,7 +6796,7 @@ axes[2].legend(
 
 
 plt.suptitle(r'$\bf{Keyword\ Presence\ as\ a\ Function\ of\ Mean\ Completion\ Score}$'
-                   '\nGemini 2.5 Pro, All Output Frames of Reference, Maze Sizes 6x6/13x13 and 15x15/31x31',
+                   '\nReasoning LLM, All Output Frames of Reference, Maze Sizes 6x6/13x13 and 15x15/31x31',
                     fontsize=14)
 
 
